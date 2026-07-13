@@ -2,15 +2,13 @@ import type { Metadata } from "next";
 import "@fontsource-variable/nunito";
 import "@fontsource-variable/baloo-2";
 import "./globals.css";
-
-const siteUrl = process.env.VERCEL_PROJECT_PRODUCTION_URL
-  ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
-  : "http://localhost:3000";
+import { siteUrl } from "./site-config";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: "Palworld Guide — Explore More. Survive Smarter.",
   description: "Clear routes, clever builds, and field-tested strategies for every stage of your Palworld adventure.",
+  alternates: { canonical: "/" },
   icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },
   openGraph: {
     title: "Palworld Guide",

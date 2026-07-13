@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getGuide, guides } from "../guide-data";
 
@@ -19,23 +20,25 @@ export default async function GuidePage({ params }: Props) {
   const { slug } = await params;
   const guide = getGuide(slug);
   if (!guide) notFound();
-  const related = guides.filter((item) => item.slug !== slug).slice(0, 3);
+  const sameCategory = guides.filter((item) => item.slug !== slug && item.category === guide.category);
+  const otherCategories = guides.filter((item) => item.slug !== slug && item.category !== guide.category);
+  const related = [...sameCategory, ...otherCategories].slice(0, 3);
 
   return (
     <main className="min-h-screen bg-[#fffdf6] text-[#173b38]">
       <header className="article-nav px-5 py-5 sm:px-8 lg:px-12">
         <div className="mx-auto flex max-w-[1200px] items-center justify-between gap-5">
-          <a href="/" className="flex items-center gap-3" aria-label="Palworld Guide home">
+          <Link href="/" className="flex items-center gap-3" aria-label="Palworld Guide home">
             <span className="grid h-10 w-10 place-items-center rounded-2xl bg-[#1e7756] font-extrabold text-white">P</span>
             <span className="font-[var(--font-display)] text-lg font-extrabold tracking-[-.03em]">PALWORLD <span className="hidden text-[#6c8a84] sm:inline">FIELD GUIDE</span></span>
-          </a>
-          <a href="/#guides" className="rounded-full border border-[#2b6f5b]/15 bg-white/70 px-5 py-3 text-sm font-extrabold text-[#286552]">All Guides</a>
+          </Link>
+          <Link href="/#categories" className="rounded-full border border-[#2b6f5b]/15 bg-white/70 px-5 py-3 text-sm font-extrabold text-[#286552]">All Guides</Link>
         </div>
       </header>
 
       <section className="article-hero px-5 pb-20 pt-14 sm:px-8 lg:px-12 lg:pt-20">
         <div className="mx-auto max-w-[1100px]">
-          <a href="/#guides" className="mb-8 inline-flex items-center gap-2 text-sm font-extrabold text-[#397563]">← Back to the Field Library</a>
+          <Link href="/#categories" className="mb-8 inline-flex items-center gap-2 text-sm font-extrabold text-[#397563]">← Back to the Complete Library</Link>
           <div className="grid gap-10 lg:grid-cols-[1fr_300px] lg:items-end">
             <div>
               <div className="mb-5 flex flex-wrap items-center gap-3 text-xs font-extrabold uppercase tracking-[.14em] text-[#e45f58]"><span>{guide.category}</span><span className="h-1 w-1 rounded-full bg-[#e45f58]" /><span>Palworld 1.0</span></div>
@@ -80,16 +83,32 @@ export default async function GuidePage({ params }: Props) {
               </section>
             ))}
 
-            <section className="source-box">
-              <div><p className="text-xs font-extrabold uppercase tracking-[.16em] text-[#769089]">Verification & further reading</p><p className="mt-2 text-sm leading-6 text-[#657d77]">Palworld changes over time. This guide prioritizes current 1.0 systems and links to primary or community reference material for deeper checking.</p></div>
-              <div className="mt-5 flex flex-wrap gap-3">{guide.sources.map((source) => <a key={source.href} href={source.href} target="_blank" rel="noreferrer" className="source-link">{source.label} ↗</a>)}</div>
+            <section className="source-box" aria-labelledby="video-research-title">
+              <div className="source-heading">
+                <span className="source-play" aria-hidden="true">▶</span>
+                <div>
+                  <p id="video-research-title" className="text-xs font-extrabold uppercase tracking-[.16em] text-[#c6534e]">Video research</p>
+                  <h2>Creator videos, distilled into a field guide.</h2>
+                  <p>We reviewed the public player videos below, compared their demonstrated routes, and rewrote the useful findings in our own words. No official guide copy or video transcript is reproduced here. Results can still vary with world settings and later patches.</p>
+                </div>
+              </div>
+              <div className="video-source-grid">
+                {guide.videoResearch.map((source) => (
+                  <a key={source.href} href={source.href} target="_blank" rel="noreferrer" className="video-source-card">
+                    <div className="video-source-meta"><span>{source.creator}</span><span>{source.reviewed}</span></div>
+                    <h3>{source.title}</h3>
+                    <p>{source.focus}</p>
+                    <b>Watch on YouTube <span aria-hidden="true">↗</span></b>
+                  </a>
+                ))}
+              </div>
             </section>
           </article>
         </div>
       </div>
 
       <section className="bg-[#eef7eb] px-5 py-20 sm:px-8 lg:px-12">
-        <div className="mx-auto max-w-[1200px]"><p className="eyebrow">Keep exploring</p><h2 className="mt-3 font-[var(--font-display)] text-5xl font-extrabold tracking-[-.05em]">Related guides</h2><div className="mt-9 grid gap-5 md:grid-cols-3">{related.map((item) => <a key={item.slug} href={`/guides/${item.slug}`} className="related-card"><span>{item.category}</span><h3>{item.title}</h3><p>{item.description}</p><b>Read guide →</b></a>)}</div></div>
+        <div className="mx-auto max-w-[1200px]"><p className="eyebrow">Keep exploring</p><h2 className="mt-3 font-[var(--font-display)] text-5xl font-extrabold tracking-[-.05em]">Related guides</h2><div className="mt-9 grid gap-5 md:grid-cols-3">{related.map((item) => <Link key={item.slug} href={`/guides/${item.slug}`} className="related-card"><span>{item.category}</span><h3>{item.title}</h3><p>{item.description}</p><b>Read guide →</b></Link>)}</div></div>
       </section>
 
       <footer className="bg-[#173f38] px-5 py-8 text-center text-xs text-[#a7c9be]">Independent fan-made resource · Palworld is a trademark of its respective owner.</footer>
