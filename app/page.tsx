@@ -1,6 +1,8 @@
 import Link from "next/link";
 import ToolLab from "./components/tool-lab";
+import GlobalSearch from "./components/global-search";
 import { guideCategories, guides } from "./guides/guide-data";
+import { toolLinks } from "./lib/game-data";
 
 const popularStyles = [
   { color: "bg-[#ff7b70]", accent: "from-[#ffe59a] to-[#ff9f76]", icon: "☀" },
@@ -21,8 +23,10 @@ const faqs = [
 const popularGuides = guides.slice(0, 6);
 
 export default function Home() {
+  const faqSchema = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqs.map((faq) => ({ "@type": "Question", name: faq.question, acceptedAnswer: { "@type": "Answer", text: faq.answer } })) };
   return (
     <main className="min-h-screen overflow-hidden bg-[#fffdf6] text-[#173b38]">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <section className="hero-sky relative min-h-[720px] px-5 pb-28 pt-5 sm:px-8 lg:px-12">
         <div className="sun-orb" aria-hidden="true" /><div className="cloud cloud-one" aria-hidden="true" /><div className="cloud cloud-two" aria-hidden="true" />
         <div className="mx-auto max-w-[1360px]">
@@ -39,10 +43,11 @@ export default function Home() {
 
           <div id="top" className="relative z-10 grid items-center gap-14 pb-10 pt-20 lg:grid-cols-[1.05fr_.95fr] lg:pt-24">
             <div className="max-w-3xl">
-              <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#287a68]/15 bg-white/65 px-4 py-2 text-xs font-extrabold uppercase tracking-[.17em] text-[#287a68] shadow-sm backdrop-blur"><span className="h-2 w-2 rounded-full bg-[#ff7b70]" /> 24 field guides · 3 planning tools</div>
-              <h1 className="font-[var(--font-display)] text-[clamp(4rem,8vw,7.5rem)] font-extrabold leading-[.83] tracking-[-.065em] text-[#173f38]">Every Answer.<br /><span className="relative inline-block text-[#fffdf6] [text-shadow:0_4px_0_#2a8067]">One Field Guide.<span className="title-swoop" aria-hidden="true" /></span></h1>
-              <p className="mt-8 max-w-2xl text-lg leading-8 text-[#456c68] sm:text-xl">Popular routes, focused how-to guides, and quick calculators for Pals, bases, resources, exploration and combat.</p>
+              <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#287a68]/15 bg-white/65 px-4 py-2 text-xs font-extrabold uppercase tracking-[.17em] text-[#287a68] shadow-sm backdrop-blur"><span className="h-2 w-2 rounded-full bg-[#ff7b70]" /> Updated for Palworld 1.0</div>
+              <h1 className="font-[var(--font-display)] text-[clamp(3.5rem,7vw,6.8rem)] font-extrabold leading-[.86] tracking-[-.065em] text-[#173f38]">Palworld 1.0<br /><span className="relative inline-block text-[#fffdf6] [text-shadow:0_4px_0_#2a8067]">Guides & Tools.<span className="title-swoop" aria-hidden="true" /></span></h1>
+              <p className="mt-8 max-w-2xl text-lg leading-8 text-[#456c68] sm:text-xl">Search a current Paldeck, calculate version 1.0 breeding results, and use player-researched Palworld guides for your next session.</p>
               <div className="mt-9 flex flex-wrap items-center gap-4"><a href="#popular" className="rounded-2xl bg-[#ff786e] px-7 py-4 font-extrabold text-white shadow-[0_7px_0_#ce514b] transition hover:-translate-y-1">Start with Popular Guides →</a><a href="#tools" className="rounded-2xl border-2 border-[#287a68]/20 bg-white/55 px-7 py-4 font-extrabold text-[#215f53] backdrop-blur transition hover:bg-white">Open the Tool Lab</a></div>
+              <GlobalSearch />
             </div>
             <div className="hero-art relative mx-auto h-[420px] w-full max-w-[570px] lg:h-[500px]" aria-label="A playful illustrated island landscape">
               <div className="floating-badge badge-top"><span className="text-xl">✦</span><div><b>6 categories</b><small>Browse by system</small></div></div>
@@ -57,7 +62,7 @@ export default function Home() {
       <section className="px-5 py-20 sm:px-8 lg:px-12">
         <div className="mx-auto grid max-w-[1260px] gap-12 lg:grid-cols-[.75fr_1.25fr] lg:items-center">
           <div><p className="eyebrow">Welcome, Explorer</p><h2 className="section-title mt-4">Less searching.<br />More playing.</h2></div>
-          <div className="grid gap-4 sm:grid-cols-3"><div className="stat-card"><strong>24</strong><span>complete English guides</span></div><div className="stat-card"><strong>6</strong><span>clear game categories</span></div><div className="stat-card"><strong>3</strong><span>interactive planners</span></div></div>
+          <div className="grid gap-4 sm:grid-cols-3"><div className="stat-card"><strong>300</strong><span>current breeding records</span></div><div className="stat-card"><strong>289</strong><span>version 1.0 Pal profiles</span></div><div className="stat-card"><strong>24</strong><span>complete English guides</span></div></div>
         </div>
       </section>
 
@@ -76,7 +81,9 @@ export default function Home() {
       </section>
 
       <section id="tools" className="tool-lab-section px-5 py-24 sm:px-8 lg:px-12">
-        <div className="mx-auto max-w-[1360px]"><div className="mb-12 grid gap-6 lg:grid-cols-[1fr_.7fr] lg:items-end"><div><p className="eyebrow">Interactive Tools</p><h2 className="section-title mt-3 text-white">Plan before<br />you leave base.</h2></div><p className="max-w-lg text-lg leading-8 text-[#b9d8ce]">Use values from your own world settings. Every calculator updates instantly and keeps the math out of your next session.</p></div><ToolLab /></div>
+        <div className="mx-auto max-w-[1360px]"><div className="mb-12 grid gap-6 lg:grid-cols-[1fr_.7fr] lg:items-end"><div><p className="eyebrow">Palworld Tools</p><h2 className="section-title mt-3 text-white">Useful answers,<br />not empty forms.</h2></div><p className="max-w-lg text-lg leading-8 text-[#b9d8ce]">Start with the current 1.0 database tools, then use the smaller planners for world-setting calculations.</p></div>
+          <div className="primary-tool-grid">{toolLinks.map((tool, index) => <Link href={tool.href} key={tool.href} className={`primary-tool-card tool-tone-${index + 1}`}><span>{tool.icon}</span><div><p>{index === 0 ? "Most searched" : index === 1 ? "Current data" : "Launch answers"}</p><h3>{tool.full}</h3><small>{index === 0 ? "Parent → child and target → parents" : index === 1 ? "Search 289 Pals and work levels" : "Release date, changes, and next steps"}</small></div><b>Open →</b></Link>)}</div>
+          <div className="mini-tool-heading"><span>Quick planning examples</span><p>These lightweight calculators use values from your own save.</p></div><ToolLab /></div>
       </section>
 
       <section id="categories" className="px-5 py-24 sm:px-8 lg:px-12">

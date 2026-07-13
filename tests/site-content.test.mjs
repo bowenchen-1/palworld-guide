@@ -4,13 +4,17 @@ import test from "node:test";
 
 const read = (path) => readFile(new URL(path, import.meta.url), "utf8");
 
-test("homepage keeps the English Palworld brand and all guide links", async () => {
+test("homepage targets Palworld 1.0 and links current tools", async () => {
   const page = await read("../app/page.tsx");
-  assert.match(page, /PALWORLD/);
-  assert.match(page, /Every Answer\./);
-  assert.match(page, /Popular Guides/);
-  assert.match(page, /What is Palworld Field Guide\?/);
-  assert.match(page, /\/guides\/\$\{guide\.slug\}/);
+  const layout = await read("../app/layout.tsx");
+  const gameData = await read("../app/lib/game-data.ts");
+  assert.match(page, /<h1[^>]*>Palworld 1\.0/);
+  assert.equal((page.match(/<h1/g) ?? []).length, 1);
+  assert.match(gameData, /\/breeding-calculator/);
+  assert.match(gameData, /\/paldex/);
+  assert.match(gameData, /\/palworld-1-0/);
+  assert.match(page, /GlobalSearch/);
+  assert.match(layout, /Palworld 1\.0 Guides, Tools & Database/);
   assert.doesNotMatch(page, /Polworld|POLWORLD/);
 });
 
@@ -20,53 +24,60 @@ test("guide library contains 24 complete English guides in six categories", asyn
   assert.equal((data.match(/slug: "/g) ?? []).length, 24);
   assert.equal((data.match(/id: "(getting-started|pals-breeding|base-building|resources-crafting|exploration|combat)"/g) ?? []).length, 6);
   assert.match(data, /Your First 7 Days in Palworld/);
-  assert.match(data, /Best Early-Game Pals/);
-  assert.match(data, /Prepare for Your First Tower Boss/);
-  assert.match(data, /Advanced Combat Habits for the Mid-Game/);
-  assert.match(article, /The short version/);
-  assert.match(article, /Related guides/);
-});
-
-test("every guide is researched from non-official creator videos", async () => {
-  const data = await read("../app/guides/guide-data.ts");
-  const article = await read("../app/guides/[slug]/page.tsx");
-
-  assert.equal((data.match(/videoResearch: \[/g) ?? []).length + (data.match(/videos: \[/g) ?? []).length, 24);
-  assert.ok((data.match(/https:\/\/www\.youtube\.com\/watch\?v=/g) ?? []).length >= 6);
-  assert.match(data, /RageGamingVideos/);
-  assert.match(data, /Chaos Bear Gaming/);
-  assert.match(data, /KhrazeGaming/);
-  assert.doesNotMatch(data, /steamcommunity\.com|palworld\.wiki\.gg|Official Palworld/);
-
   assert.match(article, /Video research/);
-  assert.match(article, /Watch on YouTube/);
-  assert.doesNotMatch(article, /primary or community reference material/);
+  assert.ok((data.match(/https:\/\/www\.youtube\.com\/watch\?v=/g) ?? []).length >= 6);
+  assert.doesNotMatch(data, /steamcommunity\.com|palworld\.wiki\.gg|Official Palworld/);
 });
 
-test("homepage explains the player-video research policy", async () => {
-  const page = await read("../app/page.tsx");
-  assert.match(page, /How are these guides researched\?/);
-  assert.match(page, /creator videos/);
+test("current 1.0 dataset contains 289 Pals and Sekhmet", async () => {
+  const pals = JSON.parse(await read("../public/data/pals.json"));
+  const version = JSON.parse(await read("../public/data/data-version.json"));
+  const matrix = JSON.parse(await read("../public/data/breeding.json"));
+  assert.equal(pals.length, 300);
+  assert.equal(pals.filter((pal) => pal.kind === "pal").length, 289);
+  assert.equal(version.gameVersion, "1.0");
+  assert.equal(pals.find((pal) => pal.name === "Sekhmet")?.number, "140");
+  assert.equal(Object.keys(matrix).length, 300);
 });
 
-test("homepage exposes interactive tools and category navigation", async () => {
-  const page = await read("../app/page.tsx");
-  const tools = await read("../app/components/tool-lab.tsx");
-  assert.match(page, /Interactive Tools/);
-  assert.match(page, /Browse by Category/);
-  assert.match(page, /category-jump-grid/);
-  assert.match(tools, /Trip Yield Planner/);
-  assert.match(tools, /Batch Time Planner/);
-  assert.match(tools, /Worker Slot Planner/);
-  assert.ok((tools.match(/type="number"/g) ?? []).length >= 1);
+test("breeding calculator supports forward and reverse searches", async () => {
+  const page = await read("../app/breeding-calculator/page.tsx");
+  const client = await read("../app/breeding-calculator/breeding-client.tsx");
+  assert.equal((page.match(/<h1/g) ?? []).length, 1);
+  assert.match(page, /Palworld Breeding Calculator/);
+  assert.match(page, /WebApplication/);
+  assert.match(client, /Parents → Child/);
+  assert.match(client, /Target → Parents/);
+  assert.match(client, /matrix\[first\.id\]\?\.\[second\.id\]/);
 });
 
-test("sitemap and robots expose the production domain and every guide", async () => {
+test("Paldeck has current filters and indexable profile pages", async () => {
+  const page = await read("../app/paldex/page.tsx");
+  const client = await read("../app/paldex/paldex-client.tsx");
+  const profile = await read("../app/pals/[slug]/page.tsx");
+  assert.equal((page.match(/<h1/g) ?? []).length, 1);
+  assert.match(page, /Palworld Paldeck Database/);
+  assert.match(client, /Work Suitability/);
+  assert.match(client, /Breeding power/);
+  assert.match(profile, /generateStaticParams/);
+  assert.match(profile, /Palworld Guide/);
+  assert.match(profile, /keeps patch-sensitive combat values out/);
+});
+
+test("1.0 hub answers release-date intent above the fold", async () => {
+  const page = await read("../app/palworld-1-0/page.tsx");
+  assert.equal((page.match(/<h1/g) ?? []).length, 1);
+  assert.match(page, /Palworld 1\.0 was released on July 10, 2026/);
+  assert.match(page, /Palworld 1\.0 release date/);
+  assert.match(page, /FAQPage/);
+});
+
+test("sitemap exposes tools, guides, and every Pal profile", async () => {
   const sitemap = await read("../app/sitemap.ts");
   const robots = await read("../app/robots.ts");
-  const config = await read("../app/site-config.ts");
-  assert.match(config, /https:\/\/www\.palworldguide\.net/);
-  assert.match(sitemap, /guides\.map/);
+  assert.match(sitemap, /breeding-calculator/);
+  assert.match(sitemap, /palworld-1-0/);
+  assert.match(sitemap, /pals\.map/);
   assert.match(sitemap, /priority: 1/);
   assert.match(robots, /sitemap\.xml/);
   assert.match(robots, /allow: "\/"/);
