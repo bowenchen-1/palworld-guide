@@ -4,27 +4,41 @@ import test from "node:test";
 
 const read = (path) => readFile(new URL(path, import.meta.url), "utf8");
 
-test("homepage targets Palworld 1.0 and links current tools", async () => {
+test("homepage is a tool-first Palworld hub with one focused H1", async () => {
   const page = await read("../app/page.tsx");
   const layout = await read("../app/layout.tsx");
   const gameData = await read("../app/lib/game-data.ts");
-  assert.match(page, /<h1[^>]*>Palworld 1\.0/);
+  assert.match(page, /<h1[^>]*>Palworld Tools,[\s\S]*Calculators & Database\./);
   assert.equal((page.match(/<h1/g) ?? []).length, 1);
   assert.match(gameData, /\/breeding-calculator/);
   assert.match(gameData, /\/paldex/);
   assert.match(gameData, /\/palworld-1-0/);
   assert.match(page, /GlobalSearch/);
-  assert.match(layout, /Palworld 1\.0 Guides, Tools & Database/);
+  assert.match(page, /HomeToolBoard/);
+  assert.match(page, /Popular Pals/);
+  assert.match(layout, /Palworld Tools, Calculators & Database/);
+  assert.doesNotMatch(page, /Coming Soon|href="\/map"/);
   assert.doesNotMatch(page, /Polworld|POLWORLD/);
+});
+
+test("homepage calculator lazily loads current breeding data and handles errors", async () => {
+  const board = await read("../app/components/home-tool-board.tsx");
+  assert.match(board, /onFocus={loadMatrix}/);
+  assert.match(board, /fetch\("\/data\/breeding\.json"\)/);
+  assert.match(board, /Data unavailable — try again/);
+  assert.match(board, />Retry</);
 });
 
 test("guide library contains 24 complete English guides in six categories", async () => {
   const data = await read("../app/guides/guide-data.ts");
   const article = await read("../app/guides/[slug]/page.tsx");
+  const index = await read("../app/guides/page.tsx");
   assert.equal((data.match(/slug: "/g) ?? []).length, 24);
   assert.equal((data.match(/id: "(getting-started|pals-breeding|base-building|resources-crafting|exploration|combat)"/g) ?? []).length, 6);
   assert.match(data, /Your First 7 Days in Palworld/);
   assert.match(article, /Video research/);
+  assert.match(index, /Palworld Guides/);
+  assert.match(index, /guideCategories\.map/);
   assert.ok((data.match(/https:\/\/www\.youtube\.com\/watch\?v=/g) ?? []).length >= 6);
   assert.doesNotMatch(data, /steamcommunity\.com|palworld\.wiki\.gg|Official Palworld/);
 });
@@ -77,6 +91,9 @@ test("sitemap exposes tools, guides, and every Pal profile", async () => {
   const robots = await read("../app/robots.ts");
   assert.match(sitemap, /breeding-calculator/);
   assert.match(sitemap, /palworld-1-0/);
+  assert.match(sitemap, /\$\{siteUrl\}\/tools/);
+  assert.match(sitemap, /\$\{siteUrl\}\/guides/);
+  assert.match(sitemap, /\$\{siteUrl\}\/updates/);
   assert.match(sitemap, /pals\.map/);
   assert.match(sitemap, /priority: 1/);
   assert.match(robots, /sitemap\.xml/);

@@ -1,18 +1,10 @@
 import Link from "next/link";
-import { toolLinks } from "../lib/game-data";
+import SiteHeader from "./site-header";
 
 export default function ToolShell({ children, current }: { children: React.ReactNode; current: string }) {
   return (
     <main className="database-page">
-      <header className="database-header">
-        <div className="database-header-inner">
-          <Link href="/" className="database-brand"><span>P</span><div><strong>PALWORLD</strong><small>FIELD GUIDE</small></div></Link>
-          <nav aria-label="Database tools">
-            {toolLinks.map((tool) => <Link key={tool.href} href={tool.href} className={current === tool.href ? "active" : ""}><span>{tool.icon}</span>{tool.label}</Link>)}
-          </nav>
-          <Link href="/#popular" className="database-guides-link">Guides</Link>
-        </div>
-      </header>
+      <div className="database-header"><SiteHeader current={current} /></div>
       {children}
       <footer className="database-footer"><span>Independent fan resource · Current data snapshot: Palworld 1.0.</span><Link href="/">Back to Field Guide →</Link></footer>
     </main>

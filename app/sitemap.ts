@@ -16,6 +16,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${siteUrl}/breeding-calculator`, lastModified, changeFrequency: "weekly", priority: 0.95 },
     { url: `${siteUrl}/paldex`, lastModified, changeFrequency: "weekly", priority: 0.9 },
     { url: `${siteUrl}/palworld-1-0`, lastModified, changeFrequency: "weekly", priority: 0.9 },
+    { url: `${siteUrl}/tools`, lastModified, changeFrequency: "weekly", priority: 0.9 },
+    { url: `${siteUrl}/guides`, lastModified, changeFrequency: "weekly", priority: 0.85 },
+    { url: `${siteUrl}/updates`, lastModified, changeFrequency: "weekly", priority: 0.85 },
   ];
 
   return [

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import PalMark from "../../components/pal-mark";
+import SiteHeader from "../../components/site-header";
 import { findPal, pals, WorkKey, workGlyphs, workLabels } from "../../lib/game-data";
 import { siteUrl } from "../../site-config";
 
@@ -31,7 +32,7 @@ export default async function PalProfilePage({ params }: Props) {
 
   return <main className="pal-profile-page">
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
-    <header className="profile-nav"><Link href="/" className="database-brand"><span>P</span><div><strong>PALWORLD</strong><small>FIELD GUIDE</small></div></Link><nav><Link href="/paldex">Paldeck</Link><Link href="/breeding-calculator">Breeding Calculator</Link></nav></header>
+    <div className="profile-nav"><SiteHeader current="/paldex" /></div>
     <section className="profile-hero"><div className="profile-hero-copy"><p className="database-eyebrow">Palworld 1.0 · Paldeck No. {pal.number}</p><h1>{pal.name} Palworld Guide</h1><p>{pal.name} is {pal.kind === "pal" ? "a current Pal" : "a crossover creature"} in version 1.0. This profile lists the verified work-suitability spread and breeding power used by our current Palworld tools.</p><div><Link href="/breeding-calculator">Find {pal.name} breeding pairs →</Link><Link href="/paldex">Back to Paldeck</Link></div></div><PalMark pal={pal} /></section>
     <section className="profile-content"><div className="profile-main"><section><p className="database-eyebrow">Verified data</p><h2>{pal.name} 1.0 Paldeck data</h2><div className="profile-stat-strip"><span><small>Paldeck</small><strong>{pal.number}</strong></span><span><small>Breeding power</small><strong>{pal.power}</strong></span><span><small>Work roles</small><strong>{workEntries.length}</strong></span><span><small>Entry type</small><strong>{pal.kind === "pal" ? "Pal" : "Guest"}</strong></span></div><p>Breeding power is a hidden species value used by many standard Palworld breeding outcomes. It does not describe combat strength, rarity, or catch difficulty. Use it through the calculator instead of treating a lower or higher number as a tier.</p></section>
       <section><h2>{pal.name} work suitability</h2>{workEntries.length ? <><div className="profile-work-grid">{workEntries.map(([key, level]) => <article key={key}><span>{workGlyphs[key]}</span><div><strong>{workLabels[key]}</strong><small>Base level {level}</small></div><b>{level}</b></article>)}</div><p>{strongest ? `${pal.name}'s highest recorded base role is ${workLabels[strongest[0]]} at level ${strongest[1]}. ` : ""}Your save can show different effective levels after condensation, applied techniques, and base-wide effects.</p></> : <p>No ordinary base work suitability is recorded for this crossover entry.</p>}</section>

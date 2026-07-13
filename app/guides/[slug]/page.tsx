@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import SiteHeader from "../../components/site-header";
 import { getGuide, guides } from "../guide-data";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -26,19 +27,11 @@ export default async function GuidePage({ params }: Props) {
 
   return (
     <main className="min-h-screen bg-[#fffdf6] text-[#173b38]">
-      <header className="article-nav px-5 py-5 sm:px-8 lg:px-12">
-        <div className="mx-auto flex max-w-[1200px] items-center justify-between gap-5">
-          <Link href="/" className="flex items-center gap-3" aria-label="Palworld Guide home">
-            <span className="grid h-10 w-10 place-items-center rounded-2xl bg-[#1e7756] font-extrabold text-white">P</span>
-            <span className="font-[var(--font-display)] text-lg font-extrabold tracking-[-.03em]">PALWORLD <span className="hidden text-[#6c8a84] sm:inline">FIELD GUIDE</span></span>
-          </Link>
-          <Link href="/#categories" className="rounded-full border border-[#2b6f5b]/15 bg-white/70 px-5 py-3 text-sm font-extrabold text-[#286552]">All Guides</Link>
-        </div>
-      </header>
+      <div className="article-nav"><SiteHeader current="/guides" /></div>
 
       <section className="article-hero px-5 pb-20 pt-14 sm:px-8 lg:px-12 lg:pt-20">
         <div className="mx-auto max-w-[1100px]">
-          <Link href="/#categories" className="mb-8 inline-flex items-center gap-2 text-sm font-extrabold text-[#397563]">← Back to the Complete Library</Link>
+          <Link href="/guides" className="mb-8 inline-flex items-center gap-2 text-sm font-extrabold text-[#397563]">← Back to the Complete Library</Link>
           <div className="grid gap-10 lg:grid-cols-[1fr_300px] lg:items-end">
             <div>
               <div className="mb-5 flex flex-wrap items-center gap-3 text-xs font-extrabold uppercase tracking-[.14em] text-[#e45f58]"><span>{guide.category}</span><span className="h-1 w-1 rounded-full bg-[#e45f58]" /><span>Palworld 1.0</span></div>
