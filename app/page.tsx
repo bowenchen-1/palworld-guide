@@ -1,8 +1,9 @@
 const guides = [
   {
+    slug: "first-7-days",
     number: "01",
     category: "Getting Started",
-    title: "Your First 7 Days in Polworld",
+    title: "Your First 7 Days in Palworld",
     description: "A practical route from your first campfire to a safe, productive base.",
     time: "8 min read",
     color: "bg-[#ff7b70]",
@@ -10,6 +11,7 @@ const guides = [
     icon: "☀",
   },
   {
+    slug: "best-early-game-pals",
     number: "02",
     category: "Pals & Teams",
     title: "Best Early-Game Pals",
@@ -20,6 +22,7 @@ const guides = [
     icon: "✦",
   },
   {
+    slug: "explorers-map",
     number: "03",
     category: "Exploration",
     title: "The Explorer's Map",
@@ -30,6 +33,7 @@ const guides = [
     icon: "⌖",
   },
   {
+    slug: "build-a-better-base",
     number: "04",
     category: "Base Building",
     title: "Build a Better Base",
@@ -40,6 +44,7 @@ const guides = [
     icon: "⌂",
   },
   {
+    slug: "ore-coal-sulfur-routes",
     number: "05",
     category: "Resources",
     title: "Ore, Coal & Sulfur Routes",
@@ -50,6 +55,7 @@ const guides = [
     icon: "◆",
   },
   {
+    slug: "first-tower-boss",
     number: "06",
     category: "Combat",
     title: "Prepare for Your First Boss",
@@ -63,8 +69,8 @@ const guides = [
 
 const faqs = [
   {
-    question: "What is Polworld Guide?",
-    answer: "Polworld Guide is an independent, player-made knowledge hub built to turn long searches into clear next steps. Every guide focuses on practical routes, useful checklists, and advice you can apply immediately.",
+    question: "What is Palworld Guide?",
+    answer: "Palworld Guide is an independent, player-made knowledge hub built to turn long searches into clear next steps. Every guide focuses on practical routes, useful checklists, and advice you can apply immediately.",
   },
   {
     question: "Are these guides beginner-friendly?",
@@ -89,10 +95,10 @@ export default function Home() {
         <div className="cloud cloud-two" aria-hidden="true" />
         <div className="mx-auto max-w-[1360px]">
           <header className="relative z-30 flex items-center justify-between rounded-[24px] border border-white/70 bg-white/60 px-5 py-4 shadow-[0_10px_35px_rgba(40,105,104,.08)] backdrop-blur-xl sm:px-7">
-            <a href="#top" className="flex items-center gap-3" aria-label="Polworld Guide home">
+            <a href="#top" className="flex items-center gap-3" aria-label="Palworld Guide home">
               <span className="grid h-11 w-11 place-items-center rounded-2xl bg-[#1e7756] text-xl text-white shadow-[inset_0_-4px_0_rgba(0,0,0,.12)]">P</span>
               <span className="leading-none">
-                <strong className="block font-[var(--font-display)] text-xl tracking-[-.03em]">POLWORLD</strong>
+                <strong className="block font-[var(--font-display)] text-xl tracking-[-.03em]">PALWORLD</strong>
                 <span className="text-[10px] font-bold tracking-[.24em] text-[#568079]">FIELD GUIDE</span>
               </span>
             </a>
@@ -113,7 +119,7 @@ export default function Home() {
                 Explore More.<br />
                 <span className="relative inline-block text-[#fffdf6] [text-shadow:0_4px_0_#2a8067]">Survive Smarter.<span className="title-swoop" aria-hidden="true" /></span>
               </h1>
-              <p className="mt-8 max-w-xl text-lg leading-8 text-[#456c68] sm:text-xl">Clear routes, clever builds, and field-tested strategies for every stage of your Polworld adventure.</p>
+              <p className="mt-8 max-w-xl text-lg leading-8 text-[#456c68] sm:text-xl">Clear routes, clever builds, and field-tested strategies for every stage of your Palworld adventure.</p>
               <div className="mt-9 flex flex-wrap items-center gap-4">
                 <a href="#guides" className="rounded-2xl bg-[#ff786e] px-7 py-4 font-extrabold text-white shadow-[0_7px_0_#ce514b] transition hover:-translate-y-1">Start Exploring <span aria-hidden="true">→</span></a>
                 <a href="#about" className="rounded-2xl border-2 border-[#287a68]/20 bg-white/55 px-7 py-4 font-extrabold text-[#215f53] backdrop-blur transition hover:bg-white">Discover the Game</a>
@@ -145,7 +151,7 @@ export default function Home() {
           <div>
             <p className="eyebrow">Welcome, Explorer</p>
             <h2 className="section-title mt-4">A wild world.<br />Your own story.</h2>
-            <p className="mt-7 max-w-lg text-lg leading-8 text-[#5a7470]">Polworld blends open-world exploration, creature companionship, crafting, and survival. Build a home, grow a capable team, and choose your own path through a landscape full of surprises.</p>
+            <p className="mt-7 max-w-lg text-lg leading-8 text-[#5a7470]">Palworld blends open-world exploration, creature companionship, crafting, and survival. Build a home, grow a capable team, and choose your own path through a landscape full of surprises.</p>
             <a href="#guides" className="mt-8 inline-flex items-center gap-3 font-extrabold text-[#24775d]">Find your next objective <span className="grid h-9 w-9 place-items-center rounded-full bg-[#dff3db]">→</span></a>
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
@@ -175,12 +181,12 @@ export default function Home() {
                   <div className="mb-3 flex items-center justify-between gap-3"><span className={`rounded-full px-3 py-1 text-[11px] font-extrabold uppercase tracking-[.1em] text-white ${guide.color}`}>{guide.category}</span><span className="text-xs font-bold text-[#82948f]">{guide.time}</span></div>
                   <h3 className="font-[var(--font-display)] text-2xl font-extrabold leading-tight tracking-[-.03em] text-[#193e39]">{guide.title}</h3>
                   <p className="mt-3 leading-7 text-[#627a75]">{guide.description}</p>
-                  <a href="#guide-note" className="mt-5 inline-flex items-center gap-2 font-extrabold text-[#2b795f]">Read guide <span className="transition group-hover:translate-x-1">→</span></a>
+                  <a href={`/guides/${guide.slug}`} className="mt-5 inline-flex items-center gap-2 font-extrabold text-[#2b795f]">Read guide <span className="transition group-hover:translate-x-1">→</span></a>
                 </div>
               </article>
             ))}
           </div>
-          <p id="guide-note" className="mt-8 text-center text-sm font-semibold text-[#6f8781]">Detailed guide pages are coming in the next release.</p>
+          <p className="mt-8 text-center text-sm font-semibold text-[#6f8781]">Six complete guides, reviewed for Palworld 1.0.</p>
         </div>
       </section>
 
@@ -204,7 +210,7 @@ export default function Home() {
             <div><p className="font-[var(--font-display)] text-3xl font-extrabold tracking-[-.04em]">Ready for the next adventure?</p><p className="mt-2 text-[#afd0c4]">Bookmark the guide and never lose the trail.</p></div>
             <a href="#top" className="w-fit rounded-2xl bg-[#ff786e] px-6 py-4 font-extrabold text-white shadow-[0_6px_0_#a83f3b]">Back to the top ↑</a>
           </div>
-          <div className="mt-10 flex flex-col justify-between gap-3 border-t border-white/15 pt-7 text-xs text-[#91b8ac] sm:flex-row"><span>© 2026 Polworld Guide. Made by players, for players.</span><span>Independent fan-made resource · Not affiliated with the game publisher.</span></div>
+          <div className="mt-10 flex flex-col justify-between gap-3 border-t border-white/15 pt-7 text-xs text-[#91b8ac] sm:flex-row"><span>© 2026 Palworld Guide. Made by players, for players.</span><span>Independent fan-made resource · Not affiliated with the game publisher.</span></div>
         </div>
       </footer>
     </main>

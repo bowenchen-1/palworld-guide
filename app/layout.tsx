@@ -6,16 +6,16 @@ const nunito = Nunito({ variable: "--font-body", subsets: ["latin"] });
 const baloo = Baloo_2({ variable: "--font-display", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Polworld Guide — Explore More. Survive Smarter.",
-  description: "Clear routes, clever builds, and field-tested strategies for every stage of your Polworld adventure.",
+  title: "Palworld Guide — Explore More. Survive Smarter.",
+  description: "Clear routes, clever builds, and field-tested strategies for every stage of your Palworld adventure.",
   icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },
   openGraph: {
-    title: "Polworld Guide",
+    title: "Palworld Guide",
     description: "Explore More. Survive Smarter.",
     type: "website",
-    images: [{ url: "/og.png", width: 1734, height: 907, alt: "Polworld Guide — Explore More. Survive Smarter." }],
+    images: [{ url: "/og.png", width: 1734, height: 907, alt: "Palworld Guide — Explore More. Survive Smarter." }],
   },
-  twitter: { card: "summary_large_image", title: "Polworld Guide", description: "Explore More. Survive Smarter.", images: ["/og.png"] },
+  twitter: { card: "summary_large_image", title: "Palworld Guide", description: "Explore More. Survive Smarter.", images: ["/og.png"] },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
