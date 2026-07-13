@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-:root { --background:#fffdf6; --foreground:#173b38; }
+:root { --background:#fffdf6; --foreground:#173b38; --font-body:"Nunito Variable",sans-serif; --font-display:"Baloo 2 Variable",sans-serif; }
 * { box-sizing:border-box; }
 html { scroll-behavior:smooth; }
 body { margin:0; background:var(--background); color:var(--foreground); font-family:var(--font-body),sans-serif; }

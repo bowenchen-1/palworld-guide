@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
-import { Nunito, Baloo_2 } from "next/font/google";
+import "@fontsource-variable/nunito";
+import "@fontsource-variable/baloo-2";
 import "./globals.css";
 
-const nunito = Nunito({ variable: "--font-body", subsets: ["latin"] });
-const baloo = Baloo_2({ variable: "--font-display", subsets: ["latin"] });
+const siteUrl = process.env.VERCEL_PROJECT_PRODUCTION_URL
+  ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+  : "http://localhost:3000";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: "Palworld Guide — Explore More. Survive Smarter.",
   description: "Clear routes, clever builds, and field-tested strategies for every stage of your Palworld adventure.",
   icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },
@@ -19,5 +22,5 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="en"><body className={`${nunito.variable} ${baloo.variable} antialiased`}>{children}</body></html>;
+  return <html lang="en"><body className="antialiased">{children}</body></html>;
 }
