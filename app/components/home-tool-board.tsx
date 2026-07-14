@@ -7,6 +7,12 @@ import { BreedingData, playablePals, WorkKey, workGlyphs, workLabels } from "../
 
 type PickerSlot = "parentA" | "parentB" | "lookup" | null;
 
+const quickRecipes = [
+  { parentA: "139.0", parentB: "140.0", result: "151.0" },
+  { parentA: "202.0", parentB: "186.0", result: "175.0" },
+  { parentA: "189.0", parentB: "139.0", result: "176.0" },
+];
+
 export default function HomeToolBoard() {
   const [parentA, setParentA] = useState("");
   const [parentB, setParentB] = useState("");
@@ -55,12 +61,42 @@ export default function HomeToolBoard() {
     setPickerQuery("");
   }
 
+  function chooseRecipe(first: string, second: string) {
+    setParentA(first);
+    setParentB(second);
+    loadMatrix();
+  }
+
   return <div className="home-tool-board">
     <article className="home-breeding-card">
-      <div className="home-tool-card-heading"><span>◉</span><div><p>Calculate on the homepage</p><h3>Breeding Calculator</h3></div><Link href="/breeding-calculator">Advanced modes →</Link></div>
-      <p className="home-tool-copy">Choose two pictured parents and see their current Palworld 1.0 offspring instantly, without leaving the homepage.</p>
-      <div className="home-breeding-inputs"><label><span>Parent A</span><button type="button" aria-label="Choose quick breeding parent A" onClick={() => openPicker("parentA")}><PalMark pal={parentAPal} small /><span><b>{parentAPal?.name ?? "Select a Pal"}</b><small>{parentAPal ? `No. ${parentAPal.number}` : "Open pictured Pal list"}</small></span><em>⌄</em></button></label><b>+</b><label><span>Parent B</span><button type="button" aria-label="Choose quick breeding parent B" onClick={() => openPicker("parentB")}><PalMark pal={parentBPal} small /><span><b>{parentBPal?.name ?? "Select a Pal"}</b><small>{parentBPal ? `No. ${parentBPal.number}` : "Open pictured Pal list"}</small></span><em>⌄</em></button></label></div>
-      <div className={`home-breeding-result ${result ? "ready" : ""}`}><PalMark pal={result} small /><div><span>Offspring result</span><strong>{loading ? "Loading 1.0 data…" : loadError ? "Data unavailable — try again" : result?.name ?? (parentA && parentB ? "Choose a valid pair" : "Waiting for two parents")}</strong></div>{loadError ? <button type="button" onClick={loadMatrix}>Retry</button> : result && <Link href={`/pals/${result.slug}`}>View profile →</Link>}</div>
+      <div className="breeding-card-glow" aria-hidden="true" />
+      <header className="breeding-stage-header">
+        <div><p><span /> Palworld 1.0 calculator</p><h3>Build your perfect egg.</h3><small>Pick two Pals. We will reveal the offspring instantly.</small></div>
+        <Link href="/breeding-calculator">Open advanced calculator <b>↗</b></Link>
+      </header>
+
+      <div className="home-breeding-equation">
+        <button className={`breeding-pal-slot ${parentAPal ? "selected" : ""}`} type="button" aria-label="Choose quick breeding parent A" onClick={() => openPicker("parentA")}>
+          <span className="slot-label">Parent A</span><PalMark pal={parentAPal} /><strong>{parentAPal?.name ?? "Choose a Pal"}</strong><small>{parentAPal ? `No. ${parentAPal.number}` : "Tap to browse all Pals"}</small><i>Change</i>
+        </button>
+        <span className="breeding-operator" aria-hidden="true">+</span>
+        <button className={`breeding-pal-slot ${parentBPal ? "selected" : ""}`} type="button" aria-label="Choose quick breeding parent B" onClick={() => openPicker("parentB")}>
+          <span className="slot-label">Parent B</span><PalMark pal={parentBPal} /><strong>{parentBPal?.name ?? "Choose a Pal"}</strong><small>{parentBPal ? `No. ${parentBPal.number}` : "Tap to browse all Pals"}</small><i>Change</i>
+        </button>
+        <span className="breeding-operator equals" aria-hidden="true">=</span>
+        <div className={`breeding-pal-slot offspring ${result ? "selected" : ""}`}>
+          <span className="slot-label">Offspring</span><PalMark pal={result} /><strong>{loading ? "Calculating…" : loadError ? "Data unavailable — try again" : result?.name ?? "Your result"}</strong><small>{result ? `No. ${result.number}` : "Choose both parents"}</small>
+          {loadError ? <button type="button" onClick={loadMatrix}>Retry</button> : result ? <Link href={`/pals/${result.slug}`}>View profile ↗</Link> : <i>Waiting</i>}
+        </div>
+      </div>
+
+      <div className="breeding-recipe-dock">
+        <div className="recipe-dock-title"><span>Popular combinations</span><small>Tap a recipe to try it</small></div>
+        <div className="recipe-list">{quickRecipes.map((recipe) => {
+          const first = byId.get(recipe.parentA); const second = byId.get(recipe.parentB); const child = byId.get(recipe.result);
+          return <button type="button" key={`${recipe.parentA}-${recipe.parentB}`} onClick={() => chooseRecipe(recipe.parentA, recipe.parentB)} aria-label={`Try ${first?.name} and ${second?.name}`}><span><PalMark pal={first} small /><b>{first?.name}</b></span><i>+</i><span><PalMark pal={second} small /><b>{second?.name}</b></span><i>=</i><span><PalMark pal={child} small /><b>{child?.name}</b></span></button>;
+        })}</div>
+      </div>
     </article>
 
     <article className="home-pal-lookup">
@@ -71,6 +107,6 @@ export default function HomeToolBoard() {
       <Link className="home-pal-open" href={`/pals/${selectedPal.slug}`}>Open {selectedPal.name} profile →</Link>
     </article>
 
-    {picker && <div className="pal-picker-backdrop home-picker-backdrop" onClick={() => setPicker(null)}><section className="pal-picker home-pal-picker" role="dialog" aria-modal="true" aria-label="Choose a Pal with image" onClick={(event) => event.stopPropagation()}><header><div><p>Pictured Pal selection</p><h2>{picker === "parentA" ? "Choose Parent A" : picker === "parentB" ? "Choose Parent B" : "Choose a Pal"}</h2></div><button type="button" onClick={() => setPicker(null)} aria-label="Close Pal selection">×</button></header><input autoFocus value={pickerQuery} onChange={(event) => setPickerQuery(event.target.value)} placeholder="Search by Pal name or number…" aria-label="Search pictured Pals" /><div className="pal-picker-grid">{filteredPals.map((pal) => <button type="button" key={pal.id} onClick={() => choosePal(pal.id)}><PalMark pal={pal} small /><span><b>{pal.name}</b><small>No. {pal.number} · Power {pal.power}</small></span></button>)}</div></section></div>}
+    {picker && <div className="pal-picker-backdrop home-picker-backdrop" onClick={() => setPicker(null)}><section className="pal-picker home-pal-picker" role="dialog" aria-modal="true" aria-label="Choose a Pal with image" onClick={(event) => event.stopPropagation()}><header><div><p>Pictured Pal selection</p><h2>{picker === "parentA" ? "Choose Parent A" : picker === "parentB" ? "Choose Parent B" : "Choose a Pal"}</h2><small>Search or choose from the current Palworld 1.0 roster.</small></div><button type="button" onClick={() => setPicker(null)} aria-label="Close Pal selection">×</button></header><label className="home-picker-search"><span>⌕</span><input autoFocus value={pickerQuery} onChange={(event) => setPickerQuery(event.target.value)} placeholder="Search by Pal name or number…" aria-label="Search pictured Pals" /><kbd>{filteredPals.length} shown</kbd></label><div className="pal-picker-grid">{filteredPals.map((pal) => <button type="button" key={pal.id} onClick={() => choosePal(pal.id)}><PalMark pal={pal} /><span><b>{pal.name}</b><small>No. {pal.number}</small></span></button>)}</div></section></div>}
   </div>;
 }
