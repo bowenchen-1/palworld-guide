@@ -21,6 +21,10 @@ test("homepage is a tool-first Palworld hub with one focused H1", async () => {
   assert.match(page, /Official 1\.0 launch/);
   assert.match(page, /Popular Pals/);
   assert.match(layout, /Palworld 1\.0 Release Date — Launch Guide/);
+  assert.match(layout, /\/favicon\.ico/);
+  assert.match(layout, /\/icon-192\.png/);
+  assert.match(layout, /\/apple-touch-icon\.png/);
+  assert.match(layout, /\/site\.webmanifest/);
   assert.doesNotMatch(page, /Coming Soon|href="\/map"/);
   assert.doesNotMatch(page, /Polworld|POLWORLD/);
 });
