@@ -92,7 +92,8 @@ test("homepage calculator lazily loads current breeding data and handles errors"
   assert.match(board, /PalMark pal={parentAPal}/);
   assert.match(board, /if \(slot !== "lookup"\) loadMatrix\(\)/);
   assert.match(board, /fetch\("\/data\/breeding\.json"\)/);
-  assert.match(board, /Data unavailable — try again/);
+  assert.match(board, /setLoadError\(true\)/);
+  assert.match(board, /Breeding data is unavailable/);
   assert.match(board, />Retry</);
 });
 
@@ -104,6 +105,8 @@ test("homepage can reverse-search parent combinations for a target Pal", async (
   assert.match(board, /HOME_PAIR_LIMIT = 12/);
   assert.match(board, /PalMark pal={first}/);
   assert.match(board, /PalMark pal={second}/);
+  assert.match(board, /Choose a Pal and find its parent combinations/);
+  assert.match(board, /openPicker\("target"\)/);
   assert.match(board, /Breeding data is unavailable/);
   assert.match(board, />Retry</);
 });

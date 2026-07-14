@@ -254,10 +254,12 @@ body::before {
 }
 .home-calculator-mode button:hover { background: rgba(57,208,197,.14); color: var(--terminal-mint); }
 .home-calculator-mode button.active {
-  background: var(--terminal-mint);
-  color: var(--terminal-canvas);
+  background: var(--terminal-mint) !important;
+  color: var(--terminal-canvas) !important;
   box-shadow: 0 3px 0 rgba(0,8,12,.32);
 }
+.home-calculator-mode button.active::first-line { color: var(--terminal-canvas) !important; }
+.home-scene-hero .home-calculator-mode button.active { background: var(--terminal-mint) !important; color: var(--terminal-canvas) !important; }
 @media(max-width:760px) {
   .home-calculator-mode { width: 100%; }
   .home-calculator-mode button { flex: 1; min-height: 40px; padding: 8px 6px; font-size: 10px; }

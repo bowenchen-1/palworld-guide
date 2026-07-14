@@ -112,10 +112,9 @@ export default function HomeToolBoard({ headingLevel = 3 }: { headingLevel?: 2 |
           <span className="slot-label">Parent B</span><PalMark pal={parentBPal} /><strong>{parentBPal?.name ?? "Choose a Pal"}</strong><small>{parentBPal ? `No. ${parentBPal.number}` : "Tap to browse all Pals"}</small><i>Change</i>
         </button>
         <span className="breeding-operator equals" aria-hidden="true">=</span>
-        <div className={`breeding-pal-slot offspring ${result ? "selected" : ""}`}>
-          <span className="slot-label">Offspring</span><PalMark pal={result} /><strong>{loading ? "Calculating…" : loadError ? "Data unavailable — try again" : result?.name ?? "Your result"}</strong><small>{result ? `No. ${result.number}` : "Choose both parents"}</small>
-          {loadError ? <button type="button" onClick={loadMatrix}>Retry</button> : result ? <Link href={`/pals/${result.slug}`}>View profile ↗</Link> : <i>Waiting</i>}
-        </div>
+        <button className={`breeding-pal-slot offspring ${result ? "selected" : ""}`} type="button" aria-label="Choose a Pal and find its parent combinations" onClick={() => { setMode("target"); openPicker("target"); }}>
+          <span className="slot-label">Offspring</span><PalMark pal={result} /><strong>{loading ? "Calculating…" : loadError ? "Choose a target Pal" : result?.name ?? "Find Parent Pairs"}</strong><small>{result ? `No. ${result.number} · tap to find its parents` : "Tap to choose any Pal directly"}</small><i>Choose Pal</i>
+        </button>
       </div>
 
       <div className="breeding-recipe-dock">
