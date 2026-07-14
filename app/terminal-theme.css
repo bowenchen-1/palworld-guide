@@ -503,14 +503,16 @@ body::before {
 .paldex-view-toggle button.active { background: var(--terminal-mint); color: var(--terminal-canvas); box-shadow: none; }
 .paldex-reset { border-color: var(--terminal-border); background: var(--terminal-panel-light); color: var(--theme-danger); }
 
-.paldex-load-more {
+.paldex-pagination a,
+.paldex-pagination>span {
   border-color: var(--terminal-border);
   background: var(--terminal-panel);
   color: var(--terminal-copy);
   clip-path: var(--terminal-cut);
 }
-.paldex-load-more:hover,
-.paldex-load-more:focus-visible { border-color: var(--terminal-mint); color: var(--terminal-mint); }
+.paldex-pagination a:hover,
+.paldex-pagination a:focus-visible { border-color: var(--terminal-mint); color: var(--terminal-mint); }
+.paldex-pagination a[aria-current="page"] { border-color: var(--terminal-mint); background: var(--terminal-mint); color: var(--terminal-canvas); }
 
 .not-found-page {
   display: grid;

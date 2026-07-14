@@ -25,7 +25,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     path: `/pals/${pal.slug}`,
     keywords: [`${pal.name.toLowerCase()} palworld`],
     type: "article",
-    image: `/pals/${pal.id}.png`,
+    image: `/pals/${pal.slug}/opengraph-image`,
+    imageWidth: 1200,
+    imageHeight: 630,
     publishedTime: "2026-07-14",
     modifiedTime: "2026-07-14",
   });

@@ -8,6 +8,8 @@ type PageMetadataOptions = {
   keywords?: string[];
   type?: "website" | "article";
   image?: string;
+  imageWidth?: number;
+  imageHeight?: number;
   publishedTime?: string;
   modifiedTime?: string;
 };
@@ -21,14 +23,16 @@ export function createPageMetadata({
   keywords,
   type = "website",
   image = "/og.png",
+  imageWidth = 1734,
+  imageHeight = 907,
   publishedTime,
   modifiedTime,
 }: PageMetadataOptions): Metadata {
   const url = absoluteUrl(path);
   const imageUrl = absoluteUrl(image);
   const openGraph: Metadata["openGraph"] = type === "article"
-    ? { title, description, url, siteName: "Palworld Guide", type: "article", publishedTime, modifiedTime, images: [{ url: imageUrl, alt: title }] }
-    : { title, description, url, siteName: "Palworld Guide", type: "website", images: [{ url: imageUrl, alt: title }] };
+    ? { title, description, url, siteName: "Palworld Guide", locale: "en_US", type: "article", publishedTime, modifiedTime, images: [{ url: imageUrl, width: imageWidth, height: imageHeight, type: "image/png", alt: title }] }
+    : { title, description, url, siteName: "Palworld Guide", locale: "en_US", type: "website", images: [{ url: imageUrl, width: imageWidth, height: imageHeight, type: "image/png", alt: title }] };
 
   return {
     title,

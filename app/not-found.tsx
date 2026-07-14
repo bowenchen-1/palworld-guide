@@ -5,7 +5,6 @@ import SiteHeader from "./components/site-header";
 export const metadata: Metadata = {
   title: "Page Not Found | Palworld Guide",
   description: "This Palworld Guide page could not be found. Return to the breeding calculator, Paldeck database, tools, or player-researched guides.",
-  robots: { index: false, follow: true },
 };
 
 export default function NotFound() {
@@ -20,4 +19,3 @@ export default function NotFound() {
     </section>
   </main>;
 }
-

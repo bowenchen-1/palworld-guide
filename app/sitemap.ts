@@ -1,10 +1,12 @@
 import type { MetadataRoute } from "next";
 import { guides } from "./guides/guide-data";
 import { pals } from "./lib/game-data";
+import { PALDEX_PAGE_SIZE } from "./paldex/paldex-config";
 import { siteUrl } from "./site-config";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date("2026-07-14T00:00:00.000Z");
+  const paldexPageCount = Math.ceil(pals.filter((pal) => pal.kind === "pal").length / PALDEX_PAGE_SIZE);
 
   const corePages: MetadataRoute.Sitemap = [
     {
@@ -23,6 +25,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     ...corePages,
+    ...Array.from({ length: paldexPageCount - 1 }, (_, index) => ({
+      url: `${siteUrl}/paldex/page/${index + 2}`,
+      lastModified,
+      changeFrequency: "weekly" as const,
+      priority: 0.75,
+    })),
     ...guides.map((guide) => ({
       url: `${siteUrl}/guides/${guide.slug}`,
       lastModified,

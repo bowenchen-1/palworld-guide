@@ -19,6 +19,7 @@ test("homepage targets Palworld breeding calculator with one focused H1", async 
   assert.match(page, /title: "Palworld Breeding Calculator - Updated 1\.0 Pal Combos"/);
   assert.match(page, /How the Pal Breeding Tool Works/);
   assert.match(page, /Palworld Breeding Calculator FAQ/);
+  assert.match(page, /Plan a Reliable Breeding Route/);
   assert.match(page, /"@type": "WebApplication"/);
   assert.match(gameData, /\/breeding-calculator/);
   assert.match(gameData, /\/paldex/);
@@ -158,20 +159,23 @@ test("breeding calculator supports forward and reverse searches", async () => {
 
 test("Paldeck has current filters and indexable profile pages", async () => {
   const page = await read("../app/paldex/page.tsx");
+  const content = await read("../app/paldex/paldex-page-content.tsx");
   const client = await read("../app/paldex/paldex-client.tsx");
   const profile = await read("../app/pals/[slug]/page.tsx");
-  assert.equal((page.match(/<h1/g) ?? []).length, 1);
-  assert.match(page, /Palworld Paldeck Database/);
+  assert.equal((content.match(/<h1/g) ?? []).length, 1);
+  assert.match(page, /PaldexPageContent/);
+  assert.match(content, /Palworld Paldeck Database/);
   assert.match(client, /Work Suitability/);
   assert.match(client, /Minimum Work Level/);
   assert.match(client, /Highest work level/);
   assert.match(client, /paldex-view-toggle/);
   assert.match(client, /Reset filters/);
   assert.match(client, /Breeding power/);
-  assert.match(client, /INITIAL_PALDEX_LIMIT = 36/);
-  assert.match(client, /filtered\.slice\(0, visibleCount\)/);
+  assert.match(client, /PALDEX_PAGE_SIZE/);
+  assert.match(client, /filtered\.slice\(\(safePage - 1\) \* PALDEX_PAGE_SIZE/);
   assert.match(client, /href={`\/pals\/\$\{pal\.slug\}`}/);
-  assert.match(client, /Show \{Math\.min\(PALDEX_PAGE_SIZE/);
+  assert.match(client, /paldex-pagination/);
+  assert.match(client, /`\/paldex\/page\/\$\{page\}`/);
   assert.doesNotMatch(client, /return <button type="button" aria-pressed=\{selected\.id === pal\.id\}/);
   assert.match(profile, /generateStaticParams/);
   assert.match(profile, /Palworld Guide/);
@@ -198,6 +202,7 @@ test("sitemap exposes tools, guides, and every Pal profile", async () => {
   assert.match(sitemap, /\$\{siteUrl\}\/guides/);
   assert.match(sitemap, /\$\{siteUrl\}\/updates/);
   assert.match(sitemap, /pals\.map/);
+  assert.match(sitemap, /paldex\/page\/\$\{index \+ 2\}/);
   assert.match(sitemap, /priority: 1/);
   assert.match(robots, /sitemap\.xml/);
   assert.match(robots, /allow: "\/"/);
@@ -225,8 +230,30 @@ test("pages own their canonical and social metadata without inheriting homepage 
   assert.match(seo, /alternates: \{ canonical: url \}/);
   assert.match(seo, /twitter: \{ card: "summary_large_image", title, description/);
   for (const path of topLevelPages) assert.match(await read(path), /createPageMetadata/);
-  assert.match(notFound, /robots: \{ index: false, follow: true \}/);
+  assert.doesNotMatch(notFound, /robots:/);
   assert.match(notFound, /Page Not Found \| Palworld Guide/);
+});
+
+test("Paldeck pagination exposes every initial Pal card to crawlers", async () => {
+  const pagination = await read("../app/paldex/page/[page]/page.tsx");
+  const content = await read("../app/paldex/paldex-page-content.tsx");
+  assert.match(pagination, /generateStaticParams/);
+  assert.match(pagination, /permanentRedirect\("\/paldex"\)/);
+  assert.match(pagination, /path: `\/paldex\/page\/\$\{page\}`/);
+  assert.match(content, /<PaldexClient initialPage=\{initialPage\}/);
+});
+
+test("social metadata declares locale, dimensions, and Pal sharing cards", async () => {
+  const seo = await read("../app/lib/seo.ts");
+  const palPage = await read("../app/pals/[slug]/page.tsx");
+  const palImage = await read("../app/pals/[slug]/opengraph-image.tsx");
+  assert.match(seo, /locale: "en_US"/);
+  assert.match(seo, /width: imageWidth, height: imageHeight/);
+  assert.match(palPage, /image: `\/pals\/\$\{pal\.slug\}\/opengraph-image`/);
+  assert.match(palPage, /imageWidth: 1200/);
+  assert.match(palPage, /imageHeight: 630/);
+  assert.match(palImage, /width: 1200, height: 630/);
+  assert.match(palImage, /new ImageResponse/);
 });
 
 test("deep content exposes Article and BreadcrumbList structured data", async () => {
