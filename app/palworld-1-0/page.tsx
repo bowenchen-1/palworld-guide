@@ -6,6 +6,7 @@ import { siteUrl } from "../site-config";
 export const metadata: Metadata = {
   title: "Palworld 1.0 Guide — Release Date, Pals & Tools",
   description: "Palworld 1.0 launched July 10, 2026. See the release-date answer, major gameplay changes, current Pal data, breeding tools, and next steps in one launch hub.",
+  keywords: ["palworld 1.0"],
   alternates: { canonical: "/palworld-1-0" },
 };
 

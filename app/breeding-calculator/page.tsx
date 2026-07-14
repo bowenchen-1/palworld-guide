@@ -6,6 +6,7 @@ import BreedingClient from "./breeding-client";
 export const metadata: Metadata = {
   title: "Palworld Breeding Calculator (1.0) | Field Guide",
   description: "Use the Palworld breeding calculator for version 1.0. Pick two parents to find the child or choose a target Pal to reveal matching parent pairs online.",
+  keywords: ["palworld breeding calculator"],
   alternates: { canonical: "/breeding-calculator" },
   openGraph: { title: "Palworld Breeding Calculator — Updated for 1.0", description: "Calculate parent-to-child results and reverse-search parent pairs using current Palworld 1.0 data.", url: "/breeding-calculator", type: "website" },
 };

@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import GlobalSearch from "./components/global-search";
 import HomeToolBoard from "./components/home-tool-board";
@@ -6,6 +7,14 @@ import SiteHeader from "./components/site-header";
 import ToolLab from "./components/tool-lab";
 import { guides } from "./guides/guide-data";
 import { pals, WorkKey, workGlyphs, workLabels } from "./lib/game-data";
+
+export const metadata: Metadata = {
+  title: "Palworld 1.0 Release Date — Launch Guide",
+  description: "The Palworld 1.0 release date was July 10, 2026. Check the launch status, then use current breeding tools, Paldeck data, and version 1.0 guides.",
+  keywords: ["palworld 1.0 release date"],
+  alternates: { canonical: "/" },
+  openGraph: { title: "Palworld 1.0 Release Date — Launch Guide", description: "Palworld 1.0 launched July 10, 2026. Get the date, current breeding tools, Paldeck data, and practical guides.", url: "/", type: "website" },
+};
 
 const popularStyles = [
   { color: "bg-[#ff7b70]", accent: "from-[#ffe59a] to-[#ff9f76]", icon: "☀" },
@@ -17,6 +26,7 @@ const popularStyles = [
 ];
 
 const faqs = [
+  { question: "When was the Palworld 1.0 release date?", answer: "The official Palworld 1.0 release date was July 10, 2026. The full release is available now in every region." },
   { question: "What can I search on Palworld Field Guide?", answer: "Search current Pal profiles, breeding and database tools, or any of the 24 player-researched English guides." },
   { question: "Is the breeding calculator updated for Palworld 1.0?", answer: "Yes. It uses the current 300-entry breeding matrix and loads the larger result data only when you begin using the calculator." },
   { question: "Why are some combat stats not shown yet?", answer: "Version 1.0 rebalanced Pal data. We publish fields only after validating a complete current dataset instead of mixing old and new values." },
@@ -32,18 +42,22 @@ export default function Home() {
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
     <section className="hero-sky relative min-h-[720px] px-5 pb-28 pt-5 sm:px-8 lg:px-12">
-      <div className="sun-orb" aria-hidden="true" /><div className="cloud cloud-one" aria-hidden="true" /><div className="cloud cloud-two" aria-hidden="true" />
+      <div className="sun-orb" aria-hidden="true" />
+      <div className="cloud cloud-one" aria-hidden="true" />
+      <div className="cloud cloud-two" aria-hidden="true" />
       <div className="mx-auto max-w-[1360px]"><SiteHeader floating />
         <div id="top" className="relative z-10 grid items-center gap-14 pb-10 pt-20 lg:grid-cols-[1.08fr_.92fr] lg:pt-24">
-          <div className="hero-copy max-w-3xl"><div className="hero-status mb-6 inline-flex items-center gap-2 rounded-full border border-[#287a68]/15 bg-white/65 px-4 py-2 text-xs font-extrabold uppercase tracking-[.17em] text-[#287a68] shadow-sm backdrop-blur"><span className="h-2 w-2 rounded-full bg-[#ff7b70]" /> Updated for Palworld 1.0</div>
-            <h1 className="font-[var(--font-display)] text-[clamp(3.25rem,6.7vw,6.5rem)] font-extrabold leading-[.86] tracking-[-.065em] text-[#173f38]">Palworld Tools,<br /><span className="relative inline-block text-[#fffdf6] [text-shadow:0_4px_0_#2a8067]">Calculators & Database.<span className="title-swoop" aria-hidden="true" /></span></h1>
-            <p className="hero-description mt-8 max-w-2xl text-lg leading-8 text-[#456c68] sm:text-xl">Find breeding combinations, current Pal data, work suitability, and player-researched version 1.0 guides.</p>
+          <div className="hero-copy max-w-3xl"><div className="hero-status mb-6 inline-flex items-center gap-2 rounded-full border border-[#287a68]/15 bg-white/65 px-4 py-2 text-xs font-extrabold uppercase tracking-[.17em] text-[#287a68] shadow-sm backdrop-blur"><span className="h-2 w-2 rounded-full bg-[#ff7b70]" /> Released July 10, 2026</div>
+            <h1 className="font-[var(--font-display)] text-[clamp(3.25rem,6.7vw,6.5rem)] font-extrabold leading-[.86] tracking-[-.065em] text-[#173f38]">Palworld 1.0<br /><span className="relative inline-block text-[#fffdf6] [text-shadow:0_4px_0_#2a8067]">Release Date.<span className="title-swoop" aria-hidden="true" /></span></h1>
+            <p className="hero-description mt-8 max-w-2xl text-lg leading-8 text-[#456c68] sm:text-xl">The Palworld 1.0 release date was <strong>July 10, 2026</strong>. Use current tools, calculators, Paldeck data, and player-researched guides for the full release.</p>
             <div className="hero-actions mt-9 flex flex-wrap items-center gap-4"><Link href="/breeding-calculator" className="rounded-2xl bg-[#ff786e] px-7 py-4 font-extrabold text-white shadow-[0_7px_0_#ce514b] transition hover:-translate-y-1">Breeding Calculator →</Link><Link href="/paldex" className="rounded-2xl border-2 border-[#287a68]/20 bg-white/55 px-7 py-4 font-extrabold text-[#215f53] backdrop-blur transition hover:bg-white">Browse All Pals</Link></div>
             <div id="site-search" className="hero-search-wrap"><GlobalSearch /></div>
           </div>
           <div className="hero-core-tool" aria-label="Quick Palworld breeding calculator"><HomeToolBoard /></div>
         </div>
-      </div><div className="hill hill-back" aria-hidden="true" /><div className="hill hill-front" aria-hidden="true" />
+      </div>
+      <div className="hill hill-back" aria-hidden="true" />
+      <div className="hill hill-front" aria-hidden="true" />
     </section>
 
     <section id="tools" className="tool-lab-section px-5 py-24 sm:px-8 lg:px-12"><div className="mx-auto max-w-[1360px]"><div className="mb-12 grid gap-6 lg:grid-cols-[1fr_.7fr] lg:items-end"><div><p className="eyebrow">More Palworld Tools</p><h2 className="section-title mt-3">Plan the next move.</h2></div><p className="max-w-lg text-lg leading-8 text-[#55736d]">The core breeding check now lives above the fold. Use these focused planners for resource runs, incubation time, and base workers.</p></div><div className="mini-tool-heading"><span>Quick planning calculators</span><Link href="/tools">View every tool →</Link></div><ToolLab /></div></section>

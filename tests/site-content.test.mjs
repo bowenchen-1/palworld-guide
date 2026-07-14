@@ -8,17 +8,42 @@ test("homepage is a tool-first Palworld hub with one focused H1", async () => {
   const page = await read("../app/page.tsx");
   const layout = await read("../app/layout.tsx");
   const gameData = await read("../app/lib/game-data.ts");
-  assert.match(page, /<h1[^>]*>Palworld Tools,[\s\S]*Calculators & Database\./);
+  assert.match(page, /<h1[^>]*>Palworld 1\.0[\s\S]*Release Date\./);
   assert.equal((page.match(/<h1/g) ?? []).length, 1);
+  assert.match(page, /keywords: \["palworld 1\.0 release date"\]/);
+  assert.match(page, /The Palworld 1\.0 release date was <strong>July 10, 2026<\/strong>/);
   assert.match(gameData, /\/breeding-calculator/);
   assert.match(gameData, /\/paldex/);
   assert.match(gameData, /\/palworld-1-0/);
   assert.match(page, /GlobalSearch/);
   assert.match(page, /HomeToolBoard/);
   assert.match(page, /Popular Pals/);
-  assert.match(layout, /Palworld Tools, Calculators & Database/);
+  assert.match(layout, /Palworld 1\.0 Release Date — Launch Guide/);
   assert.doesNotMatch(page, /Coming Soon|href="\/map"/);
   assert.doesNotMatch(page, /Polworld|POLWORLD/);
+});
+
+test("each indexable page targets one distinct primary keyword", async () => {
+  const files = [
+    ["../app/page.tsx", "palworld 1.0 release date"],
+    ["../app/palworld-1-0/page.tsx", "palworld 1.0"],
+    ["../app/breeding-calculator/page.tsx", "palworld breeding calculator"],
+    ["../app/paldex/page.tsx", "palworld paldeck"],
+    ["../app/tools/page.tsx", "palworld tools"],
+    ["../app/guides/page.tsx", "palworld guides"],
+    ["../app/updates/page.tsx", "palworld 1.0 patch notes"],
+  ];
+  const keywords = [];
+  for (const [path, keyword] of files) {
+    const source = await read(path);
+    assert.ok(source.includes(`keywords: ["${keyword}"]`), `${path} should target only ${keyword}`);
+    keywords.push(keyword);
+  }
+  assert.equal(new Set(keywords).size, keywords.length);
+  const guides = await read("../app/guides/[slug]/page.tsx");
+  const pals = await read("../app/pals/[slug]/page.tsx");
+  assert.match(guides, /keywords: \[guide\.title\.toLowerCase\(\)\]/);
+  assert.match(pals, /keywords: \[`\$\{pal\.name\.toLowerCase\(\)\} palworld`\]/);
 });
 
 test("homepage calculator lazily loads current breeding data and handles errors", async () => {

@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!pal) return {};
   const title = `${pal.name} Palworld Guide — 1.0 Paldeck Data`;
   const description = `${pal.name} in Palworld 1.0: Paldeck No. ${pal.number}, current work suitability, breeding power, calculator links, and related Pal profiles, updated July 2026.`;
-  return { title, description, alternates: { canonical: `/pals/${pal.slug}` }, openGraph: { title, description, url: `/pals/${pal.slug}`, type: "article" } };
+  return { title, description, keywords: [`${pal.name.toLowerCase()} palworld`], alternates: { canonical: `/pals/${pal.slug}` }, openGraph: { title, description, url: `/pals/${pal.slug}`, type: "article" } };
 }
 
 export default async function PalProfilePage({ params }: Props) {

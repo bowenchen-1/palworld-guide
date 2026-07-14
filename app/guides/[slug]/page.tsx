@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const guide = getGuide(slug);
   if (!guide) return {};
-  return { title: `${guide.title} — Palworld Guide`, description: guide.description };
+  return { title: `${guide.title} — Palworld Guide`, description: guide.description, keywords: [guide.title.toLowerCase()], alternates: { canonical: `/guides/${guide.slug}` } };
 }
 
 export default async function GuidePage({ params }: Props) {
