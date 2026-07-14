@@ -97,18 +97,23 @@ test("homepage calculator lazily loads current breeding data and handles errors"
 });
 
 test("homepage can reverse-search parent combinations for a target Pal", async () => {
-  const page = await read("../app/page.tsx");
-  const targetSearch = await read("../app/components/home-target-breeding.tsx");
-  assert.match(page, /HomeTargetBreeding/);
-  assert.match(targetSearch, /Target → Parents/);
-  assert.match(targetSearch, /Find Parent Combinations for Any Pal/);
-  assert.match(targetSearch, /fetch\("\/data\/breeding\.json"\)/);
-  assert.match(targetSearch, /matrix\[first\.id\]\?\.\[second\.id\] !== target\.id/);
-  assert.match(targetSearch, /HOME_PAIR_LIMIT = 12/);
-  assert.match(targetSearch, /PalMark pal={first}/);
-  assert.match(targetSearch, /PalMark pal={second}/);
-  assert.match(targetSearch, /Breeding data is unavailable/);
-  assert.match(targetSearch, />Retry</);
+  const board = await read("../app/components/home-tool-board.tsx");
+  assert.match(board, /Target → Parents/);
+  assert.match(board, /Parents → Result/);
+  assert.match(board, /matrix\[first\.id\]\?\.\[second\.id\] !== target\.id/);
+  assert.match(board, /HOME_PAIR_LIMIT = 12/);
+  assert.match(board, /PalMark pal={first}/);
+  assert.match(board, /PalMark pal={second}/);
+  assert.match(board, /Breeding data is unavailable/);
+  assert.match(board, />Retry</);
+});
+
+test("homepage Pal picker renders above the page stacking contexts", async () => {
+  const board = await read("../app/components/home-tool-board.tsx");
+  const styles = await read("../app/tool-pages.css");
+  assert.match(board, /createPortal/);
+  assert.match(board, /document\.body/);
+  assert.match(styles, /\.pal-picker-backdrop\{position:fixed;z-index:1000/);
 });
 
 test("every current Pal entry has a local image used by the shared Pal component", async () => {
