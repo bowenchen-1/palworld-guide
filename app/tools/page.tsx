@@ -1,16 +1,16 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import HomeToolBoard from "../components/home-tool-board";
 import ToolLab from "../components/tool-lab";
 import ToolShell from "../components/tool-shell";
+import { createPageMetadata } from "../lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: "Palworld Tools & Calculators (1.0) | Field Guide",
   description:
     "Use current Palworld tools for version 1.0: breeding results, Pal lookup, work suitability, resource planning, incubation time, and base roster planning.",
   keywords: ["palworld tools"],
-  alternates: { canonical: "/tools" },
-};
+  path: "/tools",
+});
 
 export default function ToolsPage() {
   return (

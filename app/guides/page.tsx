@@ -1,19 +1,19 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import SiteHeader from "../components/site-header";
+import { createPageMetadata } from "../lib/seo";
 import { guideCategories, guides } from "./guide-data";
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: "Palworld Guides — 24 Player-Researched Articles",
   description:
     "Browse 24 English Palworld guides for version 1.0, organized by getting started, breeding, bases, resources, exploration, and combat.",
   keywords: ["palworld guides"],
-  alternates: { canonical: "/guides" },
-};
+  path: "/guides",
+});
 
 export default function GuidesIndexPage() {
   return (
-    <main className="hub-page">
+    <main id="main-content" className="hub-page">
       <div className="database-header">
         <SiteHeader current="/guides" />
       </div>

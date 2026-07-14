@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import GlobalSearch from "./components/global-search";
 import HomeTargetBreeding from "./components/home-target-breeding";
@@ -8,14 +7,15 @@ import SiteHeader from "./components/site-header";
 import ToolLab from "./components/tool-lab";
 import { guides } from "./guides/guide-data";
 import { pals, WorkKey, workGlyphs, workLabels } from "./lib/game-data";
+import { createPageMetadata } from "./lib/seo";
+import { siteUrl } from "./site-config";
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: "Palworld Breeding Calculator - Updated 1.0 Pal Combos",
   description: "Use the Palworld breeding calculator for version 1.0 to find offspring from two parents or discover every combination for a target Pal. Start planning now.",
   keywords: ["palworld breeding calculator"],
-  alternates: { canonical: "/" },
-  openGraph: { title: "Palworld Breeding Calculator — Updated for 1.0", description: "Choose two parent Pals to find their offspring, or search current parent combinations for the Pal you want to hatch.", url: "/", type: "website" },
-};
+  path: "/",
+});
 
 const popularStyles = [
   { color: "bg-primary-700", accent: "from-surface-muted to-primary-700", icon: "☀" },
@@ -40,8 +40,8 @@ const popularPals = popularNames.map((name) => pals.find((pal) => pal.name === n
 
 export default function Home() {
   const faqSchema = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqs.map((faq) => ({ "@type": "Question", name: faq.question, acceptedAnswer: { "@type": "Answer", text: faq.answer } })) };
-  const appSchema = { "@context": "https://schema.org", "@type": "WebApplication", name: "Palworld Breeding Calculator", url: "https://www.palworldguide.net", applicationCategory: "GameApplication", operatingSystem: "Any", description: metadata.description, isAccessibleForFree: true };
-  return <main className="min-h-screen overflow-hidden bg-canvas text-foreground">
+  const appSchema = { "@context": "https://schema.org", "@type": "WebApplication", name: "Palworld Breeding Calculator", url: siteUrl, applicationCategory: "GameApplication", operatingSystem: "Any", description: metadata.description, isAccessibleForFree: true };
+  return <main id="main-content" className="min-h-screen overflow-hidden bg-canvas text-foreground">
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(appSchema) }} />
 

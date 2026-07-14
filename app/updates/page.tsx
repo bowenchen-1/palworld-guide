@@ -1,14 +1,14 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import ToolShell from "../components/tool-shell";
+import { createPageMetadata } from "../lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: "Palworld 1.0 Patch Notes & Data Updates",
   description:
     "Track Palworld 1.0 patch notes, current database coverage, breeding-data refreshes, and which Field Guide tools have been updated for the latest version.",
   keywords: ["palworld 1.0 patch notes"],
-  alternates: { canonical: "/updates" },
-};
+  path: "/updates",
+});
 
 export default function UpdatesPage() {
   return (

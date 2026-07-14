@@ -37,6 +37,23 @@ body::before {
 
 ::selection { background: var(--terminal-mint); color: var(--terminal-canvas); }
 
+.skip-link {
+  position: fixed;
+  z-index: 999;
+  top: 12px;
+  left: 12px;
+  border: 1px solid var(--terminal-mint);
+  border-radius: 8px;
+  background: var(--terminal-canvas);
+  padding: 10px 14px;
+  color: var(--terminal-copy);
+  font-size: 12px;
+  font-weight: 700;
+  transform: translateY(-160%);
+  transition: transform .15s ease;
+}
+.skip-link:focus { transform: translateY(0); }
+
 .terminal-kicker,
 .database-eyebrow,
 .eyebrow {
@@ -370,11 +387,12 @@ body::before {
 .database-filters input,
 .database-filters select { color: var(--terminal-copy); }
 .pal-select-card,
-.paldex-grid>button,
+.paldex-grid>:is(button,a),
 .pal-detail { border-color: var(--terminal-border); border-radius: 14px; background: var(--terminal-panel); color: var(--terminal-copy); clip-path: var(--terminal-cut); }
 .pal-select-card:hover,
-.paldex-grid>button:hover,
-.paldex-grid>button.selected { border-color: var(--terminal-mint); background: var(--terminal-panel-hover); }
+.paldex-grid>:is(button,a):hover,
+.paldex-grid>:is(button,a):focus-visible,
+.paldex-grid>:is(button,a).selected { border-color: var(--terminal-mint); background: var(--terminal-panel-hover); }
 .pal-select-card.result { background: rgba(242,201,76,.07); }
 .pal-detail h2,
 .database-list-heading p strong,
@@ -484,6 +502,37 @@ body::before {
 .paldex-view-toggle button { color: var(--terminal-muted); }
 .paldex-view-toggle button.active { background: var(--terminal-mint); color: var(--terminal-canvas); box-shadow: none; }
 .paldex-reset { border-color: var(--terminal-border); background: var(--terminal-panel-light); color: var(--theme-danger); }
+
+.paldex-load-more {
+  border-color: var(--terminal-border);
+  background: var(--terminal-panel);
+  color: var(--terminal-copy);
+  clip-path: var(--terminal-cut);
+}
+.paldex-load-more:hover,
+.paldex-load-more:focus-visible { border-color: var(--terminal-mint); color: var(--terminal-mint); }
+
+.not-found-page {
+  display: grid;
+  min-height: 100svh;
+  place-items: center;
+  padding: 110px 24px 60px;
+  background: var(--terminal-canvas);
+}
+.not-found-page>section {
+  width: min(720px,100%);
+  border: 1px solid var(--terminal-border);
+  border-radius: 15px;
+  background: var(--terminal-panel);
+  padding: clamp(34px,6vw,70px);
+  text-align: center;
+  clip-path: var(--terminal-cut);
+}
+.not-found-page h1 { margin-top: 14px; color: var(--terminal-copy); }
+.not-found-page p:not(.terminal-kicker) { margin: 16px auto 0; max-width: 520px; color: var(--terminal-muted); }
+.not-found-page div { display: flex; margin-top: 28px; justify-content: center; gap: 10px; flex-wrap: wrap; }
+.not-found-page a { border: 1px solid var(--terminal-border); border-radius: 8px; padding: 11px 15px; color: var(--terminal-copy); font-weight: 700; }
+.not-found-page a:first-child { border-color: var(--terminal-mint); background: var(--terminal-mint); color: var(--terminal-canvas); }
 
 /* Shared control geometry */
 .btn,

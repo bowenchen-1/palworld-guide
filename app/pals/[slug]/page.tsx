@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import PalMark from "../../components/pal-mark";
 import SiteHeader from "../../components/site-header";
 import { findPal, pals, WorkKey, workGlyphs, workLabels } from "../../lib/game-data";
+import { createBreadcrumbSchema, createPageMetadata } from "../../lib/seo";
 import { siteUrl } from "../../site-config";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -18,7 +19,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!pal) return {};
   const title = `${pal.name} Palworld Guide — 1.0 Paldeck Data`;
   const description = `${pal.name} in Palworld 1.0: Paldeck No. ${pal.number}, current work suitability, breeding power, calculator links, and related Pal profiles, updated July 2026.`;
-  return { title, description, keywords: [`${pal.name.toLowerCase()} palworld`], alternates: { canonical: `/pals/${pal.slug}` }, openGraph: { title, description, url: `/pals/${pal.slug}`, type: "article" } };
+  return createPageMetadata({
+    title,
+    description,
+    path: `/pals/${pal.slug}`,
+    keywords: [`${pal.name.toLowerCase()} palworld`],
+    type: "article",
+    image: `/pals/${pal.id}.png`,
+    publishedTime: "2026-07-14",
+    modifiedTime: "2026-07-14",
+  });
 }
 
 export default async function PalProfilePage({ params }: Props) {
@@ -31,9 +41,15 @@ export default async function PalProfilePage({ params }: Props) {
   const strongest = rankedWork[0];
   const secondary = rankedWork[1];
   const schema = { "@context": "https://schema.org", "@type": "WebPage", name: `${pal.name} Palworld Guide`, url: `${siteUrl}/pals/${pal.slug}`, description: `${pal.name} profile for Palworld 1.0`, isPartOf: { "@type": "CollectionPage", name: "Palworld Paldeck Database", url: `${siteUrl}/paldex` }, dateModified: "2026-07-14" };
+  const breadcrumbSchema = createBreadcrumbSchema([
+    { name: "Home", path: "/" },
+    { name: "Paldeck", path: "/paldex" },
+    { name: pal.name, path: `/pals/${pal.slug}` },
+  ]);
 
-  return <main className="pal-profile-page">
+  return <main id="main-content" className="pal-profile-page">
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
     <div className="profile-nav"><SiteHeader current="/paldex" /></div>
     <section className="profile-hero"><div className="profile-hero-copy"><nav className="profile-breadcrumb" aria-label="Breadcrumb"><Link href="/">Home</Link><span>›</span><Link href="/paldex">Paldeck</Link><span>›</span><b>{pal.name}</b></nav><p className="database-eyebrow">Palworld 1.0 · Paldeck No. {pal.number}</p><h1>{pal.name} Palworld Guide</h1><p>{pal.name} is {pal.kind === "pal" ? "a current Pal" : "a crossover creature"} in version 1.0. This profile lists the verified work-suitability spread and breeding power used by our current Palworld tools.</p><div><Link href="/breeding-calculator">Find {pal.name} breeding pairs →</Link><Link href="/paldex">Back to Paldeck</Link></div></div><PalMark pal={pal} /></section>
     <section className="profile-content"><div className="profile-main"><section><p className="database-eyebrow">Verified data</p><h2>{pal.name} 1.0 Paldeck data</h2><div className="profile-stat-strip"><span><small>Paldeck</small><strong>{pal.number}</strong></span><span><small>Breeding power</small><strong>{pal.power}</strong></span><span><small>Work roles</small><strong>{workEntries.length}</strong></span><span><small>Entry type</small><strong>{pal.kind === "pal" ? "Pal" : "Guest"}</strong></span></div><div className="profile-role-summary"><article><span>Primary work role</span><strong>{strongest ? `${workGlyphs[strongest[0]]} ${workLabels[strongest[0]]}` : "No base role"}</strong><small>{strongest ? `Base level ${strongest[1]}` : "No ordinary suitability recorded"}</small></article><article><span>Secondary role</span><strong>{secondary ? `${workGlyphs[secondary[0]]} ${workLabels[secondary[0]]}` : "Specialist profile"}</strong><small>{secondary ? `Base level ${secondary[1]}` : "One or zero recorded roles"}</small></article><article><span>Data coverage</span><strong>Current 1.0 snapshot</strong><small>Identity, work suitability, and breeding power verified</small></article></div><p>Breeding power is a hidden species value used by many standard Palworld breeding outcomes. It does not describe combat strength, rarity, or catch difficulty. Use it through the calculator instead of treating a lower or higher number as a tier.</p></section>

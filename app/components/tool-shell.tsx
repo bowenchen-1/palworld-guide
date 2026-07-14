@@ -3,7 +3,7 @@ import SiteHeader from "./site-header";
 
 export default function ToolShell({ children, current }: { children: React.ReactNode; current: string }) {
   return (
-    <main className="database-page">
+    <main id="main-content" className="database-page">
       <div className="database-header"><SiteHeader current={current} /></div>
       {children}
       <footer className="database-footer"><span>Independent fan resource · Current data snapshot: Palworld 1.0.</span><Link href="/">Back to Field Guide →</Link></footer>

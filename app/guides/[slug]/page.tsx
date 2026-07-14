@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import SiteHeader from "../../components/site-header";
+import { absoluteUrl, createBreadcrumbSchema, createPageMetadata } from "../../lib/seo";
 import { getGuide, guides } from "../guide-data";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -14,7 +15,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const guide = getGuide(slug);
   if (!guide) return {};
-  return { title: `${guide.title} — Palworld Guide`, description: guide.description, keywords: [guide.title.toLowerCase()], alternates: { canonical: `/guides/${guide.slug}` } };
+  return createPageMetadata({
+    title: `${guide.title} — Palworld Guide`,
+    description: guide.description,
+    path: `/guides/${guide.slug}`,
+    keywords: [guide.title.toLowerCase()],
+    type: "article",
+    publishedTime: "2026-07-14",
+    modifiedTime: "2026-07-14",
+  });
 }
 
 export default async function GuidePage({ params }: Props) {
@@ -24,9 +33,30 @@ export default async function GuidePage({ params }: Props) {
   const sameCategory = guides.filter((item) => item.slug !== slug && item.category === guide.category);
   const otherCategories = guides.filter((item) => item.slug !== slug && item.category !== guide.category);
   const related = [...sameCategory, ...otherCategories].slice(0, 3);
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: guide.title,
+    description: guide.description,
+    image: absoluteUrl("/og.png"),
+    datePublished: "2026-07-14",
+    dateModified: "2026-07-14",
+    articleSection: guide.category,
+    mainEntityOfPage: absoluteUrl(`/guides/${guide.slug}`),
+    author: { "@type": "Organization", name: "Palworld Guide Editorial Team", url: absoluteUrl("/") },
+    publisher: { "@type": "Organization", name: "Palworld Guide", url: absoluteUrl("/") },
+    isAccessibleForFree: true,
+  };
+  const breadcrumbSchema = createBreadcrumbSchema([
+    { name: "Home", path: "/" },
+    { name: "Guides", path: "/guides" },
+    { name: guide.title, path: `/guides/${guide.slug}` },
+  ]);
 
   return (
-    <main className="min-h-screen bg-canvas text-foreground">
+    <main id="main-content" className="min-h-screen bg-canvas text-foreground">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <div className="article-nav"><SiteHeader current="/guides" /></div>
 
       <section className="article-hero px-5 pb-20 pt-14 sm:px-8 lg:px-12 lg:pt-20">

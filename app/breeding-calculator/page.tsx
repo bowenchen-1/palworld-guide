@@ -1,15 +1,14 @@
-import type { Metadata } from "next";
 import ToolShell, { DataNotice } from "../components/tool-shell";
+import { createPageMetadata } from "../lib/seo";
 import { siteUrl } from "../site-config";
 import BreedingClient from "./breeding-client";
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: "Palworld Breeding Combinations (1.0) | All Pal Combos",
   description: "Search current Palworld breeding combinations for version 1.0. Check every parent pair for a target Pal or calculate the offspring from two Pals online.",
   keywords: ["palworld breeding combinations"],
-  alternates: { canonical: "/breeding-calculator" },
-  openGraph: { title: "Palworld Breeding Combinations — Updated for 1.0", description: "Search parent-to-child results and reverse-search every parent pair using current Palworld 1.0 data.", url: "/breeding-calculator", type: "website" },
-};
+  path: "/breeding-calculator",
+});
 
 const faqs = [
   ["Is this Palworld breeding calculator updated for 1.0?", "Yes. The calculator uses a community dataset extracted from the 1.0 game files and refreshed after the July 10, 2026 release."],

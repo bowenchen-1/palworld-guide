@@ -1,14 +1,17 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import ToolShell from "../components/tool-shell";
+import { createPageMetadata } from "../lib/seo";
 import { siteUrl } from "../site-config";
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: "Palworld 1.0 Guide — Release Date, Pals & Tools",
   description: "Palworld 1.0 launched July 10, 2026. See the release-date answer, major gameplay changes, current Pal data, breeding tools, and next steps in one launch hub.",
   keywords: ["palworld 1.0"],
-  alternates: { canonical: "/palworld-1-0" },
-};
+  path: "/palworld-1-0",
+  type: "article",
+  publishedTime: "2026-07-10",
+  modifiedTime: "2026-07-14",
+});
 
 const faqs = [
   ["When did Palworld 1.0 come out?", "Palworld 1.0 was released on July 10, 2026. It is available now, so players no longer need to convert a regional release time."],

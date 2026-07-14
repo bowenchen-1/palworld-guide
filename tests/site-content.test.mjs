@@ -30,7 +30,7 @@ test("homepage targets Palworld breeding calculator with one focused H1", async 
   assert.match(page, /home-terminal-intro/);
   assert.doesNotMatch(page, /home-release-panel/);
   assert.match(page, /Popular Pals/);
-  assert.match(layout, /Palworld Breeding Calculator - Updated 1\.0 Pal Combos/);
+  assert.doesNotMatch(layout, /Palworld Breeding Calculator - Updated 1\.0 Pal Combos/);
   assert.match(layout, /\/favicon\.ico/);
   assert.match(layout, /\/icon-192\.png/);
   assert.match(layout, /\/apple-touch-icon\.png/);
@@ -168,6 +168,11 @@ test("Paldeck has current filters and indexable profile pages", async () => {
   assert.match(client, /paldex-view-toggle/);
   assert.match(client, /Reset filters/);
   assert.match(client, /Breeding power/);
+  assert.match(client, /INITIAL_PALDEX_LIMIT = 36/);
+  assert.match(client, /filtered\.slice\(0, visibleCount\)/);
+  assert.match(client, /href={`\/pals\/\$\{pal\.slug\}`}/);
+  assert.match(client, /Show \{Math\.min\(PALDEX_PAGE_SIZE/);
+  assert.doesNotMatch(client, /return <button type="button" aria-pressed=\{selected\.id === pal\.id\}/);
   assert.match(profile, /generateStaticParams/);
   assert.match(profile, /Palworld Guide/);
   assert.match(profile, /Primary work role/);
@@ -196,4 +201,50 @@ test("sitemap exposes tools, guides, and every Pal profile", async () => {
   assert.match(sitemap, /priority: 1/);
   assert.match(robots, /sitemap\.xml/);
   assert.match(robots, /allow: "\/"/);
+});
+
+test("pages own their canonical and social metadata without inheriting homepage SEO", async () => {
+  const layout = await read("../app/layout.tsx");
+  const home = await read("../app/page.tsx");
+  const seo = await read("../app/lib/seo.ts");
+  const notFound = await read("../app/not-found.tsx");
+  const topLevelPages = [
+    "../app/page.tsx",
+    "../app/paldex/page.tsx",
+    "../app/breeding-calculator/page.tsx",
+    "../app/tools/page.tsx",
+    "../app/guides/page.tsx",
+    "../app/updates/page.tsx",
+    "../app/palworld-1-0/page.tsx",
+  ];
+
+  assert.doesNotMatch(layout, /alternates:/);
+  assert.doesNotMatch(layout, /openGraph:/);
+  assert.doesNotMatch(layout, /twitter:/);
+  assert.match(home, /path: "\/"/);
+  assert.match(seo, /alternates: \{ canonical: url \}/);
+  assert.match(seo, /twitter: \{ card: "summary_large_image", title, description/);
+  for (const path of topLevelPages) assert.match(await read(path), /createPageMetadata/);
+  assert.match(notFound, /robots: \{ index: false, follow: true \}/);
+  assert.match(notFound, /Page Not Found \| Palworld Guide/);
+});
+
+test("deep content exposes Article and BreadcrumbList structured data", async () => {
+  const guide = await read("../app/guides/[slug]/page.tsx");
+  const pal = await read("../app/pals/[slug]/page.tsx");
+  assert.match(guide, /"@type": "Article"/);
+  assert.match(guide, /createBreadcrumbSchema/);
+  assert.match(guide, /Home/);
+  assert.match(guide, /Guides/);
+  assert.match(pal, /createBreadcrumbSchema/);
+  assert.match(pal, /Paldeck/);
+});
+
+test("keyboard users can skip repeated navigation", async () => {
+  const layout = await read("../app/layout.tsx");
+  const toolShell = await read("../app/components/tool-shell.tsx");
+  const theme = await read("../app/terminal-theme.css");
+  assert.match(layout, /className="skip-link" href="#main-content"/);
+  assert.match(toolShell, /<main id="main-content"/);
+  assert.match(theme, /\.skip-link:focus/);
 });
