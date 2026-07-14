@@ -70,6 +70,21 @@ test("homepage calculator lazily loads current breeding data and handles errors"
   assert.match(board, />Retry</);
 });
 
+test("homepage can reverse-search parent combinations for a target Pal", async () => {
+  const page = await read("../app/page.tsx");
+  const targetSearch = await read("../app/components/home-target-breeding.tsx");
+  assert.match(page, /HomeTargetBreeding/);
+  assert.match(targetSearch, /Target → Parents/);
+  assert.match(targetSearch, /Find Parent Combinations for Any Pal/);
+  assert.match(targetSearch, /fetch\("\/data\/breeding\.json"\)/);
+  assert.match(targetSearch, /matrix\[first\.id\]\?\.\[second\.id\] !== target\.id/);
+  assert.match(targetSearch, /HOME_PAIR_LIMIT = 12/);
+  assert.match(targetSearch, /PalMark pal={first}/);
+  assert.match(targetSearch, /PalMark pal={second}/);
+  assert.match(targetSearch, /Breeding data is unavailable/);
+  assert.match(targetSearch, />Retry</);
+});
+
 test("every current Pal entry has a local image used by the shared Pal component", async () => {
   const pals = JSON.parse(await read("../public/data/pals.json"));
   const images = await readdir(new URL("../public/pals/", import.meta.url));

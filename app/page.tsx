@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import GlobalSearch from "./components/global-search";
+import HomeTargetBreeding from "./components/home-target-breeding";
 import HomeToolBoard from "./components/home-tool-board";
 import PalMark from "./components/pal-mark";
 import SiteHeader from "./components/site-header";
@@ -62,6 +63,8 @@ export default function Home() {
     </section>
 
     <section id="site-search" className="home-search-section"><div><p><strong>Search the full field guide.</strong><span>Find a Pal, tool, or player-researched guide.</span></p><GlobalSearch /></div></section>
+
+    <HomeTargetBreeding />
 
     <section className="px-5 py-20 sm:px-8 lg:px-12"><div className="mx-auto max-w-[1260px]"><div className="mb-10 grid gap-5 lg:grid-cols-[1fr_.7fr] lg:items-end"><div><p className="eyebrow">Three quick steps</p><h2 className="section-title mt-3">How the Pal Breeding Tool Works</h2></div><p className="max-w-lg text-base leading-7 text-[#607973]">Start with the Pals in your Palbox or work backward from the offspring you want. The calculator uses the current version 1.0 combination data.</p></div><div className="grid gap-4 md:grid-cols-3"><article className="overview-card"><span className="overview-icon bg-[#ffe3a3] text-[#9a5a22]">1</span><h3>Choose Two Parent Pals</h3><p>Select Parent A and Parent B from the pictured Pal list. Parent order does not change the offspring species.</p></article><article className="overview-card"><span className="overview-icon bg-[#d8f2e0] text-[#277058]">2</span><h3>Read the Offspring Result</h3><p>The child appears as soon as both parents are selected. Open its profile to review work suitability and breeding power.</p></article><article className="overview-card"><span className="overview-icon bg-[#dceff8] text-[#27647d]">3</span><h3>Find Parent Combinations</h3><p>Need a specific Pal? Open the complete combinations search and use Target → Parents to compare every direct pair.</p></article></div></div></section>
 
