@@ -1,8 +1,12 @@
 import type { Metadata } from "next";
-import "@fontsource-variable/nunito";
-import "@fontsource-variable/baloo-2";
+import "@fontsource/barlow/400.css";
+import "@fontsource/barlow/600.css";
+import "@fontsource/barlow/700.css";
+import "@fontsource/rajdhani/600.css";
+import "@fontsource/rajdhani/700.css";
 import "./globals.css";
 import "./tool-pages.css";
+import "./terminal-theme.css";
 import { siteUrl } from "./site-config";
 
 export const metadata: Metadata = {

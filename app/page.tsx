@@ -41,7 +41,7 @@ const popularPals = popularNames.map((name) => pals.find((pal) => pal.name === n
 export default function Home() {
   const faqSchema = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqs.map((faq) => ({ "@type": "Question", name: faq.question, acceptedAnswer: { "@type": "Answer", text: faq.answer } })) };
   const appSchema = { "@context": "https://schema.org", "@type": "WebApplication", name: "Palworld Breeding Calculator", url: "https://www.palworldguide.net", applicationCategory: "GameApplication", operatingSystem: "Any", description: metadata.description, isAccessibleForFree: true };
-  return <main className="min-h-screen overflow-hidden bg-background text-foreground">
+  return <main className="min-h-screen overflow-hidden bg-canvas text-foreground">
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(appSchema) }} />
 
@@ -50,12 +50,17 @@ export default function Home() {
       <div className="home-scene-inner">
         <SiteHeader floating />
         <div className="home-scene-grid">
-          <div className="home-release-panel">
-            <div className="home-release-status"><span /> Updated for Palworld 1.0</div>
-            <h1>Palworld Breeding Calculator</h1>
-            <strong>300 Pal records</strong>
-            <p>Use this Palworld breeding calculator to choose two parent Pals and see their offspring instantly. Start with a target Pal to discover every current parent combination.</p>
-            <div><Link href="/breeding-calculator">Find every combination →</Link><Link href="/paldex">Browse all Pals</Link></div>
+          <div className="home-terminal-intro">
+            <div>
+              <p className="terminal-kicker"><span /> Field Research // Updated for Palworld 1.0</p>
+              <h1>Palworld Breeding Calculator</h1>
+              <p>Choose two parent Pals to calculate their offspring, or start with a target Pal to discover every current parent combination.</p>
+            </div>
+            <div className="terminal-status" aria-label="Calculator data status">
+              <span><b>1.0</b> Data version</span>
+              <span><b>300</b> Pal records</span>
+              <span><b>Jul 14</b> Last checked</span>
+            </div>
           </div>
           <div className="hero-core-tool" aria-label="Quick Palworld breeding calculator"><HomeToolBoard headingLevel={2} /></div>
         </div>

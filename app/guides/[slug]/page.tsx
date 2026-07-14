@@ -26,7 +26,7 @@ export default async function GuidePage({ params }: Props) {
   const related = [...sameCategory, ...otherCategories].slice(0, 3);
 
   return (
-    <main className="min-h-screen bg-background text-foreground">
+    <main className="min-h-screen bg-canvas text-foreground">
       <div className="article-nav"><SiteHeader current="/guides" /></div>
 
       <section className="article-hero px-5 pb-20 pt-14 sm:px-8 lg:px-12 lg:pt-20">

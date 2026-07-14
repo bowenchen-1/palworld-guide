@@ -13,8 +13,8 @@
     "lint": "eslint . --ignore-pattern .next"
   },
   "dependencies": {
-    "@fontsource-variable/baloo-2": "^5.2.7",
-    "@fontsource-variable/nunito": "^5.2.7",
+    "@fontsource/barlow": "^5.2.8",
+    "@fontsource/rajdhani": "^5.2.7",
     "next": "16.2.6",
     "react": "19.2.6",
     "react-dom": "19.2.6"

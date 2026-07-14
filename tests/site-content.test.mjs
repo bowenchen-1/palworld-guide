@@ -7,6 +7,7 @@ const read = (path) => readFile(new URL(path, import.meta.url), "utf8");
 test("homepage targets Palworld breeding calculator with one focused H1", async () => {
   const page = await read("../app/page.tsx");
   const layout = await read("../app/layout.tsx");
+  const terminalTheme = await read("../app/terminal-theme.css");
   const gameData = await read("../app/lib/game-data.ts");
   const title = page.match(/title: "([^"]+)"/)?.[1] ?? "";
   const description = page.match(/description: "([^"]+)"/)?.[1] ?? "";
@@ -26,6 +27,8 @@ test("homepage targets Palworld breeding calculator with one focused H1", async 
   assert.match(page, /HomeToolBoard/);
   assert.match(page, /home-scene-hero/);
   assert.match(page, /Updated for Palworld 1\.0/);
+  assert.match(page, /home-terminal-intro/);
+  assert.doesNotMatch(page, /home-release-panel/);
   assert.match(page, /Popular Pals/);
   assert.match(layout, /Palworld Breeding Calculator - Updated 1\.0 Pal Combos/);
   assert.match(layout, /\/favicon\.ico/);
@@ -34,13 +37,17 @@ test("homepage targets Palworld breeding calculator with one focused H1", async 
   assert.match(layout, /\/site\.webmanifest/);
   assert.doesNotMatch(page, /Coming Soon|href="\/map"/);
   assert.doesNotMatch(page, /Polworld|POLWORLD/);
+  assert.match(layout, /@fontsource\/barlow/);
+  assert.match(layout, /@fontsource\/rajdhani/);
+  assert.match(terminalTheme, /Pal Expedition Terminal/);
+  assert.match(terminalTheme, /--terminal-mint: #39d0c5/);
 });
 
 test("every page inherits one semantic Tailwind theme", async () => {
   const globals = await read("../app/globals.css");
   const theme = await read("../app/theme.css");
   assert.match(globals, /@import "\.\/theme\.css"/);
-  for (const token of ["primary-900", "secondary-700", "accent", "background", "surface", "foreground", "muted", "link", "border"]) {
+  for (const token of ["primary-900", "secondary-700", "accent", "canvas", "background", "surface", "foreground", "muted", "link", "border"]) {
     assert.match(theme, new RegExp(`--color-${token}:`));
   }
   for (const heading of ["h1", "h2", "h3", "h4", "h5", "h6"]) {
@@ -49,6 +56,9 @@ test("every page inherits one semantic Tailwind theme", async () => {
   for (const variant of ["btn-primary", "btn-secondary", "btn-accent", "btn-outline"]) {
     assert.match(theme, new RegExp(`\\.${variant}`));
   }
+  assert.match(theme, /body\s*\{[\s\S]*background: var\(--theme-canvas\)/);
+  const terminalTheme = await read("../app/terminal-theme.css");
+  assert.match(terminalTheme, /\.database-page,[\s\S]*background: var\(--terminal-canvas\)/);
 });
 
 test("each indexable page targets one distinct primary keyword", async () => {
