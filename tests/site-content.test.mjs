@@ -124,9 +124,9 @@ test("every current Pal entry has a local image used by the shared Pal component
   const pals = JSON.parse(await read("../public/data/pals.json"));
   const images = await readdir(new URL("../public/pals/", import.meta.url));
   const mark = await read("../app/components/pal-mark.tsx");
-  assert.equal(images.filter((file) => file.endsWith(".png")).length, pals.length);
-  for (const pal of pals) assert.ok(images.includes(`${pal.id}.png`), `missing image for ${pal.name}`);
-  assert.match(mark, /src={`\/pals\/\$\{pal\.id\}\.png`}/);
+  assert.equal(images.filter((file) => file.endsWith(".webp")).length, pals.length);
+  for (const pal of pals) assert.ok(images.includes(`${pal.id}.webp`), `missing image for ${pal.name}`);
+  assert.match(mark, /src={`\/pals\/\$\{pal\.id\}\.webp`}/);
   assert.match(mark, /pal-mark-image/);
 });
 
