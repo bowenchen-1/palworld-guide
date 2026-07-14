@@ -88,3 +88,97 @@
 
 /* Desktop hierarchy: one bold release banner, then a full-width primary calculator. */
 @media(min-width:861px){.home-scene-grid{width:min(1240px,100%);min-height:calc(100svh - 122px);margin-inline:auto;grid-template-columns:1fr;align-content:end;gap:14px;padding-top:16px}.home-release-panel{display:grid;width:100%;max-width:none;grid-template-columns:minmax(0,1fr) auto;grid-template-rows:auto auto auto;column-gap:34px;border-radius:25px;padding:17px 22px 18px}.home-release-status{grid-column:1;grid-row:1}.home-release-panel h1{grid-column:1;grid-row:2;margin-top:6px;font-size:clamp(39px,4.1vw,56px);white-space:nowrap}.home-release-panel>strong{grid-column:2;grid-row:2;align-self:end;margin:0;font-size:clamp(33px,3.5vw,48px);white-space:nowrap}.home-release-panel>p{grid-column:1;grid-row:3;align-self:center;max-width:720px;margin-top:7px;font-size:11px}.home-release-panel>div:last-child{grid-column:2;grid-row:3;align-self:center;justify-content:flex-end;margin-top:7px}.home-scene-hero .hero-core-tool{width:100%;max-width:none}.home-scene-hero .hero-core-tool .home-breeding-card{border-radius:31px;padding:20px 24px 22px}.home-scene-hero .hero-core-tool .breeding-stage-header :is(h2,h3){font-size:40px}.home-scene-hero .hero-core-tool .breeding-stage-header small{font-size:10px}.home-scene-hero .hero-core-tool .home-breeding-equation{margin-top:17px;grid-template-columns:minmax(0,1fr) 32px minmax(0,1fr) 32px minmax(0,1fr);gap:8px}.home-scene-hero .hero-core-tool .breeding-operator{width:34px;height:38px}.home-scene-hero .hero-core-tool .breeding-pal-slot{min-height:210px;border-radius:23px}.home-scene-hero .hero-core-tool .breeding-pal-slot .pal-mark{width:86px;height:86px;border-radius:24px}.home-scene-hero .hero-core-tool .breeding-pal-slot strong{font-size:17px}}
+
+/* Calm scenic hero: keep the island palette while removing artwork/text competition. */
+.home-scene-hero {
+  background-image: linear-gradient(145deg, #72d8e8 0%, #a6e6e4 55%, #dff2d8 100%);
+}
+.home-scene-hero::before {
+  position: absolute;
+  z-index: 0;
+  top: -12px;
+  right: -12px;
+  bottom: -12px;
+  left: 52%;
+  background-image: url('/og.png');
+  background-position: right center;
+  background-size: cover;
+  content: "";
+  filter: blur(4px) saturate(.82);
+  opacity: .48;
+  transform: scale(1.025);
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, .7) 24%, #000 48%);
+  mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, .7) 24%, #000 48%);
+  pointer-events: none;
+}
+.home-scene-shade {
+  z-index: 1;
+  background:
+    linear-gradient(90deg, rgba(100, 216, 232, .86) 0%, rgba(129, 222, 229, .7) 42%, rgba(218, 241, 218, .46) 100%),
+    linear-gradient(180deg, rgba(238, 252, 248, .2) 0%, rgba(22, 105, 91, .12) 64%, rgba(15, 67, 57, .42) 100%);
+}
+.home-release-panel {
+  border-color: rgba(255, 255, 255, .94);
+  background: #fffdf6;
+  box-shadow: 0 10px 0 rgba(20, 85, 66, .18), 0 24px 55px rgba(11, 58, 45, .2);
+  backdrop-filter: none;
+}
+.home-release-panel>p {
+  color: #3f625a;
+  font-size: 13px;
+  line-height: 1.6;
+}
+.home-scene-hero .hero-core-tool .home-breeding-card {
+  border-color: rgba(255, 255, 255, .92);
+  background: linear-gradient(145deg, #c8f0ee 0%, #e7f5e5 62%, #fff0c8 100%);
+  box-shadow: 0 11px 0 rgba(17, 83, 67, .2), 0 28px 65px rgba(5, 48, 39, .25), inset 0 2px 0 white;
+  backdrop-filter: none;
+}
+.home-scene-hero .hero-core-tool .breeding-pal-slot {
+  border-color: rgba(40, 103, 84, .2);
+  background: #fffdf8;
+}
+.home-scene-hero .hero-core-tool .breeding-pal-slot.offspring {
+  background: #e8f6dc;
+}
+.home-scene-hero .hero-core-tool .breeding-pal-slot .slot-label {
+  font-size: 8px;
+}
+.home-scene-hero .hero-core-tool .breeding-pal-slot>small {
+  color: #58736c;
+  font-size: 9px;
+}
+.home-scene-hero .hero-core-tool .breeding-pal-slot>i,
+.home-scene-hero .hero-core-tool .breeding-pal-slot>a,
+.home-scene-hero .hero-core-tool .breeding-pal-slot>button {
+  font-size: 8px;
+}
+
+@media(max-width:860px) {
+  .home-scene-grid {
+    min-height: auto;
+    align-content: start;
+    padding-top: clamp(30px, 7vh, 56px);
+  }
+  .home-scene-hero::before {
+    left: 34%;
+    background-position: 82% center;
+    filter: blur(3px) saturate(.8);
+    opacity: .3;
+  }
+  .home-scene-shade {
+    background: linear-gradient(180deg, rgba(111, 216, 230, .74) 0%, rgba(143, 224, 226, .62) 42%, rgba(19, 77, 64, .64) 100%);
+  }
+}
+
+@media(max-width:430px) {
+  .home-scene-hero .hero-core-tool .breeding-pal-slot .slot-label {
+    font-size: 6px;
+  }
+  .home-scene-hero .hero-core-tool .breeding-pal-slot>small,
+  .home-scene-hero .hero-core-tool .breeding-pal-slot>i,
+  .home-scene-hero .hero-core-tool .breeding-pal-slot>a,
+  .home-scene-hero .hero-core-tool .breeding-pal-slot>button {
+    font-size: 6px;
+  }
+}
