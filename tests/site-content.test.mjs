@@ -4,23 +4,30 @@ import test from "node:test";
 
 const read = (path) => readFile(new URL(path, import.meta.url), "utf8");
 
-test("homepage is a tool-first Palworld hub with one focused H1", async () => {
+test("homepage targets Palworld breeding calculator with one focused H1", async () => {
   const page = await read("../app/page.tsx");
   const layout = await read("../app/layout.tsx");
   const gameData = await read("../app/lib/game-data.ts");
-  assert.match(page, /<h1[^>]*>Palworld 1\.0 Release Date<\/h1>/);
+  const title = page.match(/title: "([^"]+)"/)?.[1] ?? "";
+  const description = page.match(/description: "([^"]+)"/)?.[1] ?? "";
+  assert.match(page, /<h1[^>]*>Palworld Breeding Calculator<\/h1>/);
   assert.equal((page.match(/<h1/g) ?? []).length, 1);
-  assert.match(page, /keywords: \["palworld 1\.0 release date"\]/);
-  assert.match(page, /<h1>Palworld 1\.0 Release Date<\/h1>\s*<strong>July 10, 2026<\/strong>/);
+  assert.ok(title.length >= 50 && title.length <= 60, `homepage title should be 50-60 characters, got ${title.length}`);
+  assert.ok(description.length >= 150 && description.length <= 160, `homepage description should be 150-160 characters, got ${description.length}`);
+  assert.match(page, /keywords: \["palworld breeding calculator"\]/);
+  assert.match(page, /title: "Palworld Breeding Calculator - Updated 1\.0 Pal Combos"/);
+  assert.match(page, /How the Pal Breeding Tool Works/);
+  assert.match(page, /Palworld Breeding Calculator FAQ/);
+  assert.match(page, /"@type": "WebApplication"/);
   assert.match(gameData, /\/breeding-calculator/);
   assert.match(gameData, /\/paldex/);
   assert.match(gameData, /\/palworld-1-0/);
   assert.match(page, /GlobalSearch/);
   assert.match(page, /HomeToolBoard/);
   assert.match(page, /home-scene-hero/);
-  assert.match(page, /Official 1\.0 launch/);
+  assert.match(page, /Updated for Palworld 1\.0/);
   assert.match(page, /Popular Pals/);
-  assert.match(layout, /Palworld 1\.0 Release Date — Launch Guide/);
+  assert.match(layout, /Palworld Breeding Calculator - Updated 1\.0 Pal Combos/);
   assert.match(layout, /\/favicon\.ico/);
   assert.match(layout, /\/icon-192\.png/);
   assert.match(layout, /\/apple-touch-icon\.png/);
@@ -31,9 +38,9 @@ test("homepage is a tool-first Palworld hub with one focused H1", async () => {
 
 test("each indexable page targets one distinct primary keyword", async () => {
   const files = [
-    ["../app/page.tsx", "palworld 1.0 release date"],
+    ["../app/page.tsx", "palworld breeding calculator"],
     ["../app/palworld-1-0/page.tsx", "palworld 1.0"],
-    ["../app/breeding-calculator/page.tsx", "palworld breeding calculator"],
+    ["../app/breeding-calculator/page.tsx", "palworld breeding combinations"],
     ["../app/paldex/page.tsx", "palworld paldeck"],
     ["../app/tools/page.tsx", "palworld tools"],
     ["../app/guides/page.tsx", "palworld guides"],
@@ -102,7 +109,7 @@ test("breeding calculator supports forward and reverse searches", async () => {
   const page = await read("../app/breeding-calculator/page.tsx");
   const client = await read("../app/breeding-calculator/breeding-client.tsx");
   assert.equal((page.match(/<h1/g) ?? []).length, 1);
-  assert.match(page, /Palworld Breeding Calculator/);
+  assert.match(page, /Palworld Breeding Combinations/);
   assert.match(page, /WebApplication/);
   assert.match(client, /Parents → Child/);
   assert.match(client, /Target → Parents/);

@@ -7,9 +7,9 @@ import { siteUrl } from "./site-config";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "Palworld 1.0 Release Date — Launch Guide",
-  description: "The Palworld 1.0 release date was July 10, 2026. Check the launch status and use current Palworld tools, Paldeck data, and version 1.0 guides.",
-  keywords: ["palworld 1.0 release date"],
+  title: "Palworld Breeding Calculator - Updated 1.0 Pal Combos",
+  description: "Use the Palworld breeding calculator for version 1.0 to find offspring from two parents or discover every combination for a target Pal. Start planning now.",
+  keywords: ["palworld breeding calculator"],
   alternates: { canonical: "/" },
   icons: {
     icon: [
@@ -22,12 +22,12 @@ export const metadata: Metadata = {
   },
   manifest: "/site.webmanifest",
   openGraph: {
-    title: "Palworld 1.0 Release Date — Launch Guide",
-    description: "Palworld 1.0 launched July 10, 2026. Check the date and use current tools, data, and guides.",
+    title: "Palworld Breeding Calculator — Updated for 1.0",
+    description: "Choose two parent Pals to find their offspring, or search current parent combinations for the Pal you want to hatch.",
     type: "website",
     images: [{ url: "/og.png", width: 1734, height: 907, alt: "Palworld Guide — Explore More. Survive Smarter." }],
   },
-  twitter: { card: "summary_large_image", title: "Palworld 1.0 Release Date — Launch Guide", description: "Palworld 1.0 launched July 10, 2026. Check the date and use current tools, data, and guides.", images: ["/og.png"] },
+  twitter: { card: "summary_large_image", title: "Palworld Breeding Calculator — Updated for 1.0", description: "Choose two parent Pals to find their offspring or search current combinations for a target Pal.", images: ["/og.png"] },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

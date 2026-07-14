@@ -13,7 +13,7 @@ const quickRecipes = [
   { parentA: "189.0", parentB: "139.0", result: "176.0" },
 ];
 
-export default function HomeToolBoard() {
+export default function HomeToolBoard({ headingLevel = 3 }: { headingLevel?: 2 | 3 }) {
   const [parentA, setParentA] = useState("");
   const [parentB, setParentB] = useState("");
   const [matrix, setMatrix] = useState<BreedingData>();
@@ -71,8 +71,8 @@ export default function HomeToolBoard() {
     <article id="quick-breeding" className="home-breeding-card">
       <div className="breeding-card-glow" aria-hidden="true" />
       <header className="breeding-stage-header">
-        <div><p><span /> Palworld 1.0 calculator</p><h3>Build your perfect egg.</h3><small>Pick two Pals. We will reveal the offspring instantly.</small></div>
-        <Link href="/breeding-calculator">Open advanced calculator <b>↗</b></Link>
+        <div><p><span /> Palworld 1.0 calculator</p>{headingLevel === 2 ? <h2>Calculate the offspring.</h2> : <h3>Calculate the offspring.</h3>}<small>Pick two Pals. We will reveal the offspring instantly.</small></div>
+        <Link href="/breeding-calculator">Find all combinations <b>↗</b></Link>
       </header>
 
       <div className="home-breeding-equation">
