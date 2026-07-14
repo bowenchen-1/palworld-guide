@@ -72,10 +72,17 @@ test("Paldeck has current filters and indexable profile pages", async () => {
   assert.equal((page.match(/<h1/g) ?? []).length, 1);
   assert.match(page, /Palworld Paldeck Database/);
   assert.match(client, /Work Suitability/);
+  assert.match(client, /Minimum Work Level/);
+  assert.match(client, /Highest work level/);
+  assert.match(client, /paldex-view-toggle/);
+  assert.match(client, /Reset filters/);
   assert.match(client, /Breeding power/);
   assert.match(profile, /generateStaticParams/);
   assert.match(profile, /Palworld Guide/);
-  assert.match(profile, /keeps patch-sensitive combat values out/);
+  assert.match(profile, /Primary work role/);
+  assert.match(profile, /Plan with/);
+  assert.match(profile, /\/guides\/work-suitability-basics/);
+  assert.match(profile, /does not describe combat strength, rarity, or catch difficulty/);
 });
 
 test("1.0 hub answers release-date intent above the fold", async () => {
