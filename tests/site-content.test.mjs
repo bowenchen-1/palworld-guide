@@ -36,6 +36,21 @@ test("homepage targets Palworld breeding calculator with one focused H1", async 
   assert.doesNotMatch(page, /Polworld|POLWORLD/);
 });
 
+test("every page inherits one semantic Tailwind theme", async () => {
+  const globals = await read("../app/globals.css");
+  const theme = await read("../app/theme.css");
+  assert.match(globals, /@import "\.\/theme\.css"/);
+  for (const token of ["primary-900", "secondary-700", "accent", "background", "surface", "foreground", "muted", "link", "border"]) {
+    assert.match(theme, new RegExp(`--color-${token}:`));
+  }
+  for (const heading of ["h1", "h2", "h3", "h4", "h5", "h6"]) {
+    assert.match(theme, new RegExp(`--heading-${heading}-size:`));
+  }
+  for (const variant of ["btn-primary", "btn-secondary", "btn-accent", "btn-outline"]) {
+    assert.match(theme, new RegExp(`\\.${variant}`));
+  }
+});
+
 test("each indexable page targets one distinct primary keyword", async () => {
   const files = [
     ["../app/page.tsx", "palworld breeding calculator"],
