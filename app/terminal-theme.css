@@ -236,6 +236,32 @@ body::before {
 .home-search-section p strong { color: var(--terminal-copy); font-weight: 700; text-transform: uppercase; }
 .home-search-section .global-search,
 .global-search { border: 1px solid var(--terminal-border); border-radius: 12px; background: var(--terminal-panel); color: var(--terminal-copy); clip-path: var(--terminal-cut); }
+
+/* Homepage calculator mode selector: readable at a glance on the terminal panel. */
+.home-calculator-mode {
+  gap: 5px;
+  border-color: var(--terminal-border);
+  background: rgba(8,25,31,.62);
+  padding: 5px;
+}
+.home-calculator-mode button {
+  min-height: 42px;
+  padding: 9px 15px;
+  color: var(--terminal-copy);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .055em;
+}
+.home-calculator-mode button:hover { background: rgba(57,208,197,.14); color: var(--terminal-mint); }
+.home-calculator-mode button.active {
+  background: var(--terminal-mint);
+  color: var(--terminal-canvas);
+  box-shadow: 0 3px 0 rgba(0,8,12,.32);
+}
+@media(max-width:760px) {
+  .home-calculator-mode { width: 100%; }
+  .home-calculator-mode button { flex: 1; min-height: 40px; padding: 8px 6px; font-size: 10px; }
+}
 .global-search input { color: var(--terminal-copy); }
 .global-search input::placeholder { color: var(--terminal-muted); }
 
