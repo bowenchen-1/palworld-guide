@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { readFile } from "node:fs/promises";
+import { readFile, readdir } from "node:fs/promises";
 import test from "node:test";
 
 const read = (path) => readFile(new URL(path, import.meta.url), "utf8");
@@ -23,10 +23,23 @@ test("homepage is a tool-first Palworld hub with one focused H1", async () => {
 
 test("homepage calculator lazily loads current breeding data and handles errors", async () => {
   const board = await read("../app/components/home-tool-board.tsx");
-  assert.match(board, /onFocus={loadMatrix}/);
+  assert.match(board, /Choose quick breeding parent A/);
+  assert.match(board, /Pictured Pal selection/);
+  assert.match(board, /PalMark pal={parentAPal}/);
+  assert.match(board, /if \(slot !== "lookup"\) loadMatrix\(\)/);
   assert.match(board, /fetch\("\/data\/breeding\.json"\)/);
   assert.match(board, /Data unavailable — try again/);
   assert.match(board, />Retry</);
+});
+
+test("every current Pal entry has a local image used by the shared Pal component", async () => {
+  const pals = JSON.parse(await read("../public/data/pals.json"));
+  const images = await readdir(new URL("../public/pals/", import.meta.url));
+  const mark = await read("../app/components/pal-mark.tsx");
+  assert.equal(images.filter((file) => file.endsWith(".png")).length, pals.length);
+  for (const pal of pals) assert.ok(images.includes(`${pal.id}.png`), `missing image for ${pal.name}`);
+  assert.match(mark, /src={`\/pals\/\$\{pal\.id\}\.png`}/);
+  assert.match(mark, /pal-mark-image/);
 });
 
 test("guide library contains 24 complete English guides in six categories", async () => {
