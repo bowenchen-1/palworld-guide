@@ -79,7 +79,10 @@ export default function HomeToolBoard({ headingLevel = 3 }: { headingLevel?: 2 |
     if (picker === "parentA") setParentA(id);
     if (picker === "parentB") setParentB(id);
     if (picker === "lookup") setLookup(id);
-    if (picker === "target") setTarget(byId.get(id));
+    if (picker === "target") {
+      setTarget(byId.get(id));
+      setMode("target");
+    }
     setPicker(null);
     setPickerQuery("");
   }
@@ -94,14 +97,9 @@ export default function HomeToolBoard({ headingLevel = 3 }: { headingLevel?: 2 |
     <article id="quick-breeding" className="home-breeding-card">
       <div className="breeding-card-glow" aria-hidden="true" />
       <header className="breeding-stage-header">
-        <div><p><span /> Palworld 1.0 calculator</p>{headingLevel === 2 ? <h2>Palworld Breeding Calculator</h2> : <h3>Palworld Breeding Calculator</h3>}<small>{mode === "parents" ? "Pick two Pals to reveal the offspring instantly." : "Choose the Pal you want, then see direct parent pairs."}</small></div>
+        <div><p><span /> Palworld 1.0 calculator</p>{headingLevel === 2 ? <h2>Palworld Breeding Calculator</h2> : <h3>Palworld Breeding Calculator</h3>}<small>{mode === "parents" ? "Pick two Pals to reveal the offspring instantly." : "Direct parent combinations for your chosen Pal."}</small></div>
         <Link href="/breeding-calculator">Find all combinations <b>↗</b></Link>
       </header>
-
-      <div className="home-calculator-mode" role="tablist" aria-label="Breeding calculator mode">
-        <button type="button" role="tab" aria-selected={mode === "parents"} className={mode === "parents" ? "active" : ""} onClick={() => setMode("parents")}>Parents → Result</button>
-        <button type="button" role="tab" aria-selected={mode === "target"} className={mode === "target" ? "active" : ""} onClick={() => { setMode("target"); loadMatrix(); }}>Target → Parents</button>
-      </div>
 
       {mode === "parents" ? <><div className="home-breeding-equation">
         <button className={`breeding-pal-slot ${parentAPal ? "selected" : ""}`} type="button" aria-label="Choose quick breeding parent A" onClick={() => openPicker("parentA")}>
@@ -112,7 +110,7 @@ export default function HomeToolBoard({ headingLevel = 3 }: { headingLevel?: 2 |
           <span className="slot-label">Parent B</span><PalMark pal={parentBPal} /><strong>{parentBPal?.name ?? "Choose a Pal"}</strong><small>{parentBPal ? `No. ${parentBPal.number}` : "Tap to browse all Pals"}</small><i>Change</i>
         </button>
         <span className="breeding-operator equals" aria-hidden="true">=</span>
-        <button className={`breeding-pal-slot offspring ${result ? "selected" : ""}`} type="button" aria-label="Choose a Pal and find its parent combinations" onClick={() => { setMode("target"); openPicker("target"); }}>
+        <button className={`breeding-pal-slot offspring ${result ? "selected" : ""}`} type="button" aria-label="Choose a Pal and find its parent combinations" onClick={() => openPicker("target")}>
           <span className="slot-label">Offspring</span><PalMark pal={result} /><strong>{loading ? "Calculating…" : loadError ? "Choose a target Pal" : result?.name ?? "Find Parent Pairs"}</strong><small>{result ? `No. ${result.number} · tap to find its parents` : "Tap to choose any Pal directly"}</small><i>Choose Pal</i>
         </button>
       </div>
@@ -125,12 +123,12 @@ export default function HomeToolBoard({ headingLevel = 3 }: { headingLevel?: 2 |
         })}</div>
       </div>
       </> : <div className="home-target-inline" aria-live="polite">
+        <button type="button" className="target-return" onClick={() => setMode("parents")}>← Parents → Result</button>
         <button type="button" className="home-target-picker" onClick={() => openPicker("target")} aria-label="Choose the target Pal">
           <PalMark pal={target} />
           <span><small>Target Pal</small><strong>{target?.name ?? "Choose a Pal"}</strong><em>{target ? `No. ${target.number}` : "Search the current Pal roster"}</em></span>
           <b>Change</b>
         </button>
-        {!target && <div className="home-target-empty"><span>✦</span><strong>Choose the Pal you want to breed.</strong><p>We will search the current data for direct parent combinations.</p></div>}
         {target && loading && <div className="home-target-empty"><span className="home-target-spinner" /><strong>Loading current combinations…</strong></div>}
         {target && loadError && <div className="home-target-empty"><span>!</span><strong>Breeding data is unavailable.</strong><button type="button" onClick={loadMatrix}>Retry</button></div>}
         {target && matrix && !pairSummary.total && <div className="home-target-empty"><span>0</span><strong>No direct parent pairs found for {target.name}.</strong></div>}

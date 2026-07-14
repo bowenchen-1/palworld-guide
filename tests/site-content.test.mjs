@@ -99,8 +99,9 @@ test("homepage calculator lazily loads current breeding data and handles errors"
 
 test("homepage can reverse-search parent combinations for a target Pal", async () => {
   const board = await read("../app/components/home-tool-board.tsx");
-  assert.match(board, /Target → Parents/);
-  assert.match(board, /Parents → Result/);
+  assert.match(board, /Choose a Pal and find its parent combinations/);
+  assert.match(board, /setMode\("target"\)/);
+  assert.match(board, /Choose Your Target Pal/);
   assert.match(board, /matrix\[first\.id\]\?\.\[second\.id\] !== target\.id/);
   assert.match(board, /HOME_PAIR_LIMIT = 12/);
   assert.match(board, /PalMark pal={first}/);
