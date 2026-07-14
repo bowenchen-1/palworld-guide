@@ -68,7 +68,7 @@ export default function HomeToolBoard() {
   }
 
   return <div className="home-tool-board">
-    <article className="home-breeding-card">
+    <article id="quick-breeding" className="home-breeding-card">
       <div className="breeding-card-glow" aria-hidden="true" />
       <header className="breeding-stage-header">
         <div><p><span /> Palworld 1.0 calculator</p><h3>Build your perfect egg.</h3><small>Pick two Pals. We will reveal the offspring instantly.</small></div>
