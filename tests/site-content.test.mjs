@@ -148,7 +148,7 @@ test("legacy breeding calculator URL redirects to homepage while preserving quer
   assert.match(breedingCore, /matrix\[first\.id\]\?\.\[second\.id\]/);
 });
 
-test("Paldeck has URL-backed filters, three data-backed views, and indexable profile pages", async () => {
+test("Paldeck has URL-backed filters, one comparative table, and indexable profile pages", async () => {
   const page = await read("../app/paldex/page.tsx");
   const content = await read("../app/paldex/paldex-page-content.tsx");
   const client = await read("../app/paldex/paldex-client.tsx");
@@ -160,9 +160,6 @@ test("Paldeck has URL-backed filters, three data-backed views, and indexable pro
   assert.match(client, /Work suitability/);
   assert.match(client, /Match any/);
   assert.match(client, /Match all/);
-  assert.match(client, /Overview/);
-  assert.match(client, /Work/);
-  assert.match(client, /Stats/);
   assert.match(client, /Minimum level/);
   assert.match(client, /elementMode/);
   assert.match(client, /workLevel/);
@@ -173,7 +170,8 @@ test("Paldeck has URL-backed filters, three data-backed views, and indexable pro
   assert.match(client, /serializePaldexFilters/);
   assert.match(client, /useSearchParams/);
   assert.match(client, /href={`\/pals\/\$\{pal\.slug\}`}/);
-  assert.match(client, /paldex-mobile-cards/);
+  assert.match(client, /paldex-complete-table/);
+  assert.doesNotMatch(client, /paldex-mobile-cards/);
   assert.doesNotMatch(client, /return <button type="button" aria-pressed=\{selected\.id === pal\.id\}/);
   assert.match(profile, /generateStaticParams/);
   assert.match(profile, /Palworld Guide/);
@@ -241,18 +239,18 @@ test("Paldeck pagination exposes every initial Pal card to crawlers", async () =
   assert.match(content, /<PaldexClient initialPage=\{initialPage\}/);
 });
 
-test("Paldeck uses compact searchable table controls and mobile cards", async () => {
+test("Paldeck uses one responsive searchable comparison table", async () => {
   const pageContent = await read("../app/paldex/paldex-page-content.tsx");
   const client = await read("../app/paldex/paldex-client.tsx");
   const styles = await read("../app/tool-pages.css");
   assert.match(pageContent, /compact-paldex-hero/);
   assert.doesNotMatch(pageContent, /<DataNotice/);
   assert.match(client, /className="paldex-search"/);
-  assert.match(client, /paldex-table \$\{filters\.view/);
+  assert.match(client, /className="paldex-table paldex-complete-table"/);
   assert.match(client, /className="paldex-filter-sheet"/);
-  assert.match(client, /className="paldex-mobile-cards"/);
-  assert.match(styles, /\.paldex-mobile-cards\{display:none\}/);
-  assert.match(styles, /\.paldex-table-wrap\{display:none\}/);
+  assert.doesNotMatch(client, /paldex-mobile-cards/);
+  assert.match(styles, /\.paldex-complete-table th:first-child,.paldex-complete-table td:first-child\{position:sticky/);
+  assert.match(styles, /\.paldex-mobile-cards\{display:none!important\}/);
 });
 
 test("Pal data schema and repeatable import safeguards cover the 1.0 snapshot", async () => {
