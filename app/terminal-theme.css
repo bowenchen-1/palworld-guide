@@ -288,7 +288,20 @@ body::before {
 .tool-lab-section,
 .home-update-section,
 #popular { background: var(--terminal-canvas); }
-.home-paldex-feature { background:var(--terminal-canvas); color:var(--terminal-copy); }
+/* Homepage sections remain on the same expedition canvas after the calculator. */
+.home-paldex-feature,
+.popular-pals-section,
+.tool-lab-section,
+.home-update-section,
+#popular,
+.data-freshness,
+#faq {
+  background:
+    radial-gradient(circle at 88% 22%,rgba(50,188,182,.12),transparent 22%),
+    repeating-linear-gradient(115deg,transparent 0 54px,rgba(83,213,207,.025) 55px 56px),
+    linear-gradient(180deg,#061b24 0%,#082731 58%,#092f38 100%);
+}
+.home-paldex-feature { color:var(--terminal-copy); }
 .home-paldex-feature .eyebrow { color:var(--terminal-mint); }
 .home-paldex-feature .text-muted { color:var(--terminal-muted); }
 .home-paldex-feature .grid.grid-cols-2>a { border-color:var(--terminal-border); background:var(--terminal-panel); box-shadow:0 18px 42px rgba(0,8,12,.16); }
