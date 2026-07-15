@@ -17,7 +17,7 @@ for (const pal of pals) {
   assert.ok(Array.isArray(pal.elements));
   assert.ok(pal.stats && pal.movement && pal.partnerSkill && "activeSkills" in pal && "drops" in pal && "ranchProduct" in pal);
   for (const [key, level] of Object.entries(pal.work)) { assert.ok(workKeys.has(key), `unknown work key ${key}`); assert.ok(Number.isInteger(level) && level >= 1 && level <= 8, `invalid work level for ${pal.name}`); }
-  for (const field of [pal.stats.hp, pal.stats.meleeAttack, pal.stats.rangedAttack, pal.stats.defense, pal.stats.support, pal.stats.craftSpeed, pal.stats.stamina, pal.rarity, pal.foodConsumption, pal.movement.slowWalk, pal.movement.walk, pal.movement.run, pal.movement.rideSprint]) assert.ok(field === null || (typeof field === "number" && field >= 0), `invalid numeric field for ${pal.name}`);
+  for (const field of [pal.stats.hp, pal.stats.meleeAttack, pal.stats.rangedAttack, pal.stats.defense, pal.stats.support, pal.stats.craftSpeed, pal.stats.stamina, pal.rarity, pal.price, pal.foodConsumption, pal.movement.slowWalk, pal.movement.walk, pal.movement.run, pal.movement.rideSprint]) assert.ok(field === null || (typeof field === "number" && field >= 0), `invalid numeric field for ${pal.name}`);
   assert.ok(pal.nocturnal === null || typeof pal.nocturnal === "boolean");
 }
 const coverage = {
@@ -30,8 +30,10 @@ const coverage = {
   craftSpeed: pals.filter((pal) => pal.stats.craftSpeed !== null).length,
   stamina: pals.filter((pal) => pal.stats.stamina !== null).length,
   rarity: pals.filter((pal) => pal.rarity !== null).length,
+  price: pals.filter((pal) => pal.price !== null).length,
   foodConsumption: pals.filter((pal) => pal.foodConsumption !== null).length,
   runSpeed: pals.filter((pal) => pal.movement.run !== null).length,
+  rideSprint: pals.filter((pal) => pal.movement.rideSprint !== null).length,
   nocturnal: pals.filter((pal) => pal.nocturnal !== null).length,
   partnerSkill: pals.filter((pal) => pal.partnerSkill.name !== null).length,
   activeSkills: pals.filter((pal) => pal.activeSkills !== null).length,

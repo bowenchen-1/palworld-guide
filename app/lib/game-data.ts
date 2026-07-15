@@ -25,6 +25,7 @@ export type PalData = {
   elements: string[];
   stats: { hp: number | null; meleeAttack: number | null; rangedAttack: number | null; defense: number | null; support: number | null; craftSpeed: number | null; stamina: number | null };
   rarity: number | null;
+  price: number | null;
   foodConsumption: number | null;
   movement: { slowWalk: number | null; walk: number | null; run: number | null; rideSprint: number | null };
   nocturnal: boolean | null;

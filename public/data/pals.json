@@ -29,16 +29,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 400,
-      "rideSprint": null
+      "rideSprint": 550
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Fluffy Shield",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 421
   },
   {
     "id": "2.0",
@@ -71,16 +72,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 400,
-      "rideSprint": null
+      "rideSprint": 550
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Cat Helper",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 436
   },
   {
     "id": "3.0",
@@ -111,16 +113,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 375,
-      "rideSprint": null
+      "rideSprint": 550
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Egg Layer",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 313
   },
   {
     "id": "4.0",
@@ -154,16 +157,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 400,
-      "rideSprint": null
+      "rideSprint": 550
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Lifmunk Recoil",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 480
   },
   {
     "id": "5.0",
@@ -195,16 +199,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 300,
-      "rideSprint": null
+      "rideSprint": 400
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Surfing Slam",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 376
   },
   {
     "id": "5.1",
@@ -238,16 +243,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 300,
-      "rideSprint": null
+      "rideSprint": 400
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Fire Tackle",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 463
   },
   {
     "id": "6.0",
@@ -278,16 +284,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 350,
-      "rideSprint": null
+      "rideSprint": 450
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Dig Here!",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 407
   },
   {
     "id": "7.0",
@@ -318,16 +325,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 550,
-      "rideSprint": null
+      "rideSprint": 700
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Zephyr Glider",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 521
   },
   {
     "id": "7.1",
@@ -343,7 +351,7 @@
     },
     "elements": [
       "Water",
-      "Electricity"
+      "Electric"
     ],
     "stats": {
       "hp": 80,
@@ -360,16 +368,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 550,
-      "rideSprint": null
+      "rideSprint": 700
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Jolt Glider",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 658
   },
   {
     "id": "8.0",
@@ -400,16 +409,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 300,
-      "rideSprint": null
+      "rideSprint": 450
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Fluffy Wool",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 489
   },
   {
     "id": "9.0",
@@ -442,16 +452,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 300,
-      "rideSprint": null
+      "rideSprint": 450
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Leap Stance",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 584
   },
   {
     "id": "9.1",
@@ -485,16 +496,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 300,
-      "rideSprint": null
+      "rideSprint": 450
     },
     "nocturnal": true,
     "partnerSkill": {
-      "name": null,
+      "name": "Shadow Stance",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1254
   },
   {
     "id": "10.0",
@@ -527,16 +539,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 350,
-      "rideSprint": null
+      "rideSprint": 600
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Herbil Pulse",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 541
   },
   {
     "id": "11.0",
@@ -566,16 +579,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 300,
-      "rideSprint": null
+      "rideSprint": 400
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Soothing Shower",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 355
   },
   {
     "id": "12.0",
@@ -600,22 +614,23 @@
       "craftSpeed": null,
       "stamina": 100
     },
-    "rarity": 10,
+    "rarity": 1,
     "foodConsumption": 1,
     "movement": {
       "slowWalk": null,
       "walk": null,
       "run": 300,
-      "rideSprint": null
+      "rideSprint": 400
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Logging Assistance",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 394
   },
   {
     "id": "12.1",
@@ -655,7 +670,8 @@
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": null
   },
   {
     "id": "13.0",
@@ -687,16 +703,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 400,
-      "rideSprint": null
+      "rideSprint": 600
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Best Boy",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 476
   },
   {
     "id": "14.0",
@@ -728,16 +745,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 400,
-      "rideSprint": null
+      "rideSprint": 550
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Happy Clover",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 407
   },
   {
     "id": "15.0",
@@ -750,7 +768,7 @@
       "generateelectricity": 1
     },
     "elements": [
-      "Electricity"
+      "Electric"
     ],
     "stats": {
       "hp": 70,
@@ -767,16 +785,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 400,
-      "rideSprint": null
+      "rideSprint": 550
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Jolt Bomb",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 417
   },
   {
     "id": "15.1",
@@ -806,16 +825,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 400,
-      "rideSprint": null
+      "rideSprint": 550
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Cold Bomb",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 472
   },
   {
     "id": "16.0",
@@ -848,16 +868,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 300,
-      "rideSprint": null
+      "rideSprint": 400
     },
     "nocturnal": true,
     "partnerSkill": {
-      "name": null,
+      "name": "Caffeine Inoculation",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 436
   },
   {
     "id": "17.0",
@@ -891,16 +912,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 500,
-      "rideSprint": null
+      "rideSprint": 650
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Pengullet Launcher",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 463
   },
   {
     "id": "17.1",
@@ -917,7 +939,7 @@
     },
     "elements": [
       "Water",
-      "Electricity"
+      "Electric"
     ],
     "stats": {
       "hp": 70,
@@ -934,16 +956,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 500,
-      "rideSprint": null
+      "rideSprint": 650
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Pengullet Lux Launcher",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 561
   },
   {
     "id": "18.0",
@@ -978,16 +1001,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 450,
-      "rideSprint": null
+      "rideSprint": 600
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Brave Sailor",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1442
   },
   {
     "id": "18.1",
@@ -1005,7 +1029,7 @@
     },
     "elements": [
       "Water",
-      "Electricity"
+      "Electric"
     ],
     "stats": {
       "hp": 100,
@@ -1022,16 +1046,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 450,
-      "rideSprint": null
+      "rideSprint": 600
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Unyielding Storm Commander",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1683
   },
   {
     "id": "19.0",
@@ -1061,16 +1086,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 380,
-      "rideSprint": null
+      "rideSprint": 550
     },
     "nocturnal": true,
     "partnerSkill": {
-      "name": null,
+      "name": "Dark Knowledge",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 443
   },
   {
     "id": "20.0",
@@ -1100,16 +1126,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 500,
-      "rideSprint": null
+      "rideSprint": 900
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Pacapaca Wool",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 791
   },
   {
     "id": "21.0",
@@ -1139,16 +1166,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 700,
-      "rideSprint": null
+      "rideSprint": 1040
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "King of Muscles",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1274
   },
   {
     "id": "21.1",
@@ -1179,16 +1207,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 700,
-      "rideSprint": null
+      "rideSprint": 1040
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Coldhearted King",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1624
   },
   {
     "id": "22.0",
@@ -1220,16 +1249,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 300,
-      "rideSprint": null
+      "rideSprint": 550
     },
     "nocturnal": true,
     "partnerSkill": {
-      "name": null,
+      "name": "Dream Chaser",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 397
   },
   {
     "id": "23.0",
@@ -1263,16 +1293,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 300,
-      "rideSprint": null
+      "rideSprint": 400
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Cheery Rifle",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 512
   },
   {
     "id": "23.1",
@@ -1305,16 +1336,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 300,
-      "rideSprint": null
+      "rideSprint": 400
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Chipper Chimp Gunfire",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 526
   },
   {
     "id": "24.0",
@@ -1344,16 +1376,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 300,
-      "rideSprint": null
+      "rideSprint": 500
     },
     "nocturnal": true,
     "partnerSkill": {
-      "name": null,
+      "name": "Kuudere",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 502
   },
   {
     "id": "25.0",
@@ -1386,16 +1419,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 250,
-      "rideSprint": null
+      "rideSprint": 375
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Magma Tears",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 436
   },
   {
     "id": "26.0",
@@ -1426,16 +1460,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 400,
-      "rideSprint": null
+      "rideSprint": 550
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Tiny Spark",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 459
   },
   {
     "id": "27.0",
@@ -1466,16 +1501,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 475,
-      "rideSprint": null
+      "rideSprint": 550
     },
     "nocturnal": true,
     "partnerSkill": {
-      "name": null,
+      "name": "Gold Digger",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 665
   },
   {
     "id": "27.1",
@@ -1506,16 +1542,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 475,
-      "rideSprint": null
+      "rideSprint": 550
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Icy Whispers",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 385
   },
   {
     "id": "28.0",
@@ -1545,16 +1582,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 500,
-      "rideSprint": null
+      "rideSprint": 800
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Hard Head",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 443
   },
   {
     "id": "29.0",
@@ -1584,16 +1622,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 400,
-      "rideSprint": null
+      "rideSprint": 550
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Huggy Fire",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 394
   },
   {
     "id": "29.1",
@@ -1623,16 +1662,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 400,
-      "rideSprint": null
+      "rideSprint": 550
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Huggy Frost",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 472
   },
   {
     "id": "30.0",
@@ -1665,16 +1705,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 400,
-      "rideSprint": null
+      "rideSprint": 550
     },
     "nocturnal": true,
     "partnerSkill": {
-      "name": null,
+      "name": "Fried Squid",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 376
   },
   {
     "id": "30.1",
@@ -1707,16 +1748,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 400,
-      "rideSprint": null
+      "rideSprint": 550
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Fried Killamari",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 421
   },
   {
     "id": "31.0",
@@ -1748,16 +1790,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 300,
-      "rideSprint": null
+      "rideSprint": 550
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Mining Assistance",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 358
   },
   {
     "id": "32.0",
@@ -1787,16 +1830,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 700,
-      "rideSprint": null
+      "rideSprint": 900
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Guardian of the Forest",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 791
   },
   {
     "id": "32.1",
@@ -1826,16 +1870,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 700,
-      "rideSprint": null
+      "rideSprint": 900
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Guardian of the Golden Forest",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 891
   },
   {
     "id": "33.0",
@@ -1865,16 +1910,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 800,
-      "rideSprint": null
+      "rideSprint": 1050
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Direhowl Rider",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 611
   },
   {
     "id": "34.0",
@@ -1905,16 +1951,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 400,
-      "rideSprint": null
+      "rideSprint": 550
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Berry Picker",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1643
   },
   {
     "id": "34.1",
@@ -1945,16 +1992,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 400,
-      "rideSprint": null
+      "rideSprint": 550
     },
     "nocturnal": true,
     "partnerSkill": {
-      "name": null,
+      "name": "Venom Picker",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 928
   },
   {
     "id": "35.0",
@@ -1985,16 +2033,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 250,
-      "rideSprint": null
+      "rideSprint": 400
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Fluffy",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 313
   },
   {
     "id": "36.0",
@@ -2025,16 +2074,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 650,
-      "rideSprint": null
+      "rideSprint": 1020
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "King of Fluff",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1244
   },
   {
     "id": "37.0",
@@ -2066,16 +2116,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 320,
-      "rideSprint": null
+      "rideSprint": 500
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Spikey Carrier",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 661
   },
   {
     "id": "37.1",
@@ -2108,16 +2159,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 320,
-      "rideSprint": null
+      "rideSprint": 500
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Shiny Hauler",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 14950
   },
   {
     "id": "38.0",
@@ -2149,16 +2201,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 400,
-      "rideSprint": null
+      "rideSprint": 550
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Flying Trapeze",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 541
   },
   {
     "id": "38.1",
@@ -2191,16 +2244,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 400,
-      "rideSprint": null
+      "rideSprint": 550
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Winter Trapeze",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 728
   },
   {
     "id": "39.0",
@@ -2230,16 +2284,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 300,
-      "rideSprint": null
+      "rideSprint": 400
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Candy Pop",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 502
   },
   {
     "id": "39.1",
@@ -2269,16 +2324,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 300,
-      "rideSprint": null
+      "rideSprint": 400
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Bitter Pop",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 836
   },
   {
     "id": "40.0",
@@ -2308,16 +2364,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 580,
-      "rideSprint": null
+      "rideSprint": 700
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Milk Maker",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 502
   },
   {
     "id": "41.0",
@@ -2348,16 +2405,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 600,
-      "rideSprint": null
+      "rideSprint": 900
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Waterwing Dance",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1831
   },
   {
     "id": "41.1",
@@ -2388,16 +2446,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 600,
-      "rideSprint": null
+      "rideSprint": 900
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Icewing Dance",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 2109
   },
   {
     "id": "42.0",
@@ -2413,7 +2472,7 @@
       "monsterfarm": 1
     },
     "elements": [
-      "Electricity"
+      "Electric"
     ],
     "stats": {
       "hp": 60,
@@ -2430,16 +2489,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 350,
-      "rideSprint": null
+      "rideSprint": 500
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Static Electricity",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 410
   },
   {
     "id": "43.0",
@@ -2470,16 +2530,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 700,
-      "rideSprint": null
+      "rideSprint": 900
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Aqua Spout",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 407
   },
   {
     "id": "43.1",
@@ -2510,16 +2571,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 700,
-      "rideSprint": null
+      "rideSprint": 900
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Lava Spout",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 407
   },
   {
     "id": "44.0",
@@ -2551,16 +2613,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 245,
-      "rideSprint": null
+      "rideSprint": 350
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Happy-Go-Lucky Bunny",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 421
   },
   {
     "id": "44.1",
@@ -2593,16 +2656,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 245,
-      "rideSprint": null
+      "rideSprint": 350
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Ground 'n' Pound",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 526
   },
   {
     "id": "45.0",
@@ -2634,16 +2698,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 240,
-      "rideSprint": null
+      "rideSprint": 450
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Jelliette Drop",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 658
   },
   {
     "id": "46.0",
@@ -2677,16 +2742,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 400,
-      "rideSprint": null
+      "rideSprint": 600
     },
     "nocturnal": true,
     "partnerSkill": {
-      "name": null,
+      "name": "Jellroy Drop",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1328
   },
   {
     "id": "47.0",
@@ -2718,16 +2784,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 450,
-      "rideSprint": null
+      "rideSprint": 600
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Magical Twin Powers",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 421
   },
   {
     "id": "48.0",
@@ -2760,16 +2827,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 300,
-      "rideSprint": null
+      "rideSprint": 500
     },
     "nocturnal": true,
     "partnerSkill": {
-      "name": null,
+      "name": "Sticky Princess",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 577
   },
   {
     "id": "48.1",
@@ -2802,16 +2870,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 300,
-      "rideSprint": null
+      "rideSprint": 500
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Cephalo-Princess",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1612
   },
   {
     "id": "49.0",
@@ -2841,16 +2910,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 600,
-      "rideSprint": null
+      "rideSprint": 700
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Galeclaw Glider",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 502
   },
   {
     "id": "50.0",
@@ -2883,16 +2953,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 360,
-      "rideSprint": null
+      "rideSprint": 540
     },
     "nocturnal": true,
     "partnerSkill": {
-      "name": null,
+      "name": "Death-Cheating Feline",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 827
   },
   {
     "id": "51.0",
@@ -2922,16 +2993,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 600,
-      "rideSprint": null
+      "rideSprint": 750
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Travel Companion",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1012
   },
   {
     "id": "52.0",
@@ -2963,16 +3035,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 400,
-      "rideSprint": null
+      "rideSprint": 550
     },
     "nocturnal": true,
     "partnerSkill": {
-      "name": null,
+      "name": "Ultrasonic Sensor",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1147
   },
   {
     "id": "53.0",
@@ -3002,16 +3075,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 300,
-      "rideSprint": null
+      "rideSprint": 550
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Eggbomb Launcher",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 373
   },
   {
     "id": "54.0",
@@ -3025,7 +3099,7 @@
       "deforest": 1
     },
     "elements": [
-      "Electricity"
+      "Electric"
     ],
     "stats": {
       "hp": 80,
@@ -3042,16 +3116,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 720,
-      "rideSprint": null
+      "rideSprint": 1100
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Swift Deity",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1388
   },
   {
     "id": "54.1",
@@ -3082,16 +3157,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 720,
-      "rideSprint": null
+      "rideSprint": 1100
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Frigid Deity",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1974
   },
   {
     "id": "55.0",
@@ -3123,16 +3199,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 400,
-      "rideSprint": null
+      "rideSprint": 500
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Angry Shark",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 850
   },
   {
     "id": "55.1",
@@ -3164,16 +3241,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 400,
-      "rideSprint": null
+      "rideSprint": 500
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Angry Shark",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 850
   },
   {
     "id": "56.0",
@@ -3203,16 +3281,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 600,
-      "rideSprint": null
+      "rideSprint": 800
     },
     "nocturnal": true,
     "partnerSkill": {
-      "name": null,
+      "name": "Dark Gleam Strike",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 842
   },
   {
     "id": "56.1",
@@ -3243,16 +3322,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 600,
-      "rideSprint": null
+      "rideSprint": 800
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Frozen Gleam Strike",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1176
   },
   {
     "id": "57.0",
@@ -3283,16 +3363,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 920,
-      "rideSprint": null
+      "rideSprint": 1200
     },
     "nocturnal": true,
     "partnerSkill": {
-      "name": null,
+      "name": "Eerie Nightstreaker",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 770
   },
   {
     "id": "58.0",
@@ -3323,16 +3404,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 700,
-      "rideSprint": null
+      "rideSprint": 1050
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Warm Body",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1176
   },
   {
     "id": "59.0",
@@ -3363,16 +3445,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 300,
-      "rideSprint": null
+      "rideSprint": 450
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Fluffy Flutterer",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 385
   },
   {
     "id": "60.0",
@@ -3406,16 +3489,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 400,
-      "rideSprint": null
+      "rideSprint": 550
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Princess Gaze",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 756
   },
   {
     "id": "61.0",
@@ -3447,16 +3531,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 550,
-      "rideSprint": null
+      "rideSprint": 700
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Mysterious Scales",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 534
   },
   {
     "id": "62.0",
@@ -3470,7 +3555,7 @@
       "transport": 1
     },
     "elements": [
-      "Electricity"
+      "Electric"
     ],
     "stats": {
       "hp": 75,
@@ -3487,16 +3572,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 200,
-      "rideSprint": null
+      "rideSprint": 400
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Crackle Booster",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 556
   },
   {
     "id": "63.0",
@@ -3525,17 +3611,18 @@
     "movement": {
       "slowWalk": null,
       "walk": null,
-      "run": 630,
-      "rideSprint": null
+      "run": 700,
+      "rideSprint": 1000
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Amicable Holy Dragon",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1205
   },
   {
     "id": "63.1",
@@ -3566,17 +3653,18 @@
     "movement": {
       "slowWalk": null,
       "walk": null,
-      "run": 630,
-      "rideSprint": null
+      "run": 700,
+      "rideSprint": 1000
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Amicable Water Dragon",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1543
   },
   {
     "id": "64.0",
@@ -3608,16 +3696,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 700,
-      "rideSprint": null
+      "rideSprint": 850
     },
     "nocturnal": true,
     "partnerSkill": {
-      "name": null,
+      "name": "Aerial Marauder",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1464
   },
   {
     "id": "64.1",
@@ -3649,16 +3738,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 700,
-      "rideSprint": null
+      "rideSprint": 850
     },
     "nocturnal": true,
     "partnerSkill": {
-      "name": null,
+      "name": "Aerial Marauder",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1624
   },
   {
     "id": "65.0",
@@ -3688,16 +3778,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 550,
-      "rideSprint": null
+      "rideSprint": 700
     },
     "nocturnal": true,
     "partnerSkill": {
-      "name": null,
+      "name": "Life Steal",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1744
   },
   {
     "id": "66.0",
@@ -3732,16 +3823,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 400,
-      "rideSprint": null
+      "rideSprint": 550
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Purification of Gaia",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 2095
   },
   {
     "id": "67.0",
@@ -3777,16 +3869,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 450,
-      "rideSprint": null
+      "rideSprint": 550
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Worker Bee",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1166
   },
   {
     "id": "68.0",
@@ -3820,16 +3913,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 450,
-      "rideSprint": null
+      "rideSprint": 550
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Queen Bee Command",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1769
   },
   {
     "id": "69.0",
@@ -3862,16 +3956,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 750,
-      "rideSprint": null
+      "rideSprint": 850
     },
     "nocturnal": true,
     "partnerSkill": {
-      "name": null,
+      "name": "Heart Drain",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1056
   },
   {
     "id": "70.0",
@@ -3901,16 +3996,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 650,
-      "rideSprint": null
+      "rideSprint": 1000
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Glaring Cat's Eye",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1074
   },
   {
     "id": "71.0",
@@ -3943,16 +4039,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 640,
-      "rideSprint": null
+      "rideSprint": 1000
     },
     "nocturnal": true,
     "partnerSkill": {
-      "name": null,
+      "name": "Tarantriss’ Web",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1806
   },
   {
     "id": "72.0",
@@ -3984,16 +4081,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 250,
-      "rideSprint": null
+      "rideSprint": 375
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Rider of the Snowy Mountain",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1794
   },
   {
     "id": "72.1",
@@ -4025,16 +4123,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 250,
-      "rideSprint": null
+      "rideSprint": 375
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Snowy Mountain Slider",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1942
   },
   {
     "id": "73.0",
@@ -4066,16 +4165,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 600,
-      "rideSprint": null
+      "rideSprint": 800
     },
     "nocturnal": true,
     "partnerSkill": {
-      "name": null,
+      "name": "Too Cool to be Seen",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 476
   },
   {
     "id": "73.1",
@@ -4108,16 +4208,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 400,
-      "rideSprint": null
+      "rideSprint": 550
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Too Cool to be Seen",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 493
   },
   {
     "id": "74.0",
@@ -4149,16 +4250,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 550,
-      "rideSprint": null
+      "rideSprint": 720
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Full-Power Gorilla Mode",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1214
   },
   {
     "id": "74.1",
@@ -4190,16 +4292,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 550,
-      "rideSprint": null
+      "rideSprint": 720
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Full-Power Gorilla Pound",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1284
   },
   {
     "id": "75.0",
@@ -4230,16 +4333,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 500,
-      "rideSprint": null
+      "rideSprint": 800
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Swift Swimmer",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 968
   },
   {
     "id": "75.1",
@@ -4269,16 +4373,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 500,
-      "rideSprint": null
+      "rideSprint": 800
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Sand Swimmer",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1205
   },
   {
     "id": "76.0",
@@ -4313,16 +4418,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 600,
-      "rideSprint": null
+      "rideSprint": 750
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Grounded Archer",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1335
   },
   {
     "id": "76.1",
@@ -4357,16 +4463,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 600,
-      "rideSprint": null
+      "rideSprint": 750
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Master Archer",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1294
   },
   {
     "id": "77.0",
@@ -4400,16 +4507,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 400,
-      "rideSprint": null
+      "rideSprint": 550
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Helper Bunny",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 512
   },
   {
     "id": "78.0",
@@ -4441,16 +4549,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 440,
-      "rideSprint": null
+      "rideSprint": 620
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Lord Fox",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1284
   },
   {
     "id": "78.1",
@@ -4483,16 +4592,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 440,
-      "rideSprint": null
+      "rideSprint": 620
     },
     "nocturnal": true,
     "partnerSkill": {
-      "name": null,
+      "name": "Black Fox Lord",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1509
   },
   {
     "id": "79.0",
@@ -4524,16 +4634,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 440,
-      "rideSprint": null
+      "rideSprint": 620
     },
     "nocturnal": true,
     "partnerSkill": {
-      "name": null,
+      "name": "Mystical Black Magic",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1356
   },
   {
     "id": "79.1",
@@ -4567,16 +4678,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 440,
-      "rideSprint": null
+      "rideSprint": 620
     },
     "nocturnal": true,
     "partnerSkill": {
-      "name": null,
+      "name": "Blazing Black Magic",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1675
   },
   {
     "id": "80.0",
@@ -4606,16 +4718,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 700,
-      "rideSprint": null
+      "rideSprint": 1100
     },
     "nocturnal": true,
     "partnerSkill": {
-      "name": null,
+      "name": "Wings of Death",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 2109
   },
   {
     "id": "80.1",
@@ -4630,7 +4743,7 @@
     },
     "elements": [
       "Dark",
-      "Electricity"
+      "Electric"
     ],
     "stats": {
       "hp": 105,
@@ -4647,16 +4760,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 700,
-      "rideSprint": null
+      "rideSprint": 1100
     },
     "nocturnal": true,
     "partnerSkill": {
-      "name": null,
+      "name": "Wings of Thunder",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 2469
   },
   {
     "id": "81.0",
@@ -4690,16 +4804,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 700,
-      "rideSprint": null
+      "rideSprint": 1000
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Mother Nature's Menace",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 2041
   },
   {
     "id": "81.1",
@@ -4732,16 +4847,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 700,
-      "rideSprint": null
+      "rideSprint": 1000
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Father Winter's Threat",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 2484
   },
   {
     "id": "82.0",
@@ -4773,16 +4889,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 500,
-      "rideSprint": null
+      "rideSprint": 650
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Antigravity",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1845
   },
   {
     "id": "83.0",
@@ -4812,16 +4929,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 750,
-      "rideSprint": null
+      "rideSprint": 1050
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Wind and Clouds",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1659
   },
   {
     "id": "83.1",
@@ -4835,7 +4953,7 @@
       "deforest": 4
     },
     "elements": [
-      "Electricity"
+      "Electric"
     ],
     "stats": {
       "hp": 110,
@@ -4852,16 +4970,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 750,
-      "rideSprint": null
+      "rideSprint": 1050
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Stormcloud",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 2164
   },
   {
     "id": "84.0",
@@ -4893,16 +5012,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 700,
-      "rideSprint": null
+      "rideSprint": 1030
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Fragrant Dragon",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1315
   },
   {
     "id": "84.1",
@@ -4916,7 +5036,7 @@
       "deforest": 4
     },
     "elements": [
-      "Electricity",
+      "Electric",
       "Dragon"
     ],
     "stats": {
@@ -4934,16 +5054,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 700,
-      "rideSprint": null
+      "rideSprint": 1030
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Thunder Dragon",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1543
   },
   {
     "id": "85.0",
@@ -4977,16 +5098,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 600,
-      "rideSprint": null
+      "rideSprint": 900
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Brandish Blade",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1442
   },
   {
     "id": "85.1",
@@ -5021,16 +5143,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 600,
-      "rideSprint": null
+      "rideSprint": 900
     },
     "nocturnal": true,
     "partnerSkill": {
-      "name": null,
+      "name": "Void Blade",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1857
   },
   {
     "id": "86.0",
@@ -5063,16 +5186,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 300,
-      "rideSprint": null
+      "rideSprint": 450
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Icy Maw",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 798
   },
   {
     "id": "87.0",
@@ -5105,16 +5229,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 600,
-      "rideSprint": null
+      "rideSprint": 1030
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Gaia Crusher",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 2220
   },
   {
     "id": "87.1",
@@ -5147,16 +5272,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 600,
-      "rideSprint": null
+      "rideSprint": 1030
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Ice Crusher",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 2424
   },
   {
     "id": "88.0",
@@ -5187,16 +5313,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 250,
-      "rideSprint": null
+      "rideSprint": 400
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Water Gun",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 677
   },
   {
     "id": "88.1",
@@ -5229,16 +5356,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 250,
-      "rideSprint": null
+      "rideSprint": 400
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Ember Chamber",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 749
   },
   {
     "id": "89.0",
@@ -5272,16 +5400,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 550,
-      "rideSprint": null
+      "rideSprint": 700
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Blessing of the Flower Spirit",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1769
   },
   {
     "id": "89.1",
@@ -5316,16 +5445,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 550,
-      "rideSprint": null
+      "rideSprint": 700
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Passion of the Flower Spirit",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 2357
   },
   {
     "id": "90.0",
@@ -5358,16 +5488,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 600,
-      "rideSprint": null
+      "rideSprint": 750
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Selfless Discipline",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1806
   },
   {
     "id": "91.0",
@@ -5401,16 +5532,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 700,
-      "rideSprint": null
+      "rideSprint": 960
     },
     "nocturnal": true,
     "partnerSkill": {
-      "name": null,
+      "name": "Flameclaw Hunter",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1325
   },
   {
     "id": "91.1",
@@ -5442,16 +5574,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 700,
-      "rideSprint": null
+      "rideSprint": 960
     },
     "nocturnal": true,
     "partnerSkill": {
-      "name": null,
+      "name": "Darkclaw Hunter",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 2036
   },
   {
     "id": "92.0",
@@ -5466,7 +5599,7 @@
       "transport": 2
     },
     "elements": [
-      "Electricity"
+      "Electric"
     ],
     "stats": {
       "hp": 70,
@@ -5483,16 +5616,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 400,
-      "rideSprint": null
+      "rideSprint": 550
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Lady of Lightning",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 616
   },
   {
     "id": "92.1",
@@ -5509,7 +5643,7 @@
     },
     "elements": [
       "Dark",
-      "Electricity"
+      "Electric"
     ],
     "stats": {
       "hp": 70,
@@ -5526,16 +5660,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 400,
-      "rideSprint": null
+      "rideSprint": 550
     },
     "nocturnal": true,
     "partnerSkill": {
-      "name": null,
+      "name": "Lady of Dark Lightning",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 599
   },
   {
     "id": "93.0",
@@ -5566,16 +5701,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 850,
-      "rideSprint": null
+      "rideSprint": 1300
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Red Hare",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1464
   },
   {
     "id": "93.1",
@@ -5607,16 +5743,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 850,
-      "rideSprint": null
+      "rideSprint": 1300
     },
     "nocturnal": true,
     "partnerSkill": {
-      "name": null,
+      "name": "Black Hare",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 2034
   },
   {
     "id": "94.0",
@@ -5648,16 +5785,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 650,
-      "rideSprint": null
+      "rideSprint": 1000
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Hungry Missile",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 2365
   },
   {
     "id": "94.1",
@@ -5672,7 +5810,7 @@
     },
     "elements": [
       "Dragon",
-      "Electricity"
+      "Electric"
     ],
     "stats": {
       "hp": 120,
@@ -5689,16 +5827,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 650,
-      "rideSprint": null
+      "rideSprint": 1000
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Missile Party",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 2685
   },
   {
     "id": "95.0",
@@ -5729,16 +5868,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 600,
-      "rideSprint": null
+      "rideSprint": 750
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Aurora Guide",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1543
   },
   {
     "id": "96.0",
@@ -5753,7 +5893,7 @@
       "transport": 5
     },
     "elements": [
-      "Electricity"
+      "Electric"
     ],
     "stats": {
       "hp": 105,
@@ -5770,16 +5910,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 750,
-      "rideSprint": null
+      "rideSprint": 1200
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Thunderous",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1934
   },
   {
     "id": "96.1",
@@ -5811,16 +5952,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 750,
-      "rideSprint": null
+      "rideSprint": 1200
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Coldsnap",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 2227
   },
   {
     "id": "97.0",
@@ -5852,16 +5994,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 500,
-      "rideSprint": null
+      "rideSprint": 800
     },
     "nocturnal": true,
     "partnerSkill": {
-      "name": null,
+      "name": "Master of Darkness",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 2263
   },
   {
     "id": "97.1",
@@ -5894,16 +6037,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 500,
-      "rideSprint": null
+      "rideSprint": 800
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Abyssal Celebrity Chef",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 2424
   },
   {
     "id": "98.0",
@@ -5916,7 +6060,7 @@
       "generateelectricity": 4
     },
     "elements": [
-      "Electricity"
+      "Electric"
     ],
     "stats": {
       "hp": 90,
@@ -5933,16 +6077,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 700,
-      "rideSprint": null
+      "rideSprint": 1150
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Lightning Shepherd",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1205
   },
   {
     "id": "98.1",
@@ -5972,16 +6117,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 700,
-      "rideSprint": null
+      "rideSprint": 1150
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Snow Shepherd",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1138
   },
   {
     "id": "99.0",
@@ -6013,16 +6159,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 1000,
-      "rideSprint": null
+      "rideSprint": 1200
     },
     "nocturnal": true,
     "partnerSkill": {
-      "name": null,
+      "name": "Steel Scorpion",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 2469
   },
   {
     "id": "99.1",
@@ -6053,16 +6200,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 1000,
-      "rideSprint": null
+      "rideSprint": 1200
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Golden Scorpion",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 10000
   },
   {
     "id": "100.0",
@@ -6094,16 +6242,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 525,
-      "rideSprint": null
+      "rideSprint": 630
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Hug Me Please",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 702
   },
   {
     "id": "100.1",
@@ -6136,16 +6285,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 525,
-      "rideSprint": null
+      "rideSprint": 630
     },
     "nocturnal": true,
     "partnerSkill": {
-      "name": null,
+      "name": "Hug You So Much",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 749
   },
   {
     "id": "101.0",
@@ -6176,16 +6326,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 700,
-      "rideSprint": null
+      "rideSprint": 1070
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Cool Body",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1464
   },
   {
     "id": "102.0",
@@ -6218,16 +6369,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 600,
-      "rideSprint": null
+      "rideSprint": 1000
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Grenadier Panda",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1475
   },
   {
     "id": "102.1",
@@ -6243,7 +6395,7 @@
       "transport": 4
     },
     "elements": [
-      "Electricity"
+      "Electric"
     ],
     "stats": {
       "hp": 100,
@@ -6260,16 +6412,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 600,
-      "rideSprint": null
+      "rideSprint": 1000
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Grenadier Panda",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1806
   },
   {
     "id": "103.0",
@@ -6301,16 +6454,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 750,
-      "rideSprint": null
+      "rideSprint": 1050
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Wriggling Weasel",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1270
   },
   {
     "id": "103.1",
@@ -6342,16 +6496,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 750,
-      "rideSprint": null
+      "rideSprint": 1050
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Sparkling Weasel",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1670
   },
   {
     "id": "104.0",
@@ -6382,16 +6537,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 800,
-      "rideSprint": null
+      "rideSprint": 1300
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Flame Wing",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 2263
   },
   {
     "id": "105.0",
@@ -6423,16 +6579,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 650,
-      "rideSprint": null
+      "rideSprint": 850
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Magma Overload",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 2911
   },
   {
     "id": "105.1",
@@ -6464,16 +6621,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 650,
-      "rideSprint": null
+      "rideSprint": 850
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Ice Overload",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 3328
   },
   {
     "id": "106.0",
@@ -6505,16 +6663,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 550,
-      "rideSprint": null
+      "rideSprint": 1000
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Samba Step",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 2529
   },
   {
     "id": "107.0",
@@ -6544,16 +6703,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 300,
-      "rideSprint": null
+      "rideSprint": 420
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Drill Crusher",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1577
   },
   {
     "id": "108.0",
@@ -6583,16 +6743,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 550,
-      "rideSprint": null
+      "rideSprint": 1020
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Love's First Blossom",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 2014
   },
   {
     "id": "108.1",
@@ -6623,16 +6784,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 550,
-      "rideSprint": null
+      "rideSprint": 1020
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Purity's Full Bloom",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 2259
   },
   {
     "id": "109.0",
@@ -6666,16 +6828,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 450,
-      "rideSprint": null
+      "rideSprint": 600
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Soil Improver",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 995
   },
   {
     "id": "109.1",
@@ -6709,16 +6872,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 450,
-      "rideSprint": null
+      "rideSprint": 600
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Golden Harvest",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 19900
   },
   {
     "id": "110.0",
@@ -6751,16 +6915,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 600,
-      "rideSprint": null
+      "rideSprint": 1020
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Balmy Weather",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 2862
   },
   {
     "id": "111.0",
@@ -6790,16 +6955,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 700,
-      "rideSprint": null
+      "rideSprint": 1100
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Wolf of the Sun",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1744
   },
   {
     "id": "111.1",
@@ -6829,16 +6995,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 700,
-      "rideSprint": null
+      "rideSprint": 1100
     },
     "nocturnal": true,
     "partnerSkill": {
-      "name": null,
+      "name": "Gloomhowl",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 2014
   },
   {
     "id": "112.0",
@@ -6869,16 +7036,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 800,
-      "rideSprint": null
+      "rideSprint": 1200
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Hellflame Lion",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1794
   },
   {
     "id": "112.1",
@@ -6910,16 +7078,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 800,
-      "rideSprint": null
+      "rideSprint": 1200
     },
     "nocturnal": true,
     "partnerSkill": {
-      "name": null,
+      "name": "Darkflame Lion",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1882
   },
   {
     "id": "113.0",
@@ -6953,16 +7122,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 500,
-      "rideSprint": null
+      "rideSprint": 600
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Cast-Iron Shell",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 2913
   },
   {
     "id": "113.1",
@@ -6994,16 +7164,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 500,
-      "rideSprint": null
+      "rideSprint": 600
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Fullmetal Shell",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 10000
   },
   {
     "id": "114.0",
@@ -7034,16 +7205,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 500,
-      "rideSprint": null
+      "rideSprint": 750
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Peacock Pounce",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 2382
   },
   {
     "id": "115.0",
@@ -7077,16 +7249,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 500,
-      "rideSprint": null
+      "rideSprint": 750
     },
     "nocturnal": true,
     "partnerSkill": {
-      "name": null,
+      "name": "Phantasmal Arcana",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 2347
   },
   {
     "id": "116.0",
@@ -7118,16 +7291,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 400,
-      "rideSprint": null
+      "rideSprint": 550
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Silk Shroud",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1589
   },
   {
     "id": "116.1",
@@ -7158,16 +7332,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 400,
-      "rideSprint": null
+      "rideSprint": 550
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Gilded Shroud",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 2094
   },
   {
     "id": "117.0",
@@ -7198,16 +7373,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 700,
-      "rideSprint": null
+      "rideSprint": 1100
     },
     "nocturnal": true,
     "partnerSkill": {
-      "name": null,
+      "name": "Messenger of Death",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1110
   },
   {
     "id": "118.0",
@@ -7241,16 +7417,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 740,
-      "rideSprint": null
+      "rideSprint": 1050
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Rampant Spores",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1367
   },
   {
     "id": "118.1",
@@ -7284,16 +7461,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 740,
-      "rideSprint": null
+      "rideSprint": 1050
     },
     "nocturnal": true,
     "partnerSkill": {
-      "name": null,
+      "name": "Roiling Spores",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1399
   },
   {
     "id": "119.0",
@@ -7326,16 +7504,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 400,
-      "rideSprint": null
+      "rideSprint": 600
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Witch's Icy Veil",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 2277
   },
   {
     "id": "120.0",
@@ -7368,16 +7547,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 480,
-      "rideSprint": null
+      "rideSprint": 720
     },
     "nocturnal": true,
     "partnerSkill": {
-      "name": null,
+      "name": "Resurrection",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 2529
   },
   {
     "id": "121.0",
@@ -7408,16 +7588,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 600,
-      "rideSprint": null
+      "rideSprint": 1000
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Stormbringer Sea Dragon",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 3723
   },
   {
     "id": "121.1",
@@ -7448,16 +7629,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 600,
-      "rideSprint": null
+      "rideSprint": 1000
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Stormbringer Lava Dragon",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 3577
   },
   {
     "id": "122.0",
@@ -7487,16 +7669,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 850,
-      "rideSprint": null
+      "rideSprint": 1100
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Wings of Flame",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 2409
   },
   {
     "id": "122.1",
@@ -7526,16 +7709,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 850,
-      "rideSprint": null
+      "rideSprint": 1100
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Wings of Water",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 2732
   },
   {
     "id": "123.0",
@@ -7565,16 +7749,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 900,
-      "rideSprint": null
+      "rideSprint": 1200
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Sand Sprint",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 896
   },
   {
     "id": "124.0",
@@ -7606,17 +7791,18 @@
     "movement": {
       "slowWalk": null,
       "walk": null,
-      "run": 800,
-      "rideSprint": null
+      "run": 900,
+      "rideSprint": 1400
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Sky Dragon Affection",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 2081
   },
   {
     "id": "124.1",
@@ -7650,17 +7836,18 @@
     "movement": {
       "slowWalk": null,
       "walk": null,
-      "run": 800,
-      "rideSprint": null
+      "run": 900,
+      "rideSprint": 1400
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Grass Dragon Affection",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 2235
   },
   {
     "id": "125.0",
@@ -7693,16 +7880,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 400,
-      "rideSprint": null
+      "rideSprint": 800
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Floral Boost",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1261
   },
   {
     "id": "126.0",
@@ -7732,16 +7920,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 800,
-      "rideSprint": null
+      "rideSprint": 900
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Sandball Soccer",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1152
   },
   {
     "id": "127.0",
@@ -7771,16 +7960,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 750,
-      "rideSprint": null
+      "rideSprint": 1080
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Birds of a Feather",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1238
   },
   {
     "id": "128.0",
@@ -7812,16 +8002,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 500,
-      "rideSprint": null
+      "rideSprint": 800
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Fish Fillet",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1342
   },
   {
     "id": "128.1",
@@ -7855,16 +8046,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 500,
-      "rideSprint": null
+      "rideSprint": 800
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Seared Fish Fillet",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1442
   },
   {
     "id": "129.0",
@@ -7896,16 +8088,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 550,
-      "rideSprint": null
+      "rideSprint": 1000
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Ore-Loving Beast",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 2576
   },
   {
     "id": "129.1",
@@ -7937,16 +8130,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 550,
-      "rideSprint": null
+      "rideSprint": 1000
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Ice-Loving Beast",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 2797
   },
   {
     "id": "130.0",
@@ -7976,16 +8170,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 900,
-      "rideSprint": null
+      "rideSprint": 1250
     },
     "nocturnal": true,
     "partnerSkill": {
-      "name": null,
+      "name": "Night Dancer",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 2014
   },
   {
     "id": "130.1",
@@ -8015,16 +8210,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 900,
-      "rideSprint": null
+      "rideSprint": 1250
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Light Dancer",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 2514
   },
   {
     "id": "131.0",
@@ -8054,16 +8250,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 350,
-      "rideSprint": null
+      "rideSprint": 550
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Power Stone",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 2306
   },
   {
     "id": "131.1",
@@ -8094,16 +8291,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 350,
-      "rideSprint": null
+      "rideSprint": 550
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Power Crystal",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 2685
   },
   {
     "id": "132.0",
@@ -8136,16 +8334,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 720,
-      "rideSprint": null
+      "rideSprint": 900
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Dragon Hunter",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1987
   },
   {
     "id": "132.1",
@@ -8178,16 +8377,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 720,
-      "rideSprint": null
+      "rideSprint": 900
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Explosive Strength",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 2484
   },
   {
     "id": "133.0",
@@ -8220,16 +8420,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 400,
-      "rideSprint": null
+      "rideSprint": 600
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Invisible Eye",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 927
   },
   {
     "id": "134.0",
@@ -8262,16 +8463,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 600,
-      "rideSprint": null
+      "rideSprint": 1050
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Guardian of the Snowy Mountain",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 2591
   },
   {
     "id": "134.1",
@@ -8304,16 +8506,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 600,
-      "rideSprint": null
+      "rideSprint": 1050
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Guardian of the South",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 2743
   },
   {
     "id": "135.0",
@@ -8348,16 +8551,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 800,
-      "rideSprint": null
+      "rideSprint": 1000
     },
     "nocturnal": true,
     "partnerSkill": {
-      "name": null,
+      "name": "Grave Robber",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 2041
   },
   {
     "id": "136.0",
@@ -8390,16 +8594,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 600,
-      "rideSprint": null
+      "rideSprint": 750
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Entangling Tongue",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1875
   },
   {
     "id": "137.0",
@@ -8430,16 +8635,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 800,
-      "rideSprint": null
+      "rideSprint": 1200
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Magma Kaiser",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 3470
   },
   {
     "id": "137.1",
@@ -8471,16 +8677,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 800,
-      "rideSprint": null
+      "rideSprint": 1200
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Dragon Kaiser",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 3651
   },
   {
     "id": "138.0",
@@ -8515,16 +8722,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 600,
-      "rideSprint": null
+      "rideSprint": 800
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Forest Laser",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 3113
   },
   {
     "id": "138.1",
@@ -8559,16 +8767,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 600,
-      "rideSprint": null
+      "rideSprint": 800
     },
     "nocturnal": true,
     "partnerSkill": {
-      "name": null,
+      "name": "Corruption Laser",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 3234
   },
   {
     "id": "139.0",
@@ -8600,16 +8809,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 800,
-      "rideSprint": null
+      "rideSprint": 1000
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Guardian of the Desert",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 3217
   },
   {
     "id": "140.0",
@@ -8641,16 +8851,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 600,
-      "rideSprint": null
+      "rideSprint": 900
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Desert Empress",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 2638
   },
   {
     "id": "141.0",
@@ -8683,16 +8894,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 720,
-      "rideSprint": null
+      "rideSprint": 50
     },
     "nocturnal": true,
     "partnerSkill": {
-      "name": null,
+      "name": "Phantom Venom",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1649
   },
   {
     "id": "141.1",
@@ -8708,7 +8920,7 @@
       "productmedicine": 2
     },
     "elements": [
-      "Electricity",
+      "Electric",
       "Ground"
     ],
     "stats": {
@@ -8726,16 +8938,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 720,
-      "rideSprint": null
+      "rideSprint": 50
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Scorpion Longwave",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1773
   },
   {
     "id": "142.0",
@@ -8765,16 +8978,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 360,
-      "rideSprint": null
+      "rideSprint": 540
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Masonry Archelon",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 2436
   },
   {
     "id": "142.1",
@@ -8804,16 +9018,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 360,
-      "rideSprint": null
+      "rideSprint": 540
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Stone-Chaser Archelon",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 2945
   },
   {
     "id": "143.0",
@@ -8846,16 +9061,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 600,
-      "rideSprint": null
+      "rideSprint": 900
     },
     "nocturnal": true,
     "partnerSkill": {
-      "name": null,
+      "name": "Shot-Nyan Mode",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 2182
   },
   {
     "id": "144.0",
@@ -8886,16 +9102,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 2000,
-      "rideSprint": null
+      "rideSprint": 450
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Master of Unlocking",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 3500
   },
   {
     "id": "145.0",
@@ -8926,16 +9143,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 550,
-      "rideSprint": null
+      "rideSprint": 700
     },
     "nocturnal": true,
     "partnerSkill": {
-      "name": null,
+      "name": "Unknown Invader",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1543
   },
   {
     "id": "146.0",
@@ -8965,16 +9183,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 790,
-      "rideSprint": null
+      "rideSprint": 1200
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Unknown Intruder",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 2845
   },
   {
     "id": "147.0",
@@ -9009,16 +9228,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 550,
-      "rideSprint": null
+      "rideSprint": 700
     },
     "nocturnal": true,
     "partnerSkill": {
-      "name": null,
+      "name": "Prayer for Abundant Harvest",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 2063
   },
   {
     "id": "148.0",
@@ -9049,16 +9269,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 380,
-      "rideSprint": null
+      "rideSprint": 500
     },
     "nocturnal": true,
     "partnerSkill": {
-      "name": null,
+      "name": "Soul Collector",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 2594
   },
   {
     "id": "148.1",
@@ -9090,16 +9311,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 380,
-      "rideSprint": null
+      "rideSprint": 500
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Soul Binder",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 2134
   },
   {
     "id": "149.0",
@@ -9129,16 +9351,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 550,
-      "rideSprint": null
+      "rideSprint": 700
     },
     "nocturnal": true,
     "partnerSkill": {
-      "name": null,
+      "name": "Dig, Smokie! Dig!",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1842
   },
   {
     "id": "149.1",
@@ -9170,16 +9393,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 550,
-      "rideSprint": null
+      "rideSprint": 700
     },
     "nocturnal": true,
     "partnerSkill": {
-      "name": null,
+      "name": "Cryo Instincts",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1628
   },
   {
     "id": "150.0",
@@ -9209,16 +9433,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 400,
-      "rideSprint": null
+      "rideSprint": 520
     },
     "nocturnal": true,
     "partnerSkill": {
-      "name": null,
+      "name": "Masquerade Dance",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 2431
   },
   {
     "id": "151.0",
@@ -9250,16 +9475,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 600,
-      "rideSprint": null
+      "rideSprint": 750
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Chilled Whale Cruiser",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 2685
   },
   {
     "id": "151.1",
@@ -9291,16 +9517,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 600,
-      "rideSprint": null
+      "rideSprint": 750
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Cozy Whale Cruiser",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 3097
   },
   {
     "id": "152.0",
@@ -9334,16 +9561,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 500,
-      "rideSprint": null
+      "rideSprint": 700
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Grassland Gymnast",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1947
   },
   {
     "id": "153.0",
@@ -9376,16 +9604,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 550,
-      "rideSprint": null
+      "rideSprint": 660
     },
     "nocturnal": true,
     "partnerSkill": {
-      "name": null,
+      "name": "Blade of Uncontrolled Passion",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 2484
   },
   {
     "id": "154.0",
@@ -9415,16 +9644,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 840,
-      "rideSprint": null
+      "rideSprint": 1260
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Sandstorm's Blessing",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 2622
   },
   {
     "id": "155.0",
@@ -9458,16 +9688,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 300,
-      "rideSprint": null
+      "rideSprint": 550
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Homeward Prayer",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1683
   },
   {
     "id": "156.0",
@@ -9498,16 +9729,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 600,
-      "rideSprint": null
+      "rideSprint": 810
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Yokozuna's Presence",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1812
   },
   {
     "id": "157.0",
@@ -9538,16 +9770,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 800,
-      "rideSprint": null
+      "rideSprint": 1200
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Blessing of Purification",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 2911
   },
   {
     "id": "157.1",
@@ -9578,16 +9811,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 800,
-      "rideSprint": null
+      "rideSprint": 1200
     },
     "nocturnal": true,
     "partnerSkill": {
-      "name": null,
+      "name": "Blessing of Chaos",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 3528
   },
   {
     "id": "158.0",
@@ -9619,16 +9853,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 700,
-      "rideSprint": null
+      "rideSprint": 1100
     },
     "nocturnal": true,
     "partnerSkill": {
-      "name": null,
+      "name": "Black Ankylosaur",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 3794
   },
   {
     "id": "159.0",
@@ -9660,16 +9895,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 550,
-      "rideSprint": null
+      "rideSprint": 700
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Steel Guardian Mode",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 3767
   },
   {
     "id": "159.1",
@@ -9701,16 +9937,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 550,
-      "rideSprint": null
+      "rideSprint": 700
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Iron Guardian Mode",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 3895
   },
   {
     "id": "160.0",
@@ -9740,16 +9977,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 700,
-      "rideSprint": null
+      "rideSprint": 1050
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Aegis Shield",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 3710
   },
   {
     "id": "161.0",
@@ -9762,7 +10000,7 @@
       "generateelectricity": 5
     },
     "elements": [
-      "Electricity"
+      "Electric"
     ],
     "stats": {
       "hp": 130,
@@ -9779,16 +10017,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 900,
-      "rideSprint": null
+      "rideSprint": 1260
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Plasma Dash",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 3079
   },
   {
     "id": "162.0",
@@ -9818,16 +10057,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 700,
-      "rideSprint": null
+      "rideSprint": 900
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Big Stretch",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1684
   },
   {
     "id": "163.0",
@@ -9840,7 +10080,7 @@
       "generateelectricity": 4
     },
     "elements": [
-      "Electricity"
+      "Electric"
     ],
     "stats": {
       "hp": 65,
@@ -9857,16 +10097,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 360,
-      "rideSprint": null
+      "rideSprint": 945
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Charging Shell",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1523
   },
   {
     "id": "163.1",
@@ -9879,7 +10120,7 @@
       "generateelectricity": 4
     },
     "elements": [
-      "Electricity",
+      "Electric",
       "Ground"
     ],
     "stats": {
@@ -9897,16 +10138,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 360,
-      "rideSprint": null
+      "rideSprint": 945
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Grounding Shell",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1623
   },
   {
     "id": "164.0",
@@ -9937,16 +10179,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 300,
-      "rideSprint": null
+      "rideSprint": 450
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Fuzzy Fairy",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1610
   },
   {
     "id": "165.0",
@@ -9979,16 +10222,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 480,
-      "rideSprint": null
+      "rideSprint": 720
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Friend of Earth",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 777
   },
   {
     "id": "166.0",
@@ -10019,16 +10263,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 400,
-      "rideSprint": null
+      "rideSprint": 550
     },
     "nocturnal": true,
     "partnerSkill": {
-      "name": null,
+      "name": "Void-Dweller",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1656
   },
   {
     "id": "167.0",
@@ -10041,7 +10286,7 @@
       "generateelectricity": 3
     },
     "elements": [
-      "Electricity"
+      "Electric"
     ],
     "stats": {
       "hp": 80,
@@ -10058,16 +10303,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 300,
-      "rideSprint": null
+      "rideSprint": 390
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Chillswitch",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1611
   },
   {
     "id": "168.0",
@@ -10099,16 +10345,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 400,
-      "rideSprint": null
+      "rideSprint": 600
     },
     "nocturnal": true,
     "partnerSkill": {
-      "name": null,
+      "name": "Grinning Death",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1625
   },
   {
     "id": "169.0",
@@ -10138,16 +10385,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 500,
-      "rideSprint": null
+      "rideSprint": 900
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Charming Fish",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1636
   },
   {
     "id": "169.1",
@@ -10162,7 +10410,7 @@
     },
     "elements": [
       "Water",
-      "Electricity"
+      "Electric"
     ],
     "stats": {
       "hp": 90,
@@ -10179,16 +10427,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 500,
-      "rideSprint": null
+      "rideSprint": 900
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Shocking Fish",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1843
   },
   {
     "id": "170.0",
@@ -10219,16 +10468,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 600,
-      "rideSprint": null
+      "rideSprint": 700
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Long-Sleeved Hurray",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 2464
   },
   {
     "id": "171.0",
@@ -10259,16 +10509,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 1400,
-      "rideSprint": null
+      "rideSprint": 2750
     },
     "nocturnal": true,
     "partnerSkill": {
-      "name": null,
+      "name": "Liberated Pterosaur",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 3323
   },
   {
     "id": "171.1",
@@ -10300,16 +10551,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 1400,
-      "rideSprint": null
+      "rideSprint": 2750
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Resentful Pterosaur",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 3521
   },
   {
     "id": "172.0",
@@ -10324,7 +10576,7 @@
       "transport": 3
     },
     "elements": [
-      "Electricity"
+      "Electric"
     ],
     "stats": {
       "hp": 75,
@@ -10341,16 +10593,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 700,
-      "rideSprint": null
+      "rideSprint": 1000
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Electro-Massage Incubation",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1963
   },
   {
     "id": "173.0",
@@ -10381,16 +10634,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 600,
-      "rideSprint": null
+      "rideSprint": 600
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Flower Dance",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1844
   },
   {
     "id": "174.0",
@@ -10422,16 +10676,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 500,
-      "rideSprint": null
+      "rideSprint": 600
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Burning Future",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 3217
   },
   {
     "id": "175.0",
@@ -10463,16 +10718,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 700,
-      "rideSprint": null
+      "rideSprint": 1500
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Glorious Mist",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 3884
   },
   {
     "id": "176.0",
@@ -10505,16 +10761,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 500,
-      "rideSprint": null
+      "rideSprint": 750
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Trick-Loving Fluffle",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 3191
   },
   {
     "id": "177.0",
@@ -10545,16 +10802,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 950,
-      "rideSprint": null
+      "rideSprint": 1350
     },
     "nocturnal": true,
     "partnerSkill": {
-      "name": null,
+      "name": "Dark-Nester",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 2263
   },
   {
     "id": "178.0",
@@ -10587,16 +10845,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 450,
-      "rideSprint": null
+      "rideSprint": 600
     },
     "nocturnal": true,
     "partnerSkill": {
-      "name": null,
+      "name": "Snake's Sagacity",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 2680
   },
   {
     "id": "179.0",
@@ -10629,16 +10888,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 300,
-      "rideSprint": null
+      "rideSprint": 600
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Charming Spore",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 3087
   },
   {
     "id": "180.0",
@@ -10671,16 +10931,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 300,
-      "rideSprint": null
+      "rideSprint": 450
     },
     "nocturnal": true,
     "partnerSkill": {
-      "name": null,
+      "name": "Lantern Enchantment",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 2309
   },
   {
     "id": "181.0",
@@ -10712,16 +10973,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 450,
-      "rideSprint": null
+      "rideSprint": 600
     },
     "nocturnal": true,
     "partnerSkill": {
-      "name": null,
+      "name": "Hidden Dark Energy",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 2421
   },
   {
     "id": "182.0",
@@ -10754,16 +11016,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 450,
-      "rideSprint": null
+      "rideSprint": 600
     },
     "nocturnal": true,
     "partnerSkill": {
-      "name": null,
+      "name": "Untainted Maiden",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 3867
   },
   {
     "id": "183.0",
@@ -10796,16 +11059,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 400,
-      "rideSprint": null
+      "rideSprint": 500
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Stage Combat",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 4028
   },
   {
     "id": "184.0",
@@ -10836,16 +11100,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 850,
-      "rideSprint": null
+      "rideSprint": 1100
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Indestructible Fortress",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 4116
   },
   {
     "id": "185.0",
@@ -10861,7 +11126,7 @@
       "transport": 5
     },
     "elements": [
-      "Electricity"
+      "Electric"
     ],
     "stats": {
       "hp": 120,
@@ -10878,16 +11143,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 600,
-      "rideSprint": null
+      "rideSprint": 1000
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Yellow Tank",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 3524
   },
   {
     "id": "186.0",
@@ -10920,16 +11186,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 450,
-      "rideSprint": null
+      "rideSprint": 550
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Harvest Goddess",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 3427
   },
   {
     "id": "186.1",
@@ -10961,16 +11228,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 450,
-      "rideSprint": null
+      "rideSprint": 550
     },
     "nocturnal": true,
     "partnerSkill": {
-      "name": null,
+      "name": "Goddess of the Tranquil Light",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 3540
   },
   {
     "id": "187.0",
@@ -10986,7 +11254,7 @@
     },
     "elements": [
       "Dragon",
-      "Electricity"
+      "Electric"
     ],
     "stats": {
       "hp": 120,
@@ -11003,16 +11271,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 900,
-      "rideSprint": null
+      "rideSprint": 1200
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Ferocious Thunder Dragon",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 4136
   },
   {
     "id": "188.0",
@@ -11043,16 +11312,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 1000,
-      "rideSprint": null
+      "rideSprint": 1400
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Scorching Predator",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 2685
   },
   {
     "id": "188.1",
@@ -11083,16 +11353,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 1000,
-      "rideSprint": null
+      "rideSprint": 1400
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Tidal Predator",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 2797
   },
   {
     "id": "189.0",
@@ -11121,17 +11392,18 @@
     "movement": {
       "slowWalk": null,
       "walk": null,
-      "run": 850,
-      "rideSprint": null
+      "run": 1100,
+      "rideSprint": 1600
     },
     "nocturnal": true,
     "partnerSkill": {
-      "name": null,
+      "name": "Modified DNA",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 3245
   },
   {
     "id": "190.0",
@@ -11164,16 +11436,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 1000,
-      "rideSprint": null
+      "rideSprint": 1600
     },
     "nocturnal": true,
     "partnerSkill": {
-      "name": null,
+      "name": "Celestial Darkness",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 4095
   },
   {
     "id": "191.0",
@@ -11205,16 +11478,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 750,
-      "rideSprint": null
+      "rideSprint": 1100
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Blizzard Crash",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 4425
   },
   {
     "id": "192.0",
@@ -11246,16 +11520,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 1400,
-      "rideSprint": null
+      "rideSprint": 2800
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Azure Sovereign",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 4531
   },
   {
     "id": "193.0",
@@ -11289,16 +11564,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 500,
-      "rideSprint": null
+      "rideSprint": 750
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Spore Stalwart",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 4436
   },
   {
     "id": "194.0",
@@ -11333,16 +11609,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 1000,
-      "rideSprint": null
+      "rideSprint": 1000
     },
     "nocturnal": true,
     "partnerSkill": {
-      "name": null,
+      "name": "Mist Stalwart",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 4442
   },
   {
     "id": "195.0",
@@ -11374,16 +11651,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 600,
-      "rideSprint": null
+      "rideSprint": 800
     },
     "nocturnal": true,
     "partnerSkill": {
-      "name": null,
+      "name": "Nightmare Iris",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 3667
   },
   {
     "id": "195.1",
@@ -11415,16 +11693,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 600,
-      "rideSprint": null
+      "rideSprint": 800
     },
     "nocturnal": true,
     "partnerSkill": {
-      "name": null,
+      "name": "Nightmare Stare",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 3997
   },
   {
     "id": "196.0",
@@ -11454,17 +11733,18 @@
     "movement": {
       "slowWalk": null,
       "walk": null,
-      "run": 550,
-      "rideSprint": null
+      "run": 1700,
+      "rideSprint": 2700
     },
     "nocturnal": true,
     "partnerSkill": {
-      "name": null,
+      "name": "Meteor Wings",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 3622
   },
   {
     "id": "197.0",
@@ -11495,16 +11775,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 900,
-      "rideSprint": null
+      "rideSprint": 1900
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Sacred Barrier",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 4256
   },
   {
     "id": "198.0",
@@ -11535,16 +11816,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 800,
-      "rideSprint": null
+      "rideSprint": 1800
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Holy Knight of the Firmament",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 4339
   },
   {
     "id": "199.0",
@@ -11575,16 +11857,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 1300,
-      "rideSprint": null
+      "rideSprint": 1900
     },
     "nocturnal": true,
     "partnerSkill": {
-      "name": null,
+      "name": "Dark Knight of the Abyss",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 4339
   },
   {
     "id": "200.0",
@@ -11614,16 +11897,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 1200,
-      "rideSprint": null
+      "rideSprint": 1800
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Icy Steed",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 4695
   },
   {
     "id": "200.1",
@@ -11653,16 +11937,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 1200,
-      "rideSprint": null
+      "rideSprint": 1800
     },
     "nocturnal": true,
     "partnerSkill": {
-      "name": null,
+      "name": "Black Steed",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 5000
   },
   {
     "id": "201.0",
@@ -11692,16 +11977,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 750,
-      "rideSprint": null
+      "rideSprint": 1120
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Sentinel of the Great Sea",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 4277
   },
   {
     "id": "202.0",
@@ -11731,16 +12017,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 1700,
-      "rideSprint": null
+      "rideSprint": 3300
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Aerial Missile",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 4452
   },
   {
     "id": "203.0",
@@ -11768,16 +12055,17 @@
       "slowWalk": null,
       "walk": null,
       "run": 3000,
-      "rideSprint": null
+      "rideSprint": 3000
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "Resonant Guardian",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 4913
   },
   {
     "id": "204.0",
@@ -11809,12 +12097,13 @@
     },
     "nocturnal": false,
     "partnerSkill": {
-      "name": null,
+      "name": "-",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 10000
   },
   {
     "id": "M1",
@@ -11826,32 +12115,35 @@
     "work": {
       "transport": 1
     },
-    "elements": [],
+    "elements": [
+      "Grass"
+    ],
     "stats": {
-      "hp": null,
+      "hp": 65,
       "meleeAttack": null,
       "rangedAttack": null,
-      "defense": null,
+      "defense": 80,
       "support": null,
       "craftSpeed": null,
-      "stamina": null
+      "stamina": 100
     },
-    "rarity": null,
+    "rarity": 3,
     "foodConsumption": null,
     "movement": {
       "slowWalk": null,
       "walk": null,
-      "run": null,
-      "rideSprint": null
+      "run": 300,
+      "rideSprint": 450
     },
     "nocturnal": null,
     "partnerSkill": {
-      "name": null,
+      "name": "Slime Body",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 500
   },
   {
     "id": "M2",
@@ -11863,32 +12155,35 @@
     "work": {
       "transport": 1
     },
-    "elements": [],
+    "elements": [
+      "Water"
+    ],
     "stats": {
-      "hp": null,
+      "hp": 70,
       "meleeAttack": null,
       "rangedAttack": null,
-      "defense": null,
+      "defense": 80,
       "support": null,
       "craftSpeed": null,
-      "stamina": null
+      "stamina": 100
     },
-    "rarity": null,
+    "rarity": 3,
     "foodConsumption": null,
     "movement": {
       "slowWalk": null,
       "walk": null,
-      "run": null,
-      "rideSprint": null
+      "run": 300,
+      "rideSprint": 450
     },
     "nocturnal": null,
     "partnerSkill": {
-      "name": null,
+      "name": "Slime Body",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 600
   },
   {
     "id": "M3",
@@ -11900,32 +12195,35 @@
     "work": {
       "transport": 1
     },
-    "elements": [],
+    "elements": [
+      "Fire"
+    ],
     "stats": {
-      "hp": null,
+      "hp": 70,
       "meleeAttack": null,
       "rangedAttack": null,
-      "defense": null,
+      "defense": 85,
       "support": null,
       "craftSpeed": null,
-      "stamina": null
+      "stamina": 100
     },
-    "rarity": null,
+    "rarity": 3,
     "foodConsumption": null,
     "movement": {
       "slowWalk": null,
       "walk": null,
-      "run": null,
-      "rideSprint": null
+      "run": 300,
+      "rideSprint": 450
     },
     "nocturnal": null,
     "partnerSkill": {
-      "name": null,
+      "name": "Slime Body",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 700
   },
   {
     "id": "M4",
@@ -11937,32 +12235,35 @@
     "work": {
       "transport": 1
     },
-    "elements": [],
+    "elements": [
+      "Dark"
+    ],
     "stats": {
-      "hp": null,
+      "hp": 75,
       "meleeAttack": null,
       "rangedAttack": null,
-      "defense": null,
+      "defense": 80,
       "support": null,
       "craftSpeed": null,
-      "stamina": null
+      "stamina": 100
     },
-    "rarity": null,
+    "rarity": 3,
     "foodConsumption": null,
     "movement": {
       "slowWalk": null,
       "walk": null,
-      "run": null,
-      "rideSprint": null
+      "run": 300,
+      "rideSprint": 450
     },
     "nocturnal": null,
     "partnerSkill": {
-      "name": null,
+      "name": "Slime Body",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 800
   },
   {
     "id": "M5",
@@ -11974,32 +12275,35 @@
     "work": {
       "transport": 1
     },
-    "elements": [],
+    "elements": [
+      "Neutral"
+    ],
     "stats": {
-      "hp": null,
+      "hp": 80,
       "meleeAttack": null,
       "rangedAttack": null,
-      "defense": null,
+      "defense": 85,
       "support": null,
       "craftSpeed": null,
-      "stamina": null
+      "stamina": 100
     },
-    "rarity": null,
+    "rarity": 4,
     "foodConsumption": null,
     "movement": {
       "slowWalk": null,
       "walk": null,
-      "run": null,
-      "rideSprint": null
+      "run": 300,
+      "rideSprint": 450
     },
     "nocturnal": null,
     "partnerSkill": {
-      "name": null,
+      "name": "Slime Body",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 900
   },
   {
     "id": "M6",
@@ -12011,32 +12315,35 @@
     "work": {
       "transport": 1
     },
-    "elements": [],
+    "elements": [
+      "Neutral"
+    ],
     "stats": {
-      "hp": null,
+      "hp": 105,
       "meleeAttack": null,
       "rangedAttack": null,
-      "defense": null,
+      "defense": 105,
       "support": null,
       "craftSpeed": null,
-      "stamina": null
+      "stamina": 100
     },
-    "rarity": null,
+    "rarity": 4,
     "foodConsumption": null,
     "movement": {
       "slowWalk": null,
       "walk": null,
-      "run": null,
-      "rideSprint": null
+      "run": 300,
+      "rideSprint": 450
     },
     "nocturnal": null,
     "partnerSkill": {
-      "name": null,
+      "name": "Slime Body",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1500
   },
   {
     "id": "M7",
@@ -12048,32 +12355,35 @@
     "work": {
       "collection": 1
     },
-    "elements": [],
+    "elements": [
+      "Neutral"
+    ],
     "stats": {
-      "hp": null,
+      "hp": 80,
       "meleeAttack": null,
       "rangedAttack": null,
-      "defense": null,
+      "defense": 95,
       "support": null,
       "craftSpeed": null,
-      "stamina": null
+      "stamina": 100
     },
-    "rarity": null,
+    "rarity": 4,
     "foodConsumption": null,
     "movement": {
       "slowWalk": null,
       "walk": null,
-      "run": null,
-      "rideSprint": null
+      "run": 300,
+      "rideSprint": 450
     },
     "nocturnal": null,
     "partnerSkill": {
-      "name": null,
+      "name": "Bat Backup",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1250
   },
   {
     "id": "M8",
@@ -12085,32 +12395,35 @@
     "work": {
       "collection": 1
     },
-    "elements": [],
+    "elements": [
+      "Neutral"
+    ],
     "stats": {
-      "hp": null,
+      "hp": 65,
       "meleeAttack": null,
       "rangedAttack": null,
-      "defense": null,
+      "defense": 80,
       "support": null,
       "craftSpeed": null,
-      "stamina": null
+      "stamina": 100
     },
-    "rarity": null,
+    "rarity": 3,
     "foodConsumption": null,
     "movement": {
       "slowWalk": null,
       "walk": null,
-      "run": null,
-      "rideSprint": null
+      "run": 300,
+      "rideSprint": 450
     },
     "nocturnal": null,
     "partnerSkill": {
-      "name": null,
+      "name": "Bat Backup",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1000
   },
   {
     "id": "M9",
@@ -12122,32 +12435,35 @@
     "work": {
       "transport": 1
     },
-    "elements": [],
+    "elements": [
+      "Dark"
+    ],
     "stats": {
-      "hp": null,
+      "hp": 105,
       "meleeAttack": null,
       "rangedAttack": null,
-      "defense": null,
+      "defense": 95,
       "support": null,
       "craftSpeed": null,
-      "stamina": null
+      "stamina": 100
     },
-    "rarity": null,
+    "rarity": 3,
     "foodConsumption": null,
     "movement": {
       "slowWalk": null,
       "walk": null,
-      "run": null,
-      "rideSprint": null
+      "run": 300,
+      "rideSprint": 450
     },
     "nocturnal": null,
     "partnerSkill": {
-      "name": null,
+      "name": "Demonic Sight",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 750
   },
   {
     "id": "M10",
@@ -12159,32 +12475,35 @@
     "work": {
       "deforest": 1
     },
-    "elements": [],
+    "elements": [
+      "Neutral"
+    ],
     "stats": {
-      "hp": null,
+      "hp": 95,
       "meleeAttack": null,
       "rangedAttack": null,
-      "defense": null,
+      "defense": 90,
       "support": null,
       "craftSpeed": null,
-      "stamina": null
+      "stamina": 100
     },
-    "rarity": null,
+    "rarity": 3,
     "foodConsumption": null,
     "movement": {
       "slowWalk": null,
       "walk": null,
-      "run": null,
-      "rideSprint": null
+      "run": 600,
+      "rideSprint": 900
     },
     "nocturnal": null,
     "partnerSkill": {
-      "name": null,
+      "name": "Enchant",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 1250
   },
   {
     "id": "M11",
@@ -12196,31 +12515,34 @@
     "work": {
       "transport": 4
     },
-    "elements": [],
+    "elements": [
+      "Dark"
+    ],
     "stats": {
-      "hp": null,
+      "hp": 110,
       "meleeAttack": null,
       "rangedAttack": null,
-      "defense": null,
+      "defense": 95,
       "support": null,
       "craftSpeed": null,
-      "stamina": null
+      "stamina": 100
     },
-    "rarity": null,
+    "rarity": 6,
     "foodConsumption": null,
     "movement": {
       "slowWalk": null,
       "walk": null,
-      "run": null,
-      "rideSprint": null
+      "run": 900,
+      "rideSprint": 1200
     },
     "nocturnal": null,
     "partnerSkill": {
-      "name": null,
+      "name": "Mad Eye Lunge",
       "description": null
     },
     "activeSkills": null,
     "drops": null,
-    "ranchProduct": null
+    "ranchProduct": null,
+    "price": 3000
   }
 ]

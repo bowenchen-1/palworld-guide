@@ -270,14 +270,19 @@ test("Pal data schema and repeatable import safeguards cover the 1.0 snapshot", 
   for (const pal of data) {
     assert.ok("stats" in pal && "movement" in pal && "partnerSkill" in pal && "activeSkills" in pal && "drops" in pal && "ranchProduct" in pal);
   }
-  assert.equal(data.filter((pal) => pal.stats.hp !== null).length, 289);
-  assert.equal(data.filter((pal) => pal.stats.stamina !== null).length, 289);
-  assert.equal(data.filter((pal) => pal.elements.length).length, 289);
+  assert.equal(data.filter((pal) => pal.stats.hp !== null).length, 300);
+  assert.equal(data.filter((pal) => pal.stats.stamina !== null).length, 300);
+  assert.equal(data.filter((pal) => pal.elements.length).length, 300);
+  assert.equal(data.filter((pal) => pal.price !== null).length, 299);
+  assert.equal(data.filter((pal) => pal.movement.rideSprint !== null).length, 298);
+  assert.equal(data.filter((pal) => pal.partnerSkill.name !== null).length, 299);
+  assert.equal(data.find((pal) => pal.name === "Gumoss (Special)")?.price, null);
   assert.match(type, /foodConsumption: number \| null/);
+  assert.match(type, /price: number \| null/);
   assert.match(filters, /parsePaldexFilters/);
   assert.match(filters, /filterPals/);
   assert.match(filters, /sortPals/);
-  assert.match(importer, /atlas-24181105/);
+  assert.match(importer, /paldb-1\.0-20260715/);
   assert.match(importer, /work-suitability conflict/);
   assert.match(validator, /duplicate Pal ids/);
   assert.match(validator, /missing image/);

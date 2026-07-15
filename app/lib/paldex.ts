@@ -2,13 +2,13 @@ import { PalData, WorkKey } from "./game-data";
 
 export type MatchMode = "all" | "any";
 export type PaldexView = "overview" | "work" | "stats";
-export type PaldexSort = "number" | "name" | "hp" | "ranged" | "defense" | "stamina" | "rarity" | "food" | "speed" | "work" | "power-low" | "power-high";
+export type PaldexSort = "number" | "name" | "hp" | "ranged" | "defense" | "stamina" | "price" | "ride-speed" | "rarity" | "food" | "speed" | "work" | "power-low" | "power-high";
 export type PaldexFilters = { q: string; elements: string[]; elementMode: MatchMode; work: WorkKey[]; workMode: MatchMode; workLevel: number; types: PalData["kind"][]; sort: PaldexSort; view: PaldexView };
 
 export const paldexDefaults: PaldexFilters = { q: "", elements: [], elementMode: "any", work: [], workMode: "any", workLevel: 0, types: ["pal"], sort: "number", view: "overview" };
 const workKeys: WorkKey[] = ["emitflame", "watering", "seeding", "generateelectricity", "handcraft", "collection", "deforest", "mining", "productmedicine", "cool", "transport", "monsterfarm"];
 const validWork = new Set<WorkKey>(workKeys);
-const validSort = new Set<PaldexSort>(["number", "name", "hp", "ranged", "defense", "stamina", "rarity", "food", "speed", "work", "power-low", "power-high"]);
+const validSort = new Set<PaldexSort>(["number", "name", "hp", "ranged", "defense", "stamina", "price", "ride-speed", "rarity", "food", "speed", "work", "power-low", "power-high"]);
 const list = (value: string | null) => value?.split(",").filter(Boolean) ?? [];
 
 export function parsePaldexFilters(params: URLSearchParams): PaldexFilters {
@@ -49,7 +49,7 @@ export function filterPals(records: PalData[], filters: PaldexFilters) {
 }
 
 export function sortPals(records: PalData[], sort: PaldexSort) {
-  const field: Partial<Record<PaldexSort, (pal: PalData) => number>> = { hp: (pal) => numberOrEmpty(pal.stats.hp), ranged: (pal) => numberOrEmpty(pal.stats.rangedAttack), defense: (pal) => numberOrEmpty(pal.stats.defense), stamina: (pal) => numberOrEmpty(pal.stats.stamina), rarity: (pal) => numberOrEmpty(pal.rarity), food: (pal) => numberOrEmpty(pal.foodConsumption), speed: (pal) => numberOrEmpty(pal.movement.run), work: highestWorkLevel };
+  const field: Partial<Record<PaldexSort, (pal: PalData) => number>> = { hp: (pal) => numberOrEmpty(pal.stats.hp), ranged: (pal) => numberOrEmpty(pal.stats.rangedAttack), defense: (pal) => numberOrEmpty(pal.stats.defense), stamina: (pal) => numberOrEmpty(pal.stats.stamina), price: (pal) => numberOrEmpty(pal.price), "ride-speed": (pal) => numberOrEmpty(pal.movement.rideSprint), rarity: (pal) => numberOrEmpty(pal.rarity), food: (pal) => numberOrEmpty(pal.foodConsumption), speed: (pal) => numberOrEmpty(pal.movement.run), work: highestWorkLevel };
   return [...records].sort((a, b) => {
     if (sort === "name") return a.name.localeCompare(b.name) || numberValue(a) - numberValue(b);
     if (sort === "power-low") return a.power - b.power || numberValue(a) - numberValue(b);
