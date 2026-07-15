@@ -288,6 +288,13 @@ body::before {
 .tool-lab-section,
 .home-update-section,
 #popular { background: var(--terminal-canvas); }
+.home-paldex-feature { background:var(--terminal-canvas); color:var(--terminal-copy); }
+.home-paldex-feature .eyebrow { color:var(--terminal-mint); }
+.home-paldex-feature .text-muted { color:var(--terminal-muted); }
+.home-paldex-feature .grid.grid-cols-2>a { border-color:var(--terminal-border); background:var(--terminal-panel); box-shadow:0 18px 42px rgba(0,8,12,.16); }
+.home-paldex-feature .grid.grid-cols-2>a:hover { border-color:var(--terminal-mint); background:var(--terminal-panel-hover); }
+.home-paldex-feature .grid.grid-cols-2>a strong { color:var(--terminal-copy); }
+.home-paldex-feature .grid.grid-cols-2>a :is(span,small) { color:var(--terminal-muted); }
 .section-title,
 .tool-lab-section .section-title { color: var(--terminal-copy); font-weight: 700; letter-spacing: -.025em; text-transform: uppercase; }
 .section-heading-row>p,
