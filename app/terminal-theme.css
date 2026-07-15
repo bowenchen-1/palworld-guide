@@ -562,6 +562,23 @@ body::before {
 .paldex-pagination a:focus-visible { border-color: var(--terminal-mint); color: var(--terminal-mint); }
 .paldex-pagination a[aria-current="page"] { border-color: var(--terminal-mint); background: var(--terminal-mint); color: var(--terminal-canvas); }
 .compact-paldex-hero { background: linear-gradient(135deg,var(--terminal-panel),var(--terminal-canvas-2)); }
+.database-hero.compact-paldex-hero {
+  width: min(calc(100% - 64px), 1680px);
+  max-width: none;
+  min-height: 0;
+  margin: 18px auto 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  clip-path: none;
+  padding: 22px 0 10px;
+}
+.database-hero.compact-paldex-hero::before,
+.database-hero.compact-paldex-hero::after { display: none; }
+@media (max-width: 760px) {
+  .database-hero.compact-paldex-hero { width: auto; margin-inline: 20px; padding: 18px 0 8px; }
+}
 .paldex-control-bar,
 .paldex-table-wrap,
 .paldex-filter-sheet { border-color: var(--terminal-border); background: var(--terminal-panel); color: var(--terminal-copy); }
