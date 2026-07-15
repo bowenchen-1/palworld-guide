@@ -94,6 +94,10 @@ test("homepage hosts all six calculator modes with shared URL and local storage 
   assert.match(client, /saveAvailablePals/);
   assert.match(client, /history\.replaceState/);
   assert.match(client, /pal-picker-backdrop/);
+  assert.match(client, /home-breeding-equation/);
+  assert.match(client, /home-breeding-slot offspring/);
+  assert.match(client, /homeParentPick\("Parent A"/);
+  assert.match(client, /homeParentPick\("Parent B"/);
 });
 
 test("every current Pal entry has a local image used by the shared Pal component", async () => {
