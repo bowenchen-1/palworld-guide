@@ -34,7 +34,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Fluffy Shield",
-      "description": null
+      "description": null,
+      "iconId": "005",
+      "iconFile": "001_Lamball_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -77,7 +79,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Cat Helper",
-      "description": null
+      "description": null,
+      "iconId": "000",
+      "iconFile": "002_Cattiva_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -118,7 +122,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Egg Layer",
-      "description": null
+      "description": null,
+      "iconId": "015",
+      "iconFile": "003_Chikipi_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -162,7 +168,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Lifmunk Recoil",
-      "description": null
+      "description": null,
+      "iconId": "003",
+      "iconFile": "004_Lifmunk_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -204,7 +212,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Surfing Slam",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "005_Fuack_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -248,7 +258,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Fire Tackle",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "006_Fuack_Ignis_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -289,7 +301,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Dig Here!",
-      "description": null
+      "description": null,
+      "iconId": "015",
+      "iconFile": "007_Vixy_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -330,7 +344,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Zephyr Glider",
-      "description": null
+      "description": null,
+      "iconId": "008",
+      "iconFile": "008_Celaray_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -373,7 +389,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Jolt Glider",
-      "description": null
+      "description": null,
+      "iconId": "008",
+      "iconFile": "009_Celaray_Lux_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -414,7 +432,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Fluffy Wool",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "010_Cremis_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -457,7 +477,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Leap Stance",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "011_Croajiro_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -501,7 +523,9 @@
     "nocturnal": true,
     "partnerSkill": {
       "name": "Shadow Stance",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "012_Croajiro_Noct_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -544,7 +568,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Herbil Pulse",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "013_Herbil_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -584,7 +610,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Soothing Shower",
-      "description": null
+      "description": null,
+      "iconId": "004",
+      "iconFile": "014_Teafant_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -625,7 +653,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Logging Assistance",
-      "description": null
+      "description": null,
+      "iconId": "000",
+      "iconFile": "015_Gumoss_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -666,7 +696,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": null,
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "015_Gumoss_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -708,7 +740,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Best Boy",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "016_Pupperai_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -750,7 +784,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Happy Clover",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "017_Clovee_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -790,7 +826,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Jolt Bomb",
-      "description": null
+      "description": null,
+      "iconId": "002",
+      "iconFile": "018_Jolthog_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -830,7 +868,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Cold Bomb",
-      "description": null
+      "description": null,
+      "iconId": "002",
+      "iconFile": "019_Jolthog_Cryst_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -873,7 +913,9 @@
     "nocturnal": true,
     "partnerSkill": {
       "name": "Caffeine Inoculation",
-      "description": null
+      "description": null,
+      "iconId": "006",
+      "iconFile": "020_Depresso_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -917,7 +959,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Pengullet Launcher",
-      "description": null
+      "description": null,
+      "iconId": "002",
+      "iconFile": "021_Pengullet_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -961,7 +1005,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Pengullet Lux Launcher",
-      "description": null
+      "description": null,
+      "iconId": "002",
+      "iconFile": "022_Pengullet_Lux_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -1006,7 +1052,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Brave Sailor",
-      "description": null
+      "description": null,
+      "iconId": "014",
+      "iconFile": "023_Penking_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -1051,7 +1099,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Unyielding Storm Commander",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "024_Penking_Lux_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -1091,7 +1141,9 @@
     "nocturnal": true,
     "partnerSkill": {
       "name": "Dark Knowledge",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "025_Hoocrates_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -1131,7 +1183,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Pacapaca Wool",
-      "description": null
+      "description": null,
+      "iconId": "017",
+      "iconFile": "026_Melpaca_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -1171,7 +1225,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "King of Muscles",
-      "description": null
+      "description": null,
+      "iconId": "017",
+      "iconFile": "027_Kingpaca_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -1212,7 +1268,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Coldhearted King",
-      "description": null
+      "description": null,
+      "iconId": "017",
+      "iconFile": "028_Kingpaca_Cryst_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -1254,7 +1312,9 @@
     "nocturnal": true,
     "partnerSkill": {
       "name": "Dream Chaser",
-      "description": null
+      "description": null,
+      "iconId": "011",
+      "iconFile": "029_Daedream_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -1298,7 +1358,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Cheery Rifle",
-      "description": null
+      "description": null,
+      "iconId": "003",
+      "iconFile": "030_Tanzee_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -1341,7 +1403,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Chipper Chimp Gunfire",
-      "description": null
+      "description": null,
+      "iconId": "003",
+      "iconFile": "031_Tanzee_Ignis_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -1381,7 +1445,9 @@
     "nocturnal": true,
     "partnerSkill": {
       "name": "Kuudere",
-      "description": null
+      "description": null,
+      "iconId": "007",
+      "iconFile": "032_Nox_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -1424,7 +1490,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Magma Tears",
-      "description": null
+      "description": null,
+      "iconId": "015",
+      "iconFile": "033_Flambelle_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -1465,7 +1533,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Tiny Spark",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "034_Rooby_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -1506,7 +1576,9 @@
     "nocturnal": true,
     "partnerSkill": {
       "name": "Gold Digger",
-      "description": null
+      "description": null,
+      "iconId": "015",
+      "iconFile": "035_Mau_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -1547,7 +1619,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Icy Whispers",
-      "description": null
+      "description": null,
+      "iconId": "015",
+      "iconFile": "036_Mau_Cryst_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -1587,7 +1661,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Hard Head",
-      "description": null
+      "description": null,
+      "iconId": "017",
+      "iconFile": "037_Rushoar_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -1627,7 +1703,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Huggy Fire",
-      "description": null
+      "description": null,
+      "iconId": "002",
+      "iconFile": "038_Foxparks_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -1667,7 +1745,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Huggy Frost",
-      "description": null
+      "description": null,
+      "iconId": "002",
+      "iconFile": "039_Foxparks_Cryst_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -1710,7 +1790,9 @@
     "nocturnal": true,
     "partnerSkill": {
       "name": "Fried Squid",
-      "description": null
+      "description": null,
+      "iconId": "008",
+      "iconFile": "040_Killamari_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -1753,7 +1835,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Fried Killamari",
-      "description": null
+      "description": null,
+      "iconId": "008",
+      "iconFile": "041_Killamari_Primo_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -1795,7 +1879,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Mining Assistance",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "042_Fuddler_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -1835,7 +1921,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Guardian of the Forest",
-      "description": null
+      "description": null,
+      "iconId": "017",
+      "iconFile": "043_Eikthyrdeer_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -1875,7 +1963,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Guardian of the Golden Forest",
-      "description": null
+      "description": null,
+      "iconId": "017",
+      "iconFile": "044_Eikthyrdeer_Terra_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -1915,7 +2005,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Direhowl Rider",
-      "description": null
+      "description": null,
+      "iconId": "017",
+      "iconFile": "045_Direhowl_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -1956,7 +2048,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Berry Picker",
-      "description": null
+      "description": null,
+      "iconId": "000",
+      "iconFile": "046_Caprity_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -1997,7 +2091,9 @@
     "nocturnal": true,
     "partnerSkill": {
       "name": "Venom Picker",
-      "description": null
+      "description": null,
+      "iconId": "000",
+      "iconFile": "047_Caprity_Noct_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -2038,7 +2134,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Fluffy",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "048_Swee_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -2079,7 +2177,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "King of Fluff",
-      "description": null
+      "description": null,
+      "iconId": "017",
+      "iconFile": "049_Sweepa_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -2121,7 +2221,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Spikey Carrier",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "050_Turtacle_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -2164,7 +2266,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Shiny Hauler",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "051_Turtacle_Terra_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -2206,7 +2310,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Flying Trapeze",
-      "description": null
+      "description": null,
+      "iconId": "008",
+      "iconFile": "052_Hangyu_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -2249,7 +2355,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Winter Trapeze",
-      "description": null
+      "description": null,
+      "iconId": "008",
+      "iconFile": "053_Hangyu_Cryst_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -2289,7 +2397,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Candy Pop",
-      "description": null
+      "description": null,
+      "iconId": "015",
+      "iconFile": "054_Woolipop_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -2329,7 +2439,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Bitter Pop",
-      "description": null
+      "description": null,
+      "iconId": "015",
+      "iconFile": "055_Woolipop_Terra_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -2369,7 +2481,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Milk Maker",
-      "description": null
+      "description": null,
+      "iconId": "015",
+      "iconFile": "056_Mozzarina_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -2410,7 +2524,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Waterwing Dance",
-      "description": null
+      "description": null,
+      "iconId": "019",
+      "iconFile": "057_Azurobe_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -2451,7 +2567,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Icewing Dance",
-      "description": null
+      "description": null,
+      "iconId": "019",
+      "iconFile": "058_Azurobe_Cryst_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -2494,7 +2612,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Static Electricity",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "059_Sparkit_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -2535,7 +2655,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Aqua Spout",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "060_Kelpsea_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -2576,7 +2698,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Lava Spout",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "061_Kelpsea_Ignis_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -2618,7 +2742,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Happy-Go-Lucky Bunny",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "062_Ribbuny_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -2661,7 +2787,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Ground 'n' Pound",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "063_Ribbuny_Botan_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -2703,7 +2831,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Jelliette Drop",
-      "description": null
+      "description": null,
+      "iconId": "014",
+      "iconFile": "064_Jelliette_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -2747,7 +2877,9 @@
     "nocturnal": true,
     "partnerSkill": {
       "name": "Jellroy Drop",
-      "description": null
+      "description": null,
+      "iconId": "014",
+      "iconFile": "065_Jellroy_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -2789,7 +2921,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Magical Twin Powers",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "066_Amione_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -2832,7 +2966,9 @@
     "nocturnal": true,
     "partnerSkill": {
       "name": "Sticky Princess",
-      "description": null
+      "description": null,
+      "iconId": "000",
+      "iconFile": "067_Gloopie_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -2875,7 +3011,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Cephalo-Princess",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "068_Gloopie_Primo_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -2915,7 +3053,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Galeclaw Glider",
-      "description": null
+      "description": null,
+      "iconId": "008",
+      "iconFile": "069_Galeclaw_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -2958,7 +3098,9 @@
     "nocturnal": true,
     "partnerSkill": {
       "name": "Death-Cheating Feline",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "070_Wispaw_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -2998,7 +3140,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Travel Companion",
-      "description": null
+      "description": null,
+      "iconId": "018",
+      "iconFile": "071_Nitewing_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -3040,7 +3184,9 @@
     "nocturnal": true,
     "partnerSkill": {
       "name": "Ultrasonic Sensor",
-      "description": null
+      "description": null,
+      "iconId": "007",
+      "iconFile": "072_Tombat_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -3080,7 +3226,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Eggbomb Launcher",
-      "description": null
+      "description": null,
+      "iconId": "002",
+      "iconFile": "073_Tocotoco_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -3121,7 +3269,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Swift Deity",
-      "description": null
+      "description": null,
+      "iconId": "017",
+      "iconFile": "074_Univolt_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -3162,7 +3312,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Frigid Deity",
-      "description": null
+      "description": null,
+      "iconId": "017",
+      "iconFile": "075_Univolt_Cryst_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -3204,7 +3356,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Angry Shark",
-      "description": null
+      "description": null,
+      "iconId": "001",
+      "iconFile": "076_Gobfin_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -3246,7 +3400,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Angry Shark",
-      "description": null
+      "description": null,
+      "iconId": "001",
+      "iconFile": "077_Gobfin_Ignis_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -3286,7 +3442,9 @@
     "nocturnal": true,
     "partnerSkill": {
       "name": "Dark Gleam Strike",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "078_Loupmoon_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -3327,7 +3485,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Frozen Gleam Strike",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "079_Loupmoon_Cryst_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -3368,7 +3528,9 @@
     "nocturnal": true,
     "partnerSkill": {
       "name": "Eerie Nightstreaker",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "080_Cawgnito_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -3409,7 +3571,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Warm Body",
-      "description": null
+      "description": null,
+      "iconId": "017",
+      "iconFile": "081_Arsox_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -3450,7 +3614,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Fluffy Flutterer",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "082_Muffly_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -3494,7 +3660,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Princess Gaze",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "083_Bristla_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -3536,7 +3704,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Mysterious Scales",
-      "description": null
+      "description": null,
+      "iconId": "001",
+      "iconFile": "084_Cinnamoth_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -3577,7 +3747,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Crackle Booster",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "085_Puffolt_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -3617,7 +3789,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Amicable Holy Dragon",
-      "description": null
+      "description": null,
+      "iconId": "018",
+      "iconFile": "086_Elphidran_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -3659,7 +3833,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Amicable Water Dragon",
-      "description": null
+      "description": null,
+      "iconId": "018",
+      "iconFile": "087_Elphidran_Aqua_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -3701,7 +3877,9 @@
     "nocturnal": true,
     "partnerSkill": {
       "name": "Aerial Marauder",
-      "description": null
+      "description": null,
+      "iconId": "018",
+      "iconFile": "088_Vanwyrm_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -3743,7 +3921,9 @@
     "nocturnal": true,
     "partnerSkill": {
       "name": "Aerial Marauder",
-      "description": null
+      "description": null,
+      "iconId": "018",
+      "iconFile": "089_Vanwyrm_Cryst_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -3783,7 +3963,9 @@
     "nocturnal": true,
     "partnerSkill": {
       "name": "Life Steal",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "090_Felbat_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -3828,7 +4010,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Purification of Gaia",
-      "description": null
+      "description": null,
+      "iconId": "014",
+      "iconFile": "091_Vaelet_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -3874,7 +4058,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Worker Bee",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "092_Beegarde_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -3918,7 +4104,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Queen Bee Command",
-      "description": null
+      "description": null,
+      "iconId": "000",
+      "iconFile": "093_Elizabee_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -3961,7 +4149,9 @@
     "nocturnal": true,
     "partnerSkill": {
       "name": "Heart Drain",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "094_Lovander_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -4001,7 +4191,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Glaring Cat's Eye",
-      "description": null
+      "description": null,
+      "iconId": "017",
+      "iconFile": "095_Grintale_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -4044,7 +4236,9 @@
     "nocturnal": true,
     "partnerSkill": {
       "name": "Tarantriss’ Web",
-      "description": null
+      "description": null,
+      "iconId": "017",
+      "iconFile": "096_Tarantriss_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -4086,7 +4280,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Rider of the Snowy Mountain",
-      "description": null
+      "description": null,
+      "iconId": "017",
+      "iconFile": "097_Polapup_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -4128,7 +4324,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Snowy Mountain Slider",
-      "description": null
+      "description": null,
+      "iconId": "017",
+      "iconFile": "098_Polapup_Terra_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -4170,7 +4368,9 @@
     "nocturnal": true,
     "partnerSkill": {
       "name": "Too Cool to be Seen",
-      "description": null
+      "description": null,
+      "iconId": "000",
+      "iconFile": "099_Leezpunk_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -4213,7 +4413,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Too Cool to be Seen",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "100_Leezpunk_Ignis_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -4255,7 +4457,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Full-Power Gorilla Mode",
-      "description": null
+      "description": null,
+      "iconId": "006",
+      "iconFile": "101_Gorirat_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -4297,7 +4501,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Full-Power Gorilla Pound",
-      "description": null
+      "description": null,
+      "iconId": "000",
+      "iconFile": "102_Gorirat_Terra_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -4338,7 +4544,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Swift Swimmer",
-      "description": null
+      "description": null,
+      "iconId": "019",
+      "iconFile": "103_Surfent_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -4378,7 +4586,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Sand Swimmer",
-      "description": null
+      "description": null,
+      "iconId": "017",
+      "iconFile": "104_Surfent_Terra_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -4423,7 +4633,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Grounded Archer",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "105_Robinquill_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -4468,7 +4680,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Master Archer",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "106_Robinquill_Terra_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -4512,7 +4726,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Helper Bunny",
-      "description": null
+      "description": null,
+      "iconId": "011",
+      "iconFile": "107_Flopie_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -4554,7 +4770,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Lord Fox",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "108_Wixen_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -4597,7 +4815,9 @@
     "nocturnal": true,
     "partnerSkill": {
       "name": "Black Fox Lord",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "109_Wixen_Noct_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -4639,7 +4859,9 @@
     "nocturnal": true,
     "partnerSkill": {
       "name": "Mystical Black Magic",
-      "description": null
+      "description": null,
+      "iconId": "014",
+      "iconFile": "110_Katress_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -4683,7 +4905,9 @@
     "nocturnal": true,
     "partnerSkill": {
       "name": "Blazing Black Magic",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "111_Katress_Ignis_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -4723,7 +4947,9 @@
     "nocturnal": true,
     "partnerSkill": {
       "name": "Wings of Death",
-      "description": null
+      "description": null,
+      "iconId": "018",
+      "iconFile": "112_Helzephyr_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -4765,7 +4991,9 @@
     "nocturnal": true,
     "partnerSkill": {
       "name": "Wings of Thunder",
-      "description": null
+      "description": null,
+      "iconId": "018",
+      "iconFile": "113_Helzephyr_Lux_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -4809,7 +5037,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Mother Nature's Menace",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "114_Elgrove_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -4852,7 +5082,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Father Winter's Threat",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "115_Elgrove_Cryst_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -4894,7 +5126,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Antigravity",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "116_Lunaris_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -4934,7 +5168,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Wind and Clouds",
-      "description": null
+      "description": null,
+      "iconId": "017",
+      "iconFile": "117_Fenglope_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -4975,7 +5211,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Stormcloud",
-      "description": null
+      "description": null,
+      "iconId": "017",
+      "iconFile": "118_Fenglope_Lux_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -5017,7 +5255,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Fragrant Dragon",
-      "description": null
+      "description": null,
+      "iconId": "017",
+      "iconFile": "119_Dinossom_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -5059,7 +5299,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Thunder Dragon",
-      "description": null
+      "description": null,
+      "iconId": "017",
+      "iconFile": "120_Dinossom_Lux_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -5103,7 +5345,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Brandish Blade",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "121_Bushi_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -5148,7 +5392,9 @@
     "nocturnal": true,
     "partnerSkill": {
       "name": "Void Blade",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "122_Bushi_Noct_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -5191,7 +5437,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Icy Maw",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "123_Munchill_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -5234,7 +5482,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Gaia Crusher",
-      "description": null
+      "description": null,
+      "iconId": "017",
+      "iconFile": "124_Mammorest_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -5277,7 +5527,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Ice Crusher",
-      "description": null
+      "description": null,
+      "iconId": "017",
+      "iconFile": "125_Mammorest_Cryst_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -5318,7 +5570,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Water Gun",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "126_Finsider_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -5361,7 +5615,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Ember Chamber",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "127_Finsider_Ignis_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -5405,7 +5661,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Blessing of the Flower Spirit",
-      "description": null
+      "description": null,
+      "iconId": "004",
+      "iconFile": "128_Petallia_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -5450,7 +5708,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Passion of the Flower Spirit",
-      "description": null
+      "description": null,
+      "iconId": "004",
+      "iconFile": "129_Petallia_Ignis_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -5493,7 +5753,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Selfless Discipline",
-      "description": null
+      "description": null,
+      "iconId": "000",
+      "iconFile": "130_Leafan_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -5537,7 +5799,9 @@
     "nocturnal": true,
     "partnerSkill": {
       "name": "Flameclaw Hunter",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "131_Incineram_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -5579,7 +5843,9 @@
     "nocturnal": true,
     "partnerSkill": {
       "name": "Darkclaw Hunter",
-      "description": null
+      "description": null,
+      "iconId": "000",
+      "iconFile": "132_Incineram_Noct_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -5621,7 +5887,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Lady of Lightning",
-      "description": null
+      "description": null,
+      "iconId": "011",
+      "iconFile": "133_Dazzi_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -5665,7 +5933,9 @@
     "nocturnal": true,
     "partnerSkill": {
       "name": "Lady of Dark Lightning",
-      "description": null
+      "description": null,
+      "iconId": "011",
+      "iconFile": "134_Dazzi_Noct_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -5706,7 +5976,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Red Hare",
-      "description": null
+      "description": null,
+      "iconId": "017",
+      "iconFile": "135_Pyrin_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -5748,7 +6020,9 @@
     "nocturnal": true,
     "partnerSkill": {
       "name": "Black Hare",
-      "description": null
+      "description": null,
+      "iconId": "017",
+      "iconFile": "136_Pyrin_Noct_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -5790,7 +6064,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Hungry Missile",
-      "description": null
+      "description": null,
+      "iconId": "017",
+      "iconFile": "137_Relaxaurus_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -5832,7 +6108,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Missile Party",
-      "description": null
+      "description": null,
+      "iconId": "017",
+      "iconFile": "138_Relaxaurus_Lux_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -5873,7 +6151,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Aurora Guide",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "139_Foxcicle_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -5915,7 +6195,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Thunderous",
-      "description": null
+      "description": null,
+      "iconId": "018",
+      "iconFile": "140_Beakon_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -5957,7 +6239,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Coldsnap",
-      "description": null
+      "description": null,
+      "iconId": "018",
+      "iconFile": "141_Beakon_Cryst_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -5999,7 +6283,9 @@
     "nocturnal": true,
     "partnerSkill": {
       "name": "Master of Darkness",
-      "description": null
+      "description": null,
+      "iconId": "019",
+      "iconFile": "142_Ghangler_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -6042,7 +6328,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Abyssal Celebrity Chef",
-      "description": null
+      "description": null,
+      "iconId": "019",
+      "iconFile": "143_Ghangler_Ignis_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -6082,7 +6370,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Lightning Shepherd",
-      "description": null
+      "description": null,
+      "iconId": "017",
+      "iconFile": "144_Rayhound_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -6122,7 +6412,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Snow Shepherd",
-      "description": null
+      "description": null,
+      "iconId": "017",
+      "iconFile": "145_Rayhound_Cryst_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -6164,7 +6456,9 @@
     "nocturnal": true,
     "partnerSkill": {
       "name": "Steel Scorpion",
-      "description": null
+      "description": null,
+      "iconId": "005",
+      "iconFile": "146_Menasting_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -6205,7 +6499,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Golden Scorpion",
-      "description": null
+      "description": null,
+      "iconId": "005",
+      "iconFile": "147_Menasting_Terra_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -6247,7 +6543,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Hug Me Please",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "148_Needoll_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -6290,7 +6588,9 @@
     "nocturnal": true,
     "partnerSkill": {
       "name": "Hug You So Much",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "149_Needoll_Noct_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -6331,7 +6631,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Cool Body",
-      "description": null
+      "description": null,
+      "iconId": "017",
+      "iconFile": "150_Reindrix_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -6374,7 +6676,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Grenadier Panda",
-      "description": null
+      "description": null,
+      "iconId": "017",
+      "iconFile": "151_Mossanda_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -6417,7 +6721,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Grenadier Panda",
-      "description": null
+      "description": null,
+      "iconId": "017",
+      "iconFile": "152_Mossanda_Lux_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -6459,7 +6765,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Wriggling Weasel",
-      "description": null
+      "description": null,
+      "iconId": "017",
+      "iconFile": "153_Chillet_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -6501,7 +6809,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Sparkling Weasel",
-      "description": null
+      "description": null,
+      "iconId": "017",
+      "iconFile": "154_Chillet_Ignis_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -6542,7 +6852,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Flame Wing",
-      "description": null
+      "description": null,
+      "iconId": "018",
+      "iconFile": "155_Ragnahawk_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -6584,7 +6896,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Magma Overload",
-      "description": null
+      "description": null,
+      "iconId": "017",
+      "iconFile": "156_Moldron_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -6626,7 +6940,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Ice Overload",
-      "description": null
+      "description": null,
+      "iconId": "017",
+      "iconFile": "157_Moldron_Cryst_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -6668,7 +6984,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Samba Step",
-      "description": null
+      "description": null,
+      "iconId": "017",
+      "iconFile": "158_Palumba_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -6708,7 +7026,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Drill Crusher",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "159_Digtoise_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -6748,7 +7068,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Love's First Blossom",
-      "description": null
+      "description": null,
+      "iconId": "017",
+      "iconFile": "160_Broncherry_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -6789,7 +7111,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Purity's Full Bloom",
-      "description": null
+      "description": null,
+      "iconId": "017",
+      "iconFile": "161_Broncherry_Aqua_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -6833,7 +7157,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Soil Improver",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "162_Dumud_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -6877,7 +7203,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Golden Harvest",
-      "description": null
+      "description": null,
+      "iconId": "014",
+      "iconFile": "163_Dumud_Gild_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -6920,7 +7248,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Balmy Weather",
-      "description": null
+      "description": null,
+      "iconId": "017",
+      "iconFile": "164_Braloha_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -6960,7 +7290,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Wolf of the Sun",
-      "description": null
+      "description": null,
+      "iconId": "017",
+      "iconFile": "165_Kitsun_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -7000,7 +7332,9 @@
     "nocturnal": true,
     "partnerSkill": {
       "name": "Gloomhowl",
-      "description": null
+      "description": null,
+      "iconId": "017",
+      "iconFile": "166_Kitsun_Noct_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -7041,7 +7375,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Hellflame Lion",
-      "description": null
+      "description": null,
+      "iconId": "017",
+      "iconFile": "167_Blazehowl_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -7083,7 +7419,9 @@
     "nocturnal": true,
     "partnerSkill": {
       "name": "Darkflame Lion",
-      "description": null
+      "description": null,
+      "iconId": "017",
+      "iconFile": "168_Blazehowl_Noct_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -7127,7 +7465,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Cast-Iron Shell",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "169_Warsect_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -7169,7 +7509,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Fullmetal Shell",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "170_Warsect_Terra_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -7210,7 +7552,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Peacock Pounce",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "171_Frostplume_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -7254,7 +7598,9 @@
     "nocturnal": true,
     "partnerSkill": {
       "name": "Phantasmal Arcana",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "172_Majex_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -7296,7 +7642,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Silk Shroud",
-      "description": null
+      "description": null,
+      "iconId": "001",
+      "iconFile": "173_Sibelyx_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -7337,7 +7685,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Gilded Shroud",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "174_Sibelyx_Primo_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -7378,7 +7728,9 @@
     "nocturnal": true,
     "partnerSkill": {
       "name": "Messenger of Death",
-      "description": null
+      "description": null,
+      "iconId": "017",
+      "iconFile": "175_Maraith_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -7422,7 +7774,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Rampant Spores",
-      "description": null
+      "description": null,
+      "iconId": "017",
+      "iconFile": "176_Shroomer_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -7466,7 +7820,9 @@
     "nocturnal": true,
     "partnerSkill": {
       "name": "Roiling Spores",
-      "description": null
+      "description": null,
+      "iconId": "017",
+      "iconFile": "177_Shroomer_Noct_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -7509,7 +7865,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Witch's Icy Veil",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "178_Icelyn_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -7552,7 +7910,9 @@
     "nocturnal": true,
     "partnerSkill": {
       "name": "Resurrection",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "179_Gildra_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -7593,7 +7953,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Stormbringer Sea Dragon",
-      "description": null
+      "description": null,
+      "iconId": "019",
+      "iconFile": "180_Jormuntide_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -7634,7 +7996,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Stormbringer Lava Dragon",
-      "description": null
+      "description": null,
+      "iconId": "017",
+      "iconFile": "181_Jormuntide_Ignis_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -7674,7 +8038,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Wings of Flame",
-      "description": null
+      "description": null,
+      "iconId": "018",
+      "iconFile": "182_Suzaku_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -7714,7 +8080,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Wings of Water",
-      "description": null
+      "description": null,
+      "iconId": "018",
+      "iconFile": "183_Suzaku_Aqua_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -7754,7 +8122,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Sand Sprint",
-      "description": null
+      "description": null,
+      "iconId": "017",
+      "iconFile": "184_Dazemu_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -7797,7 +8167,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Sky Dragon Affection",
-      "description": null
+      "description": null,
+      "iconId": "018",
+      "iconFile": "185_Quivern_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -7842,7 +8214,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Grass Dragon Affection",
-      "description": null
+      "description": null,
+      "iconId": "018",
+      "iconFile": "186_Quivern_Botan_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -7885,7 +8259,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Floral Boost",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "187_Lullu_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -7925,7 +8301,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Sandball Soccer",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "188_Kikit_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -7965,7 +8343,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Birds of a Feather",
-      "description": null
+      "description": null,
+      "iconId": "017",
+      "iconFile": "189_Yakumo_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -8007,7 +8387,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Fish Fillet",
-      "description": null
+      "description": null,
+      "iconId": "000",
+      "iconFile": "190_Skutlass_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -8051,7 +8433,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Seared Fish Fillet",
-      "description": null
+      "description": null,
+      "iconId": "000",
+      "iconFile": "191_Skutlass_Ignis_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -8093,7 +8477,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Ore-Loving Beast",
-      "description": null
+      "description": null,
+      "iconId": "017",
+      "iconFile": "192_Reptyro_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -8135,7 +8521,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Ice-Loving Beast",
-      "description": null
+      "description": null,
+      "iconId": "017",
+      "iconFile": "193_Reptyro_Cryst_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -8175,7 +8563,9 @@
     "nocturnal": true,
     "partnerSkill": {
       "name": "Night Dancer",
-      "description": null
+      "description": null,
+      "iconId": "017",
+      "iconFile": "194_Starryon_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -8215,7 +8605,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Light Dancer",
-      "description": null
+      "description": null,
+      "iconId": "017",
+      "iconFile": "195_Starryon_Primo_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -8255,7 +8647,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Power Stone",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "196_Pierdon_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -8296,7 +8690,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Power Crystal",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "197_Pierdon_Cryst_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -8339,7 +8735,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Dragon Hunter",
-      "description": null
+      "description": null,
+      "iconId": "014",
+      "iconFile": "198_Cryolinx_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -8382,7 +8780,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Explosive Strength",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "199_Cryolinx_Terra_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -8425,7 +8825,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Invisible Eye",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "200_Snugloo_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -8468,7 +8870,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Guardian of the Snowy Mountain",
-      "description": null
+      "description": null,
+      "iconId": "017",
+      "iconFile": "201_Wumpo_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -8511,7 +8915,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Guardian of the South",
-      "description": null
+      "description": null,
+      "iconId": "017",
+      "iconFile": "202_Wumpo_Botan_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -8556,7 +8962,9 @@
     "nocturnal": true,
     "partnerSkill": {
       "name": "Grave Robber",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "203_Sootseer_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -8599,7 +9007,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Entangling Tongue",
-      "description": null
+      "description": null,
+      "iconId": "011",
+      "iconFile": "204_Carnibora_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -8640,7 +9050,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Magma Kaiser",
-      "description": null
+      "description": null,
+      "iconId": "017",
+      "iconFile": "205_Blazamut_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -8682,7 +9094,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Dragon Kaiser",
-      "description": null
+      "description": null,
+      "iconId": "017",
+      "iconFile": "206_Blazamut_Ryu_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -8727,7 +9141,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Forest Laser",
-      "description": null
+      "description": null,
+      "iconId": "017",
+      "iconFile": "207_Dualith_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -8772,7 +9188,9 @@
     "nocturnal": true,
     "partnerSkill": {
       "name": "Corruption Laser",
-      "description": null
+      "description": null,
+      "iconId": "017",
+      "iconFile": "208_Dualith_Noct_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -8814,7 +9232,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Guardian of the Desert",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "209_Anubis_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -8856,7 +9276,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Desert Empress",
-      "description": null
+      "description": null,
+      "iconId": "016",
+      "iconFile": "210_Sekhmet_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -8899,7 +9321,9 @@
     "nocturnal": true,
     "partnerSkill": {
       "name": "Phantom Venom",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "211_Prixter_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -8943,7 +9367,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Scorpion Longwave",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "212_Prixter_Lux_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -8983,7 +9409,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Masonry Archelon",
-      "description": null
+      "description": null,
+      "iconId": "017",
+      "iconFile": "213_Tetroise_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -9023,7 +9451,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Stone-Chaser Archelon",
-      "description": null
+      "description": null,
+      "iconId": "017",
+      "iconFile": "214_Tetroise_Primo_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -9066,7 +9496,9 @@
     "nocturnal": true,
     "partnerSkill": {
       "name": "Shot-Nyan Mode",
-      "description": null
+      "description": null,
+      "iconId": "003",
+      "iconFile": "215_Nyafia_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -9107,7 +9539,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Master of Unlocking",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "216_Mimog_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -9148,7 +9582,9 @@
     "nocturnal": true,
     "partnerSkill": {
       "name": "Unknown Invader",
-      "description": null
+      "description": null,
+      "iconId": "000",
+      "iconFile": "217_Xenovader_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -9188,7 +9624,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Unknown Intruder",
-      "description": null
+      "description": null,
+      "iconId": "017",
+      "iconFile": "218_Xenogard_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -9233,7 +9671,9 @@
     "nocturnal": true,
     "partnerSkill": {
       "name": "Prayer for Abundant Harvest",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "219_Prunelia_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -9274,7 +9714,9 @@
     "nocturnal": true,
     "partnerSkill": {
       "name": "Soul Collector",
-      "description": null
+      "description": null,
+      "iconId": "014",
+      "iconFile": "220_Nitemary_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -9316,7 +9758,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Soul Binder",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "221_Nitemary_Botan_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -9356,7 +9800,9 @@
     "nocturnal": true,
     "partnerSkill": {
       "name": "Dig, Smokie! Dig!",
-      "description": null
+      "description": null,
+      "iconId": "007",
+      "iconFile": "222_Smokie_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -9398,7 +9844,9 @@
     "nocturnal": true,
     "partnerSkill": {
       "name": "Cryo Instincts",
-      "description": null
+      "description": null,
+      "iconId": "000",
+      "iconFile": "223_Smokie_Cryst_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -9438,7 +9886,9 @@
     "nocturnal": true,
     "partnerSkill": {
       "name": "Masquerade Dance",
-      "description": null
+      "description": null,
+      "iconId": "014",
+      "iconFile": "224_Omascul_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -9480,7 +9930,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Chilled Whale Cruiser",
-      "description": null
+      "description": null,
+      "iconId": "019",
+      "iconFile": "225_Whalaska_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -9522,7 +9974,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Cozy Whale Cruiser",
-      "description": null
+      "description": null,
+      "iconId": "019",
+      "iconFile": "226_Whalaska_Ignis_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -9566,7 +10020,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Grassland Gymnast",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "227_Verdash_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -9609,7 +10065,9 @@
     "nocturnal": true,
     "partnerSkill": {
       "name": "Blade of Uncontrolled Passion",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "228_Splatterina_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -9649,7 +10107,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Sandstorm's Blessing",
-      "description": null
+      "description": null,
+      "iconId": "017",
+      "iconFile": "229_Gildane_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -9693,7 +10153,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Homeward Prayer",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "230_Dogen_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -9734,7 +10196,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Yokozuna's Presence",
-      "description": null
+      "description": null,
+      "iconId": "017",
+      "iconFile": "231_Bulldosu_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -9775,7 +10239,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Blessing of Purification",
-      "description": null
+      "description": null,
+      "iconId": "017",
+      "iconFile": "232_Celesdir_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -9816,7 +10282,9 @@
     "nocturnal": true,
     "partnerSkill": {
       "name": "Blessing of Chaos",
-      "description": null
+      "description": null,
+      "iconId": "017",
+      "iconFile": "233_Celesdir_Noct_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -9858,7 +10326,9 @@
     "nocturnal": true,
     "partnerSkill": {
       "name": "Black Ankylosaur",
-      "description": null
+      "description": null,
+      "iconId": "018",
+      "iconFile": "234_Astegon_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -9900,7 +10370,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Steel Guardian Mode",
-      "description": null
+      "description": null,
+      "iconId": "006",
+      "iconFile": "235_Knocklem_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -9942,7 +10414,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Iron Guardian Mode",
-      "description": null
+      "description": null,
+      "iconId": "006",
+      "iconFile": "236_Knocklem_Ignis_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -9982,7 +10456,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Aegis Shield",
-      "description": null
+      "description": null,
+      "iconId": "017",
+      "iconFile": "237_Silvegis_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -10022,7 +10498,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Plasma Dash",
-      "description": null
+      "description": null,
+      "iconId": "017",
+      "iconFile": "238_Azurmane_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -10062,7 +10540,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Big Stretch",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "239_Valentail_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -10102,7 +10582,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Charging Shell",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "240_Snock_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -10143,7 +10625,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Grounding Shell",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "241_Snock_Lux_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -10184,7 +10668,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Fuzzy Fairy",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "242_Souffline_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -10227,7 +10713,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Friend of Earth",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "243_Lapiron_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -10268,7 +10756,9 @@
     "nocturnal": true,
     "partnerSkill": {
       "name": "Void-Dweller",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "244_Hoodle_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -10308,7 +10798,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Chillswitch",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "245_Slowatt_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -10350,7 +10842,9 @@
     "nocturnal": true,
     "partnerSkill": {
       "name": "Grinning Death",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "246_Bakemi_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -10390,7 +10884,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Charming Fish",
-      "description": null
+      "description": null,
+      "iconId": "019",
+      "iconFile": "247_Solmora_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -10432,7 +10928,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Shocking Fish",
-      "description": null
+      "description": null,
+      "iconId": "019",
+      "iconFile": "248_Solmora_Lux_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -10473,7 +10971,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Long-Sleeved Hurray",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "249_Lapure_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -10514,7 +11014,9 @@
     "nocturnal": true,
     "partnerSkill": {
       "name": "Liberated Pterosaur",
-      "description": null
+      "description": null,
+      "iconId": "018",
+      "iconFile": "250_Eidrolon_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -10556,7 +11058,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Resentful Pterosaur",
-      "description": null
+      "description": null,
+      "iconId": "018",
+      "iconFile": "251_Eidrolon_Ignis_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -10598,7 +11102,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Electro-Massage Incubation",
-      "description": null
+      "description": null,
+      "iconId": "018",
+      "iconFile": "252_Dynamoff_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -10639,7 +11145,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Flower Dance",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "253_Tropicaw_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -10681,7 +11189,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Burning Future",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "254_Flaracle_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -10723,7 +11233,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Glorious Mist",
-      "description": null
+      "description": null,
+      "iconId": "017",
+      "iconFile": "255_Ophydia_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -10766,7 +11278,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Trick-Loving Fluffle",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "256_Dupin_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -10807,7 +11321,9 @@
     "nocturnal": true,
     "partnerSkill": {
       "name": "Dark-Nester",
-      "description": null
+      "description": null,
+      "iconId": "018",
+      "iconFile": "257_Roujay_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -10850,7 +11366,9 @@
     "nocturnal": true,
     "partnerSkill": {
       "name": "Snake's Sagacity",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "258_Venusa_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -10893,7 +11411,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Charming Spore",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "259_Mycora_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -10936,7 +11456,9 @@
     "nocturnal": true,
     "partnerSkill": {
       "name": "Lantern Enchantment",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "260_Loomen_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -10978,7 +11500,9 @@
     "nocturnal": true,
     "partnerSkill": {
       "name": "Hidden Dark Energy",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "261_Wistella_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -11021,7 +11545,9 @@
     "nocturnal": true,
     "partnerSkill": {
       "name": "Untainted Maiden",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "262_Solenne_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -11064,7 +11590,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Stage Combat",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "263_Renjishi_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -11105,7 +11633,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Indestructible Fortress",
-      "description": null
+      "description": null,
+      "iconId": "017",
+      "iconFile": "264_Aegidron_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -11148,7 +11678,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Yellow Tank",
-      "description": null
+      "description": null,
+      "iconId": "017",
+      "iconFile": "265_Grizzbolt_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -11191,7 +11723,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Harvest Goddess",
-      "description": null
+      "description": null,
+      "iconId": "004",
+      "iconFile": "266_Lyleen_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -11233,7 +11767,9 @@
     "nocturnal": true,
     "partnerSkill": {
       "name": "Goddess of the Tranquil Light",
-      "description": null
+      "description": null,
+      "iconId": "004",
+      "iconFile": "267_Lyleen_Noct_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -11276,7 +11812,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Ferocious Thunder Dragon",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "268_Orserk_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -11317,7 +11855,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Scorching Predator",
-      "description": null
+      "description": null,
+      "iconId": "018",
+      "iconFile": "269_Faleris_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -11358,7 +11898,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Tidal Predator",
-      "description": null
+      "description": null,
+      "iconId": "018",
+      "iconFile": "270_Faleris_Aqua_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -11398,7 +11940,9 @@
     "nocturnal": true,
     "partnerSkill": {
       "name": "Modified DNA",
-      "description": null
+      "description": null,
+      "iconId": "018",
+      "iconFile": "271_Shadowbeak_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -11441,7 +11985,9 @@
     "nocturnal": true,
     "partnerSkill": {
       "name": "Celestial Darkness",
-      "description": null
+      "description": null,
+      "iconId": "018",
+      "iconFile": "272_Selyne_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -11483,7 +12029,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Blizzard Crash",
-      "description": null
+      "description": null,
+      "iconId": "017",
+      "iconFile": "273_Bastigor_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -11525,7 +12073,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Azure Sovereign",
-      "description": null
+      "description": null,
+      "iconId": "018",
+      "iconFile": "274_Shaolong_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -11569,7 +12119,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Spore Stalwart",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "275_Silvance_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -11614,7 +12166,9 @@
     "nocturnal": true,
     "partnerSkill": {
       "name": "Mist Stalwart",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "276_Dandilord_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -11656,7 +12210,9 @@
     "nocturnal": true,
     "partnerSkill": {
       "name": "Nightmare Iris",
-      "description": null
+      "description": null,
+      "iconId": "001",
+      "iconFile": "277_Bellanoir_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -11698,7 +12254,9 @@
     "nocturnal": true,
     "partnerSkill": {
       "name": "Nightmare Stare",
-      "description": null
+      "description": null,
+      "iconId": "001",
+      "iconFile": "278_Bellanoir_Libero_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -11739,7 +12297,9 @@
     "nocturnal": true,
     "partnerSkill": {
       "name": "Meteor Wings",
-      "description": null
+      "description": null,
+      "iconId": "018",
+      "iconFile": "279_Xenolord_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -11780,7 +12340,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Sacred Barrier",
-      "description": null
+      "description": null,
+      "iconId": "017",
+      "iconFile": "280_Hartalis_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -11821,7 +12383,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Holy Knight of the Firmament",
-      "description": null
+      "description": null,
+      "iconId": "017",
+      "iconFile": "281_Paladius_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -11862,7 +12426,9 @@
     "nocturnal": true,
     "partnerSkill": {
       "name": "Dark Knight of the Abyss",
-      "description": null
+      "description": null,
+      "iconId": "017",
+      "iconFile": "282_Necromus_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -11902,7 +12468,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Icy Steed",
-      "description": null
+      "description": null,
+      "iconId": "018",
+      "iconFile": "283_Frostallion_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -11942,7 +12510,9 @@
     "nocturnal": true,
     "partnerSkill": {
       "name": "Black Steed",
-      "description": null
+      "description": null,
+      "iconId": "018",
+      "iconFile": "284_Frostallion_Noct_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -11982,7 +12552,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Sentinel of the Great Sea",
-      "description": null
+      "description": null,
+      "iconId": "019",
+      "iconFile": "285_Neptilius_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -12022,7 +12594,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Aerial Missile",
-      "description": null
+      "description": null,
+      "iconId": "018",
+      "iconFile": "286_Jetragon_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -12060,7 +12634,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "Resonant Guardian",
-      "description": null
+      "description": null,
+      "iconId": "000",
+      "iconFile": "287_Panthalus_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -12098,7 +12674,9 @@
     "nocturnal": false,
     "partnerSkill": {
       "name": "-",
-      "description": null
+      "description": null,
+      "iconId": "000",
+      "iconFile": "288_Astralym_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -12138,7 +12716,9 @@
     "nocturnal": null,
     "partnerSkill": {
       "name": "Slime Body",
-      "description": null
+      "description": null,
+      "iconId": "017",
+      "iconFile": "289_Green_Slime_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -12178,7 +12758,9 @@
     "nocturnal": null,
     "partnerSkill": {
       "name": "Slime Body",
-      "description": null
+      "description": null,
+      "iconId": "017",
+      "iconFile": "290_Blue_Slime_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -12218,7 +12800,9 @@
     "nocturnal": null,
     "partnerSkill": {
       "name": "Slime Body",
-      "description": null
+      "description": null,
+      "iconId": "017",
+      "iconFile": "291_Red_Slime_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -12258,7 +12842,9 @@
     "nocturnal": null,
     "partnerSkill": {
       "name": "Slime Body",
-      "description": null
+      "description": null,
+      "iconId": "017",
+      "iconFile": "292_Purple_Slime_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -12298,7 +12884,9 @@
     "nocturnal": null,
     "partnerSkill": {
       "name": "Slime Body",
-      "description": null
+      "description": null,
+      "iconId": "017",
+      "iconFile": "293_Illuminant_Slime_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -12338,7 +12926,9 @@
     "nocturnal": null,
     "partnerSkill": {
       "name": "Slime Body",
-      "description": null
+      "description": null,
+      "iconId": "017",
+      "iconFile": "294_Rainbow_Slime_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -12378,7 +12968,9 @@
     "nocturnal": null,
     "partnerSkill": {
       "name": "Bat Backup",
-      "description": null
+      "description": null,
+      "iconId": "011",
+      "iconFile": "297_Illuminant_Bat_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -12418,7 +13010,9 @@
     "nocturnal": null,
     "partnerSkill": {
       "name": "Bat Backup",
-      "description": null
+      "description": null,
+      "iconId": "011",
+      "iconFile": "296_Cave_Bat_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -12458,7 +13052,9 @@
     "nocturnal": null,
     "partnerSkill": {
       "name": "Demonic Sight",
-      "description": null
+      "description": null,
+      "iconId": null,
+      "iconFile": "299_Demon_Eye_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -12498,7 +13094,9 @@
     "nocturnal": null,
     "partnerSkill": {
       "name": "Enchant",
-      "description": null
+      "description": null,
+      "iconId": "014",
+      "iconFile": "295_Enchanted_Sword_partner.png"
     },
     "activeSkills": null,
     "drops": null,
@@ -12538,7 +13136,9 @@
     "nocturnal": null,
     "partnerSkill": {
       "name": "Mad Eye Lunge",
-      "description": null
+      "description": null,
+      "iconId": "001",
+      "iconFile": "298_Eye_of_Cthulhu_partner.png"
     },
     "activeSkills": null,
     "drops": null,

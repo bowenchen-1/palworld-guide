@@ -29,7 +29,7 @@ export type PalData = {
   foodConsumption: number | null;
   movement: { slowWalk: number | null; walk: number | null; run: number | null; rideSprint: number | null };
   nocturnal: boolean | null;
-  partnerSkill: { name: string | null; description: string | null };
+  partnerSkill: { name: string | null; description: string | null; iconId: string | null; iconFile: string | null };
   activeSkills: string[] | null;
   drops: string[] | null;
   ranchProduct: string[] | null;
@@ -39,6 +39,12 @@ export type BreedingData = Record<string, Record<string, string>>;
 
 export const pals = palRecords as PalData[];
 export const playablePals = pals.filter((pal) => pal.kind === "pal");
+export const palCounts = {
+  palForms: playablePals.length,
+  paldeckNumbers: new Set(playablePals.map((pal) => pal.number.replace(/[A-Z]+$/, ""))).size,
+  crossoverCreatures: pals.filter((pal) => pal.kind === "monster").length,
+  records: pals.length,
+};
 
 export const workLabels: Record<WorkKey, string> = {
   emitflame: "Kindling",

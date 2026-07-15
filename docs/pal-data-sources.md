@@ -5,7 +5,7 @@
 - Game target: Palworld 1.0
 - Dataset schema: 2
 - Imported: 2026-07-15
-- Scope: 300 entries (289 Pals and 11 crossover creatures)
+- Scope: 300 entries: 204 Paldeck main numbers, 289 playable Pal forms (including 85 letter-suffix variants), and 11 crossover creatures.
 - Identity continuity: existing `id`, `number`, `slug`, local image name, work suitability, and breeding power are preserved.
 
 ## Source and licensing status
@@ -16,7 +16,7 @@ The current factual snapshot is the user-supplied workbook `palworld_pals_databa
 
 ## Local UI icon pack
 
-The user-supplied `palworld_icon_pack.zip` was imported on 2026-07-16 into `public/icons/palworld/`. It contains 9 Element textures and 13 Work Suitability textures with the original in-game filenames. The Paldex maps all 9 elements and only the 12 work types represented in the verified data; `T_icon_palwork_09.png` (Oil Extracting) remains deliberately unmapped because no current Pal record has that suitability. Partner Skill portraits are not used as Partner Skill icons. The asset pack's redistribution license is not asserted; it is retained as a user-supplied local asset reference and is not attributed in product UI.
+The user-supplied `palworld_icon_pack.zip` was imported on 2026-07-16 into `public/icons/palworld/`. It contains 9 Element textures, 13 Work Suitability textures, and 300 Partner Skill display-icon mappings (299 distinct PNGs; Gumoss Special intentionally reuses Gumoss). The Paldex maps all 9 elements and only the 12 work types represented in the verified data; `T_icon_palwork_09.png` (Oil Extracting) remains deliberately unmapped because no current Pal record has that suitability. The icon manifest is retained at `data/sources/palworld-icon-manifest.json`; its display icon is a Pal-specific in-game portrait, not a claim that it is a unique ability-glyph asset. The asset pack's redistribution license is not asserted; it is retained as a user-supplied local asset reference and is not attributed in product UI.
 
 No unverified field is guessed. `null` means not yet verified; an empty array means verified as empty only when a future source establishes that fact.
 

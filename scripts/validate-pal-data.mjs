@@ -4,9 +4,13 @@ import assert from "node:assert/strict";
 const pals = JSON.parse(await readFile(new URL("../public/data/pals.json", import.meta.url), "utf8"));
 const version = JSON.parse(await readFile(new URL("../public/data/data-version.json", import.meta.url), "utf8"));
 const images = new Set(await readdir(new URL("../public/pals/", import.meta.url)));
+const partnerSkillIcons = new Set(await readdir(new URL("../public/icons/palworld/partner-skills/", import.meta.url)));
 const workKeys = new Set(["emitflame", "watering", "seeding", "generateelectricity", "handcraft", "collection", "deforest", "mining", "productmedicine", "cool", "transport", "monsterfarm"]);
 assert.equal(version.gameVersion, "1.0");
 assert.equal(pals.length, version.records);
+const playablePals = pals.filter((pal) => pal.kind === "pal");
+assert.equal(playablePals.length, version.pals, "Pal form count is stale");
+assert.equal(new Set(playablePals.map((pal) => pal.number.replace(/[A-Z]+$/, ""))).size, version.paldeckNumbers, "Paldeck number count is stale");
 assert.equal(new Set(pals.map((pal) => pal.id)).size, pals.length, "duplicate Pal ids");
 assert.equal(new Set(pals.map((pal) => pal.slug)).size, pals.length, "duplicate Pal slugs");
 assert.equal(new Set(pals.map((pal) => pal.number)).size, pals.length, "duplicate Paldeck numbers");
@@ -16,6 +20,8 @@ for (const pal of pals) {
   assert.ok(images.has(`${pal.id}.webp`), `missing image for ${pal.name}`);
   assert.ok(Array.isArray(pal.elements));
   assert.ok(pal.stats && pal.movement && pal.partnerSkill && "activeSkills" in pal && "drops" in pal && "ranchProduct" in pal);
+  assert.ok(pal.partnerSkill.iconId === null || typeof pal.partnerSkill.iconId === "string", `invalid Partner Skill icon id for ${pal.name}`);
+  assert.ok(typeof pal.partnerSkill.iconFile === "string" && partnerSkillIcons.has(pal.partnerSkill.iconFile), `missing Partner Skill icon for ${pal.name}`);
   for (const [key, level] of Object.entries(pal.work)) { assert.ok(workKeys.has(key), `unknown work key ${key}`); assert.ok(Number.isInteger(level) && level >= 1 && level <= 8, `invalid work level for ${pal.name}`); }
   for (const field of [pal.stats.hp, pal.stats.meleeAttack, pal.stats.rangedAttack, pal.stats.defense, pal.stats.support, pal.stats.craftSpeed, pal.stats.stamina, pal.rarity, pal.price, pal.foodConsumption, pal.movement.slowWalk, pal.movement.walk, pal.movement.run, pal.movement.rideSprint]) assert.ok(field === null || (typeof field === "number" && field >= 0), `invalid numeric field for ${pal.name}`);
   assert.ok(pal.nocturnal === null || typeof pal.nocturnal === "boolean");
@@ -36,6 +42,8 @@ const coverage = {
   rideSprint: pals.filter((pal) => pal.movement.rideSprint !== null).length,
   nocturnal: pals.filter((pal) => pal.nocturnal !== null).length,
   partnerSkill: pals.filter((pal) => pal.partnerSkill.name !== null).length,
+  partnerSkillIconId: pals.filter((pal) => pal.partnerSkill.iconId !== null).length,
+  partnerSkillIconFile: pals.filter((pal) => pal.partnerSkill.iconFile !== null).length,
   activeSkills: pals.filter((pal) => pal.activeSkills !== null).length,
   drops: pals.filter((pal) => pal.drops !== null).length,
   ranchProduct: pals.filter((pal) => pal.ranchProduct !== null).length,

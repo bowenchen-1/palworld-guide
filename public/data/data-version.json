@@ -4,6 +4,7 @@
   "imported": "2026-07-15",
   "records": 300,
   "pals": 289,
+  "paldeckNumbers": 204,
   "crossoverCreatures": 11,
   "source": "Internally documented, user-supplied PalDB 1.0 workbook snapshot",
   "schemaVersion": 2,
@@ -24,6 +25,8 @@
     "rideSprint": 298,
     "nocturnal": 289,
     "partnerSkill": 299,
+    "partnerSkillIconId": 202,
+    "partnerSkillIconFile": 300,
     "activeSkills": 0,
     "drops": 0,
     "ranchProduct": 0

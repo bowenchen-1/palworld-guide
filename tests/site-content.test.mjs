@@ -139,12 +139,14 @@ test("guide library contains 24 complete English guides in six categories", asyn
   assert.doesNotMatch(data, /steamcommunity\.com|palworld\.wiki\.gg|Official Palworld/);
 });
 
-test("current 1.0 dataset contains 289 Pals and Sekhmet", async () => {
+test("current 1.0 dataset distinguishes Paldeck numbers, Pal forms, and crossover entries", async () => {
   const pals = JSON.parse(await read("../public/data/pals.json"));
   const version = JSON.parse(await read("../public/data/data-version.json"));
   const matrix = JSON.parse(await read("../public/data/breeding.json"));
   assert.equal(pals.length, 300);
   assert.equal(pals.filter((pal) => pal.kind === "pal").length, 289);
+  assert.equal(new Set(pals.filter((pal) => pal.kind === "pal").map((pal) => pal.number.replace(/[A-Z]+$/, ""))).size, 204);
+  assert.equal(pals.filter((pal) => pal.kind === "monster").length, 11);
   assert.equal(version.gameVersion, "1.0");
   assert.equal(pals.find((pal) => pal.name === "Sekhmet")?.number, "140");
   assert.equal(Object.keys(matrix).length, 300);
@@ -283,10 +285,14 @@ test("Pal data schema and repeatable import safeguards cover the 1.0 snapshot", 
   assert.equal(data.filter((pal) => pal.elements.length).length, 300);
   assert.equal(data.filter((pal) => pal.price !== null).length, 299);
   assert.equal(data.filter((pal) => pal.movement.rideSprint !== null).length, 298);
+  assert.equal(data.filter((pal) => pal.movement.run !== null).length, 299);
   assert.equal(data.filter((pal) => pal.partnerSkill.name !== null).length, 299);
+  assert.equal(data.filter((pal) => pal.partnerSkill.iconId !== null).length, 202);
+  assert.equal(data.filter((pal) => pal.partnerSkill.iconFile !== null).length, 300);
   assert.equal(data.find((pal) => pal.name === "Gumoss (Special)")?.price, null);
   assert.match(type, /foodConsumption: number \| null/);
   assert.match(type, /price: number \| null/);
+  assert.match(type, /iconId: string \| null; iconFile: string \| null/);
   assert.match(filters, /parsePaldexFilters/);
   assert.match(filters, /filterPals/);
   assert.match(filters, /sortPals/);
@@ -294,6 +300,7 @@ test("Pal data schema and repeatable import safeguards cover the 1.0 snapshot", 
   assert.match(importer, /work-suitability conflict/);
   assert.match(validator, /duplicate Pal ids/);
   assert.match(validator, /missing image/);
+  assert.match(validator, /missing Partner Skill icon/);
 });
 
 test("social metadata declares locale, dimensions, and Pal sharing cards", async () => {
