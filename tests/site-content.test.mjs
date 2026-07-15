@@ -166,7 +166,7 @@ test("breeding calculator supports forward and reverse searches", async () => {
   assert.match(client, /matrix\[first\.id\]\?\.\[second\.id\]/);
 });
 
-test("Paldeck has current filters and indexable profile pages", async () => {
+test("Paldeck has URL-backed filters, two views, and indexable profile pages", async () => {
   const page = await read("../app/paldex/page.tsx");
   const content = await read("../app/paldex/paldex-page-content.tsx");
   const client = await read("../app/paldex/paldex-client.tsx");
@@ -175,17 +175,19 @@ test("Paldeck has current filters and indexable profile pages", async () => {
   assert.match(page, /PaldexPageContent/);
   assert.match(content, /Palworld Paldeck Database/);
   assert.match(client, /Work Suitability/);
-  assert.match(client, /Work Skill/);
-  assert.match(client, /Level \{level\}\+/);
+  assert.match(client, /Work suitability/);
+  assert.match(client, /Match any/);
+  assert.match(client, /Match all/);
+  assert.match(client, /Overview/);
+  assert.match(client, /Work/);
   assert.match(client, /Highest work level/);
   assert.match(client, /paldex-control-bar/);
-  assert.match(client, /Reset filters/);
+  assert.match(client, /Clear all/);
   assert.match(client, /Breeding power/);
-  assert.match(client, /PALDEX_PAGE_SIZE/);
-  assert.match(client, /filtered\.slice\(\(safePage - 1\) \* PALDEX_PAGE_SIZE/);
+  assert.match(client, /serializePaldexFilters/);
+  assert.match(client, /useSearchParams/);
   assert.match(client, /href={`\/pals\/\$\{pal\.slug\}`}/);
-  assert.match(client, /paldex-pagination/);
-  assert.match(client, /`\/paldex\/page\/\$\{page\}`/);
+  assert.match(client, /paldex-mobile-cards/);
   assert.doesNotMatch(client, /return <button type="button" aria-pressed=\{selected\.id === pal\.id\}/);
   assert.match(profile, /generateStaticParams/);
   assert.match(profile, /Palworld Guide/);
@@ -250,21 +252,44 @@ test("Paldeck pagination exposes every initial Pal card to crawlers", async () =
   assert.match(pagination, /generateStaticParams/);
   assert.match(pagination, /permanentRedirect\("\/paldex"\)/);
   assert.match(pagination, /path: `\/paldex\/page\/\$\{page\}`/);
+  assert.match(content, /<Suspense/);
   assert.match(content, /<PaldexClient initialPage=\{initialPage\}/);
 });
 
-test("Paldeck uses compact searchable table controls with translation-safe pagination", async () => {
+test("Paldeck uses compact searchable table controls and mobile cards", async () => {
   const pageContent = await read("../app/paldex/paldex-page-content.tsx");
   const client = await read("../app/paldex/paldex-client.tsx");
   const styles = await read("../app/tool-pages.css");
   assert.match(pageContent, /compact-paldex-hero/);
   assert.doesNotMatch(pageContent, /<DataNotice/);
   assert.match(client, /className="paldex-search"/);
-  assert.match(client, /className="paldex-table"/);
+  assert.match(client, /paldex-table \$\{filters\.view/);
   assert.match(client, /className="paldex-filter-sheet"/);
-  assert.match(client, /className="paldex-pagination-pages"/);
-  assert.match(styles, /\.paldex-pagination-pages\{display:flex;align-items:center/);
-  assert.match(styles, /\.paldex-pagination-pages>:not\(a\)\{display:none!important\}/);
+  assert.match(client, /className="paldex-mobile-cards"/);
+  assert.match(styles, /\.paldex-mobile-cards\{display:none\}/);
+  assert.match(styles, /\.paldex-table-wrap\{display:none\}/);
+});
+
+test("Pal data schema and repeatable import safeguards cover the 1.0 snapshot", async () => {
+  const data = JSON.parse(await read("../public/data/pals.json"));
+  const type = await read("../app/lib/game-data.ts");
+  const filters = await read("../app/lib/paldex.ts");
+  const importer = await read("../scripts/import-pal-data.mjs");
+  const validator = await read("../scripts/validate-pal-data.mjs");
+  assert.equal(data.length, 300);
+  for (const pal of data) {
+    assert.ok("stats" in pal && "movement" in pal && "partnerSkill" in pal && "activeSkills" in pal && "drops" in pal && "ranchProduct" in pal);
+  }
+  assert.equal(data.filter((pal) => pal.stats.hp !== null).length, 289);
+  assert.equal(data.filter((pal) => pal.elements.length).length, 289);
+  assert.match(type, /foodConsumption: number \| null/);
+  assert.match(filters, /parsePaldexFilters/);
+  assert.match(filters, /filterPals/);
+  assert.match(filters, /sortPals/);
+  assert.match(importer, /atlas-24181105/);
+  assert.match(importer, /work-suitability conflict/);
+  assert.match(validator, /duplicate Pal ids/);
+  assert.match(validator, /missing image/);
 });
 
 test("social metadata declares locale, dimensions, and Pal sharing cards", async () => {

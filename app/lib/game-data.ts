@@ -22,6 +22,16 @@ export type PalData = {
   kind: "pal" | "monster";
   power: number;
   work: Partial<Record<WorkKey, number>>;
+  elements: string[];
+  stats: { hp: number | null; meleeAttack: number | null; rangedAttack: number | null; defense: number | null; support: number | null; craftSpeed: number | null };
+  rarity: number | null;
+  foodConsumption: number | null;
+  movement: { slowWalk: number | null; walk: number | null; run: number | null; rideSprint: number | null };
+  nocturnal: boolean | null;
+  partnerSkill: { name: string | null; description: string | null };
+  activeSkills: string[] | null;
+  drops: string[] | null;
+  ranchProduct: string[] | null;
 };
 
 export type BreedingData = Record<string, Record<string, string>>;

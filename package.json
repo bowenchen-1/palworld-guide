@@ -10,7 +10,9 @@
     "build": "next build",
     "start": "next start",
     "test": "npm run build && node --test tests/site-content.test.mjs",
-    "lint": "eslint . --ignore-pattern .next"
+    "lint": "eslint . --ignore-pattern .next",
+    "data:import": "node scripts/import-pal-data.mjs",
+    "data:validate": "node scripts/validate-pal-data.mjs"
   },
   "dependencies": {
     "@fontsource/barlow": "^5.2.8",

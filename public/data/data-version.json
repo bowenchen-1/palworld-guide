@@ -1,1 +1,28 @@
-{"gameVersion":"1.0","updated":"2026-07-12","imported":"2026-07-14","records":300,"pals":289,"crossoverCreatures":11,"source":"Kimpton’s Palworld Breeding Guide community dataset"}
+{
+  "gameVersion": "1.0",
+  "updated": "2026-07-12",
+  "imported": "2026-07-15",
+  "records": 300,
+  "pals": 289,
+  "crossoverCreatures": 11,
+  "source": "Internally documented public structured snapshot (build 24181105)",
+  "schemaVersion": 2,
+  "fieldPolicy": "Unverified values are null; no unknown value is represented as zero.",
+  "coverage": {
+    "elements": 289,
+    "hp": 289,
+    "meleeAttack": 0,
+    "rangedAttack": 289,
+    "defense": 289,
+    "support": 0,
+    "craftSpeed": 0,
+    "rarity": 289,
+    "foodConsumption": 289,
+    "runSpeed": 288,
+    "nocturnal": 289,
+    "partnerSkill": 0,
+    "activeSkills": 0,
+    "drops": 0,
+    "ranchProduct": 0
+  }
+}
