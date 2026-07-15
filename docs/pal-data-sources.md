@@ -14,6 +14,10 @@ The inherited identity, work-suitability, and breeding-power snapshot is recorde
 
 The current factual snapshot is the user-supplied workbook `palworld_pals_database.xlsx`, captured 2026-07-15 from version `1.0.0` PalDB entries and normalized into `data/sources/paldb-1.0-20260715.json`. Its original workbook SHA-256 is `146283296c1be4f3ff9373184112f256b6d0c325c4a1d35689ddb60a97e12757`. No source is displayed in product UI. After matching names and asserting unchanged work suitability and breeding power, it imports element, HP, Defense, Rarity, Price, Stamina, Run Speed, Riding Speed, and Partner Skill name for 299 records. The one unmatched existing record, `Gumoss (Special)`, is retained unchanged. The source's redistribution license is not asserted; it is recorded internally as user-supplied factual reference data only. Do not distribute PAK files, extracted game assets, third-party prose, or third-party images.
 
+## Local UI icon pack
+
+The user-supplied `palworld_icon_pack.zip` was imported on 2026-07-16 into `public/icons/palworld/`. It contains 9 Element textures and 13 Work Suitability textures with the original in-game filenames. The Paldex maps all 9 elements and only the 12 work types represented in the verified data; `T_icon_palwork_09.png` (Oil Extracting) remains deliberately unmapped because no current Pal record has that suitability. Partner Skill portraits are not used as Partner Skill icons. The asset pack's redistribution license is not asserted; it is retained as a user-supplied local asset reference and is not attributed in product UI.
+
 No unverified field is guessed. `null` means not yet verified; an empty array means verified as empty only when a future source establishes that fact.
 
 ## Evidence classes
