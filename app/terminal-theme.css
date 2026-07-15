@@ -763,6 +763,31 @@ body::before {
   .article-hero + div { padding-top: 28px !important; }
 }
 
+/* Page introductions are typography on the shared canvas, never oversized cards. */
+.database-hero,
+.hub-hero,
+.profile-hero {
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  clip-path: none;
+}
+.database-hero::before,
+.database-hero::after,
+.hub-hero::before,
+.hub-hero::after { display: none; }
+.database-hero,
+.hub-hero { padding-top: clamp(28px,3.4vw,46px); padding-bottom: 20px; }
+.profile-hero { padding-top: clamp(28px,3.4vw,46px); padding-bottom: 20px; }
+.article-hero { border-bottom: 0; background: transparent; }
+.article-hero::after { display: none; }
+@media(max-width:760px) {
+  .database-hero,
+  .hub-hero,
+  .profile-hero { padding-top: 26px; padding-bottom: 18px; }
+}
+
 /* Homepage breeding workbench: scoped UI layer for every calculator mode. */
 .home-calculator-top .home-breeding-workspace { margin-top: 18px !important; }
 .home-calculator-top .home-breeding-tabs { display:grid; grid-template-columns:repeat(6,minmax(0,1fr)); gap:6px; }
