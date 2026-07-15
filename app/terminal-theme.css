@@ -110,6 +110,7 @@ body::before {
 .site-header nav a.active::after { opacity: 1; transform: scaleX(1); }
 .site-search-link { border: 1px solid var(--terminal-border); border-radius: 10px; background: var(--terminal-panel-light); color: var(--terminal-copy); box-shadow: none; clip-path: var(--terminal-cut); }
 .site-search-link:hover { border-color: var(--terminal-mint); background: var(--terminal-panel-hover); color: var(--terminal-mint); }
+.site-mobile-menu { display:none; }
 
 /* Homepage: content is placed directly on the canvas; no nested decorative hero frames. */
 .home-scene-hero,
@@ -898,8 +899,8 @@ body::before {
   .home-pal-picker .pal-picker-grid { grid-template-columns:repeat(4,minmax(0,1fr)); }
 }
 @media(max-width:560px) {
-  .home-calculator-top .home-breeding-tabs { gap:4px; }
-  .home-calculator-top .home-breeding-tabs button { min-height:44px; padding:6px 4px; font-size:9px; }
+  .home-calculator-top .home-breeding-tabs { gap:6px; }
+  .home-calculator-top .home-breeding-tabs button { min-height:52px; padding:8px 6px; font-size:11px; line-height:1.15; }
   .home-calculator-top .home-workbench { margin-top:8px; padding:12px; }
   .home-calculator-top .home-breeding-equation { grid-template-columns:1fr; gap:4px; }
   .home-calculator-top .home-breeding-slot { min-height:116px; display:grid; grid-template-columns:42px minmax(0,1fr); grid-template-rows:minmax(0,1fr) auto auto; column-gap:5px; padding:25px 6px 7px; text-align:left; }
@@ -915,4 +916,19 @@ body::before {
   .home-calculator-top .home-available-list>div>button,
   .home-pal-picker .pal-picker-grid>button { min-height:100px; }
   .home-pal-picker .pal-picker-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+
+@media(max-width:760px) {
+  .site-header { position:relative; gap:8px; clip-path:none; }
+  .site-header>nav { display:none; }
+  .site-mobile-menu { position:relative; display:block; margin-left:auto; }
+  .site-menu-toggle { display:flex; min-height:42px; align-items:center; gap:6px; border:1px solid var(--terminal-border); border-radius:9px; background:var(--terminal-panel-light); padding:8px 10px; color:var(--terminal-copy); font-size:10px; font-weight:800; }
+  .site-menu-toggle>span:first-child { color:var(--terminal-mint); font-size:16px; line-height:1; }
+  .site-menu-toggle[aria-expanded="true"] { border-color:var(--terminal-mint); background:var(--terminal-panel-hover); color:var(--terminal-mint); }
+  .site-menu-toggle:focus-visible,
+  .site-mobile-nav a:focus-visible { outline:2px solid var(--terminal-mint); outline-offset:2px; }
+  .site-header .site-mobile-nav { position:absolute; z-index:70; top:calc(100% + 8px); right:0; display:grid; min-width:184px; gap:4px; border:1px solid var(--terminal-border); border-radius:11px; background:var(--terminal-panel); padding:6px; box-shadow:0 18px 35px rgba(0,8,12,.38); }
+  .site-header .site-mobile-nav a { display:block; border-radius:7px; padding:12px; color:var(--terminal-copy); font-size:13px; font-weight:700; }
+  .site-header .site-mobile-nav a:hover,
+  .site-header .site-mobile-nav a.active { background:rgba(57,208,197,.1); color:var(--terminal-mint); }
 }
