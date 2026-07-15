@@ -1,5 +1,4 @@
 import Link from "next/link";
-import HomeToolBoard from "../components/home-tool-board";
 import ToolLab from "../components/tool-lab";
 import ToolShell from "../components/tool-shell";
 import { createPageMetadata } from "../lib/seo";
@@ -31,19 +30,18 @@ export default function ToolsPage() {
             <h2>Search and calculate</h2>
           </div>
           <p>
-            Quick inputs live here; complete workflows stay on their dedicated
-            pages.
+          The complete breeding workspace lives on the homepage; use this hub
+          to discover the other focused tools.
           </p>
         </div>
-        <HomeToolBoard />
         <div className="hub-tool-links">
-          <Link href="/breeding-calculator">
+          <Link href="/?mode=parents">
             <span>◉</span>
             <div>
               <h3>Full Breeding Calculator</h3>
               <p>
-                Parents → child, target → parents, and complete current
-                combinations.
+                Six modes: parents, target, offspring, available Pals, and
+                route planning.
               </p>
             </div>
             <b>Open →</b>

@@ -22,7 +22,7 @@ const faqs = [
 
 const changes = [
   ["Pal roster", "The Paldeck expanded and numbering changed. Search the current database instead of relying on an old 137-entry list.", "/paldex", "Open the 1.0 Paldeck"],
-  ["Breeding results", "Species power values and combinations were reworked, so old parent pairs can produce a different egg.", "/breeding-calculator", "Use the 1.0 calculator"],
+  ["Breeding results", "Species power values and combinations were reworked, so old parent pairs can produce a different egg.", "/?mode=parents", "Use the 1.0 calculator"],
   ["Work suitability", "Base work now uses a broader progression, with current innate values reaching level 8 before player upgrades.", "/paldex", "Compare base workers"],
   ["World progression", "The launch update adds new regions, endgame progression, systems, and balance changes that make old route advice patch-sensitive.", "/#popular", "Browse current guides"],
 ];

@@ -39,7 +39,7 @@ export default function UpdatesPage() {
             </p>
             <div>
               <Link href="/palworld-1-0">Read the 1.0 guide →</Link>
-              <Link href="/breeding-calculator">
+              <Link href="/?mode=parents">
                 Check new breeding results
               </Link>
             </div>
@@ -64,7 +64,7 @@ export default function UpdatesPage() {
               The calculator no longer relies on the old 137-Pal Early Access
               dataset.
             </p>
-            <Link href="/breeding-calculator">Open calculator →</Link>
+            <Link href="/?mode=parents">Open calculator →</Link>
           </article>
           <article>
             <span>CONTENT</span>

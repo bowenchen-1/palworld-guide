@@ -17,20 +17,18 @@ test("homepage targets Palworld breeding calculator with one focused H1", async 
   assert.ok(description.length >= 150 && description.length <= 160, `homepage description should be 150-160 characters, got ${description.length}`);
   assert.match(page, /keywords: \["palworld breeding calculator"\]/);
   assert.match(page, /title: "Palworld Breeding Calculator - Updated 1\.0 Pal Combos"/);
-  assert.match(page, /How the Pal Breeding Tool Works/);
+  assert.match(page, /BreedingClient embedded/);
+  assert.match(page, /Find the Pal behind every breeding choice/);
   assert.match(page, /Palworld Breeding Calculator FAQ/);
   assert.match(page, /Plan a Reliable Breeding Route/);
   assert.match(page, /"@type": "WebApplication"/);
-  assert.match(gameData, /\/breeding-calculator/);
+  assert.match(gameData, /href: "\/"/);
   assert.match(gameData, /\/paldex/);
   assert.match(gameData, /\/palworld-1-0/);
-  assert.match(page, /GlobalSearch/);
-  assert.match(page, /HomeToolBoard/);
-  assert.match(page, /home-scene-hero/);
+  assert.doesNotMatch(page, /HomeToolBoard/);
+  assert.match(page, /home-calculator-top/);
   assert.match(page, /Updated for Palworld 1\.0/);
-  assert.match(page, /home-terminal-intro/);
-  assert.match(page, /Six ways to plan your next Pal/);
-  for (const feature of ["Parents → Child", "Target → Parents", "One Parent → Offspring", "Available Pals → Target", "Shortest Route", "What Can I Breed Now"]) assert.match(page, new RegExp(feature));
+  assert.match(page, /home-calculator-intro/);
   assert.doesNotMatch(page, /home-release-panel/);
   assert.match(page, /Popular Pals/);
   assert.doesNotMatch(layout, /Palworld Breeding Calculator - Updated 1\.0 Pal Combos/);
@@ -68,7 +66,6 @@ test("each indexable page targets one distinct primary keyword", async () => {
   const files = [
     ["../app/page.tsx", "palworld breeding calculator"],
     ["../app/palworld-1-0/page.tsx", "palworld 1.0"],
-    ["../app/breeding-calculator/page.tsx", "palworld breeding combinations"],
     ["../app/paldex/page.tsx", "palworld paldeck"],
     ["../app/tools/page.tsx", "palworld tools"],
     ["../app/guides/page.tsx", "palworld guides"],
@@ -87,39 +84,16 @@ test("each indexable page targets one distinct primary keyword", async () => {
   assert.match(pals, /keywords: \[`\$\{pal\.name\.toLowerCase\(\)\} palworld`\]/);
 });
 
-test("homepage calculator lazily loads current breeding data and handles errors", async () => {
-  const board = await read("../app/components/home-tool-board.tsx");
-  assert.match(board, /Choose quick breeding parent A/);
-  assert.match(board, /Pictured Pal selection/);
-  assert.match(board, /PalMark pal={parentAPal}/);
-  assert.match(board, /if \(slot !== "lookup"\) loadMatrix\(\)/);
-  assert.match(board, /fetch\("\/data\/breeding\.json"\)/);
-  assert.match(board, /setLoadError\(true\)/);
-  assert.match(board, /Breeding data is unavailable/);
-  assert.match(board, />Retry</);
-});
-
-test("homepage can reverse-search parent combinations for a target Pal", async () => {
-  const board = await read("../app/components/home-tool-board.tsx");
-  assert.match(board, /Choose a Pal and find its parent combinations/);
-  assert.match(board, /setMode\("target"\)/);
-  assert.match(board, /Choose Your Target Pal/);
-  assert.match(board, /matrix\[first\.id\]\?\.\[second\.id\] !== target\.id/);
-  assert.match(board, /HOME_PAIR_LIMIT = 12/);
-  assert.match(board, /PalMark pal={first}/);
-  assert.match(board, /PalMark pal={second}/);
-  assert.match(board, /Choose a Pal and find its parent combinations/);
-  assert.match(board, /openPicker\("target"\)/);
-  assert.match(board, /Breeding data is unavailable/);
-  assert.match(board, />Retry</);
-});
-
-test("homepage Pal picker renders above the page stacking contexts", async () => {
-  const board = await read("../app/components/home-tool-board.tsx");
-  const styles = await read("../app/tool-pages.css");
-  assert.match(board, /createPortal/);
-  assert.match(board, /document\.body/);
-  assert.match(styles, /\.pal-picker-backdrop\{position:fixed;z-index:1000/);
+test("homepage hosts all six calculator modes with shared URL and local storage state", async () => {
+  const page = await read("../app/page.tsx");
+  const client = await read("../app/breeding-calculator/breeding-client.tsx");
+  assert.match(page, /BreedingClient embedded/);
+  for (const feature of ["Parents → Child", "Target → Parents", "One Parent → Offspring", "Available Pals → Target", "Shortest Route", "What Can I Breed Now"]) assert.match(client, new RegExp(feature));
+  assert.match(client, /fetch\("\/data\/breeding\.json"\)/);
+  assert.match(client, /readAvailablePals/);
+  assert.match(client, /saveAvailablePals/);
+  assert.match(client, /history\.replaceState/);
+  assert.match(client, /pal-picker-backdrop/);
 });
 
 test("every current Pal entry has a local image used by the shared Pal component", async () => {
@@ -157,12 +131,12 @@ test("current 1.0 dataset contains 289 Pals and Sekhmet", async () => {
   assert.equal(Object.keys(matrix).length, 300);
 });
 
-test("breeding calculator supports forward and reverse searches", async () => {
+test("legacy breeding calculator URL redirects to homepage while preserving query state", async () => {
   const page = await read("../app/breeding-calculator/page.tsx");
   const client = await read("../app/breeding-calculator/breeding-client.tsx");
-  assert.equal((page.match(/<h1/g) ?? []).length, 1);
-  assert.match(page, /Palworld Breeding Combinations/);
-  assert.match(page, /WebApplication/);
+  assert.match(page, /permanentRedirect/);
+  assert.match(page, /searchParams/);
+  assert.match(page, /URLSearchParams/);
   assert.match(client, /Parents → Child/);
   assert.match(client, /Target → Parents/);
   const breedingCore = await read("../app/breeding-calculator/breeding/core.ts");
@@ -216,7 +190,7 @@ test("1.0 hub answers release-date intent above the fold", async () => {
 test("sitemap exposes tools, guides, and every Pal profile", async () => {
   const sitemap = await read("../app/sitemap.ts");
   const robots = await read("../app/robots.ts");
-  assert.match(sitemap, /breeding-calculator/);
+  assert.doesNotMatch(sitemap, /breeding-calculator/);
   assert.match(sitemap, /palworld-1-0/);
   assert.match(sitemap, /\$\{siteUrl\}\/tools/);
   assert.match(sitemap, /\$\{siteUrl\}\/guides/);
@@ -236,7 +210,6 @@ test("pages own their canonical and social metadata without inheriting homepage 
   const topLevelPages = [
     "../app/page.tsx",
     "../app/paldex/page.tsx",
-    "../app/breeding-calculator/page.tsx",
     "../app/tools/page.tsx",
     "../app/guides/page.tsx",
     "../app/updates/page.tsx",

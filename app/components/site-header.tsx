@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 const navItems = [
-  ["Breeding", "/breeding-calculator"],
+  ["Breeding", "/"],
   ["Tools", "/tools"],
   ["Pals", "/paldex"],
   ["Guides", "/guides"],

@@ -70,7 +70,7 @@ export const workGlyphs: Record<WorkKey, string> = {
 };
 
 export const toolLinks = [
-  { href: "/breeding-calculator", label: "Breeding", full: "Palworld Breeding Calculator", icon: "◉" },
+  { href: "/", label: "Breeding", full: "Palworld Breeding Calculator", icon: "◉" },
   { href: "/paldex", label: "Paldeck", full: "Palworld Paldeck Database", icon: "✦" },
   { href: "/palworld-1-0", label: "1.0 Hub", full: "Palworld 1.0 Guide", icon: "1.0" },
 ];
