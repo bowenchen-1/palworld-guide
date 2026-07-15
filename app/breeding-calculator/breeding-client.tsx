@@ -4,72 +4,45 @@ import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import PalMark from "../components/pal-mark";
 import { BreedingData, PalData, pals } from "../lib/game-data";
+import { availableOffspring, comparePals, findOffspring, findParentPairs, findRoutes, pairResults, type BreedingResult } from "./breeding/core";
+import { readAvailablePals, saveAvailablePals } from "./breeding/storage";
 
-type PickerSlot = "parent1" | "parent2" | "target" | null;
+type Mode = "parents" | "target" | "offspring" | "available-route" | "shortest" | "available";
+type Slot = "a" | "b" | "target" | "parent" | "start" | null;
+const modes: [Mode, string, string][] = [["parents", "Parents → Child", "Calculator"], ["target", "Target → Parents", "Calculator"], ["offspring", "One Parent → Offspring", "Calculator"], ["available-route", "Available Pals → Target", "Routes"], ["shortest", "Shortest Route", "Routes"], ["available", "What Can I Breed Now", "Routes"]];
+const initialParam = (name: string) => typeof window === "undefined" ? null : new URLSearchParams(window.location.search).get(name);
+const initialPal = (name: string) => pals.find((pal) => pal.id === initialParam(name));
+
+function Result({ result, usePair }: { result: BreedingResult; usePair?: () => void }) { return <article className="breed-row"><span><PalMark pal={result.first} small />{result.genders?.[0] && <em>{result.genders[0]}</em>}<Link href={`/pals/${result.first.slug}`}>{result.first.name}</Link></span><b>+</b><span><PalMark pal={result.second} small />{result.genders?.[1] && <em>{result.genders[1]}</em>}<Link href={`/pals/${result.second.slug}`}>{result.second.name}</Link></span><b>→</b><span><PalMark pal={result.child} small /><Link href={`/pals/${result.child.slug}`}>{result.child.name}</Link></span>{result.genders && <small>Gender-specific result</small>}{result.requiresTwo && <small>Requires two compatible individuals</small>}{usePair && <button onClick={usePair}>Use pair</button>}</article>; }
 
 export default function BreedingClient() {
-  const [matrix, setMatrix] = useState<BreedingData>({});
-  const [mode, setMode] = useState<"parents" | "target">("parents");
-  const [parent1, setParent1] = useState<PalData>();
-  const [parent2, setParent2] = useState<PalData>();
-  const [target, setTarget] = useState<PalData>();
-  const [picker, setPicker] = useState<PickerSlot>(null);
-  const [query, setQuery] = useState("");
-
-  useEffect(() => {
-    fetch("/data/breeding.json").then((response) => response.json()).then(setMatrix);
-  }, []);
-
-  const byId = useMemo(() => new Map(pals.map((pal) => [pal.id, pal])), []);
-  const result = parent1 && parent2 ? byId.get(matrix[parent1.id]?.[parent2.id]) : undefined;
-  const filteredPals = useMemo(() => {
-    const needle = query.trim().toLowerCase();
-    return pals.filter((pal) => !needle || pal.name.toLowerCase().includes(needle) || pal.number.toLowerCase().includes(needle)).slice(0, 100);
-  }, [query]);
-  const targetPairs = useMemo(() => {
-    if (!target || !Object.keys(matrix).length) return [];
-    const pairs: [PalData, PalData][] = [];
-    for (let firstIndex = 0; firstIndex < pals.length; firstIndex += 1) {
-      const first = pals[firstIndex];
-      for (let secondIndex = firstIndex; secondIndex < pals.length; secondIndex += 1) {
-        const second = pals[secondIndex];
-        if (matrix[first.id]?.[second.id] === target.id) pairs.push([first, second]);
-        if (pairs.length === 120) return pairs;
-      }
-    }
-    return pairs;
-  }, [target, matrix]);
-
-  function choose(pal: PalData) {
-    if (picker === "parent1") setParent1(pal);
-    if (picker === "parent2") setParent2(pal);
-    if (picker === "target") setTarget(pal);
-    setPicker(null);
-    setQuery("");
-  }
-
-  return (
-    <section className="database-workspace breeding-workspace" aria-label="Palworld breeding calculator controls">
-      <div className="mode-switch" role="tablist" aria-label="Calculator mode">
-        <button className={mode === "parents" ? "active" : ""} onClick={() => setMode("parents")}>Parents → Child</button>
-        <button className={mode === "target" ? "active" : ""} onClick={() => setMode("target")}>Target → Parents</button>
-      </div>
-
-      {mode === "parents" ? <>
-        <div className="breeding-equation">
-          <button className="pal-select-card" onClick={() => setPicker("parent1")}><PalMark pal={parent1} /><span>Parent 1</span><strong>{parent1?.name ?? "Choose a Pal"}</strong></button>
-          <span className="equation-mark">+</span>
-          <button className="pal-select-card" onClick={() => setPicker("parent2")}><PalMark pal={parent2} /><span>Parent 2</span><strong>{parent2?.name ?? "Choose a Pal"}</strong></button>
-          <span className="equation-mark">=</span>
-          <div className={`pal-select-card result ${result ? "ready" : ""}`}><PalMark pal={result} /><span>Egg Result</span><strong>{result?.name ?? (parent1 && parent2 ? "Loading 1.0 result…" : "Waiting for parents")}</strong>{result && <Link href={`/pals/${result.slug}`}>View Pal profile →</Link>}</div>
-        </div>
-        <div className="calculator-foot"><p>Results use the full 1.0 breeding matrix, including revised standard and special combinations.</p><button onClick={() => { setParent1(undefined); setParent2(undefined); }}>Reset selection</button></div>
-      </> : <>
-        <div className="target-picker"><div><p>Target Pal</p><h2>{target?.name ?? "Which Pal do you want?"}</h2><span>Choose a child to find matching parent combinations in version 1.0.</span></div><button onClick={() => setPicker("target")}><PalMark pal={target} /><b>{target ? "Change target" : "Choose target"}</b></button></div>
-        {target && <div className="breeding-pair-list"><div className="result-count"><strong>{targetPairs.length}</strong><span>{targetPairs.length === 120 ? "parent pairs shown (first 120)" : "parent pairs found"}</span></div>{targetPairs.map(([first, second]) => <article key={`${first.id}-${second.id}`}><div><PalMark pal={first} small /><span>{first.name}</span></div><b>+</b><div><PalMark pal={second} small /><span>{second.name}</span></div><button onClick={() => { setParent1(first); setParent2(second); setMode("parents"); }}>Use pair →</button></article>)}</div>}
-      </>}
-
-      {picker && <div className="pal-picker-backdrop" onClick={() => setPicker(null)}><section className="pal-picker" onClick={(event) => event.stopPropagation()}><header><div><p>Pal selection</p><h2>{picker === "target" ? "Choose Target Pal" : picker === "parent1" ? "Choose Parent 1" : "Choose Parent 2"}</h2></div><button onClick={() => setPicker(null)} aria-label="Close selection">×</button></header><input autoFocus value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search by Pal name or number…" aria-label="Search Pals" /><div className="pal-picker-grid">{filteredPals.map((pal) => <button key={pal.id} onClick={() => choose(pal)}><PalMark pal={pal} small /><span><b>{pal.name}</b><small>No. {pal.number} · Power {pal.power}</small></span></button>)}</div></section></div>}
-    </section>
-  );
+  const [matrix, setMatrix] = useState<BreedingData>({}); const [error, setError] = useState(false); const [mode, setMode] = useState<Mode>(() => { const value = initialParam("mode"); return modes.some(([id]) => id === value) ? value as Mode : "parents"; });
+  const [a, setA] = useState<PalData | undefined>(() => initialPal("parentA")); const [b, setB] = useState<PalData | undefined>(() => initialPal("parentB")); const [target, setTarget] = useState<PalData | undefined>(() => initialPal("target")); const [parent, setParent] = useState<PalData | undefined>(() => initialPal("parent")); const [start, setStart] = useState<PalData | undefined>(() => initialPal("starting"));
+  const [slot, setSlot] = useState<Slot>(null); const [query, setQuery] = useState(""); const [available, setAvailable] = useState<string[]>(() => typeof window === "undefined" ? [] : readAvailablePals()); const [max, setMax] = useState(() => Math.min(5, Math.max(1, Number(initialParam("max")) || 3))); const [excluded, setExcluded] = useState<string[]>([]); const [filter, setFilter] = useState(""); const [page, setPage] = useState(1);
+  const byId = useMemo(() => new Map(pals.map((pal) => [pal.id, pal])), []); const availablePals = available.map((id) => byId.get(id)).filter((pal): pal is PalData => Boolean(pal));
+  useEffect(() => { fetch("/data/breeding.json").then((r) => r.ok ? r.json() : Promise.reject()).then(setMatrix).catch(() => setError(true)); }, []);
+  useEffect(() => { if (!Object.keys(matrix).length) return; const params = new URLSearchParams(); params.set("mode", mode); if (a) params.set("parentA", a.id); if (b) params.set("parentB", b.id); if (parent) params.set("parent", parent.id); if (target) params.set("target", target.id); if (start) params.set("starting", start.id); if (max !== 3) params.set("max", String(max)); history.replaceState(null, "", `${location.pathname}?${params}`); }, [mode, a, b, parent, target, start, max, matrix]);
+  useEffect(() => saveAvailablePals(available), [available]);
+  const search = useMemo(() => { const n = query.trim().toLowerCase(); return pals.filter((pal) => !n || pal.name.toLowerCase().includes(n) || pal.number.toLowerCase().includes(n)).sort(comparePals).slice(0, 60); }, [query]);
+  const childResults = useMemo(() => a && b ? pairResults(matrix, byId, a, b) : [], [matrix, byId, a, b]);
+  const pairs = useMemo(() => target ? findParentPairs(matrix, byId, target).filter((r) => !filter || `${r.first.name} ${r.second.name}`.toLowerCase().includes(filter.toLowerCase())) : [], [matrix, byId, target, filter]);
+  const offspring = useMemo(() => parent ? findOffspring(matrix, byId, parent).filter((r) => !filter || `${r.second.name} ${r.child.name}`.toLowerCase().includes(filter.toLowerCase())) : [], [matrix, byId, parent, filter]);
+  const now = useMemo(() => availableOffspring(matrix, byId, available), [matrix, byId, available]);
+  const route = useMemo(() => target && start ? findRoutes(matrix, byId, [start], target, pals, max, new Set(excluded)) : [], [matrix, byId, target, start, max, excluded]);
+  const availableRoute = useMemo(() => target ? findRoutes(matrix, byId, availablePals, target, availablePals, max) : [], [matrix, byId, target, availablePals, max]);
+  function choose(pal: PalData) { if (slot === "a") setA(pal); if (slot === "b") setB(pal); if (slot === "target") setTarget(pal); if (slot === "parent") setParent(pal); if (slot === "start") setStart(pal); setSlot(null); setQuery(""); }
+  function copy(text: string) { navigator.clipboard?.writeText(text); }
+  const pick = (label: string, value: PalData | undefined, next: Slot) => <button className="pal-select-card" onClick={() => setSlot(next)}><PalMark pal={value} /><span>{label}</span><strong>{value?.name ?? "Choose a Pal"}</strong></button>;
+  const list = (items: BreedingResult[], empty: string) => items.length ? <div className="breed-list">{items.slice(0, page * 40).map((item, i) => <Result key={`${item.first.id}-${item.second.id}-${item.child.id}-${i}`} result={item} usePair={() => { setA(item.first); setB(item.second); setMode("parents"); }} />)}{items.length > page * 40 && <button onClick={() => setPage(page + 1)}>Load more</button>}</div> : <p className="breed-empty">{empty}</p>;
+  if (error) return <section className="database-workspace"><p>Breeding data is unavailable. <button onClick={() => location.reload()}>Retry</button></p></section>;
+  return <section className="database-workspace breeding-workspace" aria-label="Palworld breeding calculator controls"><div className="mode-switch breeding-tabs" role="tablist">{modes.map(([id, label, group]) => <button key={id} className={mode === id ? "active" : ""} onClick={() => { setMode(id); setPage(1); }}>{group === "Routes" && <small>Routes</small>}{label}</button>)}</div>
+    {mode === "parents" && <><div className="breeding-equation">{pick("Parent A", a, "a")}<b>+</b>{pick("Parent B", b, "b")}<b>→</b><div className="breed-results">{list(childResults, a && b ? "No breeding result was found." : "Choose both parents to calculate their offspring.")}</div></div><div className="calculator-foot"><button onClick={() => { setA(b); setB(a); }}>Swap</button><button onClick={() => { setA(undefined); setB(undefined); }}>Clear</button>{childResults.length > 0 && <button onClick={() => copy(childResults.map((r) => `${r.first.name} + ${r.second.name} → ${r.child.name}`).join("\n"))}>Copy combination</button>}</div></>}
+    {mode === "target" && <><div className="target-picker">{pick("Target Pal", target, "target")}<input value={filter} onChange={(e) => setFilter(e.target.value)} placeholder="Search parents…" /></div>{target && <p className="result-count"><strong>{pairs.length}</strong> parent combinations found</p>}{list(pairs, "Choose a target to see every direct parent combination.")}</>}
+    {mode === "offspring" && <><div className="target-picker">{pick("Selected Parent", parent, "parent")}<input value={filter} onChange={(e) => setFilter(e.target.value)} placeholder="Search partner or offspring…" /></div>{list(offspring, "Choose a parent to see all offspring.")}</>}
+    {mode === "available" && <><Available pals={pals} available={available} setAvailable={setAvailable} /><p className="result-count"><strong>{now.length}</strong> unique offspring from {available.length} available species</p><div className="breed-list">{now.map(({ child, combinations }) => <details key={child.id}><summary><PalMark pal={child} small />{child.name} · {combinations.length} combinations</summary>{combinations.map((r, i) => <Result key={i} result={r} />)}</details>)}</div></>}
+    {(mode === "shortest" || mode === "available-route") && <><div className="route-controls">{mode === "shortest" ? pick("Starting Pal", start, "start") : <Available pals={pals} available={available} setAvailable={setAvailable} compact />}{pick("Target Pal", target, "target")}<label>Maximum generations <select value={max} onChange={(e) => setMax(Number(e.target.value))}>{[1,2,3,4,5].map((n) => <option key={n}>{n}</option>)}</select></label></div>{mode === "shortest" && <label className="exclude">Excluded Pal IDs (comma-separated)<input value={excluded.join(",")} onChange={(e) => setExcluded(e.target.value.split(",").filter((id) => byId.has(id)))} /></label>}<Routes routes={mode === "shortest" ? route : availableRoute} copy={copy} /></>}
+    {slot && <div className="pal-picker-backdrop" onClick={() => setSlot(null)}><section className="pal-picker" onClick={(e) => e.stopPropagation()}><header><h2>Choose a Pal</h2><button onClick={() => setSlot(null)}>×</button></header><input autoFocus value={query} onChange={(e) => setQuery(e.target.value)} onKeyDown={(e) => { if (e.key === "Escape") setSlot(null); if (e.key === "Enter" && search[0]) choose(search[0]); }} placeholder="Search name or Paldeck number…" />{<div className="pal-picker-grid">{search.map((pal) => <button key={pal.id} onClick={() => choose(pal)}><PalMark pal={pal} small /><span><b>{pal.name}</b><small>No. {pal.number}</small></span></button>)}</div>}</section></div>}
+  </section>;
 }
+function Available({ pals, available, setAvailable, compact = false }: { pals: PalData[]; available: string[]; setAvailable: (ids: string[]) => void; compact?: boolean }) { const [q, setQ] = useState(""); const shown = pals.filter((p) => p.name.toLowerCase().includes(q.toLowerCase()) || p.number.includes(q)).sort(comparePals).slice(0, compact ? 12 : 40); return <section className="available-pals"><h2>Available Pals</h2><p>Select the Pal species you can use for breeding. Individual count, gender, passives, and stats are not tracked.</p><input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Add available Pal…" /><div>{shown.map((pal) => <button key={pal.id} className={available.includes(pal.id) ? "selected" : ""} onClick={() => setAvailable(available.includes(pal.id) ? available.filter((id) => id !== pal.id) : [...available, pal.id])}><PalMark pal={pal} small />{pal.name}</button>)}</div></section>; }
+function Routes({ routes, copy }: { routes: ReturnType<typeof findRoutes>; copy: (value: string) => void }) { if (!routes.length) return <p className="breed-empty">No route found within this generation limit. Adjust the available Pals or maximum generations.</p>; return <div className="route-list">{routes.map((route, i) => <article key={i}><header><strong>{route.generations} generations</strong><button onClick={() => copy(route.steps.map((s, n) => `Step ${n + 1}: ${s.first.name} + ${s.second.name} → ${s.child.name}`).join("\n"))}>Copy Route</button><button onClick={() => copy(location.href)}>Copy Link</button></header>{route.generations === 0 ? <p>Target already available · 0 generations</p> : route.steps.map((step, n) => <div key={n}><b>Step {n + 1}</b><Result result={step} /></div>)}</article>)}</div>; }

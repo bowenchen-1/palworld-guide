@@ -163,7 +163,9 @@ test("breeding calculator supports forward and reverse searches", async () => {
   assert.match(page, /WebApplication/);
   assert.match(client, /Parents → Child/);
   assert.match(client, /Target → Parents/);
-  assert.match(client, /matrix\[first\.id\]\?\.\[second\.id\]/);
+  const breedingCore = await read("../app/breeding-calculator/breeding/core.ts");
+  assert.match(client, /findParentPairs/);
+  assert.match(breedingCore, /matrix\[first\.id\]\?\.\[second\.id\]/);
 });
 
 test("Paldeck has URL-backed filters, two views, and indexable profile pages", async () => {
