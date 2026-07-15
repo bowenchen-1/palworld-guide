@@ -7,6 +7,7 @@ import "@fontsource/rajdhani/700.css";
 import "./globals.css";
 import "./tool-pages.css";
 import "./terminal-theme.css";
+import "./team-builder/team-builder.css";
 import { siteUrl } from "./site-config";
 
 export const metadata: Metadata = {

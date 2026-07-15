@@ -35,6 +35,17 @@ export default function ToolsPage() {
           </p>
         </div>
         <div className="hub-tool-links">
+          <Link href="/team-builder">
+            <span>05</span>
+            <div>
+              <h3>Team Builder</h3>
+              <p>
+                Assemble five Pals, review team coverage, save the roster, and
+                share it with one link.
+              </p>
+            </div>
+            <b>Open →</b>
+          </Link>
           <Link href="/?mode=parents">
             <span>◉</span>
             <div>

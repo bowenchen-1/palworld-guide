@@ -78,6 +78,7 @@ export const workGlyphs: Record<WorkKey, string> = {
 
 export const toolLinks = [
   { href: "/", label: "Breeding", full: "Palworld Breeding Calculator", icon: "◉" },
+  { href: "/team-builder", label: "Team Builder", full: "Palworld Team Builder", icon: "05" },
   { href: "/paldex", label: "Paldeck", full: "Palworld Paldeck Database", icon: "✦" },
   { href: "/palworld-1-0", label: "1.0 Hub", full: "Palworld 1.0 Guide", icon: "1.0" },
 ];

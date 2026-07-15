@@ -75,6 +75,7 @@ test("each indexable page targets one distinct primary keyword", async () => {
     ["../app/tools/page.tsx", "palworld tools"],
     ["../app/guides/page.tsx", "palworld guides"],
     ["../app/updates/page.tsx", "palworld 1.0 patch notes"],
+    ["../app/team-builder/page.tsx", "palworld team builder"],
   ];
   const keywords = [];
   for (const [path, keyword] of files) {
@@ -228,6 +229,7 @@ test("sitemap exposes tools, guides, and every Pal profile", async () => {
   assert.doesNotMatch(sitemap, /breeding-calculator/);
   assert.match(sitemap, /palworld-1-0/);
   assert.match(sitemap, /\$\{siteUrl\}\/tools/);
+  assert.match(sitemap, /\$\{siteUrl\}\/team-builder/);
   assert.match(sitemap, /\$\{siteUrl\}\/guides/);
   assert.match(sitemap, /\$\{siteUrl\}\/updates/);
   assert.match(sitemap, /pals\.map/);
@@ -249,6 +251,7 @@ test("pages own their canonical and social metadata without inheriting homepage 
     "../app/guides/page.tsx",
     "../app/updates/page.tsx",
     "../app/palworld-1-0/page.tsx",
+    "../app/team-builder/page.tsx",
   ];
 
   assert.doesNotMatch(layout, /alternates:/);
@@ -288,6 +291,24 @@ test("Paldeck uses one responsive searchable comparison table", async () => {
   assert.doesNotMatch(client, /paldex-mobile-cards/);
   assert.match(styles, /\.paldex-complete-table th:first-child,.paldex-complete-table td:first-child\{position:sticky/);
   assert.match(styles, /\.paldex-mobile-cards\{display:none!important\}/);
+});
+
+test("team builder exposes five slots, objective summaries, persistence, and shareable state", async () => {
+  const page = await read("../app/team-builder/page.tsx");
+  const client = await read("../app/team-builder/team-builder-client.tsx");
+  const tools = await read("../app/tools/page.tsx");
+  assert.match(page, /<h1>Palworld Team Builder<\/h1>/);
+  assert.match(page, /TeamBuilderClient/);
+  assert.match(client, /palworld-team-builder-v1/);
+  assert.match(client, /Copy share link/);
+  assert.match(client, /How to breed/);
+  assert.match(client, /Element coverage/);
+  assert.match(client, /Work coverage/);
+  assert.match(client, /Partner skills/);
+  assert.match(client, /role="dialog" aria-modal="true"/);
+  assert.match(client, /parseTeamParam/);
+  assert.match(tools, /href="\/team-builder"/);
+  assert.match(await read("../app/lib/game-data.ts"), /href: "\/team-builder"/);
 });
 
 test("Pal data schema and repeatable import safeguards cover the 1.0 snapshot", async () => {
