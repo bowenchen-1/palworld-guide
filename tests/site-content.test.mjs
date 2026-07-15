@@ -105,6 +105,14 @@ test("homepage hosts all six calculator modes with shared URL and local storage 
   assert.match(client, /Advanced options/);
   assert.match(client, /setExcluded\(\(current\) => current\.filter/);
   assert.doesNotMatch(client, /Search parents…|Search partner or offspring…|Comma-separated IDs/);
+  assert.match(client, /const PICKER_BATCH_SIZE = 60/);
+  assert.match(client, /const visibleSearch = search\.slice\(0, pickerLimit\)/);
+  assert.match(client, /Showing \{visibleSearch\.length\} of \{search\.length\} Pals/);
+  assert.match(client, /setPickerLimit\(\(limit\) => limit \+ PICKER_BATCH_SIZE\)/);
+  assert.match(client, /const matches = useMemo/);
+  assert.match(client, /Showing \{shown\.length\} of \{matches\.length\} Pals/);
+  assert.match(client, /setLimit\(\(value\) => value \+ batchSize\)/);
+  assert.doesNotMatch(client, /sort\(comparePals\)\.slice\(0, 60\)|compact \? 20 : 60/);
 });
 
 test("every current Pal entry has a local image used by the shared Pal component", async () => {
