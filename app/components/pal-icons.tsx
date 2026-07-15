@@ -1,7 +1,7 @@
 "use client";
+/* eslint-disable @next/next/no-img-element -- game UI textures are local, fixed-size assets. */
 
 import { useState } from "react";
-import Image from "next/image";
 import { WorkKey, workLabels } from "../lib/game-data";
 
 const elementFiles: Record<string, string> = {
@@ -33,7 +33,7 @@ const workFiles: Record<WorkKey, string> = {
 
 function PalworldIcon({ src, label, fallback, className }: { src: string; label: string; fallback: string; className: string }) {
   const [failed, setFailed] = useState(false);
-  return <span className={`palworld-icon ${className}`} role="img" aria-label={label} title={label}>{failed ? <span className="palworld-icon-fallback">{fallback}</span> : <Image src={src} alt="" width={32} height={32} unoptimized onError={() => setFailed(true)} />}</span>;
+  return <span className={`palworld-icon ${className}`} role="img" aria-label={label} title={label}>{failed ? <span className="palworld-icon-fallback">{fallback}</span> : <img src={src} alt="" width="32" height="32" loading="eager" decoding="sync" onError={() => setFailed(true)} />}</span>;
 }
 
 export function ElementIcon({ element }: { element: string }) {
