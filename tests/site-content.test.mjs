@@ -115,6 +115,15 @@ test("homepage hosts all six calculator modes with shared URL and local storage 
   assert.doesNotMatch(client, /sort\(comparePals\)\.slice\(0, 60\)|compact \? 20 : 60/);
   assert.match(client, /const modeDescriptions: Record<Mode, string>/);
   assert.match(client, /home-mode-description/);
+  assert.match(client, /const \[mode, setMode\] = useState<Mode>\("parents"\)/);
+  assert.doesNotMatch(client, /initialParam|initialPal|suppressHydrationWarning/);
+  assert.match(client, /requestAnimationFrame\(\(\) => \{ const params = new URLSearchParams\(window\.location\.search\)/);
+  assert.match(client, /if \(!urlRestored \|\| !Object\.keys\(matrix\)\.length\) return/);
+  assert.match(client, /Choose a starting Pal and a target Pal to calculate a route\./);
+  assert.match(client, /role="dialog" aria-modal="true" aria-labelledby="pal-selector-title"/);
+  assert.match(client, /aria-label="Close Pal selector"/);
+  assert.match(client, /searchInputRef\.current\?\.focus/);
+  assert.match(client, /pickerTriggerRef\.current\?\.focus/);
 });
 
 test("every current Pal entry has a local image used by the shared Pal component", async () => {
