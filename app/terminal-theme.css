@@ -748,13 +748,19 @@ body::before {
 .home-calculator-top .breeding-operator { width:28px; height:32px; border:0; background:transparent; box-shadow:none; color:var(--terminal-mint); font-size:22px; }
 .home-calculator-top .breeding-operator.equals { color:var(--terminal-yellow); }
 
-/* Keep the direct calculator on the same compact input scale as every other mode. */
-.home-calculator-top .home-breeding-slot { display:grid; min-height:112px; grid-template-columns:58px minmax(0,1fr) auto; grid-template-rows:minmax(0,1fr) auto; align-items:center; column-gap:10px; padding:25px 12px 12px; text-align:left; }
-.home-calculator-top .home-breeding-slot .pal-mark { grid-column:1; grid-row:1 / 3; width:56px; height:56px; margin:0; border-radius:16px; }
-.home-calculator-top .home-breeding-slot strong { grid-column:2; grid-row:1; margin:0; font-size:18px; }
-.home-calculator-top .home-breeding-slot>small { grid-column:2; grid-row:2; margin:0; }
-.home-calculator-top .home-breeding-slot>i { grid-column:3; grid-row:1 / 3; margin:0; white-space:nowrap; }
-.home-calculator-top .home-breeding-slot .slot-label { left:12px; top:10px; }
+/* Desktop tools share the direct calculator's spacious card scale. */
+.home-calculator-top .home-breeding-slot { display:flex; min-height:260px; align-items:center; justify-content:center; flex-direction:column; padding:36px 18px 18px; text-align:center; }
+.home-calculator-top .home-breeding-slot .pal-mark { width:100px; height:100px; margin:0; border-radius:26px; }
+.home-calculator-top .home-breeding-slot strong { margin-top:14px; font-size:22px; }
+.home-calculator-top .home-breeding-slot>small { margin-top:4px; }
+.home-calculator-top .home-breeding-slot>i { margin-top:12px; }
+.home-calculator-top .home-control-row,.home-calculator-top .home-route-controls { align-items:stretch; }
+.home-calculator-top .home-control-row>.home-compact-picker,.home-calculator-top .home-control-row>.home-filter,.home-calculator-top .home-route-controls> :is(.home-compact-picker,.home-filter,.home-number-control,.home-available-control) { min-height:260px; }
+.home-calculator-top .home-control-row>.home-compact-picker { display:flex; align-items:center; justify-content:center; flex-direction:column; gap:8px; text-align:center; }
+.home-calculator-top .home-control-row>.home-compact-picker .pal-mark { width:82px; height:82px; border-radius:22px; }
+.home-calculator-top .home-control-row>.home-compact-picker>span { min-width:0; }
+.home-calculator-top .home-control-row>.home-compact-picker>b { margin-top:4px; }
+.home-calculator-top .home-control-row>.home-filter,.home-calculator-top .home-route-controls>.home-filter,.home-calculator-top .home-route-controls>.home-number-control { align-content:center; }
 
 .home-calculator-top .home-control-row,.home-calculator-top .home-route-controls { position:relative; z-index:1; display:grid; grid-template-columns:minmax(0,1.15fr) minmax(220px,.85fr); gap:10px; align-items:stretch; }
 .home-calculator-top .home-route-controls { grid-template-columns:minmax(0,1fr) minmax(0,1fr) 170px; }
@@ -782,14 +788,31 @@ body::before {
 .home-calculator-top .home-available-control header button+button { background:var(--terminal-panel-light); color:var(--terminal-copy); }
 .home-calculator-top .home-available-list { margin-top:10px; border-top:1px solid var(--terminal-border); padding-top:10px; }
 .home-calculator-top .home-available-list>input { min-height:38px; border:1px solid var(--terminal-border); border-radius:7px; background:var(--terminal-canvas); padding:0 10px; }
-.home-calculator-top .home-available-list>div { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:6px; margin-top:8px; }
-.home-calculator-top .home-available-list>div>button { display:flex; min-width:0; align-items:center; gap:7px; border:1px solid var(--terminal-border); border-radius:8px; background:var(--terminal-panel-light); padding:7px; color:var(--terminal-copy); text-align:left; }
+.home-calculator-top .home-available-list>input { caret-color:var(--terminal-mint); }
+.home-calculator-top .home-available-list>input:focus,.home-calculator-top .home-filter:focus-within { border-color:var(--terminal-mint); box-shadow:0 0 0 3px rgba(57,208,197,.18); }
+.home-calculator-top .home-available-list>div { display:grid; grid-template-columns:repeat(6,minmax(0,1fr)); gap:8px; margin-top:8px; }
+.home-calculator-top .home-available-list>div>button { display:flex; min-width:0; min-height:116px; align-items:center; justify-content:center; flex-direction:column; gap:6px; border:1px solid var(--terminal-border); border-radius:12px; background:rgba(255,255,255,.035); padding:10px 8px; color:var(--terminal-copy); text-align:center; transition:.16s; }
+.home-calculator-top .home-available-list>div>button:hover { border-color:var(--terminal-mint); background:var(--terminal-panel-hover); }
 .home-calculator-top .home-available-list>div>button.selected { border-color:var(--terminal-mint); background:rgba(57,208,197,.13); }
-.home-calculator-top .home-available-list .pal-mark { width:30px; height:30px; border-width:1px; border-radius:8px; }
+.home-calculator-top .home-available-list .pal-mark { width:58px; height:58px; border-width:2px; border-radius:17px; }
 .home-calculator-top .home-available-list span { min-width:0; }
 .home-calculator-top .home-available-list strong,.home-calculator-top .home-available-list small { display:block; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
-.home-calculator-top .home-available-list strong { font-size:10px; }
-.home-calculator-top .home-available-list small { margin-top:2px; color:var(--terminal-muted); font-size:7px; }
+.home-calculator-top .home-available-list strong { font-size:11px; }
+.home-calculator-top .home-available-list small { margin-top:2px; color:var(--terminal-muted); font-size:8px; }
+
+/* The modal picker deliberately mirrors the inline Available Pals grid. */
+.home-picker-backdrop { background:rgba(1,20,32,.82); backdrop-filter:blur(10px); }
+.home-pal-picker { border:1px solid var(--terminal-border); background:linear-gradient(135deg,var(--terminal-panel),var(--terminal-canvas-2)); color:var(--terminal-copy); box-shadow:0 28px 80px rgba(0,8,12,.54),inset 0 1px 0 rgba(255,255,255,.05); }
+.home-pal-picker h2 { color:var(--terminal-copy); }
+.home-pal-picker header>button { border:1px solid var(--terminal-border); background:var(--terminal-panel-light); color:var(--terminal-copy); }
+.home-pal-picker>input { width:100%; min-height:52px; margin-top:16px; border:1px solid var(--terminal-border); border-radius:10px; background:var(--terminal-canvas); padding:0 14px; color:var(--terminal-copy); caret-color:var(--terminal-mint); font:inherit; font-size:14px; outline:none; }
+.home-pal-picker>input::placeholder { color:#89a8aa; opacity:1; }
+.home-pal-picker>input:focus { border-color:var(--terminal-mint); box-shadow:0 0 0 3px rgba(57,208,197,.22),inset 0 0 0 1px rgba(57,208,197,.14); }
+.home-pal-picker .pal-picker-grid { grid-template-columns:repeat(6,minmax(0,1fr)); gap:8px; margin-top:14px; }
+.home-pal-picker .pal-picker-grid>button { min-height:116px; border-color:var(--terminal-border); border-radius:12px; background:rgba(255,255,255,.035); box-shadow:none; color:var(--terminal-copy); }
+.home-pal-picker .pal-picker-grid>button:hover { border-color:var(--terminal-mint); background:var(--terminal-panel-hover); }
+.home-pal-picker .pal-picker-grid b { color:var(--terminal-copy); }
+.home-pal-picker .pal-picker-grid small { color:var(--terminal-muted); }
 
 .home-calculator-top .home-results { position:relative; z-index:1; margin-top:12px; border-top:1px solid var(--terminal-border); padding-top:12px; }
 .home-calculator-top .home-results>header { display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:9px; }
@@ -809,19 +832,24 @@ body::before {
   .home-calculator-top .home-route-controls { grid-template-columns:1fr 1fr; }
   .home-calculator-top .home-exclude { grid-column:1 / -1; }
   .home-calculator-top .home-available-list>div { grid-template-columns:repeat(3,minmax(0,1fr)); }
+  .home-pal-picker .pal-picker-grid { grid-template-columns:repeat(4,minmax(0,1fr)); }
 }
 @media(max-width:560px) {
   .home-calculator-top .home-breeding-tabs { gap:4px; }
   .home-calculator-top .home-breeding-tabs button { min-height:44px; padding:6px 4px; font-size:9px; }
   .home-calculator-top .home-workbench { margin-top:8px; padding:12px; }
   .home-calculator-top .home-breeding-equation { grid-template-columns:1fr; gap:4px; }
-  .home-calculator-top .home-breeding-slot { min-height:72px; grid-template-columns:44px minmax(0,1fr) auto; grid-template-rows:minmax(0,1fr) auto; column-gap:8px; padding:22px 9px 8px; }
-  .home-calculator-top .home-breeding-slot .pal-mark { grid-row:1 / 3; width:42px; height:42px; border-radius:12px; }
-  .home-calculator-top .home-breeding-slot strong { font-size:14px; }
-  .home-calculator-top .home-breeding-slot>small { font-size:7px; }
-  .home-calculator-top .home-breeding-slot>i { grid-column:3; grid-row:1 / 3; padding:5px 6px; font-size:5px; }
+  .home-calculator-top .home-breeding-slot { min-height:116px; display:grid; grid-template-columns:42px minmax(0,1fr); grid-template-rows:minmax(0,1fr) auto auto; column-gap:5px; padding:25px 6px 7px; text-align:left; }
+  .home-calculator-top .home-breeding-slot .pal-mark { grid-row:1 / 4; width:40px; height:40px; border-radius:12px; }
+  .home-calculator-top .home-breeding-slot strong { margin:0; font-size:10px; }
+  .home-calculator-top .home-breeding-slot>small { margin:0; font-size:5px; }
+  .home-calculator-top .home-breeding-slot>i { grid-column:2; grid-row:3; justify-self:start; margin:0; padding:4px; font-size:4px; }
+  .home-calculator-top .home-control-row>.home-compact-picker,.home-calculator-top .home-control-row>.home-filter,.home-calculator-top .home-route-controls> :is(.home-compact-picker,.home-filter,.home-number-control,.home-available-control) { min-height:70px; }
   .home-calculator-top .breeding-operator { width:auto; height:10px; font-size:15px; line-height:10px; }
   .home-calculator-top .home-control-row,.home-calculator-top .home-route-controls { grid-template-columns:1fr; }
   .home-calculator-top .home-compact-picker { min-height:70px; }
   .home-calculator-top .home-available-list>div { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .home-calculator-top .home-available-list>div>button,
+  .home-pal-picker .pal-picker-grid>button { min-height:100px; }
+  .home-pal-picker .pal-picker-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
 }
