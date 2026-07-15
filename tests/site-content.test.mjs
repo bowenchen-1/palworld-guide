@@ -175,9 +175,10 @@ test("Paldeck has current filters and indexable profile pages", async () => {
   assert.match(page, /PaldexPageContent/);
   assert.match(content, /Palworld Paldeck Database/);
   assert.match(client, /Work Suitability/);
-  assert.match(client, /Minimum Work Level/);
+  assert.match(client, /Work Skill/);
+  assert.match(client, /Level \{level\}\+/);
   assert.match(client, /Highest work level/);
-  assert.match(client, /paldex-view-toggle/);
+  assert.match(client, /paldex-control-bar/);
   assert.match(client, /Reset filters/);
   assert.match(client, /Breeding power/);
   assert.match(client, /PALDEX_PAGE_SIZE/);
@@ -250,6 +251,20 @@ test("Paldeck pagination exposes every initial Pal card to crawlers", async () =
   assert.match(pagination, /permanentRedirect\("\/paldex"\)/);
   assert.match(pagination, /path: `\/paldex\/page\/\$\{page\}`/);
   assert.match(content, /<PaldexClient initialPage=\{initialPage\}/);
+});
+
+test("Paldeck uses compact searchable table controls with translation-safe pagination", async () => {
+  const pageContent = await read("../app/paldex/paldex-page-content.tsx");
+  const client = await read("../app/paldex/paldex-client.tsx");
+  const styles = await read("../app/tool-pages.css");
+  assert.match(pageContent, /compact-paldex-hero/);
+  assert.doesNotMatch(pageContent, /<DataNotice/);
+  assert.match(client, /className="paldex-search"/);
+  assert.match(client, /className="paldex-table"/);
+  assert.match(client, /className="paldex-filter-sheet"/);
+  assert.match(client, /className="paldex-pagination-pages"/);
+  assert.match(styles, /\.paldex-pagination-pages\{display:flex;align-items:center/);
+  assert.match(styles, /\.paldex-pagination-pages>:not\(a\)\{display:none!important\}/);
 });
 
 test("social metadata declares locale, dimensions, and Pal sharing cards", async () => {

@@ -541,6 +541,33 @@ body::before {
 .paldex-pagination a:hover,
 .paldex-pagination a:focus-visible { border-color: var(--terminal-mint); color: var(--terminal-mint); }
 .paldex-pagination a[aria-current="page"] { border-color: var(--terminal-mint); background: var(--terminal-mint); color: var(--terminal-canvas); }
+.compact-paldex-hero { background: linear-gradient(135deg,var(--terminal-panel),var(--terminal-canvas-2)); }
+.paldex-control-bar,
+.paldex-table-wrap,
+.paldex-filter-sheet { border-color: var(--terminal-border); background: var(--terminal-panel); color: var(--terminal-copy); }
+.paldex-search,
+.paldex-control-bar>button,
+.paldex-filter-options button,
+.paldex-filter-actions button { background: var(--terminal-panel-light); color: var(--terminal-copy); }
+.paldex-search>span,
+.paldex-control-bar>button span,
+.paldex-table th { color: var(--terminal-muted); }
+.paldex-search input,
+.paldex-control-bar>button strong,
+.paldex-table td:not(:first-child),
+.paldex-table td:first-child a,
+.paldex-filter-sheet h2 { color: var(--terminal-copy); }
+.paldex-search input::placeholder,
+.paldex-table small { color: var(--terminal-muted); }
+.paldex-table th,
+.paldex-table td { border-color: var(--terminal-border); }
+.paldex-table th { background: var(--terminal-panel); }
+.paldex-table tbody tr:hover,
+.paldex-table tbody tr.selected { background: var(--terminal-panel-hover); }
+.paldex-table .mini-work span,
+.top-work { background: var(--terminal-panel-light); color: var(--terminal-mint); }
+.paldex-filter-backdrop { background: rgba(1,20,32,.72); }
+.paldex-filter-options button.active { background: var(--terminal-mint); color: var(--terminal-canvas); }
 
 .not-found-page {
   display: grid;
