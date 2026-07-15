@@ -29,6 +29,11 @@ test("homepage targets Palworld breeding calculator with one focused H1", async 
   assert.match(page, /home-calculator-top/);
   assert.match(page, /Updated for Palworld 1\.0/);
   assert.match(page, /home-calculator-intro/);
+  assert.match(page, /const standardPalCount = pals\.filter\(\(pal\) => pal\.kind === "pal"\)\.length/);
+  assert.match(page, /const crossoverCreatureCount = pals\.filter\(\(pal\) => pal\.kind === "monster"\)\.length/);
+  assert.match(page, /Total Pal entries/);
+  assert.match(page, /standard Pals · \{crossoverCreatureCount\} crossover creatures · \{totalPalEntryCount\} total Pal entries/);
+  assert.doesNotMatch(page, /300 breeding records|Pal records|Browse all 289 Pals/);
   assert.doesNotMatch(page, /home-release-panel/);
   assert.match(page, /Popular Pals/);
   assert.doesNotMatch(layout, /Palworld Breeding Calculator - Updated 1\.0 Pal Combos/);
