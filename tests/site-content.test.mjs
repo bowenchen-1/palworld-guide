@@ -299,6 +299,7 @@ test("team builder exposes five slots, objective summaries, persistence, and sha
   const page = await read("../app/team-builder/page.tsx");
   const client = await read("../app/team-builder/team-builder-client.tsx");
   const tools = await read("../app/tools/page.tsx");
+  const header = await read("../app/components/site-header.tsx");
   assert.match(page, /<h1>Palworld Team Builder<\/h1>/);
   assert.match(page, /TeamBuilderClient/);
   assert.match(client, /palworld-team-builder-v1/);
@@ -311,6 +312,8 @@ test("team builder exposes five slots, objective summaries, persistence, and sha
   assert.match(client, /parseTeamParam/);
   assert.match(tools, /href="\/team-builder"/);
   assert.match(await read("../app/lib/game-data.ts"), /href: "\/team-builder"/);
+  assert.match(header, /\["Team Builder", "\/team-builder"\]/);
+  assert.match(page, /ToolShell current="\/team-builder"/);
 });
 
 test("Pal data schema and repeatable import safeguards cover the 1.0 snapshot", async () => {

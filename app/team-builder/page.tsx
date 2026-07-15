@@ -11,7 +11,7 @@ export const metadata = createPageMetadata({
 
 export default function TeamBuilderPage() {
   const schema = { "@context": "https://schema.org", "@type": "WebApplication", name: "Palworld Team Builder", applicationCategory: "GameApplication", operatingSystem: "Any", isAccessibleForFree: true };
-  return <ToolShell current="/tools">
+  return <ToolShell current="/team-builder">
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
     <section className="team-builder-hero">
       <div><p className="database-eyebrow">Expedition planning // 5 slots</p><h1>Palworld Team Builder</h1><p>Assemble a five-Pal party, see what the roster covers, and keep every profile and breeding route one click away.</p></div>
