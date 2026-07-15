@@ -57,12 +57,18 @@ export default function PaldexClient({ initialPage: _initialPage = 1 }: { initia
   };
   const clearAll = () => update({ q: "", elements: [], elementMode: "any", work: [], workMode: "any", workLevel: 0, types: ["pal"], sort: "number" });
   const hasFilters = Boolean(filters.q || filters.elements.length || filters.work.length || filters.workLevel || filters.types.join(",") !== "pal" || filters.sort !== "number");
+  const toggleElement = (element: string) => update({ elements: toggle(filters.elements, element) });
+  const toggleWork = (work: WorkKey) => update({ work: toggle(filters.work, work) });
 
   return <section className="database-workspace paldex-workspace paldex-wide" aria-label="Palworld Paldeck filters and results">
     <div className="paldex-control-bar">
       <label className="paldex-search"><span>⌕</span><input value={filters.q} onChange={(event) => update({ q: event.target.value })} placeholder="Search English name or Paldeck number…" aria-label="Search Paldeck" /></label>
       <button type="button" className="paldex-filter-open" onClick={() => open("elements")}><span>Element</span><strong>{filters.elements.length ? `${filters.elements.length} selected` : "Any element"}</strong></button>
       <button type="button" className="paldex-filter-open" onClick={() => open("work")}><span>Work suitability</span><strong>{filters.work.length ? `${filters.work.length} selected` : "Any work"}</strong></button>
+    </div>
+    <div className="paldex-icon-filters" aria-label="Quick Pal filters">
+      <section className="paldex-icon-filter-group" aria-labelledby="paldex-elements-label"><div className="paldex-icon-filter-heading"><h2 id="paldex-elements-label">Filter by element</h2>{filters.elements.length > 1 && <div className="paldex-inline-mode"><button type="button" className={filters.elementMode === "any" ? "active" : ""} onClick={() => update({ elementMode: "any" })}>Any</button><button type="button" className={filters.elementMode === "all" ? "active" : ""} onClick={() => update({ elementMode: "all" })}>All</button></div>}</div><div className="paldex-icon-filter-list">{elementOptions.map((item) => <button type="button" key={item} className={filters.elements.includes(item) ? "active" : ""} aria-pressed={filters.elements.includes(item)} aria-label={`Filter by ${item}`} title={item} onClick={() => toggleElement(item)}><ElementIcon element={item} /></button>)}</div></section>
+      <section className="paldex-icon-filter-group" aria-labelledby="paldex-work-label"><div className="paldex-icon-filter-heading"><h2 id="paldex-work-label">Filter by work</h2>{filters.work.length > 1 && <div className="paldex-inline-mode"><button type="button" className={filters.workMode === "any" ? "active" : ""} onClick={() => update({ workMode: "any" })}>Any</button><button type="button" className={filters.workMode === "all" ? "active" : ""} onClick={() => update({ workMode: "all" })}>All</button></div>}</div><div className="paldex-icon-filter-list work-list">{workTypes.map((item) => <button type="button" key={item} className={filters.work.includes(item) ? "active" : ""} aria-pressed={filters.work.includes(item)} aria-label={`Filter by ${workLabels[item]}`} title={workLabels[item]} onClick={() => toggleWork(item)}><WorkSuitabilityIcon work={item} /></button>)}</div></section>
     </div>
     <div className="paldex-toolbar">
       <p><strong>{visible.length}</strong> {visible.length === 1 ? "entry" : "entries"} found</p>

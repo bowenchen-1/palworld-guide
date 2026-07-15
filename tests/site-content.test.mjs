@@ -265,6 +265,10 @@ test("Paldeck uses one responsive searchable comparison table", async () => {
   assert.match(client, /className="paldex-search"/);
   assert.match(client, /className="paldex-table paldex-complete-table"/);
   assert.match(client, /className="paldex-filter-sheet"/);
+  assert.match(client, /className="paldex-icon-filters"/);
+  assert.match(client, /aria-label={`Filter by \$\{item\}`}/);
+  assert.match(client, /toggleElement/);
+  assert.match(client, /toggleWork/);
   assert.doesNotMatch(client, /paldex-mobile-cards/);
   assert.match(styles, /\.paldex-complete-table th:first-child,.paldex-complete-table td:first-child\{position:sticky/);
   assert.match(styles, /\.paldex-mobile-cards\{display:none!important\}/);
