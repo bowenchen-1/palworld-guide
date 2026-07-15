@@ -4,7 +4,7 @@ import TeamBuilderClient from "./team-builder-client";
 
 export const metadata = createPageMetadata({
   title: "Palworld Team Builder — Build & Share 5-Pal Parties",
-  description: "Build a five-Pal party for Palworld 1.0, review element and work coverage, compare partner skills, save your team locally, and share the plan with a practical roster summary.",
+  description: "Build a five-Pal party for Palworld 1.0, review element and work coverage, compare partner skills, save your team locally, and share the plan for your run.",
   keywords: ["palworld team builder"],
   path: "/team-builder",
 });

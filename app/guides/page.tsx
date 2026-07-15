@@ -6,7 +6,7 @@ import { guideCategories, guides } from "./guide-data";
 export const metadata = createPageMetadata({
   title: "Palworld Guides — 24 Player-Researched 1.0 Articles",
   description:
-    "Browse 24 English Palworld guides for version 1.0, organized by getting started, breeding, bases, resources, exploration, and combat, with practical routes and checklists.",
+    "Browse 24 English Palworld guides for version 1.0, organized by getting started, breeding, bases, resources, exploration, and combat, with practical routes.",
   keywords: ["palworld guides"],
   path: "/guides",
 });
