@@ -23,8 +23,8 @@ export default function BreedingCalculatorPage() {
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
     <section className="database-hero breeding-hero"><div><p className="database-eyebrow">Updated for version 1.0</p><h1>Palworld Breeding Combinations</h1><p>Choose two parent Pals to calculate their child, or begin with the Pal you want and find every available parent pair.</p></div><div className="egg-visual" aria-hidden="true"><span /><i>?</i></div></section>
-    <DataNotice>Current snapshot: 289 Pals, 11 crossover creatures, and the complete Palworld 1.0 breeding matrix. Last cross-checked July 14, 2026.</DataNotice>
     <BreedingClient />
+    <DataNotice>Current snapshot: 289 Pals, 11 crossover creatures, and the complete Palworld 1.0 breeding matrix. Last cross-checked July 14, 2026.</DataNotice>
     <section className="database-seo-copy"><div><p className="database-eyebrow">How it works</p><h2>Plan a Palworld 1.0 breeding route</h2><p>The calculator reads the current result for every parent pair. Use Parents → Child when you already own two candidates. Use Target → Parents when you are planning backward from a Pal such as Sekhmet, Anubis, or Jetragon.</p><p>Breeding outcomes are species-level results. Passive skills, gender, Potential values, mutations, and inherited traits still depend on the parents and the game&apos;s normal breeding rules.</p></div><aside><h2>Breeding calculator FAQ</h2>{faqs.map(([question, answer]) => <details key={question}><summary>{question}</summary><p>{answer}</p></details>)}</aside></section>
   </ToolShell>;
 }

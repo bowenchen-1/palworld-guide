@@ -644,3 +644,84 @@ body::before {
   .hub-hero,
   .profile-hero { border-radius: 12px; }
 }
+
+/* First-screen hierarchy: retain a clear introduction, then surface the page's work. */
+.database-hero,
+.hub-hero {
+  min-height: 0;
+  margin-top: 16px;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0;
+  padding: clamp(28px,3.4vw,46px) clamp(22px,4.5vw,58px);
+}
+.database-hero h1,
+.hub-hero h1 {
+  max-width: 920px;
+  margin-top: 8px;
+  font-size: clamp(2.65rem,4.4vw,4.65rem);
+  line-height: .9;
+}
+.database-hero p:last-child,
+.hub-hero>p:last-child {
+  max-width: 760px;
+  margin-top: 12px;
+  font-size: 14px;
+  line-height: 1.55;
+}
+.database-hero::after,
+.hub-hero::after { right: 22px; bottom: 14px; }
+.database-hero .egg-visual,
+.database-hero .version-orbit { display: none; }
+
+.database-workspace { margin-top: 18px; padding-bottom: 42px; }
+.data-notice { margin-top: 16px; }
+.hub-content,
+.guides-index-content,
+.updates-content { margin-top: 24px; margin-bottom: 64px; }
+
+.home-scene-hero,
+.home-scene-hero#top { min-height: 0; padding-bottom: 26px; }
+.home-scene-grid { min-height: 0; align-content: start; gap: 16px; padding-top: 24px; }
+.home-terminal-intro { gap: 24px; }
+.home-terminal-intro h1 { font-size: clamp(3rem,4.6vw,4.8rem); line-height: .88; }
+.home-terminal-intro>div:first-child>p:last-child { max-width: 700px; margin-top: 10px; font-size: 14px; line-height: 1.55; }
+.terminal-status span { padding-top: 7px; }
+
+.profile-hero { margin-top: 16px; margin-bottom: 20px; gap: 30px; padding: clamp(26px,3.6vw,44px); }
+.profile-hero h1 { font-size: clamp(2.75rem,4.5vw,4.75rem); line-height: .9; }
+.profile-hero-copy>p:last-of-type { margin-top: 12px; font-size: 14px; line-height: 1.6; }
+.profile-hero-copy>div { margin-top: 18px; }
+.profile-hero>.pal-mark { width: 160px; height: 160px; border-radius: 42px; }
+.profile-content { margin-top: 34px; }
+
+.article-hero { padding-top: 34px !important; padding-bottom: 38px !important; }
+.article-hero>div> .grid { gap: 24px; }
+.article-hero h1 { font-size: clamp(2.8rem,4.8vw,5rem) !important; line-height: .92 !important; }
+.article-hero h1 + p { margin-top: 14px !important; font-size: 16px !important; line-height: 1.55 !important; }
+.article-hero + div { padding-top: 42px !important; padding-bottom: 58px !important; }
+
+@media(max-width:760px) {
+  .database-hero,
+  .hub-hero { margin-top: 0; padding: 26px 18px 28px; }
+  .database-hero h1,
+  .hub-hero h1 { font-size: clamp(2.35rem,10vw,3.15rem); }
+  .database-hero p:last-child,
+  .hub-hero>p:last-child { margin-top: 10px; font-size: 13px; }
+  .database-hero::after,
+  .hub-hero::after { display: none; }
+  .database-workspace { margin-top: 14px; padding-bottom: 32px; }
+  .hub-content,
+  .guides-index-content,
+  .updates-content { margin-top: 18px; margin-bottom: 48px; }
+  .home-scene-grid { gap: 14px; padding-top: 20px; }
+  .home-terminal-intro { gap: 12px; }
+  .home-terminal-intro h1 { font-size: clamp(2.55rem,11vw,3.5rem); }
+  .home-terminal-intro>div:first-child>p:last-child { font-size: 12px; }
+  .profile-hero { grid-template-columns: 1fr; margin: 0; padding: 26px 18px; }
+  .profile-hero>.pal-mark { display: none; }
+  .profile-content { margin-top: 28px; }
+  .article-hero { padding-top: 28px !important; padding-bottom: 30px !important; }
+  .article-hero h1 { font-size: clamp(2.45rem,11vw,3.35rem) !important; }
+  .article-hero h1 + p { font-size: 14px !important; }
+  .article-hero + div { padding-top: 28px !important; }
+}
