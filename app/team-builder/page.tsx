@@ -3,15 +3,15 @@ import { createPageMetadata } from "../lib/seo";
 import TeamBuilderClient from "./team-builder-client";
 
 export const metadata = createPageMetadata({
-  title: "Palworld Team Builder - Plan a 5 Pal Party",
-  description: "Build a five-Pal party for Palworld 1.0, review element and work coverage, compare partner skills, save your team locally, and share the plan.",
+  title: "Palworld Team Builder — Build & Share 5-Pal Parties",
+  description: "Build a five-Pal party for Palworld 1.0, review element and work coverage, compare partner skills, save your team locally, and share the plan with a practical roster summary.",
   keywords: ["palworld team builder"],
   path: "/team-builder",
 });
 
 export default function TeamBuilderPage() {
   const schema = { "@context": "https://schema.org", "@type": "WebApplication", name: "Palworld Team Builder", applicationCategory: "GameApplication", operatingSystem: "Any", isAccessibleForFree: true };
-  return <ToolShell current="/team-builder">
+  return <ToolShell current="/team-builder" breadcrumb={[{ name: "Home", path: "/" }, { name: "Tools", path: "/tools" }, { name: "Team Builder", path: "/team-builder" }]}>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
     <section className="team-builder-hero">
       <div><p className="database-eyebrow">Expedition planning // 5 slots</p><h1>Palworld Team Builder</h1><p>Assemble a five-Pal party, see what the roster covers, and keep every profile and breeding route one click away.</p></div>

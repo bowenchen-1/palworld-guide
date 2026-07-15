@@ -3,7 +3,7 @@ import ToolShell from "../components/tool-shell";
 import { createPageMetadata } from "../lib/seo";
 
 export const metadata = createPageMetadata({
-  title: "Palworld 1.0 Patch Notes & Data Updates",
+  title: "Palworld 1.0 Patch Notes & Current Data Updates",
   description:
     "Track Palworld 1.0 patch notes, current database coverage, breeding-data refreshes, and which Field Guide tools have been updated for the latest version.",
   keywords: ["palworld 1.0 patch notes"],
@@ -12,7 +12,7 @@ export const metadata = createPageMetadata({
 
 export default function UpdatesPage() {
   return (
-    <ToolShell current="/updates">
+    <ToolShell current="/updates" breadcrumb={[{ name: "Home", path: "/" }, { name: "Updates", path: "/updates" }]}>
       <section className="hub-hero updates-hub-hero">
         <p className="database-eyebrow">Version and data center</p>
         <h1>Palworld 1.0 Patch Notes</h1>

@@ -1,19 +1,24 @@
 import Link from "next/link";
 import SiteHeader from "../components/site-header";
-import { createPageMetadata } from "../lib/seo";
+import { createBreadcrumbSchema, createPageMetadata } from "../lib/seo";
 import { guideCategories, guides } from "./guide-data";
 
 export const metadata = createPageMetadata({
-  title: "Palworld Guides — 24 Player-Researched Articles",
+  title: "Palworld Guides — 24 Player-Researched 1.0 Articles",
   description:
-    "Browse 24 English Palworld guides for version 1.0, organized by getting started, breeding, bases, resources, exploration, and combat.",
+    "Browse 24 English Palworld guides for version 1.0, organized by getting started, breeding, bases, resources, exploration, and combat, with practical routes and checklists.",
   keywords: ["palworld guides"],
   path: "/guides",
 });
 
 export default function GuidesIndexPage() {
+  const breadcrumbSchema = createBreadcrumbSchema([
+    { name: "Home", path: "/" },
+    { name: "Guides", path: "/guides" },
+  ]);
   return (
     <main id="main-content" className="hub-page">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <div className="database-header">
         <SiteHeader current="/guides" />
       </div>

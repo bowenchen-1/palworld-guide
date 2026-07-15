@@ -13,7 +13,7 @@ export const metadata = createPageMetadata({
 
 export default function ToolsPage() {
   return (
-    <ToolShell current="/tools">
+    <ToolShell current="/tools" breadcrumb={[{ name: "Home", path: "/" }, { name: "Tools", path: "/tools" }]}>
       <section className="hub-hero tools-hub-hero">
         <p className="database-eyebrow">Current, useful, focused</p>
         <h1>Palworld Tools & Calculators</h1>

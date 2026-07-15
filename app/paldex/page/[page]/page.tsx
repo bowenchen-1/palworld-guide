@@ -17,12 +17,18 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const page = Number.parseInt((await params).page, 10);
   if (!Number.isInteger(page) || page < 2 || page > pageCount) return {};
-  return createPageMetadata({
-    title: `Palworld Paldeck Database — Page ${page} of ${pageCount}`,
-    description: `Browse Palworld Paldeck profiles ${((page - 1) * PALDEX_PAGE_SIZE) + 1}–${Math.min(page * PALDEX_PAGE_SIZE, palCount)} of ${palCount}, with current version 1.0 work suitability and breeding power data.`,
+  return {
+    ...createPageMetadata({
+    title: `Palworld Paldeck Database — Page ${page} of ${pageCount} | 1.0`,
+    description: `Browse Palworld Paldeck profiles ${((page - 1) * PALDEX_PAGE_SIZE) + 1}–${Math.min(page * PALDEX_PAGE_SIZE, palCount)} of ${palCount}, with current version 1.0 work suitability, breeding power, images, and profile links for focused research.`,
     keywords: ["palworld paldeck"],
     path: `/paldex/page/${page}`,
-  });
+    }),
+    pagination: {
+      previous: page === 2 ? "/paldex" : `/paldex/page/${page - 1}`,
+      ...(page < pageCount ? { next: `/paldex/page/${page + 1}` } : {}),
+    },
+  };
 }
 
 export default async function PaldexPaginationPage({ params }: Props) {
@@ -31,4 +37,3 @@ export default async function PaldexPaginationPage({ params }: Props) {
   if (!Number.isInteger(page) || page < 2 || page > pageCount) notFound();
   return <PaldexPageContent initialPage={page} />;
 }
-

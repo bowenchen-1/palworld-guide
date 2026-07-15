@@ -14,6 +14,20 @@ type PageMetadataOptions = {
   modifiedTime?: string;
 };
 
+export function fitMetaTitle(title: string): string {
+  const compact = `${title} | Palworld 1.0`;
+  const expanded = `${title} | Palworld 1.0 Field Guide`;
+  if (compact.length >= 50 && compact.length <= 60) return compact;
+  if (expanded.length <= 60) return expanded;
+  return compact.length <= 60 ? compact : `${compact.slice(0, 57).trimEnd()}...`;
+}
+
+export function fitMetaDescription(description: string): string {
+  const expanded = `${description.trim()} Follow this Palworld 1.0 guide for practical steps, checks, and route decisions you can use in your next run.`;
+  if (expanded.length <= 160) return expanded;
+  return `${expanded.slice(0, 157).trimEnd()}...`;
+}
+
 export const absoluteUrl = (path: string) => path === "/" ? siteUrl : `${siteUrl}${path.startsWith("/") ? path : `/${path}`}`;
 
 export function createPageMetadata({
@@ -37,6 +51,7 @@ export function createPageMetadata({
   return {
     title,
     description,
+    robots: { index: true, follow: true },
     keywords,
     alternates: { canonical: url },
     openGraph,

@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import PalMark from "../../components/pal-mark";
 import SiteHeader from "../../components/site-header";
 import { findPal, palCounts, pals, WorkKey, workGlyphs, workLabels } from "../../lib/game-data";
-import { createBreadcrumbSchema, createPageMetadata } from "../../lib/seo";
+import { createBreadcrumbSchema, createPageMetadata, fitMetaTitle } from "../../lib/seo";
 import { siteUrl } from "../../site-config";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const pal = findPal(slug);
   if (!pal) return {};
-  const title = `${pal.name} Palworld Guide — 1.0 Paldeck Data`;
+  const title = fitMetaTitle(`${pal.name} Palworld Guide — 1.0 Paldeck Data`);
   const description = `${pal.name} in Palworld 1.0: Paldeck No. ${pal.number}, current work suitability, breeding power, calculator links, and related Pal profiles, updated July 2026.`;
   return createPageMetadata({
     title,

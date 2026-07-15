@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import SiteHeader from "../../components/site-header";
-import { absoluteUrl, createBreadcrumbSchema, createPageMetadata } from "../../lib/seo";
+import { absoluteUrl, createBreadcrumbSchema, createPageMetadata, fitMetaDescription, fitMetaTitle } from "../../lib/seo";
 import { getGuide, guides } from "../guide-data";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -16,8 +16,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const guide = getGuide(slug);
   if (!guide) return {};
   return createPageMetadata({
-    title: `${guide.title} — Palworld Guide`,
-    description: guide.description,
+    title: fitMetaTitle(`${guide.title} — Palworld Guide`),
+    description: fitMetaDescription(guide.description),
     path: `/guides/${guide.slug}`,
     keywords: [guide.title.toLowerCase()],
     type: "article",

@@ -17,7 +17,7 @@ export default function PaldexPageContent({ initialPage = 1 }: { initialPage?: n
     isPartOf: initialPage > 1 ? { "@type": "CollectionPage", name: "Palworld Paldeck Database", url: `${siteUrl}/paldex` } : undefined,
   };
 
-  return <ToolShell current="/paldex">
+  return <ToolShell current="/paldex" breadcrumb={[{ name: "Home", path: "/" }, { name: "Paldeck", path: pagePath }]}>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
     <section className="database-hero paldex-hero compact-paldex-hero"><div><p className="database-eyebrow">{palCounts.paldeckNumbers} Paldeck numbers · {palCounts.palForms} Pal forms{initialPage > 1 ? ` · page ${initialPage}` : ""}</p><h1>Palworld Paldeck Database{pageSuffix}</h1><p>Search current Pal profiles by name, number, work suitability, and breeding power.</p></div></section>
     <Suspense fallback={<div className="database-workspace paldex-workspace" aria-busy="true" />}><PaldexClient initialPage={initialPage} /></Suspense>

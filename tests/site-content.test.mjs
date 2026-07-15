@@ -241,6 +241,29 @@ test("sitemap exposes tools, guides, and every Pal profile", async () => {
   assert.match(robots, /allow: "\/"/);
 });
 
+test("technical SEO metadata is explicit without changing homepage SEO copy", async () => {
+  const home = await read("../app/page.tsx");
+  const seo = await read("../app/lib/seo.ts");
+  const robots = await read("../app/robots.ts");
+  assert.match(home, /title: "Palworld Breeding Calculator - Updated 1\.0 Pal Combos"/);
+  assert.match(seo, /robots: \{ index: true, follow: true \}/);
+  assert.doesNotMatch(robots, /host:/);
+  assert.match(robots, /sitemap: `\$\{siteUrl\}\/sitemap\.xml`/);
+});
+
+test("indexable hubs expose breadcrumb schema and Paldeck pages expose pagination links", async () => {
+  const shell = await read("../app/components/tool-shell.tsx");
+  const guides = await read("../app/guides/page.tsx");
+  const paldexContent = await read("../app/paldex/paldex-page-content.tsx");
+  const pagination = await read("../app/paldex/page/[page]/page.tsx");
+  assert.match(shell, /createBreadcrumbSchema/);
+  assert.match(guides, /createBreadcrumbSchema/);
+  assert.match(paldexContent, /breadcrumb=\{\[/);
+  assert.match(pagination, /pagination:/);
+  assert.match(pagination, /previous:/);
+  assert.match(pagination, /next:/);
+});
+
 test("pages own their canonical and social metadata without inheriting homepage SEO", async () => {
   const layout = await read("../app/layout.tsx");
   const home = await read("../app/page.tsx");
