@@ -98,6 +98,13 @@ test("homepage hosts all six calculator modes with shared URL and local storage 
   assert.match(client, /home-breeding-slot offspring/);
   assert.match(client, /homeParentPick\("Parent A"/);
   assert.match(client, /homeParentPick\("Parent B"/);
+  assert.match(client, /pairCandidates/);
+  assert.match(client, /result\.first\.id === parentFilter \|\| result\.second\.id === parentFilter/);
+  assert.match(client, /offspringCandidates/);
+  assert.match(client, /result\.second\.id === offspringFilter \|\| result\.child\.id === offspringFilter/);
+  assert.match(client, /Advanced options/);
+  assert.match(client, /setExcluded\(\(current\) => current\.filter/);
+  assert.doesNotMatch(client, /Search parents…|Search partner or offspring…|Comma-separated IDs/);
 });
 
 test("every current Pal entry has a local image used by the shared Pal component", async () => {
