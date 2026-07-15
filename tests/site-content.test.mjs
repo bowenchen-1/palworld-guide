@@ -29,6 +29,8 @@ test("homepage targets Palworld breeding calculator with one focused H1", async 
   assert.match(page, /home-scene-hero/);
   assert.match(page, /Updated for Palworld 1\.0/);
   assert.match(page, /home-terminal-intro/);
+  assert.match(page, /Six ways to plan your next Pal/);
+  for (const feature of ["Parents → Child", "Target → Parents", "One Parent → Offspring", "Available Pals → Target", "Shortest Route", "What Can I Breed Now"]) assert.match(page, new RegExp(feature));
   assert.doesNotMatch(page, /home-release-panel/);
   assert.match(page, /Popular Pals/);
   assert.doesNotMatch(layout, /Palworld Breeding Calculator - Updated 1\.0 Pal Combos/);

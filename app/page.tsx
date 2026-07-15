@@ -25,6 +25,15 @@ const popularStyles = [
   { color: "bg-secondary-700", accent: "from-[#c2e4df] to-secondary-800", icon: "⚑" },
 ];
 
+const breedingFeatures = [
+  { mode: "parents", eyebrow: "Quick answer", title: "Parents → Child", copy: "Choose two species and see every applicable offspring result, including gender-specific outcomes." },
+  { mode: "target", eyebrow: "Reverse lookup", title: "Target → Parents", copy: "Start with the Pal you want and browse all direct parent pairs without a fixed result limit." },
+  { mode: "offspring", eyebrow: "Explore", title: "One Parent → Offspring", copy: "Choose one species, then inspect every compatible partner and child." },
+  { mode: "available-route", eyebrow: "Your roster", title: "Available Pals → Target", copy: "Use the species you have marked available to find practical single-lineage routes." },
+  { mode: "shortest", eyebrow: "Theory", title: "Shortest Route", copy: "Find the fewest breeding generations from a starting Pal, with optional exclusions." },
+  { mode: "available", eyebrow: "Discover", title: "What Can I Breed Now", copy: "See all immediate offspring unlocked by your currently available species." },
+];
+
 const faqs = [
   { question: "What does this breeding calculator do?", answer: "Choose two parent Pals to see their offspring, or open the complete combinations tool and work backward from the Pal you want to hatch." },
   { question: "Is this calculator updated for Palworld 1.0?", answer: "Yes. It uses the current 300-entry breeding matrix prepared for version 1.0 and loads the result data only when you begin using the calculator." },
@@ -67,6 +76,8 @@ export default function Home() {
     </section>
 
     <section id="site-search" className="home-search-section"><div><p><strong>Search the full field guide.</strong><span>Find a Pal, tool, or player-researched guide.</span></p><GlobalSearch /></div></section>
+
+    <section id="breeding-tools" className="home-breeding-features px-5 py-20 sm:px-8 lg:px-12"><div className="mx-auto max-w-[1260px]"><div className="mb-10 flex flex-col justify-between gap-5 md:flex-row md:items-end"><div><p className="eyebrow">Breeding tools</p><h2 className="section-title mt-3">Six ways to plan your next Pal</h2></div><p className="max-w-lg text-base leading-7 text-muted">The quick calculator above answers one pair at a time. Open a focused tool when you need reverse lookup, route planning, or an available-roster check.</p></div><div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">{breedingFeatures.map((feature, index) => <Link key={feature.mode} href={`/breeding-calculator?mode=${feature.mode}`} className="group rounded-[24px] border border-border bg-surface p-6 shadow-[0_12px_30px_rgba(35,84,71,.06)] transition hover:-translate-y-1 hover:border-secondary-600 hover:shadow-[0_20px_40px_rgba(35,84,71,.12)]"><span className="text-xs font-black tracking-[.16em] text-danger">{String(index + 1).padStart(2, "0")} · {feature.eyebrow}</span><h3 className="mt-5 font-[family-name:var(--font-display)] text-3xl font-black leading-none text-foreground">{feature.title}</h3><p className="mt-3 text-sm leading-6 text-muted">{feature.copy}</p><span className="mt-6 block text-xs font-black text-secondary-700">Open tool →</span></Link>)}</div></div></section>
 
     <section className="px-5 py-20 sm:px-8 lg:px-12"><div className="mx-auto max-w-[1260px]"><div className="mb-10 grid gap-5 lg:grid-cols-[1fr_.7fr] lg:items-end"><div><p className="eyebrow">Three quick steps</p><h2 className="section-title mt-3">How the Pal Breeding Tool Works</h2></div><p className="max-w-lg text-base leading-7 text-muted">Start with the Pals in your Palbox or work backward from the offspring you want. The calculator uses the current version 1.0 combination data.</p></div><div className="grid gap-4 md:grid-cols-3"><article className="overview-card"><span className="overview-icon bg-accent text-primary-900">1</span><h3>Choose Two Parent Pals</h3><p>Select Parent A and Parent B from the pictured Pal list. Parent order does not change the offspring species.</p></article><article className="overview-card"><span className="overview-icon bg-surface-muted text-primary-700">2</span><h3>Read the Offspring Result</h3><p>The child appears as soon as both parents are selected. Open its profile to review work suitability and breeding power.</p></article><article className="overview-card"><span className="overview-icon bg-[#dcebea] text-secondary-800">3</span><h3>Find Parent Combinations</h3><p>Need a specific Pal? Open the complete combinations search and use Target → Parents to compare every direct pair.</p></article></div></div></section>
 
