@@ -6,7 +6,7 @@ Generated from the 300-record Palworld 1.0 snapshot on 2026-07-15. Run `npm run 
 | --- | --- | ---: | ---: |
 | Identity | image, ID, number, name, breeding power | 300 / 300 | 100.0% |
 | Identity | elements | 289 / 300 | 96.3% |
-| Base | work suitability | 298 / 300 | 99.3% |
+| Base | work suitability | 300 / 300 | 100.0% |
 | Combat | HP, ranged attack, defense, stamina | 289 / 300 | 96.3% |
 | Economy | rarity, food consumption, nocturnal | 289 / 300 | 96.3% |
 | Movement | run speed | 288 / 300 | 96.0% |
