@@ -20,7 +20,8 @@
       "rangedAttack": 70,
       "defense": 70,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 1,
     "foodConsumption": 1,
@@ -61,7 +62,8 @@
       "rangedAttack": 70,
       "defense": 70,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 1,
     "foodConsumption": 1,
@@ -100,7 +102,8 @@
       "rangedAttack": 60,
       "defense": 60,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 1,
     "foodConsumption": 1,
@@ -142,7 +145,8 @@
       "rangedAttack": 70,
       "defense": 70,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 1,
     "foodConsumption": 1,
@@ -182,7 +186,8 @@
       "rangedAttack": 80,
       "defense": 60,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 1,
     "foodConsumption": 1,
@@ -224,7 +229,8 @@
       "rangedAttack": 85,
       "defense": 60,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 2,
     "foodConsumption": 1,
@@ -263,7 +269,8 @@
       "rangedAttack": 70,
       "defense": 70,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 2,
     "foodConsumption": 1,
@@ -302,7 +309,8 @@
       "rangedAttack": 70,
       "defense": 80,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 3,
     "foodConsumption": 2,
@@ -343,7 +351,8 @@
       "rangedAttack": 75,
       "defense": 80,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 4,
     "foodConsumption": 2,
@@ -382,7 +391,8 @@
       "rangedAttack": 70,
       "defense": 75,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 1,
     "foodConsumption": 1,
@@ -423,7 +433,8 @@
       "rangedAttack": 100,
       "defense": 85,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 4,
     "foodConsumption": 2,
@@ -465,7 +476,8 @@
       "rangedAttack": 110,
       "defense": 90,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 5,
     "foodConsumption": 2,
@@ -506,7 +518,8 @@
       "rangedAttack": 75,
       "defense": 75,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 3,
     "foodConsumption": 1,
@@ -544,7 +557,8 @@
       "rangedAttack": 60,
       "defense": 70,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 1,
     "foodConsumption": 1,
@@ -583,7 +597,8 @@
       "rangedAttack": 70,
       "defense": 70,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 10,
     "foodConsumption": 1,
@@ -622,7 +637,8 @@
       "rangedAttack": 70,
       "defense": 70,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 10,
     "foodConsumption": 1,
@@ -662,7 +678,8 @@
       "rangedAttack": 80,
       "defense": 70,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 2,
     "foodConsumption": 1,
@@ -702,7 +719,8 @@
       "rangedAttack": 65,
       "defense": 65,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 2,
     "foodConsumption": 1,
@@ -740,7 +758,8 @@
       "rangedAttack": 75,
       "defense": 70,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 1,
     "foodConsumption": 1,
@@ -778,7 +797,8 @@
       "rangedAttack": 75,
       "defense": 80,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 2,
     "foodConsumption": 1,
@@ -819,7 +839,8 @@
       "rangedAttack": 70,
       "defense": 70,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 1,
     "foodConsumption": 1,
@@ -861,7 +882,8 @@
       "rangedAttack": 75,
       "defense": 70,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 1,
     "foodConsumption": 1,
@@ -903,7 +925,8 @@
       "rangedAttack": 80,
       "defense": 70,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 2,
     "foodConsumption": 1,
@@ -946,7 +969,8 @@
       "rangedAttack": 95,
       "defense": 95,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 6,
     "foodConsumption": 4,
@@ -989,7 +1013,8 @@
       "rangedAttack": 100,
       "defense": 100,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 7,
     "foodConsumption": 4,
@@ -1027,7 +1052,8 @@
       "rangedAttack": 70,
       "defense": 80,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 1,
     "foodConsumption": 1,
@@ -1065,7 +1091,8 @@
       "rangedAttack": 75,
       "defense": 90,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 3,
     "foodConsumption": 2,
@@ -1103,7 +1130,8 @@
       "rangedAttack": 85,
       "defense": 90,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 170
     },
     "rarity": 8,
     "foodConsumption": 4,
@@ -1142,7 +1170,8 @@
       "rangedAttack": 85,
       "defense": 90,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 170
     },
     "rarity": 9,
     "foodConsumption": 4,
@@ -1182,7 +1211,8 @@
       "rangedAttack": 75,
       "defense": 60,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 1,
     "foodConsumption": 1,
@@ -1224,7 +1254,8 @@
       "rangedAttack": 70,
       "defense": 70,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 1,
     "foodConsumption": 1,
@@ -1265,7 +1296,8 @@
       "rangedAttack": 75,
       "defense": 70,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 2,
     "foodConsumption": 1,
@@ -1303,7 +1335,8 @@
       "rangedAttack": 85,
       "defense": 70,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 6,
     "foodConsumption": 1,
@@ -1344,7 +1377,8 @@
       "rangedAttack": 70,
       "defense": 80,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 1,
     "foodConsumption": 2,
@@ -1383,7 +1417,8 @@
       "rangedAttack": 70,
       "defense": 75,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 2,
     "foodConsumption": 1,
@@ -1422,7 +1457,8 @@
       "rangedAttack": 60,
       "defense": 70,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 1,
     "foodConsumption": 1,
@@ -1461,7 +1497,8 @@
       "rangedAttack": 65,
       "defense": 70,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 2,
     "foodConsumption": 1,
@@ -1499,7 +1536,8 @@
       "rangedAttack": 70,
       "defense": 70,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 1,
     "foodConsumption": 1,
@@ -1537,7 +1575,8 @@
       "rangedAttack": 75,
       "defense": 70,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 1,
     "foodConsumption": 1,
@@ -1575,7 +1614,8 @@
       "rangedAttack": 80,
       "defense": 70,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 1,
     "foodConsumption": 1,
@@ -1616,7 +1656,8 @@
       "rangedAttack": 60,
       "defense": 70,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 1,
     "foodConsumption": 2,
@@ -1657,7 +1698,8 @@
       "rangedAttack": 60,
       "defense": 70,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 2,
     "foodConsumption": 2,
@@ -1697,7 +1739,8 @@
       "rangedAttack": 80,
       "defense": 50,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 1,
     "foodConsumption": 2,
@@ -1735,7 +1778,8 @@
       "rangedAttack": 80,
       "defense": 80,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 5,
     "foodConsumption": 2,
@@ -1773,7 +1817,8 @@
       "rangedAttack": 80,
       "defense": 80,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 6,
     "foodConsumption": 2,
@@ -1811,7 +1856,8 @@
       "rangedAttack": 90,
       "defense": 75,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 70
     },
     "rarity": 2,
     "foodConsumption": 2,
@@ -1850,7 +1896,8 @@
       "rangedAttack": 70,
       "defense": 90,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 3,
     "foodConsumption": 2,
@@ -1889,7 +1936,8 @@
       "rangedAttack": 75,
       "defense": 90,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 3,
     "foodConsumption": 2,
@@ -1928,7 +1976,8 @@
       "rangedAttack": 60,
       "defense": 60,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 1,
     "foodConsumption": 1,
@@ -1967,7 +2016,8 @@
       "rangedAttack": 90,
       "defense": 90,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 120
     },
     "rarity": 6,
     "foodConsumption": 4,
@@ -2007,7 +2057,8 @@
       "rangedAttack": 75,
       "defense": 115,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 3,
     "foodConsumption": 3,
@@ -2048,7 +2099,8 @@
       "rangedAttack": 85,
       "defense": 125,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 4,
     "foodConsumption": 3,
@@ -2088,7 +2140,8 @@
       "rangedAttack": 70,
       "defense": 70,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 1,
     "foodConsumption": 1,
@@ -2129,7 +2182,8 @@
       "rangedAttack": 80,
       "defense": 70,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 2,
     "foodConsumption": 1,
@@ -2167,7 +2221,8 @@
       "rangedAttack": 70,
       "defense": 90,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 3,
     "foodConsumption": 1,
@@ -2205,7 +2260,8 @@
       "rangedAttack": 70,
       "defense": 95,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 4,
     "foodConsumption": 1,
@@ -2243,7 +2299,8 @@
       "rangedAttack": 50,
       "defense": 80,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 2,
     "foodConsumption": 2,
@@ -2282,7 +2339,8 @@
       "rangedAttack": 100,
       "defense": 100,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 160
     },
     "rarity": 7,
     "foodConsumption": 5,
@@ -2321,7 +2379,8 @@
       "rangedAttack": 105,
       "defense": 105,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 160
     },
     "rarity": 8,
     "foodConsumption": 5,
@@ -2362,7 +2421,8 @@
       "rangedAttack": 75,
       "defense": 70,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 1,
     "foodConsumption": 1,
@@ -2401,7 +2461,8 @@
       "rangedAttack": 70,
       "defense": 70,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 1,
     "foodConsumption": 1,
@@ -2440,7 +2501,8 @@
       "rangedAttack": 70,
       "defense": 70,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 2,
     "foodConsumption": 1,
@@ -2480,7 +2542,8 @@
       "rangedAttack": 65,
       "defense": 70,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 1,
     "foodConsumption": 1,
@@ -2521,7 +2584,8 @@
       "rangedAttack": 65,
       "defense": 70,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 1,
     "foodConsumption": 1,
@@ -2561,7 +2625,8 @@
       "rangedAttack": 90,
       "defense": 70,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 3,
     "foodConsumption": 3,
@@ -2603,7 +2668,8 @@
       "rangedAttack": 75,
       "defense": 75,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 3,
     "foodConsumption": 3,
@@ -2643,7 +2709,8 @@
       "rangedAttack": 70,
       "defense": 65,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 2,
     "foodConsumption": 3,
@@ -2684,7 +2751,8 @@
       "rangedAttack": 85,
       "defense": 70,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 5,
     "foodConsumption": 3,
@@ -2725,7 +2793,8 @@
       "rangedAttack": 85,
       "defense": 70,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 6,
     "foodConsumption": 3,
@@ -2763,7 +2832,8 @@
       "rangedAttack": 85,
       "defense": 60,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 2,
     "foodConsumption": 2,
@@ -2804,7 +2874,8 @@
       "rangedAttack": 95,
       "defense": 70,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 5,
     "foodConsumption": 6,
@@ -2842,7 +2913,8 @@
       "rangedAttack": 95,
       "defense": 80,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 3,
     "foodConsumption": 2,
@@ -2882,7 +2954,8 @@
       "rangedAttack": 95,
       "defense": 80,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 5,
     "foodConsumption": 2,
@@ -2920,7 +2993,8 @@
       "rangedAttack": 75,
       "defense": 70,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 1,
     "foodConsumption": 2,
@@ -2959,7 +3033,8 @@
       "rangedAttack": 105,
       "defense": 105,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 5,
     "foodConsumption": 3,
@@ -2998,7 +3073,8 @@
       "rangedAttack": 105,
       "defense": 110,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 6,
     "foodConsumption": 3,
@@ -3038,7 +3114,8 @@
       "rangedAttack": 90,
       "defense": 75,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 2,
     "foodConsumption": 2,
@@ -3078,7 +3155,8 @@
       "rangedAttack": 90,
       "defense": 75,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 3,
     "foodConsumption": 2,
@@ -3116,7 +3194,8 @@
       "rangedAttack": 100,
       "defense": 80,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 3,
     "foodConsumption": 3,
@@ -3155,7 +3234,8 @@
       "rangedAttack": 105,
       "defense": 80,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 3,
     "foodConsumption": 3,
@@ -3194,7 +3274,8 @@
       "rangedAttack": 95,
       "defense": 80,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 3,
     "foodConsumption": 3,
@@ -3233,7 +3314,8 @@
       "rangedAttack": 95,
       "defense": 95,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 120
     },
     "rarity": 4,
     "foodConsumption": 3,
@@ -3272,7 +3354,8 @@
       "rangedAttack": 80,
       "defense": 55,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 2,
     "foodConsumption": 3,
@@ -3314,7 +3397,8 @@
       "rangedAttack": 80,
       "defense": 80,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 1,
     "foodConsumption": 2,
@@ -3354,7 +3438,8 @@
       "rangedAttack": 80,
       "defense": 80,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 4,
     "foodConsumption": 2,
@@ -3393,7 +3478,8 @@
       "rangedAttack": 80,
       "defense": 70,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 2,
     "foodConsumption": 3,
@@ -3431,7 +3517,8 @@
       "rangedAttack": 80,
       "defense": 90,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 130
     },
     "rarity": 7,
     "foodConsumption": 3,
@@ -3471,7 +3558,8 @@
       "rangedAttack": 80,
       "defense": 95,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 130
     },
     "rarity": 8,
     "foodConsumption": 3,
@@ -3511,7 +3599,8 @@
       "rangedAttack": 115,
       "defense": 90,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 150
     },
     "rarity": 5,
     "foodConsumption": 5,
@@ -3551,7 +3640,8 @@
       "rangedAttack": 120,
       "defense": 95,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 150
     },
     "rarity": 5,
     "foodConsumption": 5,
@@ -3589,7 +3679,8 @@
       "rangedAttack": 105,
       "defense": 110,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 6,
     "foodConsumption": 7,
@@ -3632,7 +3723,8 @@
       "rangedAttack": 100,
       "defense": 120,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 8,
     "foodConsumption": 5,
@@ -3676,7 +3768,8 @@
       "rangedAttack": 90,
       "defense": 90,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 4,
     "foodConsumption": 3,
@@ -3718,7 +3811,8 @@
       "rangedAttack": 105,
       "defense": 100,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 8,
     "foodConsumption": 5,
@@ -3759,7 +3853,8 @@
       "rangedAttack": 70,
       "defense": 70,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 5,
     "foodConsumption": 4,
@@ -3797,7 +3892,8 @@
       "rangedAttack": 80,
       "defense": 80,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 6,
     "foodConsumption": 4,
@@ -3838,7 +3934,8 @@
       "rangedAttack": 100,
       "defense": 100,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 3,
     "foodConsumption": 4,
@@ -3878,7 +3975,8 @@
       "rangedAttack": 105,
       "defense": 105,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 120
     },
     "rarity": 5,
     "foodConsumption": 4,
@@ -3918,7 +4016,8 @@
       "rangedAttack": 105,
       "defense": 110,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 120
     },
     "rarity": 6,
     "foodConsumption": 4,
@@ -3958,7 +4057,8 @@
       "rangedAttack": 80,
       "defense": 50,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 2,
     "foodConsumption": 2,
@@ -3999,7 +4099,8 @@
       "rangedAttack": 80,
       "defense": 50,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 3,
     "foodConsumption": 2,
@@ -4039,7 +4140,8 @@
       "rangedAttack": 95,
       "defense": 90,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 5,
     "foodConsumption": 3,
@@ -4079,7 +4181,8 @@
       "rangedAttack": 100,
       "defense": 90,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 5,
     "foodConsumption": 3,
@@ -4118,7 +4221,8 @@
       "rangedAttack": 90,
       "defense": 80,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 4,
     "foodConsumption": 3,
@@ -4156,7 +4260,8 @@
       "rangedAttack": 90,
       "defense": 100,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 5,
     "foodConsumption": 3,
@@ -4199,7 +4304,8 @@
       "rangedAttack": 105,
       "defense": 80,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 5,
     "foodConsumption": 3,
@@ -4242,7 +4348,8 @@
       "rangedAttack": 105,
       "defense": 80,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 6,
     "foodConsumption": 3,
@@ -4284,7 +4391,8 @@
       "rangedAttack": 65,
       "defense": 70,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 1,
     "foodConsumption": 2,
@@ -4324,7 +4432,8 @@
       "rangedAttack": 110,
       "defense": 80,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 6,
     "foodConsumption": 4,
@@ -4365,7 +4474,8 @@
       "rangedAttack": 110,
       "defense": 85,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 6,
     "foodConsumption": 4,
@@ -4405,7 +4515,8 @@
       "rangedAttack": 105,
       "defense": 90,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 6,
     "foodConsumption": 4,
@@ -4447,7 +4558,8 @@
       "rangedAttack": 105,
       "defense": 90,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 6,
     "foodConsumption": 4,
@@ -4485,7 +4597,8 @@
       "rangedAttack": 125,
       "defense": 100,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 170
     },
     "rarity": 7,
     "foodConsumption": 7,
@@ -4525,7 +4638,8 @@
       "rangedAttack": 125,
       "defense": 100,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 170
     },
     "rarity": 8,
     "foodConsumption": 7,
@@ -4567,7 +4681,8 @@
       "rangedAttack": 105,
       "defense": 105,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 6,
     "foodConsumption": 8,
@@ -4608,7 +4723,8 @@
       "rangedAttack": 100,
       "defense": 105,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 7,
     "foodConsumption": 8,
@@ -4648,7 +4764,8 @@
       "rangedAttack": 100,
       "defense": 90,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 6,
     "foodConsumption": 4,
@@ -4686,7 +4803,8 @@
       "rangedAttack": 110,
       "defense": 90,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 140
     },
     "rarity": 3,
     "foodConsumption": 5,
@@ -4725,7 +4843,8 @@
       "rangedAttack": 115,
       "defense": 90,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 140
     },
     "rarity": 3,
     "foodConsumption": 5,
@@ -4765,7 +4884,8 @@
       "rangedAttack": 85,
       "defense": 90,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 130
     },
     "rarity": 6,
     "foodConsumption": 4,
@@ -4805,7 +4925,8 @@
       "rangedAttack": 90,
       "defense": 90,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 130
     },
     "rarity": 7,
     "foodConsumption": 4,
@@ -4847,7 +4968,8 @@
       "rangedAttack": 125,
       "defense": 80,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 7,
     "foodConsumption": 5,
@@ -4890,7 +5012,8 @@
       "rangedAttack": 130,
       "defense": 80,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 7,
     "foodConsumption": 5,
@@ -4931,7 +5054,8 @@
       "rangedAttack": 80,
       "defense": 85,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 3,
     "foodConsumption": 3,
@@ -4972,7 +5096,8 @@
       "rangedAttack": 85,
       "defense": 90,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 180
     },
     "rarity": 8,
     "foodConsumption": 6,
@@ -5013,7 +5138,8 @@
       "rangedAttack": 85,
       "defense": 90,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 180
     },
     "rarity": 9,
     "foodConsumption": 6,
@@ -5052,7 +5178,8 @@
       "rangedAttack": 85,
       "defense": 80,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 3,
     "foodConsumption": 2,
@@ -5093,7 +5220,8 @@
       "rangedAttack": 90,
       "defense": 80,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 4,
     "foodConsumption": 2,
@@ -5135,7 +5263,8 @@
       "rangedAttack": 95,
       "defense": 100,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 8,
     "foodConsumption": 6,
@@ -5178,7 +5307,8 @@
       "rangedAttack": 105,
       "defense": 100,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 9,
     "foodConsumption": 6,
@@ -5219,7 +5349,8 @@
       "rangedAttack": 115,
       "defense": 95,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 7,
     "foodConsumption": 7,
@@ -5261,7 +5392,8 @@
       "rangedAttack": 100,
       "defense": 85,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 4,
     "foodConsumption": 5,
@@ -5301,7 +5433,8 @@
       "rangedAttack": 105,
       "defense": 85,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 5,
     "foodConsumption": 5,
@@ -5341,7 +5474,8 @@
       "rangedAttack": 80,
       "defense": 70,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 2,
     "foodConsumption": 2,
@@ -5383,7 +5517,8 @@
       "rangedAttack": 80,
       "defense": 75,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 2,
     "foodConsumption": 2,
@@ -5422,7 +5557,8 @@
       "rangedAttack": 95,
       "defense": 90,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 6,
     "foodConsumption": 4,
@@ -5462,7 +5598,8 @@
       "rangedAttack": 95,
       "defense": 90,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 7,
     "foodConsumption": 4,
@@ -5502,7 +5639,8 @@
       "rangedAttack": 115,
       "defense": 110,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 200
     },
     "rarity": 8,
     "foodConsumption": 7,
@@ -5542,7 +5680,8 @@
       "rangedAttack": 120,
       "defense": 110,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 200
     },
     "rarity": 9,
     "foodConsumption": 7,
@@ -5581,7 +5720,8 @@
       "rangedAttack": 95,
       "defense": 105,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 5,
     "foodConsumption": 4,
@@ -5621,7 +5761,8 @@
       "rangedAttack": 115,
       "defense": 80,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 160
     },
     "rarity": 6,
     "foodConsumption": 5,
@@ -5661,7 +5802,8 @@
       "rangedAttack": 115,
       "defense": 85,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 160
     },
     "rarity": 7,
     "foodConsumption": 5,
@@ -5701,7 +5843,8 @@
       "rangedAttack": 125,
       "defense": 105,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 320
     },
     "rarity": 5,
     "foodConsumption": 7,
@@ -5742,7 +5885,8 @@
       "rangedAttack": 130,
       "defense": 105,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 320
     },
     "rarity": 6,
     "foodConsumption": 7,
@@ -5780,7 +5924,8 @@
       "rangedAttack": 100,
       "defense": 80,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 5,
     "foodConsumption": 4,
@@ -5818,7 +5963,8 @@
       "rangedAttack": 105,
       "defense": 80,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 6,
     "foodConsumption": 4,
@@ -5858,7 +6004,8 @@
       "rangedAttack": 100,
       "defense": 130,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 9,
     "foodConsumption": 6,
@@ -5897,7 +6044,8 @@
       "rangedAttack": 105,
       "defense": 130,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 10,
     "foodConsumption": 6,
@@ -5937,7 +6085,8 @@
       "rangedAttack": 85,
       "defense": 70,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 2,
     "foodConsumption": 2,
@@ -5978,7 +6127,8 @@
       "rangedAttack": 90,
       "defense": 70,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 3,
     "foodConsumption": 2,
@@ -6017,7 +6167,8 @@
       "rangedAttack": 85,
       "defense": 110,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 140
     },
     "rarity": 4,
     "foodConsumption": 4,
@@ -6058,7 +6209,8 @@
       "rangedAttack": 90,
       "defense": 90,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 130
     },
     "rarity": 6,
     "foodConsumption": 4,
@@ -6099,7 +6251,8 @@
       "rangedAttack": 100,
       "defense": 100,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 130
     },
     "rarity": 7,
     "foodConsumption": 4,
@@ -6139,7 +6292,8 @@
       "rangedAttack": 80,
       "defense": 80,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 4,
     "foodConsumption": 3,
@@ -6179,7 +6333,8 @@
       "rangedAttack": 85,
       "defense": 80,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 5,
     "foodConsumption": 3,
@@ -6218,7 +6373,8 @@
       "rangedAttack": 105,
       "defense": 120,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 150
     },
     "rarity": 7,
     "foodConsumption": 7,
@@ -6258,7 +6414,8 @@
       "rangedAttack": 125,
       "defense": 115,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 270
     },
     "rarity": 7,
     "foodConsumption": 8,
@@ -6298,7 +6455,8 @@
       "rangedAttack": 125,
       "defense": 120,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 270
     },
     "rarity": 8,
     "foodConsumption": 8,
@@ -6338,7 +6496,8 @@
       "rangedAttack": 110,
       "defense": 115,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 180
     },
     "rarity": 6,
     "foodConsumption": 6,
@@ -6376,7 +6535,8 @@
       "rangedAttack": 95,
       "defense": 120,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 5,
     "foodConsumption": 5,
@@ -6414,7 +6574,8 @@
       "rangedAttack": 90,
       "defense": 100,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 150
     },
     "rarity": 8,
     "foodConsumption": 6,
@@ -6453,7 +6614,8 @@
       "rangedAttack": 95,
       "defense": 100,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 150
     },
     "rarity": 8,
     "foodConsumption": 6,
@@ -6495,7 +6657,8 @@
       "rangedAttack": 70,
       "defense": 95,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 4,
     "foodConsumption": 3,
@@ -6537,7 +6700,8 @@
       "rangedAttack": 75,
       "defense": 100,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 5,
     "foodConsumption": 3,
@@ -6578,7 +6742,8 @@
       "rangedAttack": 95,
       "defense": 120,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 270
     },
     "rarity": 8,
     "foodConsumption": 7,
@@ -6616,7 +6781,8 @@
       "rangedAttack": 115,
       "defense": 100,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 140
     },
     "rarity": 6,
     "foodConsumption": 5,
@@ -6654,7 +6820,8 @@
       "rangedAttack": 115,
       "defense": 105,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 140
     },
     "rarity": 6,
     "foodConsumption": 5,
@@ -6693,7 +6860,8 @@
       "rangedAttack": 110,
       "defense": 80,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 150
     },
     "rarity": 7,
     "foodConsumption": 6,
@@ -6733,7 +6901,8 @@
       "rangedAttack": 115,
       "defense": 80,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 150
     },
     "rarity": 8,
     "foodConsumption": 6,
@@ -6775,7 +6944,8 @@
       "rangedAttack": 100,
       "defense": 120,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 8,
     "foodConsumption": 6,
@@ -6815,7 +6985,8 @@
       "rangedAttack": 105,
       "defense": 120,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 9,
     "foodConsumption": 6,
@@ -6854,7 +7025,8 @@
       "rangedAttack": 100,
       "defense": 100,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 4,
     "foodConsumption": 5,
@@ -6896,7 +7068,8 @@
       "rangedAttack": 115,
       "defense": 90,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 5,
     "foodConsumption": 8,
@@ -6936,7 +7109,8 @@
       "rangedAttack": 90,
       "defense": 100,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 7,
     "foodConsumption": 5,
@@ -6975,7 +7149,8 @@
       "rangedAttack": 90,
       "defense": 100,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 8,
     "foodConsumption": 5,
@@ -7014,7 +7189,8 @@
       "rangedAttack": 105,
       "defense": 80,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 130
     },
     "rarity": 6,
     "foodConsumption": 5,
@@ -7056,7 +7232,8 @@
       "rangedAttack": 80,
       "defense": 90,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 220
     },
     "rarity": 4,
     "foodConsumption": 5,
@@ -7098,7 +7275,8 @@
       "rangedAttack": 85,
       "defense": 90,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 220
     },
     "rarity": 5,
     "foodConsumption": 5,
@@ -7139,7 +7317,8 @@
       "rangedAttack": 115,
       "defense": 105,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 4,
     "foodConsumption": 5,
@@ -7180,7 +7359,8 @@
       "rangedAttack": 120,
       "defense": 105,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 5,
     "foodConsumption": 6,
@@ -7219,7 +7399,8 @@
       "rangedAttack": 120,
       "defense": 100,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 150
     },
     "rarity": 8,
     "foodConsumption": 8,
@@ -7258,7 +7439,8 @@
       "rangedAttack": 130,
       "defense": 100,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 150
     },
     "rarity": 9,
     "foodConsumption": 8,
@@ -7296,7 +7478,8 @@
       "rangedAttack": 105,
       "defense": 105,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 350
     },
     "rarity": 8,
     "foodConsumption": 7,
@@ -7334,7 +7517,8 @@
       "rangedAttack": 105,
       "defense": 105,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 350
     },
     "rarity": 9,
     "foodConsumption": 7,
@@ -7372,7 +7556,8 @@
       "rangedAttack": 90,
       "defense": 80,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 5,
     "foodConsumption": 3,
@@ -7413,7 +7598,8 @@
       "rangedAttack": 100,
       "defense": 100,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 220
     },
     "rarity": 7,
     "foodConsumption": 6,
@@ -7456,7 +7642,8 @@
       "rangedAttack": 105,
       "defense": 100,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 220
     },
     "rarity": 8,
     "foodConsumption": 6,
@@ -7497,7 +7684,8 @@
       "rangedAttack": 90,
       "defense": 80,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 4,
     "foodConsumption": 4,
@@ -7535,7 +7723,8 @@
       "rangedAttack": 70,
       "defense": 90,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 4,
     "foodConsumption": 3,
@@ -7573,7 +7762,8 @@
       "rangedAttack": 85,
       "defense": 85,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 140
     },
     "rarity": 4,
     "foodConsumption": 3,
@@ -7613,7 +7803,8 @@
       "rangedAttack": 100,
       "defense": 80,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 5,
     "foodConsumption": 5,
@@ -7655,7 +7846,8 @@
       "rangedAttack": 105,
       "defense": 80,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 5,
     "foodConsumption": 5,
@@ -7695,7 +7887,8 @@
       "rangedAttack": 105,
       "defense": 120,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 220
     },
     "rarity": 6,
     "foodConsumption": 7,
@@ -7735,7 +7928,8 @@
       "rangedAttack": 105,
       "defense": 130,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 220
     },
     "rarity": 7,
     "foodConsumption": 7,
@@ -7773,7 +7967,8 @@
       "rangedAttack": 100,
       "defense": 100,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 230
     },
     "rarity": 7,
     "foodConsumption": 6,
@@ -7811,7 +8006,8 @@
       "rangedAttack": 105,
       "defense": 100,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 230
     },
     "rarity": 8,
     "foodConsumption": 6,
@@ -7849,7 +8045,8 @@
       "rangedAttack": 105,
       "defense": 120,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 6,
     "foodConsumption": 8,
@@ -7888,7 +8085,8 @@
       "rangedAttack": 110,
       "defense": 120,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 7,
     "foodConsumption": 8,
@@ -7929,7 +8127,8 @@
       "rangedAttack": 100,
       "defense": 110,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 7,
     "foodConsumption": 7,
@@ -7970,7 +8169,8 @@
       "rangedAttack": 105,
       "defense": 110,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 7,
     "foodConsumption": 7,
@@ -8011,7 +8211,8 @@
       "rangedAttack": 75,
       "defense": 85,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 3,
     "foodConsumption": 5,
@@ -8052,7 +8253,8 @@
       "rangedAttack": 80,
       "defense": 100,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 240
     },
     "rarity": 7,
     "foodConsumption": 7,
@@ -8093,7 +8295,8 @@
       "rangedAttack": 80,
       "defense": 110,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 240
     },
     "rarity": 8,
     "foodConsumption": 7,
@@ -8136,7 +8339,8 @@
       "rangedAttack": 125,
       "defense": 90,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 7,
     "foodConsumption": 7,
@@ -8177,7 +8381,8 @@
       "rangedAttack": 90,
       "defense": 85,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 6,
     "foodConsumption": 7,
@@ -8216,7 +8421,8 @@
       "rangedAttack": 125,
       "defense": 120,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 190
     },
     "rarity": 9,
     "foodConsumption": 9,
@@ -8256,7 +8462,8 @@
       "rangedAttack": 130,
       "defense": 125,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 190
     },
     "rarity": 10,
     "foodConsumption": 9,
@@ -8299,7 +8506,8 @@
       "rangedAttack": 105,
       "defense": 125,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 210
     },
     "rarity": 8,
     "foodConsumption": 8,
@@ -8342,7 +8550,8 @@
       "rangedAttack": 110,
       "defense": 125,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 210
     },
     "rarity": 8,
     "foodConsumption": 8,
@@ -8382,7 +8591,8 @@
       "rangedAttack": 130,
       "defense": 100,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 10,
     "foodConsumption": 8,
@@ -8422,7 +8632,8 @@
       "rangedAttack": 115,
       "defense": 100,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 5,
     "foodConsumption": 7,
@@ -8463,7 +8674,8 @@
       "rangedAttack": 110,
       "defense": 90,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 5,
     "foodConsumption": 5,
@@ -8505,7 +8717,8 @@
       "rangedAttack": 115,
       "defense": 90,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 6,
     "foodConsumption": 5,
@@ -8543,7 +8756,8 @@
       "rangedAttack": 100,
       "defense": 135,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 200
     },
     "rarity": 8,
     "foodConsumption": 8,
@@ -8581,7 +8795,8 @@
       "rangedAttack": 100,
       "defense": 140,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 200
     },
     "rarity": 8,
     "foodConsumption": 8,
@@ -8622,7 +8837,8 @@
       "rangedAttack": 100,
       "defense": 100,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 4,
     "foodConsumption": 6,
@@ -8661,7 +8877,8 @@
       "rangedAttack": 60,
       "defense": 130,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 7,
     "foodConsumption": 3,
@@ -8700,7 +8917,8 @@
       "rangedAttack": 125,
       "defense": 85,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 7,
     "foodConsumption": 4,
@@ -8738,7 +8956,8 @@
       "rangedAttack": 120,
       "defense": 130,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 250
     },
     "rarity": 9,
     "foodConsumption": 7,
@@ -8781,7 +9000,8 @@
       "rangedAttack": 95,
       "defense": 100,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 5,
     "foodConsumption": 5,
@@ -8820,7 +9040,8 @@
       "rangedAttack": 95,
       "defense": 105,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 6,
     "foodConsumption": 6,
@@ -8860,7 +9081,8 @@
       "rangedAttack": 95,
       "defense": 105,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 7,
     "foodConsumption": 6,
@@ -8898,7 +9120,8 @@
       "rangedAttack": 90,
       "defense": 85,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 2,
     "foodConsumption": 3,
@@ -8938,7 +9161,8 @@
       "rangedAttack": 90,
       "defense": 90,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 3,
     "foodConsumption": 3,
@@ -8976,7 +9200,8 @@
       "rangedAttack": 105,
       "defense": 100,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 4,
     "foodConsumption": 5,
@@ -9016,7 +9241,8 @@
       "rangedAttack": 115,
       "defense": 110,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 200
     },
     "rarity": 8,
     "foodConsumption": 8,
@@ -9056,7 +9282,8 @@
       "rangedAttack": 120,
       "defense": 110,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 200
     },
     "rarity": 8,
     "foodConsumption": 8,
@@ -9098,7 +9325,8 @@
       "rangedAttack": 115,
       "defense": 90,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 8,
     "foodConsumption": 6,
@@ -9139,7 +9367,8 @@
       "rangedAttack": 115,
       "defense": 105,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 4,
     "foodConsumption": 7,
@@ -9177,7 +9406,8 @@
       "rangedAttack": 110,
       "defense": 110,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 200
     },
     "rarity": 8,
     "foodConsumption": 8,
@@ -9219,7 +9449,8 @@
       "rangedAttack": 100,
       "defense": 100,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 6,
     "foodConsumption": 5,
@@ -9258,7 +9489,8 @@
       "rangedAttack": 95,
       "defense": 100,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 110
     },
     "rarity": 4,
     "foodConsumption": 6,
@@ -9297,7 +9529,8 @@
       "rangedAttack": 110,
       "defense": 100,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 260
     },
     "rarity": 6,
     "foodConsumption": 8,
@@ -9336,7 +9569,8 @@
       "rangedAttack": 115,
       "defense": 100,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 260
     },
     "rarity": 7,
     "foodConsumption": 8,
@@ -9376,7 +9610,8 @@
       "rangedAttack": 125,
       "defense": 125,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 300
     },
     "rarity": 9,
     "foodConsumption": 7,
@@ -9416,7 +9651,8 @@
       "rangedAttack": 110,
       "defense": 135,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 9,
     "foodConsumption": 9,
@@ -9456,7 +9692,8 @@
       "rangedAttack": 115,
       "defense": 135,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 10,
     "foodConsumption": 9,
@@ -9494,7 +9731,8 @@
       "rangedAttack": 110,
       "defense": 115,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 280
     },
     "rarity": 8,
     "foodConsumption": 8,
@@ -9532,7 +9770,8 @@
       "rangedAttack": 120,
       "defense": 110,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 220
     },
     "rarity": 7,
     "foodConsumption": 8,
@@ -9570,7 +9809,8 @@
       "rangedAttack": 80,
       "defense": 70,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 2,
     "foodConsumption": 4,
@@ -9608,7 +9848,8 @@
       "rangedAttack": 70,
       "defense": 75,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 2,
     "foodConsumption": 4,
@@ -9647,7 +9888,8 @@
       "rangedAttack": 70,
       "defense": 80,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 3,
     "foodConsumption": 4,
@@ -9686,7 +9928,8 @@
       "rangedAttack": 75,
       "defense": 60,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 3,
     "foodConsumption": 3,
@@ -9727,7 +9970,8 @@
       "rangedAttack": 75,
       "defense": 80,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 3,
     "foodConsumption": 4,
@@ -9766,7 +10010,8 @@
       "rangedAttack": 85,
       "defense": 80,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 3,
     "foodConsumption": 3,
@@ -9804,7 +10049,8 @@
       "rangedAttack": 75,
       "defense": 70,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 4,
     "foodConsumption": 4,
@@ -9844,7 +10090,8 @@
       "rangedAttack": 85,
       "defense": 80,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 4,
     "foodConsumption": 5,
@@ -9882,7 +10129,8 @@
       "rangedAttack": 90,
       "defense": 85,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 220
     },
     "rarity": 4,
     "foodConsumption": 6,
@@ -9922,7 +10170,8 @@
       "rangedAttack": 95,
       "defense": 85,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 220
     },
     "rarity": 5,
     "foodConsumption": 6,
@@ -9961,7 +10210,8 @@
       "rangedAttack": 100,
       "defense": 100,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 4,
     "foodConsumption": 7,
@@ -10000,7 +10250,8 @@
       "rangedAttack": 125,
       "defense": 120,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 130
     },
     "rarity": 7,
     "foodConsumption": 9,
@@ -10040,7 +10291,8 @@
       "rangedAttack": 130,
       "defense": 120,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 130
     },
     "rarity": 8,
     "foodConsumption": 9,
@@ -10080,7 +10332,8 @@
       "rangedAttack": 85,
       "defense": 80,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 140
     },
     "rarity": 6,
     "foodConsumption": 6,
@@ -10119,7 +10372,8 @@
       "rangedAttack": 85,
       "defense": 90,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 5,
     "foodConsumption": 6,
@@ -10159,7 +10413,8 @@
       "rangedAttack": 125,
       "defense": 105,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 7,
     "foodConsumption": 8,
@@ -10199,7 +10454,8 @@
       "rangedAttack": 115,
       "defense": 120,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 9,
     "foodConsumption": 9,
@@ -10240,7 +10496,8 @@
       "rangedAttack": 110,
       "defense": 100,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 7,
     "foodConsumption": 8,
@@ -10279,7 +10536,8 @@
       "rangedAttack": 115,
       "defense": 95,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 200
     },
     "rarity": 5,
     "foodConsumption": 8,
@@ -10320,7 +10578,8 @@
       "rangedAttack": 85,
       "defense": 90,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 5,
     "foodConsumption": 6,
@@ -10361,7 +10620,8 @@
       "rangedAttack": 95,
       "defense": 90,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 6,
     "foodConsumption": 7,
@@ -10402,7 +10662,8 @@
       "rangedAttack": 100,
       "defense": 95,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 5,
     "foodConsumption": 7,
@@ -10442,7 +10703,8 @@
       "rangedAttack": 90,
       "defense": 60,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 2,
     "foodConsumption": 5,
@@ -10483,7 +10745,8 @@
       "rangedAttack": 115,
       "defense": 115,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 7,
     "foodConsumption": 9,
@@ -10524,7 +10787,8 @@
       "rangedAttack": 120,
       "defense": 100,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 7,
     "foodConsumption": 8,
@@ -10563,7 +10827,8 @@
       "rangedAttack": 125,
       "defense": 140,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 300
     },
     "rarity": 8,
     "foodConsumption": 9,
@@ -10604,7 +10869,8 @@
       "rangedAttack": 105,
       "defense": 105,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 180
     },
     "rarity": 8,
     "foodConsumption": 6,
@@ -10645,7 +10911,8 @@
       "rangedAttack": 120,
       "defense": 110,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 9,
     "foodConsumption": 8,
@@ -10685,7 +10952,8 @@
       "rangedAttack": 120,
       "defense": 115,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 10,
     "foodConsumption": 8,
@@ -10726,7 +10994,8 @@
       "rangedAttack": 130,
       "defense": 115,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 9,
     "foodConsumption": 9,
@@ -10765,7 +11034,8 @@
       "rangedAttack": 110,
       "defense": 115,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 230
     },
     "rarity": 9,
     "foodConsumption": 9,
@@ -10804,7 +11074,8 @@
       "rangedAttack": 110,
       "defense": 115,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 230
     },
     "rarity": 9,
     "foodConsumption": 9,
@@ -10842,7 +11113,8 @@
       "rangedAttack": 120,
       "defense": 140,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 250
     },
     "rarity": 10,
     "foodConsumption": 8,
@@ -10883,7 +11155,8 @@
       "rangedAttack": 115,
       "defense": 110,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 300
     },
     "rarity": 9,
     "foodConsumption": 9,
@@ -10923,7 +11196,8 @@
       "rangedAttack": 130,
       "defense": 120,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 270
     },
     "rarity": 8,
     "foodConsumption": 9,
@@ -10963,7 +11237,8 @@
       "rangedAttack": 135,
       "defense": 120,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 9,
     "foodConsumption": 9,
@@ -11005,7 +11280,8 @@
       "rangedAttack": 120,
       "defense": 110,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 8,
     "foodConsumption": 9,
@@ -11048,7 +11324,8 @@
       "rangedAttack": 135,
       "defense": 110,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 8,
     "foodConsumption": 9,
@@ -11088,7 +11365,8 @@
       "rangedAttack": 150,
       "defense": 100,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 20,
     "foodConsumption": 7,
@@ -11128,7 +11406,8 @@
       "rangedAttack": 150,
       "defense": 100,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 20,
     "foodConsumption": 7,
@@ -11167,7 +11446,8 @@
       "rangedAttack": 120,
       "defense": 120,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 300
     },
     "rarity": 8,
     "foodConsumption": 8,
@@ -11206,7 +11486,8 @@
       "rangedAttack": 130,
       "defense": 110,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 400
     },
     "rarity": 10,
     "foodConsumption": 9,
@@ -11245,7 +11526,8 @@
       "rangedAttack": 120,
       "defense": 145,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 400
     },
     "rarity": 20,
     "foodConsumption": 9,
@@ -11284,7 +11566,8 @@
       "rangedAttack": 145,
       "defense": 120,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 350
     },
     "rarity": 20,
     "foodConsumption": 9,
@@ -11322,7 +11605,8 @@
       "rangedAttack": 140,
       "defense": 120,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 300
     },
     "rarity": 20,
     "foodConsumption": 9,
@@ -11360,7 +11644,8 @@
       "rangedAttack": 140,
       "defense": 135,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 300
     },
     "rarity": 20,
     "foodConsumption": 9,
@@ -11398,7 +11683,8 @@
       "rangedAttack": 145,
       "defense": 125,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 410
     },
     "rarity": 20,
     "foodConsumption": 9,
@@ -11436,7 +11722,8 @@
       "rangedAttack": 140,
       "defense": 120,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 110
     },
     "rarity": 20,
     "foodConsumption": 9,
@@ -11472,7 +11759,8 @@
       "rangedAttack": 120,
       "defense": 200,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 10,
     "foodConsumption": 9,
@@ -11508,7 +11796,8 @@
       "rangedAttack": 200,
       "defense": 200,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": 100
     },
     "rarity": 10,
     "foodConsumption": 9,
@@ -11544,7 +11833,8 @@
       "rangedAttack": null,
       "defense": null,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": null
     },
     "rarity": null,
     "foodConsumption": null,
@@ -11580,7 +11870,8 @@
       "rangedAttack": null,
       "defense": null,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": null
     },
     "rarity": null,
     "foodConsumption": null,
@@ -11616,7 +11907,8 @@
       "rangedAttack": null,
       "defense": null,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": null
     },
     "rarity": null,
     "foodConsumption": null,
@@ -11652,7 +11944,8 @@
       "rangedAttack": null,
       "defense": null,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": null
     },
     "rarity": null,
     "foodConsumption": null,
@@ -11688,7 +11981,8 @@
       "rangedAttack": null,
       "defense": null,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": null
     },
     "rarity": null,
     "foodConsumption": null,
@@ -11724,7 +12018,8 @@
       "rangedAttack": null,
       "defense": null,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": null
     },
     "rarity": null,
     "foodConsumption": null,
@@ -11760,7 +12055,8 @@
       "rangedAttack": null,
       "defense": null,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": null
     },
     "rarity": null,
     "foodConsumption": null,
@@ -11796,7 +12092,8 @@
       "rangedAttack": null,
       "defense": null,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": null
     },
     "rarity": null,
     "foodConsumption": null,
@@ -11832,7 +12129,8 @@
       "rangedAttack": null,
       "defense": null,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": null
     },
     "rarity": null,
     "foodConsumption": null,
@@ -11868,7 +12166,8 @@
       "rangedAttack": null,
       "defense": null,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": null
     },
     "rarity": null,
     "foodConsumption": null,
@@ -11904,7 +12203,8 @@
       "rangedAttack": null,
       "defense": null,
       "support": null,
-      "craftSpeed": null
+      "craftSpeed": null,
+      "stamina": null
     },
     "rarity": null,
     "foodConsumption": null,

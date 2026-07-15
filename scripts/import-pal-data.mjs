@@ -13,7 +13,7 @@ const sourceByName = new Map(source.map((pal) => [pal.name, pal]));
 const specialSource = source.find((pal) => pal.id === "PlantSlime_Flower");
 let imported = 0;
 const normalized = current.map((existing) => {
-  if (existing.kind !== "pal") return existing;
+  if (existing.kind !== "pal") return { ...existing, stats: { ...existing.stats, stamina: existing.stats.stamina ?? null } };
   const atlas = existing.name === "Gumoss (Special)" ? specialSource : sourceByName.get(existing.name);
   assert.ok(atlas, `missing Atlas record for ${existing.name}`);
   const mappedWork = Object.fromEntries(Object.entries(atlas.workSuitability).map(([key, value]) => [workMap[key], value]));
@@ -23,7 +23,7 @@ const normalized = current.map((existing) => {
   return {
     ...existing,
     elements: atlas.elements.map((element) => elementMap[element] ?? element),
-    stats: { ...existing.stats, hp: atlas.hp, rangedAttack: atlas.attack, defense: atlas.defense },
+    stats: { ...existing.stats, hp: atlas.hp, rangedAttack: atlas.attack, defense: atlas.defense, stamina: atlas.stamina >= 0 ? atlas.stamina : null },
     rarity: atlas.rarity,
     foodConsumption: atlas.food,
     movement: { ...existing.movement, run: atlas.runSpeed >= 0 ? atlas.runSpeed : null },

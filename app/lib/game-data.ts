@@ -23,7 +23,7 @@ export type PalData = {
   power: number;
   work: Partial<Record<WorkKey, number>>;
   elements: string[];
-  stats: { hp: number | null; meleeAttack: number | null; rangedAttack: number | null; defense: number | null; support: number | null; craftSpeed: number | null };
+  stats: { hp: number | null; meleeAttack: number | null; rangedAttack: number | null; defense: number | null; support: number | null; craftSpeed: number | null; stamina: number | null };
   rarity: number | null;
   foodConsumption: number | null;
   movement: { slowWalk: number | null; walk: number | null; run: number | null; rideSprint: number | null };

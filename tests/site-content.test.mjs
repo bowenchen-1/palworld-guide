@@ -168,7 +168,7 @@ test("breeding calculator supports forward and reverse searches", async () => {
   assert.match(breedingCore, /matrix\[first\.id\]\?\.\[second\.id\]/);
 });
 
-test("Paldeck has URL-backed filters, two views, and indexable profile pages", async () => {
+test("Paldeck has URL-backed filters, three data-backed views, and indexable profile pages", async () => {
   const page = await read("../app/paldex/page.tsx");
   const content = await read("../app/paldex/paldex-page-content.tsx");
   const client = await read("../app/paldex/paldex-client.tsx");
@@ -182,6 +182,10 @@ test("Paldeck has URL-backed filters, two views, and indexable profile pages", a
   assert.match(client, /Match all/);
   assert.match(client, /Overview/);
   assert.match(client, /Work/);
+  assert.match(client, /Stats/);
+  assert.match(client, /Minimum level/);
+  assert.match(client, /elementMode/);
+  assert.match(client, /workLevel/);
   assert.match(client, /Highest work level/);
   assert.match(client, /paldex-control-bar/);
   assert.match(client, /Clear all/);
@@ -283,6 +287,7 @@ test("Pal data schema and repeatable import safeguards cover the 1.0 snapshot", 
     assert.ok("stats" in pal && "movement" in pal && "partnerSkill" in pal && "activeSkills" in pal && "drops" in pal && "ranchProduct" in pal);
   }
   assert.equal(data.filter((pal) => pal.stats.hp !== null).length, 289);
+  assert.equal(data.filter((pal) => pal.stats.stamina !== null).length, 289);
   assert.equal(data.filter((pal) => pal.elements.length).length, 289);
   assert.match(type, /foodConsumption: number \| null/);
   assert.match(filters, /parsePaldexFilters/);
