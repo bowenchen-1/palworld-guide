@@ -810,16 +810,17 @@ body::before {
 .home-calculator-top .breeding-operator { width:28px; height:32px; border:0; background:transparent; box-shadow:none; color:var(--terminal-mint); font-size:22px; }
 .home-calculator-top .breeding-operator.equals { color:var(--terminal-yellow); }
 
-/* Desktop tools share the direct calculator's spacious card scale. */
-.home-calculator-top .home-breeding-slot { display:flex; min-height:260px; align-items:center; justify-content:center; flex-direction:column; padding:36px 18px 18px; text-align:center; }
-.home-calculator-top .home-breeding-slot .pal-mark { width:100px; height:100px; margin:0; border-radius:26px; }
-.home-calculator-top .home-breeding-slot strong { margin-top:14px; font-size:22px; }
-.home-calculator-top .home-breeding-slot>small { margin-top:4px; }
-.home-calculator-top .home-breeding-slot>i { margin-top:12px; }
+/* Every desktop mode shares one compact, first-screen-friendly workbench scale. */
+.home-calculator-top .home-breeding-slot { display:flex; min-height:220px; align-items:center; justify-content:center; flex-direction:column; padding:29px 16px 15px; text-align:center; }
+.home-calculator-top .home-breeding-slot .pal-mark { width:84px; height:84px; margin:0; border-radius:23px; }
+.home-calculator-top .home-breeding-slot strong { margin-top:11px; font-size:20px; }
+.home-calculator-top .home-breeding-slot>small { margin-top:3px; }
+.home-calculator-top .home-breeding-slot>i { margin-top:9px; }
 .home-calculator-top .home-control-row,.home-calculator-top .home-route-controls { align-items:stretch; }
-.home-calculator-top .home-control-row>.home-compact-picker,.home-calculator-top .home-control-row>.home-filter,.home-calculator-top .home-route-controls> :is(.home-compact-picker,.home-filter,.home-number-control,.home-available-control) { min-height:260px; }
+.home-calculator-top .home-control-row>.home-compact-picker,.home-calculator-top .home-control-row>.home-filter,.home-calculator-top .home-route-controls> :is(.home-compact-picker,.home-filter,.home-number-control,.home-available-control) { min-height:220px; }
+.home-calculator-top .home-available-control { min-height:220px; }
 .home-calculator-top .home-control-row>.home-compact-picker { display:flex; align-items:center; justify-content:center; flex-direction:column; gap:8px; text-align:center; }
-.home-calculator-top .home-control-row>.home-compact-picker .pal-mark { width:82px; height:82px; border-radius:22px; }
+.home-calculator-top .home-control-row>.home-compact-picker .pal-mark { width:70px; height:70px; border-radius:20px; }
 .home-calculator-top .home-control-row>.home-compact-picker>span { min-width:0; }
 .home-calculator-top .home-control-row>.home-compact-picker>b { margin-top:4px; }
 .home-calculator-top .home-control-row>.home-filter,.home-calculator-top .home-route-controls>.home-filter,.home-calculator-top .home-route-controls>.home-number-control { align-content:center; }
