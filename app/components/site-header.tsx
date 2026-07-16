@@ -7,6 +7,7 @@ const navItems = [
   ["Tools", "/tools"],
   ["Team Builder", "/team-builder"],
   ["Pals", "/pals"],
+  ["Hardwood", "/items/hardwood"],
   ["Guides", "/guides"],
   ["Updates", "/updates"],
 ] as const;
