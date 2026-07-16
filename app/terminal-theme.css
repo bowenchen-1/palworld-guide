@@ -813,7 +813,7 @@ body::before {
 
 /* Every desktop mode shares one compact, first-screen-friendly workbench scale. */
 .home-calculator-top .home-breeding-slot { display:flex; min-height:220px; align-items:center; justify-content:center; flex-direction:column; padding:29px 16px 15px; text-align:center; }
-.home-calculator-top .home-breeding-slot .pal-mark { width:84px; height:84px; margin:0; border-radius:23px; }
+.home-calculator-top .home-breeding-slot .pal-mark { width:96px; height:96px; margin:0; border-radius:26px; }
 .home-calculator-top .home-breeding-slot strong { margin-top:11px; font-size:20px; }
 .home-calculator-top .home-breeding-slot>small { margin-top:3px; }
 .home-calculator-top .home-breeding-slot>i { margin-top:9px; }
@@ -841,7 +841,15 @@ body::before {
 .home-calculator-top .home-filter span,.home-calculator-top .home-number-control span { color:var(--terminal-muted); font-size:8px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; }
 .home-calculator-top .home-filter input,.home-calculator-top .home-number-control select,.home-calculator-top .home-available-list input { width:100%; border:0; background:transparent; color:var(--terminal-copy); font:inherit; font-size:13px; outline:none; }
 .home-calculator-top .home-filter input::placeholder,.home-calculator-top .home-available-list input::placeholder { color:#7e9da0; }
-.home-calculator-top .home-number-control select { min-height:27px; color:var(--terminal-copy); }
+.home-calculator-top .home-number-control { position:relative; }
+.home-calculator-top .home-number-control>span { font-size:10px; }
+.home-calculator-top .home-generation-trigger { display:flex; width:100%; min-height:42px; align-items:center; justify-content:space-between; border:1px solid var(--terminal-border); border-radius:8px; background:var(--terminal-panel-light); padding:7px 11px; color:var(--terminal-copy); cursor:pointer; font:inherit; }
+.home-calculator-top .home-generation-trigger strong { color:var(--terminal-copy); font-family:var(--font-display); font-size:20px; }
+.home-calculator-top .home-generation-trigger b { color:var(--terminal-mint); font-size:20px; line-height:1; }
+.home-calculator-top .home-generation-trigger:hover,.home-calculator-top .home-generation-trigger[aria-expanded="true"] { border-color:var(--terminal-mint); background:var(--terminal-panel-hover); }
+.home-calculator-top .home-generation-menu { position:absolute; z-index:8; right:12px; bottom:12px; left:12px; display:grid; gap:3px; border:1px solid var(--terminal-border); border-radius:9px; background:var(--terminal-panel); padding:6px; box-shadow:0 18px 35px rgba(0,8,12,.44); }
+.home-calculator-top .home-generation-menu button { min-height:34px; border:1px solid transparent; border-radius:6px; background:transparent; padding:5px 9px; color:var(--terminal-copy); font-family:var(--font-display); font-size:16px; text-align:left; }
+.home-calculator-top .home-generation-menu button:hover,.home-calculator-top .home-generation-menu button.selected { border-color:var(--terminal-mint); background:rgba(57,208,197,.13); color:var(--terminal-mint); }
 
 /* One selection-card shell for every homepage breeding mode. The parents view
    keeps its three-card layout; all direct Pal and Available Pals choices share
@@ -883,11 +891,12 @@ body::before {
 
 /* Available Pals uses the same selector card as every direct Pal picker. */
 .home-calculator-top .home-available-control { align-items:center; justify-content:center; padding:29px 16px 15px; text-align:center; }
-.home-calculator-top .home-available-control>.pal-mark { width:84px; height:84px; border-color:rgba(244,250,249,.62); border-radius:23px; background:var(--terminal-panel-light); }
+.home-calculator-top .home-available-control>.pal-mark { width:96px; height:96px; border-color:rgba(244,250,249,.62); border-radius:26px; background:var(--terminal-panel-light); }
 .home-calculator-top .home-available-control>strong { margin-top:11px; color:var(--terminal-copy); font-family:var(--font-display); font-size:20px; }
 .home-calculator-top .home-available-control>small { margin-top:3px; color:var(--terminal-muted); font-size:8px; }
 .home-calculator-top .home-selector-actions { display:flex; gap:6px; margin-top:9px; }
-.home-calculator-top .home-selector-actions button { border-radius:6px; background:var(--terminal-mint); padding:7px 9px; color:var(--terminal-canvas); font-size:8px; font-weight:900; }
+.home-calculator-top .home-selector-actions button { border:1px solid transparent; border-radius:6px; background:var(--terminal-panel-light); padding:7px 9px; color:var(--terminal-muted); font-size:8px; font-weight:900; }
+.home-calculator-top .home-selector-actions button:hover { border-color:var(--terminal-mint); background:var(--terminal-panel-hover); color:var(--terminal-copy); }
 .home-calculator-top .home-selector-actions button+button { background:var(--terminal-panel-light); color:var(--terminal-copy); }
 .home-calculator-top .home-available-control .home-available-list { align-self:stretch; width:100%; }
 
@@ -931,7 +940,7 @@ body::before {
   .home-calculator-top .home-workbench { margin-top:8px; padding:12px; }
   .home-calculator-top .home-breeding-equation { grid-template-columns:1fr; gap:4px; }
   .home-calculator-top .home-breeding-slot { min-height:116px; display:grid; grid-template-columns:42px minmax(0,1fr); grid-template-rows:minmax(0,1fr) auto auto; column-gap:5px; padding:25px 6px 7px; text-align:left; }
-  .home-calculator-top .home-breeding-slot .pal-mark { grid-row:1 / 4; width:40px; height:40px; border-radius:12px; }
+  .home-calculator-top .home-breeding-slot .pal-mark { grid-row:1 / 4; width:48px; height:48px; border-radius:14px; }
   .home-calculator-top .home-breeding-slot strong { margin:0; font-size:10px; }
   .home-calculator-top .home-breeding-slot>small { margin:0; font-size:5px; }
   .home-calculator-top .home-breeding-slot>i { grid-column:2; grid-row:3; justify-self:start; margin:0; padding:4px; font-size:4px; }

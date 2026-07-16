@@ -114,6 +114,8 @@ test("homepage hosts all six calculator modes with shared URL and local storage 
   assert.match(client, /home-breeding-slot home-selector-card/);
   assert.match(client, /home-breeding-slot home-available-control/);
   assert.doesNotMatch(client, /Add Pals/);
+  assert.match(client, /GenerationSelect value=\{max\} onChange=\{setMax\}/);
+  assert.match(client, /home-generation-menu/);
   assert.match(client, /homeParentPick\("Parent A"/);
   assert.match(client, /homeParentPick\("Parent B"/);
   assert.match(client, /pairCandidates/);
