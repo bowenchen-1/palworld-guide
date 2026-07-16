@@ -408,6 +408,17 @@ test("Pal data schema and repeatable import safeguards cover the 1.0 snapshot", 
   assert.match(validator, /missing Partner Skill icon/);
 });
 
+test("Paldeck quick filters are wired to live result feedback", async () => {
+  const client = await read("../app/paldex/paldex-client.tsx");
+  const data = JSON.parse(await read("../public/data/pals.json"));
+  assert.match(client, /onClick=\{\(\) => toggleElement\(item\)\}/);
+  assert.match(client, /onClick=\{\(\) => toggleWork\(item\)\}/);
+  assert.match(client, /filterPals\(catalogPals, filters\)/);
+  assert.match(client, /className="paldex-filter-status" aria-live="polite"/);
+  assert.equal(data.filter((pal) => pal.elements.includes("Water")).length, 48);
+  assert.equal(data.filter((pal) => (pal.work.watering ?? 0) >= 1).length, 46);
+});
+
 test("social metadata declares locale, dimensions, and Pal sharing cards", async () => {
   const seo = await read("../app/lib/seo.ts");
   const palPage = await read("../app/pals/[slug]/page.tsx");
