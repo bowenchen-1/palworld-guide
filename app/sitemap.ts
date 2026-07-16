@@ -15,7 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 1,
     },
-    { url: `${siteUrl}/paldex`, lastModified, changeFrequency: "weekly", priority: 0.9 },
+    { url: `${siteUrl}/pals`, lastModified, changeFrequency: "weekly", priority: 0.9 },
     { url: `${siteUrl}/palworld-1-0`, lastModified, changeFrequency: "weekly", priority: 0.9 },
     { url: `${siteUrl}/tools`, lastModified, changeFrequency: "weekly", priority: 0.9 },
     { url: `${siteUrl}/team-builder`, lastModified, changeFrequency: "weekly", priority: 0.85 },
@@ -26,7 +26,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     ...corePages,
     ...Array.from({ length: paldexPageCount - 1 }, (_, index) => ({
-      url: `${siteUrl}/paldex/page/${index + 2}`,
+      url: `${siteUrl}/pals/page/${index + 2}`,
       lastModified,
       changeFrequency: "weekly" as const,
       priority: 0.75,

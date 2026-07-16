@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from "react";
 const navItems = [
   ["Tools", "/tools"],
   ["Team Builder", "/team-builder"],
-  ["Pals", "/paldex"],
+  ["Pals", "/pals"],
   ["Guides", "/guides"],
   ["Updates", "/updates"],
 ] as const;

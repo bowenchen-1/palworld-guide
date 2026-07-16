@@ -15,7 +15,7 @@ export default function NotFound() {
       <strong>404</strong>
       <h1>Page not found</h1>
       <p>The requested field record is not in this database. Continue with one of the verified Palworld tools or guides below.</p>
-      <div><Link href="/">Breeding calculator</Link><Link href="/paldex">Browse the Paldeck</Link><Link href="/guides">Open guides</Link></div>
+      <div><Link href="/">Breeding calculator</Link><Link href="/pals">Browse all Pals</Link><Link href="/guides">Open guides</Link></div>
     </section>
   </main>;
 }

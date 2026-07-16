@@ -6,7 +6,7 @@ import PaldexClient from "./paldex-client";
 
 export default function PaldexPageContent({ initialPage = 1 }: { initialPage?: number }) {
   const pageSuffix = initialPage > 1 ? ` — Page ${initialPage}` : "";
-  const pagePath = initialPage > 1 ? `/paldex/page/${initialPage}` : "/paldex";
+  const pagePath = initialPage > 1 ? `/pals/page/${initialPage}` : "/pals";
   const schema = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
@@ -14,10 +14,10 @@ export default function PaldexPageContent({ initialPage = 1 }: { initialPage?: n
     url: `${siteUrl}${pagePath}`,
     description: "Browse all 299 Palworld Pals with detailed profiles, elements, work suitability, breeding data, filters, and 72 new Pals and variants from Palworld 1.0.",
     numberOfItems: palCounts.pals,
-    isPartOf: initialPage > 1 ? { "@type": "CollectionPage", name: "Palworld Paldeck Database", url: `${siteUrl}/paldex` } : undefined,
+    isPartOf: initialPage > 1 ? { "@type": "CollectionPage", name: "Palworld Pals Database", url: `${siteUrl}/pals` } : undefined,
   };
 
-  return <ToolShell current="/paldex" breadcrumb={[{ name: "Home", path: "/" }, { name: "Paldeck", path: pagePath }]}>
+  return <ToolShell current="/pals" breadcrumb={[{ name: "Home", path: "/" }, { name: "Pals", path: pagePath }]}>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
     <section className="database-hero paldex-hero compact-paldex-hero"><div><p className="database-eyebrow">{palCounts.pals} current Pals{initialPage > 1 ? ` · page ${initialPage}` : ""}</p><h1>Palworld Pals Database</h1><p>Browse all Palworld Pals by name, Paldeck number, element, work suitability, and breeding data.</p></div></section>
     <Suspense fallback={<div className="database-workspace paldex-workspace" aria-busy="true" />}><PaldexClient initialPage={initialPage} /></Suspense>

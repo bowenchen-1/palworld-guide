@@ -32,7 +32,7 @@ test("homepage targets Palworld breeding calculator with one focused H1", async 
   assert.match(page, /Plan a Reliable Palworld Breeding Route/);
   assert.match(page, /"@type": "WebApplication"/);
   assert.match(gameData, /href: "\/"/);
-  assert.match(gameData, /\/paldex/);
+  assert.match(gameData, /\/pals/);
   assert.match(gameData, /\/palworld-1-0/);
   assert.doesNotMatch(page, /HomeToolBoard/);
   assert.match(page, /home-calculator-top/);
@@ -81,7 +81,7 @@ test("each indexable page targets one distinct primary keyword", async () => {
   const files = [
     ["../app/page.tsx", "palworld breeding calculator"],
     ["../app/palworld-1-0/page.tsx", "palworld 1.0"],
-    ["../app/paldex/page.tsx", "palworld pals"],
+    ["../app/pals/page.tsx", "palworld pals"],
     ["../app/tools/page.tsx", "palworld tools"],
     ["../app/guides/page.tsx", "palworld guides"],
     ["../app/updates/page.tsx", "palworld 1.0 patch notes"],
@@ -101,7 +101,7 @@ test("each indexable page targets one distinct primary keyword", async () => {
 });
 
 test("Paldeck SEO metadata and Pal image accessibility use the unified 1.0 counts", async () => {
-  const paldex = await read("../app/paldex/page.tsx");
+  const paldex = await read("../app/pals/page.tsx");
   const content = await read("../app/paldex/paldex-page-content.tsx");
   const mark = await read("../app/components/pal-mark.tsx");
   const og = await read("../app/pals/[slug]/opengraph-image.tsx");
@@ -226,7 +226,7 @@ test("legacy breeding calculator URL redirects to homepage while preserving quer
 });
 
 test("Paldeck has URL-backed filters, one comparative table, and indexable profile pages", async () => {
-  const page = await read("../app/paldex/page.tsx");
+  const page = await read("../app/pals/page.tsx");
   const content = await read("../app/paldex/paldex-page-content.tsx");
   const client = await read("../app/paldex/paldex-client.tsx");
   const filters = await read("../app/lib/paldex.ts");
@@ -268,6 +268,23 @@ test("Paldeck has URL-backed filters, one comparative table, and indexable profi
   assert.match(profile, /does not describe combat strength, rarity, or catch difficulty/);
 });
 
+test("Pals routes preserve legacy redirects and filter indexing rules", async () => {
+  const legacy = await read("../app/paldex/page.tsx");
+  const legacyPagination = await read("../app/paldex/page/[page]/page.tsx");
+  const legacyProfile = await read("../app/paldex/[slug]/page.tsx");
+  const list = await read("../app/pals/page.tsx");
+  const pagination = await read("../app/pals/page/[page]/page.tsx");
+  assert.match(legacy, /permanentRedirect\("\/pals"\)/);
+  assert.match(legacyPagination, /permanentRedirect\(`\/pals\/page\/\$\{page\}`\)/);
+  assert.match(legacyProfile, /findPal/);
+  assert.match(legacyProfile, /permanentRedirect\(`\/pals\/\$\{slug\}`\)/);
+  assert.match(list, /searchParams/);
+  assert.match(list, /index: false, follow: true/);
+  assert.match(pagination, /searchParams/);
+  assert.match(pagination, /index: false, follow: true/);
+  assert.match(pagination, /notFound/);
+});
+
 test("1.0 hub answers release-date intent above the fold", async () => {
   const page = await read("../app/palworld-1-0/page.tsx");
   assert.equal((page.match(/<h1/g) ?? []).length, 1);
@@ -286,7 +303,7 @@ test("sitemap exposes tools, guides, and every Pal profile", async () => {
   assert.match(sitemap, /\$\{siteUrl\}\/guides/);
   assert.match(sitemap, /\$\{siteUrl\}\/updates/);
   assert.match(sitemap, /catalogPals\.map/);
-  assert.match(sitemap, /paldex\/page\/\$\{index \+ 2\}/);
+  assert.match(sitemap, /pals\/page\/\$\{index \+ 2\}/);
   assert.match(sitemap, /priority: 1/);
   assert.match(robots, /sitemap\.xml/);
   assert.match(robots, /allow: "\/"/);
@@ -306,7 +323,7 @@ test("indexable hubs expose breadcrumb schema and Paldeck pages expose paginatio
   const shell = await read("../app/components/tool-shell.tsx");
   const guides = await read("../app/guides/page.tsx");
   const paldexContent = await read("../app/paldex/paldex-page-content.tsx");
-  const pagination = await read("../app/paldex/page/[page]/page.tsx");
+  const pagination = await read("../app/pals/page/[page]/page.tsx");
   assert.match(shell, /createBreadcrumbSchema/);
   assert.match(guides, /createBreadcrumbSchema/);
   assert.match(paldexContent, /breadcrumb=\{\[/);
@@ -322,7 +339,7 @@ test("pages own their canonical and social metadata without inheriting homepage 
   const notFound = await read("../app/not-found.tsx");
   const topLevelPages = [
     "../app/page.tsx",
-    "../app/paldex/page.tsx",
+    "../app/pals/page.tsx",
     "../app/tools/page.tsx",
     "../app/guides/page.tsx",
     "../app/updates/page.tsx",
@@ -345,8 +362,8 @@ test("Paldeck pagination exposes every initial Pal card to crawlers", async () =
   const pagination = await read("../app/paldex/page/[page]/page.tsx");
   const content = await read("../app/paldex/paldex-page-content.tsx");
   assert.match(pagination, /generateStaticParams/);
-  assert.match(pagination, /permanentRedirect\("\/paldex"\)/);
-  assert.match(pagination, /path: `\/paldex\/page\/\$\{page\}`/);
+  assert.match(pagination, /permanentRedirect\(`\/pals\/page\/\$\{page\}`\)/);
+  assert.match(pagination, /path: `\/pals\/page\/\$\{page\}`/);
   assert.match(content, /<Suspense/);
   assert.match(content, /<PaldexClient initialPage=\{initialPage\}/);
 });

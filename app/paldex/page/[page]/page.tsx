@@ -3,7 +3,6 @@ import { notFound, permanentRedirect } from "next/navigation";
 import { createPageMetadata } from "../../../lib/seo";
 import { catalogPals } from "../../../lib/game-data";
 import { PALDEX_PAGE_SIZE } from "../../paldex-config";
-import PaldexPageContent from "../../paldex-page-content";
 
 type Props = { params: Promise<{ page: string }> };
 
@@ -22,18 +21,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `Palworld Paldeck Database — Page ${page} of ${pageCount} | 1.0`,
     description: `Browse Palworld Paldeck profiles ${((page - 1) * PALDEX_PAGE_SIZE) + 1}–${Math.min(page * PALDEX_PAGE_SIZE, palCount)} of ${palCount}, with current version 1.0 work suitability, breeding power, images, and profile links for focused research.`,
     keywords: ["palworld paldeck"],
-    path: `/paldex/page/${page}`,
+    path: `/pals/page/${page}`,
     }),
     pagination: {
-      previous: page === 2 ? "/paldex" : `/paldex/page/${page - 1}`,
-      ...(page < pageCount ? { next: `/paldex/page/${page + 1}` } : {}),
+      previous: page === 2 ? "/pals" : `/pals/page/${page - 1}`,
+      ...(page < pageCount ? { next: `/pals/page/${page + 1}` } : {}),
     },
   };
 }
 
 export default async function PaldexPaginationPage({ params }: Props) {
   const page = Number.parseInt((await params).page, 10);
-  if (page === 1) permanentRedirect("/paldex");
+  if (page === 1) permanentRedirect("/pals");
   if (!Number.isInteger(page) || page < 2 || page > pageCount) notFound();
-  return <PaldexPageContent initialPage={page} />;
+  permanentRedirect(`/pals/page/${page}`);
 }

@@ -58,7 +58,7 @@ export default function ToolsPage() {
             </div>
             <b>Open →</b>
           </Link>
-          <Link href="/paldex">
+          <Link href="/pals">
             <span>✦</span>
             <div>
               <h3>Paldeck Database</h3>

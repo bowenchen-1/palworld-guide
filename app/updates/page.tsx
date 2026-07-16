@@ -56,7 +56,7 @@ export default function UpdatesPage() {
               Identity, work suitability, and breeding power checked for the
               current data release.
             </p>
-            <Link href="/paldex">Browse Paldeck →</Link>
+            <Link href="/pals">Browse Pals →</Link>
           </article>
           <article>
             <span>TOOL</span>

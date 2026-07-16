@@ -40,11 +40,11 @@ export default function PaldexClient({ initialPage: _initialPage = 1 }: { initia
 
   const update = (patch: Partial<PaldexFilters>) => {
     const query = serializePaldexFilters({ ...filters, ...patch }).toString();
-    router.push(query ? `/paldex?${query}` : "/paldex", { scroll: false });
+    router.push(query ? `/pals?${query}` : "/pals", { scroll: false });
   };
   const goToPage = (page: number) => {
     const query = serializePaldexFilters(filters).toString();
-    const path = page <= 1 ? "/paldex" : `/paldex/page/${page}`;
+    const path = page <= 1 ? "/pals" : `/pals/page/${page}`;
     router.push(query ? `${path}?${query}` : path, { scroll: false });
   };
   const toggle = <T extends string,>(items: T[], item: T) => items.includes(item) ? items.filter((value) => value !== item) : [...items, item];
