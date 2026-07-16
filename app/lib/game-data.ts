@@ -38,12 +38,16 @@ export type PalData = {
 export type BreedingData = Record<string, Record<string, string>>;
 
 export const pals = palRecords as PalData[];
-export const playablePals = pals.filter((pal) => pal.kind === "pal");
+export const excludedCatalogPalIds = new Set(["12.1"]);
+export const catalogPals = pals.filter((pal) => !excludedCatalogPalIds.has(pal.id));
+export const playablePals = catalogPals.filter((pal) => pal.kind === "pal");
 export const palCounts = {
-  palForms: playablePals.length,
+  pals: catalogPals.length,
+  standardPals: playablePals.length,
   paldeckNumbers: new Set(playablePals.map((pal) => pal.number.replace(/[A-Z]+$/, ""))).size,
-  crossoverCreatures: pals.filter((pal) => pal.kind === "monster").length,
+  crossoverCreatures: catalogPals.filter((pal) => pal.kind === "monster").length,
   records: pals.length,
+  excludedCatalogRecords: pals.length - catalogPals.length,
 };
 
 export const workLabels: Record<WorkKey, string> = {
@@ -94,5 +98,5 @@ export function palInitials(name: string) {
 }
 
 export function findPal(slug: string) {
-  return pals.find((pal) => pal.slug === slug);
+  return catalogPals.find((pal) => pal.slug === slug);
 }

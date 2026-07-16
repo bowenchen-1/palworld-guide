@@ -5,7 +5,7 @@ export type PaldexView = "overview" | "work" | "stats";
 export type PaldexSort = "number" | "name" | "hp" | "ranged" | "defense" | "stamina" | "price" | "ride-speed" | "rarity" | "food" | "speed" | "work" | "power-low" | "power-high";
 export type PaldexFilters = { q: string; elements: string[]; elementMode: MatchMode; work: WorkKey[]; workMode: MatchMode; workLevel: number; types: PalData["kind"][]; sort: PaldexSort; view: PaldexView };
 
-export const paldexDefaults: PaldexFilters = { q: "", elements: [], elementMode: "any", work: [], workMode: "any", workLevel: 0, types: ["pal"], sort: "number", view: "overview" };
+export const paldexDefaults: PaldexFilters = { q: "", elements: [], elementMode: "any", work: [], workMode: "any", workLevel: 0, types: ["pal", "monster"], sort: "number", view: "overview" };
 const workKeys: WorkKey[] = ["emitflame", "watering", "seeding", "generateelectricity", "handcraft", "collection", "deforest", "mining", "productmedicine", "cool", "transport", "monsterfarm"];
 const validWork = new Set<WorkKey>(workKeys);
 const validSort = new Set<PaldexSort>(["number", "name", "hp", "ranged", "defense", "stamina", "price", "ride-speed", "rarity", "food", "speed", "work", "power-low", "power-high"]);

@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import { notFound, permanentRedirect } from "next/navigation";
 import { createPageMetadata } from "../../../lib/seo";
-import { pals } from "../../../lib/game-data";
+import { catalogPals } from "../../../lib/game-data";
 import { PALDEX_PAGE_SIZE } from "../../paldex-config";
 import PaldexPageContent from "../../paldex-page-content";
 
 type Props = { params: Promise<{ page: string }> };
 
-const palCount = pals.filter((pal) => pal.kind === "pal").length;
+const palCount = catalogPals.length;
 const pageCount = Math.ceil(palCount / PALDEX_PAGE_SIZE);
 
 export function generateStaticParams() {

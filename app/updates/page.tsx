@@ -1,6 +1,7 @@
 import Link from "next/link";
 import ToolShell from "../components/tool-shell";
 import { createPageMetadata } from "../lib/seo";
+import { palCounts } from "../lib/game-data";
 
 export const metadata = createPageMetadata({
   title: "Palworld 1.0 Patch Notes & Current Data Updates",
@@ -34,8 +35,9 @@ export default function UpdatesPage() {
             <p>
               The launch changed Pal numbering, work suitability, breeding
               values, and progression advice. Our current database snapshot
-              contains 289 Pals, 11 crossover creatures, and 300 breeding
-              records.
+              contains {palCounts.pals} Pals ({palCounts.standardPals} standard
+              and {palCounts.crossoverCreatures} crossover); the breeding
+              matrix remains {palCounts.records} records.
             </p>
             <div>
               <Link href="/palworld-1-0">Read the 1.0 guide →</Link>
@@ -49,7 +51,7 @@ export default function UpdatesPage() {
           <article>
             <span>DATA</span>
             <h3>Paldeck snapshot</h3>
-            <strong>289 Pals indexed</strong>
+            <strong>{palCounts.pals} Pals indexed</strong>
             <p>
               Identity, work suitability, and breeding power checked for the
               current data release.

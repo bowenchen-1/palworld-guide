@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { ElementIcon, PartnerSkillIcon, WorkSuitabilityIcon } from "../components/pal-icons";
 import PalMark from "../components/pal-mark";
-import { PalData, pals, workLabels } from "../lib/game-data";
+import { catalogPals, PalData, workLabels } from "../lib/game-data";
 import { average, duplicateIds, elementCoverage, emptyTeam, normalizeTeam, parseTeamParam, serializeTeam, TeamSlots, workCoverage } from "./core";
 
 const STORAGE_KEY = "palworld-team-builder-v1";
@@ -21,8 +21,8 @@ function readStoredTeam(validIds: ReadonlySet<string>) {
 }
 
 export default function TeamBuilderClient() {
-  const byId = useMemo(() => new Map(pals.map((pal) => [pal.id, pal])), []);
-  const validIds = useMemo(() => new Set(pals.map((pal) => pal.id)), []);
+  const byId = useMemo(() => new Map(catalogPals.map((pal) => [pal.id, pal])), []);
+  const validIds = useMemo(() => new Set(catalogPals.map((pal) => pal.id)), []);
   const [team, setTeam] = useState<TeamSlots>(() => emptyTeam());
   const [restored, setRestored] = useState(false);
   const [pickerSlot, setPickerSlot] = useState<number | null>(null);
@@ -67,7 +67,7 @@ export default function TeamBuilderClient() {
   const work = workCoverage(selected);
   const filtered = useMemo(() => {
     const term = query.trim().toLowerCase();
-    return pals.filter((pal) => (!element || pal.elements.includes(element)) && (!term || pal.name.toLowerCase().includes(term) || pal.number.toLowerCase().includes(term))).sort((a, b) => a.number.localeCompare(b.number, undefined, { numeric: true }) || a.name.localeCompare(b.name));
+    return catalogPals.filter((pal) => (!element || pal.elements.includes(element)) && (!term || pal.name.toLowerCase().includes(term) || pal.number.toLowerCase().includes(term))).sort((a, b) => a.number.localeCompare(b.number, undefined, { numeric: true }) || a.name.localeCompare(b.name));
   }, [element, query]);
   const shown = filtered.slice(0, limit);
 

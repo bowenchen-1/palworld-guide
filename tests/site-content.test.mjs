@@ -38,11 +38,12 @@ test("homepage targets Palworld breeding calculator with one focused H1", async 
   assert.match(page, /home-calculator-top/);
   assert.match(page, /Updated for Palworld 1\.0/);
   assert.match(page, /home-calculator-intro/);
-  assert.match(page, /const standardPalCount = pals\.filter\(\(pal\) => pal\.kind === "pal"\)\.length/);
-  assert.match(page, /const crossoverCreatureCount = pals\.filter\(\(pal\) => pal\.kind === "monster"\)\.length/);
-  assert.match(page, /Total Pal entries/);
-  assert.match(page, /standard Pals · \{crossoverCreatureCount\} crossover creatures · \{totalPalEntryCount\} total Pal entries/);
-  assert.doesNotMatch(page, /300 breeding records|Pal records|Browse all 289 Pals/);
+  assert.match(page, /const standardPalCount = palCounts\.standardPals/);
+  assert.match(page, /const crossoverCreatureCount = palCounts\.crossoverCreatures/);
+  assert.match(page, /Pals indexed/);
+  assert.match(page, /\{totalPalEntryCount\} Pals · \{standardPalCount\} standard · \{crossoverCreatureCount\} crossover · 300 breeding records/);
+  assert.match(page, /299-Pal visible catalog/);
+  assert.doesNotMatch(page, /Browse all 289 Pals/);
   assert.doesNotMatch(page, /home-release-panel/);
   assert.match(page, /Popular Pals/);
   assert.doesNotMatch(layout, /Palworld Breeding Calculator - Updated 1\.0 Pal Combos/);
@@ -170,15 +171,20 @@ test("guide library contains 24 complete English guides in six categories", asyn
   assert.doesNotMatch(data, /steamcommunity\.com|palworld\.wiki\.gg|Official Palworld/);
 });
 
-test("current 1.0 dataset distinguishes Paldeck numbers, Pal forms, and crossover entries", async () => {
+test("current 1.0 dataset distinguishes visible Pals from raw breeding records", async () => {
   const pals = JSON.parse(await read("../public/data/pals.json"));
   const version = JSON.parse(await read("../public/data/data-version.json"));
   const matrix = JSON.parse(await read("../public/data/breeding.json"));
   assert.equal(pals.length, 300);
-  assert.equal(pals.filter((pal) => pal.kind === "pal").length, 289);
-  assert.equal(new Set(pals.filter((pal) => pal.kind === "pal").map((pal) => pal.number.replace(/[A-Z]+$/, ""))).size, 204);
-  assert.equal(pals.filter((pal) => pal.kind === "monster").length, 11);
+  const catalog = pals.filter((pal) => pal.id !== "12.1");
+  assert.equal(catalog.length, 299);
+  assert.equal(catalog.filter((pal) => pal.kind === "pal").length, 288);
+  assert.equal(new Set(catalog.filter((pal) => pal.kind === "pal").map((pal) => pal.number.replace(/[A-Z]+$/, ""))).size, 204);
+  assert.equal(catalog.filter((pal) => pal.kind === "monster").length, 11);
+  assert.equal(catalog.find((pal) => pal.name === "Gumoss (Special)"), undefined);
   assert.equal(version.gameVersion, "1.0");
+  assert.equal(version.pals, 299);
+  assert.deepEqual(version.excludedCatalogIds, ["12.1"]);
   assert.equal(pals.find((pal) => pal.name === "Sekhmet")?.number, "140");
   assert.equal(Object.keys(matrix).length, 300);
 });
@@ -246,7 +252,7 @@ test("sitemap exposes tools, guides, and every Pal profile", async () => {
   assert.match(sitemap, /\$\{siteUrl\}\/team-builder/);
   assert.match(sitemap, /\$\{siteUrl\}\/guides/);
   assert.match(sitemap, /\$\{siteUrl\}\/updates/);
-  assert.match(sitemap, /pals\.map/);
+  assert.match(sitemap, /catalogPals\.map/);
   assert.match(sitemap, /paldex\/page\/\$\{index \+ 2\}/);
   assert.match(sitemap, /priority: 1/);
   assert.match(robots, /sitemap\.xml/);

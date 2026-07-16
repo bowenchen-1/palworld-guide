@@ -2,6 +2,7 @@ import Link from "next/link";
 import ToolLab from "../components/tool-lab";
 import ToolShell from "../components/tool-shell";
 import { createPageMetadata } from "../lib/seo";
+import { palCounts } from "../lib/game-data";
 
 export const metadata = createPageMetadata({
   title: "Palworld Tools & Calculators (1.0) | Field Guide",
@@ -61,7 +62,7 @@ export default function ToolsPage() {
             <span>✦</span>
             <div>
               <h3>Paldeck Database</h3>
-              <p>Filter 289 Pals by name, number, and work suitability.</p>
+              <p>Filter {palCounts.pals} Pals by name, number, and work suitability.</p>
             </div>
             <b>Open →</b>
           </Link>

@@ -3,14 +3,14 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import PalMark from "../../components/pal-mark";
 import SiteHeader from "../../components/site-header";
-import { findPal, palCounts, pals, WorkKey, workGlyphs, workLabels } from "../../lib/game-data";
+import { catalogPals, findPal, palCounts, WorkKey, workGlyphs, workLabels } from "../../lib/game-data";
 import { createBreadcrumbSchema, createPageMetadata, fitMetaTitle } from "../../lib/seo";
 import { siteUrl } from "../../site-config";
 
 type Props = { params: Promise<{ slug: string }> };
 
 export function generateStaticParams() {
-  return pals.map(({ slug }) => ({ slug }));
+  return catalogPals.map(({ slug }) => ({ slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -38,7 +38,7 @@ export default async function PalProfilePage({ params }: Props) {
   const pal = findPal(slug);
   if (!pal) notFound();
   const workEntries = Object.entries(pal.work) as [WorkKey, number][];
-  const related = pals.filter((item) => item.id !== pal.id && item.kind === pal.kind).sort((a, b) => Math.abs(a.power - pal.power) - Math.abs(b.power - pal.power)).slice(0, 4);
+  const related = catalogPals.filter((item) => item.id !== pal.id && item.kind === pal.kind).sort((a, b) => Math.abs(a.power - pal.power) - Math.abs(b.power - pal.power)).slice(0, 4);
   const rankedWork = [...workEntries].sort((a, b) => b[1] - a[1]);
   const strongest = rankedWork[0];
   const secondary = rankedWork[1];
@@ -58,6 +58,6 @@ export default async function PalProfilePage({ params }: Props) {
       <section><h2>{pal.name} work suitability</h2>{workEntries.length ? <><div className="profile-work-grid">{workEntries.map(([key, level]) => <article key={key}><span>{workGlyphs[key]}</span><div><strong>{workLabels[key]}</strong><small>Base level {level}</small></div><b>{level}</b></article>)}</div><p>{strongest ? `${pal.name}'s highest recorded base role is ${workLabels[strongest[0]]} at level ${strongest[1]}. ` : ""}Your save can show different effective levels after condensation, applied techniques, and base-wide effects.</p></> : <p>No ordinary base work suitability is recorded for this crossover entry.</p>}</section>
       <section><h2>Plan with {pal.name}</h2><p>Use the current tools to turn this profile into a breeding or base-planning decision. These links keep the same verified 1.0 data context.</p><div className="profile-action-grid"><Link href={`/?mode=target&target=${pal.id}`}><span>01</span><strong>Search breeding pairs</strong><small>Use {pal.name} as a target or parent.</small></Link><Link href="/paldex"><span>02</span><strong>Compare work roles</strong><small>Filter the Paldeck by suitability and level.</small></Link><Link href="/guides/work-suitability-basics"><span>03</span><strong>Understand work levels</strong><small>Read the practical work-suitability guide.</small></Link></div><div className="profile-callout"><strong>Data freshness</strong><p>Game version 1.0 · community game-file snapshot updated July 12 and cross-checked July 14, 2026.</p></div></section>
     </div><aside className="profile-related"><p className="database-eyebrow">Similar breeding power</p><h2>Related Pal profiles</h2>{related.map((item) => <Link href={`/pals/${item.slug}`} key={item.id}><PalMark pal={item} small /><span><strong>{item.name}</strong><small>No. {item.number} · Power {item.power}</small></span><b>→</b></Link>)}</aside></section>
-    <footer className="database-footer"><span>Independent fan-made Palworld resource.</span><Link href="/paldex">Browse all {palCounts.palForms} Pal forms →</Link></footer>
+    <footer className="database-footer"><span>Independent fan-made Palworld resource.</span><Link href="/paldex">Browse all {palCounts.pals} Pals →</Link></footer>
   </main>;
 }

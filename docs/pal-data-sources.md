@@ -5,7 +5,7 @@
 - Game target: Palworld 1.0
 - Dataset schema: 2
 - Imported: 2026-07-15
-- Scope: 300 entries: 204 Paldeck main numbers, 289 playable Pal forms (including 85 letter-suffix variants), and 11 crossover creatures.
+- Scope: 300 raw records for the breeding matrix; the user-visible catalog contains 299 Pals after excluding `Gumoss (Special)` (`12.1`), leaving 288 standard Pal forms and 11 crossover creatures.
 - Identity continuity: existing `id`, `number`, `slug`, local image name, work suitability, and breeding power are preserved.
 
 ## Source and licensing status

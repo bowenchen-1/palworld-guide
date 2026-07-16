@@ -1,6 +1,6 @@
 # Pal data field coverage
 
-Generated from the 300-record Palworld 1.0 snapshot on 2026-07-15. Run `npm run data:audit` to refresh the live audit.
+Generated from the 300-record raw Palworld 1.0 snapshot on 2026-07-15. The user-visible catalog is 299 records after excluding `Gumoss (Special)` (`12.1`). Run `npm run data:audit` to refresh the raw-field audit.
 
 | Field group | Field | Records | Coverage |
 | --- | --- | ---: | ---: |

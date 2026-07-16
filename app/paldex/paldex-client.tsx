@@ -5,7 +5,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { useMemo, useState } from "react";
 import { ElementIcon, PartnerSkillIcon, WorkSuitabilityIcon } from "../components/pal-icons";
 import PalMark from "../components/pal-mark";
-import { PalData, WorkKey, workLabels, pals } from "../lib/game-data";
+import { catalogPals, PalData, WorkKey, workLabels } from "../lib/game-data";
 import { filterPals, MatchMode, PaldexFilters, PaldexSort, parsePaldexFilters, serializePaldexFilters, sortPals } from "../lib/paldex";
 
 const workTypes = Object.keys(workLabels) as WorkKey[];
@@ -32,7 +32,7 @@ export default function PaldexClient({ initialPage: _initialPage = 1 }: { initia
   const [draftWork, setDraftWork] = useState<WorkKey[]>([]);
   const [draftWorkMode, setDraftWorkMode] = useState<MatchMode>("any");
   const [draftWorkLevel, setDraftWorkLevel] = useState(0);
-  const visible = useMemo(() => sortPals(filterPals(pals, filters), filters.sort), [filters]);
+  const visible = useMemo(() => sortPals(filterPals(catalogPals, filters), filters.sort), [filters]);
 
   const update = (patch: Partial<PaldexFilters>) => {
     const query = serializePaldexFilters({ ...filters, ...patch }).toString();
@@ -55,8 +55,8 @@ export default function PaldexClient({ initialPage: _initialPage = 1 }: { initia
     else update({ work: draftWork, workMode: draftWorkMode, workLevel: draftWorkLevel });
     setSheet(null);
   };
-  const clearAll = () => update({ q: "", elements: [], elementMode: "any", work: [], workMode: "any", workLevel: 0, types: ["pal"], sort: "number" });
-  const hasFilters = Boolean(filters.q || filters.elements.length || filters.work.length || filters.workLevel || filters.types.join(",") !== "pal" || filters.sort !== "number");
+  const clearAll = () => update({ q: "", elements: [], elementMode: "any", work: [], workMode: "any", workLevel: 0, types: ["pal", "monster"], sort: "number" });
+  const hasFilters = Boolean(filters.q || filters.elements.length || filters.work.length || filters.workLevel || filters.types.join(",") !== "pal,monster" || filters.sort !== "number");
   const toggleElement = (element: string) => update({ elements: toggle(filters.elements, element) });
   const toggleWork = (work: WorkKey) => update({ work: toggle(filters.work, work) });
 

@@ -1,12 +1,12 @@
 import type { MetadataRoute } from "next";
 import { guides } from "./guides/guide-data";
-import { pals } from "./lib/game-data";
+import { catalogPals } from "./lib/game-data";
 import { PALDEX_PAGE_SIZE } from "./paldex/paldex-config";
 import { siteUrl } from "./site-config";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date("2026-07-14T00:00:00.000Z");
-  const paldexPageCount = Math.ceil(pals.filter((pal) => pal.kind === "pal").length / PALDEX_PAGE_SIZE);
+  const paldexPageCount = Math.ceil(catalogPals.length / PALDEX_PAGE_SIZE);
 
   const corePages: MetadataRoute.Sitemap = [
     {
@@ -37,7 +37,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly" as const,
       priority: 0.8,
     })),
-    ...pals.map((pal) => ({
+    ...catalogPals.map((pal) => ({
       url: `${siteUrl}/pals/${pal.slug}`,
       lastModified,
       changeFrequency: "monthly" as const,

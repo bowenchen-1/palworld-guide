@@ -9,7 +9,11 @@ const workKeys = new Set(["emitflame", "watering", "seeding", "generateelectrici
 assert.equal(version.gameVersion, "1.0");
 assert.equal(pals.length, version.records);
 const playablePals = pals.filter((pal) => pal.kind === "pal");
-assert.equal(playablePals.length, version.pals, "Pal form count is stale");
+const excludedCatalogIds = new Set(version.excludedCatalogIds);
+const catalogPals = pals.filter((pal) => !excludedCatalogIds.has(pal.id));
+assert.equal(catalogPals.length, version.pals, "visible Pal count is stale");
+assert.equal(catalogPals.filter((pal) => pal.kind === "pal").length, version.standardPals, "standard Pal count is stale");
+assert.equal(excludedCatalogIds.size, version.excludedCatalogRecords, "excluded catalog count is stale");
 assert.equal(new Set(playablePals.map((pal) => pal.number.replace(/[A-Z]+$/, ""))).size, version.paldeckNumbers, "Paldeck number count is stale");
 assert.equal(new Set(pals.map((pal) => pal.id)).size, pals.length, "duplicate Pal ids");
 assert.equal(new Set(pals.map((pal) => pal.slug)).size, pals.length, "duplicate Pal slugs");
