@@ -847,8 +847,17 @@ body::before {
    keeps its three-card layout; all direct Pal and Available Pals choices share
    the same border, cut, surface, height, and hover treatment. */
 .home-calculator-top .home-control-row { grid-template-columns:minmax(0,1fr); }
-.home-calculator-top .home-selector-card,
-.home-calculator-top .home-available-control { min-height:220px; }
+.home-calculator-top :is(.home-selector-card,.home-available-control) {
+  width:100%;
+  min-height:220px;
+  border:1px solid var(--terminal-border);
+  border-radius:13px;
+  background:rgba(8,25,31,.68);
+  clip-path:var(--terminal-cut);
+  color:var(--terminal-copy);
+  transition:.16s;
+}
+.home-calculator-top .home-selector-card { appearance:none; cursor:pointer; }
 .home-calculator-top :is(.home-selector-card,.home-available-control):hover { border-color:var(--terminal-mint); background:var(--terminal-panel-hover); }
 
 .home-calculator-top .home-available-control { position:relative; z-index:1; padding:10px 12px; }
