@@ -21,6 +21,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${siteUrl}/team-builder`, lastModified, changeFrequency: "weekly", priority: 0.85 },
     { url: `${siteUrl}/guides`, lastModified, changeFrequency: "weekly", priority: 0.85 },
     { url: `${siteUrl}/updates`, lastModified, changeFrequency: "weekly", priority: 0.85 },
+    { url: `${siteUrl}/items/hardwood`, lastModified, changeFrequency: "monthly", priority: 0.8 },
   ];
 
   return [
