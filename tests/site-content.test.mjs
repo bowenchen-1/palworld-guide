@@ -258,6 +258,9 @@ test("Paldeck has URL-backed filters, one comparative table, and indexable profi
   assert.match(client, /href={`\/pals\/\$\{pal\.slug\}`}/);
   assert.match(client, /paldex-complete-table/);
   assert.doesNotMatch(client, /paldex-mobile-cards/);
+  assert.match(client, /const pageHref = \(page: number\)/);
+  assert.match(client, /<Link href=\{pageHref\(page\)\}/);
+  assert.match(client, /aria-current=\{page === currentPage/);
   assert.doesNotMatch(client, /return <button type="button" aria-pressed=\{selected\.id === pal\.id\}/);
   assert.match(profile, /generateStaticParams/);
   assert.match(profile, /Palworld Guide/);
