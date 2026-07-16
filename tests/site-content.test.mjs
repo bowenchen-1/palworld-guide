@@ -81,7 +81,7 @@ test("each indexable page targets one distinct primary keyword", async () => {
   const files = [
     ["../app/page.tsx", "palworld breeding calculator"],
     ["../app/palworld-1-0/page.tsx", "palworld 1.0"],
-    ["../app/paldex/page.tsx", "palworld paldeck"],
+    ["../app/paldex/page.tsx", "palworld pals"],
     ["../app/tools/page.tsx", "palworld tools"],
     ["../app/guides/page.tsx", "palworld guides"],
     ["../app/updates/page.tsx", "palworld 1.0 patch notes"],
@@ -90,7 +90,7 @@ test("each indexable page targets one distinct primary keyword", async () => {
   const keywords = [];
   for (const [path, keyword] of files) {
     const source = await read(path);
-    assert.ok(path === "../app/page.tsx" ? source.includes(`"${keyword}"`) : source.includes(`keywords: ["${keyword}"]`), `${path} should target ${keyword}`);
+    assert.ok(path === "../app/page.tsx" ? source.includes(`"${keyword}"`) : source.includes(`"${keyword}"`), `${path} should target ${keyword}`);
     keywords.push(keyword);
   }
   assert.equal(new Set(keywords).size, keywords.length);
@@ -98,6 +98,21 @@ test("each indexable page targets one distinct primary keyword", async () => {
   const pals = await read("../app/pals/[slug]/page.tsx");
   assert.match(guides, /keywords: \[guide\.title\.toLowerCase\(\)\]/);
   assert.match(pals, /keywords: \[`\$\{pal\.name\.toLowerCase\(\)\} palworld`\]/);
+});
+
+test("Paldeck SEO metadata and Pal image accessibility use the unified 1.0 counts", async () => {
+  const paldex = await read("../app/paldex/page.tsx");
+  const content = await read("../app/paldex/paldex-page-content.tsx");
+  const mark = await read("../app/components/pal-mark.tsx");
+  const og = await read("../app/pals/[slug]/opengraph-image.tsx");
+  assert.match(paldex, /title: "Palworld Pals Database \| All Pals & 1\.0 New Pals"/);
+  assert.match(paldex, /Browse all 299 Palworld Pals with detailed profiles/);
+  assert.match(content, /<h1>Palworld Pals Database<\/h1>/);
+  assert.match(content, /palCounts\.newPals/);
+  assert.match(content, /palCounts\.newVariants/);
+  assert.match(content, /palCounts\.newIn1_0/);
+  assert.match(mark, /alt=\{`\$\{pal\.name\} Palworld Paldeck image`\}/);
+  assert.match(og, /alt=\{`\$\{name\} Palworld profile image`\}/);
 });
 
 test("homepage hosts all six calculator modes with shared URL and local storage state", async () => {

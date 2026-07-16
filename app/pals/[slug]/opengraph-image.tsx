@@ -32,7 +32,7 @@ export default async function PalOpenGraphImage({ params }: Props) {
           </div>
         </div>
         <div style={{ display: "flex", width: 300, height: 350, alignItems: "center", justifyContent: "center", border: "2px solid #39d0c5", borderRadius: 28, background: "#0d252c" }}>
-          <img src={imageUrl} alt="" width={270} height={270} style={{ objectFit: "contain", imageRendering: "auto" }} />
+          <img src={imageUrl} alt={`${name} Palworld profile image`} width={270} height={270} style={{ objectFit: "contain", imageRendering: "auto" }} />
         </div>
       </div>
     </div>,
