@@ -11,7 +11,14 @@ import { siteUrl } from "./site-config";
 export const metadata = createPageMetadata({
   title: "Palworld Breeding Calculator - Updated 1.0 Pal Combos",
   description: "Use the Palworld breeding calculator for version 1.0 to find offspring from two parents or discover every combination for a target Pal. Start planning now.",
-  keywords: ["palworld breeding calculator"],
+  keywords: [
+    "palworld breeding calculator",
+    "Palworld Breeding Calculator 1.0",
+    "palworld 1.0 breeding calculator",
+    "breeding calculator palworld",
+    "breeding calculator palworld 1.0",
+    "palworld calculator breeding",
+  ],
   path: "/",
 });
 

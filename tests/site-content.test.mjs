@@ -15,7 +15,14 @@ test("homepage targets Palworld breeding calculator with one focused H1", async 
   assert.equal((page.match(/<h1/g) ?? []).length, 1);
   assert.ok(title.length >= 50 && title.length <= 60, `homepage title should be 50-60 characters, got ${title.length}`);
   assert.ok(description.length >= 150 && description.length <= 160, `homepage description should be 150-160 characters, got ${description.length}`);
-  assert.match(page, /keywords: \["palworld breeding calculator"\]/);
+  for (const keyword of [
+    "palworld breeding calculator",
+    "Palworld Breeding Calculator 1.0",
+    "palworld 1.0 breeding calculator",
+    "breeding calculator palworld",
+    "breeding calculator palworld 1.0",
+    "palworld calculator breeding",
+  ]) assert.match(page, new RegExp(`"${keyword}"`));
   assert.match(page, /title: "Palworld Breeding Calculator - Updated 1\.0 Pal Combos"/);
   assert.match(page, /BreedingClient embedded/);
   assert.match(page, /Find the Pal behind every breeding choice/);
@@ -82,7 +89,7 @@ test("each indexable page targets one distinct primary keyword", async () => {
   const keywords = [];
   for (const [path, keyword] of files) {
     const source = await read(path);
-    assert.ok(source.includes(`keywords: ["${keyword}"]`), `${path} should target only ${keyword}`);
+    assert.ok(path === "../app/page.tsx" ? source.includes(`"${keyword}"`) : source.includes(`keywords: ["${keyword}"]`), `${path} should target ${keyword}`);
     keywords.push(keyword);
   }
   assert.equal(new Set(keywords).size, keywords.length);
