@@ -5,6 +5,7 @@ import "@fontsource/barlow/700.css";
 import "@fontsource/rajdhani/600.css";
 import "@fontsource/rajdhani/700.css";
 import "./globals.css";
+import "./hardwood-visual.css";
 import "./tool-pages.css";
 import "./terminal-theme.css";
 import "./team-builder/team-builder.css";
