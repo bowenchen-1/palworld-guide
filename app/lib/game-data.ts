@@ -33,6 +33,8 @@ export type PalData = {
   activeSkills: string[] | null;
   drops: string[] | null;
   ranchProduct: string[] | null;
+  isNewIn1_0: boolean;
+  newType: "new-pal" | "new-variant" | null;
 };
 
 export type BreedingData = Record<string, Record<string, string>>;
@@ -41,6 +43,7 @@ export const pals = palRecords as PalData[];
 export const excludedCatalogPalIds = new Set(["12.1"]);
 export const catalogPals = pals.filter((pal) => !excludedCatalogPalIds.has(pal.id));
 export const playablePals = catalogPals.filter((pal) => pal.kind === "pal");
+export const newIn1_0Pals = catalogPals.filter((pal) => pal.isNewIn1_0);
 export const palCounts = {
   pals: catalogPals.length,
   standardPals: playablePals.length,
@@ -48,6 +51,9 @@ export const palCounts = {
   crossoverCreatures: catalogPals.filter((pal) => pal.kind === "monster").length,
   records: pals.length,
   excludedCatalogRecords: pals.length - catalogPals.length,
+  newIn1_0: newIn1_0Pals.length,
+  newPals: newIn1_0Pals.filter((pal) => pal.newType === "new-pal").length,
+  newVariants: newIn1_0Pals.filter((pal) => pal.newType === "new-variant").length,
 };
 
 export const workLabels: Record<WorkKey, string> = {

@@ -3,9 +3,9 @@ import { PalData, WorkKey } from "./game-data";
 export type MatchMode = "all" | "any";
 export type PaldexView = "overview" | "work" | "stats";
 export type PaldexSort = "number" | "name" | "hp" | "ranged" | "defense" | "stamina" | "price" | "ride-speed" | "rarity" | "food" | "speed" | "work" | "power-low" | "power-high";
-export type PaldexFilters = { q: string; elements: string[]; elementMode: MatchMode; work: WorkKey[]; workMode: MatchMode; workLevel: number; types: PalData["kind"][]; sort: PaldexSort; view: PaldexView };
+export type PaldexFilters = { q: string; elements: string[]; elementMode: MatchMode; work: WorkKey[]; workMode: MatchMode; workLevel: number; types: PalData["kind"][]; newOnly: boolean; sort: PaldexSort; view: PaldexView };
 
-export const paldexDefaults: PaldexFilters = { q: "", elements: [], elementMode: "any", work: [], workMode: "any", workLevel: 0, types: ["pal", "monster"], sort: "number", view: "overview" };
+export const paldexDefaults: PaldexFilters = { q: "", elements: [], elementMode: "any", work: [], workMode: "any", workLevel: 0, types: ["pal", "monster"], newOnly: false, sort: "number", view: "overview" };
 const workKeys: WorkKey[] = ["emitflame", "watering", "seeding", "generateelectricity", "handcraft", "collection", "deforest", "mining", "productmedicine", "cool", "transport", "monsterfarm"];
 const validWork = new Set<WorkKey>(workKeys);
 const validSort = new Set<PaldexSort>(["number", "name", "hp", "ranged", "defense", "stamina", "price", "ride-speed", "rarity", "food", "speed", "work", "power-low", "power-high"]);
@@ -16,7 +16,7 @@ export function parsePaldexFilters(params: URLSearchParams): PaldexFilters {
   const types = list(params.get("types")).filter((item): item is PalData["kind"] => item === "pal" || item === "monster");
   const sort = params.get("sort") as PaldexSort;
   const workLevel = Number.parseInt(params.get("workLevel") ?? "0", 10);
-  return { q: params.get("q") ?? "", elements: list(params.get("elements")), elementMode: params.get("elementMode") === "all" ? "all" : "any", work, workMode: params.get("workMode") === "all" ? "all" : "any", workLevel: Number.isInteger(workLevel) && workLevel >= 0 && workLevel <= 10 ? workLevel : 0, types: types.length ? types : paldexDefaults.types, sort: validSort.has(sort) ? sort : "number", view: (["overview", "work", "stats"] as string[]).includes(params.get("view") ?? "") ? params.get("view") as PaldexView : "overview" };
+  return { q: params.get("q") ?? "", elements: list(params.get("elements")), elementMode: params.get("elementMode") === "all" ? "all" : "any", work, workMode: params.get("workMode") === "all" ? "all" : "any", workLevel: Number.isInteger(workLevel) && workLevel >= 0 && workLevel <= 10 ? workLevel : 0, types: types.length ? types : paldexDefaults.types, newOnly: params.get("new") === "1", sort: validSort.has(sort) ? sort : "number", view: (["overview", "work", "stats"] as string[]).includes(params.get("view") ?? "") ? params.get("view") as PaldexView : "overview" };
 }
 
 export function serializePaldexFilters(filters: PaldexFilters) {
@@ -28,6 +28,7 @@ export function serializePaldexFilters(filters: PaldexFilters) {
   if (filters.workMode !== "any") params.set("workMode", filters.workMode);
   if (filters.workLevel) params.set("workLevel", String(filters.workLevel));
   if (filters.types.join(",") !== paldexDefaults.types.join(",")) params.set("types", filters.types.join(","));
+  if (filters.newOnly) params.set("new", "1");
   if (filters.sort !== "number") params.set("sort", filters.sort);
   if (filters.view !== "overview") params.set("view", filters.view);
   return params;
@@ -44,7 +45,7 @@ export function filterPals(records: PalData[], filters: PaldexFilters) {
     const elementMatches = !filters.elements.length || (filters.elementMode === "all" ? filters.elements.every((element) => pal.elements.includes(element)) : filters.elements.some((element) => pal.elements.includes(element)));
     const matchesWork = (key: WorkKey) => (pal.work[key] ?? 0) >= Math.max(1, filters.workLevel);
     const workMatches = !filters.work.length || (filters.workMode === "all" ? filters.work.every(matchesWork) : filters.work.some(matchesWork));
-    return searchable && elementMatches && workMatches && filters.types.includes(pal.kind);
+    return searchable && elementMatches && workMatches && filters.types.includes(pal.kind) && (!filters.newOnly || pal.isNewIn1_0);
   });
 }
 

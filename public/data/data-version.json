@@ -9,6 +9,11 @@
   "crossoverCreatures": 11,
   "excludedCatalogRecords": 1,
   "excludedCatalogIds": ["12.1"],
+  "newIn1_0": {
+    "total": 72,
+    "newPals": 47,
+    "newVariants": 25
+  },
   "source": "Internally documented, user-supplied PalDB 1.0 workbook snapshot",
   "schemaVersion": 2,
   "fieldPolicy": "Unverified values are null; no unknown value is represented as zero.",

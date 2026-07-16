@@ -14,6 +14,9 @@ const catalogPals = pals.filter((pal) => !excludedCatalogIds.has(pal.id));
 assert.equal(catalogPals.length, version.pals, "visible Pal count is stale");
 assert.equal(catalogPals.filter((pal) => pal.kind === "pal").length, version.standardPals, "standard Pal count is stale");
 assert.equal(excludedCatalogIds.size, version.excludedCatalogRecords, "excluded catalog count is stale");
+assert.equal(catalogPals.filter((pal) => pal.isNewIn1_0).length, version.newIn1_0.total, "new Pal total is stale");
+assert.equal(catalogPals.filter((pal) => pal.newType === "new-pal").length, version.newIn1_0.newPals, "new Pal count is stale");
+assert.equal(catalogPals.filter((pal) => pal.newType === "new-variant").length, version.newIn1_0.newVariants, "new variant count is stale");
 assert.equal(new Set(playablePals.map((pal) => pal.number.replace(/[A-Z]+$/, ""))).size, version.paldeckNumbers, "Paldeck number count is stale");
 assert.equal(new Set(pals.map((pal) => pal.id)).size, pals.length, "duplicate Pal ids");
 assert.equal(new Set(pals.map((pal) => pal.slug)).size, pals.length, "duplicate Pal slugs");
@@ -29,6 +32,9 @@ for (const pal of pals) {
   for (const [key, level] of Object.entries(pal.work)) { assert.ok(workKeys.has(key), `unknown work key ${key}`); assert.ok(Number.isInteger(level) && level >= 1 && level <= 8, `invalid work level for ${pal.name}`); }
   for (const field of [pal.stats.hp, pal.stats.meleeAttack, pal.stats.rangedAttack, pal.stats.defense, pal.stats.support, pal.stats.craftSpeed, pal.stats.stamina, pal.rarity, pal.price, pal.foodConsumption, pal.movement.slowWalk, pal.movement.walk, pal.movement.run, pal.movement.rideSprint]) assert.ok(field === null || (typeof field === "number" && field >= 0), `invalid numeric field for ${pal.name}`);
   assert.ok(pal.nocturnal === null || typeof pal.nocturnal === "boolean");
+  assert.equal(typeof pal.isNewIn1_0, "boolean", `invalid 1.0 addition flag for ${pal.name}`);
+  assert.ok(pal.newType === null || pal.newType === "new-pal" || pal.newType === "new-variant", `invalid 1.0 addition type for ${pal.name}`);
+  assert.equal(pal.isNewIn1_0, pal.newType !== null, `1.0 addition flag/type mismatch for ${pal.name}`);
 }
 const coverage = {
   elements: pals.filter((pal) => pal.elements.length > 0).length,
