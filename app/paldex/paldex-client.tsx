@@ -48,17 +48,6 @@ export default function PaldexClient({ initialPage: _initialPage = 1 }: { initia
     router.push(query ? `${path}?${query}` : path, { scroll: false });
   };
   const toggle = <T extends string,>(items: T[], item: T) => items.includes(item) ? items.filter((value) => value !== item) : [...items, item];
-  const open = (next: Exclude<Sheet, null>) => {
-    if (next === "elements") {
-      setDraftElements(filters.elements);
-      setDraftElementMode(filters.elementMode);
-    } else {
-      setDraftWork(filters.work);
-      setDraftWorkMode(filters.workMode);
-      setDraftWorkLevel(filters.workLevel);
-    }
-    setSheet(next);
-  };
   const apply = () => {
     if (sheet === "elements") update({ elements: draftElements, elementMode: draftElementMode });
     else update({ work: draftWork, workMode: draftWorkMode, workLevel: draftWorkLevel });
@@ -72,8 +61,6 @@ export default function PaldexClient({ initialPage: _initialPage = 1 }: { initia
   return <section className="database-workspace paldex-workspace paldex-wide" aria-label="Palworld Paldeck filters and results">
     <div className="paldex-control-bar">
       <label className="paldex-search"><span>⌕</span><input value={filters.q} onChange={(event) => update({ q: event.target.value })} placeholder="Search English name or Paldeck number…" aria-label="Search Paldeck" /></label>
-      <button type="button" className="paldex-filter-open" onClick={() => open("elements")}><span>Element</span><strong>{filters.elements.length ? `${filters.elements.length} selected` : "Any element"}</strong></button>
-      <button type="button" className="paldex-filter-open" onClick={() => open("work")}><span>Work suitability</span><strong>{filters.work.length ? `${filters.work.length} selected` : "Any work"}</strong></button>
       <button type="button" className={`paldex-filter-open paldex-new-filter ${filters.newOnly ? "active" : ""}`} aria-pressed={filters.newOnly} onClick={() => update({ newOnly: !filters.newOnly })}><span>Palworld 1.0</span><strong>{filters.newOnly ? "New only" : "New in 1.0"}</strong></button>
     </div>
     <div className="paldex-icon-filters" aria-label="Quick Pal filters">
