@@ -25,11 +25,11 @@ test("homepage targets Palworld breeding calculator with one focused H1", async 
   ]) assert.match(page, new RegExp(`"${keyword}"`));
   assert.match(page, /title: "Palworld Breeding Calculator - Updated 1\.0 Pal Combos"/);
   assert.match(page, /BreedingClient embedded/);
-  assert.match(page, /Find the Pal behind every breeding choice/);
+  assert.match(page, /Find the Palworld Pal behind every breeding choice/);
   assert.match(page, /href="\/team-builder" className="home-team-builder-entry"/);
   assert.match(page, /Open Team Builder/);
   assert.match(page, /Palworld Breeding Calculator FAQ/);
-  assert.match(page, /Plan a Reliable Breeding Route/);
+  assert.match(page, /Plan a Reliable Palworld Breeding Route/);
   assert.match(page, /"@type": "WebApplication"/);
   assert.match(gameData, /href: "\/"/);
   assert.match(gameData, /\/paldex/);
