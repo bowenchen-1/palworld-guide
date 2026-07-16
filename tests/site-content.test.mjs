@@ -111,6 +111,8 @@ test("homepage hosts all six calculator modes with shared URL and local storage 
   assert.match(client, /pal-picker-backdrop/);
   assert.match(client, /home-breeding-equation/);
   assert.match(client, /home-breeding-slot offspring/);
+  assert.match(client, /home-breeding-slot home-selector-card/);
+  assert.match(client, /home-breeding-slot home-available-control/);
   assert.match(client, /homeParentPick\("Parent A"/);
   assert.match(client, /homeParentPick\("Parent B"/);
   assert.match(client, /pairCandidates/);

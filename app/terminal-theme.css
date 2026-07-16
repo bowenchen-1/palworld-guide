@@ -843,13 +843,13 @@ body::before {
 .home-calculator-top .home-filter input::placeholder,.home-calculator-top .home-available-list input::placeholder { color:#7e9da0; }
 .home-calculator-top .home-number-control select { min-height:27px; color:var(--terminal-copy); }
 
-/* One selector shell for every homepage breeding mode. The parents view keeps its
-   three-card layout, while every selectable control uses the same border, cut,
-   surface, height, and hover treatment. */
+/* One selection-card shell for every homepage breeding mode. The parents view
+   keeps its three-card layout; all direct Pal and Available Pals choices share
+   the same border, cut, surface, height, and hover treatment. */
 .home-calculator-top .home-control-row { grid-template-columns:minmax(0,1fr); }
-.home-calculator-top :is(.home-breeding-slot:not(.offspring),.home-control-row>.home-compact-picker,.home-route-controls>.home-compact-picker,.home-route-controls>.home-number-control,.home-route-controls>.home-available-control) { border:1px solid var(--terminal-border); border-radius:13px; background:rgba(8,25,31,.68); clip-path:var(--terminal-cut); }
-.home-calculator-top :is(.home-control-row>.home-compact-picker,.home-route-controls>.home-compact-picker,.home-route-controls>.home-number-control,.home-route-controls>.home-available-control) { min-height:220px; }
-.home-calculator-top :is(.home-control-row>.home-compact-picker,.home-route-controls>.home-compact-picker,.home-route-controls>.home-available-control):hover { border-color:var(--terminal-mint); background:var(--terminal-panel-hover); }
+.home-calculator-top .home-selector-card,
+.home-calculator-top .home-available-control { min-height:220px; }
+.home-calculator-top :is(.home-selector-card,.home-available-control):hover { border-color:var(--terminal-mint); background:var(--terminal-panel-hover); }
 
 .home-calculator-top .home-available-control { position:relative; z-index:1; padding:10px 12px; }
 .home-calculator-top .home-available-control>header { display:flex; align-items:center; justify-content:space-between; gap:10px; }
@@ -871,6 +871,16 @@ body::before {
 .home-calculator-top .home-available-list strong,.home-calculator-top .home-available-list small { display:block; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
 .home-calculator-top .home-available-list strong { font-size:11px; }
 .home-calculator-top .home-available-list small { margin-top:2px; color:var(--terminal-muted); font-size:8px; }
+
+/* Available Pals uses the same selector card as every direct Pal picker. */
+.home-calculator-top .home-available-control { align-items:center; justify-content:center; padding:29px 16px 15px; text-align:center; }
+.home-calculator-top .home-available-control>.pal-mark { width:84px; height:84px; border-color:rgba(244,250,249,.62); border-radius:23px; background:var(--terminal-panel-light); }
+.home-calculator-top .home-available-control>strong { margin-top:11px; color:var(--terminal-copy); font-family:var(--font-display); font-size:20px; }
+.home-calculator-top .home-available-control>small { margin-top:3px; color:var(--terminal-muted); font-size:8px; }
+.home-calculator-top .home-selector-actions { display:flex; gap:6px; margin-top:9px; }
+.home-calculator-top .home-selector-actions button { border-radius:6px; background:var(--terminal-mint); padding:7px 9px; color:var(--terminal-canvas); font-size:8px; font-weight:900; }
+.home-calculator-top .home-selector-actions button+button { background:var(--terminal-panel-light); color:var(--terminal-copy); }
+.home-calculator-top .home-available-control .home-available-list { align-self:stretch; width:100%; }
 
 /* The modal picker deliberately mirrors the inline Available Pals grid. */
 .home-picker-backdrop { background:rgba(1,20,32,.82); backdrop-filter:blur(10px); }
@@ -919,6 +929,9 @@ body::before {
   .home-calculator-top .home-control-row>.home-compact-picker,.home-calculator-top .home-control-row>.home-filter,.home-calculator-top .home-route-controls> :is(.home-compact-picker,.home-filter,.home-number-control,.home-available-control) { min-height:70px; }
   .home-calculator-top .breeding-operator { width:auto; height:10px; font-size:15px; line-height:10px; }
   .home-calculator-top .home-control-row,.home-calculator-top .home-route-controls { grid-template-columns:1fr; }
+  .home-calculator-top :is(.home-selector-card,.home-available-control) { min-height:116px; }
+  .home-calculator-top .home-available-control .home-selector-actions { grid-column:2; grid-row:3; justify-self:start; margin-top:0; }
+  .home-calculator-top .home-available-control .home-available-list { grid-column:1 / -1; }
   .home-calculator-top .home-compact-picker { min-height:70px; }
   .home-calculator-top .home-available-list>div { grid-template-columns:repeat(2,minmax(0,1fr)); }
   .home-calculator-top .home-available-list>div>button,
