@@ -371,6 +371,21 @@ test("Paldeck pagination exposes every initial Pal card to crawlers", async () =
   assert.match(content, /<PaldexClient initialPage=\{initialPage\}/);
 });
 
+test("Pals pagination uses one shared 30-row configuration across routes and sitemap", async () => {
+  const config = await read("../app/paldex/paldex-config.ts");
+  const client = await read("../app/paldex/paldex-client.tsx");
+  const route = await read("../app/pals/page/[page]/page.tsx");
+  const sitemap = await read("../app/sitemap.ts");
+  const pals = JSON.parse(await read("../public/data/pals.json"));
+  assert.match(config, /PALDEX_PAGE_SIZE = 30/);
+  assert.match(client, /import \{ PALDEX_PAGE_SIZE \} from "\.\/paldex-config"/);
+  assert.match(client, /const pageSize = PALDEX_PAGE_SIZE/);
+  assert.match(route, /PALDEX_PAGE_SIZE/);
+  assert.match(sitemap, /PALDEX_PAGE_SIZE/);
+  assert.equal(Math.ceil(pals.length / 30), 10);
+  assert.doesNotMatch(sitemap, /\?new=1|\?element=/);
+});
+
 test("Paldeck uses one responsive searchable comparison table", async () => {
   const pageContent = await read("../app/paldex/paldex-page-content.tsx");
   const client = await read("../app/paldex/paldex-client.tsx");

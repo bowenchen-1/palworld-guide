@@ -7,6 +7,7 @@ import { ElementIcon, PartnerSkillIcon, WorkSuitabilityIcon } from "../component
 import PalMark from "../components/pal-mark";
 import { catalogPals, PalData, WorkKey, workLabels } from "../lib/game-data";
 import { filterPals, MatchMode, PaldexFilters, PaldexSort, parsePaldexFilters, serializePaldexFilters, sortPals } from "../lib/paldex";
+import { PALDEX_PAGE_SIZE } from "./paldex-config";
 
 const workTypes = Object.keys(workLabels) as WorkKey[];
 const elementOptions = ["Neutral", "Fire", "Water", "Grass", "Electric", "Ice", "Ground", "Dark", "Dragon"];
@@ -22,7 +23,7 @@ function WorkBadges({ pal }: { pal: PalData }) {
 }
 
 export default function PaldexClient({ initialPage: _initialPage = 1 }: { initialPage?: number }) {
-  const pageSize = 30;
+  const pageSize = PALDEX_PAGE_SIZE;
   const router = useRouter();
   const searchParams = useSearchParams();
   const filters = useMemo(() => parsePaldexFilters(new URLSearchParams(searchParams.toString())), [searchParams]);
