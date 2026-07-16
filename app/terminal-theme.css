@@ -843,6 +843,14 @@ body::before {
 .home-calculator-top .home-filter input::placeholder,.home-calculator-top .home-available-list input::placeholder { color:#7e9da0; }
 .home-calculator-top .home-number-control select { min-height:27px; color:var(--terminal-copy); }
 
+/* One selector shell for every homepage breeding mode. The parents view keeps its
+   three-card layout, while every selectable control uses the same border, cut,
+   surface, height, and hover treatment. */
+.home-calculator-top .home-control-row { grid-template-columns:minmax(0,1fr); }
+.home-calculator-top :is(.home-breeding-slot:not(.offspring),.home-control-row>.home-compact-picker,.home-route-controls>.home-compact-picker,.home-route-controls>.home-number-control,.home-route-controls>.home-available-control) { border:1px solid var(--terminal-border); border-radius:13px; background:rgba(8,25,31,.68); clip-path:var(--terminal-cut); }
+.home-calculator-top :is(.home-control-row>.home-compact-picker,.home-route-controls>.home-compact-picker,.home-route-controls>.home-number-control,.home-route-controls>.home-available-control) { min-height:220px; }
+.home-calculator-top :is(.home-control-row>.home-compact-picker,.home-route-controls>.home-compact-picker,.home-route-controls>.home-available-control):hover { border-color:var(--terminal-mint); background:var(--terminal-panel-hover); }
+
 .home-calculator-top .home-available-control { position:relative; z-index:1; padding:10px 12px; }
 .home-calculator-top .home-available-control>header { display:flex; align-items:center; justify-content:space-between; gap:10px; }
 .home-calculator-top .home-available-control header>span small,.home-calculator-top .home-available-control header>span strong { display:block; }
