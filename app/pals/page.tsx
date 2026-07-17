@@ -1,11 +1,15 @@
 import type { Metadata } from "next";
 import { createPageMetadata } from "../lib/seo";
+import { catalogPals } from "../lib/game-data";
+import { selectPalsBySlugs } from "../lib/paldex";
 import PaldexPageContent from "../paldex/paldex-page-content";
 
 type Props = { searchParams: Promise<Record<string, string | string[] | undefined>> };
 
 export async function generateMetadata({ searchParams }: Props): Promise<Metadata> {
-  const hasFilters = Object.keys(await searchParams).length > 0;
+  const query = await searchParams;
+  const ids = selectPalsBySlugs(query.ids, catalogPals);
+  const hasFilters = Object.keys(query).length > 0;
   return {
     ...createPageMetadata({
       title: "Palworld Pals Database | All Pals & 1.0 New Pals",
@@ -13,7 +17,7 @@ export async function generateMetadata({ searchParams }: Props): Promise<Metadat
       keywords: ["palworld pals", "palworld all pals", "palworld new pals", "palworld 1.0 new pals"],
       path: "/pals",
     }),
-    ...(hasFilters ? { robots: { index: false, follow: true } } : {}),
+    ...(hasFilters || ids.length ? { robots: { index: false, follow: true }, alternates: { canonical: "https://www.palworldguide.net/pals" } } : {}),
   };
 }
 

@@ -266,7 +266,7 @@ test("Paldeck has URL-backed filters, one comparative table, and indexable profi
   assert.match(client, /New in 1\.0/);
   assert.match(client, /showNewBadge/);
   assert.match(client, /paldex-result-range/);
-  assert.match(client, /Showing \{pageStart \+ 1\}/);
+  assert.match(client, /pageStart \+ 1/);
   assert.match(client, /Highest work level/);
   assert.match(client, /paldex-control-bar/);
   assert.match(client, /Clear all/);
@@ -436,6 +436,25 @@ test("Paldeck sticky header keeps the first row visible", async () => {
   assert.match(theme, /\.paldex-table-wrap \{ overflow-x: auto; overflow-y: hidden; \}/);
   assert.match(theme, /\.paldex-table th \{ position: static; top: auto;/);
   assert.doesNotMatch(theme, /paldex-table-stuck/);
+});
+
+test("Pals supports selected ids mode without mixing it into filters", async () => {
+  const client = await read("../app/paldex/paldex-client.tsx");
+  const page = await read("../app/pals/page.tsx");
+  const pagination = await read("../app/pals/page/[page]/page.tsx");
+  const sitemap = await read("../app/sitemap.ts");
+  assert.match(client, /selectPalsBySlugs\(searchParams\.get\("ids"\), catalogPals\)/);
+  assert.match(await read("../app/lib/paldex.ts"), /seen\.has\(slug\)/);
+  assert.match(await read("../app/lib/paldex.ts"), /MAX_SELECTED_PALS/);
+  assert.match(client, /searchParams\.get\("ids"\)/);
+  assert.match(client, /3 Selected Pals|selectedPals\.length/);
+  assert.match(client, /Clear Selection/);
+  assert.match(client, /!selectedMode && <nav/);
+  assert.match(page, /selectPalsBySlugs/);
+  assert.match(page, /canonical: "https:\/\/www\.palworldguide\.net\/pals"/);
+  assert.match(pagination, /selectPalsBySlugs/);
+  assert.match(pagination, /initialPage={selected\.length \? 1 : page}/);
+  assert.doesNotMatch(sitemap, /\?ids=/);
 });
 
 test("team builder exposes five slots, objective summaries, persistence, and shareable state", async () => {

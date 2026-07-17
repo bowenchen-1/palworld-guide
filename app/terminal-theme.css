@@ -610,6 +610,10 @@ body::before {
 .paldex-table th { background: var(--terminal-panel); }
 .paldex-table-region { position: relative; }
 .paldex-table-wrap { overflow-x: auto; overflow-y: hidden; }
+.paldex-selection-banner { display: flex; align-items: center; justify-content: space-between; gap: 14px; margin-bottom: 12px; border: 1px solid var(--terminal-border); border-radius: 14px; background: var(--terminal-panel-light); padding: 12px 15px; color: var(--terminal-copy); }
+.paldex-selection-banner strong { color: var(--terminal-mint); font-size: 14px; }
+.paldex-selection-banner button { border: 1px solid var(--terminal-border); border-radius: 8px; background: transparent; padding: 8px 11px; color: var(--terminal-copy); font-size: 11px; font-weight: 800; }
+.paldex-selection-banner button:hover { border-color: var(--terminal-mint); color: var(--terminal-mint); }
 .paldex-table th { position: static; top: auto; z-index: 1; background: var(--terminal-panel); box-shadow: 0 2px 0 var(--terminal-border), 0 8px 16px rgba(0,8,12,.18); }
 .paldex-complete-table thead { position: static; }
 .paldex-complete-table th:first-child { z-index: 21; }

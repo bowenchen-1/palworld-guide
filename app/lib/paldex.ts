@@ -6,10 +6,28 @@ export type PaldexSort = "number" | "name" | "hp" | "ranged" | "defense" | "stam
 export type PaldexFilters = { q: string; elements: string[]; elementMode: MatchMode; work: WorkKey[]; workMode: MatchMode; workLevel: number; types: PalData["kind"][]; newOnly: boolean; sort: PaldexSort; view: PaldexView };
 
 export const paldexDefaults: PaldexFilters = { q: "", elements: [], elementMode: "any", work: [], workMode: "any", workLevel: 0, types: ["pal", "monster"], newOnly: false, sort: "number", view: "overview" };
+export const MAX_SELECTED_PALS = 20;
 const workKeys: WorkKey[] = ["emitflame", "watering", "seeding", "generateelectricity", "handcraft", "collection", "deforest", "mining", "productmedicine", "cool", "transport", "monsterfarm"];
 const validWork = new Set<WorkKey>(workKeys);
 const validSort = new Set<PaldexSort>(["number", "name", "hp", "ranged", "defense", "stamina", "price", "ride-speed", "rarity", "food", "speed", "work", "power-low", "power-high"]);
 const list = (value: string | null) => value?.split(",").filter(Boolean) ?? [];
+
+export function selectPalsBySlugs(value: string | string[] | null | undefined, records: PalData[]) {
+  const raw = Array.isArray(value) ? value[0] : value;
+  if (!raw) return [];
+  const bySlug = new Map(records.map((pal) => [pal.slug, pal]));
+  const seen = new Set<string>();
+  const selected: PalData[] = [];
+  for (const slug of raw.split(",").map((item) => item.trim()).filter(Boolean)) {
+    if (seen.has(slug)) continue;
+    const pal = bySlug.get(slug);
+    if (!pal) continue;
+    seen.add(slug);
+    selected.push(pal);
+    if (selected.length >= MAX_SELECTED_PALS) break;
+  }
+  return selected;
+}
 
 export function parsePaldexFilters(params: URLSearchParams): PaldexFilters {
   const work = list(params.get("work")).filter((item): item is WorkKey => validWork.has(item as WorkKey));
