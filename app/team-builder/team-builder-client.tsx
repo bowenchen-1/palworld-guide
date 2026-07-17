@@ -132,7 +132,7 @@ export default function TeamBuilderClient() {
             <PalMark pal={pal} />
             <span><small>{pal ? `No. ${pal.number}` : "Empty position"}</small><strong>{pal?.name ?? "Choose a Pal"}</strong><em>{pal ? pal.elements.join(" · ") : "Search all current entries"}</em></span>
           </button>
-          {pal && <footer><Link href={`/pals/${pal.slug}`}>Profile</Link><Link href={`/?mode=target&target=${pal.id}`}>How to breed</Link><button type="button" onClick={() => remove(index)} aria-label={`Remove ${pal.name} from slot ${index + 1}`}>Remove</button></footer>}
+          {pal && <footer><Link href={`/pals/${pal.slug}`}>Profile</Link><Link href={`/breeding-calculator?target=${pal.slug}`}>How to breed</Link><button type="button" onClick={() => remove(index)} aria-label={`Remove ${pal.name} from slot ${index + 1}`}>Remove</button></footer>}
           {duplicate && <p>Duplicate species</p>}
         </article>;
       })}

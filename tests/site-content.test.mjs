@@ -242,6 +242,10 @@ test("current 1.0 dataset distinguishes visible Pals from raw breeding records",
 test("breeding calculator target URL renders a noindex parent-results page", async () => {
   const page = await read("../app/breeding-calculator/page.tsx");
   const client = await read("../app/breeding-calculator/breeding-results-page.tsx");
+  const homepage = await read("../app/page.tsx");
+  const breedingClient = await read("../app/breeding-calculator/breeding-client.tsx");
+  const profile = await read("../app/pals/[slug]/page.tsx");
+  const teamBuilder = await read("../app/team-builder/team-builder-client.tsx");
   assert.doesNotMatch(page, /permanentRedirect/);
   assert.match(page, /BreedingResultsPage/);
   assert.match(page, /robots: \{ index: false, follow: true \}/);
@@ -251,6 +255,15 @@ test("breeding calculator target URL renders a noindex parent-results page", asy
   assert.match(client, /findParentPairs/);
   assert.match(client, /PAGE_SIZE = 50/);
   assert.match(client, /Load \{Math\.min\(PAGE_SIZE/);
+  assert.match(client, /matrixReady/);
+  assert.match(client, /Loading breeding combinations…/);
+  assert.match(breedingClient, /href=\{`\/breeding-calculator\?target=\$\{target\.slug\}`\}/);
+  assert.match(homepage, /href=\{`\/breeding-calculator\?target=\$\{pal\.slug\}`\}/);
+  assert.match(profile, /href=\{`\/breeding-calculator\?target=\$\{pal\.slug\}`\}/);
+  assert.match(teamBuilder, /href=\{`\/breeding-calculator\?target=\$\{pal\.slug\}`\}/);
+  assert.doesNotMatch(homepage, /\/?mode=target&target=\$\{pal\.id\}/);
+  assert.doesNotMatch(profile, /\/?mode=target&target=\$\{pal\.id\}/);
+  assert.doesNotMatch(teamBuilder, /\/?mode=target&target=\$\{pal\.id\}/);
   const breedingCore = await read("../app/breeding-calculator/breeding/core.ts");
   assert.match(breedingCore, /matrix\[first\.id\]\?\.\[second\.id\]/);
 });

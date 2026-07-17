@@ -323,6 +323,7 @@ body::before {
 .breeding-results-database a { border:1px solid var(--terminal-mint); border-radius:8px; background:rgba(57,208,197,.1); padding:10px 16px; color:var(--terminal-mint); font-size:11px; font-weight:900; }
 .breeding-results-database a:hover { background:var(--terminal-mint); color:var(--terminal-canvas); }
 .breeding-results-none,.breeding-results-empty { border:1px dashed var(--terminal-border); border-radius:10px; background:rgba(8,25,31,.45); padding:22px; color:var(--terminal-muted); }
+.breeding-results-loading { border:1px solid var(--terminal-border); border-radius:10px; background:rgba(8,25,31,.45); padding:22px; color:var(--terminal-mint); font-size:13px; font-weight:800; }
 .breeding-results-empty { margin-top:28px; text-align:center; }
 .breeding-results-empty h1 { color:var(--terminal-copy); font-family:var(--font-display); font-size:clamp(1.4rem,3vw,2.2rem); }
 .breeding-results-empty .breeding-results-cta { width:max-content; }
