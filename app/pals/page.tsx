@@ -9,7 +9,7 @@ type Props = { searchParams: Promise<Record<string, string | string[] | undefine
 export async function generateMetadata({ searchParams }: Props): Promise<Metadata> {
   const query = await searchParams;
   const ids = selectPalsBySlugs(query.ids, catalogPals);
-  const hasFilters = Object.keys(query).length > 0;
+  const hasFilters = Object.keys(query).some((key) => key !== "ids");
   return {
     ...createPageMetadata({
       title: "Palworld Pals Database | All Pals & 1.0 New Pals",

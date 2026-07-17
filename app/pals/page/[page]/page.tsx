@@ -18,7 +18,7 @@ export async function generateMetadata({ params, searchParams }: Props): Promise
   if (!Number.isInteger(page) || page < 2 || page > pageCount) return {};
   const query = await searchParams;
   const selected = selectPalsBySlugs(query.ids, catalogPals);
-  const hasFilters = Object.keys(query).length > 0;
+  const hasFilters = Object.keys(query).some((key) => key !== "ids");
   return {
     ...createPageMetadata({
       title: selected.length ? "Palworld Pals Database | All Pals & 1.0 New Pals" : `Palworld Pals Database — Page ${page} of ${pageCount} | 1.0`,
