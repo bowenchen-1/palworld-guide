@@ -404,6 +404,20 @@ test("Paldeck uses one responsive searchable comparison table", async () => {
   assert.match(styles, /\.paldex-mobile-cards\{display:none!important\}/);
 });
 
+test("Paldeck sticky header keeps the first row visible", async () => {
+  const client = await read("../app/paldex/paldex-client.tsx");
+  const theme = await read("../app/terminal-theme.css");
+  assert.match(client, /className="paldex-table-sentinel"/);
+  assert.match(client, /sentinel\.getBoundingClientRect\(\)\.bottom <= headerOffset/);
+  assert.match(client, /addEventListener\("scroll", scheduleUpdate/);
+  assert.doesNotMatch(client, /IntersectionObserver/);
+  assert.match(client, /paldex-table-stuck/);
+  assert.match(theme, /\.paldex-table th \{ top: 0; z-index: 20;/);
+  assert.match(theme, /\.paldex-table-wrap\.paldex-table-stuck \.paldex-table th \{ top: 68px;/);
+  assert.match(theme, /\.paldex-table-wrap\.paldex-table-stuck \.paldex-table th \{ top: 58px;/);
+  assert.doesNotMatch(theme, /\.paldex-complete-table thead th \{ top:/);
+});
+
 test("team builder exposes five slots, objective summaries, persistence, and shareable state", async () => {
   const page = await read("../app/team-builder/page.tsx");
   const client = await read("../app/team-builder/team-builder-client.tsx");

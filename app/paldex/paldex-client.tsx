@@ -55,11 +55,23 @@ export default function PaldexClient({ initialPage: _initialPage = 1 }: { initia
     const tableWrap = tableWrapRef.current;
     if (!sentinel || !tableWrap) return;
     const headerOffset = window.matchMedia("(max-width: 760px)").matches ? 58 : 68;
-    const observer = new IntersectionObserver(([entry]) => {
-      tableWrap.classList.toggle("paldex-table-stuck", !entry.isIntersecting);
-    }, { rootMargin: `-${headerOffset}px 0px 0px 0px`, threshold: 0 });
-    observer.observe(sentinel);
-    return () => observer.disconnect();
+    let frame = 0;
+    const updateStickyState = () => {
+      frame = 0;
+      const hasPassedHeader = sentinel.getBoundingClientRect().bottom <= headerOffset;
+      tableWrap.classList.toggle("paldex-table-stuck", hasPassedHeader);
+    };
+    const scheduleUpdate = () => {
+      if (!frame) frame = window.requestAnimationFrame(updateStickyState);
+    };
+    updateStickyState();
+    window.addEventListener("scroll", scheduleUpdate, { passive: true });
+    window.addEventListener("resize", scheduleUpdate);
+    return () => {
+      window.removeEventListener("scroll", scheduleUpdate);
+      window.removeEventListener("resize", scheduleUpdate);
+      if (frame) window.cancelAnimationFrame(frame);
+    };
   }, []);
   const visible = useMemo(() => sortPals(filterPals(catalogPals, filters), filters.sort), [filters]);
   const totalPages = Math.max(1, Math.ceil(visible.length / pageSize));
