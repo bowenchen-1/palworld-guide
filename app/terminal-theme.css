@@ -610,7 +610,7 @@ body::before {
 .paldex-table th { background: var(--terminal-panel); }
 .paldex-table-wrap { overflow-x: auto; overflow-y: clip; }
 .paldex-table th { top: 68px; z-index: 20; background: var(--terminal-panel); box-shadow: 0 2px 0 var(--terminal-border), 0 8px 16px rgba(0,8,12,.18); }
-.paldex-complete-table thead { position: sticky; top: 68px; z-index: 19; background: var(--terminal-panel); }
+.paldex-complete-table thead { position: static; }
 .paldex-complete-table thead th { top: 68px; }
 .paldex-complete-table th:first-child { z-index: 21; }
 .paldex-table tbody tr:hover,
@@ -699,7 +699,6 @@ body::before {
   .updates-content { padding-inline: 0; }
   .site-header { min-height: 58px; }
   .paldex-table th { top: 58px; }
-  .paldex-complete-table thead { top: 58px; }
   .paldex-complete-table thead th { top: 58px; }
   .site-brand strong { font-size: 17px; }
   .terminal-status span:last-child { display: none; }
