@@ -266,10 +266,10 @@ test("breeding calculator target URL renders a noindex parent-results page", asy
   assert.match(breedingClient, /targetVisibleCount/);
   assert.doesNotMatch(breedingClient, /Find Parent Combinations/);
   assert.match(homepage, /href=\{`\/breeding-calculator\?target=\$\{pal\.slug\}`\}/);
-  assert.match(profile, /href=\{`\/breeding-calculator\?target=\$\{pal\.slug\}`\}/);
+  assert.match(profile, /mode=target&target=\$\{encodeURIComponent\(pal\.id\)\}/);
   assert.match(teamBuilder, /href=\{`\/breeding-calculator\?target=\$\{pal\.slug\}`\}/);
   assert.doesNotMatch(homepage, /\/?mode=target&target=\$\{pal\.id\}/);
-  assert.doesNotMatch(profile, /\/?mode=target&target=\$\{pal\.id\}/);
+  assert.match(profile, /mode=target&target=\$\{encodeURIComponent\(pal\.id\)\}/);
   assert.doesNotMatch(teamBuilder, /\/?mode=target&target=\$\{pal\.id\}/);
   const breedingCore = await read("../app/breeding-calculator/breeding/core.ts");
   assert.match(breedingCore, /matrix\[first\.id\]\?\.\[second\.id\]/);
@@ -484,6 +484,19 @@ test("Pals supports selected ids mode without mixing it into filters", async () 
   assert.match(pagination, /selectPalsBySlugs/);
   assert.match(pagination, /initialPage={selected\.length \? 1 : page}/);
   assert.doesNotMatch(sitemap, /\?ids=/);
+});
+
+test("Pals breeding links reuse the homepage target protocol", async () => {
+  const client = await read("../app/paldex/paldex-client.tsx");
+  const profile = await read("../app/pals/[slug]/page.tsx");
+  const styles = await read("../app/tool-pages.css");
+  assert.match(client, /href=\{`\/\?mode=target&target=\$\{encodeURIComponent\(pal\.id\)\}`\}/);
+  assert.match(client, /Breeding/);
+  assert.match(client, /Find Parents/);
+  assert.doesNotMatch(profile, /breeding-calculator\?target=\$\{pal\.slug\}/);
+  assert.match(profile, /mode=target&target=\$\{encodeURIComponent\(pal\.id\)\}/);
+  assert.match(styles, /paldex-complete-table th:nth-child\(14\)/);
+  assert.match(styles, /paldex-breeding-link/);
 });
 
 test("team builder exposes five slots, objective summaries, persistence, and shareable state", async () => {
