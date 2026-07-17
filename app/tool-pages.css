@@ -234,9 +234,10 @@
 
 /* Paldeck 1.0 addition badges and filter layout */
 .paldex-control-bar{grid-template-columns:minmax(300px,1fr) 210px}
-.pal-mark .pal-new-badge{position:absolute;z-index:3;top:4px;right:4px;border-radius:5px;background:#e35f54;padding:3px 4px;color:#fff;font-family:var(--font-body);font-size:6px;font-style:normal;font-weight:900;letter-spacing:.04em;line-height:1;text-shadow:none;white-space:nowrap}
-.pal-mark .pal-new-badge.variant{background:#b66be4}
-.pal-mark.small .pal-new-badge{top:2px;right:2px;border-radius:3px;padding:2px;font-size:4px}
+.pal-mark .pal-new-badge{position:absolute;z-index:3;top:3px;right:2px;border-radius:5px;background:#35d2ce;padding:3px 5px;color:#06343a;font-family:var(--font-body);font-size:7px;font-style:italic;font-weight:950;letter-spacing:.08em;line-height:1;text-shadow:none;white-space:nowrap;transform:rotate(-8deg);box-shadow:0 2px 0 rgba(4,48,53,.2)}
+.pal-mark .pal-new-badge.variant{background:#35d2ce}
+.pal-mark.small .pal-new-badge{top:2px;right:1px;border-radius:3px;padding:2px 3px;font-size:5px}
+.profile-hero>.pal-mark .pal-new-badge{top:9px;right:7px;padding:5px 8px;font-size:10px}
 .paldex-filter-open.paldex-new-filter.active{background:var(--theme-primary);color:var(--theme-text-inverse)}
 .paldex-filter-open.paldex-new-filter.active span,.paldex-filter-open.paldex-new-filter.active strong{color:#062f36}
 .paldex-filter-open.paldex-new-filter.active strong{font-size:14px;font-weight:950;letter-spacing:.01em}
