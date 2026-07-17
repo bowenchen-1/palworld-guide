@@ -912,6 +912,11 @@ body::before {
 .home-calculator-top .home-breeding-slot strong { margin-top:11px; font-size:20px; }
 .home-calculator-top .home-breeding-slot>small { margin-top:3px; }
 .home-calculator-top .home-breeding-slot>i { margin-top:9px; }
+.home-calculator-top .home-breeding-slot.offspring.empty { border-style:solid; border-color:rgba(105,219,214,.22); background:rgba(8,25,31,.68); cursor:default; transition:none; }
+.home-calculator-top .home-breeding-slot.offspring.empty:hover { border-color:rgba(105,219,214,.22); background:rgba(8,25,31,.68); transform:none; }
+.home-calculator-top .home-breeding-slot.offspring.empty .offspring-empty-mark { display:grid; width:96px; height:96px; place-items:center; color:rgba(142,231,220,.58); }
+.home-calculator-top .home-breeding-slot.offspring.empty .offspring-empty-mark svg { width:72px; height:80px; fill:rgba(57,208,197,.05); stroke:currentColor; stroke-linecap:round; stroke-linejoin:round; stroke-width:2.4; }
+.home-calculator-top .home-breeding-slot.offspring.empty>i { border:1px solid rgba(105,219,214,.16); background:rgba(105,219,214,.07); color:#9ebdc1; font-size:8px; font-style:normal; letter-spacing:.04em; text-transform:none; transition:none; }
 .home-calculator-top .home-control-row,.home-calculator-top .home-route-controls { align-items:stretch; }
 .home-calculator-top .home-control-row>.home-compact-picker,.home-calculator-top .home-control-row>.home-filter,.home-calculator-top .home-route-controls> :is(.home-compact-picker,.home-filter,.home-number-control,.home-available-control) { min-height:220px; }
 .home-calculator-top .home-available-control { min-height:220px; }
@@ -1044,6 +1049,8 @@ body::before {
   .home-calculator-top .home-breeding-equation { grid-template-columns:1fr; gap:4px; }
   .home-calculator-top .home-breeding-slot { min-height:116px; display:grid; grid-template-columns:42px minmax(0,1fr); grid-template-rows:minmax(0,1fr) auto auto; column-gap:5px; padding:25px 6px 7px; text-align:left; }
   .home-calculator-top .home-breeding-slot .pal-mark { grid-row:1 / 4; width:48px; height:48px; border-radius:14px; }
+  .home-calculator-top .home-breeding-slot.offspring.empty .offspring-empty-mark { grid-row:1 / 4; width:48px; height:48px; }
+  .home-calculator-top .home-breeding-slot.offspring.empty .offspring-empty-mark svg { width:38px; height:44px; }
   .home-calculator-top .home-breeding-slot strong { margin:0; font-size:10px; }
   .home-calculator-top .home-breeding-slot>small { margin:0; font-size:5px; }
   .home-calculator-top .home-breeding-slot>i { grid-column:2; grid-row:3; justify-self:start; margin:0; padding:4px; font-size:4px; }
