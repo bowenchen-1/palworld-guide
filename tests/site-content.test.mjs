@@ -59,6 +59,20 @@ test("homepage targets Palworld breeding calculator with one focused H1", async 
   assert.match(terminalTheme, /--terminal-mint: #39d0c5/);
 });
 
+test("main navigation omits Tools while keeping the tools hub available", async () => {
+  const header = await read("../app/components/site-header.tsx");
+  const tools = await read("../app/tools/page.tsx");
+  const sitemap = await read("../app/sitemap.ts");
+  assert.doesNotMatch(header, /\["Tools", "\/tools"\]/);
+  assert.match(header, /\["Team Builder", "\/team-builder"\]/);
+  assert.match(header, /\["Pals", "\/pals"\]/);
+  assert.match(header, /\["Guides", "\/guides"\]/);
+  assert.match(header, /\["Updates", "\/updates"\]/);
+  assert.match(tools, /export default function ToolsPage/);
+  assert.match(tools, /current="\/tools"/);
+  assert.match(sitemap, /\$\{siteUrl\}\/tools/);
+});
+
 test("every page inherits one semantic Tailwind theme", async () => {
   const globals = await read("../app/globals.css");
   const theme = await read("../app/theme.css");
@@ -407,15 +421,14 @@ test("Paldeck uses one responsive searchable comparison table", async () => {
 test("Paldeck sticky header keeps the first row visible", async () => {
   const client = await read("../app/paldex/paldex-client.tsx");
   const theme = await read("../app/terminal-theme.css");
-  assert.match(client, /className="paldex-table-sentinel"/);
-  assert.match(client, /sentinel\.getBoundingClientRect\(\)\.bottom <= headerOffset/);
-  assert.match(client, /addEventListener\("scroll", scheduleUpdate/);
+  assert.match(client, /className="paldex-frozen-header"/);
+  assert.match(client, /regionRect\.top <= headerOffset/);
+  assert.match(client, /tableWrap\.addEventListener\("scroll", scheduleUpdate/);
   assert.doesNotMatch(client, /IntersectionObserver/);
-  assert.match(client, /paldex-table-stuck/);
-  assert.match(theme, /\.paldex-table th \{ top: 0; z-index: 20;/);
-  assert.match(theme, /\.paldex-table-wrap\.paldex-table-stuck \.paldex-table th \{ top: 68px;/);
-  assert.match(theme, /\.paldex-table-wrap\.paldex-table-stuck \.paldex-table th \{ top: 58px;/);
-  assert.doesNotMatch(theme, /\.paldex-complete-table thead th \{ top:/);
+  assert.match(theme, /\.paldex-frozen-header\.is-visible/);
+  assert.match(theme, /\.paldex-table-wrap \{ overflow-x: auto; overflow-y: hidden; \}/);
+  assert.match(theme, /\.paldex-table th \{ position: static; top: auto;/);
+  assert.doesNotMatch(theme, /paldex-table-stuck/);
 });
 
 test("team builder exposes five slots, objective summaries, persistence, and shareable state", async () => {
