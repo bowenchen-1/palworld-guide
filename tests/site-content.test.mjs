@@ -256,7 +256,7 @@ test("breeding calculator target URL renders a noindex parent-results page", asy
   assert.match(client, /PAGE_SIZE = 50/);
   assert.match(client, /Load \{Math\.min\(PAGE_SIZE/);
   assert.match(client, /matrixReady/);
-  assert.match(client, /Loading breeding combinations…/);
+  assert.match(client, /Loading parent combinations…/);
   assert.match(breedingClient, /href=\{`\/breeding-calculator\?target=\$\{target\.slug\}`\}/);
   assert.match(homepage, /href=\{`\/breeding-calculator\?target=\$\{pal\.slug\}`\}/);
   assert.match(profile, /href=\{`\/breeding-calculator\?target=\$\{pal\.slug\}`\}/);
