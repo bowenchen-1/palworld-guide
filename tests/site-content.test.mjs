@@ -158,6 +158,8 @@ test("homepage hosts all six calculator modes with shared URL and local storage 
   assert.match(client, /targetResultsRef/);
   assert.match(client, /scrollIntoView/);
   assert.match(client, /targetVisibleCount/);
+  assert.match(client, /showDatabaseLink/);
+  assert.match(client, /pals=\{\[result\.first, result\.second, result\.child\]\}/);
   assert.doesNotMatch(client, /Find Parent Combinations/);
   assert.match(client, /`\/pals\?ids=\$\{slugs\.join\(","\)\}`/);
   assert.match(client, /View Pal Details/);
