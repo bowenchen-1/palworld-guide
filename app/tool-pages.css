@@ -285,3 +285,4 @@
 .element-marks{flex-wrap:nowrap;white-space:nowrap}
 .paldex-table-wrap{overflow-x:auto;overflow-y:clip}
 .paldex-complete-table{border-collapse:separate;border-spacing:0}
+.paldex-table-sentinel{display:block;height:1px;margin-top:-1px;pointer-events:none}
