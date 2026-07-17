@@ -25,7 +25,12 @@ const sortOptions: Array<{ value: PaldexSort; label: string }> = [
   { value: "power-low", label: "Breeding power: low first" },
   { value: "power-high", label: "Breeding power: high first" },
 ];
+const tableColumns = ["Pal", "Number", "Element", "Work Suitability", "Partner Skill", "Rarity", "HP", "Breeding Power", "Defense", "Price", "Stamina", "Riding Speed", "Run Speed"] as const;
 type Sheet = "elements" | "work" | null;
+
+function PaldexTableHead({ frozen = false }: { frozen?: boolean }) {
+  return <thead aria-hidden={frozen || undefined}><tr>{tableColumns.map((label) => <th key={label}>{label}</th>)}</tr></thead>;
+}
 
 function ElementMarks({ pal }: { pal: PalData }) {
   return <span className="element-marks">{pal.elements.map((element) => <ElementIcon key={element} element={element} />)}</span>;
@@ -48,31 +53,46 @@ export default function PaldexClient({ initialPage: _initialPage = 1 }: { initia
   const [draftWorkMode, setDraftWorkMode] = useState<MatchMode>("any");
   const [draftWorkLevel, setDraftWorkLevel] = useState(0);
   const [sortOpen, setSortOpen] = useState(false);
-  const tableSentinelRef = useRef<HTMLSpanElement>(null);
+  const tableRegionRef = useRef<HTMLDivElement>(null);
   const tableWrapRef = useRef<HTMLDivElement>(null);
+  const frozenHeaderRef = useRef<HTMLDivElement>(null);
+  const frozenTableRef = useRef<HTMLTableElement>(null);
   useEffect(() => {
-    const sentinel = tableSentinelRef.current;
+    const tableRegion = tableRegionRef.current;
     const tableWrap = tableWrapRef.current;
-    if (!sentinel || !tableWrap) return;
+    const frozenHeader = frozenHeaderRef.current;
+    const frozenTable = frozenTableRef.current;
+    if (!tableRegion || !tableWrap || !frozenHeader || !frozenTable) return;
     const headerOffset = window.matchMedia("(max-width: 760px)").matches ? 58 : 68;
     let frame = 0;
-    const updateStickyState = () => {
+    const updateFrozenHeader = () => {
       frame = 0;
-      const hasPassedHeader = sentinel.getBoundingClientRect().bottom <= headerOffset;
-      tableWrap.classList.toggle("paldex-table-stuck", hasPassedHeader);
+      const regionRect = tableRegion.getBoundingClientRect();
+      const tableHeader = tableWrap.querySelector("thead");
+      const headerHeight = tableHeader?.getBoundingClientRect().height ?? 56;
+      const shouldFreeze = regionRect.top <= headerOffset && regionRect.bottom > headerOffset + headerHeight;
+      frozenHeader.classList.toggle("is-visible", shouldFreeze);
+      if (!shouldFreeze) return;
+      frozenHeader.style.left = `${regionRect.left}px`;
+      frozenHeader.style.width = `${regionRect.width}px`;
+      frozenHeader.style.top = `${headerOffset}px`;
+      frozenTable.style.width = `${tableWrap.scrollWidth}px`;
+      frozenTable.style.transform = `translateX(-${tableWrap.scrollLeft}px)`;
     };
     const scheduleUpdate = () => {
-      if (!frame) frame = window.requestAnimationFrame(updateStickyState);
+      if (!frame) frame = window.requestAnimationFrame(updateFrozenHeader);
     };
-    updateStickyState();
+    updateFrozenHeader();
     window.addEventListener("scroll", scheduleUpdate, { passive: true });
     window.addEventListener("resize", scheduleUpdate);
+    tableWrap.addEventListener("scroll", scheduleUpdate, { passive: true });
     return () => {
       window.removeEventListener("scroll", scheduleUpdate);
       window.removeEventListener("resize", scheduleUpdate);
+      tableWrap.removeEventListener("scroll", scheduleUpdate);
       if (frame) window.cancelAnimationFrame(frame);
     };
-  }, []);
+  }, [searchParams]);
   const visible = useMemo(() => sortPals(filterPals(catalogPals, filters), filters.sort), [filters]);
   const totalPages = Math.max(1, Math.ceil(visible.length / pageSize));
   const currentPage = Math.min(Math.max(_initialPage, 1), totalPages);
@@ -119,7 +139,7 @@ export default function PaldexClient({ initialPage: _initialPage = 1 }: { initia
       <div><div className="paldex-sort-menu"><span>Sort</span><button type="button" className="paldex-sort-trigger" aria-label="Sort Paldeck" aria-haspopup="listbox" aria-expanded={sortOpen} onClick={() => setSortOpen((open) => !open)}><strong>{sortOptions.find((option) => option.value === filters.sort)?.label}</strong><span aria-hidden="true">⌄</span></button>{sortOpen && <div className="paldex-sort-options" role="listbox" aria-label="Sort Paldeck options">{sortOptions.map((option) => <button type="button" role="option" aria-selected={filters.sort === option.value} className={filters.sort === option.value ? "active" : ""} key={option.value} onClick={() => { update({ sort: option.value }); setSortOpen(false); }}>{filters.sort === option.value && <span aria-hidden="true">✓</span>}{option.label}</button>)}</div>}</div>{hasFilters && <button type="button" className="paldex-reset" onClick={clearAll}>Clear all</button>}</div>
     </div>
     {hasFilters && <div className="paldex-chips">{filters.newOnly && <button onClick={() => update({ newOnly: false })}>New in 1.0 ×</button>}{filters.elements.map((value) => <button key={value} onClick={() => update({ elements: toggle(filters.elements, value) })}>{value} ×</button>)}{filters.work.map((value) => <button key={value} onClick={() => update({ work: toggle(filters.work, value) })}>{workLabels[value]} ×</button>)}{filters.workLevel > 0 && <span>Work level {filters.workLevel}+</span>}</div>}
-    {visible.length ? <><div className="paldex-result-range" aria-live="polite">Showing {pageStart + 1}–{Math.min(pageStart + pageSize, visible.length)} of {visible.length} {filters.newOnly ? "New Pals in Palworld 1.0" : "Pals"}</div><span ref={tableSentinelRef} className="paldex-table-sentinel" aria-hidden="true" /><div ref={tableWrapRef} className="paldex-table-wrap"><table className="paldex-table paldex-complete-table"><thead><tr><th>Pal</th><th>Number</th><th>Element</th><th>Work Suitability</th><th>Partner Skill</th><th>Rarity</th><th>HP</th><th>Breeding Power</th><th>Defense</th><th>Price</th><th>Stamina</th><th>Riding Speed</th><th>Run Speed</th></tr></thead><tbody>{pagePals.map((pal) => <tr key={pal.id}><td><Link href={`/pals/${pal.slug}`}><PalMark pal={pal} showNewBadge /><span><strong>{pal.name}</strong><small>{pal.kind === "pal" ? "Pal" : "Crossover creature"}</small></span></Link></td><td>{pal.number}</td><td><ElementMarks pal={pal} /></td><td><WorkBadges pal={pal} /></td><td>{pal.partnerSkill.name ? <span className="partner-skill-mark"><PartnerSkillIcon file={pal.partnerSkill.iconFile} label={pal.partnerSkill.name} /><span>{pal.partnerSkill.name}</span></span> : "—"}</td><td>{pal.rarity ?? "—"}</td><td>{pal.stats.hp ?? "—"}</td><td>{pal.power}</td><td>{pal.stats.defense ?? "—"}</td><td>{pal.price ?? "—"}</td><td>{pal.stats.stamina ?? "—"}</td><td>{pal.movement.rideSprint ?? "—"}</td><td>{pal.movement.run ?? "—"}</td></tr>)}</tbody></table></div><nav className="paldex-pagination" aria-label="Pal pagination">{currentPage <= 1 ? <span aria-disabled="true">Previous</span> : <Link href={pageHref(currentPage - 1)}>Previous</Link>}<div className="paldex-pagination-pages">{Array.from({ length: totalPages }, (_, index) => index + 1).map((page) => <Link href={pageHref(page)} key={page} aria-current={page === currentPage ? "page" : undefined}>{page}</Link>)}</div>{currentPage >= totalPages ? <span aria-disabled="true">Next</span> : <Link href={pageHref(currentPage + 1)}>Next</Link>}</nav></> : <div className="paldex-empty"><span>⌕</span><h2>No Pals found</h2><p>Try another search or clear one of the filters.</p><button type="button" onClick={clearAll}>Clear all</button></div>}
+    {visible.length ? <><div className="paldex-result-range" aria-live="polite">Showing {pageStart + 1}–{Math.min(pageStart + pageSize, visible.length)} of {visible.length} {filters.newOnly ? "New Pals in Palworld 1.0" : "Pals"}</div><div ref={tableRegionRef} className="paldex-table-region"><div ref={tableWrapRef} className="paldex-table-wrap"><table className="paldex-table paldex-complete-table"><PaldexTableHead /><tbody>{pagePals.map((pal) => <tr key={pal.id}><td><Link href={`/pals/${pal.slug}`}><PalMark pal={pal} showNewBadge /><span><strong>{pal.name}</strong><small>{pal.kind === "pal" ? "Pal" : "Crossover creature"}</small></span></Link></td><td>{pal.number}</td><td><ElementMarks pal={pal} /></td><td><WorkBadges pal={pal} /></td><td>{pal.partnerSkill.name ? <span className="partner-skill-mark"><PartnerSkillIcon file={pal.partnerSkill.iconFile} label={pal.partnerSkill.name} /><span>{pal.partnerSkill.name}</span></span> : "—"}</td><td>{pal.rarity ?? "—"}</td><td>{pal.stats.hp ?? "—"}</td><td>{pal.power}</td><td>{pal.stats.defense ?? "—"}</td><td>{pal.price ?? "—"}</td><td>{pal.stats.stamina ?? "—"}</td><td>{pal.movement.rideSprint ?? "—"}</td><td>{pal.movement.run ?? "—"}</td></tr>)}</tbody></table></div><div ref={frozenHeaderRef} className="paldex-frozen-header" aria-hidden="true"><table ref={frozenTableRef} className="paldex-table paldex-complete-table paldex-frozen-table"><PaldexTableHead frozen /></table></div></div><nav className="paldex-pagination" aria-label="Pal pagination">{currentPage <= 1 ? <span aria-disabled="true">Previous</span> : <Link href={pageHref(currentPage - 1)}>Previous</Link>}<div className="paldex-pagination-pages">{Array.from({ length: totalPages }, (_, index) => index + 1).map((page) => <Link href={pageHref(page)} key={page} aria-current={page === currentPage ? "page" : undefined}>{page}</Link>)}</div>{currentPage >= totalPages ? <span aria-disabled="true">Next</span> : <Link href={pageHref(currentPage + 1)}>Next</Link>}</nav></> : <div className="paldex-empty"><span>⌕</span><h2>No Pals found</h2><p>Try another search or clear one of the filters.</p><button type="button" onClick={clearAll}>Clear all</button></div>}
     {sheet && <div className="paldex-filter-backdrop" role="presentation" onClick={() => setSheet(null)}><section className="paldex-filter-sheet" role="dialog" aria-modal="true" aria-label={sheet === "elements" ? "Element filters" : "Work suitability filters"} onClick={(event) => event.stopPropagation()}>
       <header><h2>{sheet === "elements" ? "Element" : "Work Suitability"}</h2><button type="button" onClick={() => setSheet(null)}>Cancel</button></header>
       {sheet === "elements" ? <><div className="paldex-filter-options">{elementOptions.map((item) => <button type="button" key={item} className={draftElements.includes(item) ? "active" : ""} onClick={() => setDraftElements(toggle(draftElements, item))}><ElementIcon element={item} /><span>{item}</span></button>)}</div>{draftElements.length > 1 && <div className="paldex-match-mode"><button type="button" className={draftElementMode === "any" ? "active" : ""} onClick={() => setDraftElementMode("any")}>Match any</button><button type="button" className={draftElementMode === "all" ? "active" : ""} onClick={() => setDraftElementMode("all")}>Match all</button></div>}</> : <><div className="paldex-filter-options work-options">{workTypes.map((item) => <button type="button" key={item} className={draftWork.includes(item) ? "active" : ""} onClick={() => setDraftWork(toggle(draftWork, item))}><WorkSuitabilityIcon work={item} /><span>{workLabels[item]}</span></button>)}</div><label className="paldex-min-level">Minimum level<select value={draftWorkLevel} onChange={(event) => setDraftWorkLevel(Number(event.target.value))}><option value="0">Any</option>{[2, 3, 4, 5, 6, 7, 8].map((level) => <option key={level} value={level}>{level}+</option>)}</select></label>{draftWork.length > 1 && <div className="paldex-match-mode"><button type="button" className={draftWorkMode === "any" ? "active" : ""} onClick={() => setDraftWorkMode("any")}>Match any</button><button type="button" className={draftWorkMode === "all" ? "active" : ""} onClick={() => setDraftWorkMode("all")}>Match all</button></div>}</>}

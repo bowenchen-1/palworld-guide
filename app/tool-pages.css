@@ -283,6 +283,4 @@
 .paldex-complete-table tbody tr:hover td:first-child,.paldex-complete-table tbody tr.selected td:first-child{background:#edf6f5}
 .paldex-complete-table td:nth-child(3){overflow:visible}
 .element-marks{flex-wrap:nowrap;white-space:nowrap}
-.paldex-table-wrap{overflow-x:auto;overflow-y:clip}
 .paldex-complete-table{border-collapse:separate;border-spacing:0}
-.paldex-table-sentinel{display:block;height:1px;margin-top:-1px;pointer-events:none}
