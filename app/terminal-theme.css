@@ -958,6 +958,8 @@ body::before {
 .home-calculator-top .home-results .breed-row a,.home-calculator-top .route-list a { color:var(--terminal-copy); }
 .home-calculator-top .home-results .breed-row small,.home-calculator-top .route-list p { color:var(--terminal-muted); }
 .home-calculator-top .home-results details { border-color:var(--terminal-border); background:rgba(8,25,31,.48); color:var(--terminal-copy); }
+.home-calculator-top .breed-database-link { border-color:rgba(57,208,197,.58); background:var(--terminal-panel-light); color:var(--terminal-mint); }
+.home-calculator-top .breed-database-link:hover { border-color:var(--terminal-mint); background:var(--terminal-panel-hover); color:var(--terminal-copy); }
 
 @media(max-width:900px) {
   .home-calculator-top .home-breeding-tabs { grid-template-columns:repeat(3,minmax(0,1fr)); }

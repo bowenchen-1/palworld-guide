@@ -155,6 +155,10 @@ test("homepage hosts all six calculator modes with shared URL and local storage 
   assert.match(client, /result\.first\.id === parentFilter \|\| result\.second\.id === parentFilter/);
   assert.match(client, /offspringCandidates/);
   assert.match(client, /result\.second\.id === offspringFilter \|\| result\.child\.id === offspringFilter/);
+  assert.match(client, /function DatabaseResultLink/);
+  assert.match(client, /`\/pals\?ids=\$\{slugs\.join\(","\)\}`/);
+  assert.match(client, /View Pal Details/);
+  assert.match(client, /View \$\{slugs\.length\} Pals in Database/);
   assert.match(client, /Advanced options/);
   assert.match(client, /setExcluded\(\(current\) => current\.filter/);
   assert.doesNotMatch(client, /Search parents…|Search partner or offspring…|Comma-separated IDs/);
