@@ -156,6 +156,8 @@ test("homepage hosts all six calculator modes with shared URL and local storage 
   assert.match(client, /offspringCandidates/);
   assert.match(client, /result\.second\.id === offspringFilter \|\| result\.child\.id === offspringFilter/);
   assert.match(client, /function DatabaseResultLink/);
+  assert.match(client, /Find Parent Combinations/);
+  assert.match(client, /href=\{`\/breeding-calculator\?target=\$\{target\.slug\}`\}/);
   assert.match(client, /`\/pals\?ids=\$\{slugs\.join\(","\)\}`/);
   assert.match(client, /View Pal Details/);
   assert.match(client, /View \$\{slugs\.length\} Pals in Database/);
@@ -237,16 +239,19 @@ test("current 1.0 dataset distinguishes visible Pals from raw breeding records",
   assert.equal(Object.keys(matrix).length, 300);
 });
 
-test("legacy breeding calculator URL redirects to homepage while preserving query state", async () => {
+test("breeding calculator target URL renders a noindex parent-results page", async () => {
   const page = await read("../app/breeding-calculator/page.tsx");
-  const client = await read("../app/breeding-calculator/breeding-client.tsx");
-  assert.match(page, /permanentRedirect/);
+  const client = await read("../app/breeding-calculator/breeding-results-page.tsx");
+  assert.doesNotMatch(page, /permanentRedirect/);
+  assert.match(page, /BreedingResultsPage/);
+  assert.match(page, /robots: \{ index: false, follow: true \}/);
+  assert.match(page, /canonical: "\/breeding-calculator"/);
   assert.match(page, /searchParams/);
-  assert.match(page, /URLSearchParams/);
-  assert.match(client, /Parents → Child/);
-  assert.match(client, /Target → Parents/);
-  const breedingCore = await read("../app/breeding-calculator/breeding/core.ts");
+  assert.match(client, /Breeding Parents for/);
   assert.match(client, /findParentPairs/);
+  assert.match(client, /PAGE_SIZE = 50/);
+  assert.match(client, /Load \{Math\.min\(PAGE_SIZE/);
+  const breedingCore = await read("../app/breeding-calculator/breeding/core.ts");
   assert.match(breedingCore, /matrix\[first\.id\]\?\.\[second\.id\]/);
 });
 

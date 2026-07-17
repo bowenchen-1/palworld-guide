@@ -1,15 +1,17 @@
-import { permanentRedirect } from "next/navigation";
+import type { Metadata } from "next";
+import BreedingResultsPage from "./breeding-results-page";
 
 type SearchParams = Record<string, string | string[] | undefined>;
 
-// Retain historic calculator links while making the homepage the single source
-// of truth for calculator UI, data loading, local storage, and URL state.
-export default async function BreedingCalculatorRedirect({ searchParams }: { searchParams: Promise<SearchParams> }) {
+export const metadata: Metadata = {
+  title: "Breeding Parents | Palworld Breeding Calculator",
+  description: "Find verified parent combinations for a target Pal in the Palworld 1.0 breeding matrix.",
+  robots: { index: false, follow: true },
+  alternates: { canonical: "/breeding-calculator" },
+};
+
+export default async function BreedingCalculatorPage({ searchParams }: { searchParams: Promise<SearchParams> }) {
   const params = await searchParams;
-  const query = new URLSearchParams();
-  for (const [key, value] of Object.entries(params)) {
-    if (Array.isArray(value)) value.forEach((item) => query.append(key, item));
-    else if (value) query.set(key, value);
-  }
-  permanentRedirect(query.size ? `/?${query.toString()}` : "/");
+  const value = (key: string) => Array.isArray(params[key]) ? params[key]?.[0] : params[key];
+  return <BreedingResultsPage targetSlug={value("target")} parentSlug={value("parent")} />;
 }

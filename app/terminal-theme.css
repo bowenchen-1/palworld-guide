@@ -265,6 +265,68 @@ body::before {
   .home-calculator-mode { width: 100%; }
   .home-calculator-mode button { flex: 1; min-height: 40px; padding: 8px 6px; font-size: 10px; }
 }
+
+/* Dedicated target-to-parent results page. */
+.breeding-results-page { min-height:100vh; background:linear-gradient(180deg,var(--terminal-canvas) 0%,#082731 100%); color:var(--terminal-copy); padding:20px; }
+.breeding-results-shell { width:min(1180px,100%); margin:0 auto; }
+.breeding-results-page .site-header { margin-bottom:18px; }
+.breeding-results-back { display:inline-flex; margin:12px 0 18px; color:var(--terminal-mint); font-size:12px; font-weight:900; }
+.breeding-results-heading { border-bottom:1px solid var(--terminal-border); padding:10px 0 18px; }
+.breeding-results-heading h1 { margin-top:7px; color:var(--terminal-copy); font-family:var(--font-display); font-size:clamp(2rem,4vw,3.5rem); line-height:.98; }
+.breeding-results-target-link { margin-top:14px; }
+.breeding-results-target-link a { display:inline-flex; align-items:center; gap:10px; color:var(--terminal-copy); font-size:17px; font-weight:900; }
+.breeding-results-target-link a:hover { color:var(--terminal-mint); }
+.breeding-results-target-link .pal-mark { width:48px; height:48px; border-radius:14px; }
+.breeding-results-target-link small { display:block; margin-top:2px; color:var(--terminal-mint); font-size:9px; letter-spacing:.06em; text-transform:uppercase; }
+.breeding-results-content { margin-top:18px; }
+.breeding-results-summary { display:grid; grid-template-columns:minmax(0,1fr) minmax(280px,.5fr); align-items:end; gap:18px; }
+.breeding-results-summary>div:first-child { display:grid; gap:5px; }
+.breeding-results-summary strong { color:var(--terminal-copy); font-family:var(--font-display); font-size:clamp(1.35rem,2.5vw,2rem); }
+.breeding-results-summary span { color:var(--terminal-muted); font-size:11px; }
+.breeding-parent-filter { display:grid; gap:6px; }
+.breeding-parent-filter>span { color:var(--terminal-mint); font-size:10px; font-weight:900; letter-spacing:.1em; text-transform:uppercase; }
+.breeding-parent-filter-control { position:relative; }
+.breeding-parent-filter-trigger { display:flex; width:100%; min-height:50px; align-items:center; gap:9px; border:1px solid var(--terminal-border); border-radius:9px; background:var(--terminal-panel-light); padding:7px 11px; color:var(--terminal-copy); font-size:12px; text-align:left; }
+.breeding-parent-filter-trigger:hover,.breeding-parent-filter-trigger[aria-expanded="true"] { border-color:var(--terminal-mint); background:var(--terminal-panel-hover); }
+.breeding-parent-filter-trigger>span { min-width:0; flex:1; }
+.breeding-parent-filter-trigger small { display:block; margin-top:2px; color:var(--terminal-muted); font-size:9px; }
+.breeding-parent-filter-trigger>b { color:var(--terminal-mint); font-size:18px; }
+.breeding-parent-filter-menu { position:absolute; z-index:10; top:calc(100% + 6px); right:0; left:0; max-height:340px; overflow:auto; border:1px solid var(--terminal-border); border-radius:10px; background:var(--terminal-panel); padding:7px; box-shadow:0 20px 45px rgba(0,8,12,.48); }
+.breeding-parent-filter-menu>input { width:100%; min-height:38px; border:1px solid var(--terminal-border); border-radius:7px; background:var(--terminal-canvas); padding:0 9px; color:var(--terminal-copy); outline:none; }
+.breeding-parent-filter-menu>input:focus { border-color:var(--terminal-mint); box-shadow:0 0 0 3px rgba(57,208,197,.16); }
+.breeding-parent-filter-option { display:flex; width:100%; min-height:44px; align-items:center; gap:8px; border:1px solid transparent; border-radius:7px; background:transparent; padding:5px 7px; color:var(--terminal-copy); text-align:left; }
+.breeding-parent-filter-option:hover,.breeding-parent-filter-option[aria-selected="true"] { border-color:var(--terminal-mint); background:rgba(57,208,197,.12); }
+.breeding-parent-filter-option.clear { margin:6px 0; color:var(--terminal-mint); font-size:11px; font-weight:900; }
+.breeding-parent-filter-option span { min-width:0; }
+.breeding-parent-filter-option strong,.breeding-parent-filter-option small { display:block; }
+.breeding-parent-filter-option small { margin-top:2px; color:var(--terminal-muted); font-size:9px; }
+.breeding-parent-filter-option .pal-mark { width:32px; height:32px; border-radius:9px; }
+.breeding-parent-filter-empty { padding:12px 6px; color:var(--terminal-muted); font-size:11px; }
+.breeding-results-filter-status { display:flex; align-items:center; gap:10px; margin-top:14px; border-left:3px solid var(--terminal-mint); background:rgba(57,208,197,.08); padding:10px 12px; }
+.breeding-results-filter-status strong { color:var(--terminal-copy); font-size:12px; }
+.breeding-results-filter-status span { color:var(--terminal-muted); font-size:11px; }
+.breeding-results-filter-status button { margin-left:auto; color:var(--terminal-mint); font-size:11px; font-weight:900; }
+.breeding-results-count { margin-top:18px; color:var(--terminal-muted); font-size:11px; font-weight:800; }
+.breeding-results-list { display:grid; gap:8px; margin-top:8px; }
+.breeding-result-pair { display:grid; grid-template-columns:minmax(0,1fr) 32px minmax(0,1fr); align-items:center; gap:8px; border:1px solid var(--terminal-border); border-radius:10px; background:rgba(8,25,31,.64); padding:9px; }
+.breeding-result-pal { display:flex; min-width:0; align-items:center; gap:9px; border-radius:7px; padding:5px; color:var(--terminal-copy); }
+.breeding-result-pal:hover { background:rgba(57,208,197,.1); color:var(--terminal-mint); }
+.breeding-result-pal .pal-mark { width:42px; height:42px; border-radius:12px; }
+.breeding-result-pal span { min-width:0; }
+.breeding-result-pal strong,.breeding-result-pal small { display:block; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.breeding-result-pal small { margin-top:3px; color:var(--terminal-muted); font-size:9px; }
+.breeding-result-operator { color:var(--terminal-mint); font-family:var(--font-display); font-size:20px; text-align:center; }
+.breeding-results-load,.breeding-results-cta { display:flex; min-height:44px; align-items:center; justify-content:center; margin:16px auto 0; border:1px solid var(--terminal-border); border-radius:8px; background:var(--terminal-panel-light); padding:10px 18px; color:var(--terminal-mint); font-size:12px; font-weight:900; }
+.breeding-results-load:hover,.breeding-results-cta:hover { border-color:var(--terminal-mint); background:var(--terminal-panel-hover); }
+.breeding-results-all { margin-top:16px; color:var(--terminal-muted); font-size:11px; text-align:center; }
+.breeding-results-database { display:flex; justify-content:center; margin-top:18px; }
+.breeding-results-database a { border:1px solid var(--terminal-mint); border-radius:8px; background:rgba(57,208,197,.1); padding:10px 16px; color:var(--terminal-mint); font-size:11px; font-weight:900; }
+.breeding-results-database a:hover { background:var(--terminal-mint); color:var(--terminal-canvas); }
+.breeding-results-none,.breeding-results-empty { border:1px dashed var(--terminal-border); border-radius:10px; background:rgba(8,25,31,.45); padding:22px; color:var(--terminal-muted); }
+.breeding-results-empty { margin-top:28px; text-align:center; }
+.breeding-results-empty h1 { color:var(--terminal-copy); font-family:var(--font-display); font-size:clamp(1.4rem,3vw,2.2rem); }
+.breeding-results-empty .breeding-results-cta { width:max-content; }
+@media(max-width:700px) { .breeding-results-page { padding:12px; } .breeding-results-summary { grid-template-columns:1fr; } .breeding-results-filter-status { align-items:flex-start; flex-wrap:wrap; } .breeding-results-filter-status button { margin-left:0; } .breeding-result-pair { grid-template-columns:1fr; gap:3px; } .breeding-result-operator { transform:rotate(90deg); } .breeding-results-database a,.breeding-results-load { width:100%; } }
 .global-search input { color: var(--terminal-copy); }
 .global-search input::placeholder { color: var(--terminal-muted); }
 
@@ -958,6 +1020,9 @@ body::before {
 .home-calculator-top .home-results .breed-row a,.home-calculator-top .route-list a { color:var(--terminal-copy); }
 .home-calculator-top .home-results .breed-row small,.home-calculator-top .route-list p { color:var(--terminal-muted); }
 .home-calculator-top .home-results details { border-color:var(--terminal-border); background:rgba(8,25,31,.48); color:var(--terminal-copy); }
+.home-calculator-top .home-target-actions { display:flex; justify-content:center; margin-top:12px; }
+.home-calculator-top .home-target-query-link { display:inline-flex; min-height:42px; align-items:center; justify-content:center; border:1px solid var(--terminal-mint); border-radius:8px; background:rgba(57,208,197,.1); padding:9px 16px; color:var(--terminal-mint); font-size:11px; font-weight:900; }
+.home-calculator-top .home-target-query-link:hover { background:var(--terminal-mint); color:var(--terminal-canvas); }
 .home-calculator-top .breed-database-link { border-color:rgba(57,208,197,.58); background:var(--terminal-panel-light); color:var(--terminal-mint); }
 .home-calculator-top .breed-database-link:hover { border-color:var(--terminal-mint); background:var(--terminal-panel-hover); color:var(--terminal-copy); }
 
