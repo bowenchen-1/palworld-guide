@@ -136,7 +136,7 @@ test("homepage hosts all six calculator modes with shared URL and local storage 
   const page = await read("../app/page.tsx");
   const client = await read("../app/breeding-calculator/breeding-client.tsx");
   assert.match(page, /BreedingClient embedded/);
-  for (const feature of ["Parents → Child", "Target → Parents", "One Parent → Offspring", "Available Pals → Target", "Shortest Route", "What Can I Breed Now"]) assert.match(client, new RegExp(feature));
+  for (const feature of ["Parents → Child", "Target → Parents", "One Parent → Offspring", "Owned Pals → Target", "Shortest Route", "What Can I Breed Now"]) assert.match(client, new RegExp(feature));
   assert.match(client, /fetch\("\/data\/breeding\.json"\)/);
   assert.match(client, /readAvailablePals/);
   assert.match(client, /saveAvailablePals/);
@@ -158,6 +158,11 @@ test("homepage hosts all six calculator modes with shared URL and local storage 
   assert.match(client, /targetResultsRef/);
   assert.match(client, /scrollIntoView/);
   assert.match(client, /targetVisibleCount/);
+  assert.match(client, /Select the Pals you own and find a breeding route to your target/);
+  assert.match(client, /Find Breeding Routes/);
+  assert.match(client, /Select at least one Pal you own\./);
+  assert.match(client, /Inputs changed\. Find breeding routes again\./);
+  assert.match(client, /availableRouteQuery/);
   assert.match(client, /showDatabaseLink/);
   assert.match(client, /pals=\{\[result\.first, result\.second, result\.child\]\}/);
   assert.doesNotMatch(client, /Find Parent Combinations/);
