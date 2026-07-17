@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
 const navItems = [
+  ["Breeding Calculator", "/#breeding-calculator"],
   ["Team Builder", "/team-builder"],
   ["Pals", "/pals"],
   ["Hardwood", "/items/hardwood"],

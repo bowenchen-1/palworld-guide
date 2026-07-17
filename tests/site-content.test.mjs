@@ -64,6 +64,7 @@ test("main navigation omits Tools while keeping the tools hub available", async 
   const tools = await read("../app/tools/page.tsx");
   const sitemap = await read("../app/sitemap.ts");
   assert.doesNotMatch(header, /\["Tools", "\/tools"\]/);
+  assert.match(header, /\["Breeding Calculator", "\/#breeding-calculator"\]/);
   assert.match(header, /\["Team Builder", "\/team-builder"\]/);
   assert.match(header, /\["Pals", "\/pals"\]/);
   assert.match(header, /\["Guides", "\/guides"\]/);
@@ -71,6 +72,8 @@ test("main navigation omits Tools while keeping the tools hub available", async 
   assert.match(tools, /export default function ToolsPage/);
   assert.match(tools, /current="\/tools"/);
   assert.match(sitemap, /\$\{siteUrl\}\/tools/);
+  const homepage = await read("../app/page.tsx");
+  assert.match(homepage, /<section id="breeding-calculator"/);
 });
 
 test("every page inherits one semantic Tailwind theme", async () => {
