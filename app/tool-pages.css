@@ -284,3 +284,4 @@
 .paldex-complete-table td:nth-child(3){overflow:visible}
 .element-marks{flex-wrap:nowrap;white-space:nowrap}
 .paldex-table-wrap{overflow-x:auto;overflow-y:clip}
+.paldex-complete-table{border-collapse:separate;border-spacing:0}
