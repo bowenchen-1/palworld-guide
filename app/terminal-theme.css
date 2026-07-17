@@ -549,6 +549,14 @@ body::before {
 .paldex-toolbar label span,
 .paldex-toolbar select,
 .paldex-view-toggle button { color: var(--terminal-muted); }
+.paldex-sort-menu>span { color: var(--terminal-muted); }
+.paldex-sort-trigger { border-color: var(--terminal-border); background: var(--terminal-panel-light); color: var(--terminal-copy); }
+.paldex-sort-trigger>span { color: var(--terminal-muted); }
+.paldex-sort-options { border-color: var(--terminal-border); background: var(--terminal-panel-light); box-shadow: 0 16px 30px rgba(0,8,12,.45); }
+.paldex-sort-options button { color: var(--terminal-copy); }
+.paldex-sort-options button:hover,
+.paldex-sort-options button.active { background: var(--terminal-mint); color: var(--terminal-canvas); }
+.paldex-sort-options button>span { color: var(--terminal-canvas); }
 .paldex-view-toggle button.active { background: var(--terminal-mint); color: var(--terminal-canvas); box-shadow: none; }
 .paldex-reset { border-color: var(--terminal-border); background: var(--terminal-panel-light); color: var(--theme-danger); }
 

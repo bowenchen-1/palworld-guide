@@ -11,6 +11,20 @@ import { PALDEX_PAGE_SIZE } from "./paldex-config";
 
 const workTypes = Object.keys(workLabels) as WorkKey[];
 const elementOptions = ["Neutral", "Fire", "Water", "Grass", "Electric", "Ice", "Ground", "Dark", "Dragon"];
+const sortOptions: Array<{ value: PaldexSort; label: string }> = [
+  { value: "number", label: "Paldeck number" },
+  { value: "name", label: "Name A–Z" },
+  { value: "hp", label: "HP" },
+  { value: "defense", label: "Defense" },
+  { value: "stamina", label: "Stamina" },
+  { value: "price", label: "Price" },
+  { value: "ride-speed", label: "Riding speed" },
+  { value: "rarity", label: "Rarity" },
+  { value: "speed", label: "Run speed" },
+  { value: "work", label: "Highest work level" },
+  { value: "power-low", label: "Breeding power: low first" },
+  { value: "power-high", label: "Breeding power: high first" },
+];
 type Sheet = "elements" | "work" | null;
 
 function ElementMarks({ pal }: { pal: PalData }) {
@@ -33,6 +47,7 @@ export default function PaldexClient({ initialPage: _initialPage = 1 }: { initia
   const [draftWork, setDraftWork] = useState<WorkKey[]>([]);
   const [draftWorkMode, setDraftWorkMode] = useState<MatchMode>("any");
   const [draftWorkLevel, setDraftWorkLevel] = useState(0);
+  const [sortOpen, setSortOpen] = useState(false);
   const visible = useMemo(() => sortPals(filterPals(catalogPals, filters), filters.sort), [filters]);
   const totalPages = Math.max(1, Math.ceil(visible.length / pageSize));
   const currentPage = Math.min(Math.max(_initialPage, 1), totalPages);
@@ -71,7 +86,7 @@ export default function PaldexClient({ initialPage: _initialPage = 1 }: { initia
     <p className="paldex-filter-status" aria-live="polite">{filters.elements.length || filters.work.length ? `${visible.length} Pals match the selected filters` : `${visible.length} Pals available`}</p>
     <div className="paldex-toolbar" aria-live="polite">
       <p><strong>{visible.length}</strong> {filters.newOnly ? "New Pals" : visible.length === 1 ? "Pal" : "Pals"} found</p>
-      <div><label><span>Sort</span><select aria-label="Sort Paldeck" value={filters.sort} onChange={(event) => update({ sort: event.target.value as PaldexSort })}><option value="number">Paldeck number</option><option value="name">Name A–Z</option><option value="hp">HP</option><option value="defense">Defense</option><option value="stamina">Stamina</option><option value="price">Price</option><option value="ride-speed">Riding speed</option><option value="rarity">Rarity</option><option value="speed">Run speed</option><option value="work">Highest work level</option><option value="power-low">Breeding power: low first</option><option value="power-high">Breeding power: high first</option></select></label>{hasFilters && <button type="button" className="paldex-reset" onClick={clearAll}>Clear all</button>}</div>
+      <div><div className="paldex-sort-menu"><span>Sort</span><button type="button" className="paldex-sort-trigger" aria-label="Sort Paldeck" aria-haspopup="listbox" aria-expanded={sortOpen} onClick={() => setSortOpen((open) => !open)}><strong>{sortOptions.find((option) => option.value === filters.sort)?.label}</strong><span aria-hidden="true">⌄</span></button>{sortOpen && <div className="paldex-sort-options" role="listbox" aria-label="Sort Paldeck options">{sortOptions.map((option) => <button type="button" role="option" aria-selected={filters.sort === option.value} className={filters.sort === option.value ? "active" : ""} key={option.value} onClick={() => { update({ sort: option.value }); setSortOpen(false); }}>{filters.sort === option.value && <span aria-hidden="true">✓</span>}{option.label}</button>)}</div>}</div>{hasFilters && <button type="button" className="paldex-reset" onClick={clearAll}>Clear all</button>}</div>
     </div>
     {hasFilters && <div className="paldex-chips">{filters.newOnly && <button onClick={() => update({ newOnly: false })}>New in 1.0 ×</button>}{filters.elements.map((value) => <button key={value} onClick={() => update({ elements: toggle(filters.elements, value) })}>{value} ×</button>)}{filters.work.map((value) => <button key={value} onClick={() => update({ work: toggle(filters.work, value) })}>{workLabels[value]} ×</button>)}{filters.workLevel > 0 && <span>Work level {filters.workLevel}+</span>}</div>}
     {visible.length ? <><div className="paldex-result-range" aria-live="polite">Showing {pageStart + 1}–{Math.min(pageStart + pageSize, visible.length)} of {visible.length} {filters.newOnly ? "New Pals in Palworld 1.0" : "Pals"}</div><div className="paldex-table-wrap"><table className="paldex-table paldex-complete-table"><thead><tr><th>Pal</th><th>Number</th><th>Element</th><th>Work Suitability</th><th>Partner Skill</th><th>Rarity</th><th>HP</th><th>Breeding Power</th><th>Defense</th><th>Price</th><th>Stamina</th><th>Riding Speed</th><th>Run Speed</th></tr></thead><tbody>{pagePals.map((pal) => <tr key={pal.id}><td><Link href={`/pals/${pal.slug}`}><PalMark pal={pal} showNewBadge /><span><strong>{pal.name}</strong><small>{pal.kind === "pal" ? "Pal" : "Crossover creature"}</small></span></Link></td><td>{pal.number}</td><td><ElementMarks pal={pal} /></td><td><WorkBadges pal={pal} /></td><td>{pal.partnerSkill.name ? <span className="partner-skill-mark"><PartnerSkillIcon file={pal.partnerSkill.iconFile} label={pal.partnerSkill.name} /><span>{pal.partnerSkill.name}</span></span> : "—"}</td><td>{pal.rarity ?? "—"}</td><td>{pal.stats.hp ?? "—"}</td><td>{pal.power}</td><td>{pal.stats.defense ?? "—"}</td><td>{pal.price ?? "—"}</td><td>{pal.stats.stamina ?? "—"}</td><td>{pal.movement.rideSprint ?? "—"}</td><td>{pal.movement.run ?? "—"}</td></tr>)}</tbody></table></div><nav className="paldex-pagination" aria-label="Pal pagination">{currentPage <= 1 ? <span aria-disabled="true">Previous</span> : <Link href={pageHref(currentPage - 1)}>Previous</Link>}<div className="paldex-pagination-pages">{Array.from({ length: totalPages }, (_, index) => index + 1).map((page) => <Link href={pageHref(page)} key={page} aria-current={page === currentPage ? "page" : undefined}>{page}</Link>)}</div>{currentPage >= totalPages ? <span aria-disabled="true">Next</span> : <Link href={pageHref(currentPage + 1)}>Next</Link>}</nav></> : <div className="paldex-empty"><span>⌕</span><h2>No Pals found</h2><p>Try another search or clear one of the filters.</p><button type="button" onClick={clearAll}>Clear all</button></div>}
