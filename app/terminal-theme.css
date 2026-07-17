@@ -610,6 +610,9 @@ body::before {
 .paldex-table th { background: var(--terminal-panel); }
 .paldex-table tbody tr:hover,
 .paldex-table tbody tr.selected { background: var(--terminal-panel-hover); }
+.paldex-complete-table td:first-child { background: var(--terminal-panel); }
+.paldex-complete-table tbody tr:hover td:first-child,
+.paldex-complete-table tbody tr.selected td:first-child { background: var(--terminal-panel-hover); }
 .paldex-table .mini-work span,
 .top-work { background: var(--terminal-panel-light); color: var(--terminal-mint); }
 .paldex-filter-backdrop { background: rgba(1,20,32,.72); }

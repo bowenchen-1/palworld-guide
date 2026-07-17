@@ -264,3 +264,10 @@
 .paldex-complete-table small{font-size:9px}
 .paldex-complete-table .mini-work b{font-size:12px}
 @media(max-width:760px){.paldex-control-bar{grid-template-columns:1fr 1fr}.paldex-new-filter{grid-column:1/3}.paldex-pagination button{min-width:38px;padding-inline:8px}}
+
+/* Keep the sticky Pal column in the terminal palette and keep dual element marks visible. */
+.paldex-complete-table th:nth-child(3){width:94px}
+.paldex-complete-table td:first-child{background:var(--theme-surface)}
+.paldex-complete-table tbody tr:hover td:first-child,.paldex-complete-table tbody tr.selected td:first-child{background:#edf6f5}
+.paldex-complete-table td:nth-child(3){overflow:visible}
+.element-marks{flex-wrap:nowrap;white-space:nowrap}

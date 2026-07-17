@@ -56,7 +56,12 @@ export default function PaldexClient({ initialPage: _initialPage = 1 }: { initia
 
   const update = (patch: Partial<PaldexFilters>) => {
     const query = serializePaldexFilters({ ...filters, ...patch }).toString();
-    router.push(query ? `/pals?${query}` : "/pals", { scroll: false });
+    const target = query ? `/pals?${query}` : "/pals";
+    if (typeof window !== "undefined" && window.location.pathname === "/pals") {
+      window.history.pushState(null, "", target);
+    } else {
+      router.push(target, { scroll: false });
+    }
   };
   const pageHref = (page: number) => {
     const query = serializePaldexFilters(filters).toString();
