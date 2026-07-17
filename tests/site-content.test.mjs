@@ -161,10 +161,14 @@ test("homepage hosts all six calculator modes with shared URL and local storage 
   assert.match(client, /const PICKER_BATCH_SIZE = 60/);
   assert.match(client, /const visibleSearch = search\.slice\(0, pickerLimit\)/);
   assert.match(client, /Showing \{visibleSearch\.length\} of \{search\.length\} Pals/);
-  assert.match(client, /setPickerLimit\(\(limit\) => limit \+ PICKER_BATCH_SIZE\)/);
+  assert.match(client, /function loadMorePicker\(\)/);
+  assert.match(client, /disabled=\{pickerLoading\} aria-busy=\{pickerLoading\}/);
+  assert.match(client, /pickerLoading \? "Loading…" : "Load more"/);
   assert.match(client, /const matches = useMemo/);
   assert.match(client, /Showing \{shown\.length\} of \{matches\.length\} Pals/);
-  assert.match(client, /setLimit\(\(value\) => value \+ batchSize\)/);
+  assert.match(client, /function loadMore\(\)/);
+  assert.match(client, /disabled=\{loadingMore\} aria-busy=\{loadingMore\}/);
+  assert.match(client, /loadingMore \? "Loading…" : "Load more"/);
   assert.doesNotMatch(client, /sort\(comparePals\)\.slice\(0, 60\)|compact \? 20 : 60/);
   assert.match(client, /const modeDescriptions: Record<Mode, string>/);
   assert.match(client, /home-mode-description/);
