@@ -265,6 +265,17 @@
 .paldex-complete-table .mini-work b{font-size:12px}
 @media(max-width:760px){.paldex-control-bar{grid-template-columns:1fr 1fr}.paldex-new-filter{grid-column:1/3}.paldex-pagination button{min-width:38px;padding-inline:8px}}
 
+/* Readable quick-filter labels without changing the filter layout or behavior. */
+.paldex-icon-filter-heading h2{font-size:12px;letter-spacing:.12em}
+.paldex-icon-filter-item{gap:7px}
+.paldex-icon-filter-item>span{min-height:24px;max-width:82px;color:#a5c0bb;font-size:10px;font-weight:850;line-height:1.2;white-space:normal}
+.paldex-filter-open.paldex-new-filter{border:1px solid rgba(70,174,176,.52);background:rgba(19,82,94,.72);color:#d2eeea;transition:background .16s ease,border-color .16s ease,box-shadow .16s ease,transform .16s ease}
+.paldex-filter-open.paldex-new-filter:hover{border-color:#61d4cb;background:rgba(27,105,112,.86);transform:translateY(-1px)}
+.paldex-filter-open.paldex-new-filter:focus-visible{outline:2px solid #f4d47c;outline-offset:3px}
+.paldex-filter-open.paldex-new-filter.active{border-color:#72eee0;background:#39cfc6;box-shadow:0 0 0 3px rgba(82,223,210,.2),0 8px 18px rgba(10,80,83,.24)}
+.paldex-filter-open.paldex-new-filter.active span,.paldex-filter-open.paldex-new-filter.active strong{color:#062f36}
+@media(max-width:760px){.paldex-icon-filter-heading h2{font-size:11px}.paldex-icon-filter-item>span{max-width:62px;font-size:9px}}
+
 /* Keep the sticky Pal column in the terminal palette and keep dual element marks visible. */
 .paldex-complete-table th:nth-child(3){width:94px}
 .paldex-complete-table td:first-child{background:var(--theme-surface)}

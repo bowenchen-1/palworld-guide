@@ -617,6 +617,13 @@ body::before {
 .top-work { background: var(--terminal-panel-light); color: var(--terminal-mint); }
 .paldex-filter-backdrop { background: rgba(1,20,32,.72); }
 .paldex-filter-options button.active { background: var(--terminal-mint); color: var(--terminal-canvas); }
+.paldex-icon-filter-heading h2 { color: var(--terminal-copy); }
+.paldex-icon-filter-item>span { color: var(--terminal-muted); }
+.paldex-filter-open.paldex-new-filter { border-color: rgba(70,174,176,.58); background: var(--terminal-panel-light); color: var(--terminal-copy); }
+.paldex-filter-open.paldex-new-filter:hover { border-color: var(--terminal-mint); background: var(--terminal-panel-hover); }
+.paldex-filter-open.paldex-new-filter.active { border-color: var(--terminal-mint); background: var(--terminal-mint); color: var(--terminal-canvas); box-shadow: 0 0 0 3px rgba(57,208,197,.2); }
+.paldex-filter-open.paldex-new-filter.active span,
+.paldex-filter-open.paldex-new-filter.active strong { color: var(--terminal-canvas); }
 
 .not-found-page {
   display: grid;
