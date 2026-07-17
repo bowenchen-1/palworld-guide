@@ -154,8 +154,11 @@ test("homepage hosts all six calculator modes with shared URL and local storage 
   assert.match(client, /offspringCandidates/);
   assert.match(client, /result\.second\.id === offspringFilter \|\| result\.child\.id === offspringFilter/);
   assert.match(client, /function DatabaseResultLink/);
+  assert.match(client, /findParentPairs/);
+  assert.match(client, /targetResultsRef/);
+  assert.match(client, /scrollIntoView/);
+  assert.match(client, /targetVisibleCount/);
   assert.doesNotMatch(client, /Find Parent Combinations/);
-  assert.match(client, /window\.location\.assign\(`\/breeding-calculator\?target=\$\{pal\.slug\}`\)/);
   assert.match(client, /`\/pals\?ids=\$\{slugs\.join\(","\)\}`/);
   assert.match(client, /View Pal Details/);
   assert.match(client, /View \$\{slugs\.length\} Pals in Database/);
@@ -255,7 +258,10 @@ test("breeding calculator target URL renders a noindex parent-results page", asy
   assert.match(client, /Load \{Math\.min\(PAGE_SIZE/);
   assert.match(client, /matrixReady/);
   assert.match(client, /Loading parent combinations…/);
-  assert.match(breedingClient, /window\.location\.assign\(`\/breeding-calculator\?target=\$\{pal\.slug\}`\)/);
+  assert.match(breedingClient, /findParentPairs/);
+  assert.match(breedingClient, /targetResultsRef/);
+  assert.match(breedingClient, /scrollIntoView/);
+  assert.match(breedingClient, /targetVisibleCount/);
   assert.doesNotMatch(breedingClient, /Find Parent Combinations/);
   assert.match(homepage, /href=\{`\/breeding-calculator\?target=\$\{pal\.slug\}`\}/);
   assert.match(profile, /href=\{`\/breeding-calculator\?target=\$\{pal\.slug\}`\}/);
