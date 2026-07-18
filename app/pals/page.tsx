@@ -12,8 +12,8 @@ export async function generateMetadata({ searchParams }: Props): Promise<Metadat
   const hasFilters = Object.keys(query).some((key) => key !== "ids");
   return {
     ...createPageMetadata({
-      title: "Palworld Pals Database | All Pals & 1.0 New Pals",
-      description: "Browse all 299 Palworld Pals with detailed profiles, elements, work suitability, breeding data, filters, and 72 new Pals and variants from Palworld 1.0.",
+      title: "Palworld Pals - Complete Pal List (All 299 Pals)",
+      description: "Browse all 299 Palworld Pals in our complete pal list. Filter by element, work suitability, partner skill, stats, and breeding data to find any Pal quickly.",
       keywords: ["palworld pals", "palworld all pals", "palworld new pals", "palworld 1.0 new pals"],
       path: "/pals",
     }),

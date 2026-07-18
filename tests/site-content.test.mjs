@@ -122,9 +122,13 @@ test("Paldeck SEO metadata and Pal image accessibility use the unified 1.0 count
   const content = await read("../app/paldex/paldex-page-content.tsx");
   const mark = await read("../app/components/pal-mark.tsx");
   const og = await read("../app/pals/[slug]/opengraph-image.tsx");
-  assert.match(paldex, /title: "Palworld Pals Database \| All Pals & 1\.0 New Pals"/);
-  assert.match(paldex, /Browse all 299 Palworld Pals with detailed profiles/);
-  assert.match(content, /<h1>Palworld Pals Database<\/h1>/);
+  assert.match(paldex, /title: "Palworld Pals - Complete Pal List \(All 299 Pals\)"/);
+  assert.match(paldex, /Browse all 299 Palworld Pals in our complete pal list/);
+  assert.match(content, /All Palworld Pals: Complete Pal List/);
+  assert.match(content, /Complete Pal List \(All 299 Pals\)/);
+  assert.match(content, /Pals by Element and Work Suitability/);
+  assert.match(content, /New Pals and Variants in Palworld 1\.0/);
+  assert.match(content, /How to Use This Pal List/);
   assert.match(content, /palCounts\.newPals/);
   assert.match(content, /palCounts\.newVariants/);
   assert.match(content, /palCounts\.newIn1_0/);
@@ -137,7 +141,7 @@ test("homepage hosts all six calculator modes with shared URL and local storage 
   const client = await read("../app/breeding-calculator/breeding-client.tsx");
   assert.match(page, /BreedingClient embedded/);
   for (const feature of ["Parents → Child", "Target → Parents", "One Parent → Offspring", "Owned Pals → Target", "Shortest Route", "What Can I Breed Now"]) assert.match(client, new RegExp(feature));
-  assert.match(client, /fetch\("\/data\/breeding\.json"\)/);
+  assert.match(client, /fetch\(assetUrl\("\/data\/breeding\.json"\)\)/);
   assert.match(client, /readAvailablePals/);
   assert.match(client, /saveAvailablePals/);
   assert.match(client, /history\.replaceState/);
