@@ -1029,6 +1029,10 @@ body::before {
 .home-calculator-top .manual-owned-actions button,.home-calculator-top .home-route-submit button { min-height:44px; border:1px solid var(--terminal-mint); border-radius:8px; background:var(--terminal-mint); padding:10px 16px; color:var(--terminal-canvas); font-size:11px; font-weight:900; }
 .home-calculator-top .manual-owned-actions button+button { border-color:var(--terminal-border); background:var(--terminal-panel-light); color:var(--terminal-copy); }
 .home-calculator-top .home-route-submit { display:flex; flex-wrap:wrap; align-items:center; gap:9px; margin-top:12px; }
+.home-calculator-top .home-route-controls:has(.manual-owned-control) { grid-template-columns:minmax(0,1fr); align-items:stretch; }
+.home-calculator-top .home-route-controls:has(.manual-owned-control) > .home-selector-card { order:-2; }
+.home-calculator-top .home-route-controls:has(.manual-owned-control) > .manual-owned-control { order:-1; }
+.home-calculator-top .home-route-controls:has(.manual-owned-control) > .home-number-control { order:0; }
 .home-calculator-top .home-route-submit button:disabled { cursor:not-allowed; opacity:.48; }
 .home-calculator-top .home-route-submit p { margin:0; color:var(--terminal-muted); font-size:11px; }
 .home-calculator-top .route-results { scroll-margin-top:96px; }
