@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { BreedingData, PalData, pals } from "../lib/game-data";
+import { assetUrl } from "../lib/assets";
 import PalMark from "./pal-mark";
 
 const HOME_PAIR_LIMIT = 12;
@@ -43,7 +44,7 @@ export default function HomeTargetBreeding() {
     setLoading(true);
     setLoadError(false);
     try {
-      const response = await fetch("/data/breeding.json");
+      const response = await fetch(assetUrl("/data/breeding.json"));
       if (!response.ok) throw new Error("Breeding data could not be loaded");
       setMatrix(await response.json());
     } catch {

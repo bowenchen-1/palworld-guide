@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
 import PalMark from "../components/pal-mark";
 import { BreedingData, PalData, pals } from "../lib/game-data";
+import { assetUrl } from "../lib/assets";
 import { availableOffspring, comparePals, findOffspring, findParentPairs, findRoutes, pairResults, type BreedingResult } from "./breeding/core";
 import { readAvailablePals, saveAvailablePals } from "./breeding/storage";
 
@@ -67,7 +68,7 @@ export default function BreedingClient({ embedded = false }: { embedded?: boolea
   const lastScrolledTargetRef = useRef<string | undefined>(undefined);
   const byId = useMemo(() => new Map(pals.map((pal) => [pal.id, pal])), []);
 
-  useEffect(() => { fetch("/data/breeding.json").then((r) => r.ok ? r.json() : Promise.reject()).then(setMatrix).catch(() => setError(true)); }, []);
+  useEffect(() => { fetch(assetUrl("/data/breeding.json")).then((r) => r.ok ? r.json() : Promise.reject()).then(setMatrix).catch(() => setError(true)); }, []);
   useEffect(() => { const frame = requestAnimationFrame(() => { const params = new URLSearchParams(window.location.search); const requestedMode = params.get("mode"); const palFromParam = (name: string) => pals.find((pal) => pal.id === params.get(name)); if (modes.some(([id]) => id === requestedMode)) setMode(requestedMode as Mode); setA(palFromParam("parentA")); setB(palFromParam("parentB")); setTarget(palFromParam("target")); setParent(palFromParam("parent")); setStart(palFromParam("starting")); setMax(Math.min(5, Math.max(1, Number(params.get("max")) || 3))); setAvailable(readAvailablePals()); setUrlRestored(true); }); return () => cancelAnimationFrame(frame); }, []);
   useEffect(() => { if (!urlRestored || !Object.keys(matrix).length) return; const params = new URLSearchParams(); params.set("mode", mode); if (a) params.set("parentA", a.id); if (b) params.set("parentB", b.id); if (parent) params.set("parent", parent.id); if (target) params.set("target", target.id); if (start) params.set("starting", start.id); if (max !== 3) params.set("max", String(max)); history.replaceState(null, "", `${location.pathname}?${params}`); }, [mode, a, b, parent, target, start, max, matrix, urlRestored]);
   useEffect(() => { if (urlRestored) saveAvailablePals(available); }, [available, urlRestored]);

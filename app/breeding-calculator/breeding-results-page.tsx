@@ -5,6 +5,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import PalMark from "../components/pal-mark";
 import SiteHeader from "../components/site-header";
 import { BreedingData, catalogPals, findPal, PalData, pals } from "../lib/game-data";
+import { assetUrl } from "../lib/assets";
 import { comparePals, findParentPairs, type BreedingResult } from "./breeding/core";
 
 const PAGE_SIZE = 50;
@@ -36,7 +37,7 @@ export default function BreedingResultsPage({ targetSlug, parentSlug }: { target
   const parentSlugs = Array.from(new Set(filteredPairs.flatMap((result) => [result.first.slug, result.second.slug]).filter((slug) => catalogPals.some((pal) => pal.slug === slug))));
   const matrixReady = Object.keys(matrix).length > 0;
 
-  useEffect(() => { fetch("/data/breeding.json").then((response) => response.ok ? response.json() : Promise.reject()).then(setMatrix).catch(() => setMatrixError(true)); }, []);
+  useEffect(() => { fetch(assetUrl("/data/breeding.json")).then((response) => response.ok ? response.json() : Promise.reject()).then(setMatrix).catch(() => setMatrixError(true)); }, []);
   function updateParent(pal?: PalData) {
     setSelectedParentSlug(pal?.slug);
     setVisibleCount(PAGE_SIZE);
