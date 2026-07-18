@@ -1029,10 +1029,10 @@ body::before {
 .home-calculator-top .manual-owned-actions button,.home-calculator-top .home-route-submit button { min-height:44px; border:1px solid var(--terminal-mint); border-radius:8px; background:var(--terminal-mint); padding:10px 16px; color:var(--terminal-canvas); font-size:11px; font-weight:900; }
 .home-calculator-top .manual-owned-actions button+button { border-color:var(--terminal-border); background:var(--terminal-panel-light); color:var(--terminal-copy); }
 .home-calculator-top .home-route-submit { display:flex; flex-wrap:wrap; align-items:center; gap:9px; margin-top:12px; }
-.home-calculator-top .home-route-controls:has(.manual-owned-control) { grid-template-columns:minmax(0,1fr); align-items:stretch; }
-.home-calculator-top .home-route-controls:has(.manual-owned-control) > .home-selector-card { order:-2; }
-.home-calculator-top .home-route-controls:has(.manual-owned-control) > .manual-owned-control { order:-1; }
-.home-calculator-top .home-route-controls:has(.manual-owned-control) > .home-number-control { order:0; }
+.home-calculator-top .home-route-controls:has(.manual-owned-control) { grid-template-columns:minmax(0,2fr) minmax(220px,1fr); align-items:stretch; }
+.home-calculator-top .home-route-controls:has(.manual-owned-control) > .home-selector-card { order:-2; min-height:180px; }
+.home-calculator-top .home-route-controls:has(.manual-owned-control) > .home-number-control { order:-1; min-height:180px; }
+.home-calculator-top .home-route-controls:has(.manual-owned-control) > .manual-owned-control { grid-column:1 / -1; order:0; min-height:180px; }
 .home-calculator-top .home-route-submit button:disabled { cursor:not-allowed; opacity:.48; }
 .home-calculator-top .home-route-submit p { margin:0; color:var(--terminal-muted); font-size:11px; }
 .home-calculator-top .route-results { scroll-margin-top:96px; }
@@ -1089,6 +1089,10 @@ body::before {
   .home-pal-picker .pal-picker-grid { grid-template-columns:repeat(4,minmax(0,1fr)); }
 }
 @media(max-width:560px) {
+  .home-calculator-top .home-route-controls:has(.manual-owned-control) { grid-template-columns:1fr; }
+  .home-calculator-top .home-route-controls:has(.manual-owned-control) > .home-selector-card,
+  .home-calculator-top .home-route-controls:has(.manual-owned-control) > .home-number-control,
+  .home-calculator-top .home-route-controls:has(.manual-owned-control) > .manual-owned-control { min-height:116px; }
   .home-calculator-top .home-breeding-tabs { gap:6px; }
   .home-calculator-top .home-breeding-tabs button { min-height:52px; padding:8px 6px; font-size:14px; line-height:1.2; }
   .home-calculator-top .home-workbench { margin-top:8px; padding:12px; }
