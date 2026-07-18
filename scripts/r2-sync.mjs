@@ -139,7 +139,7 @@ function remoteMatches(entry, remote) {
 }
 
 function upload(config, entry) {
-  const result = spawnSync('npx', ['wrangler', 'r2', 'object', 'put', `${config.bucket}/${entry.objectKey}`, '--remote',
+  const result = spawnSync('npx', ['--yes', 'wrangler@4.112.0', 'r2', 'object', 'put', `${config.bucket}/${entry.objectKey}`, '--remote',
     '--file', entry.fullPath, '--content-type', entry.contentType, '--cache-control', entry.cacheControl],
   { cwd: projectRoot, encoding: 'utf8', stdio: 'pipe' });
   if (result.status !== 0) throw new Error((result.stderr || result.stdout || `wrangler exited ${result.status}`).trim());

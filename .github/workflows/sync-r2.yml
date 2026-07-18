@@ -1,0 +1,47 @@
+name: Sync R2 assets
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "public/**"
+      - "config/r2-assets.json"
+      - "scripts/r2-sync.mjs"
+      - "package.json"
+      - "package-lock.json"
+      - ".github/workflows/sync-r2.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: sync-r2-assets
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      R2_BUCKET: palworldguide-assets
+      ASSET_BASE_URL: https://assets.palworldguide.net
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ZONE_ID: ${{ secrets.CLOUDFLARE_ZONE_ID }}
+      CLOUDFLARE_CACHE_PURGE_TOKEN: ${{ secrets.CLOUDFLARE_CACHE_PURGE_TOKEN }}
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Sync changed R2 resources and purge cache
+        run: npm run r2:sync
