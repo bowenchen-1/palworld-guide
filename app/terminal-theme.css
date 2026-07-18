@@ -521,6 +521,22 @@ body::before {
 .profile-hero-copy>p:last-of-type { color: var(--terminal-muted); }
 .profile-hero-copy a:first-child { background: var(--terminal-mint); color: var(--terminal-canvas); }
 .profile-hero-copy a:last-child { border-color: var(--terminal-border); background: var(--terminal-panel-light); color: var(--terminal-copy); }
+.profile-role-summary article { border: 1px solid var(--terminal-border); background: var(--terminal-panel); color: var(--terminal-copy); }
+.profile-role-summary strong { display:flex; align-items:center; gap:8px; color:var(--terminal-copy); }
+.profile-role-summary small { color:#b4cdcc; }
+.profile-role-summary .palworld-icon { flex:0 0 26px; width:26px; height:26px; }
+.profile-role-summary .palworld-icon img { width:26px; height:26px; }
+.profile-stat-strip small { color:#b4cdcc; }
+.profile-work-grid strong { color:var(--terminal-copy); }
+.profile-work-grid small { color:#b4cdcc; }
+.profile-work-grid b { background:rgba(57,208,197,.14); color:var(--terminal-mint); }
+.profile-related>a small { color:#b4cdcc; }
+.profile-elements { display:flex; align-items:center; flex-wrap:wrap; gap:10px; margin-top:16px; }
+.profile-elements>span:first-child { color:var(--terminal-mint); font-size:9px; font-weight:900; letter-spacing:.12em; text-transform:uppercase; }
+.profile-elements>div { display:flex; flex-wrap:wrap; gap:7px; }
+.profile-element { display:inline-flex; align-items:center; gap:6px; border:1px solid rgba(57,208,197,.3); border-radius:999px; background:rgba(57,208,197,.1); padding:5px 9px 5px 6px; color:var(--terminal-copy); font-size:10px; font-weight:800; }
+.profile-element .palworld-icon { width:22px; height:22px; flex:0 0 22px; }
+.profile-element .palworld-icon img { width:22px; height:22px; }
 .release-answer h2,
 .one-heading h2,
 .one-change-grid h3,
