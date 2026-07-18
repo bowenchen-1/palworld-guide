@@ -43,5 +43,18 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Check required secrets
+        env:
+          CF_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CF_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CF_ZONE_ID: ${{ secrets.CLOUDFLARE_ZONE_ID }}
+          CF_CACHE_PURGE_TOKEN: ${{ secrets.CLOUDFLARE_CACHE_PURGE_TOKEN }}
+        run: |
+          test -n "$CF_ACCOUNT_ID" || { echo "CLOUDFLARE_ACCOUNT_ID is missing"; exit 1; }
+          test -n "$CF_API_TOKEN" || { echo "CLOUDFLARE_API_TOKEN is missing"; exit 1; }
+          test -n "$CF_ZONE_ID" || { echo "CLOUDFLARE_ZONE_ID is missing"; exit 1; }
+          test -n "$CF_CACHE_PURGE_TOKEN" || { echo "CLOUDFLARE_CACHE_PURGE_TOKEN is missing"; exit 1; }
+          echo "All required secrets are available."
+
       - name: Sync changed R2 resources and purge cache
         run: npm run r2:sync
