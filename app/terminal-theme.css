@@ -531,6 +531,9 @@ body::before {
 .profile-work-grid small { color:#b4cdcc; }
 .profile-work-grid b { background:rgba(57,208,197,.14); color:var(--terminal-mint); }
 .profile-related>a small { color:#b4cdcc; }
+.profile-callout { border:1px solid var(--terminal-border); background:var(--terminal-panel); color:var(--terminal-copy); }
+.profile-callout strong { color:var(--terminal-copy); }
+.profile-callout p { color:#b4cdcc; }
 .profile-elements { display:flex; align-items:center; flex-wrap:wrap; gap:10px; margin-top:16px; }
 .profile-elements>span:first-child { color:var(--terminal-mint); font-size:9px; font-weight:900; letter-spacing:.12em; text-transform:uppercase; }
 .profile-elements>div { display:flex; flex-wrap:wrap; gap:7px; }
