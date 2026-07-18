@@ -988,6 +988,8 @@ body::before {
 .home-calculator-top :is(.home-selector-card,.home-available-control):hover { border-color:var(--terminal-mint); background:var(--terminal-panel-hover); }
 
 .home-calculator-top .home-available-control { position:relative; z-index:1; padding:10px 12px; }
+.home-calculator-top .home-available-control[aria-expanded="false"] { cursor:pointer; }
+.home-calculator-top .home-available-control[aria-expanded="false"]:focus-visible { border-color:var(--terminal-mint); box-shadow:0 0 0 3px rgba(57,208,197,.2); outline:none; }
 .home-calculator-top .home-available-control>header { display:flex; align-items:center; justify-content:space-between; gap:10px; }
 .home-calculator-top .home-available-control header>span small,.home-calculator-top .home-available-control header>span strong { display:block; }
 .home-calculator-top .home-available-control header>span small { color:var(--terminal-muted); font-size:8px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; }
