@@ -1,0 +1,12 @@
+{
+  "bucket": "palworldguide-assets",
+  "assetBaseUrl": "https://assets.palworldguide.net",
+  "files": [
+    "public/items/hardwood/feybreak-region-map.png",
+    "public/items/hardwood/twilight-grove.webp",
+    "public/items/hardwood/trees-2.jpg",
+    "public/icons/palworld/partner-skills/273_Bastigor_partner.png",
+    "public/pals/26.0.png",
+    "public/data/breeding.json"
+  ]
+}

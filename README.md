@@ -17,6 +17,45 @@ Open [http://localhost:3000](http://localhost:3000).
 npm test
 ```
 
+## Local R2 asset sync
+
+Only the resources explicitly listed in `config/r2-assets.json` are published to R2. This deliberately does not upload all of `public/`. Add a new asset to that file before it can be synced.
+
+Set the following values in your local shell or an ignored `.env.local` file (never commit credentials):
+
+```bash
+R2_BUCKET=palworldguide-assets
+ASSET_BASE_URL=https://assets.palworldguide.net
+CLOUDFLARE_ZONE_ID=your-zone-id
+CLOUDFLARE_CACHE_PURGE_TOKEN=your-cache-purge-token
+```
+
+Run a one-time sync:
+
+```bash
+npm run r2:sync
+```
+
+Run a no-write inspection (it prints each configured file, R2 key, byte size, SHA-256 and target URL):
+
+```bash
+npm run r2:sync -- --dry-run
+```
+
+Watch configured assets continuously:
+
+```bash
+npm run r2:watch
+```
+
+After an editor event, the watcher waits 1.2 seconds, then samples file size and modification time twice 0.5 seconds apart. It uploads only if both samples match. It ignores editor temporary files and coalesces rapid saves; atomic rename-overwrites are caught by watching each registered asset directory. Before every upload it validates existence, bytes, SHA-256, and JSON syntax. After upload it verifies the custom-domain response (200, size, type, cache policy, ETag), then purges that exact URL through Cloudflare's API. A failed purge makes the sync fail.
+
+JSON uses `public, max-age=300, must-revalidate`; images use `public, max-age=31536000, immutable`. The fixed asset URL is purged after every changed upload, so a changed image is visible despite long browser/CDN caching. ETags are only presence-checked and are never treated as SHA-256 values.
+
+The manifest at `docs/r2-asset-manifest.json` is written atomically. Repeated syncs skip an asset only when its recorded SHA-256 is unchanged *and* the remote response still passes validation. No local files or R2 objects are deleted by these commands.
+
+To roll back a published asset, optionally stop the watcher with `Ctrl+C`, restore the file using `git checkout` or `git revert`, then restart the watcher (or run `npm run r2:sync`). The restored local version is uploaded and its cache entry is purged. Git remains the history and rollback system; R2 is only the public delivery copy.
+
 ## Deploy to Vercel
 
 Import this GitHub repository into Vercel. Vercel will automatically detect Next.js and use the standard `next build` command. No environment variables are required for the current version.

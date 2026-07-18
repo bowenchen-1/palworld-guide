@@ -14,7 +14,9 @@
     "data:import": "node scripts/import-pal-data.mjs",
     "data:validate": "node scripts/validate-pal-data.mjs",
     "data:audit": "node scripts/audit-pal-data.mjs",
-    "r2:assets": "node scripts/r2-assets.mjs"
+    "r2:assets": "node scripts/r2-assets.mjs",
+    "r2:sync": "node scripts/r2-sync.mjs",
+    "r2:watch": "node scripts/r2-sync.mjs --watch"
   },
   "dependencies": {
     "@fontsource/barlow": "^5.2.8",
