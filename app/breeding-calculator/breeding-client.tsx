@@ -121,15 +121,6 @@ export default function BreedingClient({ embedded = false }: { embedded?: boolea
 }
 
 function Available({ pals, available, setAvailable, openPicker, compact = false, manualRoute = false }: { pals: PalData[]; available: string[]; setAvailable: (ids: string[]) => void; openPicker?: (slot: "available", trigger: HTMLElement) => void; compact?: boolean; manualRoute?: boolean }) {
-  const [q, setQ] = useState("");
-  const [open, setOpen] = useState(false);
-  const [limit, setLimit] = useState(compact ? 40 : 60);
-  const [loadingMore, setLoadingMore] = useState(false);
-  const batchSize = compact ? 40 : 60;
-  const matches = useMemo(() => pals.filter((p) => p.name.toLowerCase().includes(q.toLowerCase()) || p.number.includes(q)).sort(comparePals), [pals, q]);
-  const shown = matches.slice(0, limit);
-  const updateQuery = (value: string) => { setQ(value); setLimit(batchSize); };
-  function loadMore() { if (loadingMore) return; setLoadingMore(true); window.setTimeout(() => { setLimit((value) => value + batchSize); setLoadingMore(false); }, 180); }
   if (manualRoute) return <section className="home-breeding-slot home-available-control compact manual-owned-control"><div className="manual-owned-main" role="button" tabIndex={0} aria-label={available.length ? "Edit owned Pals" : "Select owned Pals"} onClick={(event) => openPicker?.("available", event.currentTarget)} onKeyDown={(event) => { if (event.key === "Enter" || event.key === " ") { event.preventDefault(); openPicker?.("available", event.currentTarget); } }}><span className="slot-label">Pals You Own</span><strong>{available.length ? `${available.length} Pals selected` : "Select the Pals you already own"}</strong>{available.length ? <span className="manual-owned-preview">{available.slice(0, 4).map((id) => { const pal = pals.find((item) => item.id === id); return pal ? <PalMark key={id} pal={pal} small /> : null; })}{available.length > 4 && <b>+{available.length - 4}</b>}</span> : <small>Select Owned Pals</small>}</div><div className="manual-owned-actions">{available.length > 0 && <button type="button" onClick={() => openPicker?.("available", document.querySelector(".manual-owned-main") as HTMLElement)}>Edit</button>}{available.length > 0 && <button type="button" onClick={() => setAvailable([])}>Clear</button>}</div></section>;
   return <section className={`home-breeding-slot home-available-control${compact ? " compact" : ""}`} role="button" tabIndex={0} aria-label={available.length ? "Edit available Pals" : "Choose available Pals"} onClick={(event) => openPicker?.("available", event.currentTarget)} onKeyDown={(event) => { if (event.key === "Enter" || event.key === " ") { event.preventDefault(); openPicker?.("available", event.currentTarget); } }}><span className="slot-label">Available Pals</span><PalMark /><strong>{available.length ? `${available.length} selected` : "Choose available Pals"}</strong><small>{available.length ? "Your saved breeding roster" : "Add the Pals you can breed with"}</small><i>{available.length ? "Change Pals" : "Choose Pal"}</i></section>;
 }
