@@ -29,7 +29,7 @@ export type PalData = {
   foodConsumption: number | null;
   movement: { slowWalk: number | null; walk: number | null; run: number | null; rideSprint: number | null };
   nocturnal: boolean | null;
-  partnerSkill: { name: string | null; description: string | null; iconId: string | null; iconFile: string | null };
+  partnerSkill: { name: string | null; nameZh?: string | null; description: string | null; descriptionZh?: string | null; iconId: string | null; iconFile: string | null };
   activeSkills: string[] | null;
   drops: string[] | null;
   ranchProduct: string[] | null;

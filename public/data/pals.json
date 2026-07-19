@@ -36,7 +36,9 @@
       "name": "Fluffy Shield",
       "description": "When activated, equips to the player and becomes a shield. Sometimes drops Wool when assigned to Ranch.",
       "iconId": "005",
-      "iconFile": "001_Lamball_partner.png"
+      "iconFile": "001_Lamball_partner.png",
+      "nameZh": "茸茸盾牌",
+      "descriptionZh": "发动后，它会化身为装备在玩家身上的盾牌。将它分派到家畜牧场，它就有机会掉落羊毛。"
     },
     "activeSkills": null,
     "drops": null,
@@ -83,7 +85,9 @@
       "name": "Cat Helper",
       "description": "While in party, Cattiva helps carry supplies, increasing the player's max carrying capacity by (100~200). (Does not stack)",
       "iconId": "000",
-      "iconFile": "002_Cattiva_partner.png"
+      "iconFile": "002_Cattiva_partner.png",
+      "nameZh": "跟猫借手手",
+      "descriptionZh": "若它在队伍中，捣蛋猫就会帮忙载运行李，玩家的负重上限将提高(100~200)。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -128,7 +132,9 @@
       "name": "Egg Layer",
       "description": "Sometimes lays an Egg when assigned to Ranch.",
       "iconId": "015",
-      "iconFile": "003_Chikipi_partner.png"
+      "iconFile": "003_Chikipi_partner.png",
+      "nameZh": "产蛋",
+      "descriptionZh": "将它分派到家畜牧场，它就有机会产下蛋。"
     },
     "activeSkills": null,
     "drops": null,
@@ -176,7 +182,9 @@
       "name": "Lifmunk Recoil",
       "description": "When activated, leaps onto the player's head and uses a submachine gun to follows up player attacks.",
       "iconId": "003",
-      "iconFile": "004_Lifmunk_partner.png"
+      "iconFile": "004_Lifmunk_partner.png",
+      "nameZh": "翠叶鼠出击",
+      "descriptionZh": "发动后它会坐在玩家的头上，配合玩家的攻击用冲锋枪进行追击。"
     },
     "activeSkills": null,
     "drops": null,
@@ -222,7 +230,9 @@
       "name": "Surfing Slam",
       "description": "When activated, Fuack body surfs towards an enemy and slams into them.",
       "iconId": null,
-      "iconFile": "005_Fuack_partner.png"
+      "iconFile": "005_Fuack_partner.png",
+      "nameZh": "乘风破浪",
+      "descriptionZh": "发动后，冲浪鸭会乘着浪头冲向敌人。"
     },
     "activeSkills": null,
     "drops": null,
@@ -270,7 +280,9 @@
       "name": "Fire Tackle",
       "description": "When activated, Fuack Ignis fire surfs towards an enemy and slams into them.",
       "iconId": null,
-      "iconFile": "006_Fuack_Ignis_partner.png"
+      "iconFile": "006_Fuack_Ignis_partner.png",
+      "nameZh": "热浪滚滚",
+      "descriptionZh": "发动后，热浪鸭会乘着焰浪冲向敌人。"
     },
     "activeSkills": null,
     "drops": null,
@@ -315,7 +327,9 @@
       "name": "Dig Here!",
       "description": "Sometimes digs up items from the ground when assigned to Ranch.",
       "iconId": "015",
-      "iconFile": "007_Vixy_partner.png"
+      "iconFile": "007_Vixy_partner.png",
+      "nameZh": "挖掘指导",
+      "descriptionZh": "将它分派到家畜牧场，它就有机会从地里挖出道具。"
     },
     "activeSkills": null,
     "drops": null,
@@ -360,7 +374,9 @@
       "name": "Zephyr Glider",
       "description": "While in party, modifies the performance of the equipped glider. Prevents fall damage and extends the duration of high-speed gliding.",
       "iconId": "008",
-      "iconFile": "008_Celaray_partner.png"
+      "iconFile": "008_Celaray_partner.png",
+      "nameZh": "微风滑翔",
+      "descriptionZh": "若它在队伍中，会改变滑翔伞的性能，并使玩家免受坠落伤害。滑翔期间能够长时间快速移动。"
     },
     "activeSkills": null,
     "drops": null,
@@ -407,7 +423,9 @@
       "name": "Jolt Glider",
       "description": "While in party, modifies the performance of the equipped glider. Prevents fall damage and extends the duration of high-speed gliding.",
       "iconId": "008",
-      "iconFile": "009_Celaray_Lux_partner.png"
+      "iconFile": "009_Celaray_Lux_partner.png",
+      "nameZh": "电风滑翔",
+      "descriptionZh": "若它在队伍中，会改变滑翔伞的性能，并使玩家免受坠落伤害。滑翔期间能够长时间快速移动。"
     },
     "activeSkills": null,
     "drops": null,
@@ -452,7 +470,9 @@
       "name": "Fluffy Wool",
       "description": "While in party, increases Attack of Neutral Pals by (15~30)%. (Does not stack) Sometimes drops Wool when assigned to Ranch.",
       "iconId": null,
-      "iconFile": "010_Cremis_partner.png"
+      "iconFile": "010_Cremis_partner.png",
+      "nameZh": "蓬松毛毛",
+      "descriptionZh": "若它在队伍中，无属性帕鲁的攻击力会提升(15~30)%。（不可叠加）将它分派到家畜牧场，它就有机会掉落羊毛。"
     },
     "activeSkills": null,
     "drops": null,
@@ -499,7 +519,9 @@
       "name": "Leap Stance",
       "description": "When activated, Croajiro Noct channels its loyalty and puffs up its abdomen to store energy. Climbing on top will propel the player high into the air. While airborne before landing, the player's Attack is increased by (50~86)%.",
       "iconId": null,
-      "iconFile": "011_Croajiro_partner.png"
+      "iconFile": "011_Croajiro_partner.png",
+      "nameZh": "蓄势跳跃",
+      "descriptionZh": "发动后，武道蛙会靠忠诚心和膨胀的腹部积蓄力量。玩家在踩上去后能高高跳起。在落地前，玩家的攻击力提升(50~86)%。"
     },
     "activeSkills": null,
     "drops": null,
@@ -547,7 +569,9 @@
       "name": "Shadow Stance",
       "description": "When activated, Croajiro Noct channels its loyalty and puffs up its abdomen to store energy. Climbing on top will propel the player high into the air. While in party, improves player's and Pals' Dark damage to enemy weak points by (25~40)%. (Does not stack)",
       "iconId": null,
-      "iconFile": "012_Croajiro_Noct_partner.png"
+      "iconFile": "012_Croajiro_Noct_partner.png",
+      "nameZh": "蓄势暗跃",
+      "descriptionZh": "发动后，极道蛙会靠忠诚心和膨胀的腹部积蓄力量。玩家在踩上去后能高高跳起。若它在队伍中，玩家和帕鲁以暗属性攻击命中敌方弱点时的伤害提升(25~40)%。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -594,7 +618,9 @@
       "name": "Herbil Pulse",
       "description": "While in party, Herbil uses its healing powers to restore (30~60)% of the player's Max Health when incapacitated.",
       "iconId": null,
-      "iconFile": "013_Herbil_partner.png"
+      "iconFile": "013_Herbil_partner.png",
+      "nameZh": "起搏鼠鼠",
+      "descriptionZh": "若它在队伍中，达鼠泥会在玩家陷入濒死状态时，通过疗愈能力让玩家以最大HP(30~60)%的状态复活。"
     },
     "activeSkills": null,
     "drops": null,
@@ -638,7 +664,9 @@
       "name": "Soothing Shower",
       "description": "While in party, restores (20~40)% of the player's Health when Health falls below 30%. (Does not stack) (120-second cooldown after activation)",
       "iconId": "004",
-      "iconFile": "014_Teafant_partner.png"
+      "iconFile": "014_Teafant_partner.png",
+      "nameZh": "疗伤之浴",
+      "descriptionZh": "若它在队伍中，若玩家的生命值低于30%，恢复(20~40)%的生命值。（不可叠加）※发动后需120秒冷却方可再次触发"
     },
     "activeSkills": null,
     "drops": null,
@@ -683,7 +711,9 @@
       "name": "Logging Assistance",
       "description": "While in party, improves logging efficiency by (30~50)% and reduces weight of all types of wood by (40~60)%. (Does not stack)",
       "iconId": "000",
-      "iconFile": "015_Gumoss_partner.png"
+      "iconFile": "015_Gumoss_partner.png",
+      "nameZh": "樵夫啦啦队",
+      "descriptionZh": "若它在队伍中，玩家伐木时造成的伤害将提升(30~50)%，所有木材种类的重量都将减轻(40~60)%。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -774,7 +804,9 @@
       "name": "Best Boy",
       "description": "While in party, increases the player's melee weapon damage by (10~35)%. (Does not stack)",
       "iconId": null,
-      "iconFile": "016_Pupperai_partner.png"
+      "iconFile": "016_Pupperai_partner.png",
+      "nameZh": "干劲支援",
+      "descriptionZh": "若它在队伍中，玩家使用近战武器时的伤害提升(10~35)%。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -820,7 +852,9 @@
       "name": "Happy Clover",
       "description": "While at a base, increases the Gathering Work Suitability Level for all other Base Pals by +1. (Does not stack)",
       "iconId": null,
-      "iconFile": "017_Clovee_partner.png"
+      "iconFile": "017_Clovee_partner.png",
+      "nameZh": "幸运三叶草",
+      "descriptionZh": "若它在据点里，其他据点帕鲁的采集工作适应性等级+1。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -864,7 +898,9 @@
       "name": "Jolt Bomb",
       "description": "When activated, equips Jolthog to the player to be thrown at an enemy, causing an Electric explosion upon impact.",
       "iconId": "002",
-      "iconFile": "018_Jolthog_partner.png"
+      "iconFile": "018_Jolthog_partner.png",
+      "nameZh": "电击炸弹",
+      "descriptionZh": "发动后就能将电棘鼠装备在手上，若将它投向敌人且命中目标，便会引发雷属性爆炸。"
     },
     "activeSkills": null,
     "drops": null,
@@ -908,7 +944,9 @@
       "name": "Cold Bomb",
       "description": "When activated, equips Jolthog Cryst to the player to be thrown at an enemy, causing an Ice explosion upon impact.",
       "iconId": "002",
-      "iconFile": "019_Jolthog_Cryst_partner.png"
+      "iconFile": "019_Jolthog_Cryst_partner.png",
+      "nameZh": "冻结炸弹",
+      "descriptionZh": "发动后就能将冰刺鼠装备在手上，若将它投向敌人且命中目标，便会引发冰属性爆炸。"
     },
     "activeSkills": null,
     "drops": null,
@@ -955,7 +993,9 @@
       "name": "Caffeine Inoculation",
       "description": "When activated, Depresso chugs an entire energy drink, increasing its Movement Speed and Work Speed by (100~900)%. Sometimes drops Venom Gland when assigned to Ranch.",
       "iconId": "006",
-      "iconFile": "020_Depresso_partner.png"
+      "iconFile": "020_Depresso_partner.png",
+      "nameZh": "摄取咖啡因",
+      "descriptionZh": "发动后，瞅什魔会大量饮用能量饮料，瞅什魔的移动速度和工作速度会因此提升(100~900)%。将它分派到家畜牧场，它就有机会掉落毒腺。"
     },
     "activeSkills": null,
     "drops": null,
@@ -1003,7 +1043,9 @@
       "name": "Pengullet Launcher",
       "description": "When activated, the player equips a Rocket Launcher to fire Pengullet as ammunition. Pengullet explodes on impact and is incapacitated.",
       "iconId": "002",
-      "iconFile": "021_Pengullet_partner.png"
+      "iconFile": "021_Pengullet_partner.png",
+      "nameZh": "企丸丸发射",
+      "descriptionZh": "发动后玩家将装备火箭发射器，并可将企丸丸当作炮弹射出。命中目标后企丸丸会爆炸，并陷入濒死状态。"
     },
     "activeSkills": null,
     "drops": null,
@@ -1051,7 +1093,9 @@
       "name": "Pengullet Lux Launcher",
       "description": "When activated, the player equips Pengullet Lux to fire Rocket Launcher as ammunition. Pengullet Lux explodes on impact and is incapacitated.",
       "iconId": "002",
-      "iconFile": "022_Pengullet_Lux_partner.png"
+      "iconFile": "022_Pengullet_Lux_partner.png",
+      "nameZh": "闪丸丸发射",
+      "descriptionZh": "发动后玩家将装备火箭发射器，并可将闪丸丸当作炮弹射出。命中目标后闪丸丸会爆炸，并陷入濒死状态。"
     },
     "activeSkills": null,
     "drops": null,
@@ -1100,7 +1144,9 @@
       "name": "Brave Sailor",
       "description": "While in party, Fire Pals drop (40~80)% more items when defeated. (Does not stack)",
       "iconId": "014",
-      "iconFile": "023_Penking_partner.png"
+      "iconFile": "023_Penking_partner.png",
+      "nameZh": "勇敢的海之战士",
+      "descriptionZh": "若它在队伍中，击倒火属性帕鲁时获得的掉落道具增加(40~80)%。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -1149,7 +1195,9 @@
       "name": "Unyielding Storm Commander",
       "description": "While in party, improves player's and Pals' Water damage to enemy weak points by (25~40)%. (Does not stack)",
       "iconId": null,
-      "iconFile": "024_Penking_Lux_partner.png"
+      "iconFile": "024_Penking_Lux_partner.png",
+      "nameZh": "不屈的雷击船长",
+      "descriptionZh": "若它在队伍中，玩家和帕鲁以水属性攻击命中敌方弱点时的伤害将提升(25~40)%。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -1193,7 +1241,9 @@
       "name": "Dark Knowledge",
       "description": "While in party, increases Attack of Dark Pals by (15~30)%. (Does not stack)",
       "iconId": null,
-      "iconFile": "025_Hoocrates_partner.png"
+      "iconFile": "025_Hoocrates_partner.png",
+      "nameZh": "暗影睿智",
+      "descriptionZh": "若它在队伍中，暗属性帕鲁的攻击力会提升(15~30)%。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -1237,7 +1287,9 @@
       "name": "Pacapaca Wool",
       "description": "Can be ridden. While in party, increases Kingpaca 's Defense and Movement Speed. Sometimes drops Wool when assigned to Ranch.",
       "iconId": "017",
-      "iconFile": "026_Melpaca_partner.png"
+      "iconFile": "026_Melpaca_partner.png",
+      "nameZh": "蓬蓬羊毛",
+      "descriptionZh": "可骑在它的背上移动。若它在队伍中，君王美露帕的防御力和移动速度将会提升。将它分派到家畜牧场，它就有机会掉落羊毛。"
     },
     "activeSkills": null,
     "drops": null,
@@ -1281,7 +1333,9 @@
       "name": "King of Muscles",
       "description": "Can be ridden. This Pal's Defense and Movement Speed increase by (5~14)% for each Melpaca in party.",
       "iconId": "017",
-      "iconFile": "027_Kingpaca_partner.png"
+      "iconFile": "027_Kingpaca_partner.png",
+      "nameZh": "大力国王",
+      "descriptionZh": "可骑在它的背上移动。此帕鲁的防御力和移动速度会按照队伍中美露帕的数量提升，每只增加(5~14)%。"
     },
     "activeSkills": null,
     "drops": null,
@@ -1326,7 +1380,9 @@
       "name": "Coldhearted King",
       "description": "Can be ridden. This Pal's Defense and Movement Speed increase by (5~14)% for each Melpaca in party.",
       "iconId": "017",
-      "iconFile": "028_Kingpaca_Cryst_partner.png"
+      "iconFile": "028_Kingpaca_Cryst_partner.png",
+      "nameZh": "冷酷国王",
+      "descriptionZh": "可骑在它的背上移动。此帕鲁的防御力和移动速度会按照队伍中美露帕的数量提升，每只增加(5~14)%。"
     },
     "activeSkills": null,
     "drops": null,
@@ -1372,7 +1428,9 @@
       "name": "Dream Chaser",
       "description": "While in party, appears near the player. Attacks hostile enemies with Dark magic bullets. These bullets will not reduce the target's Health below 1.",
       "iconId": "011",
-      "iconFile": "029_Daedream_partner.png"
+      "iconFile": "029_Daedream_partner.png",
+      "nameZh": "逐梦者",
+      "descriptionZh": "若它在队伍中，就会出现于玩家身边。它会用暗属性的魔弹追击敌对个体。且该追击不会使猎物毙命。"
     },
     "activeSkills": null,
     "drops": null,
@@ -1420,7 +1478,9 @@
       "name": "Cheery Rifle",
       "description": "When activated, Tanzee will mercilessly fire an assault rifle at nearby enemies for a limited time.",
       "iconId": "003",
-      "iconFile": "030_Tanzee_partner.png"
+      "iconFile": "030_Tanzee_partner.png",
+      "nameZh": "猴急步枪",
+      "descriptionZh": "发动后，新叶猿会在一定时间内用突击步枪猛烈扫射附近的敌人。"
     },
     "activeSkills": null,
     "drops": null,
@@ -1467,7 +1527,9 @@
       "name": "Chipper Chimp Gunfire",
       "description": "When activated, Tanzee Ignis will mercilessly fire a Fire assault rifle at nearby enemies for a limited time.",
       "iconId": "003",
-      "iconFile": "031_Tanzee_Ignis_partner.png"
+      "iconFile": "031_Tanzee_Ignis_partner.png",
+      "nameZh": "枪火奇猿",
+      "descriptionZh": "发动后，秋叶猿会在一定时间内以火属性突击步枪猛烈扫射附近的敌人。科技13"
     },
     "activeSkills": null,
     "drops": null,
@@ -1511,7 +1573,9 @@
       "name": "Kuudere",
       "description": "When activated, detects the location of nearby Pal Effigies.",
       "iconId": "007",
-      "iconFile": "032_Nox_partner.png"
+      "iconFile": "032_Nox_partner.png",
+      "nameZh": "冷娇",
+      "descriptionZh": "发动后，它会探测附近的帕鲁雕像。"
     },
     "activeSkills": null,
     "drops": null,
@@ -1558,7 +1622,9 @@
       "name": "Magma Tears",
       "description": "While in party, recovers Health of the player and Party Pals by (0.1~0.5)% per second outside of combat. (Does not stack) Sometimes drops Flame Organ when assigned to Ranch.",
       "iconId": "015",
-      "iconFile": "033_Flambelle_partner.png"
+      "iconFile": "033_Flambelle_partner.png",
+      "nameZh": "熔岩之泪",
+      "descriptionZh": "若它在队伍中，非战斗时每秒令玩家与队伍帕鲁的生命值恢复(0.1~0.5)%。（不可叠加）将它分派到家畜牧场，它就有机会掉落喷火器官。"
     },
     "activeSkills": null,
     "drops": null,
@@ -1603,7 +1669,9 @@
       "name": "Tiny Spark",
       "description": "While in party, increases Defense of Fire Pals by (15~30)%. (Does not stack) Sometimes drops Flame Organ when assigned to Ranch.",
       "iconId": null,
-      "iconFile": "034_Rooby_partner.png"
+      "iconFile": "034_Rooby_partner.png",
+      "nameZh": "微小火种",
+      "descriptionZh": "若它在队伍中，火属性帕鲁的防御力会提升(15~30)%。（不可叠加）将它分派到家畜牧场，它就有机会掉落喷火器官。"
     },
     "activeSkills": null,
     "drops": null,
@@ -1648,7 +1716,9 @@
       "name": "Gold Digger",
       "description": "Sometimes digs up Gold Coin when assigned to Ranch.",
       "iconId": "015",
-      "iconFile": "035_Mau_partner.png"
+      "iconFile": "035_Mau_partner.png",
+      "nameZh": "招财猫",
+      "descriptionZh": "将它分派到家畜牧场，它就有机会从地里挖出金币。"
     },
     "activeSkills": null,
     "drops": null,
@@ -1693,7 +1763,9 @@
       "name": "Icy Whispers",
       "description": "Sometimes drops Ice Organ when assigned to Ranch.",
       "iconId": "015",
-      "iconFile": "036_Mau_Cryst_partner.png"
+      "iconFile": "036_Mau_Cryst_partner.png",
+      "nameZh": "晴天冰雳",
+      "descriptionZh": "将它分派到家畜牧场，它就有机会掉落结冰器官。"
     },
     "activeSkills": null,
     "drops": null,
@@ -1737,7 +1809,9 @@
       "name": "Hard Head",
       "description": "Can be ridden. While mounted, increases efficiency of destroying Stone by (500~2000)%.",
       "iconId": "017",
-      "iconFile": "037_Rushoar_partner.png"
+      "iconFile": "037_Rushoar_partner.png",
+      "nameZh": "坚硬头壳",
+      "descriptionZh": "可骑在它的背上移动。骑乘期间破坏岩石的效率将提升(500~2000)%。"
     },
     "activeSkills": null,
     "drops": null,
@@ -1781,7 +1855,9 @@
       "name": "Huggy Fire",
       "description": "When activated, equips to the player and transforms into a flamethrower.",
       "iconId": "002",
-      "iconFile": "038_Foxparks_partner.png"
+      "iconFile": "038_Foxparks_partner.png",
+      "nameZh": "抱抱火焰",
+      "descriptionZh": "发动后，它会化身为装备在玩家身上的火焰喷射器。"
     },
     "activeSkills": null,
     "drops": null,
@@ -1825,7 +1901,9 @@
       "name": "Huggy Frost",
       "description": "When activated, equips to the player and attacks using frigid air.",
       "iconId": "002",
-      "iconFile": "039_Foxparks_Cryst_partner.png"
+      "iconFile": "039_Foxparks_Cryst_partner.png",
+      "nameZh": "抱抱寒冰",
+      "descriptionZh": "发动后，它会化身为装备在玩家身上的冷冻喷射器。"
     },
     "activeSkills": null,
     "drops": null,
@@ -1872,7 +1950,9 @@
       "name": "Fried Squid",
       "description": "While in party, modifies the performance of the equipped glider. Enables gentle floating while gliding for an extended time.",
       "iconId": "008",
-      "iconFile": "040_Killamari_partner.png"
+      "iconFile": "040_Killamari_partner.png",
+      "nameZh": "炸鱿鱼",
+      "descriptionZh": "若它在队伍中，会改变滑翔伞的性能。滑翔期间能够长时间漂浮在空中。"
     },
     "activeSkills": null,
     "drops": null,
@@ -1919,7 +1999,9 @@
       "name": "Fried Killamari",
       "description": "While in party, modifies the performance of the equipped glider. Enables gentle floating while gliding for an extended time.",
       "iconId": "008",
-      "iconFile": "041_Killamari_Primo_partner.png"
+      "iconFile": "041_Killamari_Primo_partner.png",
+      "nameZh": "炸鱿鱼",
+      "descriptionZh": "若它在队伍中，会改变滑翔伞的性能。滑翔期间能够长时间漂浮在空中。"
     },
     "activeSkills": null,
     "drops": null,
@@ -1965,7 +2047,9 @@
       "name": "Mining Assistance",
       "description": "While in party, improves player mining efficiency by (30~60)% and reduces Stone weight by (80~100)%. (Does not stack)",
       "iconId": null,
-      "iconFile": "042_Fuddler_partner.png"
+      "iconFile": "042_Fuddler_partner.png",
+      "nameZh": "矿工啦啦队",
+      "descriptionZh": "若它在队伍中，玩家采矿时造成的伤害将提升(30~60)%，石头的重量将减轻(80~100)%。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -2009,7 +2093,9 @@
       "name": "Guardian of the Forest",
       "description": "Can be ridden. Can perform a double jump while mounted and increases lumbering efficiency by (220~500)%.",
       "iconId": "017",
-      "iconFile": "043_Eikthyrdeer_partner.png"
+      "iconFile": "043_Eikthyrdeer_partner.png",
+      "nameZh": "森林守护者",
+      "descriptionZh": "可骑在它的背上移动。骑乘期间可以进行2段跳跃，破坏树木的效率也会提升(220~500)%。"
     },
     "activeSkills": null,
     "drops": null,
@@ -2053,7 +2139,9 @@
       "name": "Guardian of the Golden Forest",
       "description": "Can be ridden. Can perform a double jump while mounted. While at a base, increases the Lumbering Work Suitability Level for all other Base Pals by +1 (Does not stack)",
       "iconId": "017",
-      "iconFile": "044_Eikthyrdeer_Terra_partner.png"
+      "iconFile": "044_Eikthyrdeer_Terra_partner.png",
+      "nameZh": "金之森守护者",
+      "descriptionZh": "可骑在它的背上移动。骑乘期间可以进行2段跳跃。若它在据点里，其他据点帕鲁的伐木工作适应性等级+1。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -2097,7 +2185,9 @@
       "name": "Direhowl Rider",
       "description": "Can be ridden. Moves slightly faster than most mounts.",
       "iconId": "017",
-      "iconFile": "045_Direhowl_partner.png"
+      "iconFile": "045_Direhowl_partner.png",
+      "nameZh": "猎狼骑手",
+      "descriptionZh": "可骑在它的背上移动。骑乘期间的移动速度会稍微变快一点。"
     },
     "activeSkills": null,
     "drops": null,
@@ -2142,7 +2232,9 @@
       "name": "Berry Picker",
       "description": "Sometimes drops Red Berries from its back when assigned to Ranch. While in party, restores (100~200) Pal’s Hunger to the Pal with the lowest Hunger every 5 minutes. (Does not stack)",
       "iconId": "000",
-      "iconFile": "046_Caprity_partner.png"
+      "iconFile": "046_Caprity_partner.png",
+      "nameZh": "采摘野莓",
+      "descriptionZh": "将它分派到家畜牧场，就有机会从背上掉落红色野莓。若它在队伍中，每5分钟会让当前饱腹度最低的帕鲁恢复(100~200)点饱腹度。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -2187,7 +2279,9 @@
       "name": "Venom Picker",
       "description": "Sometimes drops Venom Gland from its back when assigned to Ranch. While in party, restores (100~200) Pal’s Hunger to the Pal with the lowest Hunger every 5 minutes. (Does not stack)",
       "iconId": "000",
-      "iconFile": "047_Caprity_Noct_partner.png"
+      "iconFile": "047_Caprity_Noct_partner.png",
+      "nameZh": "采摘毒腺",
+      "descriptionZh": "将它分派到家畜牧场，有机会从背上掉落毒腺。若它在队伍中，每5分钟会让当前饱腹度最低的帕鲁恢复(100~200)点饱腹度。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -2232,7 +2326,9 @@
       "name": "Fluffy",
       "description": "While in party, increases Attack and Defense of Sweepa.",
       "iconId": null,
-      "iconFile": "048_Swee_partner.png"
+      "iconFile": "048_Swee_partner.png",
+      "nameZh": "毛茸茸茸茸",
+      "descriptionZh": "若它在队伍中，毛老爹的防御力和攻击力会有所提升。"
     },
     "activeSkills": null,
     "drops": null,
@@ -2277,7 +2373,9 @@
       "name": "King of Fluff",
       "description": "Can be ridden. This Pal's Attack and Defense increase by (12~24)% for each Swee in party.",
       "iconId": "017",
-      "iconFile": "049_Sweepa_partner.png"
+      "iconFile": "049_Sweepa_partner.png",
+      "nameZh": "毛茸茸之王",
+      "descriptionZh": "可骑在它的背上移动。此帕鲁的防御力和攻击力会按照队伍中毛掸儿的数量提升，每只增加(12~24)%。"
     },
     "activeSkills": null,
     "drops": null,
@@ -2323,7 +2421,9 @@
       "name": "Spikey Carrier",
       "description": "While in party, reduces Ore weight by (80~100)%. (Does not stack)",
       "iconId": null,
-      "iconFile": "050_Turtacle_partner.png"
+      "iconFile": "050_Turtacle_partner.png",
+      "nameZh": "尖刺刺运输",
+      "descriptionZh": "若它在队伍中，金属矿石的重量会减轻(80~100)%。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -2370,7 +2470,9 @@
       "name": "Shiny Hauler",
       "description": "While in party, reduces weight of Sulfur and Coal by (80~100)%. Also improves player's and Pals' Ground damage to enemy weak points by (80~100)%. (Does not stack)",
       "iconId": null,
-      "iconFile": "051_Turtacle_Terra_partner.png"
+      "iconFile": "051_Turtacle_Terra_partner.png",
+      "nameZh": "亮闪闪运输",
+      "descriptionZh": "若它在队伍中，硫磺和石炭的重量将减轻(80~100)%，且玩家和帕鲁以地属性攻击命中敌方弱点时的伤害提升(25~40)%。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -2416,7 +2518,9 @@
       "name": "Flying Trapeze",
       "description": "While in party, modifies the performance of the equipped glider. Enables slow ascension while gliding.",
       "iconId": "008",
-      "iconFile": "052_Hangyu_partner.png"
+      "iconFile": "052_Hangyu_partner.png",
+      "nameZh": "空中秋千",
+      "descriptionZh": "若它在队伍中，会改变滑翔伞的性能。滑翔期间能够缓缓上升。"
     },
     "activeSkills": null,
     "drops": null,
@@ -2463,7 +2567,9 @@
       "name": "Winter Trapeze",
       "description": "While in party, modifies the performance of the equipped glider. Enables slow ascension while gliding.",
       "iconId": "008",
-      "iconFile": "053_Hangyu_Cryst_partner.png"
+      "iconFile": "053_Hangyu_Cryst_partner.png",
+      "nameZh": "寒空秋千",
+      "descriptionZh": "若它在队伍中，会改变滑翔伞的性能。滑翔期间能够缓缓上升。"
     },
     "activeSkills": null,
     "drops": null,
@@ -2507,7 +2613,9 @@
       "name": "Candy Pop",
       "description": "Sometimes drops Cotton Candy when assigned to Ranch. While at a base, reduces Hunger depletion rate of Base Pals by (-10~-20)%. (Does not stack)",
       "iconId": "015",
-      "iconFile": "054_Woolipop_partner.png"
+      "iconFile": "054_Woolipop_partner.png",
+      "nameZh": "糖果甜心",
+      "descriptionZh": "将它分派到家畜牧场，它就有机会掉落棉花糖。若它在据点里，据点帕鲁的饱腹度的减少幅度将会(-10~-20)%。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -2551,7 +2659,9 @@
       "name": "Bitter Pop",
       "description": "Sometimes drops Caramel Cotton Candy when assigned to Ranch. While at a base, reduces Hunger depletion rate of Base Pals by (-15~-25)%. (Does not stack)",
       "iconId": "015",
-      "iconFile": "055_Woolipop_Terra_partner.png"
+      "iconFile": "055_Woolipop_Terra_partner.png",
+      "nameZh": "苦涩甜心",
+      "descriptionZh": "将它分派到家畜牧场，它就有机会掉落焦糖棉花糖。若它在据点里，据点帕鲁的饱腹度的减少幅度将会(-15~-25)%。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -2595,7 +2705,9 @@
       "name": "Milk Maker",
       "description": "Sometimes drops Milk when assigned to Ranch.",
       "iconId": "015",
-      "iconFile": "056_Mozzarina_partner.png"
+      "iconFile": "056_Mozzarina_partner.png",
+      "nameZh": "产奶",
+      "descriptionZh": "将它分派到家畜牧场，它就有机会产出牛奶。"
     },
     "activeSkills": null,
     "drops": null,
@@ -2640,7 +2752,9 @@
       "name": "Waterwing Dance",
       "description": "Can be ridden to travel on water. While mounted, changes the player's attack type to Water and increases Attack by (5~20)%.",
       "iconId": "019",
-      "iconFile": "057_Azurobe_partner.png"
+      "iconFile": "057_Azurobe_partner.png",
+      "nameZh": "水翔之舞",
+      "descriptionZh": "可骑在它的背上在水上移动。骑乘期间玩家的攻击会转变为水属性，且攻击力提升(5~20)%。科技24"
     },
     "activeSkills": null,
     "drops": null,
@@ -2685,7 +2799,9 @@
       "name": "Icewing Dance",
       "description": "Can be ridden to travel on water. While mounted, changes the player’s attack type to Ice and increases Attack by (5~20)%.",
       "iconId": "019",
-      "iconFile": "058_Azurobe_Cryst_partner.png"
+      "iconFile": "058_Azurobe_Cryst_partner.png",
+      "nameZh": "冰翔之舞",
+      "descriptionZh": "可骑在它的背上在水上移动。骑乘期间玩家的攻击会转变为冰属性，且攻击力提升(5~20)%。科技27"
     },
     "activeSkills": null,
     "drops": null,
@@ -2732,7 +2848,9 @@
       "name": "Static Electricity",
       "description": "While in party, increases Attack of Electric Pals by (15~30)%. (Does not stack) Sometimes drops Electric Organ when assigned to Ranch.",
       "iconId": null,
-      "iconFile": "059_Sparkit_partner.png"
+      "iconFile": "059_Sparkit_partner.png",
+      "nameZh": "静电",
+      "descriptionZh": "若它在队伍中，雷属性帕鲁的攻击力会提升(15~30)%。（不可叠加）将它分派到家畜牧场，它就有机会掉落发电器官。"
     },
     "activeSkills": null,
     "drops": null,
@@ -2777,7 +2895,9 @@
       "name": "Aqua Spout",
       "description": "While in party, increases Attack of Water Pals by (15~30)%. (Does not stack) Sometimes drops Aquatic Pal Fluids when assigned to Ranch.",
       "iconId": null,
-      "iconFile": "060_Kelpsea_partner.png"
+      "iconFile": "060_Kelpsea_partner.png",
+      "nameZh": "洒水",
+      "descriptionZh": "若它在队伍中，水属性帕鲁的攻击力会提升(15~30)%。（不可叠加）将它分派到家畜牧场，它就有机会掉落水栖帕鲁的黏液。"
     },
     "activeSkills": null,
     "drops": null,
@@ -2822,7 +2942,9 @@
       "name": "Lava Spout",
       "description": "While in party, increases Attack of Fire Pals by (15~30)%. (Does not stack) Sometimes drops Flame Organ when assigned to Ranch.",
       "iconId": null,
-      "iconFile": "061_Kelpsea_Ignis_partner.png"
+      "iconFile": "061_Kelpsea_Ignis_partner.png",
+      "nameZh": "熔岩泼洒",
+      "descriptionZh": "若它在队伍中，火属性帕鲁的攻击力会提升(15~30)%。（不可叠加）将它分派到家畜牧场，它就有机会掉落喷火器官。"
     },
     "activeSkills": null,
     "drops": null,
@@ -2868,7 +2990,9 @@
       "name": "Happy-Go-Lucky Bunny",
       "description": "While in party, increases Attack of Neutral Pals by (15~30)%. (Does not stack) While at a base, increases the Handiwork Work Suitability Level for all other Base Pals by +1. (Does not stack)",
       "iconId": null,
-      "iconFile": "062_Ribbuny_partner.png"
+      "iconFile": "062_Ribbuny_partner.png",
+      "nameZh": "微笑公主兔",
+      "descriptionZh": "若它在队伍中，无属性帕鲁的攻击力会提升(15~30)%。（不可叠加）若它在据点里，其他据点帕鲁的手工作业工作适应性等级+1。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -2915,7 +3039,9 @@
       "name": "Ground 'n' Pound",
       "description": "While in party, improves player's and Pals' Grass damage to enemy weak points by (25~40)%. (Does not stack) Increases efficiency by (200~400)% when working at a Weapon Workbench, Weapon Assembly Line, or other related facilities.",
       "iconId": null,
-      "iconFile": "063_Ribbuny_Botan_partner.png"
+      "iconFile": "063_Ribbuny_Botan_partner.png",
+      "nameZh": "暴力青草兔",
+      "descriptionZh": "若它在队伍中，玩家和帕鲁以草属性攻击命中敌方弱点时的伤害将提升(25~40)%。（不可叠加）艾小兔在武器制作台或武器工厂等处工作时，工作效率将会提升(200~400)%。"
     },
     "activeSkills": null,
     "drops": null,
@@ -2961,7 +3087,9 @@
       "name": "Jelliette Drop",
       "description": "While in party, increases items obtained from fishing by (55~95)%. While Jelliette and Jellroy are in your base, Jelliette 's watering speed increases by (50~120)%. (Does not stack)",
       "iconId": "014",
-      "iconFile": "064_Jelliette_partner.png"
+      "iconFile": "064_Jelliette_partner.png",
+      "nameZh": "海月仙祝福",
+      "descriptionZh": "若它在队伍中，垂钓时获得的道具增加(55~95)%。（不可叠加）此外，当海月仙和海月灵同时在据点里时，海月仙浇水的工作速度提升(50~120)%。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -3009,7 +3137,9 @@
       "name": "Jellroy Drop",
       "description": "While in party, increases items obtained from salvaging by (55~95)%. While Jelliette and Jellroy are in your base, Jellroy 's watering speed increases by (50~120)%. (Does not stack)",
       "iconId": "014",
-      "iconFile": "065_Jellroy_partner.png"
+      "iconFile": "065_Jellroy_partner.png",
+      "nameZh": "海月灵祝福",
+      "descriptionZh": "若它在队伍中，打捞时获得的道具增加(55~95)%。（不可叠加）此外，当海月仙和海月灵同时在据点里时，海月灵浇水的工作速度提升(50~120)%。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -3055,7 +3185,9 @@
       "name": "Magical Twin Powers",
       "description": "While at a base, increases the Watering Work Suitability Level for all other Base Pals by +1. (Does not stack)",
       "iconId": null,
-      "iconFile": "066_Amione_partner.png"
+      "iconFile": "066_Amione_partner.png",
+      "nameZh": "魔力双子",
+      "descriptionZh": "若它在据点里，其他据点帕鲁的浇水工作适应性等级+1。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -3102,7 +3234,9 @@
       "name": "Sticky Princess",
       "description": "While in party, the capture gauge decreases (12~35)% more slowly while the bars are not overlapping during the fishing minigame. (Does not stack)",
       "iconId": "000",
-      "iconFile": "067_Gloopie_partner.png"
+      "iconFile": "067_Gloopie_partner.png",
+      "nameZh": "缠人小公主",
+      "descriptionZh": "若它在队伍中，在垂钓小游戏中的判定条和鱼的图标未重合期间，捕获计量槽的下降量减少(12~35)%。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -3149,7 +3283,9 @@
       "name": "Cephalo-Princess",
       "description": "While in party, increases Defense of Water Pals by (15~30)%. (Does not stack)",
       "iconId": null,
-      "iconFile": "068_Gloopie_Primo_partner.png"
+      "iconFile": "068_Gloopie_Primo_partner.png",
+      "nameZh": "咬咬姬",
+      "descriptionZh": "若它在队伍中，水属性帕鲁的防御力提升(15~30)%。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -3193,7 +3329,9 @@
       "name": "Galeclaw Glider",
       "description": "While in party, modifies the performance of the equipped glider. Enables high-speed gliding and allows shooting with the right hand.",
       "iconId": "008",
-      "iconFile": "069_Galeclaw_partner.png"
+      "iconFile": "069_Galeclaw_partner.png",
+      "nameZh": "天擒鸟滑翔",
+      "descriptionZh": "若它在队伍中，会改变滑翔伞的性能。能够高速滑翔，且右手能在滑翔期间使用枪械射击。"
     },
     "activeSkills": null,
     "drops": null,
@@ -3240,7 +3378,9 @@
       "name": "Death-Cheating Feline",
       "description": "While in party, increases the capture rate when awarded a back bonus. (Does not stack)",
       "iconId": null,
-      "iconFile": "070_Wispaw_partner.png"
+      "iconFile": "070_Wispaw_partner.png",
+      "nameZh": "附体灵猫",
+      "descriptionZh": "若它在队伍中，触发背面奖励时的捕获概率增加。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -3284,7 +3424,9 @@
       "name": "Travel Companion",
       "description": "Can be ridden as a flying mount.",
       "iconId": "018",
-      "iconFile": "071_Nitewing_partner.png"
+      "iconFile": "071_Nitewing_partner.png",
+      "nameZh": "旅伴",
+      "descriptionZh": "可骑在它的背上在空中飞行。"
     },
     "activeSkills": null,
     "drops": null,
@@ -3330,7 +3472,9 @@
       "name": "Ultrasonic Sensor",
       "description": "When activated, uses ultrasonic waves to detect nearby dungeons, treasure chests, and scrap.",
       "iconId": "007",
-      "iconFile": "072_Tombat_partner.png"
+      "iconFile": "072_Tombat_partner.png",
+      "nameZh": "猫妖感应",
+      "descriptionZh": "发动后能够发出超声波，来探测附近地下城、宝箱以及废品的位置。"
     },
     "activeSkills": null,
     "drops": null,
@@ -3374,7 +3518,9 @@
       "name": "Eggbomb Launcher",
       "description": "When activated, equips to the player and transforms into an egg launcher.",
       "iconId": "002",
-      "iconFile": "073_Tocotoco_partner.png"
+      "iconFile": "073_Tocotoco_partner.png",
+      "nameZh": "炸蛋发射器",
+      "descriptionZh": "发动后会化身为装备在玩家身上的发射器，并制造出会爆炸的蛋。"
     },
     "activeSkills": null,
     "drops": null,
@@ -3419,7 +3565,9 @@
       "name": "Swift Deity",
       "description": "Can be ridden. While in party, improves player's and Pals' Electric damage to weak points by (25~40)%. (Does not stack)",
       "iconId": "017",
-      "iconFile": "074_Univolt_partner.png"
+      "iconFile": "074_Univolt_partner.png",
+      "nameZh": "疾风迅雷",
+      "descriptionZh": "可骑在它的背上移动。若它在队伍中，玩家和帕鲁以雷属性攻击命中敌方弱点时的伤害将提升(25~40)%。（不可叠加）科技14"
     },
     "activeSkills": null,
     "drops": null,
@@ -3464,7 +3612,9 @@
       "name": "Frigid Deity",
       "description": "Can be ridden. While mounted, changes the player’s attack type to Ice and increases Attack by (5~20)%.",
       "iconId": "017",
-      "iconFile": "075_Univolt_Cryst_partner.png"
+      "iconFile": "075_Univolt_Cryst_partner.png",
+      "nameZh": "冰华乱舞",
+      "descriptionZh": "可骑在它的背上移动。骑乘期间玩家的攻击会转变为冰属性，且攻击力提升(5~20)%。科技64"
     },
     "activeSkills": null,
     "drops": null,
@@ -3510,7 +3660,9 @@
       "name": "Angry Shark",
       "description": "When activated, attacks targeted enemy with Aqua Gun. When this Pal uses Aqua Gun, it has a x(1.1~2.5) damage multiplier. While in party, increases the player's Attack by (10~20)%.",
       "iconId": "001",
-      "iconFile": "076_Gobfin_partner.png"
+      "iconFile": "076_Gobfin_partner.png",
+      "nameZh": "易怒鲨鲨",
+      "descriptionZh": "发动后会以烈焰溅射攻击锁定的目标敌人。此帕鲁使用的烈焰溅射的威力将提升至(1.1~2.5)倍。若它在队伍中，玩家的攻击力提升(10~20)%。"
     },
     "activeSkills": null,
     "drops": null,
@@ -3556,7 +3708,9 @@
       "name": "Angry Shark",
       "description": "When activated, attacks targeted enemy with Spirit Fire. When this Pal uses Spirit Fire, it has a x(1.1~2.5) damage multiplier. While in party, increases the player's Attack by (10~20)%.",
       "iconId": "001",
-      "iconFile": "077_Gobfin_Ignis_partner.png"
+      "iconFile": "077_Gobfin_Ignis_partner.png",
+      "nameZh": "易怒鲨鲨",
+      "descriptionZh": "发动后会以烈焰溅射攻击锁定的目标敌人。此帕鲁使用的烈焰溅射的威力将提升至(1.1~2.5)倍。若它在队伍中，玩家的攻击力提升(10~20)%。"
     },
     "activeSkills": null,
     "drops": null,
@@ -3600,7 +3754,9 @@
       "name": "Dark Gleam Strike",
       "description": "When activated, attacks targeted enemy with Jumping Claw. When this Pal uses Jumping Claw, it has a x(1.1~2.5) damage multiplier. While in party, increases the player's melee weapon attack speed by (15~30)%. (Does not stack)",
       "iconId": null,
-      "iconFile": "078_Loupmoon_partner.png"
+      "iconFile": "078_Loupmoon_partner.png",
+      "nameZh": "黑暗中的闪亮利爪",
+      "descriptionZh": "发动后会以飞跃爪击攻击锁定的目标敌人。此帕鲁使用的飞跃爪击的威力将提升至(1.1~2.5)倍。若它在队伍中，玩家的近战武器攻击速度提升(15~30)%。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -3645,7 +3801,9 @@
       "name": "Frozen Gleam Strike",
       "description": "When activated, attacks targeted enemy with Snow Claw. When this Pal uses Snow Claw, it has a x(1.1~2.5) damage multiplier. While in party, increases the player's melee weapon attack speed by (15~30)%. (Does not stack)",
       "iconId": null,
-      "iconFile": "079_Loupmoon_Cryst_partner.png"
+      "iconFile": "079_Loupmoon_Cryst_partner.png",
+      "nameZh": "冰结利爪",
+      "descriptionZh": "发动后会以吹雪爪击攻击锁定的目标敌人。此帕鲁使用的吹雪爪击的威力将提升至(1.1~2.5)倍。若它在队伍中，玩家的近战武器攻击速度提升(15~30)%。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -3690,7 +3848,9 @@
       "name": "Eerie Nightstreaker",
       "description": "When activated, grants Night Vision to see in dark places. Activate again to turn off. Sometimes digs up Bone when assigned to Ranch.",
       "iconId": null,
-      "iconFile": "080_Cawgnito_partner.png"
+      "iconFile": "080_Cawgnito_partner.png",
+      "nameZh": "夜袭怪鸟",
+      "descriptionZh": "发动后可以使用夜视，即使在黑暗中也能看得一清二楚。再次发动即可解除该效果。将它分派到家畜牧场，它就有机会从地里挖出骨头。"
     },
     "activeSkills": null,
     "drops": null,
@@ -3735,7 +3895,9 @@
       "name": "Warm Body",
       "description": "Can be ridden. While in party, the player gains Cold Resistance +2. (Does not stack)",
       "iconId": "017",
-      "iconFile": "081_Arsox_partner.png"
+      "iconFile": "081_Arsox_partner.png",
+      "nameZh": "温暖之躯",
+      "descriptionZh": "可骑在它的背上移动。若它在队伍中，玩家的耐寒能力+2。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -3780,7 +3942,9 @@
       "name": "Fluffy Flutterer",
       "description": "While in party, increases the capture rate of Pals afflicted with Freeze. (Does not stack)",
       "iconId": null,
-      "iconFile": "082_Muffly_partner.png"
+      "iconFile": "082_Muffly_partner.png",
+      "nameZh": "软萌圆圆鸟",
+      "descriptionZh": "若它在队伍中，提升对陷入冻结状态帕鲁的捕获概率。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -3828,7 +3992,9 @@
       "name": "Princess Gaze",
       "description": "While in party, increases Attack of Grass Pals by (15~30)%. (Does not stack)",
       "iconId": null,
-      "iconFile": "083_Bristla_partner.png"
+      "iconFile": "083_Bristla_partner.png",
+      "nameZh": "公主的视线",
+      "descriptionZh": "若它在队伍中，草属性帕鲁的攻击力会提升(15~30)%。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -3874,7 +4040,9 @@
       "name": "Mysterious Scales",
       "description": "When activated, attacks the targeted enemy with Poison Fog. While at a base, increases the Farming Work Suitability Level for all other Base Pals by +1. (Does not stack)",
       "iconId": "001",
-      "iconFile": "084_Cinnamoth_partner.png"
+      "iconFile": "084_Cinnamoth_partner.png",
+      "nameZh": "神秘鳞粉",
+      "descriptionZh": "发动后会以毒雾攻击锁定的目标敌人。若它在据点里，其他据点帕鲁的牧场的工作适应性等级+1。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -3919,7 +4087,9 @@
       "name": "Crackle Booster",
       "description": "While at a base, increases the Generating Electricity Work Suitability Level for all other Base Pals by +1. (Does not stack)",
       "iconId": null,
-      "iconFile": "085_Puffolt_partner.png"
+      "iconFile": "085_Puffolt_partner.png",
+      "nameZh": "电光强化",
+      "descriptionZh": "若它在据点里，其他据点帕鲁的发电工作适应性等级+1。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -3963,7 +4133,9 @@
       "name": "Amicable Holy Dragon",
       "description": "Can be ridden as a flying mount. While flying, Movement Speed is increased. While in party, Dark Pals drop (40~80)% more items when defeated. (Does not stack)",
       "iconId": "018",
-      "iconFile": "086_Elphidran_partner.png"
+      "iconFile": "086_Elphidran_partner.png",
+      "nameZh": "善良的圣洁之龙",
+      "descriptionZh": "可骑在它的背上在空中飞行。飞行时移动速度会提升。若它在队伍中，击倒暗属性帕鲁时获得的掉落道具增加(40~80)%。（不可叠加）科技20"
     },
     "activeSkills": null,
     "drops": null,
@@ -4009,7 +4181,9 @@
       "name": "Amicable Water Dragon",
       "description": "Can be ridden as a flying mount. While flying, Movement Speed is increased. While in party, player and party Pals take (15~30)% less Fire damage and are immune to Burn. (Does not stack)",
       "iconId": "018",
-      "iconFile": "087_Elphidran_Aqua_partner.png"
+      "iconFile": "087_Elphidran_Aqua_partner.png",
+      "nameZh": "善良的流水之龙",
+      "descriptionZh": "可骑在它的背上在空中飞行。飞行时移动速度会提升。若它在队伍中，玩家和帕鲁受到的火属性伤害减轻(15~30)%，并且不会陷入点燃状态。（不可叠加）科技32"
     },
     "activeSkills": null,
     "drops": null,
@@ -4055,7 +4229,9 @@
       "name": "Aerial Marauder",
       "description": "Can be ridden as a flying mount. While in party, increases damage player deals to enemy weak points by (20~40)%. (Does not stack)",
       "iconId": "018",
-      "iconFile": "088_Vanwyrm_partner.png"
+      "iconFile": "088_Vanwyrm_partner.png",
+      "nameZh": "大空袭击者",
+      "descriptionZh": "可骑在它的背上在空中飞行。若它在队伍中，玩家攻击敌方弱点部位造成的伤害将提升(20~40)%。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -4101,7 +4277,9 @@
       "name": "Aerial Marauder",
       "description": "Can be ridden as a flying mount. While in party, increases damage player deals to enemy weak points by (30~50)%. (Does not stack)",
       "iconId": "018",
-      "iconFile": "089_Vanwyrm_Cryst_partner.png"
+      "iconFile": "089_Vanwyrm_Cryst_partner.png",
+      "nameZh": "大空袭击者",
+      "descriptionZh": "可骑在它的背上在空中飞行。若它在队伍中，玩家攻击敌方弱点部位造成的伤害将提升(20~40)%。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -4145,7 +4323,9 @@
       "name": "Life Steal",
       "description": "While fighting together, grants the player and Felbat a life steal effect that restores (5~9)% of damage dealt as Health.",
       "iconId": null,
-      "iconFile": "090_Felbat_partner.png"
+      "iconFile": "090_Felbat_partner.png",
+      "nameZh": "窃取生命",
+      "descriptionZh": "与它并肩作战时，会为玩家和夜幕魔蝠赋予生命窃取效果，攻击造成伤害时将恢复等同于伤害量(5~9)%的HP。"
     },
     "activeSkills": null,
     "drops": null,
@@ -4194,7 +4374,9 @@
       "name": "Purification of Gaia",
       "description": "While in party, Ground Pals drop (40~80)% more items when defeated. (Does not stack) Sometimes drops various seeds when assigned to Ranch.",
       "iconId": "014",
-      "iconFile": "091_Vaelet_partner.png"
+      "iconFile": "091_Vaelet_partner.png",
+      "nameZh": "大地净化",
+      "descriptionZh": "若它在队伍中，击倒地属性帕鲁时获得的掉落道具增加(40~80)%。（不可叠加）将它分派到家畜牧场，它就有机会掉落各种各样的种子。"
     },
     "activeSkills": null,
     "drops": null,
@@ -4244,7 +4426,9 @@
       "name": "Worker Bee",
       "description": "While in party, increases Elizabee 's Attack. Sometimes drops Honey when assigned to Ranch.",
       "iconId": null,
-      "iconFile": "092_Beegarde_partner.png"
+      "iconFile": "092_Beegarde_partner.png",
+      "nameZh": "工蜂",
+      "descriptionZh": "将它分派到家畜牧场，它就有机会掉落蜂蜜。若它在队伍中，女皇蜂的攻击力会有所提升。"
     },
     "activeSkills": null,
     "drops": null,
@@ -4292,7 +4476,9 @@
       "name": "Queen Bee Command",
       "description": "This Pal's Attack increases by (12~24)% for each Beegarde in party.",
       "iconId": "000",
-      "iconFile": "093_Elizabee_partner.png"
+      "iconFile": "093_Elizabee_partner.png",
+      "nameZh": "女王蜂的统率",
+      "descriptionZh": "此帕鲁的攻击力会按照队伍中骑士蜂的数量提升，每只增加(12~24)%。"
     },
     "activeSkills": null,
     "drops": null,
@@ -4339,7 +4525,9 @@
       "name": "Heart Drain",
       "description": "While fighting together, grants the player and Lovander a life steal effect that restores (5~9)% of damage dealt as Health.",
       "iconId": null,
-      "iconFile": "094_Lovander_partner.png"
+      "iconFile": "094_Lovander_partner.png",
+      "nameZh": "爱心吸取",
+      "descriptionZh": "与它并肩作战时，会为玩家和博爱蜥赋予生命窃取效果，攻击造成伤害时将恢复等同于伤害量(5~9)%的HP。"
     },
     "activeSkills": null,
     "drops": null,
@@ -4383,7 +4571,9 @@
       "name": "Glaring Cat's Eye",
       "description": "Can be ridden. While in party, picking up a Pal Egg has a (50~75)% chance of receiving one extra. (Does not stack)",
       "iconId": "017",
-      "iconFile": "095_Grintale_partner.png"
+      "iconFile": "095_Grintale_partner.png",
+      "nameZh": "猫眼逼人",
+      "descriptionZh": "可骑在它的背上移动。若它在队伍中，捡到帕鲁蛋时将有(50~75)%的概率再捡到1颗。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -4430,7 +4620,9 @@
       "name": "Tarantriss’ Web",
       "description": "Can be ridden. Can double jump while mounted. Additionally, can shoot spider web to grapple and move at high speed.",
       "iconId": "017",
-      "iconFile": "096_Tarantriss_partner.png"
+      "iconFile": "096_Tarantriss_partner.png",
+      "nameZh": "桃色之网",
+      "descriptionZh": "可骑在它的背上移动。骑乘期间可以进行2段跳跃，并向射击地点发射蜘蛛丝，牵引身体快速移动。"
     },
     "activeSkills": null,
     "drops": null,
@@ -4476,7 +4668,9 @@
       "name": "Rider of the Snowy Mountain",
       "description": "Can be ridden. Movement Speed is increased by (80~160)% while mounted on snow. Can also slide quickly down slopes.",
       "iconId": "017",
-      "iconFile": "097_Polapup_partner.png"
+      "iconFile": "097_Polapup_partner.png",
+      "nameZh": "滑雪行家",
+      "descriptionZh": "可骑在它的背上移动。在雪地上时，移动速度提升(80~160)%。并且可以在斜坡处快速向下滑行。"
     },
     "activeSkills": null,
     "drops": null,
@@ -4522,7 +4716,9 @@
       "name": "Snowy Mountain Slider",
       "description": "Can be ridden. Movement Speed is increased by (80~160)% while mounted on snow. Can also slide quickly down slopes. While it starts out slow, the top speed it can hit while sliding is no joke.",
       "iconId": "017",
-      "iconFile": "098_Polapup_Terra_partner.png"
+      "iconFile": "098_Polapup_Terra_partner.png",
+      "nameZh": "雪山速滑",
+      "descriptionZh": "可骑在它的背上移动。在雪地上时，移动速度提升(80~160)%。并且可以在斜坡处快速向下滑行。滑行时初始速度较慢，但最高速度更快。"
     },
     "activeSkills": null,
     "drops": null,
@@ -4568,7 +4764,9 @@
       "name": "Too Cool to be Seen",
       "description": "When activated, Leezpunk and the player become invisible, making them undetectable to enemies for (10~20) seconds.",
       "iconId": "000",
-      "iconFile": "099_Leezpunk_partner.png"
+      "iconFile": "099_Leezpunk_partner.png",
+      "nameZh": "透明化",
+      "descriptionZh": "发动后(10~20)秒内，朋克蜥与玩家将变得透明，在敌方视野中隐去身形。"
     },
     "activeSkills": null,
     "drops": null,
@@ -4615,7 +4813,9 @@
       "name": "Too Cool to be Seen",
       "description": "When activated, Leezpunk Ignis and the player become invisible, making them undetectable to enemies for (10~20) seconds.",
       "iconId": null,
-      "iconFile": "100_Leezpunk_Ignis_partner.png"
+      "iconFile": "100_Leezpunk_Ignis_partner.png",
+      "nameZh": "透明化",
+      "descriptionZh": "发动后(10~20)秒内，朋克蜥与玩家将变得透明，在敌方视野中隐去身形。"
     },
     "activeSkills": null,
     "drops": null,
@@ -4661,7 +4861,9 @@
       "name": "Full-Power Gorilla Mode",
       "description": "When activated, unleashes a primal fury that increases Gorirat 's Attack by (75~300)% for a limited time.",
       "iconId": "006",
-      "iconFile": "101_Gorirat_partner.png"
+      "iconFile": "101_Gorirat_partner.png",
+      "nameZh": "火力全开大猩猩模式",
+      "descriptionZh": "发动后会解放野性之力，并在一定时间内铁拳猿的攻击力将提升(75~300)%。"
     },
     "activeSkills": null,
     "drops": null,
@@ -4707,7 +4909,9 @@
       "name": "Full-Power Gorilla Pound",
       "description": "While in party, increases the player's climbing speed by (50~100)%. (Does not stack)",
       "iconId": "000",
-      "iconFile": "102_Gorirat_Terra_partner.png"
+      "iconFile": "102_Gorirat_Terra_partner.png",
+      "nameZh": "火力全开铁臂大猩猩",
+      "descriptionZh": "若它在队伍中，玩家的攀爬速度提升(50~100)%。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -4752,7 +4956,9 @@
       "name": "Swift Swimmer",
       "description": "Can be ridden to travel on water. Sometimes drops Leather when assigned to Ranch.",
       "iconId": "019",
-      "iconFile": "103_Surfent_partner.png"
+      "iconFile": "103_Surfent_partner.png",
+      "nameZh": "滑滑水蛇",
+      "descriptionZh": "可骑在它的背上在水上移动。将它分派到家畜牧场，它就有机会掉落皮革。"
     },
     "activeSkills": null,
     "drops": null,
@@ -4796,7 +5002,9 @@
       "name": "Sand Swimmer",
       "description": "Can be ridden. While in party, the player's attacks inflict Muddy (2~6). (Does not stack)",
       "iconId": "017",
-      "iconFile": "104_Surfent_Terra_partner.png"
+      "iconFile": "104_Surfent_Terra_partner.png",
+      "nameZh": "滑滑沙蛇",
+      "descriptionZh": "可骑在它的背上移动。若它在队伍中，会为玩家的攻击附加(2~6)点泥泞异常状态值。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -4845,7 +5053,9 @@
       "name": "Grounded Archer",
       "description": "While in party, increases the player's bow damage by (10~35)%. (Does not stack)",
       "iconId": null,
-      "iconFile": "105_Robinquill_partner.png"
+      "iconFile": "105_Robinquill_partner.png",
+      "nameZh": "射箭达人",
+      "descriptionZh": "若它在队伍中，玩家使用弓箭时的伤害提升(10~35)%。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -4894,7 +5104,9 @@
       "name": "Master Archer",
       "description": "While in party, increases the player's bow charge speed by (15~30)%. (Does not stack)",
       "iconId": null,
-      "iconFile": "106_Robinquill_Terra_partner.png"
+      "iconFile": "106_Robinquill_Terra_partner.png",
+      "nameZh": "挽弓达人",
+      "descriptionZh": "若它在队伍中，玩家使用弓箭时的蓄力速度提升(15~30)%。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -4942,7 +5154,9 @@
       "name": "Helper Bunny",
       "description": "While in party, appears near the player. Automatically picks up nearby items.",
       "iconId": "011",
-      "iconFile": "107_Flopie_partner.png"
+      "iconFile": "107_Flopie_partner.png",
+      "nameZh": "兔兔助手",
+      "descriptionZh": "若它在队伍中，就会出现在玩家身边。它会自动前去拾取附近的道具。"
     },
     "activeSkills": null,
     "drops": null,
@@ -4988,7 +5202,9 @@
       "name": "Lord Fox",
       "description": "When activated, Wixen changes the player's attack type to Fire and increases Attack by (30~50)%.",
       "iconId": null,
-      "iconFile": "108_Wixen_partner.png"
+      "iconFile": "108_Wixen_partner.png",
+      "nameZh": "狐神大人",
+      "descriptionZh": "发动后，焰巫狐会将力量分给玩家，让玩家的攻击转变为火属性，且攻击力提升(30~50)%。"
     },
     "activeSkills": null,
     "drops": null,
@@ -5035,7 +5251,9 @@
       "name": "Black Fox Lord",
       "description": "When activated, Wixen Noct changes the player's attack type to Dark and increases Attack by (30~50)%.",
       "iconId": null,
-      "iconFile": "109_Wixen_Noct_partner.png"
+      "iconFile": "109_Wixen_Noct_partner.png",
+      "nameZh": "巫神大人",
+      "descriptionZh": "发动后，幽巫狐会将力量分给玩家，让玩家的攻击转变为暗属性，且攻击力提升(30~50)%。"
     },
     "activeSkills": null,
     "drops": null,
@@ -5081,7 +5299,9 @@
       "name": "Mystical Black Magic",
       "description": "While in party, Neutral Pals drop (40~80)% more items when defeated. Also has a (10~50)% chance to prevent Pal Sphere consumption when thrown. (Does not stack)",
       "iconId": "014",
-      "iconFile": "110_Katress_partner.png"
+      "iconFile": "110_Katress_partner.png",
+      "nameZh": "怪奇黑魔法",
+      "descriptionZh": "若它在队伍中，击倒无属性帕鲁时获得的掉落道具增加(40~80)%。此外，玩家投掷帕鲁球时，有(10~50)%的概率不会消耗帕鲁球。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -5129,7 +5349,9 @@
       "name": "Blazing Black Magic",
       "description": "While at a base, increases the Kindling Work Suitability Level for all other Base Pals by +1. (Does not stack)",
       "iconId": null,
-      "iconFile": "111_Katress_Ignis_partner.png"
+      "iconFile": "111_Katress_Ignis_partner.png",
+      "nameZh": "热情黑魔法",
+      "descriptionZh": "若它在据点里，其他据点帕鲁的生火工作适应性等级+1。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -5173,7 +5395,9 @@
       "name": "Wings of Death",
       "description": "Can be ridden as a flying mount. While mounted, changes the player’s attack type to Dark and increases Attack by (5~20)%.",
       "iconId": "018",
-      "iconFile": "112_Helzephyr_partner.png"
+      "iconFile": "112_Helzephyr_partner.png",
+      "nameZh": "冥府之翼",
+      "descriptionZh": "可骑在它的背上在空中飞行。骑乘期间玩家的攻击会转变为暗属性，且攻击力提升(5~20)%。科技25"
     },
     "activeSkills": null,
     "drops": null,
@@ -5219,7 +5443,9 @@
       "name": "Wings of Thunder",
       "description": "Can be ridden as a flying mount. While mounted, changes the player’s attack type to Electric and increases Attack by (5~20)%.",
       "iconId": "018",
-      "iconFile": "113_Helzephyr_Lux_partner.png"
+      "iconFile": "113_Helzephyr_Lux_partner.png",
+      "nameZh": "雷鸣之翼",
+      "descriptionZh": "可骑在它的背上在空中飞行。骑乘期间玩家的攻击会转变为雷属性，且攻击力提升(5~20)%。科技47"
     },
     "activeSkills": null,
     "drops": null,
@@ -5267,7 +5493,9 @@
       "name": "Mother Nature's Menace",
       "description": "When activated, Elgrove changes the player's attack type to Grass and increases Attack by (30~50)%.",
       "iconId": null,
-      "iconFile": "114_Elgrove_partner.png"
+      "iconFile": "114_Elgrove_partner.png",
+      "nameZh": "大自然之威",
+      "descriptionZh": "发动后，密林陶洛斯会将力量分给玩家，让玩家的攻击转变为草属性，且攻击力提升(30~50)%。"
     },
     "activeSkills": null,
     "drops": null,
@@ -5314,7 +5542,9 @@
       "name": "Father Winter's Threat",
       "description": "While in party, grants the player the ability to Freeze enemies afflicted with Soak in one strike.",
       "iconId": null,
-      "iconFile": "115_Elgrove_Cryst_partner.png"
+      "iconFile": "115_Elgrove_Cryst_partner.png",
+      "nameZh": "永冻土之威",
+      "descriptionZh": "若它在队伍中，玩家攻击浸湿状态的敌人时，一击就会让敌人陷入冻结状态。"
     },
     "activeSkills": null,
     "drops": null,
@@ -5360,7 +5590,9 @@
       "name": "Antigravity",
       "description": "While in party, spheres home in on Pals, and carrying capacity increases by (300~600). (Does not stack)",
       "iconId": null,
-      "iconFile": "116_Lunaris_partner.png"
+      "iconFile": "116_Lunaris_partner.png",
+      "nameZh": "反重力",
+      "descriptionZh": "若它在队伍中，投掷出去的帕鲁球将会自动追踪帕鲁，且玩家的负重上限提高(300~600)。 （不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -5404,7 +5636,9 @@
       "name": "Wind and Clouds",
       "description": "Can be ridden. Can double jump while mounted.",
       "iconId": "017",
-      "iconFile": "117_Fenglope_partner.png"
+      "iconFile": "117_Fenglope_partner.png",
+      "nameZh": "风云",
+      "descriptionZh": "可骑在它的背上移动。骑乘期间可以进行2段跳跃。"
     },
     "activeSkills": null,
     "drops": null,
@@ -5449,7 +5683,9 @@
       "name": "Stormcloud",
       "description": "Can be ridden. Can double jump while mounted. While in party, Water Pals drop (40~80)% more items when defeated. (Does not stack)",
       "iconId": "017",
-      "iconFile": "118_Fenglope_Lux_partner.png"
+      "iconFile": "118_Fenglope_Lux_partner.png",
+      "nameZh": "雷云",
+      "descriptionZh": "可骑在它的背上移动。骑乘期间可以进行2段跳跃。若它在队伍中，击倒水属性帕鲁时获得的掉落道具增加(40~80)%。（不可叠加）科技57"
     },
     "activeSkills": null,
     "drops": null,
@@ -5495,7 +5731,9 @@
       "name": "Fragrant Dragon",
       "description": "Can be ridden. While in party, increase Defense of Dragon Pals by (15~30)%. (Does not stack)",
       "iconId": "017",
-      "iconFile": "119_Dinossom_partner.png"
+      "iconFile": "119_Dinossom_partner.png",
+      "nameZh": "馥郁花香之龙",
+      "descriptionZh": "可骑在它的背上移动。若它在队伍中，龙属性帕鲁的防御力会提升(15~30)%。（不可叠加）科技24"
     },
     "activeSkills": null,
     "drops": null,
@@ -5541,7 +5779,9 @@
       "name": "Thunder Dragon",
       "description": "Can be ridden. While in party, increases Defense of Electric Pals by (15~30)%. (Does not stack)",
       "iconId": "017",
-      "iconFile": "120_Dinossom_Lux_partner.png"
+      "iconFile": "120_Dinossom_Lux_partner.png",
+      "nameZh": "落雷绽放之龙",
+      "descriptionZh": "可骑在它的背上移动。若它在队伍中，雷属性帕鲁的防御力会提升(15~30)%。（不可叠加）科技34"
     },
     "activeSkills": null,
     "drops": null,
@@ -5589,7 +5829,9 @@
       "name": "Brandish Blade",
       "description": "When activated, attacks targeted enemy with Iaigiri. When this Pal uses Iaigiri, it has a x(1.1~2.5) damage multiplier.",
       "iconId": null,
-      "iconFile": "121_Bushi_partner.png"
+      "iconFile": "121_Bushi_partner.png",
+      "nameZh": "紫电一闪",
+      "descriptionZh": "发动后会以居合斩攻击锁定的目标敌人。此帕鲁使用的居合斩的威力将提升至(1.1~2.5)倍。"
     },
     "activeSkills": null,
     "drops": null,
@@ -5638,7 +5880,9 @@
       "name": "Void Blade",
       "description": "When activated, attacks targeted enemy with Iaigiri. When this Pal uses Iaigiri, it has a x(1.1~2.5) damage multiplier. While in party, increases the player's melee weapon damage by (30~65)% but only when not in combat. (Does not stack)",
       "iconId": null,
-      "iconFile": "122_Bushi_Noct_partner.png"
+      "iconFile": "122_Bushi_Noct_partner.png",
+      "nameZh": "秘技·紫电一闪",
+      "descriptionZh": "发动后会以居合斩攻击锁定的目标敌人。此帕鲁使用的居合斩的威力将提升至(1.1~2.5)倍。若它在队伍中，玩家的近战武器攻击伤害在非战斗时提升(30~65)%。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -5685,7 +5929,9 @@
       "name": "Icy Maw",
       "description": "While in party, reduces the weight of ingredient and food by (30~60)%. When paired with another Ice Pal, their Rot Speed also reduces by (-30~-80)%. (Does not stack)",
       "iconId": null,
-      "iconFile": "123_Munchill_partner.png"
+      "iconFile": "123_Munchill_partner.png",
+      "nameZh": "雪盆大口",
+      "descriptionZh": "若它在队伍中，食材和料理的重量会减轻(30~60)%。并在冰属性帕鲁原有的防腐效果基础上，让腐败速度进一步(-30~-80)%。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -5732,7 +5978,9 @@
       "name": "Gaia Crusher",
       "description": "Can be ridden. While mounted, increases logging efficiency by (220~500)% and mining efficiency by (500~2000)%.",
       "iconId": "017",
-      "iconFile": "124_Mammorest_partner.png"
+      "iconFile": "124_Mammorest_partner.png",
+      "nameZh": "盖亚粉碎者",
+      "descriptionZh": "可骑在它的背上移动。骑乘期间破坏树木的效率会提高(220~500)%，破坏矿石的效率会提高(500~2000)%。"
     },
     "activeSkills": null,
     "drops": null,
@@ -5779,7 +6027,9 @@
       "name": "Ice Crusher",
       "description": "Can be ridden. While mounted, increases logging efficiency by (220~500)% and mining efficiency by (500~2000)%.",
       "iconId": "017",
-      "iconFile": "125_Mammorest_Cryst_partner.png"
+      "iconFile": "125_Mammorest_Cryst_partner.png",
+      "nameZh": "冰霜粉碎者",
+      "descriptionZh": "可骑在它的背上移动。骑乘期间破坏树木的效率会提高(220~500)%，破坏矿石的效率会提高(500~2000)%。"
     },
     "activeSkills": null,
     "drops": null,
@@ -5824,7 +6074,9 @@
       "name": "Water Gun",
       "description": "When activated, Finsider changes the player's attack type to Water and increases Attack by (30~50)%.",
       "iconId": null,
-      "iconFile": "126_Finsider_partner.png"
+      "iconFile": "126_Finsider_partner.png",
+      "nameZh": "水流扳机",
+      "descriptionZh": "发动后，布偶鲨会将力量分给玩家，让玩家的攻击转变为水属性，且攻击力提升(30~50)%。"
     },
     "activeSkills": null,
     "drops": null,
@@ -5871,7 +6123,9 @@
       "name": "Ember Chamber",
       "description": "While in party, Finsider Ignis helps carry supplies, reducing the weight of weapons in your inventory by (60~100)%. Also improves player's and Pals' Fire damage to enemy weak points by (25~40)%. (Does not stack)",
       "iconId": null,
-      "iconFile": "127_Finsider_Ignis_partner.png"
+      "iconFile": "127_Finsider_Ignis_partner.png",
+      "nameZh": "炎炎收纳间",
+      "descriptionZh": "若它在队伍中，粉粉布偶鲨会帮忙分担负重，背包内武器的重量减轻(60~100)%，且玩家和帕鲁以火属性攻击命中敌方弱点时的伤害提升(25~40)%。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -5919,7 +6173,9 @@
       "name": "Blessing of the Flower Spirit",
       "description": "When activated, soothing blossoms restore the player's Health by (75~85)%. While at a base, increases the Planting Work Suitability Level for all other Base Pals by +1. (Does not stack)",
       "iconId": "004",
-      "iconFile": "128_Petallia_partner.png"
+      "iconFile": "128_Petallia_partner.png",
+      "nameZh": "花精灵的祝福",
+      "descriptionZh": "发动后可通过花朵的治愈能力，来恢复玩家(75~85)%的生命值。若它在据点里，其他据点帕鲁的播种工作适应性等级+1。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -5968,7 +6224,9 @@
       "name": "Passion of the Flower Spirit",
       "description": "When activated, soothing blossoms restore the player's Health by (80~90)%. While in party, player and party Pals take (15~30)% less Grass damage, and are immune to Ivy-Covered. (Does not stack)",
       "iconId": "004",
-      "iconFile": "129_Petallia_Ignis_partner.png"
+      "iconFile": "129_Petallia_Ignis_partner.png",
+      "nameZh": "花精灵的热情",
+      "descriptionZh": "发动后，它会用花朵的治愈之力让玩家的生命值恢复(80~90)%。若它在队伍中，玩家和帕鲁受到的草属性伤害减轻(15~30)%，并且不会陷入缠绕状态。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -6015,7 +6273,9 @@
       "name": "Selfless Discipline",
       "description": "This Pal's Attack and Defense increase by (2~6)% for each other Grass Pal in your party.",
       "iconId": "000",
-      "iconFile": "130_Leafan_partner.png"
+      "iconFile": "130_Leafan_partner.png",
+      "nameZh": "克己复礼",
+      "descriptionZh": "莉芳的攻击力和防御力，会随着队伍中其他草属性帕鲁的数量提升，每只增加(2~6)%。"
     },
     "activeSkills": null,
     "drops": null,
@@ -6063,7 +6323,9 @@
       "name": "Flameclaw Hunter",
       "description": "When activated, attacks the targeted enemy with Hellfire Claw. When this Pal uses Hellfire Claw, it has a x(1.1~2.5) damage multiplier.",
       "iconId": null,
-      "iconFile": "131_Incineram_partner.png"
+      "iconFile": "131_Incineram_partner.png",
+      "nameZh": "焰爪猎人",
+      "descriptionZh": "发动后会以狱火爪攻击锁定的目标敌人。此帕鲁使用的狱火爪的威力将提升至(1.1~2.5)倍。"
     },
     "activeSkills": null,
     "drops": null,
@@ -6109,7 +6371,9 @@
       "name": "Darkclaw Hunter",
       "description": "When activated, attacks the targeted enemy with Nightmare Claw. When this Pal uses Nightmare Claw, it has a x(1.1~2.5) damage multiplier.",
       "iconId": "000",
-      "iconFile": "132_Incineram_Noct_partner.png"
+      "iconFile": "132_Incineram_Noct_partner.png",
+      "nameZh": "黑爪猎人",
+      "descriptionZh": "发动后会以恶梦爪攻击锁定的目标敌人。此帕鲁使用的恶梦爪的威力将提升至(1.1~2.5)倍。"
     },
     "activeSkills": null,
     "drops": null,
@@ -6155,7 +6419,9 @@
       "name": "Lady of Lightning",
       "description": "While in party, appears near the player. Attacks hostile enemies with Electric bolts. These bolts will not reduce the target's Health below 1.",
       "iconId": "011",
-      "iconFile": "133_Dazzi_partner.png"
+      "iconFile": "133_Dazzi_partner.png",
+      "nameZh": "雷电姑娘",
+      "descriptionZh": "若它在队伍中，就会出现于玩家身边。它会用雷属性的落雷追击敌对个体。且该追击不会使猎物毙命。"
     },
     "activeSkills": null,
     "drops": null,
@@ -6203,7 +6469,9 @@
       "name": "Lady of Dark Lightning",
       "description": "While in party, appears near the player. Attacks hostile enemies with Dark bolts. These bolts will not reduce the target's Health below 1.",
       "iconId": "011",
-      "iconFile": "134_Dazzi_Noct_partner.png"
+      "iconFile": "134_Dazzi_Noct_partner.png",
+      "nameZh": "乌云姑娘",
+      "descriptionZh": "若它在队伍中，就会出现于玩家身边。它会用暗属性的落雷追击敌对个体。且该追击不会使猎物毙命。"
     },
     "activeSkills": null,
     "drops": null,
@@ -6248,7 +6516,9 @@
       "name": "Red Hare",
       "description": "Can be ridden. While mounted, changes the player’s attack type to Fire and increases Attack by (5~20)%.",
       "iconId": "017",
-      "iconFile": "135_Pyrin_partner.png"
+      "iconFile": "135_Pyrin_partner.png",
+      "nameZh": "赤兔马",
+      "descriptionZh": "可骑在它的背上在空中飞行。骑乘期间玩家的攻击会转变为火属性，且攻击力提升(5~20)%。科技29"
     },
     "activeSkills": null,
     "drops": null,
@@ -6294,7 +6564,9 @@
       "name": "Black Hare",
       "description": "Can be ridden. While mounted, changes the player’s attack type to Dark and increases Attack by (5~20)%.",
       "iconId": "017",
-      "iconFile": "136_Pyrin_Noct_partner.png"
+      "iconFile": "136_Pyrin_Noct_partner.png",
+      "nameZh": "黑兔马",
+      "descriptionZh": "可骑在它的背上在空中飞行。骑乘期间玩家的攻击会转变为暗属性，且攻击力提升(5~20)%。科技34"
     },
     "activeSkills": null,
     "drops": null,
@@ -6340,7 +6612,9 @@
       "name": "Hungry Missile",
       "description": "Can be ridden. Can rapidly fire a missile launcher while mounted.",
       "iconId": "017",
-      "iconFile": "137_Relaxaurus_partner.png"
+      "iconFile": "137_Relaxaurus_partner.png",
+      "nameZh": "饿饿飞弹",
+      "descriptionZh": "可骑在它的背上移动。骑乘期间它还能用导弹发射器连续攻击。"
     },
     "activeSkills": null,
     "drops": null,
@@ -6386,7 +6660,9 @@
       "name": "Missile Party",
       "description": "Can be ridden. Can rapidly fire a missile launcher while mounted.",
       "iconId": "017",
-      "iconFile": "138_Relaxaurus_Lux_partner.png"
+      "iconFile": "138_Relaxaurus_Lux_partner.png",
+      "nameZh": "飞弹盛宴",
+      "descriptionZh": "可骑在它的背上移动。骑乘期间它还能用导弹发射器连续攻击。"
     },
     "activeSkills": null,
     "drops": null,
@@ -6431,7 +6707,9 @@
       "name": "Aurora Guide",
       "description": "While in party, increases Attack of Ice Pals by (15~30)%. (Does not stack) Sometimes drops Ice Organ when assigned to Ranch.",
       "iconId": null,
-      "iconFile": "139_Foxcicle_partner.png"
+      "iconFile": "139_Foxcicle_partner.png",
+      "nameZh": "极光的指引",
+      "descriptionZh": "若它在队伍中，冰属性帕鲁的攻击力会提升(15~30)%。（不可叠加）将它分派到家畜牧场，它就有机会掉落结冰器官。"
     },
     "activeSkills": null,
     "drops": null,
@@ -6477,7 +6755,9 @@
       "name": "Thunderous",
       "description": "Can be ridden as a flying mount. While mounted, changes the player's attack type to Electric and increases Attack by (5~20)%. This Pal’s Movement Speed increases by (5~25)% for each other Electric Pal in your party. (Excluding Beakon)",
       "iconId": "018",
-      "iconFile": "140_Beakon_partner.png"
+      "iconFile": "140_Beakon_partner.png",
+      "nameZh": "天雷",
+      "descriptionZh": "可骑在它的背上在空中飞行。骑乘期间玩家的攻击会转变为雷属性，且攻击力提升(5~20)%。迅雷鸟的移动速度，会随着队伍中其他雷属性帕鲁的数量提升，每只增加(5~25)%。科技29"
     },
     "activeSkills": null,
     "drops": null,
@@ -6523,7 +6803,9 @@
       "name": "Coldsnap",
       "description": "Can be ridden as a flying mount. While mounted, changes the player's attack type to Ice and increases Attack by (5~20)%. This Pal’s Movement Speed increases by (5~25)% for each other Ice Pal in your party. (Excluding Beakon Cryst)",
       "iconId": "018",
-      "iconFile": "141_Beakon_Cryst_partner.png"
+      "iconFile": "141_Beakon_Cryst_partner.png",
+      "nameZh": "天霰",
+      "descriptionZh": "可骑在它的背上在空中飞行。骑乘期间玩家的攻击会转变为冰属性，且攻击力提升(5~20)%。疾霜鸟的移动速度，会随着队伍中其他冰属性帕鲁的数量提升，每只增加(5~25)%。科技71"
     },
     "activeSkills": null,
     "drops": null,
@@ -6569,7 +6851,9 @@
       "name": "Master of Darkness",
       "description": "Can be ridden to travel on water. This Pal’s Movement Speed increases by (5~25)% for each other Dark or Water Pal in your party. (Excluding Ghangler)",
       "iconId": "019",
-      "iconFile": "142_Ghangler_partner.png"
+      "iconFile": "142_Ghangler_partner.png",
+      "nameZh": "暗夜引路人",
+      "descriptionZh": "可骑在它的背上在水上移动。冥灯鱼的移动速度，会随着队伍中其他暗属性或水属性帕鲁的数量提升，每只增加(5~25)%。科技31"
     },
     "activeSkills": null,
     "drops": null,
@@ -6616,7 +6900,9 @@
       "name": "Abyssal Celebrity Chef",
       "description": "Can be ridden to travel on water. This Pal’s Movement Speed increases by (5~25)% for each other Fire or Water Pal in your party. (Excluding Ghangler Ignis)",
       "iconId": "019",
-      "iconFile": "143_Ghangler_Ignis_partner.png"
+      "iconFile": "143_Ghangler_Ignis_partner.png",
+      "nameZh": "深海名厨",
+      "descriptionZh": "可骑在它的背上在水上移动。炙灯鱼的移动速度，会随着队伍中其他火属性或水属性帕鲁的数量提升，每只增加(5~25)%。科技42"
     },
     "activeSkills": null,
     "drops": null,
@@ -6660,7 +6946,9 @@
       "name": "Lightning Shepherd",
       "description": "Can be ridden. Can perform a double jump while mounted. This Pal’s Movement Speed increases by (5~25)% for each other Electric Pal in your party. (Excluding Rayhound)",
       "iconId": "017",
-      "iconFile": "144_Rayhound_partner.png"
+      "iconFile": "144_Rayhound_partner.png",
+      "nameZh": "雷雳跃行",
+      "descriptionZh": "可骑在它的背上在空中飞行。骑乘期间可以进行2段跳跃。霹雳犬的移动速度，会随着队伍中其他雷属性帕鲁的数量提升，每只增加(5~25)%。科技30"
     },
     "activeSkills": null,
     "drops": null,
@@ -6704,7 +6992,9 @@
       "name": "Snow Shepherd",
       "description": "Can be ridden. Can perform a double jump while mounted. While in party, increases Defense of Ice Pals by (15~30)%. (Does not stack)",
       "iconId": "017",
-      "iconFile": "145_Rayhound_Cryst_partner.png"
+      "iconFile": "145_Rayhound_Cryst_partner.png",
+      "nameZh": "霜跃疾行",
+      "descriptionZh": "可骑在它的背上移动。骑乘期间可以进行2段跳跃。若它在队伍中，冰属性帕鲁的防御力会提升(15~30)%。（不可叠加）科技32"
     },
     "activeSkills": null,
     "drops": null,
@@ -6750,7 +7040,9 @@
       "name": "Steel Scorpion",
       "description": "While in party, player's Defense increases by (5~10)%, and Electric Pals drop (40~80)% more items when defeated. (Does not stack)",
       "iconId": "005",
-      "iconFile": "146_Menasting_partner.png"
+      "iconFile": "146_Menasting_partner.png",
+      "nameZh": "钢铁之蝎",
+      "descriptionZh": "若它在队伍中，玩家的防御力将提升(5~10)%，且击倒雷属性帕鲁时获得的掉落道具增加(40~80)%。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -6795,7 +7087,9 @@
       "name": "Golden Scorpion",
       "description": "While in party, player's Defense increases by (5~10)%, and Electric Pals drop (40~80)% more items when defeated. (Does not stack)",
       "iconId": "005",
-      "iconFile": "147_Menasting_Terra_partner.png"
+      "iconFile": "147_Menasting_Terra_partner.png",
+      "nameZh": "黄金之蝎",
+      "descriptionZh": "若它在队伍中，玩家的防御力将提升(5~10)%，且击倒雷属性帕鲁时获得的掉落道具增加(40~80)%。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -6841,7 +7135,9 @@
       "name": "Hug Me Please",
       "description": "While in party, increases player's and Pals' damage to enemies afflicted with Ivy-Covered by (50~65)%. (Does not stack)",
       "iconId": null,
-      "iconFile": "148_Needoll_partner.png"
+      "iconFile": "148_Needoll_partner.png",
+      "nameZh": "请你抱抱我",
+      "descriptionZh": "若它在队伍中，玩家和帕鲁对缠绕状态的敌人造成的伤害将提升(50~65)%。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -6888,7 +7184,9 @@
       "name": "Hug You So Much",
       "description": "While in party, the player's attacks inflict Ivy-Covered (2~6). (Does not stack)",
       "iconId": null,
-      "iconFile": "149_Needoll_Noct_partner.png"
+      "iconFile": "149_Needoll_Noct_partner.png",
+      "nameZh": "紧紧抱住你",
+      "descriptionZh": "若它在队伍中，会为玩家的攻击附加(2~6)点缠绕异常状态值。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -6933,7 +7231,9 @@
       "name": "Cool Body",
       "description": "Can be ridden. While in party, the player gains Heat Resistance +2. (Does not stack)",
       "iconId": "017",
-      "iconFile": "150_Reindrix_partner.png"
+      "iconFile": "150_Reindrix_partner.png",
+      "nameZh": "冰凉之躯",
+      "descriptionZh": "可骑在它的背上移动。若它在队伍中，玩家的耐暑能力+2。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -6980,7 +7280,9 @@
       "name": "Grenadier Panda",
       "description": "Can be ridden. Can rapidly fire a grenade launcher while mounted.",
       "iconId": "017",
-      "iconFile": "151_Mossanda_partner.png"
+      "iconFile": "151_Mossanda_partner.png",
+      "nameZh": "不良熊猫",
+      "descriptionZh": "可骑在它的背上移动。骑乘期间它还能用榴弹发射器连续攻击。"
     },
     "activeSkills": null,
     "drops": null,
@@ -7027,7 +7329,9 @@
       "name": "Grenadier Panda",
       "description": "Can be ridden. Can rapidly fire a grenade launcher while mounted.",
       "iconId": "017",
-      "iconFile": "152_Mossanda_Lux_partner.png"
+      "iconFile": "152_Mossanda_Lux_partner.png",
+      "nameZh": "不良熊猫",
+      "descriptionZh": "可骑在它的背上移动。骑乘期间它还能用榴弹发射器连续攻击。"
     },
     "activeSkills": null,
     "drops": null,
@@ -7073,7 +7377,9 @@
       "name": "Wriggling Weasel",
       "description": "Can be ridden. While mounted, changes the player’s attack type to Dragon and increases Attack by (5~20)%.",
       "iconId": "017",
-      "iconFile": "153_Chillet_partner.png"
+      "iconFile": "153_Chillet_partner.png",
+      "nameZh": "扭扭鼬鼬",
+      "descriptionZh": "可骑在它的背上移动。骑乘期间玩家的攻击会转变为龙属性，且攻击力提升(5~20)%。科技11"
     },
     "activeSkills": null,
     "drops": null,
@@ -7119,7 +7425,9 @@
       "name": "Sparkling Weasel",
       "description": "Can be ridden. While mounted, changes the player’s attack type to Fire and increases Attack by (5~20)%.",
       "iconId": "017",
-      "iconFile": "154_Chillet_Ignis_partner.png"
+      "iconFile": "154_Chillet_Ignis_partner.png",
+      "nameZh": "烧鼬鼬",
+      "descriptionZh": "可骑在它的背上移动。骑乘期间玩家的攻击会转变为火属性，且攻击力提升(5~20)%。科技40"
     },
     "activeSkills": null,
     "drops": null,
@@ -7164,7 +7472,9 @@
       "name": "Flame Wing",
       "description": "Can be ridden as a flying mount. While mounted, changes the player’s attack type to Fire and increases Attack by (5~20)%.",
       "iconId": "018",
-      "iconFile": "155_Ragnahawk_partner.png"
+      "iconFile": "155_Ragnahawk_partner.png",
+      "nameZh": "烈焰之翼",
+      "descriptionZh": "可骑在它的背上在空中飞行。骑乘期间玩家的攻击会转变为火属性，且攻击力提升(5~20)%。科技33"
     },
     "activeSkills": null,
     "drops": null,
@@ -7210,7 +7520,9 @@
       "name": "Magma Overload",
       "description": "Can be ridden as a mount. This Pal's Attack increases by (4~8)% for each other Fire or Ground Pal in your party.",
       "iconId": "017",
-      "iconFile": "156_Moldron_partner.png"
+      "iconFile": "156_Moldron_partner.png",
+      "nameZh": "熔岩霸主",
+      "descriptionZh": "可骑在它的背上移动。流焰龙的攻击力，会随着队伍中其他火属性或地属性帕鲁的数量提升，每只增加(4~8)%。科技36"
     },
     "activeSkills": null,
     "drops": null,
@@ -7256,7 +7568,9 @@
       "name": "Ice Overload",
       "description": "Can be ridden. While in party, improves player's and Pals' Ice damage to enemy weak points by (25~40)%. (Does not stack)",
       "iconId": "017",
-      "iconFile": "157_Moldron_Cryst_partner.png"
+      "iconFile": "157_Moldron_Cryst_partner.png",
+      "nameZh": "寒冰霸主",
+      "descriptionZh": "可骑在它的背上移动。若它在队伍中，玩家和帕鲁以冰属性攻击命中敌方弱点时的伤害将提升(25~40)%。（不可叠加）科技70"
     },
     "activeSkills": null,
     "drops": null,
@@ -7302,7 +7616,9 @@
       "name": "Samba Step",
       "description": "Can be ridden. Movement Speed is increased by (155~240)% while mounted on grass.",
       "iconId": "017",
-      "iconFile": "158_Palumba_partner.png"
+      "iconFile": "158_Palumba_partner.png",
+      "nameZh": "桑巴舞步",
+      "descriptionZh": "可骑在它的背上移动。在草地上移动时，移动速度会提高(155~240)%。"
     },
     "activeSkills": null,
     "drops": null,
@@ -7346,7 +7662,9 @@
       "name": "Drill Crusher",
       "description": "When activated, enters the Shell Spin state. Follows the player while spinning, increasing ore mining efficiency by (800~2000)%.",
       "iconId": null,
-      "iconFile": "159_Digtoise_partner.png"
+      "iconFile": "159_Digtoise_partner.png",
+      "nameZh": "钻头粉碎者",
+      "descriptionZh": "发动后会进入甲壳回旋状态。它会一边旋转一边跟随玩家，且破坏矿石的效率将提升(800~2000)%。"
     },
     "activeSkills": null,
     "drops": null,
@@ -7390,7 +7708,9 @@
       "name": "Love's First Blossom",
       "description": "Can be ridden. While in party, Pal Eggs you pick up have a (35~45)% chance of becoming an Alpha Pal Egg. (Does not stack)",
       "iconId": "017",
-      "iconFile": "160_Broncherry_partner.png"
+      "iconFile": "160_Broncherry_partner.png",
+      "nameZh": "恋香初绽",
+      "descriptionZh": "可骑在它的背上移动。若它在队伍中，捡到的帕鲁蛋将有(35~45)%的概率变为头目帕鲁蛋。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -7435,7 +7755,9 @@
       "name": "Purity's Full Bloom",
       "description": "Can be ridden. While in party, Pal Eggs you pick up have a (45~55)% chance of becoming an Alpha Pal Egg. (Does not stack)",
       "iconId": "017",
-      "iconFile": "161_Broncherry_Aqua_partner.png"
+      "iconFile": "161_Broncherry_Aqua_partner.png",
+      "nameZh": "纯心盛绽",
+      "descriptionZh": "可骑在它的背上移动。若它在队伍中，捡到的帕鲁蛋将有(45~55)%的概率变为头目帕鲁蛋。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -7483,7 +7805,9 @@
       "name": "Soil Improver",
       "description": "While in party, increases Attack of Ground Pals by (15~30)%. (Does not stack) Sometimes drops High Quality Pal Oil when assigned to Ranch.",
       "iconId": null,
-      "iconFile": "162_Dumud_partner.png"
+      "iconFile": "162_Dumud_partner.png",
+      "nameZh": "改善土质",
+      "descriptionZh": "若它在队伍中，地属性帕鲁的攻击力会提升(15~30)%。（不可叠加）将它分派到家畜牧场，它就有机会掉落优质帕鲁油。"
     },
     "activeSkills": null,
     "drops": null,
@@ -7531,7 +7855,9 @@
       "name": "Golden Harvest",
       "description": "While in party, increases amount of Gold Coin dropped by enemies by +(100~200)%. Sometimes drops High Quality Pal Oil when assigned to Ranch, with a small chance to drop Gold Coin. (Does not stack)",
       "iconId": "014",
-      "iconFile": "163_Dumud_Gild_partner.png"
+      "iconFile": "163_Dumud_Gild_partner.png",
+      "nameZh": "黄金丰收",
+      "descriptionZh": "若它在队伍中，打倒的敌人掉落的金币提升(100~200)%。（不可叠加）将它分派到家畜牧场，它就会掉落优质帕鲁油或者小概率掉落金币。"
     },
     "activeSkills": null,
     "drops": null,
@@ -7578,7 +7904,9 @@
       "name": "Balmy Weather",
       "description": "Can be ridden. While in your base, increases the egg production speed of Pals assigned to Breeding Farm by (20~50)%. (Does not stack)",
       "iconId": "017",
-      "iconFile": "164_Braloha_partner.png"
+      "iconFile": "164_Braloha_partner.png",
+      "nameZh": "暖洋洋晴日",
+      "descriptionZh": "可骑在它的背上移动。若它在据点里，分派到配种牧场的帕鲁产蛋速度加快(20~50)%。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -7622,7 +7950,9 @@
       "name": "Wolf of the Sun",
       "description": "Can be ridden. While in party, player and party Pals take (15~30)% less Ice damage and are immune to Freeze. (Does not stack)",
       "iconId": "017",
-      "iconFile": "165_Kitsun_partner.png"
+      "iconFile": "165_Kitsun_partner.png",
+      "nameZh": "日轮之狼",
+      "descriptionZh": "可骑在它的背上移动。若它在队伍中，玩家和帕鲁受到的冰属性伤害减轻(15~30)%，并且不会陷入冻结状态。（不可叠加）科技57"
     },
     "activeSkills": null,
     "drops": null,
@@ -7666,7 +7996,9 @@
       "name": "Gloomhowl",
       "description": "Can be ridden. While in party, player and party Pals take (15~30)% less Dark damage and are immune to Blind. (Does not stack)",
       "iconId": "017",
-      "iconFile": "166_Kitsun_Noct_partner.png"
+      "iconFile": "166_Kitsun_Noct_partner.png",
+      "nameZh": "昙天之狼",
+      "descriptionZh": "可骑在它的背上移动。若它在队伍中，玩家和帕鲁受到的暗属性伤害减轻(15~30)%，并且不会陷入黑暗状态。（不可叠加）科技59"
     },
     "activeSkills": null,
     "drops": null,
@@ -7711,7 +8043,9 @@
       "name": "Hellflame Lion",
       "description": "Can be ridden. While in party, Grass Pals drop (40~80)% more items when defeated. (Does not stack)",
       "iconId": "017",
-      "iconFile": "167_Blazehowl_partner.png"
+      "iconFile": "167_Blazehowl_partner.png",
+      "nameZh": "狱炎狮子",
+      "descriptionZh": "可骑在它的背上移动。若它在队伍中，击倒草属性帕鲁时获得的掉落道具增加(40~80)%。（不可叠加）科技33"
     },
     "activeSkills": null,
     "drops": null,
@@ -7757,7 +8091,9 @@
       "name": "Darkflame Lion",
       "description": "Can be ridden. While in party, Neutral Pals drop (40~80)% more items when defeated. (Does not stack)",
       "iconId": "017",
-      "iconFile": "168_Blazehowl_Noct_partner.png"
+      "iconFile": "168_Blazehowl_Noct_partner.png",
+      "nameZh": "黑炎狮子",
+      "descriptionZh": "可骑在它的背上移动。若它在队伍中，击倒无属性帕鲁时获得的掉落道具增加(40~80)%。（不可叠加）科技35"
     },
     "activeSkills": null,
     "drops": null,
@@ -7805,7 +8141,9 @@
       "name": "Cast-Iron Shell",
       "description": "While in your party, generates a barrier around the player after 5 melee hits are landed within (5~9) seconds. (Does not stack)",
       "iconId": null,
-      "iconFile": "169_Warsect_partner.png"
+      "iconFile": "169_Warsect_partner.png",
+      "nameZh": "攻守一体的黑甲",
+      "descriptionZh": "若它在队伍中，当玩家的近战攻击在(5~9)秒内命中5次时，它会在玩家周边生成护盾。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -7851,7 +8189,9 @@
       "name": "Fullmetal Shell",
       "description": "While in your party, generates a barrier around the player after 5 melee hits are landed within (5~9) seconds. (Does not stack)",
       "iconId": null,
-      "iconFile": "170_Warsect_Terra_partner.png"
+      "iconFile": "170_Warsect_Terra_partner.png",
+      "nameZh": "攻守一体的金甲",
+      "descriptionZh": "若它在队伍中，当玩家的近战攻击在(5~9)秒内命中5次时，它会在玩家周边生成护盾。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -7896,7 +8236,9 @@
       "name": "Peacock Pounce",
       "description": "While in party, Frostplume 's icy aura sharpens focus, increasing the player's reload speeds by (20~50)%. (Does not stack)",
       "iconId": null,
-      "iconFile": "171_Frostplume_partner.png"
+      "iconFile": "171_Frostplume_partner.png",
+      "nameZh": "孔雀迅捷",
+      "descriptionZh": "若它在队伍中，受到白真雪雀释放的冷气影响，玩家会更专注，武器重新装弹的速度提升(20~50)%。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -7944,7 +8286,9 @@
       "name": "Phantasmal Arcana",
       "description": "While in party, when the player attacks an enemy afflicted with Burn, the enemy creates flames around itself, dealing continuous damage equal to (15~30)% of the player's attack damage to enemies that come into contact with them. (Does not stack.)",
       "iconId": null,
-      "iconFile": "172_Majex_partner.png"
+      "iconFile": "172_Majex_partner.png",
+      "nameZh": "暗狐秘咒",
+      "descriptionZh": "若它在队伍中，玩家的攻及击中点燃状态的敌人时，会使敌人周边燃烧，对碰到火焰的敌人持续造成相当于玩家攻击力(15~30)%的伤害。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -7990,7 +8334,9 @@
       "name": "Silk Shroud",
       "description": "When activated, attacks targeted enemy with Blizzard Spike. When this Pal uses Blizzard Spike, it has a x(1.1~2.5) damage multiplier. Sometimes makes High Quality Cloth when assigned to Ranch.",
       "iconId": "001",
-      "iconFile": "173_Sibelyx_partner.png"
+      "iconFile": "173_Sibelyx_partner.png",
+      "nameZh": "神秘缠丝者",
+      "descriptionZh": "发动后会以钻石星辰攻击锁定的目标敌人。此帕鲁使用的钻石星辰的威力将提升至(1.1~2.5)倍。将它分派到家畜牧场，它就有机会制造出优质的布。"
     },
     "activeSkills": null,
     "drops": null,
@@ -8035,7 +8381,9 @@
       "name": "Gilded Shroud",
       "description": "While in party, increases Defense of Neutral Pals by (15~30)%. (Does not stack) Sometimes makes High Quality Cloth when assigned to Ranch.",
       "iconId": null,
-      "iconFile": "174_Sibelyx_Primo_partner.png"
+      "iconFile": "174_Sibelyx_Primo_partner.png",
+      "nameZh": "神秘缠金丝者",
+      "descriptionZh": "若它在队伍中，无属性帕鲁的防御力会提升(15~30)%。（不可叠加）将它分派到家畜牧场，它就有机会制作优质的布。"
     },
     "activeSkills": null,
     "drops": null,
@@ -8080,7 +8428,9 @@
       "name": "Messenger of Death",
       "description": "Can be ridden. While in party, all Party Pals' Active Skill cooldowns are reduced by (30~60)% whenever you defeat an enemy. (Does not stack)",
       "iconId": "017",
-      "iconFile": "175_Maraith_partner.png"
+      "iconFile": "175_Maraith_partner.png",
+      "nameZh": "冥界使者",
+      "descriptionZh": "可骑在它的背上移动。若它在队伍中，每次打倒敌人时，全体队伍帕鲁的主动技能冷却时间缩短(30~60)%。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -8128,7 +8478,9 @@
       "name": "Rampant Spores",
       "description": "Can be ridden. Sometimes drops Mushroom or Cavern Mushroom when assigned to Ranch.",
       "iconId": "017",
-      "iconFile": "176_Shroomer_partner.png"
+      "iconFile": "176_Shroomer_partner.png",
+      "nameZh": "飘飘然孢子",
+      "descriptionZh": "可骑在它的背上移动。将它分派到家畜牧场，它就有机会掉落蘑菇或者洞穴蘑菇。"
     },
     "activeSkills": null,
     "drops": null,
@@ -8176,7 +8528,9 @@
       "name": "Roiling Spores",
       "description": "Can be ridden. While at a base, its mysterious spores slow the rate at which the SAN value of allies at the base decreases by (10~15)%.",
       "iconId": "017",
-      "iconFile": "177_Shroomer_Noct_partner.png"
+      "iconFile": "177_Shroomer_Noct_partner.png",
+      "nameZh": "幽幽然孢子",
+      "descriptionZh": "可骑在它的背上移动。若它在据点里，菇波的神奇孢子将会使据点内帕鲁的SAN值下降速度减缓(10~15)%。"
     },
     "activeSkills": null,
     "drops": null,
@@ -8223,7 +8577,9 @@
       "name": "Witch's Icy Veil",
       "description": "When activated, Icelyn changes the player's attack type to Ice and increases Attack by (30~50)%.",
       "iconId": null,
-      "iconFile": "178_Icelyn_partner.png"
+      "iconFile": "178_Icelyn_partner.png",
+      "nameZh": "魔女的冷气",
+      "descriptionZh": "发动后，冰姬灵会将力量分给玩家，让玩家的攻击转变为冰属性，且攻击力提升(30~50)%。"
     },
     "activeSkills": null,
     "drops": null,
@@ -8270,7 +8626,9 @@
       "name": "Resurrection",
       "description": "While fighting together, when Gildra is incapacitated, it revives with its Hunger reduced to 0.",
       "iconId": null,
-      "iconFile": "179_Gildra_partner.png"
+      "iconFile": "179_Gildra_partner.png",
+      "nameZh": "黄泉归来",
+      "descriptionZh": "与玩家并肩作战时，若缚乃伊陷入濒死状态，缚乃伊会消耗全部的饱腹度并复活。"
     },
     "activeSkills": null,
     "drops": null,
@@ -8315,7 +8673,9 @@
       "name": "Stormbringer Sea Dragon",
       "description": "Can be ridden to travel on water. While in party, increases player's and Pals' damage to enemies afflicted with Soak by (50~65)%. (Does not stack)",
       "iconId": "019",
-      "iconFile": "180_Jormuntide_partner.png"
+      "iconFile": "180_Jormuntide_partner.png",
+      "nameZh": "呼唤风暴的深海龙",
+      "descriptionZh": "可骑在它的背上在水上移动。若它在队伍中，玩家和帕鲁对浸湿状态的敌人造成的伤害将提升(50~65)%。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -8360,7 +8720,9 @@
       "name": "Stormbringer Lava Dragon",
       "description": "Can be ridden. While in party, nullifies lava damage and increases player's and Pals' damage to enemies afflicted with Burn by (50~65)%. (Does not stack)",
       "iconId": "017",
-      "iconFile": "181_Jormuntide_Ignis_partner.png"
+      "iconFile": "181_Jormuntide_Ignis_partner.png",
+      "nameZh": "呼唤风暴的熔岩龙",
+      "descriptionZh": "可骑在它的背上移动。若它在队伍中，能让熔岩伤害无效化，且玩家和帕鲁对点燃状态的敌人造成的伤害将提升(50~65)%。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -8404,7 +8766,9 @@
       "name": "Wings of Flame",
       "description": "Can be ridden as a flying mount. This Pal’s Movement Speed increases by (5~25)% for each other Fire Pal in your party. (Excluding Suzaku)",
       "iconId": "018",
-      "iconFile": "182_Suzaku_partner.png"
+      "iconFile": "182_Suzaku_partner.png",
+      "nameZh": "炎之翼",
+      "descriptionZh": "可骑在它的背上在空中飞行。朱雀的移动速度，会随着队伍中其他火属性帕鲁的数量提升，每只增加(5~25)%。科技43"
     },
     "activeSkills": null,
     "drops": null,
@@ -8448,7 +8812,9 @@
       "name": "Wings of Water",
       "description": "Can be ridden as a flying mount. This Pal’s Movement Speed increases by (5~25)% for each other Water Pal in your party. (Excluding Suzaku Aqua)",
       "iconId": "018",
-      "iconFile": "183_Suzaku_Aqua_partner.png"
+      "iconFile": "183_Suzaku_Aqua_partner.png",
+      "nameZh": "水之翼",
+      "descriptionZh": "可骑在它的背上在空中飞行。清雀的移动速度，会随着队伍中其他水属性帕鲁的数量提升，每只增加(5~25)%。科技44"
     },
     "activeSkills": null,
     "drops": null,
@@ -8492,7 +8858,9 @@
       "name": "Sand Sprint",
       "description": "Can be ridden. Movement Speed is increased by (50~100)% while mounted on sand.",
       "iconId": "017",
-      "iconFile": "184_Dazemu_partner.png"
+      "iconFile": "184_Dazemu_partner.png",
+      "nameZh": "飞砂腿",
+      "descriptionZh": "可骑在它的背上移动。在砂地上移动时，移动速度会提高(50~100)%。"
     },
     "activeSkills": null,
     "drops": null,
@@ -8539,7 +8907,9 @@
       "name": "Sky Dragon Affection",
       "description": "Can be ridden as a flying mount. While in party, increases Attack of Dragon Pals by (15~30)%. (Does not stack)",
       "iconId": "018",
-      "iconFile": "185_Quivern_partner.png"
+      "iconFile": "185_Quivern_partner.png",
+      "nameZh": "天空龙的慈爱",
+      "descriptionZh": "可骑在它的背上在空中飞行。若它在队伍中，龙属性帕鲁的攻击力会提升(15~30)%。（不可叠加）科技38"
     },
     "activeSkills": null,
     "drops": null,
@@ -8588,7 +8958,9 @@
       "name": "Grass Dragon Affection",
       "description": "Can be ridden as a flying mount. While mounted, changes the player’s attack type to Grass and increases Attack by (5~20)%.",
       "iconId": "018",
-      "iconFile": "186_Quivern_Botan_partner.png"
+      "iconFile": "186_Quivern_Botan_partner.png",
+      "nameZh": "翠龙的慈爱",
+      "descriptionZh": "可骑在它的背上在空中飞行。骑乘期间玩家的攻击会转变为草属性，且攻击力提升(5~20)%。科技45"
     },
     "activeSkills": null,
     "drops": null,
@@ -8635,7 +9007,9 @@
       "name": "Floral Boost",
       "description": "While at a base, Lullu fills farms with good spirits, increasing the growth rate of the crops by (50~70)%.",
       "iconId": null,
-      "iconFile": "187_Lullu_partner.png"
+      "iconFile": "187_Lullu_partner.png",
+      "nameZh": "繁花告春",
+      "descriptionZh": "若它在据点里，春彩娘会为农园注入元气，使作物的生长加速(50~70)%。"
     },
     "activeSkills": null,
     "drops": null,
@@ -8679,7 +9053,9 @@
       "name": "Sandball Soccer",
       "description": "While in party, increases Defense of Ground Pals by (15~30)%. (Does not stack)",
       "iconId": null,
-      "iconFile": "188_Kikit_partner.png"
+      "iconFile": "188_Kikit_partner.png",
+      "nameZh": "滚滚沙滩球",
+      "descriptionZh": "若它在队伍中，地属性帕鲁的防御力提升(15~30)%。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -8723,7 +9099,9 @@
       "name": "Birds of a Feather",
       "description": "Can be ridden. While fighting together, (15~30)% increased chance of encountering pals with the same Passive Skill as this Pal. (Excludes certain Passive Skills)",
       "iconId": "017",
-      "iconFile": "189_Yakumo_partner.png"
+      "iconFile": "189_Yakumo_partner.png",
+      "nameZh": "物以类聚",
+      "descriptionZh": "可骑在它的背上移动。与它并肩作战时，遇到和它有着相同被动技能的帕鲁的概率将提升(15~30)%。※部分被动技能除外"
     },
     "activeSkills": null,
     "drops": null,
@@ -8769,7 +9147,9 @@
       "name": "Fish Fillet",
       "description": "When activated, Skutlass becomes the player's katana (Attack: (2600~3900)). If it does not revert to its normal form quickly, Skutlass will become incapacitated. It will also become incapacitated if Iaigiri is used.",
       "iconId": "000",
-      "iconFile": "190_Skutlass_partner.png"
+      "iconFile": "190_Skutlass_partner.png",
+      "nameZh": "斩骨断肉",
+      "descriptionZh": "发动后，鞘刀鱼会化身为玩家的刀（攻击：(2600~3900)）。若不及时解除，鞘刀鱼将陷入濒死状态。发动居合斩后同样会陷入濒死状态。"
     },
     "activeSkills": null,
     "drops": null,
@@ -8817,7 +9197,9 @@
       "name": "Seared Fish Fillet",
       "description": "When activated, Skutlass Ignis becomes the player's katana (Attack: (2900~4200)). If it does not revert to its normal form quickly, Skutlass Ignis will become incapacitated. It will also become incapacitated if Iaigiri is used.",
       "iconId": "000",
-      "iconFile": "191_Skutlass_Ignis_partner.png"
+      "iconFile": "191_Skutlass_Ignis_partner.png",
+      "nameZh": "炼骨断肉",
+      "descriptionZh": "发动后，炼刃鱼会化身为玩家的刀（攻击：(2900~4200)）。若不及时解除，炼刃鱼将陷入濒死状态。发动居合斩后同样会陷入濒死状态。"
     },
     "activeSkills": null,
     "drops": null,
@@ -8863,7 +9245,9 @@
       "name": "Ore-Loving Beast",
       "description": "Can be ridden. While in party, reduces weight of all types of ore by (30~60)%. (Does not stack)",
       "iconId": "017",
-      "iconFile": "192_Reptyro_partner.png"
+      "iconFile": "192_Reptyro_partner.png",
+      "nameZh": "贪食矿石之兽",
+      "descriptionZh": "可骑在它的背上移动。若它在队伍中，所有矿石种类的重量会减轻(30~60)%。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -8909,7 +9293,9 @@
       "name": "Ice-Loving Beast",
       "description": "Can be ridden. While in party, reduces weight of all types of ore by (35~65)%. (Does not stack)",
       "iconId": "017",
-      "iconFile": "193_Reptyro_Cryst_partner.png"
+      "iconFile": "193_Reptyro_Cryst_partner.png",
+      "nameZh": "贪食冰霜之兽",
+      "descriptionZh": "可骑在它的背上移动。若它在队伍中，所有矿石种类的重量会减轻(35~65)%。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -8953,7 +9339,9 @@
       "name": "Night Dancer",
       "description": "Can be ridden. Boosts jumping ability while mounted. This Pal's movement speed increases by +(50~100)% at night.",
       "iconId": "017",
-      "iconFile": "194_Starryon_partner.png"
+      "iconFile": "194_Starryon_partner.png",
+      "nameZh": "夜舞者",
+      "descriptionZh": "可骑在它的背上移动。骑乘期间跳跃能力提升。夜晚期间，此帕鲁的移动速度提升(50~100)%。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -8997,7 +9385,9 @@
       "name": "Light Dancer",
       "description": "Can be ridden. Boosts Jump Power while mounted. This Pal’s Movement Speed increases by (5~25)% for each other Neutral Pal in your party. (Excluding Starryon Primo)",
       "iconId": "017",
-      "iconFile": "195_Starryon_Primo_partner.png"
+      "iconFile": "195_Starryon_Primo_partner.png",
+      "nameZh": "光舞者",
+      "descriptionZh": "可骑在它的背上移动，骑乘期间跳跃能力提升。日耀驹的移动速度，会随着队伍中其他无属性帕鲁的数量提升，每只增加(5~25)%。科技77"
     },
     "activeSkills": null,
     "drops": null,
@@ -9041,7 +9431,9 @@
       "name": "Power Stone",
       "description": "While in party, increases player's and Pals' damage to enemies afflicted with Muddy by (50~65)%. (Does not stack)",
       "iconId": null,
-      "iconFile": "196_Pierdon_partner.png"
+      "iconFile": "196_Pierdon_partner.png",
+      "nameZh": "能量石",
+      "descriptionZh": "若它在队伍中，玩家和帕鲁对泥泞状态的敌人造成的伤害将提升(50~65)%。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -9086,7 +9478,9 @@
       "name": "Power Crystal",
       "description": "While in party, player and party Pals take (15~30)% less Dragon damage. (Does not stack)",
       "iconId": null,
-      "iconFile": "197_Pierdon_Cryst_partner.png"
+      "iconFile": "197_Pierdon_Cryst_partner.png",
+      "nameZh": "能量水晶",
+      "descriptionZh": "若它在队伍中，玩家和帕鲁受到的龙属性伤害减轻(15~30)%。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -9133,7 +9527,9 @@
       "name": "Dragon Hunter",
       "description": "While in party, Dragon Pals drop (40~80)% more items when defeated. (Does not stack)",
       "iconId": "014",
-      "iconFile": "198_Cryolinx_partner.png"
+      "iconFile": "198_Cryolinx_partner.png",
+      "nameZh": "猎龙者",
+      "descriptionZh": "若它在队伍中，击倒龙属性帕鲁时获得的掉落道具增加(40~80)%。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -9180,7 +9576,9 @@
       "name": "Explosive Strength",
       "description": "While in party, when attacking enemy weak point, increases the power of the next weak point attack by (30~60)%. (Does not stack)",
       "iconId": null,
-      "iconFile": "199_Cryolinx_Terra_partner.png"
+      "iconFile": "199_Cryolinx_Terra_partner.png",
+      "nameZh": "爆碎铁腕",
+      "descriptionZh": "若它在队伍中，攻击击中弱点部位时，下次击中弱点部位的攻击威力提升(30~60)%。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -9227,7 +9625,9 @@
       "name": "Invisible Eye",
       "description": "While in party, reduces the chance of being detected by enemies. (Does not stack)",
       "iconId": null,
-      "iconFile": "200_Snugloo_partner.png"
+      "iconFile": "200_Snugloo_partner.png",
+      "nameZh": "不见之眼",
+      "descriptionZh": "若它在队伍中，会使玩家不容易被敌人发现。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -9274,7 +9674,9 @@
       "name": "Guardian of the Snowy Mountain",
       "description": "Can be ridden. While at a base, increases the Transporting Work Suitability Level for all other Base Pals by +1. (Does not stack)",
       "iconId": "017",
-      "iconFile": "201_Wumpo_partner.png"
+      "iconFile": "201_Wumpo_partner.png",
+      "nameZh": "雪山巨人",
+      "descriptionZh": "可骑在它的背上移动。若它在据点里，其他据点帕鲁的搬运工作适应性等级+1。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -9321,7 +9723,9 @@
       "name": "Guardian of the South",
       "description": "Can be ridden. While in party, player and party Pals take (15~30)% less Ground damage and are immune to Muddy status. (Does not stack)",
       "iconId": "017",
-      "iconFile": "202_Wumpo_Botan_partner.png"
+      "iconFile": "202_Wumpo_Botan_partner.png",
+      "nameZh": "南方巨人",
+      "descriptionZh": "可骑在它的背上移动。若它在队伍中，玩家和帕鲁受到的地属性伤害减轻(15~30)%，并且不会陷入泥泞状态。（不可叠加）科技51"
     },
     "activeSkills": null,
     "drops": null,
@@ -9370,7 +9774,9 @@
       "name": "Grave Robber",
       "description": "While in party, player and party Pals take (15~30)% less Neutral damage. (Does not stack) Sometimes digs up Bone when assigned to Ranch.",
       "iconId": null,
-      "iconFile": "203_Sootseer_partner.png"
+      "iconFile": "203_Sootseer_partner.png",
+      "nameZh": "古墓烛影",
+      "descriptionZh": "若它在队伍中，玩家和帕鲁受到的无属性伤害减轻(15~30)%。（不可叠加）将它分派到家畜牧场，它就有机会从地里挖出骨头。"
     },
     "activeSkills": null,
     "drops": null,
@@ -9417,7 +9823,9 @@
       "name": "Entangling Tongue",
       "description": "While in party, when the player performs a dodge roll or dodge step, Carnibora creates a whirlwind that deals damage to enemies it touches (Grass / Power: (40~80)). (Does not stack)",
       "iconId": "011",
-      "iconFile": "204_Carnibora_partner.png"
+      "iconFile": "204_Carnibora_partner.png",
+      "nameZh": "巨舌缠绕",
+      "descriptionZh": "若它在队伍中，玩家进行翻滚或滑步动作时，颚莉丝会卷起旋风攻击接触到的敌人（草属性/ 威力:(40~80)）。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -9462,7 +9870,9 @@
       "name": "Magma Kaiser",
       "description": "Can be ridden. While in party, increases the Attack and Defense of the Pal fighting alongside you by (5~10)% whenever you defeat an enemy. This effect lasts 20 seconds and stacks up to five times.",
       "iconId": "017",
-      "iconFile": "205_Blazamut_partner.png"
+      "iconFile": "205_Blazamut_partner.png",
+      "nameZh": "熔岩凯撒",
+      "descriptionZh": "可骑在它的背上移动。若它在队伍中，打倒敌人时，一同并肩作战的帕鲁的攻击力与防御力会提升(5~10)%。该效果最多可累积5层，持续20秒。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -9508,7 +9918,9 @@
       "name": "Dragon Kaiser",
       "description": "Can be ridden. While in party, improves player's and Pals' Dragon damage to enemy weak points by (25~40)%. (Does not stack)",
       "iconId": "017",
-      "iconFile": "206_Blazamut_Ryu_partner.png"
+      "iconFile": "206_Blazamut_Ryu_partner.png",
+      "nameZh": "巨龙凯撒",
+      "descriptionZh": "可骑在它的背上移动。若它在队伍中，玩家和帕鲁以龙属性攻击命中敌方弱点时的伤害将提升(25~40)%。（不可叠加）科技55"
     },
     "activeSkills": null,
     "drops": null,
@@ -9557,7 +9969,9 @@
       "name": "Forest Laser",
       "description": "Can be ridden. When activated, Dualith fires a powerful Grass laser from its right hand.",
       "iconId": "017",
-      "iconFile": "207_Dualith_partner.png"
+      "iconFile": "207_Dualith_partner.png",
+      "nameZh": "自然光炮",
+      "descriptionZh": "可骑在它的背上移动。发动后，双心岩傀的右手处会发射草属性的强力激光。科技48"
     },
     "activeSkills": null,
     "drops": null,
@@ -9606,7 +10020,9 @@
       "name": "Corruption Laser",
       "description": "Can be ridden. When activated, Dualith Noct fires a powerful Dark laser from its right hand.",
       "iconId": "017",
-      "iconFile": "208_Dualith_Noct_partner.png"
+      "iconFile": "208_Dualith_Noct_partner.png",
+      "nameZh": "枯萎光炮",
+      "descriptionZh": "可骑在它的背上移动。发动后，咒心岩傀的右手处会发射暗属性的强力激光。科技69"
     },
     "activeSkills": null,
     "drops": null,
@@ -9652,7 +10068,9 @@
       "name": "Guardian of the Desert",
       "description": "When activated, Anubis changes the player's attack type to Ground and increases Attack by (30~50)%. Occasionally evades attacks with a flash sidestep during battle.",
       "iconId": null,
-      "iconFile": "209_Anubis_partner.png"
+      "iconFile": "209_Anubis_partner.png",
+      "nameZh": "沙漠守护神",
+      "descriptionZh": "发动后，阿努比斯会将力量分给玩家，让玩家的攻击转变为地属性，且攻击力提升(30~50)%。战斗时偶尔会以高速移步回避攻击。"
     },
     "activeSkills": null,
     "drops": null,
@@ -9698,7 +10116,9 @@
       "name": "Desert Empress",
       "description": "While at base, boosts Anubis 's work speed by (20~40)%. Increases efficiency by (30~60)% if Sekhmet is also working at a Workbench, Workshop, or other related facilities. (Does not stack)",
       "iconId": "016",
-      "iconFile": "210_Sekhmet_partner.png"
+      "iconFile": "210_Sekhmet_partner.png",
+      "nameZh": "沙漠女帝",
+      "descriptionZh": "若它在据点里，据点中的阿努比斯的工作速度提升(20~40)%。（不可叠加）塞赫麦特在工作台或作业工厂等处工作时，工作效率将会提升(30~60)%。"
     },
     "activeSkills": null,
     "drops": null,
@@ -9745,7 +10165,9 @@
       "name": "Phantom Venom",
       "description": "While in party, increases player's and Pals' damage to enemies afflicted with Poison by (50~65)%. (Does not stack)",
       "iconId": null,
-      "iconFile": "211_Prixter_partner.png"
+      "iconFile": "211_Prixter_partner.png",
+      "nameZh": "无毒毒蝎",
+      "descriptionZh": "若它在队伍中，玩家和帕鲁对中毒状态的敌人造成的伤害将提升(50~65)%。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -9793,7 +10215,9 @@
       "name": "Scorpion Longwave",
       "description": "When activated, Prixter Lux changes the player's attack type to Electric and increases Attack by (30~50)%.",
       "iconId": null,
-      "iconFile": "212_Prixter_Lux_partner.png"
+      "iconFile": "212_Prixter_Lux_partner.png",
+      "nameZh": "低频脉冲蝎",
+      "descriptionZh": "发动后，电针妖会将力量分给玩家，让玩家的攻击转变为雷属性，且攻击力提升(30~50)%。"
     },
     "activeSkills": null,
     "drops": null,
@@ -9837,7 +10261,9 @@
       "name": "Masonry Archelon",
       "description": "Can be ridden While at a base, increases the Mining Work Suitability Level for all other Base Pals by +1. (Does not stack)",
       "iconId": "017",
-      "iconFile": "213_Tetroise_partner.png"
+      "iconFile": "213_Tetroise_partner.png",
+      "nameZh": "负石古代龟",
+      "descriptionZh": "可骑在它的背上移动。若它在据点里，其他据点帕鲁的采矿工作适应性等级+1。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -9881,7 +10307,9 @@
       "name": "Stone-Chaser Archelon",
       "description": "Can be ridden. While in party, increases the durability of all weapons and armor by (80~100)%. (Does not stack)",
       "iconId": "017",
-      "iconFile": "214_Tetroise_Primo_partner.png"
+      "iconFile": "214_Tetroise_Primo_partner.png",
+      "nameZh": "逐石古代龟",
+      "descriptionZh": "可骑在它的背上移动。若它在队伍中，武器和防具的耐久度损耗减缓(80~100)%。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -9928,7 +10356,9 @@
       "name": "Shot-Nyan Mode",
       "description": "When activated, Nyafia will fire a shotgun at nearby enemies for a limited time. While in party, increases the player's shotgun damage by (10~35)%. (Does not stack)",
       "iconId": "003",
-      "iconFile": "215_Nyafia_partner.png"
+      "iconFile": "215_Nyafia_partner.png",
+      "nameZh": "猫咪霰阵",
+      "descriptionZh": "发动后，妮瞅莎会在一段时间内用霰弹枪攻击附近的敌人。若它在队伍中，玩家的霰弹枪攻击伤害提升(10~35)%。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -9973,7 +10403,9 @@
       "name": "Master of Unlocking",
       "description": "While fighting together, Mimog can open treasure chests without using a key.",
       "iconId": null,
-      "iconFile": "216_Mimog_partner.png"
+      "iconFile": "216_Mimog_partner.png",
+      "nameZh": "撬锁",
+      "descriptionZh": "与它并肩作战时，能借助旺财的力量，在不使用钥匙的情况下打开宝箱。"
     },
     "activeSkills": null,
     "drops": null,
@@ -10018,7 +10450,9 @@
       "name": "Unknown Invader",
       "description": "While in party, increases the damage of the last bullet fired from a full-auto weapon by (100~160)%. (Does not stack)",
       "iconId": "000",
-      "iconFile": "217_Xenovader_partner.png"
+      "iconFile": "217_Xenovader_partner.png",
+      "nameZh": "未知侵略者",
+      "descriptionZh": "若它在队伍中，全自动武器的弹匣中最后一发子弹的伤害提升(100~160)%。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -10062,7 +10496,9 @@
       "name": "Unknown Intruder",
       "description": "Can be ridden. While in party, increases the player's energy weapon damage by (10~35)%. (Does not stack)",
       "iconId": "017",
-      "iconFile": "218_Xenogard_partner.png"
+      "iconFile": "218_Xenogard_partner.png",
+      "nameZh": "未知入侵者",
+      "descriptionZh": "可骑在它的背上移动。若它在队伍中，玩家使用能量武器时的伤害提升(10~35)%。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -10111,7 +10547,9 @@
       "name": "Prayer for Abundant Harvest",
       "description": "While at a base, Prunelia 's prayers bless the crops, increasing their harvest by (18~35)%.",
       "iconId": null,
-      "iconFile": "219_Prunelia_partner.png"
+      "iconFile": "219_Prunelia_partner.png",
+      "nameZh": "丰收祈愿",
+      "descriptionZh": "若它在据点里，梅莉姆会进行祈祷， 让作物的收获量提升(18~35)%。"
     },
     "activeSkills": null,
     "drops": null,
@@ -10156,7 +10594,9 @@
       "name": "Soul Collector",
       "description": "While fighting together, Pals drop +(100~200)% more Pal Souls when defeated. (Does not stack)",
       "iconId": "014",
-      "iconFile": "220_Nitemary_partner.png"
+      "iconFile": "220_Nitemary_partner.png",
+      "nameZh": "夺魂幽灵兔",
+      "descriptionZh": "若它在队伍中，击倒帕鲁时帕鲁之魂的获得量提升+(100~200)%。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -10202,7 +10642,9 @@
       "name": "Soul Binder",
       "description": "While in party, increases Defense of Grass Pals by (15~30)%. (Does not stack)",
       "iconId": null,
-      "iconFile": "221_Nitemary_Botan_partner.png"
+      "iconFile": "221_Nitemary_Botan_partner.png",
+      "nameZh": "缚魂幽灵兔",
+      "descriptionZh": "若它在队伍中，草属性帕鲁的防御力提升(15~30)%。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -10246,7 +10688,9 @@
       "name": "Dig, Smokie! Dig!",
       "description": "When activated, uses its sharp sense of smell to detect nearby Chromite. While fighting together, Chromite acquisition increases by +(100~200)%.",
       "iconId": "007",
-      "iconFile": "222_Smokie_partner.png"
+      "iconFile": "222_Smokie_partner.png",
+      "nameZh": "忠犬墨丸",
+      "descriptionZh": "发动后能够以敏锐的嗅觉，来探测附近铬铁矿的位置。与它并肩作战时，铬铁矿的掉落量也会提升(100~200)%。"
     },
     "activeSkills": null,
     "drops": null,
@@ -10292,7 +10736,9 @@
       "name": "Cryo Instincts",
       "description": "While at a base, increases the Cooling Work Suitability Level for all other Base Pals by +1. (Does not stack)",
       "iconId": "000",
-      "iconFile": "223_Smokie_Cryst_partner.png"
+      "iconFile": "223_Smokie_Cryst_partner.png",
+      "nameZh": "忠犬冬丸",
+      "descriptionZh": "若它在据点里，其他据点帕鲁的冷却工作适应性等级+1。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -10336,7 +10782,9 @@
       "name": "Masquerade Dance",
       "description": "While in party, increases Party Pals' EXP gained by (40~80)%. (Does not stack)",
       "iconId": "014",
-      "iconFile": "224_Omascul_partner.png"
+      "iconFile": "224_Omascul_partner.png",
+      "nameZh": "假面舞会",
+      "descriptionZh": "若它在队伍中，队伍帕鲁获得的经验值会提升(40~80)%。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -10382,7 +10830,9 @@
       "name": "Chilled Whale Cruiser",
       "description": "Can be ridden. While in party, fishing minigames start with the capture gauge increased by (5~14)%. Additionally, while the bars overlap, capture progress increases by (5~14)%. (Does not stack)",
       "iconId": "019",
-      "iconFile": "225_Whalaska_partner.png"
+      "iconFile": "225_Whalaska_partner.png",
+      "nameZh": "凉冰冰鲸鱼号",
+      "descriptionZh": "可骑在它的背上在水上移动。若它在队伍中，垂钓的捕获计量槽在小游戏开始时的初始位置升高(5~14)%，并且在判定条与鱼的图标重合期间，捕获计量槽的上升量增加(5~14)%。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -10428,7 +10878,9 @@
       "name": "Cozy Whale Cruiser",
       "description": "Can be ridden. While in party, fishing minigame begins with the capture gauge (7~17)% higher than usual, and capture progress increases by (7~17)% while the bars overlap. (Does not stack)",
       "iconId": "019",
-      "iconFile": "226_Whalaska_Ignis_partner.png"
+      "iconFile": "226_Whalaska_Ignis_partner.png",
+      "nameZh": "暖烘烘鲸鱼号",
+      "descriptionZh": "可骑在它的背上在水上移动。若它在队伍中，垂钓的捕获计量槽在小游戏开始时的初始位置升高(7~17)%，并且在判定条与鱼的图标重合期间，捕获计量槽的上升量增加(7~17)%。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -10476,7 +10928,9 @@
       "name": "Grassland Gymnast",
       "description": "While in party, grants 1 additional jump and 1 additional mid-air dash. (Does not stack)",
       "iconId": null,
-      "iconFile": "227_Verdash_partner.png"
+      "iconFile": "227_Verdash_partner.png",
+      "nameZh": "草原特技之星",
+      "descriptionZh": "若它在队伍中，可以额外进行+1次跳跃和+1次空中冲刺。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -10523,7 +10977,9 @@
       "name": "Blade of Uncontrolled Passion",
       "description": "While in party, the amount of items obtained from using the Meat Cleaver increases by (100~200)%. (Does not stack)",
       "iconId": null,
-      "iconFile": "228_Splatterina_partner.png"
+      "iconFile": "228_Splatterina_partner.png",
+      "nameZh": "狂爱之刃",
+      "descriptionZh": "若它在队伍中， 使用切肉刀进行解体时，获得的掉落道具增加(100~200)%。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -10567,7 +11023,9 @@
       "name": "Sandstorm's Blessing",
       "description": "Can be ridden. While mounted, changes the player’s attack type to Ground and increases Attack by (5~20)%.",
       "iconId": "017",
-      "iconFile": "229_Gildane_partner.png"
+      "iconFile": "229_Gildane_partner.png",
+      "nameZh": "沙尘加护",
+      "descriptionZh": "可骑在它的背上移动。骑乘期间玩家的攻击会转变为地属性，且攻击力提升(5~20)%。科技54"
     },
     "activeSkills": null,
     "drops": null,
@@ -10615,7 +11073,9 @@
       "name": "Homeward Prayer",
       "description": "When activated, teleports to the nearest base. Cannot be used inside dungeons or similar areas.",
       "iconId": null,
-      "iconFile": "230_Dogen_partner.png"
+      "iconFile": "230_Dogen_partner.png",
+      "nameZh": "归去来兮",
+      "descriptionZh": "发动后可以移动至最近的据点。无法在地下城里使用。"
     },
     "activeSkills": null,
     "drops": null,
@@ -10660,7 +11120,9 @@
       "name": "Yokozuna's Presence",
       "description": "Can be ridden. While in party, player and party Pals take (15~30)% less Electric damage and are immune to Electrify. (Does not stack)",
       "iconId": "017",
-      "iconFile": "231_Bulldosu_partner.png"
+      "iconFile": "231_Bulldosu_partner.png",
+      "nameZh": "横纲风范",
+      "descriptionZh": "可骑在它的背上移动。若它在队伍中，玩家和帕鲁受到的雷属性伤害减轻(15~30)%，并且不会陷入感电状态。（不可叠加）科技53"
     },
     "activeSkills": null,
     "drops": null,
@@ -10705,7 +11167,9 @@
       "name": "Blessing of Purification",
       "description": "Can be ridden. This Pal's Attack and Movement Speed increases by (2~6)% for each other Neutral Pal in your party. When in party, recovers Health of the player and Party Pals by (0.15~0.75)% per second. (Does not stack)",
       "iconId": "017",
-      "iconFile": "232_Celesdir_partner.png"
+      "iconFile": "232_Celesdir_partner.png",
+      "nameZh": "净化的祝福",
+      "descriptionZh": "可骑在它的背上移动。净世鹿的攻击力和移动速度，会随着队伍中其他无属性帕鲁的数量提升，每只增加(2~6)%。若它在队伍中，非战斗时每秒令玩家与队伍帕鲁的生命值恢复(0.15~0.75)%。（不可叠加）科技54"
     },
     "activeSkills": null,
     "drops": null,
@@ -10750,7 +11214,9 @@
       "name": "Blessing of Chaos",
       "description": "Can be ridden. While in party, the Pal fighting alongside you gradually loses Health in exchange for (40~80)% Attack increase. (Does not stack)",
       "iconId": "017",
-      "iconFile": "233_Celesdir_Noct_partner.png"
+      "iconFile": "233_Celesdir_Noct_partner.png",
+      "nameZh": "混沌的祝福",
+      "descriptionZh": "可骑在它的背上移动。若它在队伍中，一同并肩作战的帕鲁的生命值会逐渐减少，但攻击力将提升(40~80)%。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -10796,7 +11262,9 @@
       "name": "Black Ankylosaur",
       "description": "Can be ridden as a flying mount. Increases the damage dealt to ores by (1100~3300)%, and you can obtain (150~300)% more Ore while mounted.",
       "iconId": "018",
-      "iconFile": "234_Astegon_partner.png"
+      "iconFile": "234_Astegon_partner.png",
+      "nameZh": "黑铠之龙",
+      "descriptionZh": "可骑在它的背上在空中飞行。骑乘期间对矿石造成的伤害将提升(1100~3300)%，且金属矿石的掉落量提升(150~300)%。"
     },
     "activeSkills": null,
     "drops": null,
@@ -10842,7 +11310,9 @@
       "name": "Steel Guardian Mode",
       "description": "When activated, a steel resolve increases Knocklem 's Attack by (50~200)% and Defense by (50~200)% for a limited time.",
       "iconId": "006",
-      "iconFile": "235_Knocklem_partner.png"
+      "iconFile": "235_Knocklem_partner.png",
+      "nameZh": "钢铁卫士模式",
+      "descriptionZh": "发动后会以钢铁般的意志，在一定时间内提高泰锋的攻击力(50~200)%，防御力(50~200)%。"
     },
     "activeSkills": null,
     "drops": null,
@@ -10888,7 +11358,9 @@
       "name": "Iron Guardian Mode",
       "description": "When activated, a steel resolve increases Knocklem Ignis 's Attack by (60~210)% and Defense by (60~210)% for a limited time.",
       "iconId": "006",
-      "iconFile": "236_Knocklem_Ignis_partner.png"
+      "iconFile": "236_Knocklem_Ignis_partner.png",
+      "nameZh": "铁血卫士模式",
+      "descriptionZh": "发动后会以钢铁般的意志，在一定时间内提高丹烽的攻击力(60~210)%，防御力(60~210)%。"
     },
     "activeSkills": null,
     "drops": null,
@@ -10932,7 +11404,9 @@
       "name": "Aegis Shield",
       "description": "Can be ridden. While in party, reduces shield regeneration delay by (30~60)% and reduces damage taken by your shield by (65~80)%. (Does not stack)",
       "iconId": "017",
-      "iconFile": "237_Silvegis_partner.png"
+      "iconFile": "237_Silvegis_partner.png",
+      "nameZh": "埃癸斯之盾",
+      "descriptionZh": "可骑在它的背上移动。若它在队伍中，玩家的护盾开始修复的等候时间缩短(30~60)%，且护盾受到的伤害减少(65~80)%。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -10976,7 +11450,9 @@
       "name": "Plasma Dash",
       "description": "Can be ridden. Grants Air Dash, to move at even higher speeds.",
       "iconId": "017",
-      "iconFile": "238_Azurmane_partner.png"
+      "iconFile": "238_Azurmane_partner.png",
+      "nameZh": "电离冲刺",
+      "descriptionZh": "可骑在它的背上移动。此外，可在空中进行冲刺以高速移动。"
     },
     "activeSkills": null,
     "drops": null,
@@ -11020,7 +11496,9 @@
       "name": "Big Stretch",
       "description": "While in party, reduces the effects of gravity on the player, making them more floaty while jumping and falling. (Does not stack)",
       "iconId": null,
-      "iconFile": "239_Valentail_partner.png"
+      "iconFile": "239_Valentail_partner.png",
+      "nameZh": "伸展喵咪",
+      "descriptionZh": "若它在队伍中，玩家承受的重力减弱，跳跃或坠落时会漂浮落地。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -11064,7 +11542,9 @@
       "name": "Charging Shell",
       "description": "While in party, the player's attacks inflict Electrify (2~6). (Does not stack)",
       "iconId": null,
-      "iconFile": "240_Snock_partner.png"
+      "iconFile": "240_Snock_partner.png",
+      "nameZh": "电电电池",
+      "descriptionZh": "若它在队伍中，会为玩家的攻击附加(2~6)点感电异常状态值。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -11109,7 +11589,9 @@
       "name": "Grounding Shell",
       "description": "While in party, player and party Pals take (15~30)% less Water damage, and are immune to Soak. (Does not stack)",
       "iconId": null,
-      "iconFile": "241_Snock_Lux_partner.png"
+      "iconFile": "241_Snock_Lux_partner.png",
+      "nameZh": "咚咚甲壳",
+      "descriptionZh": "若它在队伍中，玩家和帕鲁受到的水属性伤害减轻(15~30)%，并且不会陷入浸湿状态。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -11154,7 +11636,9 @@
       "name": "Fuzzy Fairy",
       "description": "While in party, increases the capture rate of Pals afflicted with Ivy-Covered. (Does not stack)",
       "iconId": null,
-      "iconFile": "242_Souffline_partner.png"
+      "iconFile": "242_Souffline_partner.png",
+      "nameZh": "绒毛妖精",
+      "descriptionZh": "若它在队伍中，提升对陷入缠绕状态帕鲁的捕获概率。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -11201,7 +11685,9 @@
       "name": "Friend of Earth",
       "description": "While in party, increases the player's Defense by (50~65)% while sprinting. (Does not stack)",
       "iconId": null,
-      "iconFile": "243_Lapiron_partner.png"
+      "iconFile": "243_Lapiron_partner.png",
+      "nameZh": "大地是好朋友",
+      "descriptionZh": "若它在队伍中，玩家在冲刺期间的防御力提升(50~65)%。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -11246,7 +11732,9 @@
       "name": "Void-Dweller",
       "description": "While in party, increases the player's damage dealt to enemies that are not in combat by (50~100)%. (Does not stack)",
       "iconId": null,
-      "iconFile": "244_Hoodle_partner.png"
+      "iconFile": "244_Hoodle_partner.png",
+      "nameZh": "潜于虚无之物",
+      "descriptionZh": "若它在队伍中，玩家对非战斗状态的敌人造成的伤害提升(50~100)%。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -11290,7 +11778,9 @@
       "name": "Chillswitch",
       "description": "While in party, when the player attacks an enemy afflicted with Electrify, the enemy discharges electricity, dealing damage equal to (40~60)% of the player's attack damage to nearby enemies. (Does not stack.)",
       "iconId": null,
-      "iconFile": "245_Slowatt_partner.png"
+      "iconFile": "245_Slowatt_partner.png",
+      "nameZh": "懒懒电键",
+      "descriptionZh": "若它在队伍中，玩家的攻击击中感电状态的敌人时，会令敌人放电，对周围的敌人造成相当于玩家攻击力(40~60)%的伤害。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -11336,7 +11826,9 @@
       "name": "Grinning Death",
       "description": "While in party, attacking enemies afflicted with Poison reduces their Attack by (40~80)%. (Does not stack)",
       "iconId": null,
-      "iconFile": "246_Bakemi_partner.png"
+      "iconFile": "246_Bakemi_partner.png",
+      "nameZh": "播撒欢笑的亡者",
+      "descriptionZh": "若它在队伍中，攻击陷入中毒状态的敌人时，会使该敌人的攻击力降低(40~80)%。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -11380,7 +11872,9 @@
       "name": "Charming Fish",
       "description": "Can be ridden to travel on water. While in party, makes it easier to fish up talented Pals. (Does not stack)",
       "iconId": "019",
-      "iconFile": "247_Solmora_partner.png"
+      "iconFile": "247_Solmora_partner.png",
+      "nameZh": "领袖翻车鱼",
+      "descriptionZh": "可骑在它的背上在水上移动。若它在队伍中，会更容易钓上高潜力帕鲁。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -11426,7 +11920,9 @@
       "name": "Shocking Fish",
       "description": "Can be ridden to travel on water. While mounted, changes the player's attack type to Electric and increases Attack by (5~20)%. While in party, makes it easier to fish up talented Pals. (Does not stack)",
       "iconId": "019",
-      "iconFile": "248_Solmora_Lux_partner.png"
+      "iconFile": "248_Solmora_Lux_partner.png",
+      "nameZh": "电光翻车鱼",
+      "descriptionZh": "可骑在它的背上在水上移动。骑乘期间玩家的攻击会转变为雷属性，且攻击力提升(5~20)%。此外，若它在队伍中，会更容易钓上高潜力帕鲁。（不可叠加）科技66"
     },
     "activeSkills": null,
     "drops": null,
@@ -11471,7 +11967,9 @@
       "name": "Long-Sleeved Hurray",
       "description": "While in party, reduces the Partner Skill cooldowns for other party Pals by (10~50)%. (Does not stack)",
       "iconId": null,
-      "iconFile": "249_Lapure_partner.png"
+      "iconFile": "249_Lapure_partner.png",
+      "nameZh": "长袖啦啦队员",
+      "descriptionZh": "若它在队伍中，其他队伍帕鲁的伙伴技能冷却时间缩短(10~50)%。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -11516,7 +12014,9 @@
       "name": "Liberated Pterosaur",
       "description": "Can be ridden as a flying mount. This Pal's Attack and Movement Speed increase by (2~6)% for each other Dragon or Dark Pal in your party.",
       "iconId": "018",
-      "iconFile": "250_Eidrolon_partner.png"
+      "iconFile": "250_Eidrolon_partner.png",
+      "nameZh": "自由翼龙",
+      "descriptionZh": "可骑在它的背上在空中飞行。灵曦龙的攻击力和移动速度，会随着队伍中其他龙属性或暗属性帕鲁的数量提升，每只增加(2~6)%。科技68"
     },
     "activeSkills": null,
     "drops": null,
@@ -11562,7 +12062,9 @@
       "name": "Resentful Pterosaur",
       "description": "Can be ridden as a flying mount. This Pal's Attack and Movement Speed increase by (2~6)% or each other Dragon or Fire Pal in your party. (Excluding Eidrolon Ignis)",
       "iconId": "018",
-      "iconFile": "251_Eidrolon_Ignis_partner.png"
+      "iconFile": "251_Eidrolon_Ignis_partner.png",
+      "nameZh": "愤怒翼龙",
+      "descriptionZh": "可骑在它的背上在空中飞行。狱熙龙的攻击力和移动速度，会随着队伍中其他龙属性或火属性帕鲁的数量提升，每只增加(2~6)%。科技76"
     },
     "activeSkills": null,
     "drops": null,
@@ -11608,7 +12110,9 @@
       "name": "Electro-Massage Incubation",
       "description": "Can be ridden as a flying mount. While at a base, shortens the time it takes to incubate eggs by (20~40)%. (Does not stack)",
       "iconId": "018",
-      "iconFile": "252_Dynamoff_partner.png"
+      "iconFile": "252_Dynamoff_partner.png",
+      "nameZh": "电动按摩式抱窝",
+      "descriptionZh": "可骑在它的背上在空中飞行。若它在据点里，帕鲁蛋的孵化速度加快(20~40)%。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -11653,7 +12157,9 @@
       "name": "Flower Dance",
       "description": "While in party, extends the invincibility period during dodge rolls and dodge steps by (15~30)%. (Does not stack)",
       "iconId": null,
-      "iconFile": "253_Tropicaw_partner.png"
+      "iconFile": "253_Tropicaw_partner.png",
+      "nameZh": "花之舞",
+      "descriptionZh": "若它在队伍中，玩家进行翻滚或滑步动作时，无敌时间延长(15~30)%。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -11699,7 +12205,9 @@
       "name": "Burning Future",
       "description": "While in party, when the player attacks an enemy afflicted with Burn, the enemy explodes, dealing damage equal to (40~60)% of the player's attack damage to nearby enemies. (Does not stack.)",
       "iconId": null,
-      "iconFile": "254_Flaracle_partner.png"
+      "iconFile": "254_Flaracle_partner.png",
+      "nameZh": "未来之炎",
+      "descriptionZh": "若它在队伍中，玩家的攻击击中点燃状态的敌人时，会使敌人爆炸，额外造成相当于玩家攻击力(40~60)%的伤害。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -11745,7 +12253,9 @@
       "name": "Glorious Mist",
       "description": "Can be ridden. While in party, the player's attacks inflict Soak (2~6). (Does not stack)",
       "iconId": "017",
-      "iconFile": "255_Ophydia_partner.png"
+      "iconFile": "255_Ophydia_partner.png",
+      "nameZh": "清灿迷雾",
+      "descriptionZh": "可骑在它的背上移动。若它在队伍中，会为玩家的攻击附加(2~6)点浸湿异常状态值。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -11792,7 +12302,9 @@
       "name": "Trick-Loving Fluffle",
       "description": "While in party, when the player's Health falls below 50%, Dupin generates an explosion around the player (Fire / Power: (100~200) / Burn buildup: 777). Additionally, while the player's Health is below 50%, the player's Attack is increased by (30~50)%. (Does not stack)",
       "iconId": null,
-      "iconFile": "256_Dupin_partner.png"
+      "iconFile": "256_Dupin_partner.png",
+      "nameZh": "拉比拉比魔术秀",
+      "descriptionZh": "若它在队伍中，当玩家的生命值低于50%时，拉比耶尔会在玩家周边掀起爆炸冲击波（火属性/ 威力:(100~200)/点燃积蓄值:777）。）。此外，玩家的生命值低于50%期间，玩家的攻击力提升(30~50)%。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -11837,7 +12349,9 @@
       "name": "Dark-Nester",
       "description": "Can be ridden as a flying mount. While in party, increases player's and Pals' damage to enemies afflicted with Blind by (50~65)%. (Does not stack)",
       "iconId": "018",
-      "iconFile": "257_Roujay_partner.png"
+      "iconFile": "257_Roujay_partner.png",
+      "nameZh": "潜影怪鸟",
+      "descriptionZh": "可骑在它的背上在空中飞行。若它在队伍中，玩家和帕鲁对黑暗状态的敌人造成的伤害将提升(50~65)%。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -11884,7 +12398,9 @@
       "name": "Snake's Sagacity",
       "description": "While in party, the player's attacks inflict Blind (2~6). (Does not stack)",
       "iconId": null,
-      "iconFile": "258_Venusa_partner.png"
+      "iconFile": "258_Venusa_partner.png",
+      "nameZh": "灵蛇之智",
+      "descriptionZh": "若它在队伍中，会为玩家的攻击附加(2~6)点黑暗异常状态值。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -11931,7 +12447,9 @@
       "name": "Charming Spore",
       "description": "While at a base, increases the Medicine Production Work Suitability Level for all other Base Pals by +1. (Does not stack)",
       "iconId": null,
-      "iconFile": "259_Mycora_partner.png"
+      "iconFile": "259_Mycora_partner.png",
+      "nameZh": "魅惑孢子",
+      "descriptionZh": "若它在据点里，其他据点帕鲁的制药工作适应性等级+1。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -11978,7 +12496,9 @@
       "name": "Lantern Enchantment",
       "description": "While in party, the player's arrows explode on contact, dealing additional damage equal to (15~30)% of the player's attack damage. (Does not stack)",
       "iconId": null,
-      "iconFile": "260_Loomen_partner.png"
+      "iconFile": "260_Loomen_partner.png",
+      "nameZh": "提灯附魔",
+      "descriptionZh": "若它在队伍中，玩家射箭命中目标时会爆炸，额外造成相当于玩家攻击力(15~30)%的伤害。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -12024,7 +12544,9 @@
       "name": "Hidden Dark Energy",
       "description": "While in party, increases Defense of Dark Pals by (15~30)%. (Does not stack)",
       "iconId": null,
-      "iconFile": "261_Wistella_partner.png"
+      "iconFile": "261_Wistella_partner.png",
+      "nameZh": "隐藏的暗能量",
+      "descriptionZh": "若它在队伍中，暗属性帕鲁的防御力提升(15~30)%。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -12071,7 +12593,9 @@
       "name": "Untainted Maiden",
       "description": "While in party, increases the player's Attack by (30~80)% if all Pals in party are different species. (Does not stack)",
       "iconId": null,
-      "iconFile": "262_Solenne_partner.png"
+      "iconFile": "262_Solenne_partner.png",
+      "nameZh": "孤染公主",
+      "descriptionZh": "若它在队伍中，并且所有队伍帕鲁的种类都不同时，玩家的攻击力会提升(30~80)%。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -12118,7 +12642,9 @@
       "name": "Stage Combat",
       "description": "While in party, the player's attacks inflict Burn (2~6). (Does not stack)",
       "iconId": null,
-      "iconFile": "263_Renjishi_partner.png"
+      "iconFile": "263_Renjishi_partner.png",
+      "nameZh": "大显身手",
+      "descriptionZh": "若它在队伍中，会为玩家的攻击附加(2~6)点点燃异常状态值。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -12163,7 +12689,9 @@
       "name": "Indestructible Fortress",
       "description": "Can be ridden. While in party, player and party Pals take (60~80)% less damage from explosive attacks, and are immune to Stun. (Does not stack)",
       "iconId": "017",
-      "iconFile": "264_Aegidron_partner.png"
+      "iconFile": "264_Aegidron_partner.png",
+      "nameZh": "不破要塞龙",
+      "descriptionZh": "可骑在它的背上移动。若它在队伍中，玩家和帕鲁受到的爆炸攻击伤害减轻(60~80)%，并且不会陷入眩晕状态。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -12210,7 +12738,9 @@
       "name": "Yellow Tank",
       "description": "Can be ridden. Can rapidly fire a minigun while mounted.",
       "iconId": "017",
-      "iconFile": "265_Grizzbolt_partner.png"
+      "iconFile": "265_Grizzbolt_partner.png",
+      "nameZh": "黄色重型战车",
+      "descriptionZh": "可骑在它的背上移动。骑乘期间它还能用机关枪连续攻击。"
     },
     "activeSkills": null,
     "drops": null,
@@ -12257,7 +12787,9 @@
       "name": "Harvest Goddess",
       "description": "When activated, the queen's soothing graces restore the Health of the player and Party Pals by (80~90)%.",
       "iconId": "004",
-      "iconFile": "266_Lyleen_partner.png"
+      "iconFile": "266_Lyleen_partner.png",
+      "nameZh": "丰饶女神",
+      "descriptionZh": "发动后便能通过女王的疗愈能力，为玩家和队伍内的帕鲁恢复(80~90)%的生命值。"
     },
     "activeSkills": null,
     "drops": null,
@@ -12303,7 +12835,9 @@
       "name": "Goddess of the Tranquil Light",
       "description": "When activated, the queen's soothing graces restore the Health of the player and Party Pals by (85~95)%.",
       "iconId": "004",
-      "iconFile": "267_Lyleen_Noct_partner.png"
+      "iconFile": "267_Lyleen_Noct_partner.png",
+      "nameZh": "幽光女神",
+      "descriptionZh": "发动后便能通过女王的疗愈能力，为玩家和队伍内的帕鲁恢复(85~95)%的生命值。"
     },
     "activeSkills": null,
     "drops": null,
@@ -12350,7 +12884,9 @@
       "name": "Ferocious Thunder Dragon",
       "description": "While in party, hitting an enemy with a bullet increases the Attack and Defense of the Pal fighting alongside you by (1~5)% for 5 seconds. This effect stacks up to 30 times. (Does not stack.)",
       "iconId": null,
-      "iconFile": "268_Orserk_partner.png"
+      "iconFile": "268_Orserk_partner.png",
+      "nameZh": "凶猛的迅雷龙",
+      "descriptionZh": "若它在队伍中，子弹击中敌人时，一同并肩作战的帕鲁的攻击力与防御力会提升(1~5)%。该效果最多可累积30层，持续5秒。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -12395,7 +12931,9 @@
       "name": "Scorching Predator",
       "description": "Can be ridden as a flying mount. While in party, Ice Pals drop (40~80)% more items when defeated. (Does not stack)",
       "iconId": "018",
-      "iconFile": "269_Faleris_partner.png"
+      "iconFile": "269_Faleris_partner.png",
+      "nameZh": "灼热捕食者",
+      "descriptionZh": "可骑在它的背上在空中飞行。若它在队伍中，击倒冰属性帕鲁时获得的掉落道具增加(40~80)%。（不可叠加）科技60"
     },
     "activeSkills": null,
     "drops": null,
@@ -12440,7 +12978,9 @@
       "name": "Tidal Predator",
       "description": "Can be ridden as a flying mount. While in party, Fire Pals drop (40~80)% more items when defeated. (Does not stack)",
       "iconId": "018",
-      "iconFile": "270_Faleris_Aqua_partner.png"
+      "iconFile": "270_Faleris_Aqua_partner.png",
+      "nameZh": "潮汐捕食者",
+      "descriptionZh": "可骑在它的背上在空中飞行。若它在队伍中，击倒火属性帕鲁时获得的掉落道具增加(40~80)%。（不可叠加）科技60"
     },
     "activeSkills": null,
     "drops": null,
@@ -12484,7 +13024,9 @@
       "name": "Modified DNA",
       "description": "Can be ridden as a flying mount. While flying, Movement Speed is increased. Enhances Dark attacks by (15~30)% while mounted.",
       "iconId": "018",
-      "iconFile": "271_Shadowbeak_partner.png"
+      "iconFile": "271_Shadowbeak_partner.png",
+      "nameZh": "基因改造",
+      "descriptionZh": "可骑在它的背上在空中飞行。骑乘期间的暗属性攻击将提升(15~30)%。且飞行时移动速度会提升。科技47"
     },
     "activeSkills": null,
     "drops": null,
@@ -12531,7 +13073,9 @@
       "name": "Celestial Darkness",
       "description": "Can be ridden as a flying mount. While mounted, enhances Neutral and Dark attacks by (15~30)%.",
       "iconId": "018",
-      "iconFile": "272_Selyne_partner.png"
+      "iconFile": "272_Selyne_partner.png",
+      "nameZh": "晦暗辉光",
+      "descriptionZh": "可坐在它背后的月亮在空中飞行。骑乘期间的无属性和暗属性攻击将强化(15~30)%。科技53"
     },
     "activeSkills": null,
     "drops": null,
@@ -12577,7 +13121,9 @@
       "name": "Blizzard Crash",
       "description": "Can be ridden. While mounted, delivers crushing blows with a hammer forged from Ice.",
       "iconId": "017",
-      "iconFile": "273_Bastigor_partner.png"
+      "iconFile": "273_Bastigor_partner.png",
+      "nameZh": "暴雪冲击",
+      "descriptionZh": "可骑在它的背上移动。骑乘期间它还能挥下冰属性的大锤进行攻击。科技73"
     },
     "activeSkills": null,
     "drops": null,
@@ -12623,7 +13169,9 @@
       "name": "Azure Sovereign",
       "description": "Can be ridden as a flying mount. This Pal's Attack increases by (4~8)% for each other Dragon Pal in your party.",
       "iconId": "018",
-      "iconFile": "274_Shaolong_partner.png"
+      "iconFile": "274_Shaolong_partner.png",
+      "nameZh": "苍天统治者",
+      "descriptionZh": "可骑在它的背上在空中飞行。霄龙的攻击力，会随着队伍中其他龙属性帕鲁的数量提升，每只增加(4~8)%。科技77"
     },
     "activeSkills": null,
     "drops": null,
@@ -12671,7 +13219,9 @@
       "name": "Spore Stalwart",
       "description": "While in party, when the player attacks an enemy afflicted with Ivy-Covered, the enemy explodes, dealing additional damage equal to (40~60)% of the player's attack damage. (Does not stack) Also grants immunity to the World Tree's Explosive Spores to both the player and their Pals.",
       "iconId": null,
-      "iconFile": "275_Silvance_partner.png"
+      "iconFile": "275_Silvance_partner.png",
+      "nameZh": "孢子守卫",
+      "descriptionZh": "若它在队伍中，玩家的攻击击中缠绕状态的敌人时，会使敌人爆炸，额外造成相当于玩家攻击力(40~60)%的伤害。（不可叠加）另外，能让玩家与帕鲁不受世界树的爆炸孢子影响。"
     },
     "activeSkills": null,
     "drops": null,
@@ -12720,7 +13270,9 @@
       "name": "Mist Stalwart",
       "description": "When activated, the player's attacks inflict Poison (2~6). While in party, grants the player and party Pals immunity to Poison, and nullifies the effects of toxic gas in the World Tree area. (Does not stack)",
       "iconId": null,
-      "iconFile": "276_Dandilord_partner.png"
+      "iconFile": "276_Dandilord_partner.png",
+      "nameZh": "迷雾守卫",
+      "descriptionZh": "发动后，为玩家的攻击附加(2~6)点中毒异常状态值。（不可叠加）若它在队伍中，玩家和帕鲁不会陷入中毒状态，并且不受世界树区域的毒气影响。"
     },
     "activeSkills": null,
     "drops": null,
@@ -12766,7 +13318,9 @@
       "name": "Nightmare Iris",
       "description": "When activated, attacks targeted enemy with Nightmare Ray. When this Pal uses Nightmare Ray, it has a x(1.1~2.5) damage multiplier.",
       "iconId": "001",
-      "iconFile": "277_Bellanoir_partner.png"
+      "iconFile": "277_Bellanoir_partner.png",
+      "nameZh": "梦魇之瞳",
+      "descriptionZh": "发动后会以噩梦射线攻击锁定的目标敌人。此帕鲁使用的噩梦射线的威力将提升至(1.1~2.5)倍。"
     },
     "activeSkills": null,
     "drops": null,
@@ -12812,7 +13366,9 @@
       "name": "Nightmare Stare",
       "description": "When activated, attacks targeted enemy with Nightmare Bloom. When this Pal uses Nightmare Bloom, it has a x(1.1~2.5) damage multiplier.",
       "iconId": "001",
-      "iconFile": "278_Bellanoir_Libero_partner.png"
+      "iconFile": "278_Bellanoir_Libero_partner.png",
+      "nameZh": "噩梦凝视",
+      "descriptionZh": "发动后会以噩梦绽放攻击锁定的目标敌人。此帕鲁使用的噩梦绽放的威力将提升至(1.1~2.5)倍。"
     },
     "activeSkills": null,
     "drops": null,
@@ -12857,7 +13413,9 @@
       "name": "Meteor Wings",
       "description": "Can be ridden as a flying mount. While in party, damage done by Partner Skills of weapon-wielding Pals increases by (20~50)%. (Does not stack)",
       "iconId": "018",
-      "iconFile": "279_Xenolord_partner.png"
+      "iconFile": "279_Xenolord_partner.png",
+      "nameZh": "陨星之翼",
+      "descriptionZh": "可骑在它的背上在空中飞行。若它在队伍中，持有武器的帕鲁的伙伴技能伤害将提升(20~50)%。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -12902,7 +13460,9 @@
       "name": "Sacred Barrier",
       "description": "Can be ridden. While mounted, it generates a barrier that blocks all attacks. Can triple jump while mounted.",
       "iconId": "017",
-      "iconFile": "280_Hartalis_partner.png"
+      "iconFile": "280_Hartalis_partner.png",
+      "nameZh": "庇佑圣盾",
+      "descriptionZh": "可骑在它的背上移动。骑乘期间可生成护盾，抵御一切攻击。此外，骑乘期间可进行3段跳跃。"
     },
     "activeSkills": null,
     "drops": null,
@@ -12947,7 +13507,9 @@
       "name": "Holy Knight of the Firmament",
       "description": "Can be ridden. Can triple jump while mounted. Activate Spear Thrust to have Necromus stay by your side and attack enemies in tandem.",
       "iconId": "017",
-      "iconFile": "281_Paladius_partner.png"
+      "iconFile": "281_Paladius_partner.png",
+      "nameZh": "天翔圣骑士",
+      "descriptionZh": "可骑在它的背上移动。骑乘期间可以进行3段跳跃，发动闪枪冲锋后，会召唤出1只队伍中的混沌骑士，一起进行攻击。"
     },
     "activeSkills": null,
     "drops": null,
@@ -12992,7 +13554,9 @@
       "name": "Dark Knight of the Abyss",
       "description": "Can be ridden. Can double jump while mounted. When Twin Spears skill is activated, a Paladius in your party will appear and attack alongside you.",
       "iconId": "017",
-      "iconFile": "282_Necromus_partner.png"
+      "iconFile": "282_Necromus_partner.png",
+      "nameZh": "深渊黑骑士",
+      "descriptionZh": "可骑在它的背上移动。骑乘期间可以进行2段跳跃，发动双枪一闪后，会召唤出1只队伍中的圣光骑士，一起进行攻击。"
     },
     "activeSkills": null,
     "drops": null,
@@ -13036,7 +13600,9 @@
       "name": "Icy Steed",
       "description": "Can be ridden as a flying mount. While mounted, changes the player's attack type to Ice, inflict Freeze (2~6), increases Attack by (10~40)%.",
       "iconId": "018",
-      "iconFile": "283_Frostallion_partner.png"
+      "iconFile": "283_Frostallion_partner.png",
+      "nameZh": "冰天马",
+      "descriptionZh": "可骑在它的背上在空中飞行。骑乘期间玩家的攻击会转变为冰属性，攻击力提升(10~40)%，且攻击会附加(2~6)点冻结异常状态值。科技62"
     },
     "activeSkills": null,
     "drops": null,
@@ -13080,7 +13646,9 @@
       "name": "Black Steed",
       "description": "Can be ridden as a flying mount. While mounted, changes the player's attack type to Dark, inflict Blind (2~6), increases Attack by (10~40)%.",
       "iconId": "018",
-      "iconFile": "284_Frostallion_Noct_partner.png"
+      "iconFile": "284_Frostallion_Noct_partner.png",
+      "nameZh": "黑天马",
+      "descriptionZh": "可骑在它的背上在空中飞行。骑乘期间玩家的攻击会转变为暗属性，攻击力提升(10~40)%，且攻击会附加(2~6)点黑暗异常状态值。科技62"
     },
     "activeSkills": null,
     "drops": null,
@@ -13124,7 +13692,9 @@
       "name": "Sentinel of the Great Sea",
       "description": "While in party, it follows up the player's attacks with Water spear strikes. Can be ridden to travel on water. While mounted, it can leap high into the air over water.",
       "iconId": "019",
-      "iconFile": "285_Neptilius_partner.png"
+      "iconFile": "285_Neptilius_partner.png",
+      "nameZh": "大海的霸主",
+      "descriptionZh": "与玩家并肩作战时，它会配合玩家的攻击用水属性的长枪进行追击。可骑在它的背上在水上移动。骑乘期间可在水面高高跃起。科技64"
     },
     "activeSkills": null,
     "drops": null,
@@ -13168,7 +13738,9 @@
       "name": "Aerial Missile",
       "description": "Can be ridden as a flying mount. Can rapidly fire a missile launcher while mounted.",
       "iconId": "018",
-      "iconFile": "286_Jetragon_partner.png"
+      "iconFile": "286_Jetragon_partner.png",
+      "nameZh": "地毯式轰炸",
+      "descriptionZh": "可骑在它的背上在空中飞行。骑乘期间它还能用导弹发射器连续攻击。"
     },
     "activeSkills": null,
     "drops": null,
@@ -13210,7 +13782,9 @@
       "name": "Resonant Guardian",
       "description": "Can be ridden as a flying mount. Only 1 can be summoned to a base. While at a base, it constantly patrols the skies and bombards intruders from high above.",
       "iconId": "000",
-      "iconFile": "287_Panthalus_partner.png"
+      "iconFile": "287_Panthalus_partner.png",
+      "nameZh": "残响守护者",
+      "descriptionZh": "可骑在它的背上在空中飞行。在据点最多只能召唤1只。若它在据点里，会在据点上空持续盘旋，远程炮轰入侵据点的敌人。"
     },
     "activeSkills": null,
     "drops": null,
@@ -13296,7 +13870,9 @@
       "name": "Slime Body",
       "description": "Can be ridden. Can jump high into the air while mounted.",
       "iconId": "017",
-      "iconFile": "289_Green_Slime_partner.png"
+      "iconFile": "289_Green_Slime_partner.png",
+      "nameZh": "史莱姆之躯",
+      "descriptionZh": "可骑在它的背上移动。骑乘期间可高高跃起。"
     },
     "activeSkills": null,
     "drops": null,
@@ -13340,7 +13916,9 @@
       "name": "Slime Body",
       "description": "Can be ridden. Can jump high into the air while mounted.",
       "iconId": "017",
-      "iconFile": "290_Blue_Slime_partner.png"
+      "iconFile": "290_Blue_Slime_partner.png",
+      "nameZh": "史莱姆之躯",
+      "descriptionZh": "可骑在它的背上移动。骑乘期间可高高跃起。"
     },
     "activeSkills": null,
     "drops": null,
@@ -13384,7 +13962,9 @@
       "name": "Slime Body",
       "description": "Can be ridden. Can jump high into the air while mounted.",
       "iconId": "017",
-      "iconFile": "291_Red_Slime_partner.png"
+      "iconFile": "291_Red_Slime_partner.png",
+      "nameZh": "史莱姆之躯",
+      "descriptionZh": "可骑在它的背上移动。骑乘期间可高高跃起。"
     },
     "activeSkills": null,
     "drops": null,
@@ -13428,7 +14008,9 @@
       "name": "Slime Body",
       "description": "Can be ridden. Can jump high into the air while mounted.",
       "iconId": "017",
-      "iconFile": "292_Purple_Slime_partner.png"
+      "iconFile": "292_Purple_Slime_partner.png",
+      "nameZh": "史莱姆之躯",
+      "descriptionZh": "可骑在它的背上移动。骑乘期间可高高跃起。"
     },
     "activeSkills": null,
     "drops": null,
@@ -13472,7 +14054,9 @@
       "name": "Slime Body",
       "description": "Can be ridden. Can jump high into the air while mounted.",
       "iconId": "017",
-      "iconFile": "293_Illuminant_Slime_partner.png"
+      "iconFile": "293_Illuminant_Slime_partner.png",
+      "nameZh": "史莱姆之躯",
+      "descriptionZh": "可骑在它的背上移动。骑乘期间可高高跃起。"
     },
     "activeSkills": null,
     "drops": null,
@@ -13516,7 +14100,9 @@
       "name": "Slime Body",
       "description": "Can be ridden. Can jump high into the air while mounted.",
       "iconId": "017",
-      "iconFile": "294_Rainbow_Slime_partner.png"
+      "iconFile": "294_Rainbow_Slime_partner.png",
+      "nameZh": "史莱姆之躯",
+      "descriptionZh": "可骑在它的背上移动。骑乘期间可高高跃起。"
     },
     "activeSkills": null,
     "drops": null,
@@ -13560,7 +14146,9 @@
       "name": "Bat Backup",
       "description": "While in party, appears near the player. Automatically picks up nearby items.",
       "iconId": "011",
-      "iconFile": "297_Illuminant_Bat_partner.png"
+      "iconFile": "297_Illuminant_Bat_partner.png",
+      "nameZh": "支援蝙蝠",
+      "descriptionZh": "若它在队伍中，就会出现在玩家身边。它会自动前去拾取附近的道具。"
     },
     "activeSkills": null,
     "drops": null,
@@ -13604,7 +14192,9 @@
       "name": "Bat Backup",
       "description": "While in party, appears near the player. Automatically picks up nearby items.",
       "iconId": "011",
-      "iconFile": "296_Cave_Bat_partner.png"
+      "iconFile": "296_Cave_Bat_partner.png",
+      "nameZh": "支援蝙蝠",
+      "descriptionZh": "若它在队伍中，就会出现在玩家身边。它会自动前去拾取附近的道具。"
     },
     "activeSkills": null,
     "drops": null,
@@ -13648,7 +14238,9 @@
       "name": "Demonic Sight",
       "description": "While in party, increases Attack of Dark Pals by (15~30)%. (Does not stack)",
       "iconId": null,
-      "iconFile": "299_Demon_Eye_partner.png"
+      "iconFile": "299_Demon_Eye_partner.png",
+      "nameZh": "恶魔的视野",
+      "descriptionZh": "若它在队伍中，暗属性帕鲁的攻击力会提升(15~30)%。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -13692,7 +14284,9 @@
       "name": "Enchant",
       "description": "While in party, Dark Pals drop (40~80)% more items when defeated. (Does not stack)",
       "iconId": "014",
-      "iconFile": "295_Enchanted_Sword_partner.png"
+      "iconFile": "295_Enchanted_Sword_partner.png",
+      "nameZh": "附魔",
+      "descriptionZh": "若它在队伍中，击倒暗属性帕鲁时获得的掉落道具增加(40~80)%。（不可叠加）"
     },
     "activeSkills": null,
     "drops": null,
@@ -13736,7 +14330,9 @@
       "name": "Mad Eye Lunge",
       "description": "When activated, Eye of Cthulhu charges and attacks targeted enemy.",
       "iconId": "001",
-      "iconFile": "298_Eye_of_Cthulhu_partner.png"
+      "iconFile": "298_Eye_of_Cthulhu_partner.png",
+      "nameZh": "进击的克苏鲁之眼",
+      "descriptionZh": "发动后，克苏鲁之眼会向前方突进并攻击锁定的敌人。"
     },
     "activeSkills": null,
     "drops": null,

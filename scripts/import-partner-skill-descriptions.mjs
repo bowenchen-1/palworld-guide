@@ -15,11 +15,15 @@ assert.equal(rows.length, 298, "partner-skill source must contain 298 verified r
 const sourceByIdentity = new Map();
 for (const cells of rows) {
   assert.ok(cells.length >= 7, `invalid partner-skill row: ${cells[0] ?? "unknown"}`);
-  const [identity, , , , paldbDescription] = cells;
+  const [identity, nameZh, descriptionZh, , paldbDescription] = cells;
   const key = normalizeIdentity(identity);
   assert.ok(!sourceByIdentity.has(key), `duplicate partner-skill source row: ${identity}`);
+  assert.ok(nameZh && nameZh !== "—", `missing Chinese partner-skill name: ${identity}`);
+  assert.ok(descriptionZh && descriptionZh !== "—", `missing Chinese partner-skill description: ${identity}`);
   sourceByIdentity.set(key, {
     identity,
+    nameZh: nameZh === "—" ? null : nameZh.trim(),
+    descriptionZh: descriptionZh === "—" ? null : descriptionZh.trim(),
     description: paldbDescription
       .replace(/\s+/g, " ")
       .replace(/\s+Technology\s+\d+\s*$/, "")
@@ -44,12 +48,16 @@ const normalized = pals.map((pal) => {
     ...pal,
     partnerSkill: {
       ...pal.partnerSkill,
+      nameZh: source.nameZh,
+      descriptionZh: source.descriptionZh,
       description: source.description === "—" ? null : source.description,
     },
   };
 });
 
 assert.equal(imported, 298, "expected 298 source rows to match the Pal database");
+assert.equal(normalized.filter((pal) => pal.partnerSkill.nameZh).length, 298, "expected 298 Chinese partner-skill names");
 assert.equal(normalized.filter((pal) => pal.partnerSkill.description).length, 298, "expected 298 partner-skill descriptions");
+assert.equal(normalized.filter((pal) => pal.partnerSkill.descriptionZh).length, 298, "expected 298 Chinese partner-skill descriptions");
 await writeFile(dataUrl, `${JSON.stringify(normalized, null, 2)}\n`);
 console.log(`Imported ${imported} verified Partner Skill descriptions; preserved unmatched special records without guessing.`);
