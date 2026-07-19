@@ -2,6 +2,7 @@ import sourceData from "../../public/data/pal-drops-locations.json";
 
 export type PalDrop = {
   name: string;
+  icon?: string;
   quantity?: string;
   chance?: string;
   condition?: string;

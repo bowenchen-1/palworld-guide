@@ -12,6 +12,9 @@ import { siteUrl } from "../../site-config";
 
 type Props = { params: Promise<{ slug: string }> };
 
+export const dynamic = "force-static";
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return catalogPals.map(({ slug }) => ({ slug }));
 }

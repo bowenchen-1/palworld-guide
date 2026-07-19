@@ -4,6 +4,8 @@ import { readFile, writeFile } from "node:fs/promises";
 const csvPath = process.argv[2] || "/Users/chen/Desktop/幻兽帕鲁_掉落物与捕获地点_v1.0.csv";
 const csv = await readFile(csvPath, "utf8");
 const pals = JSON.parse(await readFile(new URL("../public/data/pals.json", import.meta.url), "utf8"));
+let iconBySource = {};
+try { iconBySource = JSON.parse(await readFile(new URL("../public/data/pal-drop-icons.json", import.meta.url), "utf8")); } catch { /* icons are optional during the initial data import */ }
 const namesSource = await readFile(new URL("../app/lib/pal-names-zh.ts", import.meta.url), "utf8");
 const namesMatch = namesSource.match(/palNamesZh: Record<string, string> = (\{.*?\});/s);
 assert.ok(namesMatch, "could not read the existing Chinese Pal name map");
@@ -96,7 +98,7 @@ for (const row of rows) {
   used.add(pal.id);
   records.push({
     palSlug: pal.slug,
-    drops: row["掉落物（数量/概率）"].split("；").filter(Boolean).map(parseDrop),
+    drops: row["掉落物（数量/概率）"].split("；").filter(Boolean).map(parseDrop).map((drop) => ({ ...drop, icon: iconBySource[drop.sourceName] })),
     locations: row["容易捕获地点（低等级优先）"].split("；").filter(Boolean).map(translateLocation),
   });
 }
