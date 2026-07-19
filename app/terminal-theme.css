@@ -716,8 +716,10 @@ body::before {
 }
 .database-hero.compact-paldex-hero::before,
 .database-hero.compact-paldex-hero::after { display: none; }
+.zh-paldex-page .compact-paldex-hero h1 { font-size: clamp(2.4rem,3.4vw,3.8rem); line-height: .98; }
 @media (max-width: 760px) {
   .database-hero.compact-paldex-hero { width: auto; margin-inline: 20px; padding: 18px 0 8px; }
+  .zh-paldex-page .compact-paldex-hero h1 { font-size: 2.2rem; }
 }
 .paldex-control-bar,
 .paldex-table-wrap,
