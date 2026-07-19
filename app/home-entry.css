@@ -7,6 +7,11 @@
   display: none;
 }
 
+/* Keep the not-yet-launched language switcher out of the public header. */
+.site-header .language-switcher {
+  display: none;
+}
+
 /* Keep the parent calculator actions compact and centered on the homepage. */
 .home-calculator-top .calculator-foot {
   justify-content: center;
