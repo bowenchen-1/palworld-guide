@@ -13,6 +13,8 @@
     "lint": "eslint . --ignore-pattern .next",
     "data:import": "node scripts/import-pal-data.mjs",
     "data:validate": "node scripts/validate-pal-data.mjs",
+    "data:drops:import": "node scripts/import-pal-drops-locations.mjs",
+    "data:drops:validate": "node scripts/validate-pal-drops-locations.mjs",
     "data:audit": "node scripts/audit-pal-data.mjs",
     "r2:assets": "node scripts/r2-assets.mjs",
     "r2:sync": "node scripts/r2-sync.mjs",

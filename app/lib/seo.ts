@@ -12,6 +12,7 @@ type PageMetadataOptions = {
   imageHeight?: number;
   publishedTime?: string;
   modifiedTime?: string;
+  locale?: "en" | "zh";
 };
 
 export function fitMetaTitle(title: string): string {
@@ -41,19 +42,25 @@ export function createPageMetadata({
   imageHeight = 907,
   publishedTime,
   modifiedTime,
+  locale = "en",
 }: PageMetadataOptions): Metadata {
   const url = absoluteUrl(path);
   const imageUrl = absoluteUrl(image);
+  const englishPath = path.replace(/^\/zh(?=\/|$)/, "") || "/";
+  const chinesePath = path.startsWith("/zh") ? path : `/zh${path === "/" ? "/" : path}`;
+  const languages = ["/", "/breeding-calculator", "/pals"].includes(englishPath)
+    ? { en: absoluteUrl(englishPath), zh: absoluteUrl(chinesePath), "x-default": absoluteUrl(englishPath) }
+    : undefined;
   const openGraph: Metadata["openGraph"] = type === "article"
-    ? { title, description, url, siteName: "Palworld Guide", locale: "en_US", type: "article", publishedTime, modifiedTime, images: [{ url: imageUrl, width: imageWidth, height: imageHeight, type: "image/png", alt: title }] }
-    : { title, description, url, siteName: "Palworld Guide", locale: "en_US", type: "website", images: [{ url: imageUrl, width: imageWidth, height: imageHeight, type: "image/png", alt: title }] };
+    ? { title, description, url, siteName: "Palworld Guide", locale: locale === "zh" ? "zh_CN" : "en_US", type: "article", publishedTime, modifiedTime, images: [{ url: imageUrl, width: imageWidth, height: imageHeight, type: "image/png", alt: title }] }
+    : { title, description, url, siteName: "Palworld Guide", locale: locale === "zh" ? "zh_CN" : "en_US", type: "website", images: [{ url: imageUrl, width: imageWidth, height: imageHeight, type: "image/png", alt: title }] };
 
   return {
     title,
     description,
     robots: { index: true, follow: true },
     keywords,
-    alternates: { canonical: url },
+    alternates: { canonical: url, ...(languages ? { languages } : {}) },
     openGraph,
     twitter: { card: "summary_large_image", title, description, images: [imageUrl] },
   };

@@ -110,6 +110,7 @@ body::before {
 .site-header nav a.active::after { opacity: 1; transform: scaleX(1); }
 .site-search-link { border: 1px solid var(--terminal-border); border-radius: 10px; background: var(--terminal-panel-light); color: var(--terminal-copy); box-shadow: none; clip-path: var(--terminal-cut); }
 .site-search-link:hover { border-color: var(--terminal-mint); background: var(--terminal-panel-hover); color: var(--terminal-mint); }
+.site-search-link>span { display:none; }
 .site-mobile-menu { display:none; }
 
 /* Homepage: content is placed directly on the canvas; no nested decorative hero frames. */
@@ -526,6 +527,11 @@ body::before {
 .profile-role-summary small { color:#b4cdcc; }
 .profile-role-summary .palworld-icon { flex:0 0 26px; width:26px; height:26px; }
 .profile-role-summary .palworld-icon img { width:26px; height:26px; }
+.profile-drops-grid>section { border-color:var(--terminal-border); background:var(--terminal-panel); color:var(--terminal-copy); }
+.profile-drops-grid h3 { color:var(--terminal-copy); }
+.profile-drop-list li,.profile-location-list li { border-color:var(--terminal-border); }
+.profile-drop-list strong,.profile-location-list strong { color:var(--terminal-copy); }
+.profile-drop-list span,.profile-location-list span,.profile-drop-list small,.profile-location-list small { color:#b4cdcc; }
 .profile-stat-strip small { color:#b4cdcc; }
 .profile-work-grid strong { color:var(--terminal-copy); }
 .profile-work-grid small { color:#b4cdcc; }

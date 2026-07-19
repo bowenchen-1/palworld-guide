@@ -1,43 +1,46 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
+import { usePathname } from "next/navigation";
+import { useEffect, useMemo, useRef, useState } from "react";
+import type { Locale } from "../i18n/zh";
 
-const navItems = [
-  ["Breeding Calculator", "/#breeding-calculator"],
-  ["Team Builder", "/team-builder"],
-  ["Pals", "/pals"],
-  ["Hardwood", "/items/hardwood"],
-  ["Guides", "/guides"],
-  ["Updates", "/updates"],
-] as const;
+const navItems = [["Breeding Calculator", "/#breeding-calculator"], ["Team Builder", "/team-builder"], ["Pals", "/pals"], ["Hardwood", "/items/hardwood"], ["Guides", "/guides"], ["Updates", "/updates"]] as const;
 
-export default function SiteHeader({ current, floating = false }: { current?: string; floating?: boolean }) {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const menuRef = useRef<HTMLDivElement>(null);
+function pairedPath(pathname: string, target: Locale): string | undefined {
+  const path = pathname.split("?")[0].split("#")[0] || "/";
+  const pairs: Record<string, string> = { "/": "/zh/", "/breeding-calculator": "/zh/breeding-calculator", "/pals": "/zh/pals", "/zh/": "/", "/zh/breeding-calculator": "/breeding-calculator", "/zh/pals": "/pals" };
+  if (target === "zh") return path.startsWith("/zh") ? path : pairs[path];
+  return path.startsWith("/zh") ? pairs[path] : path;
+}
+
+export default function SiteHeader({ current, floating = false, locale }: { current?: string; floating?: boolean; locale?: Locale }) {
+  const pathname = usePathname() || "/";
+  const isZh = locale ?? (pathname.startsWith("/zh") ? "zh" : "en");
+  const [languageOpen, setLanguageOpen] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const languageRef = useRef<HTMLDivElement>(null);
+  const mobileRef = useRef<HTMLDivElement>(null);
+  const options = useMemo(() => [{ locale: "en" as const, code: "EN", label: "English", flag: "🇺🇸", href: pairedPath(pathname, "en") }, { locale: "zh" as const, code: "ZH", label: "中文", flag: "🇨🇳", href: pairedPath(pathname, "zh") }], [pathname]);
+  const localizedNav = isZh === "zh" ? [["配种计算器", "/zh/breeding-calculator"], ["帕鲁图鉴", "/zh/pals"]] as const : navItems;
 
   useEffect(() => {
-    const closeOnOutsidePress = (event: PointerEvent) => {
-      if (menuRef.current && !menuRef.current.contains(event.target as Node)) setMenuOpen(false);
+    const close = (event: PointerEvent) => {
+      if (languageRef.current && !languageRef.current.contains(event.target as Node)) setLanguageOpen(false);
+      if (mobileRef.current && !mobileRef.current.contains(event.target as Node)) setMobileOpen(false);
     };
-    const closeOnEscape = (event: KeyboardEvent) => {
-      if (event.key === "Escape") setMenuOpen(false);
-    };
-    document.addEventListener("pointerdown", closeOnOutsidePress);
-    document.addEventListener("keydown", closeOnEscape);
-    return () => {
-      document.removeEventListener("pointerdown", closeOnOutsidePress);
-      document.removeEventListener("keydown", closeOnEscape);
-    };
+    const escape = (event: KeyboardEvent) => { if (event.key === "Escape") { setLanguageOpen(false); setMobileOpen(false); } };
+    document.addEventListener("pointerdown", close); document.addEventListener("keydown", escape);
+    return () => { document.removeEventListener("pointerdown", close); document.removeEventListener("keydown", escape); };
   }, []);
 
   return <header className={`site-header ${floating ? "site-header-floating" : ""}`}>
-    <Link href="/" className="site-brand" aria-label="Palworld Field Guide home"><span>Pal</span><div><strong>PALWORLD</strong><small>FIELD GUIDE</small></div></Link>
-    <nav aria-label="Main navigation">{navItems.map(([label, href]) => <Link key={href} href={href} className={current === href ? "active" : ""}>{label}</Link>)}</nav>
-    <div className="site-mobile-menu" ref={menuRef}>
-      <button type="button" className="site-menu-toggle" aria-label="Toggle main navigation" aria-expanded={menuOpen} aria-controls="mobile-main-navigation" onClick={() => setMenuOpen((open) => !open)}><span aria-hidden="true">☰</span><span>Menu</span></button>
-      {menuOpen && <nav id="mobile-main-navigation" className="site-mobile-nav" aria-label="Mobile navigation">{navItems.map(([label, href]) => <Link key={href} href={href} className={current === href ? "active" : ""} onClick={() => setMenuOpen(false)}>{label}</Link>)}</nav>}
+    <Link href={isZh === "zh" ? "/zh/" : "/"} className="site-brand" aria-label={isZh === "zh" ? "帕鲁攻略首页" : "Field Guide home"}><Image className="site-brand-mark" src="/palworldguide-logo.svg" alt="" width={44} height={45} priority /><div><strong>FIELD GUIDE</strong><small>{isZh === "zh" ? "帕鲁攻略" : "INDEPENDENT GUIDE"}</small></div></Link>
+    <nav aria-label={isZh === "zh" ? "主导航" : "Main navigation"}>{localizedNav.map(([label, href]) => <Link key={href} href={href} className={current === href ? "active" : ""}>{label}</Link>)}</nav>
+    <div className="site-header-actions">
+      <div className="language-switcher" ref={languageRef}><button type="button" className="language-trigger" aria-haspopup="menu" aria-expanded={languageOpen} onClick={() => setLanguageOpen((open) => !open)}><span className="language-flag" aria-hidden="true">{isZh === "zh" ? "🇨🇳" : "🇺🇸"}</span><strong>{isZh === "zh" ? "ZH" : "EN"}</strong><span className={`language-chevron ${languageOpen ? "open" : ""}`} aria-hidden="true" /></button>{languageOpen && <div className="language-menu" role="menu" aria-label="Language selector">{options.map((option) => option.href ? <Link key={option.locale} href={option.href} role="menuitem" className={option.locale === isZh ? "active" : ""} onClick={() => setLanguageOpen(false)}><span className="language-flag" aria-hidden="true">{option.flag}</span><span>{option.label}</span></Link> : <span key={option.locale} role="menuitem" aria-disabled="true" className="disabled"><span className="language-flag" aria-hidden="true">{option.flag}</span><span>{option.label}</span></span>)}</div>}</div>
+      <div className="site-mobile-menu" ref={mobileRef}><button type="button" className="site-menu-toggle" aria-label={isZh === "zh" ? "打开主导航" : "Toggle main navigation"} aria-expanded={mobileOpen} aria-controls="mobile-main-navigation" onClick={() => setMobileOpen((open) => !open)}><span aria-hidden="true">☰</span><span>{isZh === "zh" ? "菜单" : "Menu"}</span></button>{mobileOpen && <nav id="mobile-main-navigation" className="site-mobile-nav" aria-label={isZh === "zh" ? "移动端导航" : "Mobile navigation"}>{localizedNav.map(([label, href]) => <Link key={href} href={href} onClick={() => setMobileOpen(false)}>{label}</Link>)}</nav>}</div>
     </div>
-    <Link href="/#site-search" className="site-search-link"><span>⌕</span> Search</Link>
   </header>;
 }
