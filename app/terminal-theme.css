@@ -14,6 +14,10 @@
   --terminal-cut: polygon(0 0, calc(100% - 18px) 0, 100% 18px, 100% 100%, 0 100%);
 }
 
+/* Chinese calculator actions: keep the reset action readable and remove the redundant swap control. */
+.home-calculator-top.zh-calculator .calculator-foot { min-height:62px; align-items:center; }
+.home-calculator-top.zh-calculator .calculator-foot button { min-height:42px; padding:10px 18px; color:var(--terminal-copy); font-size:14px; }
+
 html { background: var(--terminal-canvas); }
 body {
   background:
@@ -545,11 +549,37 @@ body::before {
 .profile-drop-list strong,.profile-location-list strong { color:var(--terminal-copy); }
 .profile-drop-list span,.profile-location-list span,.profile-drop-list small,.profile-location-list small { color:#b4cdcc; }
 .profile-drop-icon { background:rgba(57,208,197,.12); }
+.profile-elements>span:first-child { font-size:12px; }
+.profile-element { padding:7px 12px 7px 8px; font-size:14px; }
+.profile-element .palworld-icon,.profile-element .palworld-icon img { width:28px; height:28px; }
+.profile-drops-grid h3 { font-size:28px; }
+.profile-drop-copy>strong,.profile-location-list strong { font-size:16px; }
+.profile-drop-copy>span,.profile-drop-copy>small,.profile-location-list span,.profile-location-list small { font-size:13px; }
+.profile-work-grid strong { font-size:16px; }
+.profile-work-grid small { font-size:13px; }
+.profile-work-grid b { width:44px; height:44px; font-size:24px; }
+.profile-action-grid strong { font-size:20px; }
+.profile-action-grid small { font-size:13px; }
+.profile-action-grid span { font-size:10px; }
+.profile-callout p { font-size:14px; }
+.profile-related>a strong { font-size:14px; }
+.profile-related>a small { font-size:11px; }
 .profile-stat-strip small { color:#b4cdcc; }
 .profile-work-grid strong { color:var(--terminal-copy); }
 .profile-work-grid small { color:#b4cdcc; }
 .profile-work-grid b { background:rgba(57,208,197,.14); color:var(--terminal-mint); }
 .profile-related>a small { color:#b4cdcc; }
+
+/* Partner skill details on Pal profiles. */
+.profile-partner-skill-card { display:flex; min-width:0; align-items:center; gap:16px; margin-top:20px; border:1px solid var(--terminal-border); border-radius:18px; background:var(--terminal-panel); padding:20px; }
+.profile-partner-skill-card .partner-skill-icon { width:52px; height:52px; border-radius:14px; background:rgba(57,208,197,.1); }
+.profile-partner-skill-card strong { display:block; color:var(--terminal-copy); font-size:20px; }
+.profile-partner-skill-card p { margin-top:6px; color:#b4cdcc; font-size:14px; line-height:1.6; }
+@media(max-width:760px) {
+  .profile-partner-skill-card { align-items:flex-start; padding:16px; }
+  .profile-partner-skill-card strong { font-size:18px; }
+  .profile-partner-skill-card p { font-size:13px; }
+}
 .profile-callout { border:1px solid var(--terminal-border); background:var(--terminal-panel); color:var(--terminal-copy); }
 .profile-callout strong { color:var(--terminal-copy); }
 .profile-callout p { color:#b4cdcc; }
@@ -1163,3 +1193,42 @@ body::before {
   .site-header .site-mobile-nav a:hover,
   .site-header .site-mobile-nav a.active { background:rgba(57,208,197,.1); color:var(--terminal-mint); }
 }
+
+/* Keep the Pal picker readable while hovering: the picker is rendered above the calculator and
+   must not inherit the light hover palette from the legacy tool styles. */
+.home-picker-backdrop .home-pal-picker { background:linear-gradient(145deg,var(--terminal-panel),var(--terminal-canvas-2)); color:var(--terminal-copy); }
+.home-picker-backdrop .home-picker-search { border-color:var(--terminal-border); background:var(--terminal-canvas); }
+.home-picker-backdrop .home-picker-search input { color:var(--terminal-copy); caret-color:var(--terminal-mint); }
+.home-picker-backdrop .home-picker-search input::placeholder { color:var(--terminal-muted); opacity:1; }
+.home-picker-backdrop .home-pal-picker .pal-picker-grid>button { border-color:var(--terminal-border); background:rgba(255,255,255,.035); color:var(--terminal-copy); }
+.home-picker-backdrop .home-pal-picker .pal-picker-grid>button:hover,
+.home-picker-backdrop .home-pal-picker .pal-picker-grid>button:focus-visible { border-color:var(--terminal-mint); background:var(--terminal-panel-hover); color:var(--terminal-copy); }
+.home-picker-backdrop .home-pal-picker .pal-picker-grid>button:hover b,
+.home-picker-backdrop .home-pal-picker .pal-picker-grid>button:focus-visible b { color:var(--terminal-copy); }
+.home-picker-backdrop .home-pal-picker .pal-picker-grid>button:hover small,
+.home-picker-backdrop .home-pal-picker .pal-picker-grid>button:focus-visible small { color:var(--terminal-muted); }
+
+/* The standalone Chinese calculator uses the generic Pal picker markup. */
+.zh-picker-backdrop .pal-picker { border-color:var(--terminal-border); background:linear-gradient(145deg,var(--terminal-panel),var(--terminal-canvas-2)); color:var(--terminal-copy); }
+.zh-picker-backdrop .pal-picker h2 { color:var(--terminal-copy); }
+.zh-picker-backdrop .pal-picker header button { border:1px solid var(--terminal-border); background:var(--terminal-panel-light); color:var(--terminal-copy); }
+.zh-picker-backdrop .pal-picker header button:hover,
+.zh-picker-backdrop .pal-picker header button:focus-visible { border-color:var(--terminal-mint); background:var(--terminal-panel-hover); color:var(--terminal-mint); }
+.zh-picker-backdrop .pal-picker>input { border-color:var(--terminal-border); background:var(--terminal-canvas); color:var(--terminal-copy); caret-color:var(--terminal-mint); }
+.zh-picker-backdrop .pal-picker>input::placeholder { color:var(--terminal-muted); opacity:1; }
+.zh-picker-backdrop .pal-picker>input:focus { border-color:var(--terminal-mint); box-shadow:0 0 0 3px rgba(57,208,197,.22); }
+.zh-picker-backdrop .pal-picker-grid>button { border:1px solid var(--terminal-border); background:rgba(255,255,255,.035); color:var(--terminal-copy); }
+.zh-picker-backdrop .pal-picker-grid>button:hover,
+.zh-picker-backdrop .pal-picker-grid>button:focus-visible { border-color:var(--terminal-mint); background:var(--terminal-panel-hover); color:var(--terminal-copy); }
+.zh-picker-backdrop .pal-picker-grid>button:hover b,
+.zh-picker-backdrop .pal-picker-grid>button:focus-visible b { color:var(--terminal-copy); }
+.zh-picker-backdrop .pal-picker-grid>button:hover small,
+.zh-picker-backdrop .pal-picker-grid>button:focus-visible small { color:var(--terminal-muted); }
+
+/* Chinese owned-Pal control: match the target-Pal card and keep the label to one line. */
+.home-calculator-top .home-route-controls:has(.zh-manual-owned-control) > .zh-manual-owned-control { display:flex; min-height:220px; align-items:center; justify-content:center; flex-direction:column; grid-column:1 / -1; padding:29px 16px 15px; text-align:center; }
+.home-calculator-top .zh-manual-owned-control .manual-owned-main { display:flex; min-height:0; align-items:center; justify-content:center; gap:0; border:0; padding:0; text-align:center; }
+.home-calculator-top .zh-manual-owned-control .manual-owned-main:before { width:96px; height:96px; margin:0 auto; border:2px dashed rgba(134,219,218,.46); border-radius:26px; color:#b9dcdb; font-size:48px; }
+.home-calculator-top .zh-manual-owned-control .manual-owned-main strong { margin-top:11px; color:var(--terminal-copy); font-family:var(--font-display); font-size:20px; }
+.home-calculator-top .zh-manual-owned-control .manual-owned-preview { margin-top:11px; }
+.home-calculator-top .zh-manual-owned-control .manual-owned-actions { margin-top:10px; }
