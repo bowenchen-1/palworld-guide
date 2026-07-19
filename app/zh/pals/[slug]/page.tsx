@@ -26,7 +26,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const pal = findPal((await params).slug);
   if (!pal) return {};
   const nameZh = getPalNameZh(pal.name) ?? pal.name;
-  return createPageMetadata({ title: `${nameZh}｜帕鲁图鉴`, description: `查看${nameZh}的编号、属性、工作适应性、伙伴技能和配种力数据，并查询相关父母组合。`, path: `/zh/pals/${pal.slug}`, locale: "zh", keywords: [nameZh, pal.name, "帕鲁图鉴", "帕鲁配种"] });
+  const metadata = createPageMetadata({ title: `${nameZh}｜帕鲁图鉴`, description: `查看${nameZh}的编号、属性、工作适应性、伙伴技能和配种力数据，并查询相关父母组合。`, path: `/zh/pals/${pal.slug}`, locale: "zh", keywords: [nameZh, pal.name, "帕鲁图鉴", "帕鲁配种"] });
+  return { ...metadata, alternates: { canonical: `${siteUrl}/zh/pals/${pal.slug}`, languages: { en: `${siteUrl}/pals/${pal.slug}`, zh: `${siteUrl}/zh/pals/${pal.slug}`, "x-default": `${siteUrl}/pals/${pal.slug}` } } };
 }
 
 export default async function ChinesePalProfilePage({ params }: Props) {

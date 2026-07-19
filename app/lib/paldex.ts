@@ -56,10 +56,11 @@ const numberValue = (pal: PalData) => Number.parseInt(pal.number, 10);
 export const highestWorkLevel = (pal: PalData) => Math.max(0, ...Object.values(pal.work));
 const numberOrEmpty = (value: number | null) => value ?? -1;
 
-export function filterPals(records: PalData[], filters: PaldexFilters) {
+export function filterPals(records: PalData[], filters: PaldexFilters, getLocalizedName?: (pal: PalData) => string | undefined) {
   const needle = filters.q.trim().toLocaleLowerCase();
   return records.filter((pal) => {
-    const searchable = !needle || pal.name.toLocaleLowerCase().includes(needle) || pal.number.toLocaleLowerCase().includes(needle);
+    const localizedName = getLocalizedName?.(pal)?.toLocaleLowerCase();
+    const searchable = !needle || pal.name.toLocaleLowerCase().includes(needle) || localizedName?.includes(needle) || pal.number.toLocaleLowerCase().includes(needle);
     const elementMatches = !filters.elements.length || (filters.elementMode === "all" ? filters.elements.every((element) => pal.elements.includes(element)) : filters.elements.some((element) => pal.elements.includes(element)));
     const matchesWork = (key: WorkKey) => (pal.work[key] ?? 0) >= Math.max(1, filters.workLevel);
     const workMatches = !filters.work.length || (filters.workMode === "all" ? filters.work.every(matchesWork) : filters.work.some(matchesWork));

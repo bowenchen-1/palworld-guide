@@ -111,7 +111,7 @@ export default function PaldexClient({ initialPage: _initialPage = 1, locale = "
       if (frame) window.cancelAnimationFrame(frame);
     };
   }, [searchParams]);
-  const visible = useMemo(() => selectedMode ? selectedPals : sortPals(filterPals(catalogPals, filters), filters.sort), [filters, selectedMode, selectedPals]);
+  const visible = useMemo(() => selectedMode ? selectedPals : sortPals(filterPals(catalogPals, filters, isZh ? (pal) => getPalNameZh(pal.name) : undefined), filters.sort), [filters, isZh, selectedMode, selectedPals]);
   const totalPages = selectedMode ? 1 : Math.max(1, Math.ceil(visible.length / pageSize));
   const currentPage = Math.min(Math.max(_initialPage, 1), totalPages);
   const pageStart = selectedMode ? 0 : (currentPage - 1) * pageSize;

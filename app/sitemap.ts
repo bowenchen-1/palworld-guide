@@ -47,5 +47,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly" as const,
       priority: pal.name === "Sekhmet" ? 0.85 : 0.65,
     })),
+    ...catalogPals.map((pal) => ({
+      url: `${siteUrl}/zh/pals/${pal.slug}`,
+      lastModified,
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
+    })),
   ];
 }
