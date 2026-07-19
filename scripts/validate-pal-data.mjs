@@ -52,6 +52,7 @@ const coverage = {
   rideSprint: pals.filter((pal) => pal.movement.rideSprint !== null).length,
   nocturnal: pals.filter((pal) => pal.nocturnal !== null).length,
   partnerSkill: pals.filter((pal) => pal.partnerSkill.name !== null).length,
+  partnerSkillDescription: pals.filter((pal) => pal.partnerSkill.description !== null).length,
   partnerSkillIconId: pals.filter((pal) => pal.partnerSkill.iconId !== null).length,
   partnerSkillIconFile: pals.filter((pal) => pal.partnerSkill.iconFile !== null).length,
   activeSkills: pals.filter((pal) => pal.activeSkills !== null).length,

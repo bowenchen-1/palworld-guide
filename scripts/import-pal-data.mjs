@@ -63,7 +63,7 @@ const normalized = current.map((existing) => {
       run: numberOrNull(record.run),
       rideSprint: numberOrNull(record.rideSprint),
     },
-    partnerSkill: { name: record.partnerSkill === "—" ? null : record.partnerSkill, description: null, iconId: record.partnerSkillIconId ?? null, iconFile: icon.displayIconFile.split("/").at(-1) },
+    partnerSkill: { name: record.partnerSkill === "—" ? null : record.partnerSkill, description: existing.partnerSkill?.description ?? null, iconId: record.partnerSkillIconId ?? null, iconFile: icon.displayIconFile.split("/").at(-1) },
     isNewIn1_0: Boolean(newType),
     newType,
   };

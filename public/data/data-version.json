@@ -33,6 +33,7 @@
     "rideSprint": 298,
     "nocturnal": 289,
     "partnerSkill": 299,
+    "partnerSkillDescription": 298,
     "partnerSkillIconId": 202,
     "partnerSkillIconFile": 300,
     "activeSkills": 0,
