@@ -8,6 +8,7 @@ import "./globals.css";
 import "./hardwood-visual.css";
 import "./tool-pages.css";
 import "./terminal-theme.css";
+import "./home-entry.css";
 import "./team-builder/team-builder.css";
 import { siteUrl } from "./site-config";
 
