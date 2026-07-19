@@ -6,3 +6,19 @@
 .home-selector-card:not(.selected)>i {
   display: none;
 }
+
+/* Keep the parent calculator actions compact and centered on the homepage. */
+.home-calculator-top .calculator-foot {
+  justify-content: center;
+}
+
+.home-calculator-top:not(.zh-calculator) .calculator-foot > button:first-child {
+  display: none;
+}
+
+.home-calculator-top:not(.zh-calculator) .calculator-foot > button:nth-child(2),
+.home-calculator-top.zh-calculator .calculator-foot > button:first-child {
+  min-width: 110px;
+  padding: 10px 20px;
+  font-size: 14px;
+}
