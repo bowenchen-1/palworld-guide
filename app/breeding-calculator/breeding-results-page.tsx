@@ -21,10 +21,11 @@ function ParentFilter({ candidates, value, onChange }: { candidates: PalData[]; 
   return <div className="breeding-parent-filter"><span>Filter by Parent Pal</span><div className="breeding-parent-filter-control"><button type="button" className="breeding-parent-filter-trigger" aria-haspopup="listbox" aria-expanded={open} onClick={() => setOpen((current) => !current)}>{value ? <><PalMark pal={value} small /><span>{value.name}<small>No. {value.number}</small></span></> : <span>Select a Pal from these results</span>}<b aria-hidden="true">⌄</b></button>{open && <div className="breeding-parent-filter-menu" role="listbox"><input autoFocus value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search parent Pals…" aria-label="Search parent Pals" />{value && <button type="button" className="breeding-parent-filter-option clear" onClick={() => { onChange(undefined); setOpen(false); setQuery(""); }}>Clear Filter</button>}{matches.map((pal) => <button type="button" role="option" aria-selected={value?.id === pal.id} className="breeding-parent-filter-option" key={pal.id} onClick={() => { onChange(pal); setOpen(false); setQuery(""); }}><PalMark pal={pal} small /><span><strong>{pal.name}</strong><small>No. {pal.number}</small></span></button>)}{!matches.length && <p className="breeding-parent-filter-empty">No matching parent Pals.</p>}</div>}</div></div>;
 }
 
-export default function BreedingResultsPage({ targetSlug, parentSlug }: { targetSlug?: string; parentSlug?: string }) {
+export default function BreedingResultsPage() {
+  const [targetSlug, setTargetSlug] = useState<string>();
   const [matrix, setMatrix] = useState<BreedingData>({});
   const [matrixError, setMatrixError] = useState(false);
-  const [selectedParentSlug, setSelectedParentSlug] = useState(parentSlug);
+  const [selectedParentSlug, setSelectedParentSlug] = useState<string>();
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
   const resultRef = useRef<HTMLElement>(null);
   const target = targetSlug ? findPal(targetSlug) : undefined;
@@ -37,6 +38,14 @@ export default function BreedingResultsPage({ targetSlug, parentSlug }: { target
   const parentSlugs = Array.from(new Set(filteredPairs.flatMap((result) => [result.first.slug, result.second.slug]).filter((slug) => catalogPals.some((pal) => pal.slug === slug))));
   const matrixReady = Object.keys(matrix).length > 0;
 
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const frame = requestAnimationFrame(() => {
+      setTargetSlug(params.get("target") ?? undefined);
+      setSelectedParentSlug(params.get("parent") ?? undefined);
+    });
+    return () => cancelAnimationFrame(frame);
+  }, []);
   useEffect(() => { fetch(assetUrl("/data/breeding.json")).then((response) => response.ok ? response.json() : Promise.reject()).then(setMatrix).catch(() => setMatrixError(true)); }, []);
   function updateParent(pal?: PalData) {
     setSelectedParentSlug(pal?.slug);
@@ -47,7 +56,7 @@ export default function BreedingResultsPage({ targetSlug, parentSlug }: { target
     history.pushState(null, "", `/breeding-calculator?${query}`);
     requestAnimationFrame(() => resultRef.current?.scrollIntoView({ block: "start", behavior: "smooth" }));
   }
-  useEffect(() => { const onPopState = () => { const params = new URLSearchParams(location.search); const nextTarget = params.get("target"); const nextParent = params.get("parent"); if (nextTarget !== targetSlug) location.reload(); else { setSelectedParentSlug(parentCandidates.some((pal) => pal.slug === nextParent) ? nextParent ?? undefined : undefined); setVisibleCount(PAGE_SIZE); requestAnimationFrame(() => resultRef.current?.scrollIntoView({ block: "start", behavior: "smooth" })); } }; window.addEventListener("popstate", onPopState); return () => window.removeEventListener("popstate", onPopState); }, [targetSlug, parentCandidates]);
+  useEffect(() => { const onPopState = () => { const params = new URLSearchParams(location.search); const nextTarget = params.get("target") ?? undefined; const nextParent = params.get("parent") ?? undefined; setTargetSlug(nextTarget); setSelectedParentSlug(nextParent); setVisibleCount(PAGE_SIZE); requestAnimationFrame(() => resultRef.current?.scrollIntoView({ block: "start", behavior: "smooth" })); }; window.addEventListener("popstate", onPopState); return () => window.removeEventListener("popstate", onPopState); }, []);
 
   const resultContent = matrixError ? <p className="breeding-results-none">Breeding data is unavailable right now. Please try again.</p> : !matrixReady ? <p className="breeding-results-loading" aria-busy="true">Loading parent combinations…</p> : <><div className="breeding-results-summary"><div><strong>{filteredPairs.length.toLocaleString()} Possible Parent Combinations</strong><span>{selectedParent ? `Combinations Using ${selectedParent.name}` : "All parent combinations"}</span></div><ParentFilter candidates={parentCandidates} value={selectedParent} onChange={updateParent} /></div>{selectedParent && <div className="breeding-results-filter-status"><strong>Combinations Using {selectedParent.name}</strong><span>Showing {filteredPairs.length.toLocaleString()} combinations</span><button type="button" onClick={() => updateParent()}>Clear Filter</button></div>}{filteredPairs.length ? <><p className="breeding-results-count">Showing 1–{Math.min(visibleCount, filteredPairs.length)} of {filteredPairs.length.toLocaleString()} combinations</p><div className="breeding-results-list">{visiblePairs.map((result, index) => <ResultPair key={`${result.first.id}-${result.second.id}-${index}`} result={result} />)}</div>{visibleCount < filteredPairs.length ? <button type="button" className="breeding-results-load" onClick={() => setVisibleCount((count) => Math.min(count + PAGE_SIZE, filteredPairs.length))}>Load {Math.min(PAGE_SIZE, filteredPairs.length - visibleCount)} More</button> : <p className="breeding-results-all">All {filteredPairs.length.toLocaleString()} combinations shown</p>}<div className="breeding-results-database"><Link href={`/pals?ids=${parentSlugs.join(",")}`}>View Parent Pals in Database</Link></div></> : <p className="breeding-results-none">No parent combinations found for this Pal.</p>}</>;
   return <main className="breeding-results-page"><div className="breeding-results-shell"><SiteHeader /><Link className="breeding-results-back" href="/?mode=target#breeding-calculator">Choose Another Target Pal</Link>{!targetSlug ? <section className="breeding-results-empty"><h1>Select a target Pal to find parent combinations.</h1><Link className="breeding-results-cta" href="/?mode=target#breeding-calculator">Choose a Target Pal</Link></section> : !target ? <section className="breeding-results-empty"><h1>Pal not found</h1><Link className="breeding-results-cta" href="/?mode=target#breeding-calculator">Choose a Target Pal</Link></section> : <><header className="breeding-results-heading"><div><p className="database-eyebrow">Target Pal · Paldeck No. {target.number}</p><h1>Breeding Parents for {target.name}</h1><p className="breeding-results-target-link"><Link href={`/pals/${target.slug}`}><PalMark pal={target} /><span>{target.name}<small>View Pal Details</small></span></Link></p></div></header><section ref={resultRef} className="breeding-results-content">{resultContent}</section></>}</div></main>;
