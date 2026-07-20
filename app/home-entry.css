@@ -12,6 +12,11 @@
   display: none;
 }
 
+/* The Hardwood route remains available elsewhere, but is not promoted on home. */
+.home-calculator-top .site-header a[href="/items/hardwood"] {
+  display: none;
+}
+
 /* Keep the parent calculator actions compact and centered on the homepage. */
 .home-calculator-top .calculator-foot {
   justify-content: center;
