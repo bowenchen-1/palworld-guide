@@ -4,6 +4,8 @@
   "files": [
     "public/map/T_WorldMap.png",
     "public/map/Palworld_Map_Complete.png",
+    "public/map/Palpagos_Islands.png",
+    "public/map/World_Tree.png",
     "public/data/map-locations.json",
     "public/items/hardwood/feybreak-region-map.png",
     "public/items/hardwood/twilight-grove.webp",
