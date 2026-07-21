@@ -33,7 +33,7 @@ const sortOptions: Array<{ value: PaldexSort; label: string }> = [
   { value: "power-high", label: "Breeding power: high first" },
 ];
 const tableColumns = ["Pal", "Number", "Element", "Work Suitability", "Partner Skill", "Rarity", "HP", "Breeding Power", "Defense", "Drops", "Locations", "Breeding"] as const;
-const tableColumnWidths = [180, 78, 90, 230, 220, 75, 70, 125, 90, 220, 260, 145] as const;
+const tableColumnWidths = [160, 66, 78, 185, 190, 60, 60, 100, 70, 175, 210, 135] as const;
 type Sheet = "elements" | "work" | null;
 
 function PalName({ pal, locale }: { pal: PalData; locale: Locale }) {
