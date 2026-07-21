@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { useCallback, useEffect, useMemo, useRef, useState, type PointerEvent as ReactPointerEvent } from "react";
 import type { MapCategory, MapLocation } from "../../data/map";
-import { assetUrl } from "../lib/assets";
 import { getContainedImageRect, MAP_CALIBRATIONS, mapCoordinateToScreenPoint, type MapView } from "./map-calibration";
 
 const MAP_SIZE = 4096;
@@ -244,7 +243,7 @@ export default function MapClient({ initialCategories, locationCount }: { initia
       </aside>
       <div ref={stageRef} className="map-stage" onPointerDown={handlePointerDown} onPointerMove={handlePointerMove} onPointerUp={handlePointerUp} onPointerCancel={handlePointerUp} role="application" aria-label="Interactive Palworld map">
         <div className="map-board" style={{ transform: `translate3d(${pan.x}px, ${pan.y}px, 0) scale(${zoom})` }}>
-          <Image key={mapView} className="map-surface-image" src={assetUrl(mapView === "palpagos" ? "/map/Palpagos_Islands.png" : "/map/World_Tree.png")} alt={mapView === "palpagos" ? "Palpagos Islands map" : "World Tree map"} width={calibration.sourceWidth} height={calibration.sourceHeight} priority unoptimized />
+          <Image key={mapView} className="map-surface-image" src={mapView === "palpagos" ? "/map/Palpagos_Islands.png" : "/map/World_Tree.png"} alt={mapView === "palpagos" ? "Palpagos Islands map" : "World Tree map"} width={calibration.sourceWidth} height={calibration.sourceHeight} priority unoptimized />
           <canvas ref={canvasRef} className="map-marker-canvas" aria-hidden="true" />
         </div>
         <div className="map-view-switcher" role="tablist" aria-label="Map area">
@@ -259,7 +258,7 @@ export default function MapClient({ initialCategories, locationCount }: { initia
         {loading && <div className="map-status">Loading map data...</div>}
         {error && <div className="map-status map-status-error">{error}</div>}
         {!loading && !error && query.trim() && filteredLocations.length === 0 && <div className="map-empty-state"><strong>No locations found</strong><span>Try clearing the search or enabling another category.</span></div>}
-        {selected && <article className="map-location-card" onPointerDown={(event) => event.stopPropagation()}><button type="button" className="map-card-close" onClick={() => setSelected(null)} aria-label="Close location details">×</button><div className="map-card-icon"><Image src={assetUrl(selected.icon || "/map-icons/Region.webp")} alt="" width={34} height={34} unoptimized /></div><span className="map-card-category">{selected.category}</span><h3>{selected.name}</h3>{selected.level && <p className="map-card-level">Level {selected.level}</p>}{selected.description && <p className="map-card-description">{selected.description}</p>}<p className="map-card-coordinates">Map position <b>{selected.x.toFixed(0)}, {selected.y.toFixed(0)}</b></p><button type="button" className="map-share-button" onClick={() => navigator.clipboard?.writeText(`${window.location.origin}/map#${selected.id}`)}>Copy share link</button></article>}
+        {selected && <article className="map-location-card" onPointerDown={(event) => event.stopPropagation()}><button type="button" className="map-card-close" onClick={() => setSelected(null)} aria-label="Close location details">×</button><div className="map-card-icon"><Image src={selected.icon || "/map-icons/Region.webp"} alt="" width={34} height={34} unoptimized /></div><span className="map-card-category">{selected.category}</span><h3>{selected.name}</h3>{selected.level && <p className="map-card-level">Level {selected.level}</p>}{selected.description && <p className="map-card-description">{selected.description}</p>}<p className="map-card-coordinates">Map position <b>{selected.x.toFixed(0)}, {selected.y.toFixed(0)}</b></p><button type="button" className="map-share-button" onClick={() => navigator.clipboard?.writeText(`${window.location.origin}/map#${selected.id}`)}>Copy share link</button></article>}
       </div>
     </div>
   </div>;
