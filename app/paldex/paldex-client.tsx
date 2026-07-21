@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useRouter, useSearchParams } from "next/navigation";
 import { createContext, useContext, useEffect, useMemo, useRef, useState } from "react";
 import { ElementIcon, WorkSuitabilityIcon } from "../components/pal-icons";
@@ -10,6 +11,8 @@ import { filterPals, MatchMode, PaldexFilters, PaldexSort, parsePaldexFilters, s
 import { PALDEX_PAGE_SIZE } from "./paldex-config";
 import { zh, type Locale } from "../i18n/zh";
 import { getPalNameZh } from "../lib/pal-names-zh";
+import { findPalDropsLocations } from "../lib/pal-drops-locations";
+import { assetUrl } from "../lib/assets";
 
 const workTypes = Object.keys(workLabels) as WorkKey[];
 const workLabelsZh: Partial<Record<WorkKey, string>> = { emitflame: "生火", watering: "浇水", seeding: "播种", collection: "采集", mining: "采矿", deforest: "伐木", handcraft: "手工作业", cool: "冷却", generateelectricity: "发电", productmedicine: "制药", transport: "搬运", monsterfarm: "牧场" };
@@ -29,7 +32,7 @@ const sortOptions: Array<{ value: PaldexSort; label: string }> = [
   { value: "power-low", label: "Breeding power: low first" },
   { value: "power-high", label: "Breeding power: high first" },
 ];
-const tableColumns = ["Pal", "Number", "Element", "Work Suitability", "Partner Skill", "Rarity", "HP", "Breeding Power", "Defense", "Price", "Stamina", "Riding Speed", "Run Speed", "Breeding"] as const;
+const tableColumns = ["Pal", "Number", "Element", "Work Suitability", "Partner Skill", "Rarity", "HP", "Breeding Power", "Defense", "Drops", "Locations", "Breeding"] as const;
 type Sheet = "elements" | "work" | null;
 
 function PalName({ pal, locale }: { pal: PalData; locale: Locale }) {
@@ -41,7 +44,7 @@ const PaldexLocaleContext = createContext<Locale>("en");
 
 function PaldexTableHead({ frozen = false }: { frozen?: boolean }) {
   const locale = useContext(PaldexLocaleContext);
-  const labels = locale === "zh" ? ["帕鲁", "编号", "属性", "工作适应性", "伙伴技能", "稀有度", "生命值", "配种力", "防御", "价格", "耐力", "骑乘速度", "奔跑速度", "配种"] : tableColumns;
+  const labels = locale === "zh" ? ["帕鲁", "编号", "属性", "工作适应性", "伙伴技能", "稀有度", "生命值", "配种力", "防御", "掉落物", "出没地点", "配种"] : tableColumns;
   return <thead aria-hidden={frozen || undefined}><tr>{labels.map((label) => <th key={label}>{label}</th>)}</tr></thead>;
 }
 
@@ -52,6 +55,29 @@ function ElementMarks({ pal }: { pal: PalData }) {
 function WorkBadges({ pal }: { pal: PalData }) {
   const entries = Object.entries(pal.work) as [WorkKey, number][];
   return entries.length ? <p className="mini-work">{entries.map(([key, level]) => <span key={key} title={workLabels[key]}><WorkSuitabilityIcon work={key} /><b>{level}</b></span>)}</p> : <span className="muted-dash">—</span>;
+}
+
+function DropSummary({ pal, locale }: { pal: PalData; locale: Locale }) {
+  const data = findPalDropsLocations(pal.slug);
+  if (!data?.drops.length) return <span className="muted-dash">—</span>;
+  const drops = data.drops.slice(0, 3);
+  return <span className="paldex-drop-summary" aria-label={locale === "zh" ? "掉落物" : "Drops"}>
+    {drops.map((drop) => <span className="paldex-drop-item" key={`${drop.name}-${drop.quantity ?? ""}`} title={`${drop.name}${drop.quantity ? ` · ${drop.quantity}` : ""}`}>
+      {drop.icon && <Image src={assetUrl(`/icons/palworld/drops/${drop.icon}`)} alt={`${drop.name} icon`} width={24} height={24} unoptimized={Boolean(process.env.NEXT_PUBLIC_ASSET_BASE_URL)} />}
+      <span>{drop.name}{drop.quantity && <small>{drop.quantity}</small>}</span>
+    </span>)}
+    {data.drops.length > drops.length && <span className="paldex-more-count">+{data.drops.length - drops.length} more</span>}
+  </span>;
+}
+
+function LocationSummary({ pal, locale }: { pal: PalData; locale: Locale }) {
+  const data = findPalDropsLocations(pal.slug);
+  if (!data?.locations.length) return <span className="muted-dash">—</span>;
+  const locations = data.locations.slice(0, 2);
+  return <span className="paldex-location-summary" aria-label={locale === "zh" ? "出没地点" : "Locations"}>
+    {locations.map((location) => <span key={`${location.name}-${location.level ?? ""}`} title={`${location.name}${location.level ? ` · ${location.level}` : ""}`}>{location.name}</span>)}
+    {data.locations.length > locations.length && <span className="paldex-more-count">+{data.locations.length - locations.length} more</span>}
+  </span>;
 }
 
 export default function PaldexClient({ initialPage: _initialPage = 1, locale = "en" }: { initialPage?: number; locale?: Locale }) {
@@ -159,7 +185,7 @@ export default function PaldexClient({ initialPage: _initialPage = 1, locale = "
       <div><div className="paldex-sort-menu"><span>{t?.sort ?? "Sort"}</span><button type="button" className="paldex-sort-trigger" aria-label={isZh ? "排序帕鲁" : "Sort Paldeck"} aria-haspopup="listbox" aria-expanded={sortOpen} onClick={() => setSortOpen((open) => !open)}><strong>{isZh ? ({number: "编号", name: "名称 A–Z", hp: "生命值", defense: "防御", stamina: "耐力", price: "价格", "ride-speed": "骑乘速度", rarity: "稀有度", speed: "奔跑速度", work: "最高工作等级", "power-low": "配种力：低到高", "power-high": "配种力：高到低"} as Record<PaldexSort, string>)[filters.sort] : sortOptions.find((option) => option.value === filters.sort)?.label}</strong><span aria-hidden="true">⌄</span></button>{sortOpen && <div className="paldex-sort-options" role="listbox" aria-label={isZh ? "帕鲁排序选项" : "Sort Paldeck options"}>{sortOptions.map((option) => <button type="button" role="option" aria-selected={filters.sort === option.value} className={filters.sort === option.value ? "active" : ""} key={option.value} onClick={() => { update({ sort: option.value }); setSortOpen(false); }}>{filters.sort === option.value && <span aria-hidden="true">✓</span>}{isZh ? ({number: "编号", name: "名称 A–Z", hp: "生命值", defense: "防御", stamina: "耐力", price: "价格", "ride-speed": "骑乘速度", rarity: "稀有度", speed: "奔跑速度", work: "最高工作等级", "power-low": "配种力：低到高", "power-high": "配种力：高到低"} as Record<PaldexSort, string>)[option.value] : option.label}</button>)}</div>}</div>{hasFilters && <button type="button" className="paldex-reset" onClick={clearAll}>{t?.clear ?? "Clear all"}</button>}</div>
     </div>
     {!selectedMode && hasFilters && <div className="paldex-chips">{filters.newOnly && <button onClick={() => update({ newOnly: false })}>{isZh ? "1.0 新增 ×" : "New in 1.0 ×"}</button>}{filters.elements.map((value) => <button key={value} onClick={() => update({ elements: toggle(filters.elements, value) })}>{value} ×</button>)}{filters.work.map((value) => <button key={value} onClick={() => update({ work: toggle(filters.work, value) })}>{workLabels[value]} ×</button>)}{filters.workLevel > 0 && <span>{isZh ? "工作等级" : "Work level"} {filters.workLevel}+</span>}</div>}
-    {visible.length ? <><div className="paldex-result-range" aria-live="polite">{selectedMode ? `${visible.length} ${t?.selected ?? "Selected Pals"}` : `${t?.showing ?? "Showing"} ${pageStart + 1}–${Math.min(pageStart + pageSize, visible.length)}${t?.of ?? " of "}${visible.length} ${filters.newOnly ? (t?.newOnly ?? "New Pals") : (t?.pals ?? "Pals")}`}</div><div ref={tableRegionRef} className="paldex-table-region"><div ref={tableWrapRef} className="paldex-table-wrap"><table className="paldex-table paldex-complete-table"><PaldexTableHead /><tbody>{pagePals.map((pal) => <tr key={pal.id}><td><Link href={`${prefix}/pals/${pal.slug}`}><PalMark pal={pal} showNewBadge /><span><PalName pal={pal} locale={locale} /><small>{pal.kind === "pal" ? "Pal" : "Crossover creature"}</small></span></Link></td><td>{pal.number}</td><td><ElementMarks pal={pal} /></td><td><WorkBadges pal={pal} /></td><td>{pal.partnerSkill.name ? <span className="partner-skill-mark"><span>{pal.partnerSkill.name}</span></span> : "—"}</td><td>{pal.rarity ?? "—"}</td><td>{pal.stats.hp ?? "—"}</td><td>{pal.power}</td><td>{pal.stats.defense ?? "—"}</td><td>{pal.price ?? "—"}</td><td>{pal.stats.stamina ?? "—"}</td><td>{pal.movement.rideSprint ?? "—"}</td><td>{pal.movement.run ?? "—"}</td><td><Link className="paldex-breeding-link" href={`${prefix}/?mode=target&target=${encodeURIComponent(pal.id)}`}>{t?.findParents ?? "Find Parents"}</Link></td></tr>)}</tbody></table></div><div ref={frozenHeaderRef} className="paldex-frozen-header" aria-hidden="true"><table ref={frozenTableRef} className="paldex-table paldex-complete-table paldex-frozen-table"><PaldexTableHead frozen /></table></div></div>{!selectedMode && <nav className="paldex-pagination" aria-label={isZh ? "帕鲁分页" : "Pal pagination"}>{currentPage <= 1 ? <span aria-disabled="true">{t?.previous ?? "Previous"}</span> : <Link href={pageHref(currentPage - 1)}>{t?.previous ?? "Previous"}</Link>}<div className="paldex-pagination-pages">{Array.from({ length: totalPages }, (_, index) => index + 1).map((page) => <Link href={pageHref(page)} key={page} aria-current={page === currentPage ? "page" : undefined}>{page}</Link>)}</div>{currentPage >= totalPages ? <span aria-disabled="true">{t?.next ?? "Next"}</span> : <Link href={pageHref(currentPage + 1)}>{t?.next ?? "Next"}</Link>}</nav>}</> : <div className="paldex-empty"><span>⌕</span><h2>{t?.noResults ?? "No Pals found"}</h2><p>{t?.tryAgain ?? "Try another search or clear one of the filters."}</p><button type="button" onClick={clearAll}>{t?.clear ?? "Clear all"}</button></div>}
+    {visible.length ? <><div className="paldex-result-range" aria-live="polite">{selectedMode ? `${visible.length} ${t?.selected ?? "Selected Pals"}` : `${t?.showing ?? "Showing"} ${pageStart + 1}–${Math.min(pageStart + pageSize, visible.length)}${t?.of ?? " of "}${visible.length} ${filters.newOnly ? (t?.newOnly ?? "New Pals") : (t?.pals ?? "Pals")}`}</div><div ref={tableRegionRef} className="paldex-table-region"><div ref={tableWrapRef} className="paldex-table-wrap"><table className="paldex-table paldex-complete-table"><PaldexTableHead /><tbody>{pagePals.map((pal) => <tr key={pal.id}><td><Link href={`${prefix}/pals/${pal.slug}`}><PalMark pal={pal} showNewBadge /><span><PalName pal={pal} locale={locale} /><small>{pal.kind === "pal" ? "Pal" : "Crossover creature"}</small></span></Link></td><td>{pal.number}</td><td><ElementMarks pal={pal} /></td><td><WorkBadges pal={pal} /></td><td>{pal.partnerSkill.name ? <span className="partner-skill-mark"><span>{pal.partnerSkill.name}</span></span> : "—"}</td><td>{pal.rarity ?? "—"}</td><td>{pal.stats.hp ?? "—"}</td><td>{pal.power}</td><td>{pal.stats.defense ?? "—"}</td><td><DropSummary pal={pal} locale={locale} /></td><td><LocationSummary pal={pal} locale={locale} /></td><td><Link className="paldex-breeding-link" href={`${prefix}/?mode=target&target=${encodeURIComponent(pal.id)}`}>{t?.findParents ?? "Find Parents"}</Link></td></tr>)}</tbody></table></div><div ref={frozenHeaderRef} className="paldex-frozen-header" aria-hidden="true"><table ref={frozenTableRef} className="paldex-table paldex-complete-table paldex-frozen-table"><PaldexTableHead frozen /></table></div></div>{!selectedMode && <nav className="paldex-pagination" aria-label={isZh ? "帕鲁分页" : "Pal pagination"}>{currentPage <= 1 ? <span aria-disabled="true">{t?.previous ?? "Previous"}</span> : <Link href={pageHref(currentPage - 1)}>{t?.previous ?? "Previous"}</Link>}<div className="paldex-pagination-pages">{Array.from({ length: totalPages }, (_, index) => index + 1).map((page) => <Link href={pageHref(page)} key={page} aria-current={page === currentPage ? "page" : undefined}>{page}</Link>)}</div>{currentPage >= totalPages ? <span aria-disabled="true">{t?.next ?? "Next"}</span> : <Link href={pageHref(currentPage + 1)}>{t?.next ?? "Next"}</Link>}</nav>}</> : <div className="paldex-empty"><span>⌕</span><h2>{t?.noResults ?? "No Pals found"}</h2><p>{t?.tryAgain ?? "Try another search or clear one of the filters."}</p><button type="button" onClick={clearAll}>{t?.clear ?? "Clear all"}</button></div>}
     {sheet && <div className="paldex-filter-backdrop" role="presentation" onClick={() => setSheet(null)}><section className="paldex-filter-sheet" role="dialog" aria-modal="true" aria-label={sheet === "elements" ? (t?.element ?? "Element filters") : (t?.work ?? "Work suitability filters")} onClick={(event) => event.stopPropagation()}>
       <header><h2>{sheet === "elements" ? (t?.element ?? "Element") : (t?.work ?? "Work Suitability")}</h2><button type="button" onClick={() => setSheet(null)}>{t?.cancel ?? "Cancel"}</button></header>
       {sheet === "elements" ? <><div className="paldex-filter-options">{elementOptions.map((item) => <button type="button" key={item} className={draftElements.includes(item) ? "active" : ""} onClick={() => setDraftElements(toggle(draftElements, item))}><ElementIcon element={item} /><span>{isZh ? elementLabelsZh[item] ?? item : item}</span></button>)}</div>{draftElements.length > 1 && <div className="paldex-match-mode"><button type="button" className={draftElementMode === "any" ? "active" : ""} onClick={() => setDraftElementMode("any")}>{t?.any ?? "Match any"}</button><button type="button" className={draftElementMode === "all" ? "active" : ""} onClick={() => setDraftElementMode("all")}>{t?.allMatch ?? "Match all"}</button></div>}</> : <><div className="paldex-filter-options work-options">{workTypes.map((item) => <button type="button" key={item} className={draftWork.includes(item) ? "active" : ""} onClick={() => setDraftWork(toggle(draftWork, item))}><WorkSuitabilityIcon work={item} /><span>{isZh ? workLabelsZh[item] ?? workLabels[item] : workLabels[item]}</span></button>)}</div><label className="paldex-min-level">{t?.minimum ?? "Minimum level"}<select value={draftWorkLevel} onChange={(event) => setDraftWorkLevel(Number(event.target.value))}><option value="0">{t?.any ?? "Any"}</option>{[2, 3, 4, 5, 6, 7, 8].map((level) => <option key={level} value={level}>{level}+</option>)}</select></label>{draftWork.length > 1 && <div className="paldex-match-mode"><button type="button" className={draftWorkMode === "any" ? "active" : ""} onClick={() => setDraftWorkMode("any")}>{t?.any ?? "Match any"}</button><button type="button" className={draftWorkMode === "all" ? "active" : ""} onClick={() => setDraftWorkMode("all")}>{t?.allMatch ?? "Match all"}</button></div>}</>}
