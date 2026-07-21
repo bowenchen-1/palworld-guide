@@ -92,9 +92,9 @@ function LocationSummary({ pal, locale, onInfo }: { pal: PalData; locale: Locale
     {locations.map((location) => {
       const detail = [location.level && `${locale === "zh" ? "等级" : "Level"} ${location.level}`, location.note].filter(Boolean).join(" · ");
       const label = `${location.name}${detail ? ` · ${detail}` : ""}`;
-      return <button type="button" className="paldex-location-item paldex-info-trigger paldex-hover-tip" data-tooltip={label} aria-label={label} title={label} key={`${location.name}-${location.level ?? ""}`} onClick={() => onInfo({ title: location.name, body: detail || (locale === "zh" ? "暂无更多地点信息。" : "No additional location details recorded.") })}><span aria-hidden="true">⌖</span></button>;
+      return <button type="button" className="paldex-location-item paldex-info-trigger paldex-hover-tip" data-tooltip={label} aria-label={label} title={label} key={`${location.name}-${location.level ?? ""}`} onClick={() => onInfo({ title: location.name, body: detail || (locale === "zh" ? "暂无更多地点信息。" : "No additional location details recorded.") })}>{location.name}</button>;
     })}
-    {data.locations.length > locations.length && <button type="button" className="paldex-more-count" onClick={() => onInfo({ title: locale === "zh" ? "出没地点" : "Locations", body: data.locations.map((location) => `${location.name}${location.level ? ` · ${location.level}` : ""}`).join("\n") })}>+{data.locations.length - locations.length} more</button>}
+    {data.locations.length > locations.length && <button type="button" className="paldex-more-count" onClick={() => onInfo({ title: locale === "zh" ? "出没地点" : "Locations", body: data.locations.map((location) => [location.name, location.level && `${locale === "zh" ? "等级" : "Level"} ${location.level}`, location.note].filter(Boolean).join(" · ")).join("\n") })}>+{data.locations.length - locations.length} more</button>}
   </span>;
 }
 
