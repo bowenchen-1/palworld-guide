@@ -1245,3 +1245,5 @@ body::before {
 .paldex-complete-table td:first-child{z-index:4;border-right:1px solid var(--terminal-border)}
 .paldex-complete-table td:nth-child(3),.paldex-complete-table td:nth-child(4),.paldex-complete-table td:nth-child(5){overflow:visible}
 .paldex-complete-table .element-marks,.paldex-complete-table .mini-work,.paldex-complete-table .partner-skill-mark{position:relative;z-index:1;overflow:visible}
+.paldex-table td:first-child a.paldex-pal-cell{min-width:178px;align-items:center;flex-direction:column;gap:4px;text-align:center}
+.paldex-pal-name-wrap{display:block;width:100%;min-width:0}.paldex-pal-name-wrap .paldex-pal-name{display:block;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.paldex-pal-name-wrap .paldex-pal-name small{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.paldex-pal-kind{width:100%;margin-top:0!important;color:var(--terminal-muted)!important;font-size:9px!important;line-height:1.1;text-align:center}
