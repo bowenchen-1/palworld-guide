@@ -7,7 +7,7 @@ import { createPortal } from "react-dom";
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { Locale } from "../i18n/zh";
 
-const navItems = [["Breeding Calculator", "/#breeding-calculator"], ["Team Builder", "/team-builder"], ["Pals", "/pals"], ["Hardwood", "/items/hardwood"], ["Guides", "/guides"], ["Updates", "/updates"]] as const;
+const navItems = [["Breeding Calculator", "/#breeding-calculator"], ["Team Builder", "/team-builder"], ["Pals", "/pals"], ["Map", "/map"], ["Hardwood", "/items/hardwood"], ["Guides", "/guides"], ["Updates", "/updates"]] as const;
 
 function pairedPath(pathname: string, target: Locale): string | undefined {
   const path = pathname.split("?")[0].split("#")[0] || "/";

@@ -1313,3 +1313,4 @@ body::before {
 .paldex-complete-table th:nth-child(11),.paldex-complete-table td:nth-child(11){width:110px!important;min-width:110px!important;max-width:110px!important}
 @media(min-width:761px){.paldex-table-wrap{overflow-x:hidden}}
 .paldex-complete-table td:last-child .paldex-breeding-link{font-size:9px}
+.paldex-complete-table td:nth-child(5){overflow:visible}

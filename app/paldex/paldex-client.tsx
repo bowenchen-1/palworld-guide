@@ -68,9 +68,10 @@ function WorkBadges({ pal, onInfo, locale }: { pal: PalData; onInfo: (info: Info
 }
 
 function DropSummary({ pal, locale, onInfo }: { pal: PalData; locale: Locale; onInfo: (info: InfoPanel) => void }) {
+  const [expanded, setExpanded] = useState(false);
   const data = findPalDropsLocations(pal.slug);
   if (!data?.drops.length) return <span className="muted-dash">—</span>;
-  const drops = data.drops.slice(0, 3);
+  const drops = expanded ? data.drops : data.drops.slice(0, 3);
   return <span className="paldex-drop-summary" aria-label={locale === "zh" ? "掉落物" : "Drops"}>
     {drops.map((drop) => {
       const detail = [drop.quantity && `${locale === "zh" ? "数量" : "Quantity"} ${drop.quantity}`, drop.chance, drop.condition].filter(Boolean).join(" · ");
@@ -80,7 +81,7 @@ function DropSummary({ pal, locale, onInfo }: { pal: PalData; locale: Locale; on
         <small>{drop.quantity ?? "—"}</small>
       </button>;
     })}
-    {data.drops.length > drops.length && <span className="paldex-more-count">+{data.drops.length - drops.length} more</span>}
+    {data.drops.length > 3 && <button type="button" className="paldex-more-count" aria-expanded={expanded} onClick={() => setExpanded((value) => !value)}>{expanded ? (locale === "zh" ? "收起" : "Show less") : `+${data.drops.length - 3} more`}</button>}
   </span>;
 }
 

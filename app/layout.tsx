@@ -10,6 +10,7 @@ import "./tool-pages.css";
 import "./terminal-theme.css";
 import "./home-entry.css";
 import "./team-builder/team-builder.css";
+import "./map/map.css";
 import { siteUrl } from "./site-config";
 
 export const metadata: Metadata = {
