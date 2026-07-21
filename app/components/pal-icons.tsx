@@ -46,6 +46,6 @@ export function WorkSuitabilityIcon({ work }: { work: WorkKey }) {
   return <PalworldIcon src={`/icons/palworld/work-suitability/${workFiles[work]}`} label={label} fallback={label.slice(0, 2)} className="work-suitability-icon" />;
 }
 
-export function PartnerSkillIcon({ file, label }: { file: string | null; label: string }) {
-  return <PalworldIcon src={`/icons/palworld/partner-skills/${file ?? ""}`} label={`${label} Partner Skill`} fallback="PS" className="partner-skill-icon" />;
+export function PartnerSkillIcon({ file, label }: { file: string | null; label: string | null }) {
+  return <PalworldIcon src={`/icons/palworld/partner-skills/${file ?? ""}`} label={`${label ?? "Partner"} Partner Skill`} fallback="PS" className="partner-skill-icon" />;
 }
