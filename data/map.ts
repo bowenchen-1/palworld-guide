@@ -15,4 +15,4 @@ export type MapCategory = { name: string; icon: string };
 
 export const mapAsset = "/map/Palworld_Map_Complete.png";
 export const mapDataUrl = "/data/map-locations.json";
-export const mapCoordinateNote = "PalDB map coordinates: original in-game X/Y values mapped with PalDB's 459-units-per-map-pixel transform.";
+export const mapCoordinateNote = "PalDB map coordinates: X/Y values mapped to the supplied 8192 x 8192 Palpagos tile set using the PalDB map-frame scale, origin, and vertical inversion.";
