@@ -342,7 +342,7 @@ export default function MapClient({ initialCategories, locationCount }: { initia
             {QUICK_FILTERS.map((filter) => {
               const active = activeQuickFilter?.id === filter.id;
               const icon = categoryMap.get(filter.categories[0])?.icon || filter.icon;
-              return <button key={filter.id} type="button" className={`map-quick-filter map-quick-filter-${filter.id}${active ? " is-active" : ""}`} onClick={() => applyQuickFilter(filter.categories)} aria-pressed={active} aria-label={`Quick filter: ${filter.label}. ${filter.description}`} title={filter.description}><span>{filter.label}</span><Image className="map-quick-filter-icon" src={icon} alt="" width={18} height={18} unoptimized /></button>;
+              return <button key={filter.id} type="button" className={`map-quick-filter map-quick-filter-${filter.id}${active ? " is-active" : ""}`} onClick={() => applyQuickFilter(filter.categories)} aria-pressed={active} aria-label={`Quick filter: ${filter.label}. ${filter.description}`} title={filter.description}><span>{filter.label}</span><Image className="map-quick-filter-icon" src={icon} alt="" width={18} height={18} unoptimized style={{ filter: "none", opacity: 1 }} /></button>;
             })}
           </div>
         </div>
