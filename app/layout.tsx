@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "@fontsource/barlow/400.css";
 import "@fontsource/barlow/600.css";
 import "@fontsource/barlow/700.css";
@@ -12,6 +13,8 @@ import "./home-entry.css";
 import "./team-builder/team-builder.css";
 import "./map/map.css";
 import { siteUrl } from "./site-config";
+
+const GA_MEASUREMENT_ID = "G-PS0800S4YQ";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -29,5 +32,16 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="en"><body className="antialiased"><a className="skip-link" href="#main-content">Skip to main content</a>{children}</body></html>;
+  return <html lang="en"><body className="antialiased"><a className="skip-link" href="#main-content">Skip to main content</a>{children}
+    <Script
+      src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+      strategy="afterInteractive"
+    />
+    <Script id="google-analytics" strategy="afterInteractive">
+      {`window.dataLayer = window.dataLayer || [];
+function gtag(){window.dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '${GA_MEASUREMENT_ID}');`}
+    </Script>
+  </body></html>;
 }
