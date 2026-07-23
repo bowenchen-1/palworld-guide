@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 import { findPal } from "../../lib/game-data";
-import { palAssetUrl } from "../../lib/assets";
+import { assetUrl, palAssetUrl } from "../../lib/assets";
 import { siteUrl } from "../../site-config";
 
 export const alt = "Palworld Guide Pal profile";
@@ -13,7 +13,7 @@ export default async function PalOpenGraphImage({ params }: Props) {
   const pal = findPal((await params).slug);
   const name = pal?.name ?? "Pal Profile";
   const number = pal?.number ?? "—";
-  const palImagePath = pal ? palAssetUrl(`/pals/${pal.id}.png`) : "/og.png";
+  const palImagePath = pal ? palAssetUrl(`/pals/${pal.id}.png`) : assetUrl("/og.png");
   const imageUrl = palImagePath.startsWith("http") ? palImagePath : `${siteUrl}${palImagePath}`;
 
   return new ImageResponse(

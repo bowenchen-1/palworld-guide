@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { assetUrl } from "./assets";
 import { siteUrl } from "../site-config";
 
 type PageMetadataOptions = {
@@ -45,7 +46,7 @@ export function createPageMetadata({
   locale = "en",
 }: PageMetadataOptions): Metadata {
   const url = absoluteUrl(path);
-  const imageUrl = absoluteUrl(image);
+  const imageUrl = image === "/og.png" ? assetUrl(image) : absoluteUrl(image);
   const englishPath = path.replace(/^\/zh(?=\/|$)/, "") || "/";
   const chinesePath = path.startsWith("/zh") ? path : `/zh${path === "/" ? "/" : path}`;
   const languages = ["/", "/breeding-calculator", "/pals"].includes(englishPath)

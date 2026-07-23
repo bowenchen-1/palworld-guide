@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import SiteHeader from "../../components/site-header";
+import { assetUrl } from "../../lib/assets";
 import { absoluteUrl, createBreadcrumbSchema, createPageMetadata, fitMetaDescription, fitMetaTitle } from "../../lib/seo";
 import { getGuide, guides } from "../guide-data";
 
@@ -38,7 +39,7 @@ export default async function GuidePage({ params }: Props) {
     "@type": "Article",
     headline: guide.title,
     description: guide.description,
-    image: absoluteUrl("/og.png"),
+    image: assetUrl("/og.png"),
     datePublished: "2026-07-14",
     dateModified: "2026-07-14",
     articleSection: guide.category,
