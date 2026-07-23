@@ -9,7 +9,7 @@ import { getContainedImageRect, MAP_CALIBRATIONS, mapCoordinateToScreenPoint, ty
 
 const MAP_SIZE = 8192;
 const TILE_SIZE = 512;
-const MAP_MIN_ZOOM = 0.08;
+const MAP_MIN_ZOOM = 0.04;
 const MAP_MAX_ZOOM = 2;
 const PALPAGOS_TILES = Array.from({ length: 16 * 16 }, (_, index) => ({
   x: index % 16,
@@ -68,7 +68,7 @@ const WORLD_TREE_CATEGORIES: MapCategory[] = WORLD_TREE_DATA.types.map((name) =>
   name,
   icon: WORLD_TREE_CATEGORY_ICONS[name] || WORLD_TREE_LOCATIONS.find((location) => location.category === name)?.icon || "/map-icons/Region.webp",
 }));
-const MAP_STATE_KEY = "palworld-map-state-v4";
+const MAP_STATE_KEY = "palworld-map-state-v5";
 
 type MapPayload = { locations: MapLocation[]; categories: MapCategory[] };
 type Point = { x: number; y: number };
@@ -88,7 +88,7 @@ export default function MapClient({ initialCategories, locationCount }: { initia
   const [levelRange, setLevelRange] = useState<LevelRange>("all");
   const [selected, setSelected] = useState<MapLocation | null>(null);
   const [mapView, setMapView] = useState<MapView>("palpagos");
-  const [zoom, setZoom] = useState(0.12);
+  const [zoom, setZoom] = useState(MAP_MIN_ZOOM);
   const [pan, setPan] = useState<Point>({ x: 0, y: 0 });
   const [viewport, setViewport] = useState({ width: 0, height: 0 });
   const [tileStatus, setTileStatus] = useState<Record<string, "loaded" | "error">>({});
@@ -105,9 +105,13 @@ export default function MapClient({ initialCategories, locationCount }: { initia
   const viewFilters = useRef<Record<MapView, Set<string>>>({ palpagos: new Set(), "world-tree": new Set() });
 
   const getMinimumZoom = useCallback(() => {
+    return MAP_MIN_ZOOM;
+  }, []);
+
+  const getFitZoom = useCallback(() => {
     const stage = stageRef.current;
     if (!stage) return MAP_MIN_ZOOM;
-    return Math.max(MAP_MIN_ZOOM, stage.clientWidth / MAP_SIZE, stage.clientHeight / MAP_SIZE);
+    return Math.min(MAP_MAX_ZOOM, Math.max(MAP_MIN_ZOOM, Math.min(stage.clientWidth / MAP_SIZE, stage.clientHeight / MAP_SIZE)));
   }, []);
 
   const clampPan = useCallback((nextPan: Point, nextZoom: number, width = stageRef.current?.clientWidth ?? 0, height = stageRef.current?.clientHeight ?? 0) => ({
@@ -115,7 +119,7 @@ export default function MapClient({ initialCategories, locationCount }: { initia
     y: MAP_SIZE * nextZoom <= height ? (height - MAP_SIZE * nextZoom) / 2 : Math.min(0, Math.max(height - MAP_SIZE * nextZoom, nextPan.y)),
   }), []);
 
-  const centerMap = useCallback((nextZoom = 0.12) => {
+  const centerMap = useCallback((nextZoom = getFitZoom()) => {
     const stage = stageRef.current;
     if (!stage) return;
     const rect = stage.getBoundingClientRect();
@@ -125,7 +129,7 @@ export default function MapClient({ initialCategories, locationCount }: { initia
     zoomRef.current = clampedZoom;
     setPan(nextPan);
     setZoom(clampedZoom);
-  }, [clampPan, getMinimumZoom]);
+  }, [clampPan, getFitZoom, getMinimumZoom]);
 
   useEffect(() => {
     const stage = stageRef.current;
@@ -151,22 +155,18 @@ export default function MapClient({ initialCategories, locationCount }: { initia
     try {
       localStorage.removeItem("palworld-map-state-v3");
       const saved = localStorage.getItem(MAP_STATE_KEY);
-      if (!saved) {
-        requestAnimationFrame(() => centerMap());
-        return;
-      }
+      if (!saved) { requestAnimationFrame(() => centerMap()); return; }
       const state = JSON.parse(saved) as { query?: string; categories?: string[]; levelRange?: LevelRange; zoom?: number; pan?: Point };
       queueMicrotask(() => {
         if (cancelled) return;
         if (state.query) setQuery(state.query);
         if (["all", "1-20", "21-40", "41-60", "61-80"].includes(state.levelRange ?? "")) setLevelRange(state.levelRange ?? "all");
         if (state.categories?.length) setActiveCategories(new Set(state.categories));
-        if (Number.isFinite(state.zoom)) { const restoredZoom = Math.max(getMinimumZoom(), Math.min(MAP_MAX_ZOOM, state.zoom ?? 0.12)); zoomRef.current = restoredZoom; setZoom(restoredZoom); }
-        if (state.pan && Number.isFinite(state.pan.x) && Number.isFinite(state.pan.y)) { const restoredPan = clampPan(state.pan, zoomRef.current); panRef.current = restoredPan; setPan(restoredPan); }
+        requestAnimationFrame(() => centerMap());
       });
     } catch { /* Local storage is optional. */ }
     return () => { cancelled = true; };
-  }, [centerMap, clampPan, getMinimumZoom]);
+  }, [centerMap]);
 
   useEffect(() => {
     if (!viewport.width || !viewport.height) return;
@@ -178,8 +178,8 @@ export default function MapClient({ initialCategories, locationCount }: { initia
   }, [clampPan, viewport]);
 
   useEffect(() => {
-    try { localStorage.setItem(MAP_STATE_KEY, JSON.stringify({ query, categories: [...activeCategories], levelRange, zoom, pan })); } catch { /* Local storage is optional. */ }
-  }, [activeCategories, levelRange, pan, query, zoom]);
+    try { localStorage.setItem(MAP_STATE_KEY, JSON.stringify({ query, categories: [...activeCategories], levelRange })); } catch { /* Local storage is optional. */ }
+  }, [activeCategories, levelRange, query]);
 
   const filteredLocations = useMemo(() => {
     const term = query.trim().toLowerCase();
@@ -208,10 +208,10 @@ export default function MapClient({ initialCategories, locationCount }: { initia
     const isWorldTree = mapView === "world-tree";
     const gridSize = isWorldTree ? 8 : 16;
     const tileWorldSize = isWorldTree ? MAP_SIZE / gridSize : TILE_SIZE;
-    const left = Math.max(0, Math.floor(((0 - pan.x) / zoom) / tileWorldSize) - 1);
-    const top = Math.max(0, Math.floor(((0 - pan.y) / zoom) / tileWorldSize) - 1);
-    const right = Math.min(gridSize - 1, Math.ceil(((viewport.width - pan.x) / zoom) / tileWorldSize) + 1);
-    const bottom = Math.min(gridSize - 1, Math.ceil(((viewport.height - pan.y) / zoom) / tileWorldSize) + 1);
+    const left = Math.max(0, Math.floor(((0 - pan.x) / zoom) / tileWorldSize) - 2);
+    const top = Math.max(0, Math.floor(((0 - pan.y) / zoom) / tileWorldSize) - 2);
+    const right = Math.min(gridSize - 1, Math.ceil(((viewport.width - pan.x) / zoom) / tileWorldSize) + 2);
+    const bottom = Math.min(gridSize - 1, Math.ceil(((viewport.height - pan.y) / zoom) / tileWorldSize) + 2);
     const sourceTiles = isWorldTree ? WORLD_TREE_TILES : PALPAGOS_TILES;
     return sourceTiles.filter((tile) => tile.x >= left && tile.x <= right && tile.y >= top && tile.y <= bottom);
   }, [mapView, pan, viewport, zoom]);
