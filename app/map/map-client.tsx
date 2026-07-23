@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useCallback, useEffect, useMemo, useRef, useState, type PointerEvent as ReactPointerEvent } from "react";
 import type { MapCategory, MapLocation } from "../../data/map";
 import worldTreePayload from "../../public/data/world-tree-locations.json";
+import { assetUrl } from "../lib/assets";
 import { getContainedImageRect, MAP_CALIBRATIONS, mapCoordinateToScreenPoint, type MapView } from "./map-calibration";
 
 const MAP_SIZE = 8192;
@@ -11,14 +12,14 @@ const TILE_SIZE = 512;
 const PALPAGOS_TILES = Array.from({ length: 16 * 16 }, (_, index) => ({
   x: index % 16,
   y: Math.floor(index / 16),
-  src: `/map/palpagos-z4/z4x${index % 16}y${Math.floor(index / 16)}.webp`,
+  src: assetUrl(`/map/palpagos-z4/z4x${index % 16}y${Math.floor(index / 16)}.webp`),
 }));
 const WORLD_TREE_TILE_SIZE = 256;
 const WORLD_TREE_TILE_SCALE = MAP_SIZE / (8 * WORLD_TREE_TILE_SIZE);
 const WORLD_TREE_TILES = Array.from({ length: 8 * 8 }, (_, index) => ({
   x: index % 8,
   y: Math.floor(index / 8),
-  src: `/map/world-tree-z3/${index % 8}/${Math.floor(index / 8)}.png`,
+  src: assetUrl(`/map/world-tree-z3/${index % 8}/${Math.floor(index / 8)}.png`),
 }));
 const CATEGORY_GROUPS = [
   { name: "Effigies", categories: ["Lifmunk Effigies", "Rooby Effigies", "Yakumo Effigies", "Munchill Effigies", "Relaxaurus Effigies", "Herbil Effigies", "Tanzee Effigies", "Lunaris Effigies", "Depresso Effigies", "Pengullet Effigies", "Lamball Effigies", "Journals"] },
