@@ -160,6 +160,10 @@ async function purgeCache(publicUrl) {
   if (!response.ok || !payload?.success) throw new Error(`Cloudflare cache purge failed (HTTP ${response.status}).`);
 }
 
+function shouldPurgeCache(entry) {
+  return !entry.cacheControl.toLowerCase().includes('immutable');
+}
+
 function makeEntry(config, sourcePath, local) {
   const objectKeyValue = objectKey(sourcePath);
   return {
@@ -190,7 +194,7 @@ async function syncOne(config, sourcePath, previous, { dryRun = false, stable = 
     const remoteAfter = await headPublicUrl(entry.publicUrl, entry.sha256);
     if (!remoteMatches(entry, remoteAfter)) throw new Error(`upload verification failed: ${JSON.stringify(remoteAfter)}`);
     console.log(`${sourcePath} upload verified`);
-    if (process.env.CLOUDFLARE_ZONE_ID && process.env.CLOUDFLARE_CACHE_PURGE_TOKEN) {
+    if (shouldPurgeCache(entry) && process.env.CLOUDFLARE_ZONE_ID && process.env.CLOUDFLARE_CACHE_PURGE_TOKEN) {
       await purgeCache(entry.publicUrl);
       console.log(`${sourcePath} cache purged`);
     }
@@ -269,4 +273,4 @@ async function main() {
 
 if (resolve(process.argv[1] || '') === fileURLToPath(import.meta.url)) main().catch((error) => { console.error(`R2 sync failed: ${error.message}`); process.exitCode = 1; });
 
-export { cacheControlFor, contentTypeFor, isTemporaryPath, objectKey, readValidatedFile, remoteMatches, sameStat, waitForFileStability };
+export { cacheControlFor, contentTypeFor, isTemporaryPath, objectKey, readValidatedFile, remoteMatches, sameStat, shouldPurgeCache, waitForFileStability };

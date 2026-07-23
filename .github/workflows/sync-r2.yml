@@ -25,7 +25,7 @@ concurrency:
 jobs:
   sync:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 30
     env:
       R2_BUCKET: palworldguide-assets
       ASSET_BASE_URL: https://assets.palworldguide.net

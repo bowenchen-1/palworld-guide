@@ -4,12 +4,14 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import test from 'node:test';
 import {
-  cacheControlFor, contentTypeFor, isTemporaryPath, objectKey, readValidatedFile, remoteMatches, waitForFileStability,
+  cacheControlFor, contentTypeFor, isTemporaryPath, objectKey, readValidatedFile, remoteMatches, shouldPurgeCache, waitForFileStability,
 } from '../scripts/r2-sync.mjs';
 
 test('R2 metadata policies use short JSON cache and long immutable image cache', () => {
   assert.equal(cacheControlFor('public/data/breeding.json'), 'public, max-age=300, must-revalidate');
   assert.equal(cacheControlFor('public/pals/26.0.png'), 'public, max-age=31536000, immutable');
+  assert.equal(shouldPurgeCache({ cacheControl: 'public, max-age=31536000, immutable' }), false);
+  assert.equal(shouldPurgeCache({ cacheControl: 'public, max-age=300, must-revalidate' }), true);
   assert.equal(contentTypeFor('public/data/breeding.json'), 'application/json; charset=utf-8');
   assert.equal(contentTypeFor('public/items/tree.jpg'), 'image/jpeg');
 });
