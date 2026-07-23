@@ -35,34 +35,35 @@ const CATEGORY_GROUPS = [
   { name: "Other", categories: ["Unknown"] },
 ] as const;
 const QUICK_FILTERS = [
-  { id: "nightstar-sand", label: "Nightstar Sand", categories: ["Nightstar Sand"], icon: "/map-icons/Nightstar_Sand.webp", description: "Maps to Nightstar Sand" },
-  { id: "dungeons", label: "Dungeons", categories: ["Dungeons"], icon: "/map-icons/Dungeon.webp", description: "Maps to Dungeons" },
-  { id: "chromite", label: "Chromite", categories: ["Chromite"], icon: "/map-icons/Chromite.webp", description: "Maps to Chromite" },
-  { id: "sulfur", label: "Sulfur", categories: ["Sulfur", "Sulfur Clusters"], icon: "/map-icons/Sulfur.webp", description: "Maps to Sulfur and Sulfur Clusters" },
-  { id: "ancient-civilization", label: "Ancient Civilization", categories: ["Ancient Bark", "Ancient Bone", "Ancient Lava"], icon: "/map-icons/Ancient_Bark.webp", description: "Maps to Ancient Bark, Ancient Bone, and Ancient Lava" },
-  { id: "fishing-spots", label: "Fisherman's Point", categories: ["Fishing Spots"], icon: "/map-icons/Fishing_Spot.webp", description: "Maps to Fishing Spots" },
+  { id: "nightstar-sand", label: "Nightstar Sand", categories: ["Nightstar Sand"], icon: assetUrl("/map-icons/Nightstar_Sand.webp"), description: "Maps to Nightstar Sand" },
+  { id: "dungeons", label: "Dungeons", categories: ["Dungeons"], icon: assetUrl("/map-icons/Dungeon.webp"), description: "Maps to Dungeons" },
+  { id: "chromite", label: "Chromite", categories: ["Chromite"], icon: assetUrl("/map-icons/Chromite.webp"), description: "Maps to Chromite" },
+  { id: "sulfur", label: "Sulfur", categories: ["Sulfur", "Sulfur Clusters"], icon: assetUrl("/map-icons/Sulfur.webp"), description: "Maps to Sulfur and Sulfur Clusters" },
+  { id: "ancient-civilization", label: "Ancient Civilization", categories: ["Ancient Bark", "Ancient Bone", "Ancient Lava"], icon: assetUrl("/map-icons/Ancient_Bark.webp"), description: "Maps to Ancient Bark, Ancient Bone, and Ancient Lava" },
+  { id: "fishing-spots", label: "Fisherman's Point", categories: ["Fishing Spots"], icon: assetUrl("/map-icons/Fishing_Spot.webp"), description: "Maps to Fishing Spots" },
 ] as const;
 type WorldTreePayload = { locations: MapLocation[]; types: string[] };
 const WORLD_TREE_DATA = worldTreePayload as unknown as WorldTreePayload;
+const mapIconUrl = (path?: string) => path ? assetUrl(path) : path;
 const WORLD_TREE_CATEGORY_ICONS: Record<string, string> = {
-  "Alpha Pal": "/map-icons/world-tree/T_GrassGolem_icon_normal.webp",
-  NPC: "/map-icons/NPC.webp",
-  "Lifmunk Effigy": "/map-icons/Lifmunk_Effigy.webp",
-  "Yakumo Effigy": "/map-icons/Yakumo_Effigy.webp",
-  "Cattiva Effigy": "/map-icons/Cattiva_Effigy.webp",
-  "Memo Planner": "/map-icons/Memo_Planner.webp",
-  Junk: "/map-icons/Junk.webp",
-  "Fruit Tree": "/map-icons/world-tree/T_itemicon_Consume_SkillCard_Dark.webp",
-  Paloxite: "/map-icons/Paloxite.webp",
-  Journals: "/map-icons/Journals.webp",
-  Incident: "/map-icons/Incident.webp",
-  "Fishing Spot": "/map-icons/Fishing_Spot.webp",
-  Tower: "/map-icons/Tower.webp",
-  "Fast Travel": "/map-icons/Fast_Travel.webp",
+  "Alpha Pal": assetUrl("/map-icons/world-tree/T_GrassGolem_icon_normal.webp"),
+  NPC: assetUrl("/map-icons/NPC.webp"),
+  "Lifmunk Effigy": assetUrl("/map-icons/Lifmunk_Effigy.webp"),
+  "Yakumo Effigy": assetUrl("/map-icons/Yakumo_Effigy.webp"),
+  "Cattiva Effigy": assetUrl("/map-icons/Cattiva_Effigy.webp"),
+  "Memo Planner": assetUrl("/map-icons/Memo_Planner.webp"),
+  Junk: assetUrl("/map-icons/Junk.webp"),
+  "Fruit Tree": assetUrl("/map-icons/world-tree/T_itemicon_Consume_SkillCard_Dark.webp"),
+  Paloxite: assetUrl("/map-icons/Paloxite.webp"),
+  Journals: assetUrl("/map-icons/Journals.webp"),
+  Incident: assetUrl("/map-icons/Incident.webp"),
+  "Fishing Spot": assetUrl("/map-icons/Fishing_Spot.webp"),
+  Tower: assetUrl("/map-icons/Tower.webp"),
+  "Fast Travel": assetUrl("/map-icons/Fast_Travel.webp"),
 };
 const WORLD_TREE_LOCATIONS = WORLD_TREE_DATA.locations.map((location) => ({
   ...location,
-  icon: location.icon || WORLD_TREE_CATEGORY_ICONS[location.category] || "/map-icons/Region.webp",
+  icon: mapIconUrl(location.icon) || WORLD_TREE_CATEGORY_ICONS[location.category] || assetUrl("/map-icons/Region.webp"),
 }));
 const WORLD_TREE_CATEGORIES: MapCategory[] = WORLD_TREE_DATA.types.map((name) => ({
   name,
@@ -81,7 +82,7 @@ function readableCount(value: number) {
 export default function MapClient({ initialCategories, locationCount }: { initialCategories: MapCategory[]; locationCount: number }) {
   const stageRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const [data, setData] = useState<MapPayload>({ locations: [], categories: initialCategories });
+  const [data, setData] = useState<MapPayload>({ locations: [], categories: initialCategories.map((category) => ({ ...category, icon: mapIconUrl(category.icon) ?? assetUrl("/map-icons/Region.webp") })) });
   const [activeCategories, setActiveCategories] = useState(() => new Set<string>());
   const [openGroups, setOpenGroups] = useState(() => new Set(["Effigies", "Eggs", "Enemies"]));
   const [query, setQuery] = useState("");
@@ -145,7 +146,7 @@ export default function MapClient({ initialCategories, locationCount }: { initia
     let cancelled = false;
     fetch("/data/map-locations.json")
       .then((response) => { if (!response.ok) throw new Error("Map data unavailable"); return response.json() as Promise<MapPayload>; })
-      .then((payload) => { if (!cancelled) { setData(payload); setLoading(false); } })
+      .then((payload) => { if (!cancelled) { setData({ ...payload, locations: payload.locations.map((location) => ({ ...location, icon: mapIconUrl(location.icon) })), categories: payload.categories.map((category) => ({ ...category, icon: mapIconUrl(category.icon) ?? assetUrl("/map-icons/Region.webp") })) }); setLoading(false); } })
       .catch(() => { if (!cancelled) { setLoading(false); setError("Map data could not be loaded. Please refresh the page."); } });
     return () => { cancelled = true; };
   }, []);
@@ -252,7 +253,7 @@ export default function MapClient({ initialCategories, locationCount }: { initia
     for (const location of visibleLocations) {
       const { x, y } = mapCoordinateToScreenPoint(location, imageRect, calibration);
       if (x < visibleLeft || x > visibleRight || y < visibleTop || y > visibleBottom) continue;
-      const iconSource = location.icon || "/map-icons/Region.webp";
+      const iconSource = location.icon || assetUrl("/map-icons/Region.webp");
       let icon = iconCache.current.get(iconSource);
       if (!icon) {
         icon = new window.Image();
@@ -462,7 +463,7 @@ export default function MapClient({ initialCategories, locationCount }: { initia
         {error && <div className="map-status map-status-error">{error}</div>}
         {!loading && !error && mapView === "world-tree" && visibleLocations.length === 0 && (WORLD_TREE_LOCATIONS.length === 0 || activeCategories.size > 0) && <div className="map-empty-state"><strong>World Tree markers unavailable</strong><span>{WORLD_TREE_LOCATIONS.length === 0 ? "World Tree location markers are not available yet." : "No World Tree markers match the current filters."}</span></div>}
         {!loading && !error && query.trim() && filteredLocations.length === 0 && <div className="map-empty-state"><strong>No locations found</strong><span>Try clearing the search or enabling another category.</span></div>}
-        {selected && <article className="map-location-card" onPointerDown={(event) => event.stopPropagation()}><button type="button" className="map-card-close" onClick={() => setSelected(null)} aria-label="Close location details">×</button><div className="map-card-icon"><Image src={selected.icon || "/map-icons/Region.webp"} alt="" width={34} height={34} unoptimized /></div><span className="map-card-category">{selected.category}</span><h3>{selected.name}</h3>{selected.level && <p className="map-card-level">Level {selected.level}</p>}{selected.description && <p className="map-card-description">{selected.description}</p>}<p className="map-card-coordinates">Map position <b>{selected.x.toFixed(0)}, {selected.y.toFixed(0)}</b></p><button type="button" className="map-share-button" onClick={() => navigator.clipboard?.writeText(`${window.location.origin}/map#${selected.id}`)}>Copy share link</button></article>}
+        {selected && <article className="map-location-card" onPointerDown={(event) => event.stopPropagation()}><button type="button" className="map-card-close" onClick={() => setSelected(null)} aria-label="Close location details">×</button><div className="map-card-icon"><Image src={selected.icon || assetUrl("/map-icons/Region.webp")} alt="" width={34} height={34} unoptimized /></div><span className="map-card-category">{selected.category}</span><h3>{selected.name}</h3>{selected.level && <p className="map-card-level">Level {selected.level}</p>}{selected.description && <p className="map-card-description">{selected.description}</p>}<p className="map-card-coordinates">Map position <b>{selected.x.toFixed(0)}, {selected.y.toFixed(0)}</b></p><button type="button" className="map-share-button" onClick={() => navigator.clipboard?.writeText(`${window.location.origin}/map#${selected.id}`)}>Copy share link</button></article>}
       </div>
     </div>
   </div>;
