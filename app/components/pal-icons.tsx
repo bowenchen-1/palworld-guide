@@ -3,6 +3,7 @@
 
 import { useState } from "react";
 import { WorkKey, workLabels } from "../lib/game-data";
+import { assetUrl } from "../lib/assets";
 
 const elementFiles: Record<string, string> = {
   Neutral: "T_Icon_element_s_00.png",
@@ -38,14 +39,14 @@ function PalworldIcon({ src, label, fallback, className }: { src: string; label:
 
 export function ElementIcon({ element }: { element: string }) {
   const file = elementFiles[element];
-  return <PalworldIcon src={`/icons/palworld/elements/${file ?? ""}`} label={element} fallback={element.slice(0, 2)} className="element-icon" />;
+  return <PalworldIcon src={assetUrl(`/icons/palworld/elements/${file ?? ""}`)} label={element} fallback={element.slice(0, 2)} className="element-icon" />;
 }
 
 export function WorkSuitabilityIcon({ work }: { work: WorkKey }) {
   const label = workLabels[work];
-  return <PalworldIcon src={`/icons/palworld/work-suitability/${workFiles[work]}`} label={label} fallback={label.slice(0, 2)} className="work-suitability-icon" />;
+  return <PalworldIcon src={assetUrl(`/icons/palworld/work-suitability/${workFiles[work]}`)} label={label} fallback={label.slice(0, 2)} className="work-suitability-icon" />;
 }
 
 export function PartnerSkillIcon({ file, label }: { file: string | null; label: string | null }) {
-  return <PalworldIcon src={`/icons/palworld/partner-skills/${file ?? ""}`} label={`${label ?? "Partner"} Partner Skill`} fallback="PS" className="partner-skill-icon" />;
+  return <PalworldIcon src={assetUrl(`/icons/palworld/partner-skills/${file ?? ""}`)} label={`${label ?? "Partner"} Partner Skill`} fallback="PS" className="partner-skill-icon" />;
 }
