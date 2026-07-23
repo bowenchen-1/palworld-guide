@@ -6,6 +6,7 @@ import ToolLab from "./components/tool-lab";
 import BreedingClient from "./breeding-calculator/breeding-client";
 import { guides } from "./guides/guide-data";
 import { catalogPals, palCounts, WorkKey, workGlyphs, workLabels } from "./lib/game-data";
+import { palAssetUrl } from "./lib/assets";
 import { createPageMetadata } from "./lib/seo";
 import { siteUrl } from "./site-config";
 
@@ -24,12 +25,12 @@ export const metadata = createPageMetadata({
 });
 
 const popularStyles = [
-  { color: "bg-primary-700", accent: "from-surface-muted to-primary-700", image: "/pals/2.0.webp" },
-  { color: "bg-secondary-600", accent: "from-[#bfe8de] to-secondary-700", image: "/pals/22.0.webp" },
-  { color: "bg-secondary-800", accent: "from-[#b9e4e2] to-secondary-600", image: "/pals/33.0.webp" },
-  { color: "bg-primary-900", accent: "from-[#dbe9d8] to-primary-700", image: "/pals/18.0.webp" },
-  { color: "bg-danger", accent: "from-[#f7d8cf] to-danger", image: "/pals/29.0.webp" },
-  { color: "bg-secondary-700", accent: "from-[#c2e4df] to-secondary-800", image: "/pals/185.0.webp" },
+  { color: "bg-primary-700", accent: "from-surface-muted to-primary-700", image: palAssetUrl("/pals/2.0.webp") },
+  { color: "bg-secondary-600", accent: "from-[#bfe8de] to-secondary-700", image: palAssetUrl("/pals/22.0.webp") },
+  { color: "bg-secondary-800", accent: "from-[#b9e4e2] to-secondary-600", image: palAssetUrl("/pals/33.0.webp") },
+  { color: "bg-primary-900", accent: "from-[#dbe9d8] to-primary-700", image: palAssetUrl("/pals/18.0.webp") },
+  { color: "bg-danger", accent: "from-[#f7d8cf] to-danger", image: palAssetUrl("/pals/29.0.webp") },
+  { color: "bg-secondary-700", accent: "from-[#c2e4df] to-secondary-800", image: palAssetUrl("/pals/185.0.webp") },
 ];
 
 const faqs = [
@@ -65,7 +66,7 @@ export default function Home() {
 
     <section className="home-update-section px-5 py-20 sm:px-8 lg:px-12"><div className="mx-auto grid max-w-[1260px] gap-10 lg:grid-cols-[.8fr_1.2fr]"><div><p className="eyebrow">Latest Game Version</p><h2 className="section-title mt-3">Palworld 1.0 Breeding Data</h2><p>The Palworld 1.0 release revised breeding combinations. Check old routes against the current matrix before spending Cake and incubation time.</p><Link href="/updates">View data updates →</Link></div><div className="home-update-grid"><Link href="/?mode=target"><span>01</span><h3>All Parent Combinations</h3><p>Start with a target Pal and compare every direct parent pair.</p></Link><Link href="/pals"><span>02</span><h3>Current Pals</h3><p>Search the expanded 1.0 Pal roster and work suitability.</p></Link><Link href="/palworld-1-0"><span>03</span><h3>Version 1.0 Guide</h3><p>Review the release date, core changes, and practical next steps.</p></Link></div></div></section>
 
-    <section id="popular" className="px-5 py-24 sm:px-8 lg:px-12"><div className="mx-auto max-w-[1360px] rounded-[42px] bg-surface-muted px-5 py-16 shadow-[inset_0_1px_0_white] sm:px-10 lg:px-14"><div className="mb-12 flex flex-col justify-between gap-6 md:flex-row md:items-end"><div><p className="eyebrow">Selected Reading</p><h2 className="section-title mt-3">Popular Guides</h2></div><div><p className="max-w-md text-base leading-7 text-muted">Six useful starting points. The complete 24-guide library now has its own page.</p><Link href="/guides" className="mt-3 inline-block font-extrabold text-link">View all guides →</Link></div></div><div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">{popularGuides.map((guide, index) => { const style = popularStyles[index]; return <article key={guide.slug} className="guide-card group"><div className={`guide-art bg-gradient-to-br ${style.accent}`}><span className="guide-number">POPULAR {guide.number}</span><Image className="guide-art-image" src={style.image} alt="" fill sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw" /><span className="guide-land" /></div><div className="p-6"><div className="mb-3 flex items-center justify-between gap-3"><span className={`rounded-full px-3 py-1 text-[11px] font-extrabold uppercase tracking-[.1em] text-white ${style.color}`}>{guide.category}</span><span className="text-xs font-bold text-subtle">{guide.readTime}</span></div><h3 className="font-display text-2xl font-extrabold leading-tight tracking-[-.03em] text-foreground">{guide.title}</h3><p className="mt-3 leading-7 text-muted">{guide.description}</p><Link href={`/guides/${guide.slug}`} className="mt-5 inline-flex items-center gap-2 font-extrabold text-link">Read guide <span className="transition group-hover:translate-x-1">→</span></Link></div></article>; })}</div></div></section>
+    <section id="popular" className="px-5 py-24 sm:px-8 lg:px-12"><div className="mx-auto max-w-[1360px] rounded-[42px] bg-surface-muted px-5 py-16 shadow-[inset_0_1px_0_white] sm:px-10 lg:px-14"><div className="mb-12 flex flex-col justify-between gap-6 md:flex-row md:items-end"><div><p className="eyebrow">Selected Reading</p><h2 className="section-title mt-3">Popular Guides</h2></div><div><p className="max-w-md text-base leading-7 text-muted">Six useful starting points. The complete 24-guide library now has its own page.</p><Link href="/guides" className="mt-3 inline-block font-extrabold text-link">View all guides →</Link></div></div><div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">{popularGuides.map((guide, index) => { const style = popularStyles[index]; return <article key={guide.slug} className="guide-card group"><div className={`guide-art bg-gradient-to-br ${style.accent}`}><span className="guide-number">POPULAR {guide.number}</span><Image className="guide-art-image" src={style.image} alt="" fill sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw" unoptimized /><span className="guide-land" /></div><div className="p-6"><div className="mb-3 flex items-center justify-between gap-3"><span className={`rounded-full px-3 py-1 text-[11px] font-extrabold uppercase tracking-[.1em] text-white ${style.color}`}>{guide.category}</span><span className="text-xs font-bold text-subtle">{guide.readTime}</span></div><h3 className="font-display text-2xl font-extrabold leading-tight tracking-[-.03em] text-foreground">{guide.title}</h3><p className="mt-3 leading-7 text-muted">{guide.description}</p><Link href={`/guides/${guide.slug}`} className="mt-5 inline-flex items-center gap-2 font-extrabold text-link">Read guide <span className="transition group-hover:translate-x-1">→</span></Link></div></article>; })}</div></div></section>
 
     <section className="data-freshness px-5 py-16 sm:px-8 lg:px-12"><div className="mx-auto max-w-[1200px]"><div><span>1.0</span><p><strong>Current data snapshot</strong><small>{totalPalEntryCount} Pals · {standardPalCount} standard · {crossoverCreatureCount} crossover · 300 breeding records</small></p></div><div><strong>Last data check</strong><span>July 14, 2026</span></div><Link href="/updates">Read the update notes →</Link></div></section>
 
