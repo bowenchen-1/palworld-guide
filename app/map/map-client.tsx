@@ -9,13 +9,14 @@ import { getContainedImageRect, MAP_CALIBRATIONS, mapCoordinateToScreenPoint, ty
 
 const MAP_SIZE = 8192;
 const TILE_SIZE = 512;
+const MAP_MIN_ZOOM = 0.08;
+const MAP_MAX_ZOOM = 2;
 const PALPAGOS_TILES = Array.from({ length: 16 * 16 }, (_, index) => ({
   x: index % 16,
   y: Math.floor(index / 16),
   src: assetUrl(`/map/palpagos-z4/z4x${index % 16}y${Math.floor(index / 16)}.webp`),
 }));
 const WORLD_TREE_TILE_SIZE = 256;
-const WORLD_TREE_TILE_SCALE = MAP_SIZE / (8 * WORLD_TREE_TILE_SIZE);
 const WORLD_TREE_TILES = Array.from({ length: 8 * 8 }, (_, index) => ({
   x: index % 8,
   y: Math.floor(index / 8),
@@ -89,6 +90,9 @@ export default function MapClient({ initialCategories, locationCount }: { initia
   const [mapView, setMapView] = useState<MapView>("palpagos");
   const [zoom, setZoom] = useState(0.12);
   const [pan, setPan] = useState<Point>({ x: 0, y: 0 });
+  const [viewport, setViewport] = useState({ width: 0, height: 0 });
+  const [tileStatus, setTileStatus] = useState<Record<string, "loaded" | "error">>({});
+  const [tileRetry, setTileRetry] = useState(0);
   const zoomRef = useRef(zoom);
   const panRef = useRef(pan);
   const [loading, setLoading] = useState(true);
@@ -100,15 +104,37 @@ export default function MapClient({ initialCategories, locationCount }: { initia
   const pinch = useRef<{ distance: number; zoom: number; midpoint: Point } | null>(null);
   const viewFilters = useRef<Record<MapView, Set<string>>>({ palpagos: new Set(), "world-tree": new Set() });
 
+  const getMinimumZoom = useCallback(() => {
+    const stage = stageRef.current;
+    if (!stage) return MAP_MIN_ZOOM;
+    return Math.max(MAP_MIN_ZOOM, stage.clientWidth / MAP_SIZE, stage.clientHeight / MAP_SIZE);
+  }, []);
+
+  const clampPan = useCallback((nextPan: Point, nextZoom: number, width = stageRef.current?.clientWidth ?? 0, height = stageRef.current?.clientHeight ?? 0) => ({
+    x: MAP_SIZE * nextZoom <= width ? (width - MAP_SIZE * nextZoom) / 2 : Math.min(0, Math.max(width - MAP_SIZE * nextZoom, nextPan.x)),
+    y: MAP_SIZE * nextZoom <= height ? (height - MAP_SIZE * nextZoom) / 2 : Math.min(0, Math.max(height - MAP_SIZE * nextZoom, nextPan.y)),
+  }), []);
+
   const centerMap = useCallback((nextZoom = 0.12) => {
     const stage = stageRef.current;
     if (!stage) return;
     const rect = stage.getBoundingClientRect();
-    const nextPan = { x: (rect.width - MAP_SIZE * nextZoom) / 2, y: (rect.height - MAP_SIZE * nextZoom) / 2 };
+    const clampedZoom = Math.max(getMinimumZoom(), Math.min(MAP_MAX_ZOOM, nextZoom));
+    const nextPan = clampPan({ x: (rect.width - MAP_SIZE * clampedZoom) / 2, y: (rect.height - MAP_SIZE * clampedZoom) / 2 }, clampedZoom, rect.width, rect.height);
     panRef.current = nextPan;
-    zoomRef.current = nextZoom;
+    zoomRef.current = clampedZoom;
     setPan(nextPan);
-    setZoom(nextZoom);
+    setZoom(clampedZoom);
+  }, [clampPan, getMinimumZoom]);
+
+  useEffect(() => {
+    const stage = stageRef.current;
+    if (!stage) return;
+    const updateViewport = () => setViewport({ width: stage.clientWidth, height: stage.clientHeight });
+    updateViewport();
+    const observer = new ResizeObserver(updateViewport);
+    observer.observe(stage);
+    return () => observer.disconnect();
   }, []);
 
   useEffect(() => {
@@ -135,12 +161,21 @@ export default function MapClient({ initialCategories, locationCount }: { initia
         if (state.query) setQuery(state.query);
         if (["all", "1-20", "21-40", "41-60", "61-80"].includes(state.levelRange ?? "")) setLevelRange(state.levelRange ?? "all");
         if (state.categories?.length) setActiveCategories(new Set(state.categories));
-        if (Number.isFinite(state.zoom)) { const restoredZoom = Math.max(0.06, Math.min(2, state.zoom ?? 0.12)); zoomRef.current = restoredZoom; setZoom(restoredZoom); }
-        if (state.pan && Number.isFinite(state.pan.x) && Number.isFinite(state.pan.y)) { panRef.current = state.pan; setPan(state.pan); }
+        if (Number.isFinite(state.zoom)) { const restoredZoom = Math.max(getMinimumZoom(), Math.min(MAP_MAX_ZOOM, state.zoom ?? 0.12)); zoomRef.current = restoredZoom; setZoom(restoredZoom); }
+        if (state.pan && Number.isFinite(state.pan.x) && Number.isFinite(state.pan.y)) { const restoredPan = clampPan(state.pan, zoomRef.current); panRef.current = restoredPan; setPan(restoredPan); }
       });
     } catch { /* Local storage is optional. */ }
     return () => { cancelled = true; };
-  }, [centerMap]);
+  }, [centerMap, clampPan, getMinimumZoom]);
+
+  useEffect(() => {
+    if (!viewport.width || !viewport.height) return;
+    const nextPan = clampPan(panRef.current, zoomRef.current, viewport.width, viewport.height);
+    if (nextPan.x !== panRef.current.x || nextPan.y !== panRef.current.y) {
+      panRef.current = nextPan;
+      setPan(nextPan);
+    }
+  }, [clampPan, viewport]);
 
   useEffect(() => {
     try { localStorage.setItem(MAP_STATE_KEY, JSON.stringify({ query, categories: [...activeCategories], levelRange, zoom, pan })); } catch { /* Local storage is optional. */ }
@@ -168,6 +203,18 @@ export default function MapClient({ initialCategories, locationCount }: { initia
 
   const calibration = MAP_CALIBRATIONS[mapView];
   const imageRect = useMemo(() => getContainedImageRect(calibration, MAP_SIZE, MAP_SIZE), [calibration]);
+  const visibleTiles = useMemo(() => {
+    if (!viewport.width || !viewport.height) return [];
+    const isWorldTree = mapView === "world-tree";
+    const gridSize = isWorldTree ? 8 : 16;
+    const tileWorldSize = isWorldTree ? MAP_SIZE / gridSize : TILE_SIZE;
+    const left = Math.max(0, Math.floor(((0 - pan.x) / zoom) / tileWorldSize) - 1);
+    const top = Math.max(0, Math.floor(((0 - pan.y) / zoom) / tileWorldSize) - 1);
+    const right = Math.min(gridSize - 1, Math.ceil(((viewport.width - pan.x) / zoom) / tileWorldSize) + 1);
+    const bottom = Math.min(gridSize - 1, Math.ceil(((viewport.height - pan.y) / zoom) / tileWorldSize) + 1);
+    const sourceTiles = isWorldTree ? WORLD_TREE_TILES : PALPAGOS_TILES;
+    return sourceTiles.filter((tile) => tile.x >= left && tile.x <= right && tile.y >= top && tile.y <= bottom);
+  }, [mapView, pan, viewport, zoom]);
   const focusMapLocation = useCallback((location: MapLocation, nextView: MapView) => {
     const stage = stageRef.current;
     if (!stage) return;
@@ -176,10 +223,10 @@ export default function MapClient({ initialCategories, locationCount }: { initia
     const nextImageRect = getContainedImageRect(nextCalibration, MAP_SIZE, MAP_SIZE);
     const point = mapCoordinateToScreenPoint(location, nextImageRect, nextCalibration);
     const currentZoom = zoomRef.current;
-    const nextPan = { x: rect.width / 2 - point.x * currentZoom, y: rect.height / 2 - point.y * currentZoom };
+    const nextPan = clampPan({ x: rect.width / 2 - point.x * currentZoom, y: rect.height / 2 - point.y * currentZoom }, currentZoom, rect.width, rect.height);
     panRef.current = nextPan;
     setPan(nextPan);
-  }, []);
+  }, [clampPan]);
   const visibleLocations = useMemo(() => {
     if (!calibration.showPreparedLocations) return [];
     return filteredLocations;
@@ -195,8 +242,16 @@ export default function MapClient({ initialCategories, locationCount }: { initia
     context.setTransform(dpr, 0, 0, dpr, 0, 0);
     context.clearRect(0, 0, MAP_SIZE, MAP_SIZE);
     const radius = Math.max(8, 10 / Math.max(zoom, 0.08));
+    const stage = stageRef.current;
+    const stageWidth = stage?.clientWidth ?? 0;
+    const stageHeight = stage?.clientHeight ?? 0;
+    const visibleLeft = (-pan.x - TILE_SIZE) / Math.max(zoom, MAP_MIN_ZOOM);
+    const visibleTop = (-pan.y - TILE_SIZE) / Math.max(zoom, MAP_MIN_ZOOM);
+    const visibleRight = (stageWidth - pan.x + TILE_SIZE) / Math.max(zoom, MAP_MIN_ZOOM);
+    const visibleBottom = (stageHeight - pan.y + TILE_SIZE) / Math.max(zoom, MAP_MIN_ZOOM);
     for (const location of visibleLocations) {
       const { x, y } = mapCoordinateToScreenPoint(location, imageRect, calibration);
+      if (x < visibleLeft || x > visibleRight || y < visibleTop || y > visibleBottom) continue;
       const iconSource = location.icon || "/map-icons/Region.webp";
       let icon = iconCache.current.get(iconSource);
       if (!icon) {
@@ -216,26 +271,26 @@ export default function MapClient({ initialCategories, locationCount }: { initia
         context.fill();
       }
     }
-  }, [calibration, imageRect, visibleLocations, zoom]);
+  }, [calibration, imageRect, pan, visibleLocations, zoom]);
 
   useEffect(() => { draw(); }, [draw, iconVersion]);
 
-  const updateZoom = (nextZoom: number, anchor?: Point) => {
+  const updateZoom = useCallback((nextZoom: number, anchor?: Point) => {
     const stage = stageRef.current;
     if (!stage) return;
     const rect = stage.getBoundingClientRect();
     const point = anchor ?? { x: rect.width / 2, y: rect.height / 2 };
-    const clamped = Math.max(0.06, Math.min(2, nextZoom));
+    const clamped = Math.max(getMinimumZoom(), Math.min(MAP_MAX_ZOOM, nextZoom));
     const currentZoom = zoomRef.current;
     const currentPan = panRef.current;
     const worldX = (point.x - currentPan.x) / currentZoom;
     const worldY = (point.y - currentPan.y) / currentZoom;
-    const nextPan = { x: point.x - worldX * clamped, y: point.y - worldY * clamped };
+    const nextPan = clampPan({ x: point.x - worldX * clamped, y: point.y - worldY * clamped }, clamped, rect.width, rect.height);
     panRef.current = nextPan;
     zoomRef.current = clamped;
     setPan(nextPan);
     setZoom(clamped);
-  };
+  }, [clampPan, getMinimumZoom]);
 
   useEffect(() => {
     const stage = stageRef.current;
@@ -248,7 +303,7 @@ export default function MapClient({ initialCategories, locationCount }: { initia
     };
     stage.addEventListener("wheel", handleWheel, { passive: false });
     return () => stage.removeEventListener("wheel", handleWheel);
-  }, [zoom]);
+  }, [updateZoom]);
 
   const toggleCategory = (name: string) => setActiveCategories((current) => { const next = new Set(current); if (next.has(name)) next.delete(name); else next.add(name); return next; });
   const setAllCategories = (visible: boolean) => {
@@ -296,7 +351,8 @@ export default function MapClient({ initialCategories, locationCount }: { initia
     if (!drag || drag.pointerId !== event.pointerId) return;
     const delta = { x: event.clientX - drag.start.x, y: event.clientY - drag.start.y };
     if (Math.hypot(delta.x, delta.y) > 4) setDrag({ ...drag, moved: true });
-    const nextPan = { x: drag.origin.x + delta.x, y: drag.origin.y + delta.y };
+    const stage = stageRef.current;
+    const nextPan = clampPan({ x: drag.origin.x + delta.x, y: drag.origin.y + delta.y }, zoomRef.current, stage?.clientWidth ?? 0, stage?.clientHeight ?? 0);
     panRef.current = nextPan;
     setPan(nextPan);
   };
@@ -320,12 +376,24 @@ export default function MapClient({ initialCategories, locationCount }: { initia
       if (nextCategories.size === 0) nextCategories = worldTreeCategoryNames;
     }
     setSelected(null);
+    setTileStatus({});
+    setTileRetry((value) => value + 1);
     setActiveCategories(nextCategories);
     setMapView(nextView);
     if (nextView === "world-tree" && WORLD_TREE_LOCATIONS[0]) requestAnimationFrame(() => focusMapLocation(WORLD_TREE_LOCATIONS[0], nextView));
   };
   const displayedLocationCount = mapView === "world-tree" ? visibleLocations.length : filteredLocations.length;
   const displayedLocationTotal = mapView === "world-tree" ? WORLD_TREE_LOCATIONS.length : locationCount;
+  const tileLoading = viewport.width > 0 && visibleTiles.some((tile) => tileStatus[`${mapView}:${tile.src}`] !== "loaded");
+  const tileErrors = visibleTiles.filter((tile) => tileStatus[`${mapView}:${tile.src}`] === "error");
+  const retryTiles = () => {
+    setTileStatus((current) => {
+      const next = { ...current };
+      visibleTiles.forEach((tile) => { delete next[`${mapView}:${tile.src}`]; });
+      return next;
+    });
+    setTileRetry((value) => value + 1);
+  };
   const groupsForView = mapView === "world-tree"
     ? [{ name: "World Tree", categories: WORLD_TREE_CATEGORIES.map((category) => category.name) }]
     : CATEGORY_GROUPS;
@@ -369,11 +437,14 @@ export default function MapClient({ initialCategories, locationCount }: { initia
       </aside>
       <div ref={stageRef} className="map-stage" onPointerDown={handlePointerDown} onPointerMove={handlePointerMove} onPointerUp={handlePointerUp} onPointerCancel={handlePointerUp} role="application" aria-label="Interactive Palworld map">
         <div className="map-board" style={{ transform: `translate3d(${pan.x}px, ${pan.y}px, 0) scale(${zoom})` }}>
-          {mapView === "palpagos" ? <div className="map-tile-layer" aria-label="Palpagos Islands map">
-            {PALPAGOS_TILES.map((tile) => <Image key={tile.src} className="map-tile" src={tile.src} alt="" width={TILE_SIZE} height={TILE_SIZE} style={{ left: tile.x * TILE_SIZE, top: tile.y * TILE_SIZE }} priority={tile.x >= 6 && tile.x <= 10 && tile.y >= 4 && tile.y <= 11} unoptimized />)}
-          </div> : <div className="map-tile-layer" aria-label="World Tree map">
-            {WORLD_TREE_TILES.map((tile) => <Image key={tile.src} className="map-tile map-world-tree-tile" src={tile.src} alt="" width={WORLD_TREE_TILE_SIZE} height={WORLD_TREE_TILE_SIZE} style={{ left: tile.x * WORLD_TREE_TILE_SIZE * WORLD_TREE_TILE_SCALE, top: tile.y * WORLD_TREE_TILE_SIZE * WORLD_TREE_TILE_SCALE, width: WORLD_TREE_TILE_SIZE * WORLD_TREE_TILE_SCALE, height: WORLD_TREE_TILE_SIZE * WORLD_TREE_TILE_SCALE }} priority={tile.x >= 2 && tile.x <= 5 && tile.y >= 2 && tile.y <= 5} unoptimized />)}
-          </div>}
+          <div className="map-tile-layer" aria-label={mapView === "palpagos" ? "Palpagos Islands map" : "World Tree map"}>
+            {visibleTiles.map((tile) => {
+              const isWorldTree = mapView === "world-tree";
+              const tileWorldSize = isWorldTree ? MAP_SIZE / 8 : TILE_SIZE;
+              const tileKey = `${mapView}:${tile.src}`;
+              return <Image key={`${tileKey}:${tileRetry}`} className={`map-tile${isWorldTree ? " map-world-tree-tile" : ""}`} src={tile.src} alt="" width={isWorldTree ? WORLD_TREE_TILE_SIZE : TILE_SIZE} height={isWorldTree ? WORLD_TREE_TILE_SIZE : TILE_SIZE} loading="eager" decoding="async" unoptimized style={{ left: tile.x * tileWorldSize, top: tile.y * tileWorldSize, width: tileWorldSize, height: tileWorldSize }} onLoad={() => setTileStatus((current) => ({ ...current, [tileKey]: "loaded" }))} onError={() => setTileStatus((current) => ({ ...current, [tileKey]: "error" }))} />;
+            })}
+          </div>
           <canvas ref={canvasRef} className="map-marker-canvas" aria-hidden="true" />
         </div>
         <div className="map-view-switcher" role="tablist" aria-label="Map area">
@@ -386,6 +457,8 @@ export default function MapClient({ initialCategories, locationCount }: { initia
           <button type="button" onClick={() => centerMap()} aria-label="Reset map view">⌂</button>
         </div>
         {loading && <div className="map-status">Loading map data...</div>}
+        {!loading && tileLoading && !tileErrors.length && <div className="map-status">Loading map tiles...</div>}
+        {!loading && tileErrors.length > 0 && <div className="map-status map-status-error"><span>{tileErrors.length} map tile{tileErrors.length === 1 ? "" : "s"} failed to load.</span><button type="button" className="map-control-button" onClick={retryTiles}>Retry tiles</button></div>}
         {error && <div className="map-status map-status-error">{error}</div>}
         {!loading && !error && mapView === "world-tree" && visibleLocations.length === 0 && (WORLD_TREE_LOCATIONS.length === 0 || activeCategories.size > 0) && <div className="map-empty-state"><strong>World Tree markers unavailable</strong><span>{WORLD_TREE_LOCATIONS.length === 0 ? "World Tree location markers are not available yet." : "No World Tree markers match the current filters."}</span></div>}
         {!loading && !error && query.trim() && filteredLocations.length === 0 && <div className="map-empty-state"><strong>No locations found</strong><span>Try clearing the search or enabling another category.</span></div>}
