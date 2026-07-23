@@ -111,9 +111,12 @@ function writeManifestAtomic(config, entries) {
   finally { if (existsSync(tempPath)) unlinkSync(tempPath); }
 }
 
-async function headPublicUrl(publicUrl) {
+async function headPublicUrl(publicUrl, verificationToken = '') {
   try {
-    const response = await fetch(publicUrl, { method: 'HEAD', cache: 'no-store' });
+    const verificationUrl = verificationToken
+      ? `${publicUrl}?r2verify=${encodeURIComponent(`${verificationToken}-${Date.now()}-${Math.random().toString(36).slice(2)}`)}`
+      : publicUrl;
+    const response = await fetch(verificationUrl, { method: 'HEAD', cache: 'no-store' });
     const result = {
       status: response.status,
       contentLength: response.headers.get('content-length'),
@@ -122,7 +125,7 @@ async function headPublicUrl(publicUrl) {
       etag: response.headers.get('etag'),
     };
     if (response.status === 200 && result.contentLength === null) {
-      const body = await fetch(publicUrl, { method: 'GET', cache: 'no-store' });
+      const body = await fetch(verificationUrl, { method: 'GET', cache: 'no-store' });
       result.contentLength = String((await body.arrayBuffer()).byteLength);
       result.contentLengthSource = 'GET';
     }
@@ -177,18 +180,20 @@ async function syncOne(config, sourcePath, previous, { dryRun = false, stable = 
   if (dryRun) return { ...entry, status: 'dry-run' };
 
   const old = previous.get(sourcePath);
-  const remoteBefore = await headPublicUrl(entry.publicUrl);
+  const remoteBefore = await headPublicUrl(entry.publicUrl, entry.sha256);
   if (old?.sha256 === entry.sha256 && remoteMatches(entry, remoteBefore)) {
     return { ...entry, uploadStatus: 'skipped', headStatus: 'verified', etag: remoteBefore.etag, verifiedAt: new Date().toISOString() };
   }
   console.log(`${sourcePath} uploading...`);
   try {
     upload(config, { ...entry, fullPath });
-    const remoteAfter = await headPublicUrl(entry.publicUrl);
+    const remoteAfter = await headPublicUrl(entry.publicUrl, entry.sha256);
     if (!remoteMatches(entry, remoteAfter)) throw new Error(`upload verification failed: ${JSON.stringify(remoteAfter)}`);
     console.log(`${sourcePath} upload verified`);
-    await purgeCache(entry.publicUrl);
-    console.log(`${sourcePath} cache purged`);
+    if (process.env.CLOUDFLARE_ZONE_ID && process.env.CLOUDFLARE_CACHE_PURGE_TOKEN) {
+      await purgeCache(entry.publicUrl);
+      console.log(`${sourcePath} cache purged`);
+    }
     return { ...entry, uploadStatus: 'uploaded', headStatus: 'verified', etag: remoteAfter.etag, verifiedAt: new Date().toISOString() };
   } catch (error) {
     return { ...entry, uploadStatus: 'failed', headStatus: 'failed', error: error.message };
@@ -198,16 +203,21 @@ async function syncOne(config, sourcePath, previous, { dryRun = false, stable = 
 async function sync(config, sourcePaths, options = {}) {
   const previous = loadManifest();
   const results = [];
-  for (const sourcePath of sourcePaths) {
-    const label = relative(projectRoot, resolve(projectRoot, sourcePath));
-    if (!options.dryRun && options.announce !== false) console.log(`${label} changed`);
-    if (!options.dryRun && options.announce !== false) console.log(`${label} waiting for file stability...`);
-    const result = await syncOne(config, sourcePath, previous, options);
-    if (result.status === 'deferred') console.log(`${label} is still changing; deferred`);
-    else if (result.uploadStatus === 'uploaded') console.log(`${label} sync complete`);
-    else if (result.uploadStatus === 'skipped') console.log(`${label} unchanged; remote verification passed`);
-    else if (result.status === 'failed' || result.uploadStatus === 'failed') console.error(`${label} sync failed: ${result.error}`);
-    results.push(result);
+  const concurrency = options.dryRun ? 1 : Math.max(1, Number(process.env.R2_CONCURRENCY || 4));
+  for (let start = 0; start < sourcePaths.length; start += concurrency) {
+    const batch = sourcePaths.slice(start, start + concurrency);
+    const batchResults = await Promise.all(batch.map(async (sourcePath) => {
+      const label = relative(projectRoot, resolve(projectRoot, sourcePath));
+      if (!options.dryRun && options.announce !== false) console.log(`${label} changed`);
+      if (!options.dryRun && options.announce !== false) console.log(`${label} waiting for file stability...`);
+      const result = await syncOne(config, sourcePath, previous, options);
+      if (result.status === 'deferred') console.log(`${label} is still changing; deferred`);
+      else if (result.uploadStatus === 'uploaded') console.log(`${label} sync complete`);
+      else if (result.uploadStatus === 'skipped') console.log(`${label} unchanged; remote verification passed`);
+      else if (result.status === 'failed' || result.uploadStatus === 'failed') console.error(`${label} sync failed: ${result.error}`);
+      return result;
+    }));
+    results.push(...batchResults);
   }
   if (!options.dryRun) {
     const existing = new Map(loadManifest());
@@ -248,14 +258,15 @@ function startWatcher(config) {
 async function main() {
   const config = loadConfig();
   const watchMode = process.argv.includes('--watch');
-  const dryRun = process.argv.includes('--dry-run');
-  if (watchMode && dryRun) throw new Error('--dry-run cannot be used with --watch.');
+  const apply = process.argv.includes('--apply');
+  const dryRun = !apply;
+  if (watchMode && !apply) throw new Error('--watch requires --apply because it uploads changed files.');
   if (watchMode) { startWatcher(config); return; }
-  const results = await sync(config, config.files, { dryRun });
+  const results = await sync(config, config.files, { dryRun, stable: false });
   if (dryRun) results.filter((result) => result.status === 'dry-run').forEach(printDryRun);
   if (results.some((result) => result.status === 'failed' || result.uploadStatus === 'failed')) process.exitCode = 1;
 }
 
-if (process.argv[1] === fileURLToPath(import.meta.url)) main().catch((error) => { console.error(`R2 sync failed: ${error.message}`); process.exitCode = 1; });
+if (resolve(process.argv[1] || '') === fileURLToPath(import.meta.url)) main().catch((error) => { console.error(`R2 sync failed: ${error.message}`); process.exitCode = 1; });
 
 export { cacheControlFor, contentTypeFor, isTemporaryPath, objectKey, readValidatedFile, remoteMatches, sameStat, waitForFileStability };

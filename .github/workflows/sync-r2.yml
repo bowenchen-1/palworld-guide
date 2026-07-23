@@ -6,6 +6,9 @@ on:
     paths:
       - "public/**"
       - "config/r2-assets.json"
+      - "config/r2-map-assets.json"
+      - "config/r2-pal-assets.json"
+      - "scripts/r2-audit.mjs"
       - "scripts/r2-sync.mjs"
       - "package.json"
       - "package-lock.json"
@@ -56,5 +59,14 @@ jobs:
           test -n "$CF_CACHE_PURGE_TOKEN" || { echo "CLOUDFLARE_CACHE_PURGE_TOKEN is missing"; exit 1; }
           echo "All required secrets are available."
 
-      - name: Sync changed R2 resources and purge cache
-        run: npm run r2:sync
+      - name: Audit R2 allowlists
+        run: npm run r2:audit
+
+      - name: Sync ordinary R2 resources and purge cache
+        run: npm run r2:sync -- --apply
+
+      - name: Sync map R2 resources and purge cache
+        run: npm run r2:map -- --apply
+
+      - name: Sync Pal R2 resources and purge cache
+        run: npm run r2:pals -- --apply

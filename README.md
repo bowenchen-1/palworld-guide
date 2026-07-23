@@ -21,11 +21,18 @@ npm test
 
 Only the resources explicitly listed in `config/r2-assets.json` are published to R2. This deliberately does not upload all of `public/`. Add a new asset to that file before it can be synced.
 
+Audit all three R2 allowlists and report intentionally unlisted files:
+
+```bash
+npm run r2:audit
+```
+
 Set the following values in your local shell or an ignored `.env.local` file (never commit credentials):
 
 ```bash
 R2_BUCKET=palworldguide-assets
 ASSET_BASE_URL=https://assets.palworldguide.net
+NEXT_PUBLIC_PAL_ASSET_BASE_URL=https://cdn.palworldguide.net
 CLOUDFLARE_ZONE_ID=your-zone-id
 CLOUDFLARE_CACHE_PURGE_TOKEN=your-cache-purge-token
 ```
@@ -33,7 +40,7 @@ CLOUDFLARE_CACHE_PURGE_TOKEN=your-cache-purge-token
 Run a one-time sync:
 
 ```bash
-npm run r2:sync
+npm run r2:sync -- --apply
 ```
 
 Run a no-write inspection (it prints each configured file, R2 key, byte size, SHA-256 and target URL):
@@ -41,6 +48,24 @@ Run a no-write inspection (it prints each configured file, R2 key, byte size, SH
 ```bash
 npm run r2:sync -- --dry-run
 ```
+
+Map tile migration uses a separate allowlist and manifest. It is dry-run by default; add `--apply` only after reviewing the output:
+
+```bash
+npm run r2:map
+npm run r2:map -- --apply
+```
+
+Pal images use a separate allowlist and CDN manifest so map assets remain on `assets.palworldguide.net`:
+
+```bash
+npm run r2:pals
+npm run r2:pals -- --apply
+```
+
+Pal images use `public, max-age=86400` while their fixed filenames remain subject to content updates.
+
+The GitHub Actions sync audits and applies the ordinary, map, and Pal allowlists separately. It never deletes local files or R2 objects that are absent from the current scan.
 
 Watch configured assets continuously:
 
