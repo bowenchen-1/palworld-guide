@@ -9,6 +9,33 @@
 
 .popular-pal-grid article > a {
   align-items: flex-start;
+  min-height: 238px;
+}
+
+.popular-pal-grid article > a > .pal-mark {
+  flex: 0 0 auto;
+}
+
+.popular-pal-card-copy > span {
+  font-size: 11px !important;
+  font-weight: 900 !important;
+}
+
+.popular-pal-card-copy h3 {
+  font-size: 27px !important;
+  line-height: 1.05;
+}
+
+.popular-pal-card-copy p b {
+  padding: 5px 7px;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.popular-pal-card-copy > small {
+  color: #b5d4d2 !important;
+  font-size: 11px !important;
+  font-weight: 700;
 }
 
 .popular-pal-card-copy {
@@ -26,7 +53,7 @@
   display: block;
   overflow: hidden;
   color: var(--terminal-muted) !important;
-  font-size: 8px !important;
+  font-size: 10px !important;
   font-weight: 600 !important;
   letter-spacing: 0 !important;
   line-height: 1.35;
@@ -37,10 +64,17 @@
 .popular-pal-card-meta b {
   margin-right: 5px;
   color: var(--terminal-mint);
-  font-size: 7px;
+  font-size: 8px;
   font-weight: 900;
   letter-spacing: .08em;
   text-transform: uppercase;
+}
+
+.popular-pal-grid footer a {
+  padding: 12px 10px;
+  color: #70d9ce !important;
+  font-size: 11px !important;
+  font-weight: 900;
 }
 
 /* Keep the not-yet-launched language switcher out of the public header. */
