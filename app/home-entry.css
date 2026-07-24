@@ -7,6 +7,42 @@
   display: none;
 }
 
+.popular-pal-grid article > a {
+  align-items: flex-start;
+}
+
+.popular-pal-card-copy {
+  min-width: 0;
+  flex: 1;
+}
+
+.popular-pal-card-meta {
+  display: grid;
+  gap: 4px;
+  margin-top: 9px;
+}
+
+.popular-pal-card-meta > span {
+  display: block;
+  overflow: hidden;
+  color: var(--terminal-muted) !important;
+  font-size: 8px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0 !important;
+  line-height: 1.35;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.popular-pal-card-meta b {
+  margin-right: 5px;
+  color: var(--terminal-mint);
+  font-size: 7px;
+  font-weight: 900;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
 /* Keep the not-yet-launched language switcher out of the public header. */
 .site-header .language-switcher {
   display: none;
