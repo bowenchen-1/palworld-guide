@@ -27,9 +27,17 @@
 }
 
 .popular-pal-card-copy p b {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
   padding: 5px 7px;
   font-size: 10px;
   font-weight: 800;
+}
+
+.popular-pal-card-copy p .work-suitability-icon {
+  width: 16px;
+  height: 16px;
 }
 
 .popular-pal-card-copy > small {
@@ -62,12 +70,43 @@
 }
 
 .popular-pal-card-meta b {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
   margin-right: 5px;
   color: var(--terminal-mint);
   font-size: 8px;
   font-weight: 900;
   letter-spacing: .08em;
   text-transform: uppercase;
+}
+
+.popular-pal-meta-icon {
+  color: var(--terminal-yellow);
+  font-size: 12px;
+  line-height: 1;
+}
+
+.popular-pal-element-list,
+.popular-pal-detail-value {
+  display: inline-flex;
+  min-width: 0;
+  align-items: center;
+  gap: 4px;
+  vertical-align: middle;
+}
+
+.popular-pal-element {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.popular-pal-element .element-icon,
+.popular-pal-detail-value img {
+  width: 17px;
+  height: 17px;
+  object-fit: contain;
 }
 
 .popular-pal-grid footer a {
