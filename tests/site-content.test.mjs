@@ -251,7 +251,7 @@ test("current 1.0 dataset distinguishes visible Pals from raw breeding records",
   assert.equal(Object.keys(matrix).length, 300);
 });
 
-test("breeding calculator target URL renders a noindex parent-results page", async () => {
+test("breeding calculator target URL is indexable and renders parent results", async () => {
   const page = await read("../app/breeding-calculator/page.tsx");
   const client = await read("../app/breeding-calculator/breeding-results-page.tsx");
   const homepage = await read("../app/page.tsx");
@@ -260,7 +260,7 @@ test("breeding calculator target URL renders a noindex parent-results page", asy
   const teamBuilder = await read("../app/team-builder/team-builder-client.tsx");
   assert.doesNotMatch(page, /permanentRedirect/);
   assert.match(page, /BreedingResultsPage/);
-  assert.match(page, /robots: \{ index: false, follow: true \}/);
+  assert.match(page, /robots: \{ index: true, follow: true \}/);
   assert.match(page, /canonical: "\/breeding-calculator"/);
   assert.match(page, /searchParams/);
   assert.match(client, /Breeding Parents for/);
@@ -341,9 +341,9 @@ test("Pals routes preserve legacy redirects and filter indexing rules", async ()
   assert.match(legacyProfile, /findPal/);
   assert.match(legacyProfile, /permanentRedirect\(`\/pals\/\$\{slug\}`\)/);
   assert.match(list, /searchParams/);
-  assert.match(list, /index: false, follow: true/);
+  assert.doesNotMatch(list, /index: false, follow: true/);
   assert.match(pagination, /searchParams/);
-  assert.match(pagination, /index: false, follow: true/);
+  assert.doesNotMatch(pagination, /index: false, follow: true/);
   assert.match(pagination, /notFound/);
 });
 
