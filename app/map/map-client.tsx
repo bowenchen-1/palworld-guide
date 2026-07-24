@@ -6,6 +6,7 @@ import type { MapCategory, MapLocation } from "../../data/map";
 import worldTreePayload from "../../public/data/world-tree-locations.json";
 import { assetUrl } from "../lib/assets";
 import { getContainedImageRect, MAP_CALIBRATIONS, mapCoordinateToScreenPoint, screenPointToMapCoordinate, type MapView } from "./map-calibration";
+import { mapText, type MapLocale } from "./map-i18n";
 
 const MAP_SIZE = 8192;
 const TILE_SIZE = 512;
@@ -23,15 +24,13 @@ const WORLD_TREE_TILES = Array.from({ length: 8 * 8 }, (_, index) => ({
   src: assetUrl(`/map/world-tree-z3/${index % 8}/${Math.floor(index / 8)}.png`),
 }));
 const CATEGORY_GROUPS = [
-  { name: "Effigies", categories: ["Lifmunk Effigies", "Rooby Effigies", "Yakumo Effigies", "Munchill Effigies", "Relaxaurus Effigies", "Herbil Effigies", "Tanzee Effigies", "Lunaris Effigies", "Depresso Effigies", "Pengullet Effigies", "Lamball Effigies", "Journals"] },
-  { name: "Eggs", categories: ["Sakura Eggs", "Desert Eggs", "Frozen Eggs", "Grass Eggs", "Feybreak Eggs", "Volcano Eggs"] },
-  { name: "Enemies", categories: ["Towers", "Alpha Pals", "Enemy Camps", "Anti-Air Turrets", "Incidents", "Arrogant Pal Critic", "Black Marketeers", "Supply Drops"] },
-  { name: "Fishing", categories: ["Fishing Spots", "Salvage Rank 1", "Salvage Rank 2"] },
-  { name: "Locations", categories: ["Fast Travel", "Settlements", "Recommended Base Spots", "Cave Entrances", "Respawn Points", "Region Labels", "Dungeons", "Treasure Map Dig Spots", "Skyland Warp Altars"] },
-  { name: "Minerals", categories: ["Coal Clusters", "Ore Clusters", "Pure Quartz Clusters", "Sulfur Clusters", "Coal", "Ore", "Pure Quartz", "Sulfur", "Chromite", "Hexolite Quartz", "Crude Oil"] },
-  { name: "NPCs", categories: ["NPCs", "Wandering Merchants"] },
-  { name: "Oil Rigs", categories: ["Oilrig Big Chests", "Oilrig Chests"] },
-  { name: "Resources", categories: ["Beautiful Flowers", "Kinship Peaches", "Ancient Lava", "Ancient Bark", "Soralite", "Junk", "Nightstar Sand", "Skill Fruit Trees", "Ancient Bone", "Heat Sources", "Elemental Chests", "Treasure Chests"] },
+  { name: "Locations", categories: ["Fast Travel", "Dungeons", "Towers", "Settlements", "Cave Entrances", "Region Labels", "Recommended Base Spots", "Respawn Points", "Skyland Warp Altars"] },
+  { name: "Pals", categories: ["Alpha Pals", "Sakura Eggs", "Desert Eggs", "Frozen Eggs", "Grass Eggs", "Feybreak Eggs", "Volcano Eggs"] },
+  { name: "Collectibles", categories: ["Lifmunk Effigies", "Rooby Effigies", "Yakumo Effigies", "Munchill Effigies", "Relaxaurus Effigies", "Herbil Effigies", "Tanzee Effigies", "Lunaris Effigies", "Depresso Effigies", "Pengullet Effigies", "Lamball Effigies", "Treasure Chests", "Elemental Chests", "Treasure Map Dig Spots", "Journals"] },
+  { name: "Resources", categories: ["Ore", "Ore Clusters", "Coal", "Coal Clusters", "Sulfur", "Sulfur Clusters", "Pure Quartz", "Pure Quartz Clusters", "Chromite", "Hexolite Quartz", "Crude Oil", "Nightstar Sand", "Ancient Bark", "Ancient Bone", "Ancient Lava", "Skill Fruit Trees", "Beautiful Flowers", "Kinship Peaches", "Soralite", "Junk", "Heat Sources"] },
+  { name: "Enemies", categories: ["Enemy Camps", "Anti-Air Turrets", "Incidents", "Supply Drops", "Arrogant Pal Critic"] },
+  { name: "NPCs", categories: ["NPCs", "Wandering Merchants", "Black Marketeers"] },
+  { name: "Activities", categories: ["Fishing Spots", "Salvage Rank 1", "Salvage Rank 2", "Oilrig Big Chests", "Oilrig Chests"] },
   { name: "Other", categories: ["Unknown"] },
 ] as const;
 const QUICK_FILTERS = [
@@ -75,16 +74,17 @@ type MapPayload = { locations: MapLocation[]; categories: MapCategory[] };
 type Point = { x: number; y: number };
 type LevelRange = "all" | "1-20" | "21-40" | "41-60" | "61-80";
 
-function readableCount(value: number) {
-  return new Intl.NumberFormat("en-US").format(value);
+function readableCount(value: number, locale: MapLocale) {
+  return new Intl.NumberFormat(locale === "zh" ? "zh-CN" : "en-US").format(value);
 }
 
-export default function MapClient({ initialCategories, locationCount }: { initialCategories: MapCategory[]; locationCount: number }) {
+export default function MapClient({ initialCategories, locationCount, locale = "en" }: { initialCategories: MapCategory[]; locationCount: number; locale?: MapLocale }) {
+  const text = mapText(locale);
   const stageRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [data, setData] = useState<MapPayload>({ locations: [], categories: initialCategories.map((category) => ({ ...category, icon: mapIconUrl(category.icon) ?? assetUrl("/map-icons/Region.webp") })) });
   const [activeCategories, setActiveCategories] = useState(() => new Set<string>());
-  const [openGroups, setOpenGroups] = useState(() => new Set(["Effigies", "Eggs", "Enemies"]));
+  const [openGroups, setOpenGroups] = useState(() => new Set(["Locations", "Pals", "Collectibles"]));
   const [query, setQuery] = useState("");
   const [levelRange, setLevelRange] = useState<LevelRange>("all");
   const [selected, setSelected] = useState<MapLocation | null>(null);
@@ -148,9 +148,9 @@ export default function MapClient({ initialCategories, locationCount }: { initia
     fetch("/data/map-locations.json")
       .then((response) => { if (!response.ok) throw new Error("Map data unavailable"); return response.json() as Promise<MapPayload>; })
       .then((payload) => { if (!cancelled) { setData({ ...payload, locations: payload.locations.map((location) => ({ ...location, icon: mapIconUrl(location.icon) })), categories: payload.categories.map((category) => ({ ...category, icon: mapIconUrl(category.icon) ?? assetUrl("/map-icons/Region.webp") })) }); setLoading(false); } })
-      .catch(() => { if (!cancelled) { setLoading(false); setError("Map data could not be loaded. Please refresh the page."); } });
+      .catch(() => { if (!cancelled) { setLoading(false); setError(text.dataError); } });
     return () => { cancelled = true; };
-  }, []);
+  }, [text.dataError]);
 
   useEffect(() => {
     let cancelled = false;
@@ -185,14 +185,15 @@ export default function MapClient({ initialCategories, locationCount }: { initia
 
   const filteredLocations = useMemo(() => {
     const term = query.trim().toLowerCase();
+    const labels = mapText(locale);
     const locations = mapView === "world-tree" ? WORLD_TREE_LOCATIONS : data.locations;
     return locations.filter((location) => {
       const locationLevel = Number(location.level);
       const matchesLevel = levelRange === "all"
         || (Number.isFinite(locationLevel) && ((levelRange === "1-20" && locationLevel <= 20) || (levelRange === "21-40" && locationLevel >= 21 && locationLevel <= 40) || (levelRange === "41-60" && locationLevel >= 41 && locationLevel <= 60) || (levelRange === "61-80" && locationLevel >= 61 && locationLevel <= 80)));
-      return activeCategories.has(location.category) && matchesLevel && (!term || `${location.name} ${location.description ?? ""} ${location.category}`.toLowerCase().includes(term));
+      return activeCategories.has(location.category) && matchesLevel && (!term || `${location.name} ${location.description ?? ""} ${location.category} ${labels.category(location.category)}`.toLowerCase().includes(term));
     });
-  }, [activeCategories, data.locations, levelRange, mapView, query]);
+  }, [activeCategories, data.locations, levelRange, locale, mapView, query]);
 
   const categoryCounts = useMemo(() => {
     const counts = new Map<string, number>();
@@ -408,44 +409,45 @@ export default function MapClient({ initialCategories, locationCount }: { initia
 
   return <div className={`map-tool-shell map-view-${mapView}`}>
     <div className="map-toolbar">
-      <div className="map-toolbar-search" aria-label="Search">
-        <span className="map-toolbar-label">Search</span>
-        <label className="map-search"><span aria-hidden="true">⌕</span><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search locations..." aria-label="Search map locations" />{query && <button type="button" onClick={() => setQuery("")} aria-label="Clear search">×</button>}</label>
+      <div className="map-toolbar-search" aria-label={text.search}>
+        <span className="map-toolbar-label">{text.search}</span>
+        <label className="map-search"><span aria-hidden="true">⌕</span><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder={text.search} aria-label={text.searchLabel} />{query && <button type="button" onClick={() => setQuery("")} aria-label={text.clearSearch}>×</button>}</label>
       </div>
       <div className="map-toolbar-row">
-        <div className="map-toolbar-section map-quick-filters" aria-label="Quick Filters">
-          <span className="map-toolbar-label">Quick Filters <span className="map-quick-filter-heading-flame" aria-hidden="true">🔥</span></span>
+        <div className="map-toolbar-section map-quick-filters" aria-label={text.quickFilters}>
+          <span className="map-toolbar-label">{text.quickFilters} <span className="map-quick-filter-heading-flame" aria-hidden="true">🔥</span></span>
           <div className="map-quick-filter-track">
             {QUICK_FILTERS.map((filter) => {
               const active = activeQuickFilter?.id === filter.id;
               const icon = categoryMap.get(filter.categories[0])?.icon || filter.icon;
-              return <button key={filter.id} type="button" className={`map-quick-filter map-quick-filter-${filter.id}${active ? " is-active" : ""}`} onClick={() => applyQuickFilter(filter.categories)} aria-pressed={active} aria-label={`Quick filter: ${filter.label}. ${filter.description}`} title={filter.description}><span>{filter.label}</span><Image className="map-quick-filter-icon" src={icon} alt="" width={18} height={18} unoptimized style={{ filter: "none", opacity: 1 }} /></button>;
+              const quick = text.quick(filter.id, filter);
+              return <button key={filter.id} type="button" className={`map-quick-filter map-quick-filter-${filter.id}${active ? " is-active" : ""}`} onClick={() => applyQuickFilter(filter.categories)} aria-pressed={active} aria-label={`${quick.label}：${quick.description}`} title={quick.description}><span>{quick.label}</span><Image className="map-quick-filter-icon" src={icon} alt="" width={18} height={18} unoptimized style={{ filter: "none", opacity: 1 }} /></button>;
             })}
           </div>
         </div>
-        <div className="map-toolbar-section map-map-controls" aria-label="Map Controls">
-          <span className="map-toolbar-label">Map Controls</span>
-          <div className="map-map-control-actions"><select className="map-level-filter" value={levelRange} onChange={(event) => changeLevelRange(event.target.value as LevelRange)} aria-label="Filter locations by level"><option value="all">All levels</option><option value="1-20">Levels 1–20</option><option value="21-40">Levels 21–40</option><option value="41-60">Levels 41–60</option><option value="61-80">Levels 61–80</option></select><button type="button" className="map-control-button" onClick={() => setAllCategories(true)} aria-label="Show all map categories">Show all</button><button type="button" className="map-control-button" onClick={() => setAllCategories(false)} aria-label="Clear all map filters">Clear filters</button><span className="map-result-count">{readableCount(displayedLocationCount)} shown <small>of {readableCount(displayedLocationTotal)}</small></span></div>
+        <div className="map-toolbar-section map-map-controls" aria-label={text.mapControls}>
+          <span className="map-toolbar-label">{text.mapControls}</span>
+          <div className="map-map-control-actions"><select className="map-level-filter" value={levelRange} onChange={(event) => changeLevelRange(event.target.value as LevelRange)} aria-label={locale === "zh" ? "按等级筛选地点" : "Filter locations by level"}><option value="all">{text.allLevels}</option><option value="1-20">{text.level("1–20")}</option><option value="21-40">{text.level("21–40")}</option><option value="41-60">{text.level("41–60")}</option><option value="61-80">{text.level("61–80")}</option></select><button type="button" className="map-control-button" onClick={() => setAllCategories(true)} aria-label={text.showAll}>{text.showAll}</button><button type="button" className="map-control-button" onClick={() => setAllCategories(false)} aria-label={text.clearFilters}>{text.clearFilters}</button><span className="map-result-count">{readableCount(displayedLocationCount, locale)} {text.shown} <small>{text.of} {readableCount(displayedLocationTotal, locale)}</small></span></div>
         </div>
       </div>
     </div>
     <div className="map-workspace">
-      <aside className="map-filters" aria-label="Map categories">
-        <div className="map-filter-heading"><div><span className="map-filter-eyebrow">FILTER LOCATIONS</span><h2>Categories</h2></div><span className="map-filter-total">{currentCategories.length}</span></div>
-        <p className="map-filter-help">Choose the locations shown on the map.</p>
+      <aside className="map-filters" aria-label={locale === "zh" ? "地图分类" : "Map categories"}>
+        <div className="map-filter-heading"><div><span className="map-filter-eyebrow">{text.filterLocations}</span><h2>{text.mapFilters}</h2></div><span className="map-filter-total">{currentCategories.length}</span></div>
+        <p className="map-filter-help">{text.chooseLocations}</p>
         <div className="map-category-groups">
           {groupsForView.map((group) => {
             const categories = group.categories.map((name) => categoryMap.get(name)).filter((category): category is MapCategory => Boolean(category));
             if (!categories.length) return null;
             const activeCount = categories.filter((category) => activeCategories.has(category.name)).length;
             const isOpen = openGroups.has(group.name);
-            return <section className="map-category-group" key={group.name}><div className="map-group-heading"><button type="button" className="map-group-toggle" onClick={() => toggleGroup(group.name)} aria-expanded={isOpen}><span className={`map-group-chevron${isOpen ? " is-open" : ""}`}>⌄</span><strong>{group.name}</strong><span className="map-group-count">{activeCount}/{categories.length}</span></button><div className="map-group-actions"><button type="button" onClick={() => setGroupCategories(group.categories, true)}>All</button><button type="button" onClick={() => setGroupCategories(group.categories, false)}>Clear</button></div></div>{isOpen && <div className="map-category-list">{categories.map((category) => { const active = activeCategories.has(category.name); return <button key={category.name} type="button" className={`map-category${active ? " is-active" : ""}`} aria-pressed={active} onClick={() => toggleCategory(category.name)}><span className="map-category-checkbox" aria-hidden="true">{active ? "✓" : ""}</span><span className="map-category-icon"><Image src={category.icon} alt="" width={24} height={24} unoptimized /></span><span className="map-category-name">{category.name}</span><small className="map-category-count">{readableCount(categoryCounts.get(category.name) ?? 0)}</small></button>; })}</div>}</section>;
+            return <section className="map-category-group" key={group.name}><div className="map-group-heading"><button type="button" className="map-group-toggle" onClick={() => toggleGroup(group.name)} aria-expanded={isOpen}><span className={`map-group-chevron${isOpen ? " is-open" : ""}`}>⌄</span><strong>{text.group(group.name)}</strong><span className="map-group-count">{activeCount}/{categories.length}</span></button><div className="map-group-actions"><button type="button" onClick={() => setGroupCategories(group.categories, true)}>{text.all}</button><button type="button" onClick={() => setGroupCategories(group.categories, false)}>{text.clear}</button></div></div>{isOpen && <div className="map-category-list">{categories.map((category) => { const active = activeCategories.has(category.name); return <button key={category.name} type="button" className={`map-category${active ? " is-active" : ""}`} aria-pressed={active} onClick={() => toggleCategory(category.name)}><span className="map-category-checkbox" aria-hidden="true">{active ? "✓" : ""}</span><span className="map-category-icon"><Image src={category.icon} alt="" width={24} height={24} unoptimized /></span><span className="map-category-name">{text.category(category.name)}</span><small className="map-category-count">{readableCount(categoryCounts.get(category.name) ?? 0, locale)}</small></button>; })}</div>}</section>;
           })}
         </div>
       </aside>
-      <div ref={stageRef} className="map-stage" onPointerDown={handlePointerDown} onPointerMove={handlePointerMove} onPointerUp={handlePointerUp} onPointerCancel={handlePointerUp} onPointerLeave={() => setCursorCoordinate(null)} role="application" aria-label="Interactive Palworld map">
+      <div ref={stageRef} className="map-stage" onPointerDown={handlePointerDown} onPointerMove={handlePointerMove} onPointerUp={handlePointerUp} onPointerCancel={handlePointerUp} onPointerLeave={() => setCursorCoordinate(null)} role="application" aria-label={locale === "zh" ? "互动式帕鲁地图" : "Interactive Palworld map"}>
         <div className="map-board" style={{ transform: `translate3d(${pan.x}px, ${pan.y}px, 0) scale(${zoom})` }}>
-          <div className="map-tile-layer" aria-label={mapView === "palpagos" ? "Palpagos Islands map" : "World Tree map"}>
+          <div className="map-tile-layer" aria-label={mapView === "palpagos" ? text.palpagos : text.worldTree}>
             {visibleTiles.map((tile) => {
               const isWorldTree = mapView === "world-tree";
               const tileWorldSize = isWorldTree ? MAP_SIZE / 8 : TILE_SIZE;
@@ -455,22 +457,22 @@ export default function MapClient({ initialCategories, locationCount }: { initia
           </div>
           <canvas ref={canvasRef} className="map-marker-canvas" aria-hidden="true" />
         </div>
-        <div className="map-view-switcher" role="tablist" aria-label="Map area">
-          <button type="button" className={mapView === "palpagos" ? "is-active" : ""} onClick={() => changeMapView("palpagos")} role="tab" aria-selected={mapView === "palpagos"}>Palpagos Islands</button>
-          <button type="button" className={mapView === "world-tree" ? "is-active" : ""} onClick={() => changeMapView("world-tree")} role="tab" aria-selected={mapView === "world-tree"}>World Tree</button>
+        <div className="map-view-switcher" role="tablist" aria-label={text.mapArea}>
+          <button type="button" className={mapView === "palpagos" ? "is-active" : ""} onClick={() => changeMapView("palpagos")} role="tab" aria-selected={mapView === "palpagos"}>{text.palpagos}</button>
+          <button type="button" className={mapView === "world-tree" ? "is-active" : ""} onClick={() => changeMapView("world-tree")} role="tab" aria-selected={mapView === "world-tree"}>{text.worldTree}</button>
         </div>
         <div className="map-zoom-controls">
-          <div className="map-coordinate-readout" aria-label="Current in-game map coordinates"><span>X <b>{cursorCoordinate ? Math.round(cursorCoordinate.x) : "—"}</b></span><span>Y <b>{cursorCoordinate ? Math.round(cursorCoordinate.y) : "—"}</b></span></div>
-          <button type="button" onClick={() => updateZoom(zoomRef.current * 1.2)} aria-label="Zoom in">+</button>
-          <button type="button" onClick={() => updateZoom(zoomRef.current / 1.2)} aria-label="Zoom out">−</button>
+          <div className="map-coordinate-readout" aria-label={text.coordinates}><span>X <b>{cursorCoordinate ? Math.round(cursorCoordinate.x) : "—"}</b></span><span>Y <b>{cursorCoordinate ? Math.round(cursorCoordinate.y) : "—"}</b></span></div>
+          <button type="button" onClick={() => updateZoom(zoomRef.current * 1.2)} aria-label={text.zoomIn}>+</button>
+          <button type="button" onClick={() => updateZoom(zoomRef.current / 1.2)} aria-label={text.zoomOut}>−</button>
         </div>
-        {loading && <div className="map-status">Loading map data...</div>}
-        {!loading && tileLoading && !tileErrors.length && <div className="map-status">Loading map tiles...</div>}
-        {!loading && tileErrors.length > 0 && <div className="map-status map-status-error"><span>{tileErrors.length} map tile{tileErrors.length === 1 ? "" : "s"} failed to load.</span><button type="button" className="map-control-button" onClick={retryTiles}>Retry tiles</button></div>}
+        {loading && <div className="map-status">{text.loadingData}</div>}
+        {!loading && tileLoading && !tileErrors.length && <div className="map-status">{text.loadingTiles}</div>}
+        {!loading && tileErrors.length > 0 && <div className="map-status map-status-error"><span>{text.tileFailed(tileErrors.length)}</span><button type="button" className="map-control-button" onClick={retryTiles}>{text.retryTiles}</button></div>}
         {error && <div className="map-status map-status-error">{error}</div>}
-        {!loading && !error && mapView === "world-tree" && visibleLocations.length === 0 && (WORLD_TREE_LOCATIONS.length === 0 || activeCategories.size > 0) && <div className="map-empty-state"><strong>World Tree markers unavailable</strong><span>{WORLD_TREE_LOCATIONS.length === 0 ? "World Tree location markers are not available yet." : "No World Tree markers match the current filters."}</span></div>}
-        {!loading && !error && query.trim() && filteredLocations.length === 0 && <div className="map-empty-state"><strong>No locations found</strong><span>Try clearing the search or enabling another category.</span></div>}
-        {selected && <article className="map-location-card" onPointerDown={(event) => event.stopPropagation()}><button type="button" className="map-card-close" onClick={() => setSelected(null)} aria-label="Close location details">×</button><div className="map-card-icon"><Image src={selected.icon || assetUrl("/map-icons/Region.webp")} alt="" width={34} height={34} unoptimized /></div><span className="map-card-category">{selected.category}</span><h3>{selected.name}</h3>{selected.level && <p className="map-card-level">Level {selected.level}</p>}{selected.description && <p className="map-card-description">{selected.description}</p>}<p className="map-card-coordinates">Map position <b>{selected.x.toFixed(0)}, {selected.y.toFixed(0)}</b></p><button type="button" className="map-share-button" onClick={() => navigator.clipboard?.writeText(`${window.location.origin}/map#${selected.id}`)}>Copy share link</button></article>}
+        {!loading && !error && mapView === "world-tree" && visibleLocations.length === 0 && (WORLD_TREE_LOCATIONS.length === 0 || activeCategories.size > 0) && <div className="map-empty-state"><strong>{text.worldTreeUnavailable}</strong><span>{WORLD_TREE_LOCATIONS.length === 0 ? text.worldTreeNotReady : text.noWorldTreeMatch}</span></div>}
+        {!loading && !error && query.trim() && filteredLocations.length === 0 && <div className="map-empty-state"><strong>{text.noLocations}</strong><span>{text.tryAnother}</span></div>}
+        {selected && <article className="map-location-card" onPointerDown={(event) => event.stopPropagation()}><button type="button" className="map-card-close" onClick={() => setSelected(null)} aria-label={text.closeDetails}>×</button><div className="map-card-icon"><Image src={selected.icon || assetUrl("/map-icons/Region.webp")} alt="" width={34} height={34} unoptimized /></div><span className="map-card-category">{text.category(selected.category)}</span><h3>{selected.name}</h3>{selected.level && <p className="map-card-level">{text.levelLabel} {selected.level}</p>}{selected.description && <p className="map-card-description">{selected.description}</p>}<p className="map-card-coordinates">{text.mapPosition} <b>{selected.x.toFixed(0)}, {selected.y.toFixed(0)}</b></p><button type="button" className="map-share-button" onClick={() => navigator.clipboard?.writeText(`${window.location.origin}${locale === "zh" ? "/zh/map" : "/map"}#${selected.id}`)}>{text.copyLink}</button></article>}
       </div>
     </div>
   </div>;

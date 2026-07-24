@@ -23,6 +23,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${siteUrl}/tools`, lastModified, changeFrequency: "weekly", priority: 0.9 },
     { url: `${siteUrl}/team-builder`, lastModified, changeFrequency: "weekly", priority: 0.85 },
     { url: `${siteUrl}/map`, lastModified, changeFrequency: "weekly", priority: 0.85 },
+    { url: `${siteUrl}/zh/map`, lastModified, changeFrequency: "weekly", priority: 0.85 },
     { url: `${siteUrl}/guides`, lastModified, changeFrequency: "weekly", priority: 0.85 },
     { url: `${siteUrl}/updates`, lastModified, changeFrequency: "weekly", priority: 0.85 },
     { url: `${siteUrl}/items/hardwood`, lastModified, changeFrequency: "monthly", priority: 0.8 },

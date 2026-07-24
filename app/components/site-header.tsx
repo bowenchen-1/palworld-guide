@@ -11,7 +11,7 @@ const navItems = [["Breeding Calculator", "/#breeding-calculator"], ["Team Build
 
 function pairedPath(pathname: string, target: Locale): string | undefined {
   const path = pathname.split("?")[0].split("#")[0] || "/";
-  const pairs: Record<string, string> = { "/": "/zh/", "/breeding-calculator": "/zh/breeding-calculator", "/pals": "/zh/pals", "/zh": "/", "/zh/": "/", "/zh/breeding-calculator": "/breeding-calculator", "/zh/pals": "/pals" };
+  const pairs: Record<string, string> = { "/": "/zh/", "/breeding-calculator": "/zh/breeding-calculator", "/pals": "/zh/pals", "/map": "/zh/map", "/zh": "/", "/zh/": "/", "/zh/breeding-calculator": "/breeding-calculator", "/zh/pals": "/pals", "/zh/map": "/map" };
   if (target === "zh") return path.startsWith("/zh") ? path : pairs[path];
   return path.startsWith("/zh") ? pairs[path] : path;
 }
