@@ -15,3 +15,4 @@
 .map-quick-filter-heading-flame{display:inline-block;margin-left:3px;font-size:12px;line-height:1;filter:saturate(1.15)}
 .map-quick-filters>.map-toolbar-label{font-size:12px}
 .map-quick-filter-track{flex-wrap:wrap;overflow:visible;padding-bottom:1px;scrollbar-width:none}.map-quick-filter-track::-webkit-scrollbar{display:none}.map-quick-filter{padding-inline:8px}.map-quick-filter:not(.is-active){border-color:rgba(132,214,205,.35)!important;background:rgba(57,208,197,.1)!important;color:#9ce3d1!important}
+.map-coordinate-readout{display:grid;grid-template-columns:1fr 1fr;gap:6px;border:1px solid rgba(132,214,205,.25);border-radius:9px;background:rgba(7,25,32,.9);padding:7px 8px;color:#9bb9b8;font:800 10px var(--font-display);letter-spacing:.06em}.map-coordinate-readout span{display:flex;gap:4px;align-items:center}.map-coordinate-readout b{color:var(--theme-primary);font-weight:900;letter-spacing:0}

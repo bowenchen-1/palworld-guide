@@ -5,7 +5,7 @@ import { useCallback, useEffect, useMemo, useRef, useState, type PointerEvent as
 import type { MapCategory, MapLocation } from "../../data/map";
 import worldTreePayload from "../../public/data/world-tree-locations.json";
 import { assetUrl } from "../lib/assets";
-import { getContainedImageRect, MAP_CALIBRATIONS, mapCoordinateToScreenPoint, type MapView } from "./map-calibration";
+import { getContainedImageRect, MAP_CALIBRATIONS, mapCoordinateToScreenPoint, screenPointToMapCoordinate, type MapView } from "./map-calibration";
 
 const MAP_SIZE = 8192;
 const TILE_SIZE = 512;
@@ -88,6 +88,7 @@ export default function MapClient({ initialCategories, locationCount }: { initia
   const [query, setQuery] = useState("");
   const [levelRange, setLevelRange] = useState<LevelRange>("all");
   const [selected, setSelected] = useState<MapLocation | null>(null);
+  const [cursorCoordinate, setCursorCoordinate] = useState<Point | null>(null);
   const [mapView, setMapView] = useState<MapView>("palpagos");
   const [zoom, setZoom] = useState(MAP_MIN_ZOOM);
   const [pan, setPan] = useState<Point>({ x: 0, y: 0 });
@@ -342,6 +343,12 @@ export default function MapClient({ initialCategories, locationCount }: { initia
     } else setDrag({ pointerId: event.pointerId, start: { x: event.clientX, y: event.clientY }, origin: panRef.current, moved: false });
   };
   const handlePointerMove = (event: ReactPointerEvent<HTMLDivElement>) => {
+    const pointerStage = stageRef.current;
+    if (pointerStage && event.pointerType === "mouse") {
+      const rect = pointerStage.getBoundingClientRect();
+      const worldPoint = { x: (event.clientX - rect.left - panRef.current.x) / zoomRef.current, y: (event.clientY - rect.top - panRef.current.y) / zoomRef.current };
+      setCursorCoordinate(screenPointToMapCoordinate(worldPoint, imageRect, calibration));
+    }
     if (!pointers.current.has(event.pointerId)) return;
     pointers.current.set(event.pointerId, { x: event.clientX, y: event.clientY });
     if (pointers.current.size === 2 && pinch.current) {
@@ -436,7 +443,7 @@ export default function MapClient({ initialCategories, locationCount }: { initia
           })}
         </div>
       </aside>
-      <div ref={stageRef} className="map-stage" onPointerDown={handlePointerDown} onPointerMove={handlePointerMove} onPointerUp={handlePointerUp} onPointerCancel={handlePointerUp} role="application" aria-label="Interactive Palworld map">
+      <div ref={stageRef} className="map-stage" onPointerDown={handlePointerDown} onPointerMove={handlePointerMove} onPointerUp={handlePointerUp} onPointerCancel={handlePointerUp} onPointerLeave={() => setCursorCoordinate(null)} role="application" aria-label="Interactive Palworld map">
         <div className="map-board" style={{ transform: `translate3d(${pan.x}px, ${pan.y}px, 0) scale(${zoom})` }}>
           <div className="map-tile-layer" aria-label={mapView === "palpagos" ? "Palpagos Islands map" : "World Tree map"}>
             {visibleTiles.map((tile) => {
@@ -453,9 +460,9 @@ export default function MapClient({ initialCategories, locationCount }: { initia
           <button type="button" className={mapView === "world-tree" ? "is-active" : ""} onClick={() => changeMapView("world-tree")} role="tab" aria-selected={mapView === "world-tree"}>World Tree</button>
         </div>
         <div className="map-zoom-controls">
+          <div className="map-coordinate-readout" aria-label="Current in-game map coordinates"><span>X <b>{cursorCoordinate ? Math.round(cursorCoordinate.x) : "—"}</b></span><span>Y <b>{cursorCoordinate ? Math.round(cursorCoordinate.y) : "—"}</b></span></div>
           <button type="button" onClick={() => updateZoom(zoomRef.current * 1.2)} aria-label="Zoom in">+</button>
           <button type="button" onClick={() => updateZoom(zoomRef.current / 1.2)} aria-label="Zoom out">−</button>
-          <button type="button" onClick={() => centerMap()} aria-label="Reset map view">⌂</button>
         </div>
         {loading && <div className="map-status">Loading map data...</div>}
         {!loading && tileLoading && !tileErrors.length && <div className="map-status">Loading map tiles...</div>}

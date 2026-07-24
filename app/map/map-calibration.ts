@@ -66,3 +66,14 @@ export function mapCoordinateToScreenPoint(location: Pick<MapLocation, "x" | "y"
     y: imageRect.top + Math.max(0, Math.min(1, yRatio)) * imageRect.height,
   };
 }
+
+export function screenPointToMapCoordinate(point: { x: number; y: number }, imageRect: ImageRect, calibration: MapCalibration) {
+  const xRatio = (point.x - imageRect.left) / imageRect.width;
+  const yRatio = (point.y - imageRect.top) / imageRect.height;
+  return {
+    x: xRatio * calibration.coordinateScale - calibration.horizontalOffset,
+    y: calibration.invertVertical
+      ? (1 - yRatio) * calibration.coordinateScale - calibration.verticalOffset
+      : yRatio * calibration.coordinateScale - calibration.verticalOffset,
+  };
+}
