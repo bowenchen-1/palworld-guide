@@ -223,17 +223,12 @@ export default function MapClient({ initialCategories, locationCount, locale = "
   const imageRect = useMemo(() => getContainedImageRect(calibration, MAP_SIZE, MAP_SIZE), [calibration]);
   const hoveredPoint = useMemo(() => hovered ? mapCoordinateToScreenPoint(hovered, imageRect, calibration) : null, [calibration, hovered, imageRect]);
   const visibleTiles = useMemo(() => {
-    if (!viewport.width || !viewport.height) return [];
     const isWorldTree = mapView === "world-tree";
-    const gridSize = isWorldTree ? 8 : 16;
-    const tileWorldSize = isWorldTree ? MAP_SIZE / gridSize : TILE_SIZE;
-    const left = Math.max(0, Math.floor(((0 - pan.x) / zoom) / tileWorldSize) - 2);
-    const top = Math.max(0, Math.floor(((0 - pan.y) / zoom) / tileWorldSize) - 2);
-    const right = Math.min(gridSize - 1, Math.ceil(((viewport.width - pan.x) / zoom) / tileWorldSize) + 2);
-    const bottom = Math.min(gridSize - 1, Math.ceil(((viewport.height - pan.y) / zoom) / tileWorldSize) + 2);
     const sourceTiles = isWorldTree ? WORLD_TREE_TILES : PALPAGOS_TILES;
-    return sourceTiles.filter((tile) => tile.x >= left && tile.x <= right && tile.y >= top && tile.y <= bottom);
-  }, [mapView, pan, viewport, zoom]);
+    // Keep the tile layer mounted while zooming. Replacing the visible subset on
+    // every wheel event creates blank frames and makes the map visibly flash.
+    return sourceTiles;
+  }, [mapView]);
   const focusMapLocation = useCallback((location: MapLocation, nextView: MapView) => {
     const stage = stageRef.current;
     if (!stage) return;
