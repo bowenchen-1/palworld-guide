@@ -13,6 +13,10 @@
   --terminal-border: #28545d;
   --terminal-cut: polygon(0 0, calc(100% - 18px) 0, 100% 18px, 100% 100%, 0 100%);
 }
+.hardwood-quick-answer h1 { font-size: clamp(2rem, 4.47vw, 4rem) !important; }
+@media (max-width: 760px) {
+  .hardwood-quick-answer h1 { font-size: 2.23rem !important; }
+}
 
 /* Chinese calculator actions: keep the reset action readable and remove the redundant swap control. */
 .home-calculator-top.zh-calculator .calculator-foot { min-height:62px; align-items:center; }
@@ -1445,3 +1449,25 @@ body::before {
 .paldex-complete-table td:last-child .paldex-breeding-link{font-size:9px}
 .paldex-complete-table td:nth-child(5){overflow:visible}
 .home-scene-hero::before{background-image:url('https://assets.palworldguide.net/og.png')}
+
+/* Keep navigation page hero headings compact and consistent. */
+.database-hero h1,
+.hub-hero h1 { font-size: clamp(1.77rem, 2.93vw, 3.1rem) !important; }
+.profile-hero h1 { font-size: clamp(2.33rem, 4.67vw, 4.33rem) !important; }
+.article-hero h1 { font-size: clamp(1.87rem, 3.2vw, 3.33rem) !important; }
+.breeding-results-heading h1 { font-size: clamp(1.33rem, 2.67vw, 2.33rem) !important; }
+.map-page-header h1 { font-size: clamp(1.8rem, 3.2vw, 3.2rem) !important; }
+.team-builder-hero h1 { font-size: clamp(2rem, 4.67vw, 4.4rem) !important; }
+
+@media (max-width: 760px) {
+  .database-hero h1,
+  .hub-hero h1 { font-size: clamp(1.57rem, 6.67vw, 2.1rem) !important; }
+  .profile-hero h1 { font-size: 1.83rem !important; }
+  .article-hero h1 { font-size: 2.23rem !important; }
+  .breeding-results-heading h1 { font-size: 1.6rem !important; }
+  .team-builder-hero h1 { font-size: 2rem !important; }
+}
+
+@media (max-width: 640px) {
+  .map-page-header h1 { font-size: 2.13rem !important; }
+}
