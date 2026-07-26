@@ -4,8 +4,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useMemo, useRef, useState } from "react";
 import PalMark from "../components/pal-mark";
-import { ElementIcon } from "../components/pal-icons";
-import { BreedingData, PalData, pals } from "../lib/game-data";
+import { ElementIcon, WorkSuitabilityIcon } from "../components/pal-icons";
+import { BreedingData, PalData, pals, WorkKey, workLabels } from "../lib/game-data";
 import { assetUrl } from "../lib/assets";
 import { findPalDropsLocations } from "../lib/pal-drops-locations";
 import { availableOffspring, comparePals, findOffspring, findParentPairs, findRoutes, pairResults, type BreedingResult } from "./breeding/core";
@@ -31,12 +31,18 @@ function LocalizedPalName({ pal, locale = "en" }: { pal: PalData; locale?: Local
 function PickerPalMeta({ pal, locale }: { pal: PalData; locale: Locale }) {
   const details = findPalDropsLocations(pal.slug);
   const drops = details?.drops.filter((drop) => drop.icon).slice(0, 3) ?? [];
+  const workEntries = (Object.entries(pal.work) as [WorkKey, number][]).sort(([, first], [, second]) => second - first).slice(0, 3);
   const dropLabel = locale === "zh" ? "掉落物" : "Drops";
+  const workLabel = locale === "zh" ? "工作适应性" : "Work suitability";
   return <span className="pal-picker-card-meta">
     <span className="pal-picker-elements" aria-label={locale === "zh" ? "属性" : "Elements"}>{pal.elements.map((element) => <ElementIcon key={element} element={element} />)}</span>
     {drops.length > 0 && <span className="pal-picker-drops" aria-label={dropLabel}>
       {drops.map((drop) => <Image key={`${drop.name}-${drop.icon}`} src={assetUrl(`/icons/palworld/drops/${drop.icon}`)} alt="" title={`${drop.name}${drop.quantity ? ` · ${drop.quantity}` : ""}${drop.chance ? ` · ${drop.chance}` : ""}`} width={18} height={18} unoptimized />)}
       {details && details.drops.length > drops.length && <em>+{details.drops.length - drops.length}</em>}
+    </span>}
+    {workEntries.length > 0 && <span className="pal-picker-work" aria-label={workLabel}>
+      {workEntries.map(([key, level]) => <span className="pal-picker-work-item" key={key} title={`${workLabels[key]} · Level ${level}`}><WorkSuitabilityIcon work={key} /><b>{level}</b></span>)}
+      {Object.keys(pal.work).length > workEntries.length && <em>+{Object.keys(pal.work).length - workEntries.length}</em>}
     </span>}
   </span>;
 }
