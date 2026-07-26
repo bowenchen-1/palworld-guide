@@ -435,13 +435,6 @@ export default function MapClient({ initialCategories, locationCount, locale = "
       <aside className="map-filters" aria-label={locale === "zh" ? "地图分类" : "Map categories"}>
         <div className="map-filter-heading"><div><span className="map-filter-eyebrow">{text.filterLocations}</span><h2>{text.mapFilters}</h2></div><span className="map-filter-total">{currentCategories.length}</span></div>
         <p className="map-filter-help">{text.chooseLocations}</p>
-        <section className="map-layer-group" aria-labelledby="map-layer-heading">
-          <div className="map-section-heading"><h3 id="map-layer-heading">Map Layer</h3></div>
-          <div className="map-layer-list">
-            <button type="button" className={`map-layer-option${mapView === "palpagos" ? " is-active" : ""}`} onClick={() => changeMapView("palpagos")} aria-pressed={mapView === "palpagos"}><span className="map-category-checkbox" aria-hidden="true">{mapView === "palpagos" ? "✓" : ""}</span><span className="map-layer-icon" aria-hidden="true">🌴</span><span>{text.palpagos}</span></button>
-            <button type="button" className={`map-layer-option${mapView === "world-tree" ? " is-active" : ""}`} onClick={() => changeMapView("world-tree")} aria-pressed={mapView === "world-tree"}><span className="map-category-checkbox" aria-hidden="true">{mapView === "world-tree" ? "✓" : ""}</span><span className="map-layer-icon" aria-hidden="true">🌳</span><span>{text.worldTree}</span></button>
-          </div>
-        </section>
         <div className="map-category-groups">
           {groupsForView.map((group) => {
             const categories = group.categories.map((name) => categoryMap.get(name)).filter((category): category is MapCategory => Boolean(category));
