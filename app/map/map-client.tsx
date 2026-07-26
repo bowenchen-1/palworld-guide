@@ -81,6 +81,11 @@ function readableCount(value: number, locale: MapLocale) {
 
 export default function MapClient({ initialCategories, locationCount, locale = "en" }: { initialCategories: MapCategory[]; locationCount: number; locale?: MapLocale }) {
   const text = mapText(locale);
+  const getLocationName = useCallback((location: MapLocation) => {
+    if (locale === "zh" || !/[\u3400-\u9fff]/.test(location.name)) return location.name;
+    if (location.href) return location.href.replace(/[_-]+/g, " ");
+    return text.category(location.category);
+  }, [locale, text]);
   const stageRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [data, setData] = useState<MapPayload>({ locations: [], categories: initialCategories.map((category) => ({ ...category, icon: mapIconUrl(category.icon) ?? assetUrl("/map-icons/Region.webp") })) });
@@ -193,9 +198,9 @@ export default function MapClient({ initialCategories, locationCount, locale = "
       const locationLevel = Number(location.level);
       const matchesLevel = levelRange === "all"
         || (Number.isFinite(locationLevel) && ((levelRange === "1-20" && locationLevel <= 20) || (levelRange === "21-40" && locationLevel >= 21 && locationLevel <= 40) || (levelRange === "41-60" && locationLevel >= 41 && locationLevel <= 60) || (levelRange === "61-80" && locationLevel >= 61 && locationLevel <= 80)));
-      return activeCategories.has(location.category) && matchesLevel && (!term || `${location.name} ${location.description ?? ""} ${location.category} ${labels.category(location.category)}`.toLowerCase().includes(term));
+      return activeCategories.has(location.category) && matchesLevel && (!term || `${getLocationName(location)} ${location.name} ${location.description ?? ""} ${location.category} ${labels.category(location.category)}`.toLowerCase().includes(term));
     });
-  }, [activeCategories, data.locations, levelRange, locale, mapView, query]);
+  }, [activeCategories, data.locations, getLocationName, levelRange, locale, mapView, query]);
 
   const categoryCounts = useMemo(() => {
     const counts = new Map<string, number>();
@@ -489,7 +494,7 @@ export default function MapClient({ initialCategories, locationCount, locale = "
           </div>
           <canvas ref={canvasRef} className="map-marker-canvas" aria-hidden="true" />
         </div>
-        {hovered && hoveredPoint && <div className="map-hover-label" style={{ left: hoveredPoint.x * zoom + pan.x, top: hoveredPoint.y * zoom + pan.y }} role="status">{hovered.name}</div>}
+        {hovered && hoveredPoint && <div className="map-hover-label" style={{ left: hoveredPoint.x * zoom + pan.x, top: hoveredPoint.y * zoom + pan.y }} role="status">{getLocationName(hovered)}</div>}
         <div className="map-view-switcher" role="tablist" aria-label={text.mapArea}>
           <button type="button" className={mapView === "palpagos" ? "is-active" : ""} onClick={() => changeMapView("palpagos")} role="tab" aria-selected={mapView === "palpagos"}>{text.palpagos}</button>
           <button type="button" className={mapView === "world-tree" ? "is-active" : ""} onClick={() => changeMapView("world-tree")} role="tab" aria-selected={mapView === "world-tree"}>{text.worldTree}</button>
@@ -505,7 +510,7 @@ export default function MapClient({ initialCategories, locationCount, locale = "
         {error && <div className="map-status map-status-error">{error}</div>}
         {!loading && !error && mapView === "world-tree" && visibleLocations.length === 0 && (WORLD_TREE_LOCATIONS.length === 0 || activeCategories.size > 0) && <div className="map-empty-state"><strong>{text.worldTreeUnavailable}</strong><span>{WORLD_TREE_LOCATIONS.length === 0 ? text.worldTreeNotReady : text.noWorldTreeMatch}</span></div>}
         {!loading && !error && query.trim() && filteredLocations.length === 0 && <div className="map-empty-state"><strong>{text.noLocations}</strong><span>{text.tryAnother}</span></div>}
-        {selected && <article className="map-location-card" onPointerDown={(event) => event.stopPropagation()}><button type="button" className="map-card-close" onClick={() => setSelected(null)} aria-label={text.closeDetails}>×</button><div className="map-card-icon"><Image src={selected.icon || assetUrl("/map-icons/Region.webp")} alt="" width={34} height={34} unoptimized /></div><span className="map-card-category">{text.category(selected.category)}</span><h3>{selected.name}</h3>{selected.level && <p className="map-card-level">{text.levelLabel} {selected.level}</p>}{selected.description && <p className="map-card-description">{selected.description}</p>}<p className="map-card-coordinates">{text.mapPosition} <b>{selected.x.toFixed(0)}, {selected.y.toFixed(0)}</b></p><button type="button" className="map-share-button" onClick={() => navigator.clipboard?.writeText(`${window.location.origin}${locale === "zh" ? "/zh/map" : "/map"}#${selected.id}`)}>{text.copyLink}</button></article>}
+        {selected && <article className="map-location-card" onPointerDown={(event) => event.stopPropagation()}><button type="button" className="map-card-close" onClick={() => setSelected(null)} aria-label={text.closeDetails}>×</button><div className="map-card-icon"><Image src={selected.icon || assetUrl("/map-icons/Region.webp")} alt="" width={34} height={34} unoptimized /></div><span className="map-card-category">{text.category(selected.category)}</span><h3>{getLocationName(selected)}</h3>{selected.level && <p className="map-card-level">{text.levelLabel} {selected.level}</p>}{selected.description && <p className="map-card-description">{selected.description}</p>}<p className="map-card-coordinates">{text.mapPosition} <b>{selected.x.toFixed(0)}, {selected.y.toFixed(0)}</b></p><button type="button" className="map-share-button" onClick={() => navigator.clipboard?.writeText(`${window.location.origin}${locale === "zh" ? "/zh/map" : "/map"}#${selected.id}`)}>{text.copyLink}</button></article>}
       </div>
     </div>
   </div>;
