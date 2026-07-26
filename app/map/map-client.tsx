@@ -487,7 +487,7 @@ export default function MapClient({ initialCategories, locationCount, locale = "
       </aside>
       <div ref={stageRef} className="map-stage" onPointerDown={handlePointerDown} onPointerMove={handlePointerMove} onPointerUp={handlePointerUp} onPointerCancel={handlePointerUp} onPointerLeave={() => { setCursorCoordinate(null); setHovered(null); }} role="application" aria-label={locale === "zh" ? "互动式帕鲁地图" : "Interactive Palworld map"}>
         <div className="map-board" style={{ transform: `translate3d(${pan.x}px, ${pan.y}px, 0) scale(${zoom})` }}>
-          <div className="map-tile-layer" aria-label={mapView === "palpagos" ? text.palpagos : text.worldTree}>
+          <div key={mapView} className="map-tile-layer" aria-label={mapView === "palpagos" ? text.palpagos : text.worldTree}>
             <Image className="map-preview-layer" src={MAP_PREVIEWS[mapView]} alt="" width={MAP_SIZE} height={MAP_SIZE} priority={mapView === "palpagos"} unoptimized />
             {visibleTiles.map((tile) => {
               const isWorldTree = mapView === "world-tree";
