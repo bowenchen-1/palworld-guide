@@ -25,7 +25,7 @@ const WORLD_TREE_TILES = Array.from({ length: 8 * 8 }, (_, index) => ({
 }));
 const CATEGORY_GROUPS = [
   { name: "Locations", categories: ["Fast Travel", "Dungeons", "Towers", "Settlements", "Cave Entrances", "Region Labels", "Recommended Base Spots", "Respawn Points", "Skyland Warp Altars"] },
-  { name: "Pals and Eggs", categories: ["Alpha Pals", "Sakura Eggs", "Desert Eggs", "Frozen Eggs", "Grass Eggs", "Feybreak Eggs", "Volcano Eggs"] },
+  { name: "Pals", categories: ["Alpha Pals", "Sakura Eggs", "Desert Eggs", "Frozen Eggs", "Grass Eggs", "Feybreak Eggs", "Volcano Eggs"] },
   { name: "Collectibles", categories: ["Lifmunk Effigies", "Rooby Effigies", "Yakumo Effigies", "Munchill Effigies", "Relaxaurus Effigies", "Herbil Effigies", "Tanzee Effigies", "Lunaris Effigies", "Depresso Effigies", "Pengullet Effigies", "Lamball Effigies", "Treasure Chests", "Elemental Chests", "Treasure Map Dig Spots", "Journals"] },
   { name: "Resources", categories: ["Ore", "Ore Clusters", "Coal", "Coal Clusters", "Sulfur", "Sulfur Clusters", "Pure Quartz", "Pure Quartz Clusters", "Chromite", "Hexolite Quartz", "Crude Oil", "Nightstar Sand", "Ancient Bark", "Ancient Bone", "Ancient Lava", "Skill Fruit Trees", "Beautiful Flowers", "Kinship Peaches", "Soralite", "Junk", "Heat Sources"] },
   { name: "Enemies", categories: ["Enemy Camps", "Anti-Air Turrets", "Incidents", "Supply Drops", "Arrogant Pal Critic"] },
@@ -84,7 +84,7 @@ export default function MapClient({ initialCategories, locationCount, locale = "
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [data, setData] = useState<MapPayload>({ locations: [], categories: initialCategories.map((category) => ({ ...category, icon: mapIconUrl(category.icon) ?? assetUrl("/map-icons/Region.webp") })) });
   const [activeCategories, setActiveCategories] = useState(() => new Set<string>());
-  const [openGroups, setOpenGroups] = useState(() => new Set(["Locations", "Pals", "Collectibles"]));
+  const [openGroups, setOpenGroups] = useState(() => new Set(["Locations", "Pals", "Collectibles", "Resources"]));
   const [query, setQuery] = useState("");
   const [levelRange, setLevelRange] = useState<LevelRange>("all");
   const [selected, setSelected] = useState<MapLocation | null>(null);
@@ -435,13 +435,20 @@ export default function MapClient({ initialCategories, locationCount, locale = "
       <aside className="map-filters" aria-label={locale === "zh" ? "地图分类" : "Map categories"}>
         <div className="map-filter-heading"><div><span className="map-filter-eyebrow">{text.filterLocations}</span><h2>{text.mapFilters}</h2></div><span className="map-filter-total">{currentCategories.length}</span></div>
         <p className="map-filter-help">{text.chooseLocations}</p>
+        <section className="map-layer-group" aria-labelledby="map-layer-heading">
+          <div className="map-section-heading"><h3 id="map-layer-heading">Map Layer</h3></div>
+          <div className="map-layer-list">
+            <button type="button" className={`map-layer-option${mapView === "palpagos" ? " is-active" : ""}`} onClick={() => changeMapView("palpagos")} aria-pressed={mapView === "palpagos"}><span className="map-category-checkbox" aria-hidden="true">{mapView === "palpagos" ? "✓" : ""}</span><span className="map-layer-icon" aria-hidden="true">🌴</span><span>{text.palpagos}</span></button>
+            <button type="button" className={`map-layer-option${mapView === "world-tree" ? " is-active" : ""}`} onClick={() => changeMapView("world-tree")} aria-pressed={mapView === "world-tree"}><span className="map-category-checkbox" aria-hidden="true">{mapView === "world-tree" ? "✓" : ""}</span><span className="map-layer-icon" aria-hidden="true">🌳</span><span>{text.worldTree}</span></button>
+          </div>
+        </section>
         <div className="map-category-groups">
           {groupsForView.map((group) => {
             const categories = group.categories.map((name) => categoryMap.get(name)).filter((category): category is MapCategory => Boolean(category));
             if (!categories.length) return null;
             const activeCount = categories.filter((category) => activeCategories.has(category.name)).length;
             const isOpen = openGroups.has(group.name);
-            return <section className="map-category-group" key={group.name}><div className="map-group-heading"><button type="button" className="map-group-toggle" onClick={() => toggleGroup(group.name)} aria-expanded={isOpen}><span className={`map-group-chevron${isOpen ? " is-open" : ""}`}>⌄</span><strong>{text.group(group.name)}</strong><span className="map-group-count">{activeCount}/{categories.length}</span></button><div className="map-group-actions"><button type="button" onClick={() => setGroupCategories(group.categories, true)}>{text.all}</button><button type="button" onClick={() => setGroupCategories(group.categories, false)}>{text.clear}</button></div></div>{isOpen && <div className="map-category-list">{categories.map((category) => { const active = activeCategories.has(category.name); return <button key={category.name} type="button" className={`map-category${active ? " is-active" : ""}`} aria-pressed={active} onClick={() => toggleCategory(category.name)}><span className="map-category-checkbox" aria-hidden="true">{active ? "✓" : ""}</span><span className="map-category-icon"><Image src={category.icon} alt="" width={24} height={24} unoptimized /></span><span className="map-category-name">{text.category(category.name)}</span><small className="map-category-count">{readableCount(categoryCounts.get(category.name) ?? 0, locale)}</small></button>; })}</div>}</section>;
+            return <section className="map-category-group" key={group.name}><div className="map-group-heading"><button type="button" className="map-group-toggle" onClick={() => toggleGroup(group.name)} aria-expanded={isOpen}><span className={`map-group-chevron${isOpen ? " is-open" : ""}`}>⌄</span><strong>{text.group(group.name)}</strong><span className="map-group-count">{activeCount}/{categories.length}</span></button><div className="map-group-actions"><button type="button" onClick={() => setGroupCategories(group.categories, true)}>{text.all}</button><button type="button" onClick={() => setGroupCategories(group.categories, false)}>{text.clear}</button></div></div>{isOpen && <div className="map-category-list">{categories.map((category) => { const active = activeCategories.has(category.name); return <button key={category.name} type="button" className={`map-category${active ? " is-active" : ""}`} aria-pressed={active} onClick={() => toggleCategory(category.name)}><span className="map-category-checkbox" aria-hidden="true">{active ? "✓" : ""}</span><span className="map-category-icon"><Image src={category.icon} alt="" width={24} height={24} unoptimized /></span><span className="map-category-label"><span className="map-category-name">{text.category(category.name)}</span><small className="map-category-count">{readableCount(categoryCounts.get(category.name) ?? 0, locale)}</small></span></button>; })}</div>}</section>;
           })}
         </div>
       </aside>
