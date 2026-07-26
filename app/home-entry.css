@@ -141,3 +141,53 @@
   padding: 10px 20px;
   font-size: 14px;
 }
+
+/* Keep the homepage calculator and its always-visible Pal picker within the first screen. */
+.home-calculator-top { padding-bottom: 20px !important; }
+.home-calculator-top > div > .site-header { min-height: 56px; }
+.home-calculator-top .home-calculator-intro { gap: 24px; padding-top: 8px; }
+.home-calculator-top .home-calculator-intro h1 { margin-top: 9px; font-size: clamp(2rem,3.2vw,3.45rem); line-height: .88; }
+.home-calculator-top .home-calculator-intro>div>p:last-child { max-width: 700px; margin-top: 10px; font-size: 13px; line-height: 1.35; }
+.home-calculator-top .home-hero-stats { gap: 8px; padding-bottom: 3px; }
+.home-calculator-top .home-hero-stats p { padding-top: 7px; }
+.home-calculator-top .home-hero-stats strong { font-size: 20px; }
+.home-calculator-top .home-hero-stats span { margin-top: 4px; font-size: 7px; }
+.home-calculator-top .home-breeding-workspace { margin-top: 10px !important; }
+.home-calculator-top .home-breeding-tabs { gap: 5px; }
+.home-calculator-top .home-breeding-tabs button { min-height: 40px; padding: 6px 8px; font-size: 12px; }
+.home-calculator-top .home-mode-description { min-height: 14px; margin-top: 5px; font-size: 10px; line-height: 14px; }
+.home-calculator-top .home-workbench { margin-top: 6px; padding: 12px; }
+.home-calculator-top .home-breeding-slot { min-height: 142px; padding: 22px 10px 9px; }
+.home-calculator-top .home-breeding-slot .pal-mark { width: 64px; height: 64px; border-radius: 18px; }
+.home-calculator-top .home-breeding-slot strong { margin-top: 7px; font-size: 15px; }
+.home-calculator-top .home-breeding-slot>small { margin-top: 2px; font-size: 7px; }
+.home-calculator-top .home-breeding-slot>i { margin-top: 6px; font-size: 6px; }
+.home-calculator-top .home-breeding-slot.offspring.empty .offspring-empty-mark { width: 64px; height: 64px; }
+.home-calculator-top .home-breeding-slot.offspring.empty .offspring-empty-mark svg { width: 48px; height: 54px; }
+.home-calculator-top .home-control-row>.home-compact-picker,.home-calculator-top .home-control-row>.home-filter,.home-calculator-top .home-route-controls> :is(.home-compact-picker,.home-filter,.home-number-control,.home-available-control),
+.home-calculator-top :is(.home-selector-card,.home-available-control) { min-height: 142px; }
+.home-calculator-top .home-inline-pal-picker { margin-top: 8px; padding: 12px; }
+.home-calculator-top .home-inline-pal-picker header h2 { font-size: 24px; line-height: 1; }
+.home-calculator-top .home-inline-pal-picker header p { margin-top: 3px; font-size: 8px; }
+.home-calculator-top .home-inline-pal-picker .home-picker-toolbar { margin-top: 8px; }
+.home-calculator-top .home-inline-pal-picker .home-picker-toolbar input,
+.home-calculator-top .home-inline-pal-picker .home-picker-toolbar select,
+.home-calculator-top .home-inline-pal-picker .home-picker-toolbar .picker-filter-select { min-height: 42px; }
+.home-calculator-top .home-inline-pal-picker .pal-picker-progress { margin: 7px 0; font-size: 9px; }
+
+@media(max-width:760px) {
+  .home-calculator-top { padding-bottom: 14px !important; }
+  .home-calculator-top .home-calculator-intro { gap: 10px; padding-top: 8px; }
+  .home-calculator-top .home-calculator-intro h1 { font-size: clamp(1.8rem,9vw,2.6rem); }
+  .home-calculator-top .home-calculator-intro>div>p:last-child { margin-top: 7px; font-size: 11px; line-height: 1.35; }
+  .home-calculator-top .home-hero-stats { max-width: 320px; }
+  .home-calculator-top .home-breeding-tabs button { min-height: 44px; font-size: 11px; }
+  .home-calculator-top .home-workbench { padding: 9px; }
+  .home-calculator-top .home-breeding-slot { min-height: 128px; padding: 24px 5px 8px; }
+  .home-calculator-top .home-breeding-slot .pal-mark { width: 56px; height: 56px; border-radius: 16px; }
+  .home-calculator-top .home-breeding-slot strong { font-size: 12px; }
+  .home-calculator-top .home-breeding-slot>small { font-size: 6px; }
+  .home-calculator-top .home-breeding-slot>i { font-size: 5px; }
+  .home-calculator-top .home-inline-pal-picker { padding: 10px; }
+  .home-calculator-top .home-inline-pal-picker header h2 { font-size: 20px; }
+}
