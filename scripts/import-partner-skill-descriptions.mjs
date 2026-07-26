@@ -1,9 +1,10 @@
 import assert from "node:assert/strict";
 import { readFile, writeFile } from "node:fs/promises";
 
-const sourceUrl = new URL("../data/sources/partner-skills-accuracy-v1.0.md", import.meta.url);
 const dataUrl = new URL("../public/data/pals.json", import.meta.url);
-const sourceText = await readFile(sourceUrl, "utf8");
+const sourcePath = process.argv[2] || process.env.PARTNER_SKILL_SOURCE;
+if (!sourcePath) throw new Error("Usage: node scripts/import-partner-skill-descriptions.mjs <partner-skill-source.md>");
+const sourceText = await readFile(sourcePath, "utf8");
 const pals = JSON.parse(await readFile(dataUrl, "utf8"));
 
 const normalizeIdentity = (value) => value.toLowerCase().replace(/[()_\s-]+/g, "");

@@ -2,11 +2,12 @@ import assert from "node:assert/strict";
 import { readFile, writeFile } from "node:fs/promises";
 
 const dataUrl = new URL("../public/data/pals.json", import.meta.url);
-const sourceUrl = new URL("../data/sources/paldb-1.0-20260715.json", import.meta.url);
-const iconManifestUrl = new URL("../data/sources/palworld-icon-manifest.json", import.meta.url);
+const sourcePath = process.argv[2] || process.env.PAL_DATA_SOURCE;
+const iconManifestPath = process.argv[3] || process.env.PAL_ICON_MANIFEST;
+if (!sourcePath || !iconManifestPath) throw new Error("Usage: node scripts/import-pal-data.mjs <pal-data-source.json> <icon-manifest.json>");
 const current = JSON.parse(await readFile(dataUrl, "utf8"));
-const sourceDocument = JSON.parse(await readFile(sourceUrl, "utf8"));
-const iconManifest = JSON.parse(await readFile(iconManifestUrl, "utf8"));
+const sourceDocument = JSON.parse(await readFile(sourcePath, "utf8"));
+const iconManifest = JSON.parse(await readFile(iconManifestPath, "utf8"));
 const source = sourceDocument.records;
 assert.ok(Array.isArray(source), "PalDB source must contain records");
 

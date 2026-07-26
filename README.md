@@ -17,6 +17,18 @@ Open [http://localhost:3000](http://localhost:3000).
 npm test
 ```
 
+## Private data imports
+
+Source snapshots and workbooks are intentionally kept outside the public repository. Import scripts require explicit local paths so private source files are never assumed to be part of a checkout:
+
+```bash
+npm run data:import -- /private/path/pal-data.json /private/path/icon-manifest.json
+npm run data:drops:import -- /private/path/drops-and-locations.csv
+npm run data:validate
+```
+
+The partner-skill importer accepts a private Markdown source path as its first argument. Keep all source files in a private backup or private repository; only publish generated runtime data after confirming redistribution rights.
+
 ## Local R2 asset sync
 
 Only the resources explicitly listed in `config/r2-assets.json` are published to R2. This deliberately does not upload all of `public/`. Add a new asset to that file before it can be synced.

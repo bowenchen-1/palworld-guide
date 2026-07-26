@@ -36,6 +36,9 @@ yarn-error.log*
 .env*
 !.env.example
 
+# private import sources
+/data/sources/
+
 # vercel
 .vercel
 

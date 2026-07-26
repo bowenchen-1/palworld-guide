@@ -555,7 +555,7 @@ test("Pal data schema and repeatable import safeguards cover the 1.0 snapshot", 
   assert.match(filters, /parsePaldexFilters/);
   assert.match(filters, /filterPals/);
   assert.match(filters, /sortPals/);
-  assert.match(importer, /paldb-1\.0-20260715/);
+  assert.match(importer, /PAL_DATA_SOURCE/);
   assert.match(importer, /work-suitability conflict/);
   assert.match(validator, /duplicate Pal ids/);
   assert.match(validator, /missing image/);
