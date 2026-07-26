@@ -121,15 +121,18 @@ export default function MapClient({ initialCategories, locationCount, locale = "
   const pinch = useRef<{ distance: number; zoom: number; midpoint: Point } | null>(null);
   const viewFilters = useRef<Record<MapView, Set<string>>>({ palpagos: new Set(), "world-tree": new Set() });
 
-  const getMinimumZoom = useCallback(() => {
-    return MAP_MIN_ZOOM;
-  }, []);
-
   const getFitZoom = useCallback(() => {
     const stage = stageRef.current;
     if (!stage) return MAP_MIN_ZOOM;
     return Math.min(MAP_MAX_ZOOM, Math.max(MAP_MIN_ZOOM, Math.min(stage.clientWidth / MAP_SIZE, stage.clientHeight / MAP_SIZE)));
   }, []);
+
+  const getMinimumZoom = useCallback(() => {
+    // Do not let the board become smaller than the viewport. At the old
+    // absolute minimum zoom the board could leave a large empty area while
+    // the marker canvas was still rendered across the full board.
+    return Math.max(MAP_MIN_ZOOM, getFitZoom());
+  }, [getFitZoom]);
 
   const clampPan = useCallback((nextPan: Point, nextZoom: number, width = stageRef.current?.clientWidth ?? 0, height = stageRef.current?.clientHeight ?? 0) => ({
     x: MAP_SIZE * nextZoom <= width ? (width - MAP_SIZE * nextZoom) / 2 : Math.min(0, Math.max(width - MAP_SIZE * nextZoom, nextPan.x)),
@@ -187,12 +190,17 @@ export default function MapClient({ initialCategories, locationCount, locale = "
 
   useEffect(() => {
     if (!viewport.width || !viewport.height) return;
-    const nextPan = clampPan(panRef.current, zoomRef.current, viewport.width, viewport.height);
+    const nextZoom = Math.max(zoomRef.current, getMinimumZoom());
+    const nextPan = clampPan(panRef.current, nextZoom, viewport.width, viewport.height);
+    if (nextZoom !== zoomRef.current) {
+      zoomRef.current = nextZoom;
+      setZoom(nextZoom);
+    }
     if (nextPan.x !== panRef.current.x || nextPan.y !== panRef.current.y) {
       panRef.current = nextPan;
       setPan(nextPan);
     }
-  }, [clampPan, viewport]);
+  }, [clampPan, getMinimumZoom, viewport]);
 
   useEffect(() => {
     try { localStorage.setItem(MAP_STATE_KEY, JSON.stringify({ query, categories: [...activeCategories], levelRange })); } catch { /* Local storage is optional. */ }
