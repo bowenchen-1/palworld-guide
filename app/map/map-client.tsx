@@ -436,7 +436,7 @@ export default function MapClient({ initialCategories, locationCount, locale = "
   const tileErrors = visibleTiles.filter((tile) => tileStatus[`${mapView}:${tile.src}`] === "error");
   const tileReady = viewport.width > 0 && visibleTiles.length > 0 && visibleTiles.every((tile) => {
     const status = tileStatus[`${mapView}:${tile.src}`];
-    return status === "loaded" || status === "error";
+    return status === "loaded";
   });
   const retryTiles = () => {
     setTileStatus((current) => {
