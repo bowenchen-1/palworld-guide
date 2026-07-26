@@ -1,7 +1,8 @@
 import assert from "node:assert/strict";
 import { readFile, writeFile } from "node:fs/promises";
 
-const csvPath = process.argv[2] || "/Users/chen/Desktop/幻兽帕鲁_掉落物与捕获地点_v1.0.csv";
+const csvPath = process.argv[2];
+if (!csvPath) throw new Error("Usage: node scripts/import-pal-drops-locations.mjs <csv-path>");
 const csv = await readFile(csvPath, "utf8");
 const pals = JSON.parse(await readFile(new URL("../public/data/pals.json", import.meta.url), "utf8"));
 let iconBySource = {};

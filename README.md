@@ -27,12 +27,14 @@ Audit all three R2 allowlists and report intentionally unlisted files:
 npm run r2:audit
 ```
 
-Set the following values in your local shell or an ignored `.env.local` file (never commit credentials):
+The website itself does not require these values for a normal local build. The R2 sync commands require the following values in your local shell or an ignored `.env.local` file (never commit credentials):
 
 ```bash
 R2_BUCKET=palworldguide-assets
 ASSET_BASE_URL=https://assets.palworldguide.net
 NEXT_PUBLIC_PAL_ASSET_BASE_URL=https://cdn.palworldguide.net
+CLOUDFLARE_ACCOUNT_ID=your-account-id
+CLOUDFLARE_API_TOKEN=your-api-token
 CLOUDFLARE_ZONE_ID=your-zone-id
 CLOUDFLARE_CACHE_PURGE_TOKEN=your-cache-purge-token
 ```
@@ -83,4 +85,4 @@ To roll back a published asset, optionally stop the watcher with `Ctrl+C`, resto
 
 ## Deploy to Vercel
 
-Import this GitHub repository into Vercel. Vercel will automatically detect Next.js and use the standard `next build` command. No environment variables are required for the current version.
+Import this GitHub repository into Vercel. Vercel will automatically detect Next.js and use the standard `next build` command. The current website build does not require R2 credentials; keep Cloudflare credentials only in the local ignored environment or GitHub Actions Secrets used by the sync workflow.

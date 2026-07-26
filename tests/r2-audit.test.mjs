@@ -14,6 +14,6 @@ test('current R2 allowlists are locally complete and do not duplicate entries', 
   assert.equal(summary.warnings.length, 1);
   assert.match(summary.warnings[0], /docs\/r2-asset-manifest\.json/);
   assert.equal(summary.public.files, 1468);
-  assert.equal(summary.allowlisted.files, 1046);
-  assert.equal(summary.unlisted.files, 422);
+  assert.equal(summary.allowlisted.files, 1456);
+  assert.equal(summary.unlisted.files, 12);
 });
