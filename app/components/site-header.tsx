@@ -27,6 +27,12 @@ export default function SiteHeader({ current, floating = false, locale }: { curr
   const [languageMenuPosition, setLanguageMenuPosition] = useState<{ top: number; left: number } | null>(null);
   const options = useMemo(() => [{ locale: "en" as const, code: "EN", label: "English", flag: "🇺🇸", href: pairedPath(pathname, "en") }, { locale: "zh" as const, code: "ZH", label: "中文", flag: "🇨🇳", href: pairedPath(pathname, "zh") }], [pathname]);
   const localizedNav = isZh === "zh" ? [["配种计算器", "/zh/breeding-calculator"], ["帕鲁图鉴", "/zh/pals"]] as const : navItems;
+  const activePath = current ?? pathname;
+  const isNavActive = (href: string) => {
+    const baseHref = href.split("#")[0] || "/";
+    if (baseHref === "/") return activePath === "/";
+    return activePath === baseHref || activePath.startsWith(`${baseHref}/`);
+  };
 
   useEffect(() => {
     const close = (event: PointerEvent) => {
@@ -81,10 +87,10 @@ export default function SiteHeader({ current, floating = false, locale }: { curr
   return <>
     <header className={`site-header ${floating ? "site-header-floating" : ""}`}>
     <Link href={isZh === "zh" ? "/zh/" : "/"} className="site-brand" aria-label={isZh === "zh" ? "帕鲁攻略首页" : "Field Guide home"}><Image className="site-brand-mark" src="/palworldguide-logo.svg" alt="" width={44} height={45} priority /><div><strong>FIELD GUIDE</strong><small>{isZh === "zh" ? "帕鲁攻略" : "INDEPENDENT GUIDE"}</small></div></Link>
-    <nav aria-label={isZh === "zh" ? "主导航" : "Main navigation"}>{localizedNav.map(([label, href]) => <Link key={href} href={href} className={current === href ? "active" : ""}>{label}</Link>)}</nav>
+    <nav aria-label={isZh === "zh" ? "主导航" : "Main navigation"}>{localizedNav.map(([label, href]) => <Link key={href} href={href} className={isNavActive(href) ? "active" : ""} aria-current={isNavActive(href) ? "page" : undefined}>{label}</Link>)}</nav>
     <div className="site-header-actions">
       <div className="language-switcher" ref={languageRef}><button type="button" className="language-trigger" aria-haspopup="menu" aria-expanded={languageOpen} onClick={() => setLanguageOpen((open) => !open)}><span className="language-flag" aria-hidden="true">{isZh === "zh" ? "🇨🇳" : "🇺🇸"}</span><strong>{isZh === "zh" ? "ZH" : "EN"}</strong><span className={`language-chevron ${languageOpen ? "open" : ""}`} aria-hidden="true" /></button></div>
-      <div className="site-mobile-menu" ref={mobileRef}><button type="button" className="site-menu-toggle" aria-label={isZh === "zh" ? "打开主导航" : "Toggle main navigation"} aria-expanded={mobileOpen} aria-controls="mobile-main-navigation" onClick={() => setMobileOpen((open) => !open)}><span aria-hidden="true">☰</span><span>{isZh === "zh" ? "菜单" : "Menu"}</span></button>{mobileOpen && <nav id="mobile-main-navigation" className="site-mobile-nav" aria-label={isZh === "zh" ? "移动端导航" : "Mobile navigation"}>{localizedNav.map(([label, href]) => <Link key={href} href={href} onClick={() => setMobileOpen(false)}>{label}</Link>)}</nav>}</div>
+      <div className="site-mobile-menu" ref={mobileRef}><button type="button" className="site-menu-toggle" aria-label={isZh === "zh" ? "打开主导航" : "Toggle main navigation"} aria-expanded={mobileOpen} aria-controls="mobile-main-navigation" onClick={() => setMobileOpen((open) => !open)}><span aria-hidden="true">☰</span><span>{isZh === "zh" ? "菜单" : "Menu"}</span></button>{mobileOpen && <nav id="mobile-main-navigation" className="site-mobile-nav" aria-label={isZh === "zh" ? "移动端导航" : "Mobile navigation"}>{localizedNav.map(([label, href]) => <Link key={href} href={href} className={isNavActive(href) ? "active" : ""} aria-current={isNavActive(href) ? "page" : undefined} onClick={() => setMobileOpen(false)}>{label}</Link>)}</nav>}</div>
     </div>
     </header>
     {languageMenu}
