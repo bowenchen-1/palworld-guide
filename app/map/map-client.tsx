@@ -25,7 +25,7 @@ const WORLD_TREE_TILES = Array.from({ length: 8 * 8 }, (_, index) => ({
 }));
 const CATEGORY_GROUPS = [
   { name: "Locations", categories: ["Fast Travel", "Dungeons", "Towers", "Settlements", "Cave Entrances", "Region Labels", "Recommended Base Spots", "Respawn Points", "Skyland Warp Altars"] },
-  { name: "Pals", categories: ["Alpha Pals", "Sakura Eggs", "Desert Eggs", "Frozen Eggs", "Grass Eggs", "Feybreak Eggs", "Volcano Eggs"] },
+  { name: "Pals and Eggs", categories: ["Alpha Pals", "Sakura Eggs", "Desert Eggs", "Frozen Eggs", "Grass Eggs", "Feybreak Eggs", "Volcano Eggs"] },
   { name: "Collectibles", categories: ["Lifmunk Effigies", "Rooby Effigies", "Yakumo Effigies", "Munchill Effigies", "Relaxaurus Effigies", "Herbil Effigies", "Tanzee Effigies", "Lunaris Effigies", "Depresso Effigies", "Pengullet Effigies", "Lamball Effigies", "Treasure Chests", "Elemental Chests", "Treasure Map Dig Spots", "Journals"] },
   { name: "Resources", categories: ["Ore", "Ore Clusters", "Coal", "Coal Clusters", "Sulfur", "Sulfur Clusters", "Pure Quartz", "Pure Quartz Clusters", "Chromite", "Hexolite Quartz", "Crude Oil", "Nightstar Sand", "Ancient Bark", "Ancient Bone", "Ancient Lava", "Skill Fruit Trees", "Beautiful Flowers", "Kinship Peaches", "Soralite", "Junk", "Heat Sources"] },
   { name: "Enemies", categories: ["Enemy Camps", "Anti-Air Turrets", "Incidents", "Supply Drops", "Arrogant Pal Critic"] },
