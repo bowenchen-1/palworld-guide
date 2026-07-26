@@ -13,7 +13,7 @@ export default function PaldexPageContent({ initialPage = 1, locale = "en" }: { 
   const schema = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    name: isZh ? "Palworld 帕鲁图鉴｜全部 299 个帕鲁" : (isMainPage ? "Palworld Pals - Complete Pal List (All 299 Pals)" : `Palworld Paldeck Database${pageSuffix}`),
+    name: isZh ? "Palworld 帕鲁图鉴｜全部 299 个帕鲁" : (isMainPage ? "All 299 Palworld Pals — Complete Pal List" : `Palworld Paldeck Database${pageSuffix}`),
     url: `${siteUrl}${isZh ? `/zh${pagePath === "/pals" ? "/pals" : pagePath}` : pagePath}`,
     description: isZh ? "浏览全部 299 个帕鲁，按属性、工作适应性、伙伴技能和配种数据搜索与筛选。" : (isMainPage ? "Browse all 299 Palworld Pals in our complete pal list. Filter by element, work suitability, partner skill, stats, and breeding data to find any Pal quickly." : "Browse all 299 Palworld Pals with detailed profiles, elements, work suitability, breeding data, filters, and 72 new Pals and variants from Palworld 1.0."),
     numberOfItems: palCounts.pals,
