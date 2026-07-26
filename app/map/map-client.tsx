@@ -86,6 +86,10 @@ function readableCount(value: number, locale: MapLocale) {
 export default function MapClient({ initialCategories, locationCount, locale = "en" }: { initialCategories: MapCategory[]; locationCount: number; locale?: MapLocale }) {
   const text = mapText(locale);
   const getLocationName = useCallback((location: MapLocation) => {
+    if (/grade_\d+$/i.test(location.name)) {
+      const categoryLabel = text.category(location.category);
+      return locale === "zh" ? categoryLabel : categoryLabel.replace(/\s+Eggs$/i, " Egg");
+    }
     if (locale === "zh" || !/[\u3400-\u9fff]/.test(location.name)) return location.name;
     if (location.href) return location.href.replace(/[_-]+/g, " ");
     return text.category(location.category);
