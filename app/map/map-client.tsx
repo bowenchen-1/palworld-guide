@@ -23,6 +23,10 @@ const WORLD_TREE_TILES = Array.from({ length: 8 * 8 }, (_, index) => ({
   y: Math.floor(index / 8),
   src: assetUrl(`/map/world-tree-z3/${index % 8}/${Math.floor(index / 8)}.png`),
 }));
+const MAP_PREVIEWS: Record<MapView, string> = {
+  palpagos: assetUrl("/map/Palpagos_Islands.png"),
+  "world-tree": assetUrl("/map/World_Tree.png"),
+};
 const CATEGORY_GROUPS = [
   { name: "Locations", categories: ["Fast Travel", "Dungeons", "Towers", "Settlements", "Cave Entrances", "Region Labels", "Recommended Base Spots", "Respawn Points", "Skyland Warp Altars"] },
   { name: "Pals", categories: ["Alpha Pals", "Sakura Eggs", "Desert Eggs", "Frozen Eggs", "Grass Eggs", "Feybreak Eggs", "Volcano Eggs"] },
@@ -485,6 +489,7 @@ export default function MapClient({ initialCategories, locationCount, locale = "
       <div ref={stageRef} className="map-stage" onPointerDown={handlePointerDown} onPointerMove={handlePointerMove} onPointerUp={handlePointerUp} onPointerCancel={handlePointerUp} onPointerLeave={() => { setCursorCoordinate(null); setHovered(null); }} role="application" aria-label={locale === "zh" ? "互动式帕鲁地图" : "Interactive Palworld map"}>
         <div className="map-board" style={{ transform: `translate3d(${pan.x}px, ${pan.y}px, 0) scale(${zoom})` }}>
           <div className="map-tile-layer" aria-label={mapView === "palpagos" ? text.palpagos : text.worldTree}>
+            <Image className="map-preview-layer" src={MAP_PREVIEWS[mapView]} alt="" width={MAP_SIZE} height={MAP_SIZE} priority={mapView === "palpagos"} unoptimized />
             {visibleTiles.map((tile) => {
               const isWorldTree = mapView === "world-tree";
               const tileWorldSize = isWorldTree ? MAP_SIZE / 8 : TILE_SIZE;
