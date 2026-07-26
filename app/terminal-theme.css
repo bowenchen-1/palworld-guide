@@ -1504,13 +1504,11 @@ body::before {
 }
 
 /* Keep the crawlable Pals guide readable without letting the long-form copy overpower the database. */
-.paldex-seo-copy{display:block;max-width:980px;margin:42px auto 92px;border:1px solid var(--terminal-border);border-radius:20px;background:linear-gradient(145deg,rgba(18,54,61,.72),rgba(7,29,35,.9));padding:48px 56px 56px;box-shadow:0 18px 45px rgba(0,8,12,.18)}
+.paldex-seo-copy{display:block;max-width:980px;margin:42px auto 92px;border:1px solid var(--terminal-border);border-top:3px solid var(--terminal-yellow);border-radius:20px;background:linear-gradient(145deg,rgba(18,54,61,.72),rgba(7,29,35,.9));padding:48px 56px 56px;box-shadow:0 18px 45px rgba(0,8,12,.18)}
 .paldex-seo-copy>div{max-width:860px;margin:0 auto}
-.paldex-seo-copy h2{margin:44px 0 14px;color:var(--terminal-copy);font-size:clamp(1.7rem,2.6vw,2.35rem);letter-spacing:-.035em;line-height:1.1}
+.paldex-seo-copy h2{position:relative;margin:44px 0 14px;padding-left:18px;color:var(--terminal-copy);font-size:clamp(1.7rem,2.6vw,2.35rem);letter-spacing:-.035em;line-height:1.1}
+.paldex-seo-copy h2::before{content:"";position:absolute;left:1px;top:.22em;width:9px;height:9px;background:var(--terminal-yellow);transform:rotate(45deg);box-shadow:0 0 0 4px rgba(242,201,76,.1)}
 .paldex-seo-copy h2:first-child{margin-top:0}
-.paldex-copy-heading-icon{display:inline-flex;align-items:center;gap:5px;margin-right:10px;vertical-align:-5px}
-.paldex-copy-heading-icon .element-icon,.paldex-copy-heading-icon .work-suitability-icon{width:30px;height:30px;flex:0 0 30px}
-.paldex-copy-heading-icon .work-suitability-icon{width:27px;height:27px;flex-basis:27px}
 .paldex-seo-copy p,.paldex-seo-copy li{color:var(--terminal-muted);font-size:clamp(.95rem,1.05vw,1.08rem);line-height:1.75}
 .paldex-seo-copy p{margin:0 0 18px}
 .paldex-seo-copy ol{margin:8px 0 24px;padding-left:1.45rem}
@@ -1518,4 +1516,4 @@ body::before {
 .paldex-seo-copy details{margin:10px 0;border:1px solid rgba(74,155,157,.36);border-radius:12px;background:rgba(20,70,77,.32);padding:14px 18px}
 .paldex-seo-copy summary{cursor:pointer;color:var(--terminal-copy);font-size:1rem;font-weight:800}
 .paldex-seo-copy details p{margin:12px 0 0}
-@media(max-width:760px){.paldex-seo-copy{margin:30px 20px 64px;padding:30px 22px 34px}.paldex-seo-copy h2{margin-top:34px;font-size:1.65rem}.paldex-copy-heading-icon{margin-right:7px;vertical-align:-7px}.paldex-copy-heading-icon .element-icon{width:25px;height:25px;flex-basis:25px}.paldex-copy-heading-icon .work-suitability-icon{width:23px;height:23px;flex-basis:23px}.paldex-seo-copy p,.paldex-seo-copy li{font-size:.98rem;line-height:1.7}}
+@media(max-width:760px){.paldex-seo-copy{margin:30px 20px 64px;padding:30px 22px 34px}.paldex-seo-copy h2{margin-top:34px;font-size:1.65rem}.paldex-seo-copy p,.paldex-seo-copy li{font-size:.98rem;line-height:1.7}}
