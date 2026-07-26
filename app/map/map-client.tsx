@@ -73,6 +73,7 @@ const MAP_STATE_KEY = "palworld-map-state-v5";
 type MapPayload = { locations: MapLocation[]; categories: MapCategory[] };
 type Point = { x: number; y: number };
 type LevelRange = "all" | "1-20" | "21-40" | "41-60" | "61-80";
+type DisplayFilterItem = { name: string; names: string[]; icon: string; count: number };
 
 function readableCount(value: number, locale: MapLocale) {
   return new Intl.NumberFormat(locale === "zh" ? "zh-CN" : "en-US").format(value);
@@ -88,6 +89,7 @@ export default function MapClient({ initialCategories, locationCount, locale = "
   const [query, setQuery] = useState("");
   const [levelRange, setLevelRange] = useState<LevelRange>("all");
   const [selected, setSelected] = useState<MapLocation | null>(null);
+  const [hovered, setHovered] = useState<MapLocation | null>(null);
   const [cursorCoordinate, setCursorCoordinate] = useState<Point | null>(null);
   const [mapView, setMapView] = useState<MapView>("palpagos");
   const [zoom, setZoom] = useState(MAP_MIN_ZOOM);
@@ -206,6 +208,7 @@ export default function MapClient({ initialCategories, locationCount, locale = "
 
   const calibration = MAP_CALIBRATIONS[mapView];
   const imageRect = useMemo(() => getContainedImageRect(calibration, MAP_SIZE, MAP_SIZE), [calibration]);
+  const hoveredPoint = useMemo(() => hovered ? mapCoordinateToScreenPoint(hovered, imageRect, calibration) : null, [calibration, hovered, imageRect]);
   const visibleTiles = useMemo(() => {
     if (!viewport.width || !viewport.height) return [];
     const isWorldTree = mapView === "world-tree";
@@ -308,15 +311,34 @@ export default function MapClient({ initialCategories, locationCount, locale = "
     return () => stage.removeEventListener("wheel", handleWheel);
   }, [updateZoom]);
 
-  const toggleCategory = (name: string) => setActiveCategories((current) => { const next = new Set(current); if (next.has(name)) next.delete(name); else next.add(name); return next; });
   const setAllCategories = (visible: boolean) => {
     setActiveCategories(visible ? new Set(currentCategories.map((category) => category.name)) : new Set());
     setQuery("");
     setLevelRange("all");
   };
   const categoryMap = useMemo(() => new Map(currentCategories.map((category) => [category.name, category])), [currentCategories]);
+  const displayItemsForGroup = useCallback((group: { name: string; categories: readonly string[] }) => {
+    const categories = group.categories.map((name) => categoryMap.get(name)).filter((category): category is MapCategory => Boolean(category));
+    const makeItem = (name: string, names: string[], fallback?: MapCategory): DisplayFilterItem => ({ name, names, icon: fallback?.icon || categories[0]?.icon || assetUrl("/map-icons/Region.webp"), count: names.reduce((total, categoryName) => total + (categoryCounts.get(categoryName) ?? 0), 0) });
+    if (group.name === "Pals") {
+      const eggs = categories.filter((category) => category.name.endsWith("Eggs"));
+      return [
+        ...categories.filter((category) => !category.name.endsWith("Eggs")).map((category) => makeItem(category.name, [category.name], category)),
+        ...(eggs.length ? [makeItem("Pal Eggs", eggs.map((category) => category.name), eggs[0])] : []),
+      ];
+    }
+    if (group.name === "Collectibles") {
+      const effigies = categories.filter((category) => category.name.endsWith("Effigies"));
+      return [
+        ...(effigies.length ? [makeItem("Effigies", effigies.map((category) => category.name), effigies[0])] : []),
+        ...categories.filter((category) => !category.name.endsWith("Effigies")).map((category) => makeItem(category.name, [category.name], category)),
+      ];
+    }
+    return categories.map((category) => makeItem(category.name, [category.name], category));
+  }, [categoryCounts, categoryMap]);
   const toggleGroup = (name: string) => setOpenGroups((current) => { const next = new Set(current); if (next.has(name)) next.delete(name); else next.add(name); return next; });
   const setGroupCategories = (names: readonly string[], visible: boolean) => setActiveCategories((current) => { const next = new Set(current); names.forEach((name) => visible ? next.add(name) : next.delete(name)); return next; });
+  const toggleDisplayItem = (item: DisplayFilterItem) => setActiveCategories((current) => { const next = new Set(current); const isActive = item.names.every((name) => current.has(name)); item.names.forEach((name) => isActive ? next.delete(name) : next.add(name)); return next; });
   const applyQuickFilter = (categories: readonly string[]) => { setQuery(""); setLevelRange("all"); setActiveCategories(new Set(categories)); };
   const changeLevelRange = (nextLevelRange: LevelRange) => {
     setLevelRange(nextLevelRange);
@@ -349,6 +371,14 @@ export default function MapClient({ initialCategories, locationCount, locale = "
       const rect = pointerStage.getBoundingClientRect();
       const worldPoint = { x: (event.clientX - rect.left - panRef.current.x) / zoomRef.current, y: (event.clientY - rect.top - panRef.current.y) / zoomRef.current };
       setCursorCoordinate(screenPointToMapCoordinate(worldPoint, imageRect, calibration));
+      let closest: MapLocation | null = null;
+      let closestDistance = 28 / Math.max(zoomRef.current, 0.08);
+      for (const location of visibleLocations) {
+        const point = mapCoordinateToScreenPoint(location, imageRect, calibration);
+        const distance = Math.hypot(point.x - worldPoint.x, point.y - worldPoint.y);
+        if (distance < closestDistance) { closestDistance = distance; closest = location; }
+      }
+      setHovered(closest);
     }
     if (!pointers.current.has(event.pointerId)) return;
     pointers.current.set(event.pointerId, { x: event.clientX, y: event.clientY });
@@ -385,6 +415,7 @@ export default function MapClient({ initialCategories, locationCount, locale = "
       if (nextCategories.size === 0) nextCategories = worldTreeCategoryNames;
     }
     setSelected(null);
+    setHovered(null);
     setTileStatus({});
     setTileRetry((value) => value + 1);
     setActiveCategories(nextCategories);
@@ -439,13 +470,14 @@ export default function MapClient({ initialCategories, locationCount, locale = "
           {groupsForView.map((group) => {
             const categories = group.categories.map((name) => categoryMap.get(name)).filter((category): category is MapCategory => Boolean(category));
             if (!categories.length) return null;
-            const activeCount = categories.filter((category) => activeCategories.has(category.name)).length;
+            const items = displayItemsForGroup(group);
+            const activeCount = items.filter((item) => item.names.some((name) => activeCategories.has(name))).length;
             const isOpen = openGroups.has(group.name);
-            return <section className="map-category-group" key={group.name}><div className="map-group-heading"><button type="button" className="map-group-toggle" onClick={() => toggleGroup(group.name)} aria-expanded={isOpen}><span className={`map-group-chevron${isOpen ? " is-open" : ""}`}>⌄</span><strong>{text.group(group.name)}</strong><span className="map-group-count">{activeCount}/{categories.length}</span></button><div className="map-group-actions"><button type="button" onClick={() => setGroupCategories(group.categories, true)}>{text.all}</button><button type="button" onClick={() => setGroupCategories(group.categories, false)}>{text.clear}</button></div></div>{isOpen && <div className="map-category-list">{categories.map((category) => { const active = activeCategories.has(category.name); return <button key={category.name} type="button" className={`map-category${active ? " is-active" : ""}`} aria-pressed={active} onClick={() => toggleCategory(category.name)}><span className="map-category-checkbox" aria-hidden="true">{active ? "✓" : ""}</span><span className="map-category-icon"><Image src={category.icon} alt="" width={24} height={24} unoptimized /></span><span className="map-category-label"><span className="map-category-name">{text.category(category.name)}</span><small className="map-category-count">{readableCount(categoryCounts.get(category.name) ?? 0, locale)}</small></span></button>; })}</div>}</section>;
+            return <section className="map-category-group" key={group.name}><div className="map-group-heading"><button type="button" className="map-group-toggle" onClick={() => toggleGroup(group.name)} aria-expanded={isOpen}><span className={`map-group-chevron${isOpen ? " is-open" : ""}`}>⌄</span><strong>{text.group(group.name)}</strong><span className="map-group-count">{activeCount}/{items.length}</span></button><div className="map-group-actions"><button type="button" onClick={() => setGroupCategories(group.categories, true)}>{text.all}</button><button type="button" onClick={() => setGroupCategories(group.categories, false)}>{text.clear}</button></div></div>{isOpen && <div className="map-category-list">{items.map((item) => { const active = item.names.some((name) => activeCategories.has(name)); return <button key={item.name} type="button" className={`map-category${active ? " is-active" : ""}`} aria-pressed={active} onClick={() => toggleDisplayItem(item)}><span className="map-category-checkbox" aria-hidden="true">{active ? "✓" : ""}</span><span className="map-category-icon"><Image src={item.icon} alt="" width={24} height={24} unoptimized /></span><span className="map-category-label"><span className="map-category-name">{text.category(item.name)}</span><small className="map-category-count">{readableCount(item.count, locale)}</small></span></button>; })}</div>}</section>;
           })}
         </div>
       </aside>
-      <div ref={stageRef} className="map-stage" onPointerDown={handlePointerDown} onPointerMove={handlePointerMove} onPointerUp={handlePointerUp} onPointerCancel={handlePointerUp} onPointerLeave={() => setCursorCoordinate(null)} role="application" aria-label={locale === "zh" ? "互动式帕鲁地图" : "Interactive Palworld map"}>
+      <div ref={stageRef} className="map-stage" onPointerDown={handlePointerDown} onPointerMove={handlePointerMove} onPointerUp={handlePointerUp} onPointerCancel={handlePointerUp} onPointerLeave={() => { setCursorCoordinate(null); setHovered(null); }} role="application" aria-label={locale === "zh" ? "互动式帕鲁地图" : "Interactive Palworld map"}>
         <div className="map-board" style={{ transform: `translate3d(${pan.x}px, ${pan.y}px, 0) scale(${zoom})` }}>
           <div className="map-tile-layer" aria-label={mapView === "palpagos" ? text.palpagos : text.worldTree}>
             {visibleTiles.map((tile) => {
@@ -457,6 +489,7 @@ export default function MapClient({ initialCategories, locationCount, locale = "
           </div>
           <canvas ref={canvasRef} className="map-marker-canvas" aria-hidden="true" />
         </div>
+        {hovered && hoveredPoint && <div className="map-hover-label" style={{ left: hoveredPoint.x * zoom + pan.x, top: hoveredPoint.y * zoom + pan.y }} role="status">{hovered.name}</div>}
         <div className="map-view-switcher" role="tablist" aria-label={text.mapArea}>
           <button type="button" className={mapView === "palpagos" ? "is-active" : ""} onClick={() => changeMapView("palpagos")} role="tab" aria-selected={mapView === "palpagos"}>{text.palpagos}</button>
           <button type="button" className={mapView === "world-tree" ? "is-active" : ""} onClick={() => changeMapView("world-tree")} role="tab" aria-selected={mapView === "world-tree"}>{text.worldTree}</button>
