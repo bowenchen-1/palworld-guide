@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { createPageMetadata } from "../lib/seo";
 import PaldexPageContent from "../paldex/paldex-page-content";
+import { serializeInitialPaldexQuery, type PaldexSearchParams } from "../paldex/paldex-search-params";
 
 export const metadata: Metadata = createPageMetadata({
   title: "All 299 Palworld Pals — Complete Pal List",
@@ -9,6 +10,6 @@ export const metadata: Metadata = createPageMetadata({
   path: "/pals",
 });
 
-export default function PalsPage() {
-  return <PaldexPageContent />;
+export default async function PalsPage({ searchParams }: { searchParams: Promise<PaldexSearchParams> }) {
+  return <PaldexPageContent initialQuery={serializeInitialPaldexQuery(await searchParams)} />;
 }

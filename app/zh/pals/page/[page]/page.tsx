@@ -4,8 +4,9 @@ import { createPageMetadata } from "../../../../lib/seo";
 import { catalogPals } from "../../../../lib/game-data";
 import { PALDEX_PAGE_SIZE } from "../../../../paldex/paldex-config";
 import PaldexPageContent from "../../../../paldex/paldex-page-content";
+import { serializeInitialPaldexQuery, type PaldexSearchParams } from "../../../../paldex/paldex-search-params";
 
-type Props = { params: Promise<{ page: string }> };
+type Props = { params: Promise<{ page: string }>; searchParams: Promise<PaldexSearchParams> };
 const pageCount = Math.ceil(catalogPals.length / PALDEX_PAGE_SIZE);
 
 export function generateStaticParams() {
@@ -31,9 +32,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default async function ChinesePalsPaginationPage({ params }: Props) {
+export default async function ChinesePalsPaginationPage({ params, searchParams }: Props) {
   const page = Number.parseInt((await params).page, 10);
   if (page === 1) permanentRedirect("/zh/pals");
   if (!Number.isInteger(page) || page < 2 || page > pageCount) notFound();
-  return <PaldexPageContent initialPage={page} locale="zh" />;
+  return <PaldexPageContent initialPage={page} initialQuery={serializeInitialPaldexQuery(await searchParams)} locale="zh" />;
 }

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { createContext, useContext, useEffect, useMemo, useRef, useState } from "react";
 import { ElementIcon, PartnerSkillIcon, WorkSuitabilityIcon } from "../components/pal-icons";
 import PalMark from "../components/pal-mark";
@@ -99,14 +99,15 @@ function LocationSummary({ pal, locale, onInfo }: { pal: PalData; locale: Locale
   </span>;
 }
 
-export default function PaldexClient({ initialPage: _initialPage = 1, locale = "en" }: { initialPage?: number; locale?: Locale }) {
+export default function PaldexClient({ initialPage: _initialPage = 1, initialQuery = "", locale = "en" }: { initialPage?: number; initialQuery?: string; locale?: Locale }) {
   const isZh = locale === "zh";
   const t = isZh ? zh.pals : undefined;
   const prefix = isZh ? "/zh" : "";
   const pageSize = PALDEX_PAGE_SIZE;
   const router = useRouter();
-  const searchParams = useSearchParams();
-  const filters = useMemo(() => parsePaldexFilters(new URLSearchParams(searchParams.toString())), [searchParams]);
+  const [queryString, setQueryString] = useState(initialQuery);
+  const searchParams = useMemo(() => new URLSearchParams(queryString), [queryString]);
+  const filters = useMemo(() => parsePaldexFilters(searchParams), [searchParams]);
   const selectedPals = useMemo(() => selectPalsBySlugs(searchParams.get("ids"), catalogPals), [searchParams]);
   const selectedMode = selectedPals.length > 0;
   const [sheet, setSheet] = useState<Sheet>(null);
@@ -156,7 +157,12 @@ export default function PaldexClient({ initialPage: _initialPage = 1, locale = "
       tableWrap.removeEventListener("scroll", scheduleUpdate);
       if (frame) window.cancelAnimationFrame(frame);
     };
-  }, [searchParams]);
+  }, [queryString]);
+  useEffect(() => {
+    const syncFromLocation = () => setQueryString(window.location.search.replace(/^\?/, ""));
+    window.addEventListener("popstate", syncFromLocation);
+    return () => window.removeEventListener("popstate", syncFromLocation);
+  }, []);
   const visible = useMemo(() => selectedMode ? selectedPals : sortPals(filterPals(catalogPals, filters, isZh ? (pal) => getPalNameZh(pal.name) : undefined), filters.sort), [filters, isZh, selectedMode, selectedPals]);
   const totalPages = selectedMode ? 1 : Math.max(1, Math.ceil(visible.length / pageSize));
   const currentPage = Math.min(Math.max(_initialPage, 1), totalPages);
@@ -171,6 +177,7 @@ export default function PaldexClient({ initialPage: _initialPage = 1, locale = "
     } else {
       router.push(target, { scroll: false });
     }
+    setQueryString(query);
   };
   const pageHref = (page: number) => {
     const query = serializePaldexFilters(filters).toString();
@@ -184,7 +191,10 @@ export default function PaldexClient({ initialPage: _initialPage = 1, locale = "
     setSheet(null);
   };
   const clearAll = () => update({ q: "", elements: [], elementMode: "any", work: [], workMode: "any", workLevel: 0, types: ["pal", "monster"], newOnly: false, sort: "number" });
-  const clearSelection = () => router.push(`${prefix}/pals`, { scroll: false });
+  const clearSelection = () => {
+    setQueryString("");
+    router.push(`${prefix}/pals`, { scroll: false });
+  };
   const hasFilters = Boolean(selectedMode || filters.q || filters.elements.length || filters.work.length || filters.workLevel || filters.newOnly || filters.types.join(",") !== "pal,monster" || filters.sort !== "number");
   const toggleElement = (element: string) => update({ elements: toggle(filters.elements, element) });
   const toggleWork = (work: WorkKey) => update({ work: toggle(filters.work, work) });
