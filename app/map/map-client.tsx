@@ -434,6 +434,10 @@ export default function MapClient({ initialCategories, locationCount, locale = "
   const displayedLocationTotal = mapView === "world-tree" ? WORLD_TREE_LOCATIONS.length : locationCount;
   const tileLoading = viewport.width > 0 && visibleTiles.some((tile) => tileStatus[`${mapView}:${tile.src}`] !== "loaded");
   const tileErrors = visibleTiles.filter((tile) => tileStatus[`${mapView}:${tile.src}`] === "error");
+  const tileReady = viewport.width > 0 && visibleTiles.length > 0 && visibleTiles.every((tile) => {
+    const status = tileStatus[`${mapView}:${tile.src}`];
+    return status === "loaded" || status === "error";
+  });
   const retryTiles = () => {
     setTileStatus((current) => {
       const next = { ...current };
@@ -485,10 +489,10 @@ export default function MapClient({ initialCategories, locationCount, locale = "
           })}
         </div>
       </aside>
-      <div ref={stageRef} className="map-stage" onPointerDown={handlePointerDown} onPointerMove={handlePointerMove} onPointerUp={handlePointerUp} onPointerCancel={handlePointerUp} onPointerLeave={() => { setCursorCoordinate(null); setHovered(null); }} role="application" aria-label={locale === "zh" ? "互动式帕鲁地图" : "Interactive Palworld map"}>
+        <div ref={stageRef} className="map-stage" onPointerDown={handlePointerDown} onPointerMove={handlePointerMove} onPointerUp={handlePointerUp} onPointerCancel={handlePointerUp} onPointerLeave={() => { setCursorCoordinate(null); setHovered(null); }} role="application" aria-label={locale === "zh" ? "互动式帕鲁地图" : "Interactive Palworld map"}>
         <div className="map-board" style={{ transform: `translate3d(${pan.x}px, ${pan.y}px, 0) scale(${zoom})` }}>
-          <div key={mapView} className="map-tile-layer" aria-label={mapView === "palpagos" ? text.palpagos : text.worldTree}>
-            <Image className="map-preview-layer" src={MAP_PREVIEWS[mapView]} alt="" width={MAP_SIZE} height={MAP_SIZE} priority={mapView === "palpagos"} unoptimized />
+          <Image key={`preview:${mapView}`} className={`map-preview-layer map-preview-${mapView}`} src={MAP_PREVIEWS[mapView]} alt="" width={MAP_SIZE} height={MAP_SIZE} priority={mapView === "palpagos"} unoptimized />
+          <div key={mapView} className={`map-tile-layer${tileReady ? " is-ready" : ""}`} aria-label={mapView === "palpagos" ? text.palpagos : text.worldTree}>
             {visibleTiles.map((tile) => {
               const isWorldTree = mapView === "world-tree";
               const tileWorldSize = isWorldTree ? MAP_SIZE / 8 : TILE_SIZE;
