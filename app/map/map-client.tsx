@@ -115,7 +115,6 @@ export default function MapClient({ initialCategories, locationCount, locale = "
   const [tileStatus, setTileStatus] = useState<Record<string, "loaded" | "error">>({});
   const [tileRetry, setTileRetry] = useState(0);
   const [previewFallback, setPreviewFallback] = useState<Record<MapView, boolean>>({ palpagos: false, "world-tree": false });
-  const [previewLoaded, setPreviewLoaded] = useState<Record<MapView, boolean>>({ palpagos: false, "world-tree": false });
   const zoomRef = useRef(zoom);
   const panRef = useRef(pan);
   const [loading, setLoading] = useState(true);
@@ -501,7 +500,7 @@ export default function MapClient({ initialCategories, locationCount, locale = "
       </aside>
         <div ref={stageRef} className="map-stage" onPointerDown={handlePointerDown} onPointerMove={handlePointerMove} onPointerUp={handlePointerUp} onPointerCancel={handlePointerUp} onPointerLeave={() => { setCursorCoordinate(null); setHovered(null); }} role="application" aria-label={locale === "zh" ? "互动式帕鲁地图" : "Interactive Palworld map"}>
         <div className="map-board" style={{ transform: `translate3d(${pan.x}px, ${pan.y}px, 0) scale(${zoom})` }}>
-          <Image key={`preview:${mapView}:${previewFallback[mapView] ? "local" : "cdn"}`} className={`map-preview-layer map-preview-${mapView}${previewLoaded[mapView] ? " is-loaded" : ""}`} src={previewFallback[mapView] ? MAP_PREVIEW_FALLBACKS[mapView] : MAP_PREVIEWS[mapView]} alt="" width={MAP_SIZE} height={MAP_SIZE} priority={mapView === "palpagos"} unoptimized onLoad={() => setPreviewLoaded((current) => ({ ...current, [mapView]: true }))} onError={() => { setPreviewLoaded((current) => ({ ...current, [mapView]: false })); setPreviewFallback((current) => ({ ...current, [mapView]: true })); }} />
+          <Image key={`preview:${mapView}:${previewFallback[mapView] ? "local" : "cdn"}`} className={`map-preview-layer map-preview-${mapView}`} src={previewFallback[mapView] ? MAP_PREVIEW_FALLBACKS[mapView] : MAP_PREVIEWS[mapView]} alt="" width={MAP_SIZE} height={MAP_SIZE} priority={mapView === "palpagos"} unoptimized onError={() => setPreviewFallback((current) => ({ ...current, [mapView]: true }))} />
           <div key={mapView} className="map-tile-layer" aria-label={mapView === "palpagos" ? text.palpagos : text.worldTree}>
             {visibleTiles.map((tile) => {
               const isWorldTree = mapView === "world-tree";
