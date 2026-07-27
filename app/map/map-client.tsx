@@ -454,6 +454,13 @@ export default function MapClient({ initialCategories, locationCount, locale = "
   };
   const displayedLocationCount = mapView === "world-tree" ? visibleLocations.length : filteredLocations.length;
   const displayedLocationTotal = mapView === "world-tree" ? WORLD_TREE_LOCATIONS.length : locationCount;
+  // The complete preview is the stable fit-to-viewport layer. Only enable
+  // tiles once the user has zoomed beyond the initial overview; this prevents
+  // an incomplete tile layer from covering the lower half of the preview.
+  const fitZoom = viewport.width > 0
+    ? Math.min(MAP_MAX_ZOOM, Math.max(MAP_MIN_ZOOM, Math.min(viewport.width / MAP_SIZE, viewport.height / MAP_SIZE)))
+    : MAP_MIN_ZOOM;
+  const showTiles = viewport.width > 0 && zoom > fitZoom * 1.08;
   const initialTiles = visibleTiles.filter((tile) => INITIAL_TILE_KEYS[mapView].has(`${tile.x}:${tile.y}`));
   const tileLoading = viewport.width > 0 && initialTiles.some((tile) => tileStatus[`${mapView}:${tile.src}`] !== "loaded");
   const tileErrors = initialTiles.filter((tile) => tileStatus[`${mapView}:${tile.src}`] === "error");
@@ -511,7 +518,7 @@ export default function MapClient({ initialCategories, locationCount, locale = "
         <div ref={stageRef} className="map-stage" onPointerDown={handlePointerDown} onPointerMove={handlePointerMove} onPointerUp={handlePointerUp} onPointerCancel={handlePointerUp} onPointerLeave={() => { setCursorCoordinate(null); setHovered(null); }} role="application" aria-label={locale === "zh" ? "互动式帕鲁地图" : "Interactive Palworld map"}>
         <div className="map-board" style={{ transform: `translate(${pan.x}px, ${pan.y}px) scale(${zoom})` }}>
           <Image key={`preview:${mapView}:${previewFallback[mapView] ? "local" : "cdn"}`} className={`map-preview-layer map-preview-${mapView}`} src={previewFallback[mapView] ? MAP_PREVIEW_FALLBACKS[mapView] : MAP_PREVIEWS[mapView]} alt="" width={MAP_SIZE} height={MAP_SIZE} priority={mapView === "palpagos"} unoptimized onError={() => setPreviewFallback((current) => ({ ...current, [mapView]: true }))} />
-          <div key={mapView} className="map-tile-layer" aria-label={mapView === "palpagos" ? text.palpagos : text.worldTree}>
+          <div key={mapView} className={`map-tile-layer${showTiles ? " is-visible" : ""}`} aria-label={mapView === "palpagos" ? text.palpagos : text.worldTree}>
             {visibleTiles.map((tile) => {
               const isWorldTree = mapView === "world-tree";
               const tileWorldSize = isWorldTree ? MAP_SIZE / 8 : TILE_SIZE;
