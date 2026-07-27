@@ -30,11 +30,11 @@ const INITIAL_TILE_KEYS: Record<MapView, Set<string>> = {
   "world-tree": new Set(["2:3", "3:3", "4:3", "3:4", "4:4", "5:4"]),
 };
 const MAP_PREVIEWS: Record<MapView, string> = {
-  palpagos: assetUrl("/map/Palpagos_Islands.png"),
+  palpagos: assetUrl("/map/Palpagos_Islands_Tiles_Preview.webp"),
   "world-tree": assetUrl("/map/World_Tree.png"),
 };
 const MAP_PREVIEW_FALLBACKS: Record<MapView, string> = {
-  palpagos: "/map/Palpagos_Islands.png",
+  palpagos: "/map/Palpagos_Islands_Tiles_Preview.webp",
   "world-tree": "/map/World_Tree.png",
 };
 const CATEGORY_GROUPS = [
