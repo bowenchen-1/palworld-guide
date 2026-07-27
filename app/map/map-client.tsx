@@ -31,11 +31,11 @@ const INITIAL_TILE_KEYS: Record<MapView, Set<string>> = {
 };
 const MAP_PREVIEWS: Record<MapView, string | null> = {
   palpagos: null,
-  "world-tree": assetUrl("/map/World_Tree.png"),
+  "world-tree": null,
 };
 const MAP_PREVIEW_FALLBACKS: Record<MapView, string | null> = {
   palpagos: null,
-  "world-tree": "/map/World_Tree.png",
+  "world-tree": null,
 };
 const CATEGORY_GROUPS = [
   { name: "Locations", categories: ["Fast Travel", "Dungeons", "Towers", "Settlements", "Cave Entrances", "Region Labels", "Recommended Base Spots", "Respawn Points", "Skyland Warp Altars"] },
@@ -462,10 +462,7 @@ export default function MapClient({ initialCategories, locationCount, locale = "
   const displayedLocationTotal = mapView === "world-tree" ? WORLD_TREE_LOCATIONS.length : locationCount;
   // Palpagos uses the tile source at every zoom level. World Tree keeps its
   // preview until the user zooms beyond the initial overview.
-  const fitZoom = viewport.width > 0
-    ? Math.min(MAP_MAX_ZOOM, Math.max(MAP_MIN_ZOOM, Math.min(viewport.width / MAP_SIZE, viewport.height / MAP_SIZE)))
-    : MAP_MIN_ZOOM;
-  const showTiles = viewport.width > 0 && (mapView === "palpagos" || zoom > fitZoom * 1.08);
+  const showTiles = viewport.width > 0;
   const initialTiles = visibleTiles.filter((tile) => INITIAL_TILE_KEYS[mapView].has(`${tile.x}:${tile.y}`));
   const tileLoading = viewport.width > 0 && initialTiles.some((tile) => tileStatus[`${mapView}:${tile.src}`] !== "loaded");
   const tileErrors = initialTiles.filter((tile) => tileStatus[`${mapView}:${tile.src}`] === "error");
