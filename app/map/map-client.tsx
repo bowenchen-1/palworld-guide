@@ -120,6 +120,7 @@ export default function MapClient({ initialCategories, locationCount, locale = "
   const [viewport, setViewport] = useState({ width: 0, height: 0 });
   const [tileStatus, setTileStatus] = useState<Record<string, "loaded" | "error">>({});
   const [tileRetry, setTileRetry] = useState(0);
+  const [tilesHydrated, setTilesHydrated] = useState(false);
   const [previewFallback, setPreviewFallback] = useState<Record<MapView, boolean>>({ palpagos: false, "world-tree": false });
   const zoomRef = useRef(zoom);
   const panRef = useRef(pan);
@@ -170,6 +171,11 @@ export default function MapClient({ initialCategories, locationCount, locale = "
     const observer = new ResizeObserver(updateViewport);
     observer.observe(stage);
     return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    const frame = requestAnimationFrame(() => setTilesHydrated(true));
+    return () => cancelAnimationFrame(frame);
   }, []);
 
   useEffect(() => {
@@ -527,7 +533,7 @@ export default function MapClient({ initialCategories, locationCount, locale = "
               const tileKey = `${mapView}:${tile.src}`;
               const status = tileStatus[tileKey];
               const isInitialTile = INITIAL_TILE_KEYS[mapView].has(`${tile.x}:${tile.y}`);
-              return <Image key={`${tileKey}:${tileRetry}`} className={`map-tile${isWorldTree ? " map-world-tree-tile" : ""}${status === "loaded" ? " is-loaded" : ""}`} src={tile.src} alt="" width={isWorldTree ? WORLD_TREE_TILE_SIZE : TILE_SIZE} height={isWorldTree ? WORLD_TREE_TILE_SIZE : TILE_SIZE} loading={isInitialTile ? "eager" : "lazy"} decoding="async" unoptimized style={{ left: tile.x * tileWorldSize, top: tile.y * tileWorldSize, width: tileWorldSize, height: tileWorldSize }} onLoad={() => setTileStatus((current) => ({ ...current, [tileKey]: "loaded" }))} onError={() => setTileStatus((current) => ({ ...current, [tileKey]: "error" }))} />;
+              return <Image key={`${tileKey}:${tileRetry}`} className={`map-tile${isWorldTree ? " map-world-tree-tile" : ""}${status === "loaded" ? " is-loaded" : ""}`} src={tile.src} alt="" width={isWorldTree ? WORLD_TREE_TILE_SIZE : TILE_SIZE} height={isWorldTree ? WORLD_TREE_TILE_SIZE : TILE_SIZE} loading={isInitialTile || tilesHydrated ? "eager" : "lazy"} decoding="async" unoptimized style={{ left: tile.x * tileWorldSize, top: tile.y * tileWorldSize, width: tileWorldSize, height: tileWorldSize }} onLoad={() => setTileStatus((current) => ({ ...current, [tileKey]: "loaded" }))} onError={() => setTileStatus((current) => ({ ...current, [tileKey]: "error" }))} />;
             })}
           </div>
           <canvas ref={canvasRef} className="map-marker-canvas" aria-hidden="true" />
