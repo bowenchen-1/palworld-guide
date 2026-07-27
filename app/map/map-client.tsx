@@ -445,14 +445,8 @@ export default function MapClient({ initialCategories, locationCount, locale = "
   };
   const displayedLocationCount = mapView === "world-tree" ? visibleLocations.length : filteredLocations.length;
   const displayedLocationTotal = mapView === "world-tree" ? WORLD_TREE_LOCATIONS.length : locationCount;
-  // Tile images are opaque, so showing the layer after only the central eager
-  // tiles load would let incomplete regions cover the preview with black gaps.
   const tileLoading = viewport.width > 0 && visibleTiles.some((tile) => tileStatus[`${mapView}:${tile.src}`] !== "loaded");
   const tileErrors = visibleTiles.filter((tile) => tileStatus[`${mapView}:${tile.src}`] === "error");
-  const tileReady = viewport.width > 0 && visibleTiles.length > 0 && visibleTiles.every((tile) => {
-    const status = tileStatus[`${mapView}:${tile.src}`];
-    return status === "loaded";
-  });
   const retryTiles = () => {
     setTileStatus((current) => {
       const next = { ...current };
@@ -507,12 +501,13 @@ export default function MapClient({ initialCategories, locationCount, locale = "
         <div ref={stageRef} className="map-stage" onPointerDown={handlePointerDown} onPointerMove={handlePointerMove} onPointerUp={handlePointerUp} onPointerCancel={handlePointerUp} onPointerLeave={() => { setCursorCoordinate(null); setHovered(null); }} role="application" aria-label={locale === "zh" ? "互动式帕鲁地图" : "Interactive Palworld map"}>
         <div className="map-board" style={{ transform: `translate3d(${pan.x}px, ${pan.y}px, 0) scale(${zoom})` }}>
           <Image key={`preview:${mapView}:${previewFallback[mapView] ? "local" : "cdn"}`} className={`map-preview-layer map-preview-${mapView}`} src={previewFallback[mapView] ? MAP_PREVIEW_FALLBACKS[mapView] : MAP_PREVIEWS[mapView]} alt="" width={MAP_SIZE} height={MAP_SIZE} priority={mapView === "palpagos"} unoptimized onError={() => setPreviewFallback((current) => ({ ...current, [mapView]: true }))} />
-          <div key={mapView} className={`map-tile-layer${tileReady ? " is-ready" : ""}`} aria-label={mapView === "palpagos" ? text.palpagos : text.worldTree}>
+          <div key={mapView} className="map-tile-layer" aria-label={mapView === "palpagos" ? text.palpagos : text.worldTree}>
             {visibleTiles.map((tile) => {
               const isWorldTree = mapView === "world-tree";
               const tileWorldSize = isWorldTree ? MAP_SIZE / 8 : TILE_SIZE;
               const tileKey = `${mapView}:${tile.src}`;
-              return <Image key={`${tileKey}:${tileRetry}`} className={`map-tile${isWorldTree ? " map-world-tree-tile" : ""}`} src={tile.src} alt="" width={isWorldTree ? WORLD_TREE_TILE_SIZE : TILE_SIZE} height={isWorldTree ? WORLD_TREE_TILE_SIZE : TILE_SIZE} loading="eager" decoding="async" unoptimized style={{ left: tile.x * tileWorldSize, top: tile.y * tileWorldSize, width: tileWorldSize, height: tileWorldSize }} onLoad={() => setTileStatus((current) => ({ ...current, [tileKey]: "loaded" }))} onError={() => setTileStatus((current) => ({ ...current, [tileKey]: "error" }))} />;
+              const status = tileStatus[tileKey];
+              return <Image key={`${tileKey}:${tileRetry}`} className={`map-tile${isWorldTree ? " map-world-tree-tile" : ""}${status === "loaded" ? " is-loaded" : ""}`} src={tile.src} alt="" width={isWorldTree ? WORLD_TREE_TILE_SIZE : TILE_SIZE} height={isWorldTree ? WORLD_TREE_TILE_SIZE : TILE_SIZE} loading="eager" decoding="async" unoptimized style={{ left: tile.x * tileWorldSize, top: tile.y * tileWorldSize, width: tileWorldSize, height: tileWorldSize }} onLoad={() => setTileStatus((current) => ({ ...current, [tileKey]: "loaded" }))} onError={() => setTileStatus((current) => ({ ...current, [tileKey]: "error" }))} />;
             })}
           </div>
           <canvas ref={canvasRef} className="map-marker-canvas" aria-hidden="true" />
