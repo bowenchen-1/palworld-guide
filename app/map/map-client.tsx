@@ -23,12 +23,6 @@ const WORLD_TREE_TILES = Array.from({ length: 8 * 8 }, (_, index) => ({
   y: Math.floor(index / 8),
   src: assetUrl(`/map/world-tree-z3/${index % 8}/${Math.floor(index / 8)}.png`),
 }));
-const INITIAL_TILE_KEYS: Record<MapView, Set<string>> = {
-  // Keep only the central first-view tiles eager. All other tiles are loaded by
-  // the browser when they approach the viewport.
-  palpagos: new Set(["6:7", "7:7", "8:7", "6:8", "7:8", "8:8"]),
-  "world-tree": new Set(["2:3", "3:3", "4:3", "3:4", "4:4", "5:4"]),
-};
 const MAP_PREVIEWS: Record<MapView, string> = {
   palpagos: assetUrl("/map/Palpagos_Islands_Tiles_Preview.webp"),
   "world-tree": assetUrl("/map/World_Tree.png"),
@@ -451,10 +445,11 @@ export default function MapClient({ initialCategories, locationCount, locale = "
   };
   const displayedLocationCount = mapView === "world-tree" ? visibleLocations.length : filteredLocations.length;
   const displayedLocationTotal = mapView === "world-tree" ? WORLD_TREE_LOCATIONS.length : locationCount;
-  const initialTiles = visibleTiles.filter((tile) => INITIAL_TILE_KEYS[mapView].has(`${tile.x}:${tile.y}`));
-  const tileLoading = viewport.width > 0 && initialTiles.some((tile) => tileStatus[`${mapView}:${tile.src}`] !== "loaded");
-  const tileErrors = initialTiles.filter((tile) => tileStatus[`${mapView}:${tile.src}`] === "error");
-  const tileReady = viewport.width > 0 && initialTiles.length > 0 && initialTiles.every((tile) => {
+  // Tile images are opaque, so showing the layer after only the central eager
+  // tiles load would let incomplete regions cover the preview with black gaps.
+  const tileLoading = viewport.width > 0 && visibleTiles.some((tile) => tileStatus[`${mapView}:${tile.src}`] !== "loaded");
+  const tileErrors = visibleTiles.filter((tile) => tileStatus[`${mapView}:${tile.src}`] === "error");
+  const tileReady = viewport.width > 0 && visibleTiles.length > 0 && visibleTiles.every((tile) => {
     const status = tileStatus[`${mapView}:${tile.src}`];
     return status === "loaded";
   });
@@ -517,8 +512,7 @@ export default function MapClient({ initialCategories, locationCount, locale = "
               const isWorldTree = mapView === "world-tree";
               const tileWorldSize = isWorldTree ? MAP_SIZE / 8 : TILE_SIZE;
               const tileKey = `${mapView}:${tile.src}`;
-              const isInitialTile = INITIAL_TILE_KEYS[mapView].has(`${tile.x}:${tile.y}`);
-              return <Image key={`${tileKey}:${tileRetry}`} className={`map-tile${isWorldTree ? " map-world-tree-tile" : ""}`} src={tile.src} alt="" width={isWorldTree ? WORLD_TREE_TILE_SIZE : TILE_SIZE} height={isWorldTree ? WORLD_TREE_TILE_SIZE : TILE_SIZE} loading={isInitialTile ? "eager" : "lazy"} decoding="async" unoptimized style={{ left: tile.x * tileWorldSize, top: tile.y * tileWorldSize, width: tileWorldSize, height: tileWorldSize }} onLoad={() => setTileStatus((current) => ({ ...current, [tileKey]: "loaded" }))} onError={() => setTileStatus((current) => ({ ...current, [tileKey]: "error" }))} />;
+              return <Image key={`${tileKey}:${tileRetry}`} className={`map-tile${isWorldTree ? " map-world-tree-tile" : ""}`} src={tile.src} alt="" width={isWorldTree ? WORLD_TREE_TILE_SIZE : TILE_SIZE} height={isWorldTree ? WORLD_TREE_TILE_SIZE : TILE_SIZE} loading="eager" decoding="async" unoptimized style={{ left: tile.x * tileWorldSize, top: tile.y * tileWorldSize, width: tileWorldSize, height: tileWorldSize }} onLoad={() => setTileStatus((current) => ({ ...current, [tileKey]: "loaded" }))} onError={() => setTileStatus((current) => ({ ...current, [tileKey]: "error" }))} />;
             })}
           </div>
           <canvas ref={canvasRef} className="map-marker-canvas" aria-hidden="true" />
