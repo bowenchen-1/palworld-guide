@@ -2,7 +2,6 @@
   "bucket": "palworldguide-assets",
   "assetBaseUrl": "https://assets.palworldguide.net",
   "files": [
-    "public/map/Palpagos_Islands_Tiles_Preview.webp",
     "public/map/palpagos-z4/z4x0y0.webp",
     "public/map/palpagos-z4/z4x0y1.webp",
     "public/map/palpagos-z4/z4x0y10.webp",

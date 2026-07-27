@@ -29,12 +29,12 @@ const INITIAL_TILE_KEYS: Record<MapView, Set<string>> = {
   palpagos: new Set(["6:7", "7:7", "8:7", "6:8", "7:8", "8:8"]),
   "world-tree": new Set(["2:3", "3:3", "4:3", "3:4", "4:4", "5:4"]),
 };
-const MAP_PREVIEWS: Record<MapView, string> = {
-  palpagos: assetUrl("/map/Palpagos_Islands_Tiles_Preview.webp"),
+const MAP_PREVIEWS: Record<MapView, string | null> = {
+  palpagos: null,
   "world-tree": assetUrl("/map/World_Tree.png"),
 };
-const MAP_PREVIEW_FALLBACKS: Record<MapView, string> = {
-  palpagos: "/map/Palpagos_Islands_Tiles_Preview.webp",
+const MAP_PREVIEW_FALLBACKS: Record<MapView, string | null> = {
+  palpagos: null,
   "world-tree": "/map/World_Tree.png",
 };
 const CATEGORY_GROUPS = [
@@ -454,13 +454,12 @@ export default function MapClient({ initialCategories, locationCount, locale = "
   };
   const displayedLocationCount = mapView === "world-tree" ? visibleLocations.length : filteredLocations.length;
   const displayedLocationTotal = mapView === "world-tree" ? WORLD_TREE_LOCATIONS.length : locationCount;
-  // The complete preview is the stable fit-to-viewport layer. Only enable
-  // tiles once the user has zoomed beyond the initial overview; this prevents
-  // an incomplete tile layer from covering the lower half of the preview.
+  // Palpagos uses the tile source at every zoom level. World Tree keeps its
+  // preview until the user zooms beyond the initial overview.
   const fitZoom = viewport.width > 0
     ? Math.min(MAP_MAX_ZOOM, Math.max(MAP_MIN_ZOOM, Math.min(viewport.width / MAP_SIZE, viewport.height / MAP_SIZE)))
     : MAP_MIN_ZOOM;
-  const showTiles = viewport.width > 0 && zoom > fitZoom * 1.08;
+  const showTiles = viewport.width > 0 && (mapView === "palpagos" || zoom > fitZoom * 1.08);
   const initialTiles = visibleTiles.filter((tile) => INITIAL_TILE_KEYS[mapView].has(`${tile.x}:${tile.y}`));
   const tileLoading = viewport.width > 0 && initialTiles.some((tile) => tileStatus[`${mapView}:${tile.src}`] !== "loaded");
   const tileErrors = initialTiles.filter((tile) => tileStatus[`${mapView}:${tile.src}`] === "error");
@@ -517,7 +516,10 @@ export default function MapClient({ initialCategories, locationCount, locale = "
       </aside>
         <div ref={stageRef} className="map-stage" onPointerDown={handlePointerDown} onPointerMove={handlePointerMove} onPointerUp={handlePointerUp} onPointerCancel={handlePointerUp} onPointerLeave={() => { setCursorCoordinate(null); setHovered(null); }} role="application" aria-label={locale === "zh" ? "互动式帕鲁地图" : "Interactive Palworld map"}>
         <div className="map-board" style={{ transform: `translate(${pan.x}px, ${pan.y}px) scale(${zoom})` }}>
-          <Image key={`preview:${mapView}:${previewFallback[mapView] ? "local" : "cdn"}`} className={`map-preview-layer map-preview-${mapView}`} src={previewFallback[mapView] ? MAP_PREVIEW_FALLBACKS[mapView] : MAP_PREVIEWS[mapView]} alt="" width={MAP_SIZE} height={MAP_SIZE} priority={mapView === "palpagos"} unoptimized onError={() => setPreviewFallback((current) => ({ ...current, [mapView]: true }))} />
+          {(() => {
+            const previewSrc = previewFallback[mapView] ? MAP_PREVIEW_FALLBACKS[mapView] : MAP_PREVIEWS[mapView];
+            return previewSrc ? <Image key={`preview:${mapView}:${previewFallback[mapView] ? "local" : "cdn"}`} className={`map-preview-layer map-preview-${mapView}`} src={previewSrc} alt="" width={MAP_SIZE} height={MAP_SIZE} priority={mapView === "world-tree"} unoptimized onError={() => setPreviewFallback((current) => ({ ...current, [mapView]: true }))} /> : null;
+          })()}
           <div key={mapView} className={`map-tile-layer${showTiles ? " is-visible" : ""}`} aria-label={mapView === "palpagos" ? text.palpagos : text.worldTree}>
             {visibleTiles.map((tile) => {
               const isWorldTree = mapView === "world-tree";

@@ -4162,19 +4162,6 @@
       "headStatus": "verified",
       "etag": "\"1165e162d45b7ca68fc6449b24ae7321\"",
       "verifiedAt": "2026-07-27T02:40:24.577Z"
-    },
-    {
-      "sourcePath": "public/map/Palpagos_Islands_Tiles_Preview.webp",
-      "objectKey": "map/Palpagos_Islands_Tiles_Preview.webp",
-      "size": 115498,
-      "contentType": "image/webp",
-      "cacheControl": "public, max-age=31536000, immutable",
-      "sha256": "c5d5b717d2a76c71db3a2c589180722af7681f261670560f2d224152092d4583",
-      "publicUrl": "https://assets.palworldguide.net/map/Palpagos_Islands_Tiles_Preview.webp",
-      "uploadStatus": "uploaded",
-      "headStatus": "verified",
-      "etag": "\"116e35cc9e5b5675d305fdae0f1113fa\"",
-      "verifiedAt": "2026-07-27T02:39:16.287Z"
     }
   ]
 }
