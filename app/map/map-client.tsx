@@ -264,7 +264,10 @@ export default function MapClient({ initialCategories, locationCount, locale = "
     if (!canvas) return;
     const context = canvas.getContext("2d");
     if (!context) return;
-    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    // The marker board is already 8192 CSS pixels wide. A 2x backing store
+    // would create a 16384px canvas, which is beyond the safe compositor
+    // texture size on some browsers and can clip the lower half after zooming.
+    const dpr = 1;
     if (canvas.width !== MAP_SIZE * dpr || canvas.height !== MAP_SIZE * dpr) { canvas.width = MAP_SIZE * dpr; canvas.height = MAP_SIZE * dpr; }
     context.setTransform(dpr, 0, 0, dpr, 0, 0);
     context.clearRect(0, 0, MAP_SIZE, MAP_SIZE);
@@ -499,7 +502,7 @@ export default function MapClient({ initialCategories, locationCount, locale = "
         </div>
       </aside>
         <div ref={stageRef} className="map-stage" onPointerDown={handlePointerDown} onPointerMove={handlePointerMove} onPointerUp={handlePointerUp} onPointerCancel={handlePointerUp} onPointerLeave={() => { setCursorCoordinate(null); setHovered(null); }} role="application" aria-label={locale === "zh" ? "互动式帕鲁地图" : "Interactive Palworld map"}>
-        <div className="map-board" style={{ transform: `translate3d(${pan.x}px, ${pan.y}px, 0) scale(${zoom})` }}>
+        <div className="map-board" style={{ transform: `translate(${pan.x}px, ${pan.y}px) scale(${zoom})` }}>
           <Image key={`preview:${mapView}:${previewFallback[mapView] ? "local" : "cdn"}`} className={`map-preview-layer map-preview-${mapView}`} src={previewFallback[mapView] ? MAP_PREVIEW_FALLBACKS[mapView] : MAP_PREVIEWS[mapView]} alt="" width={MAP_SIZE} height={MAP_SIZE} priority={mapView === "palpagos"} unoptimized onError={() => setPreviewFallback((current) => ({ ...current, [mapView]: true }))} />
           <div key={mapView} className="map-tile-layer" aria-label={mapView === "palpagos" ? text.palpagos : text.worldTree}>
             {visibleTiles.map((tile) => {
