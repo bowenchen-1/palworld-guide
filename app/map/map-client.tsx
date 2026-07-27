@@ -24,11 +24,11 @@ const WORLD_TREE_TILES = Array.from({ length: 8 * 8 }, (_, index) => ({
   src: assetUrl(`/map/world-tree-z3/${index % 8}/${Math.floor(index / 8)}.png`),
 }));
 const MAP_PREVIEWS: Record<MapView, string> = {
-  palpagos: assetUrl("/map/Palpagos_Islands_Tiles_Preview.webp"),
+  palpagos: assetUrl("/map/Palpagos_Islands.png"),
   "world-tree": assetUrl("/map/World_Tree.png"),
 };
 const MAP_PREVIEW_FALLBACKS: Record<MapView, string> = {
-  palpagos: "/map/Palpagos_Islands_Tiles_Preview.webp",
+  palpagos: "/map/Palpagos_Islands.png",
   "world-tree": "/map/World_Tree.png",
 };
 const CATEGORY_GROUPS = [
