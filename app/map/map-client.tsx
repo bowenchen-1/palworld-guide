@@ -33,6 +33,10 @@ const MAP_PREVIEWS: Record<MapView, string> = {
   palpagos: assetUrl("/map/Palpagos_Islands_Tiles_Preview.webp"),
   "world-tree": assetUrl("/map/World_Tree.png"),
 };
+const MAP_PREVIEW_FALLBACKS: Record<MapView, string> = {
+  palpagos: "/map/Palpagos_Islands_Tiles_Preview.webp",
+  "world-tree": "/map/World_Tree.png",
+};
 const CATEGORY_GROUPS = [
   { name: "Locations", categories: ["Fast Travel", "Dungeons", "Towers", "Settlements", "Cave Entrances", "Region Labels", "Recommended Base Spots", "Respawn Points", "Skyland Warp Altars"] },
   { name: "Pals", categories: ["Alpha Pals", "Sakura Eggs", "Desert Eggs", "Frozen Eggs", "Grass Eggs", "Feybreak Eggs", "Volcano Eggs"] },
@@ -116,6 +120,7 @@ export default function MapClient({ initialCategories, locationCount, locale = "
   const [viewport, setViewport] = useState({ width: 0, height: 0 });
   const [tileStatus, setTileStatus] = useState<Record<string, "loaded" | "error">>({});
   const [tileRetry, setTileRetry] = useState(0);
+  const [previewFallback, setPreviewFallback] = useState<Record<MapView, boolean>>({ palpagos: false, "world-tree": false });
   const zoomRef = useRef(zoom);
   const panRef = useRef(pan);
   const [loading, setLoading] = useState(true);
@@ -506,7 +511,7 @@ export default function MapClient({ initialCategories, locationCount, locale = "
       </aside>
         <div ref={stageRef} className="map-stage" onPointerDown={handlePointerDown} onPointerMove={handlePointerMove} onPointerUp={handlePointerUp} onPointerCancel={handlePointerUp} onPointerLeave={() => { setCursorCoordinate(null); setHovered(null); }} role="application" aria-label={locale === "zh" ? "互动式帕鲁地图" : "Interactive Palworld map"}>
         <div className="map-board" style={{ transform: `translate3d(${pan.x}px, ${pan.y}px, 0) scale(${zoom})` }}>
-          <Image key={`preview:${mapView}`} className={`map-preview-layer map-preview-${mapView}`} src={MAP_PREVIEWS[mapView]} alt="" width={MAP_SIZE} height={MAP_SIZE} priority={mapView === "palpagos"} unoptimized />
+          <Image key={`preview:${mapView}:${previewFallback[mapView] ? "local" : "cdn"}`} className={`map-preview-layer map-preview-${mapView}`} src={previewFallback[mapView] ? MAP_PREVIEW_FALLBACKS[mapView] : MAP_PREVIEWS[mapView]} alt="" width={MAP_SIZE} height={MAP_SIZE} priority={mapView === "palpagos"} unoptimized onError={() => setPreviewFallback((current) => ({ ...current, [mapView]: true }))} />
           <div key={mapView} className={`map-tile-layer${tileReady ? " is-ready" : ""}`} aria-label={mapView === "palpagos" ? text.palpagos : text.worldTree}>
             {visibleTiles.map((tile) => {
               const isWorldTree = mapView === "world-tree";
