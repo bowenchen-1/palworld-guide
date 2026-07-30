@@ -89,6 +89,24 @@ type Point = { x: number; y: number };
 type LevelRange = "all" | "1-20" | "21-40" | "41-60" | "61-80";
 type DisplayFilterItem = { name: string; names: string[]; icon: string; count: number };
 
+const LEVEL_RANGE_BOUNDS: Record<Exclude<LevelRange, "all">, [number, number]> = {
+  "1-20": [1, 20],
+  "21-40": [21, 40],
+  "41-60": [41, 60],
+  "61-80": [61, 80],
+};
+
+function locationMatchesLevel(location: MapLocation, levelRange: LevelRange) {
+  if (levelRange === "all") return true;
+  const [minimum, maximum] = LEVEL_RANGE_BOUNDS[levelRange];
+  const source = `${location.level ?? ""} ${location.name} ${location.description ?? ""}`;
+  const levels = [...source.matchAll(/(?:lv\.?\s*)?(\d+)/gi)].map((match) => Number(match[1])).filter(Number.isFinite);
+  if (!levels.length) return false;
+  const locationMinimum = Math.min(...levels);
+  const locationMaximum = Math.max(...levels);
+  return locationMinimum <= maximum && locationMaximum >= minimum;
+}
+
 function readableCount(value: number, locale: MapLocale) {
   return new Intl.NumberFormat(locale === "zh" ? "zh-CN" : "en-US").format(value);
 }
@@ -228,10 +246,7 @@ export default function MapClient({ initialCategories, locationCount, locale = "
     const labels = mapText(locale);
     const locations = mapView === "world-tree" ? WORLD_TREE_LOCATIONS : data.locations;
     return locations.filter((location) => {
-      const locationLevel = Number(location.level);
-      const matchesLevel = levelRange === "all"
-        || (Number.isFinite(locationLevel) && ((levelRange === "1-20" && locationLevel <= 20) || (levelRange === "21-40" && locationLevel >= 21 && locationLevel <= 40) || (levelRange === "41-60" && locationLevel >= 41 && locationLevel <= 60) || (levelRange === "61-80" && locationLevel >= 61 && locationLevel <= 80)));
-      return activeCategories.has(location.category) && matchesLevel && (!term || `${getLocationName(location)} ${location.name} ${location.description ?? ""} ${location.category} ${labels.category(location.category)}`.toLowerCase().includes(term));
+      return activeCategories.has(location.category) && locationMatchesLevel(location, levelRange) && (!term || `${getLocationName(location)} ${location.name} ${location.description ?? ""} ${location.category} ${labels.category(location.category)}`.toLowerCase().includes(term));
     });
   }, [activeCategories, data.locations, getLocationName, levelRange, locale, mapView, query]);
 

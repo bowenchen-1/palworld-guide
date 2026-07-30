@@ -13,7 +13,10 @@ export const metadata: Metadata = {
   title,
   description,
   robots: { index: true, follow: true },
-  alternates: { canonical: absoluteUrl("/map") },
+  alternates: {
+    canonical: absoluteUrl("/map"),
+    languages: { en: absoluteUrl("/map"), zh: absoluteUrl("/zh/map"), "x-default": absoluteUrl("/map") },
+  },
   openGraph: {
     title,
     description,

@@ -5,7 +5,7 @@ import { PALDEX_PAGE_SIZE } from "./paldex/paldex-config";
 import { siteUrl } from "./site-config";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date("2026-07-14T00:00:00.000Z");
+  const lastModified = new Date("2026-07-29T00:00:00.000Z");
   const paldexPageCount = Math.ceil(catalogPals.length / PALDEX_PAGE_SIZE);
 
   const corePages: MetadataRoute.Sitemap = [
