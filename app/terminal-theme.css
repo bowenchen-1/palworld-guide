@@ -605,6 +605,8 @@ body::before {
 .profile-related>a strong { font-size:14px; }
 .profile-related>a small { font-size:11px; }
 .profile-stat-strip small { color:#b4cdcc; }
+.profile-stat-strip-details { margin-top:10px; }
+.profile-stat-strip-details strong { font-size:18px; }
 .profile-work-grid strong { color:var(--terminal-copy); }
 .profile-work-grid small { color:#b4cdcc; }
 .profile-work-grid b { background:rgba(57,208,197,.14); color:var(--terminal-mint); }
