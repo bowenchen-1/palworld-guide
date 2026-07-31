@@ -615,6 +615,10 @@ body::before {
 .profile-partner-skill-card .partner-skill-icon { width:52px; height:52px; border-radius:14px; background:rgba(57,208,197,.1); }
 .profile-partner-skill-card strong { display:block; color:var(--terminal-copy); font-size:20px; }
 .profile-partner-skill-card p { margin-top:6px; color:#b4cdcc; font-size:14px; line-height:1.6; }
+.profile-lucky-lamball { border:1px solid var(--terminal-border); border-radius:18px; background:linear-gradient(135deg,rgba(57,208,197,.09),var(--terminal-panel)); padding:22px; }
+.profile-lucky-lamball h2 { margin-top:10px; }
+.profile-lucky-lamball p:not(.database-eyebrow) { color:var(--terminal-muted); line-height:1.7; }
+.profile-lucky-lamball strong { color:var(--terminal-copy); }
 @media(max-width:760px) {
   .profile-partner-skill-card { align-items:flex-start; padding:16px; }
   .profile-partner-skill-card strong { font-size:18px; }
@@ -937,8 +941,9 @@ body::before {
 
 .profile-hero { margin-top: 16px; margin-bottom: 20px; gap: 30px; padding: clamp(26px,3.6vw,44px); }
 .profile-hero h1 { font-size: clamp(2.75rem,4.5vw,4.75rem); line-height: .9; }
-.profile-hero-copy>p:last-of-type { margin-top: 12px; font-size: 14px; line-height: 1.6; }
+.profile-hero-copy>p:last-of-type { margin-top: 12px; font-size: 18px; line-height: 1.6; }
 .profile-hero-copy>div { margin-top: 18px; }
+.profile-hero-copy>div a { font-size: 15px; padding: 14px 20px; }
 .profile-hero>.pal-mark { width: 160px; height: 160px; border-radius: 42px; }
 .profile-content { margin-top: 34px; }
 
