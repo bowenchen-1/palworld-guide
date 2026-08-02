@@ -191,3 +191,6 @@
   .home-calculator-top .home-inline-pal-picker { padding: 10px; }
   .home-calculator-top .home-inline-pal-picker header h2 { font-size: 20px; }
 }
+
+.tooldirs-badge { display: flex; justify-content: center; margin: 20px auto 0; width: fit-content; }
+.tooldirs-badge img { display: block; width: 200px; height: 54px; }
