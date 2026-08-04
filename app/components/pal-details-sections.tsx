@@ -52,12 +52,5 @@ export default function PalDetailsSections({ detail, locale = "en", displayName 
       <StatGrid values={movement} locale={locale} />
       {detail.level80 && Object.keys(detail.level80).length > 0 && <><h3>{isZh ? "等级 80 属性" : "Level 80 stats"}</h3><StatGrid values={detail.level80} locale={locale} /></>}
     </section>
-    <section className="profile-detail-table-section">
-      <p className="database-eyebrow">{isZh ? "牧场与技能" : "Ranch and variants"}</p>
-      <h2>{isZh ? `${headingName} 额外资料` : `${headingName} additional data`}</h2>
-      {detail.ranch.length > 0 && <div className="profile-detail-table-wrap"><h3>{isZh ? "牧场产物" : "Ranch output"}</h3><table className="profile-detail-table"><thead><tr><th>{isZh ? "等级" : "Level"}</th><th>{isZh ? "产物" : "Item and quantity"}</th></tr></thead><tbody>{detail.ranch.map((row, index) => <tr key={`${row.join("-")}-${index}`}><td>{row[0] || "—"}</td><td>{row[1] || "—"}</td></tr>)}</tbody></table></div>}
-      {detail.passiveSkills.length > 0 && <div className="profile-detail-chip-list"><h3>{isZh ? "被动技能" : "Passive skills"}</h3>{detail.passiveSkills.map((skill) => <span key={skill}>{skill}</span>)}</div>}
-      {detail.spawner.length > 0 && <div className="profile-detail-table-wrap"><h3>{isZh ? "生成点" : "Spawner entries"}</h3><table className="profile-detail-table"><thead><tr><th>{isZh ? "等级" : "Level"}</th><th>{isZh ? "区域" : "Location"}</th><th>{isZh ? "来源" : "Source"}</th></tr></thead><tbody>{detail.spawner.map((row, index) => <tr key={`${row.join("-")}-${index}`}><td>{row[1] || "—"}</td><td>{row[2] || "—"}</td><td>{row.slice(3).join(" · ") || row[0] || "—"}</td></tr>)}</tbody></table></div>}
-    </section>
   </>;
 }
