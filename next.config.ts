@@ -14,6 +14,10 @@ const nextConfig: NextConfig = {
         source: "/map/world-tree-z3/:path*",
         headers: [{ key: "Cache-Control", value: "public, max-age=31536000, immutable" }],
       },
+      {
+        source: "/_next/static/:path*",
+        headers: [{ key: "X-Robots-Tag", value: "noindex" }],
+      },
     ];
   },
   images: {
