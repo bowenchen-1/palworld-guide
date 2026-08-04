@@ -1,4 +1,8 @@
 import palRecords from "../../public/data/pals.json";
+import activeSkillRecords from "../../public/data/pal-active-skills.json";
+import palIntroRecords from "../../public/data/pal-intros-en.json";
+import palDetailRecords from "../../public/data/pal-details.json";
+import palDescriptionRecords from "../../public/data/pal-descriptions-en.json";
 
 export type WorkKey =
   | "emitflame"
@@ -37,9 +41,65 @@ export type PalData = {
   newType: "new-pal" | "new-variant" | null;
 };
 
+export type PalActiveSkill = {
+  name: string;
+  nameZh: string;
+  type: string;
+  level: string;
+  power: number;
+  cooldown: string;
+  descriptionZh: string;
+  sourceUrl: string;
+};
+
+export type PalActiveSkills = {
+  palSlug: string;
+  name: string;
+  nameZh: string;
+  sourceUrl: string;
+  skills: PalActiveSkill[];
+};
+
+export type PalIntro = {
+  palSlug: string;
+  name: string;
+  intro: string;
+};
+
+export type PalDetailStat = { value: number | null; display: string; range: string | null };
+export type PalDetail = {
+  palSlug: string;
+  name: string;
+  sourceUrl: string;
+  size: string | null;
+  captureRate: number | null;
+  maleProbability: number | null;
+  egg: string | null;
+  code: string | null;
+  stats: Record<string, PalDetailStat>;
+  movement: Record<string, PalDetailStat>;
+  level80: Record<string, PalDetailStat>;
+  summary: string | null;
+  passiveSkills: string[];
+  activeSkills: Array<{ name: string; level: number | null; power: number | null; cooldown: number | null; description: string }>;
+  ranch: string[][];
+  spawner: string[][];
+  tribes: string[];
+};
+
+export type PalDescription = { palSlug: string; description: string };
+
 export type BreedingData = Record<string, Record<string, string>>;
 
 export const pals = palRecords as PalData[];
+export const palActiveSkills = activeSkillRecords as PalActiveSkills[];
+const activeSkillsBySlug = new Map(palActiveSkills.map((record) => [record.palSlug, record]));
+export const palIntros = palIntroRecords as PalIntro[];
+const palIntrosBySlug = new Map(palIntros.map((record) => [record.palSlug, record]));
+export const palDetails = palDetailRecords as PalDetail[];
+const palDetailsBySlug = new Map(palDetails.map((record) => [record.palSlug, record]));
+export const palDescriptions = palDescriptionRecords as PalDescription[];
+const palDescriptionsBySlug = new Map(palDescriptions.map((record) => [record.palSlug, record]));
 export const excludedCatalogPalIds = new Set(["12.1"]);
 export const catalogPals = pals.filter((pal) => !excludedCatalogPalIds.has(pal.id));
 export const playablePals = catalogPals.filter((pal) => pal.kind === "pal");
@@ -105,4 +165,20 @@ export function palInitials(name: string) {
 
 export function findPal(slug: string) {
   return catalogPals.find((pal) => pal.slug === slug);
+}
+
+export function findPalActiveSkills(slug: string) {
+  return activeSkillsBySlug.get(slug);
+}
+
+export function findPalIntro(slug: string) {
+  return palIntrosBySlug.get(slug);
+}
+
+export function findPalDetail(slug: string) {
+  return palDetailsBySlug.get(slug);
+}
+
+export function findPalDescription(slug: string) {
+  return palDescriptionsBySlug.get(slug);
 }

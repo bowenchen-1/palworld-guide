@@ -1,0 +1,1497 @@
+[
+  {
+    "palSlug": "lamball",
+    "name": "Lamball",
+    "intro": "It's bound to fall and roll whenever it walks on a ramp. Moreover, they will be unable to move due to seeing stars, making them very easy to be regarded as prey, the bottom of the food chain."
+  },
+  {
+    "palSlug": "cattiva",
+    "name": "Cattiva",
+    "intro": "It pretends to be majestic, but is actually timid and weak. Being looked down upon by a Cattiva is, in a sense, a great shame."
+  },
+  {
+    "palSlug": "chikipi",
+    "name": "Chikipi",
+    "intro": "It's very weak, but very delicious. Like Lamball, they are both extremely weak Pal. But no matter how much we hunt these Pal, they will still appear from somewhere."
+  },
+  {
+    "palSlug": "lifmunk",
+    "name": "Lifmunk",
+    "intro": "Possess the intelligence of a child between 5 and 7 years old. Although great as companions, there are many records of individuals killing their masters after learning to use weapons."
+  },
+  {
+    "palSlug": "fuack",
+    "name": "Fuack",
+    "intro": "The water it creates can form waves anywhere. In an emergency, you can use body surfing to move around. But often due to excessive momentum, tragedies such as hitting a wall and dying occur."
+  },
+  {
+    "palSlug": "fuack-ignis",
+    "name": "Fuack Ignis",
+    "intro": "The coefficient of friction on the abdomen is very high and sparks are generated when the body is surfing. Often due to excessive momentum, it turns into a ball of fire."
+  },
+  {
+    "palSlug": "vixy",
+    "name": "Vixy",
+    "intro": "Paros icon. Anyone who dares to bully Tamamo Fox will become a public enemy in the blink of an eye."
+  },
+  {
+    "palSlug": "celaray",
+    "name": "Celaray",
+    "intro": "It will ride on the wind and let it fly in all directions. As long as you find the right person during the journey, your journey will end."
+  },
+  {
+    "palSlug": "celaray-lux",
+    "name": "Celaray Lux",
+    "intro": "The bright appearance helps it find the right person. Since ancient times, there have been electrocution accidents due to Remiel. Today on the island, yellow and black textures are considered dangerous colors."
+  },
+  {
+    "palSlug": "cremis",
+    "name": "Cremis",
+    "intro": "Compared with Lamball, this kind of Pal has better hair quality and its personality is more suitable as a domestic animal. But historically this kind of Pal has always been treated as a pet. After all, cuteness is justice."
+  },
+  {
+    "palSlug": "croajiro",
+    "name": "Croajiro",
+    "intro": "Individuals within the group who make serious mistakes are forced to commit suicide. If you pierce your singing sac that has been inflated to the limit with a branch, you will fly into the distance of the atmosphere like a deflated balloon, and your soul will return to heaven."
+  },
+  {
+    "palSlug": "croajiro-noct",
+    "name": "Croajiro Noct",
+    "intro": "Martial arts frogs who abandoned their honor gathered together to form a branch group. No matter how despicable means are used, the target must be hunted down. If you encounter a group of Ji Dao frogs in the middle of the night, this is where your soul will go to heaven."
+  },
+  {
+    "palSlug": "herbil",
+    "name": "Herbil",
+    "intro": "In Da Shuni's view, broken things only need to be beaten and they will be cured. And its power control is perfect for humans. As long as it is beaten once, the stopped beating heart can be started smoothly."
+  },
+  {
+    "palSlug": "teafant",
+    "name": "Teafant",
+    "intro": "Its organ, considered a snout, spurts out large amounts of water. Although some people pointed out that it was just nasal mucus, researchers still had a heated discussion about it."
+  },
+  {
+    "palSlug": "gumoss",
+    "name": "Gumoss",
+    "intro": "With a body like tree sap, it is a very incredible Pal. If you lose the new shoots on your head, they will gradually wither. Eventually it will end in complete decay."
+  },
+  {
+    "palSlug": "pupperai",
+    "name": "Pupperai",
+    "intro": "They stared at each other closely and then drew their swords and dodged. This was Somei Maruma's territorial struggle. Speaking of which, it is best not to train the bred individual to \"wait\" for the command, as it will be unable to tolerate the instinctive behavior of drawing the knife after receiving the \"ok\" command."
+  },
+  {
+    "palSlug": "clovee",
+    "name": "Clovee",
+    "intro": "There used to be individuals with more than three leaves on their foreheads, but because they were regarded as a symbol of luck, individuals with more leaves were indiscriminately hunted, and eventually the entire race began to evolve towards fewer leaves."
+  },
+  {
+    "palSlug": "jolthog",
+    "name": "Jolthog",
+    "intro": "It releases the stored electricity upon impact. Its voltage exceeds 10 million volts. If you throw it out, its power is much more dangerous than ordinary heavy artillery shells."
+  },
+  {
+    "palSlug": "jolthog-cryst",
+    "name": "Jolthog Cryst",
+    "intro": "It releases stored cold air upon impact. It emits cold air in a radial pattern that freezes the atmosphere. Those who attack it will be shot through the body."
+  },
+  {
+    "palSlug": "depresso",
+    "name": "Depresso",
+    "intro": "It has fierce eyes and few friends, but it is actually very kind-hearted. It has been seen sharing food with stray Tamamo foxes."
+  },
+  {
+    "palSlug": "pengullet",
+    "name": "Pengullet",
+    "intro": "Its wings have completely degraded and it is unable to fly. But the yearning for the sky is engraved in the genes. So it tried its best to fly again."
+  },
+  {
+    "palSlug": "pengullet-lux",
+    "name": "Pengullet Lux",
+    "intro": "Its wings have completely degraded and it is unable to fly. The yearning for the sky gradually turned into jealousy. In order to shoot down the flying guys in the sky, I got the power of thunder and lightning!"
+  },
+  {
+    "palSlug": "penking",
+    "name": "Penking",
+    "intro": "In fact, it is a species that has nothing to do with Keimaru. But because he can gain popularity by doing nothing, he tries his best to show a arrogant attitude."
+  },
+  {
+    "palSlug": "penking-lux",
+    "name": "Penking Lux",
+    "intro": "In order to hunt in the water, he gained the power of thunder and lightning and changed his body color. Although he lost the following of Keimaru and others because of this. But who would have thought that now he has a younger brother named Shan Wan Wan."
+  },
+  {
+    "palSlug": "hoocrates",
+    "name": "Hoocrates",
+    "intro": "This type of Pal often gets lost in thought and suffers from insomnia due to overthinking. \"I think, therefore I am.\""
+  },
+  {
+    "palSlug": "melpaca",
+    "name": "Melpaca",
+    "intro": "Don't let its furry appearance fool you. If you were hit by a super-speed kick from its long legs, your entire body would fly to the other side of the earth."
+  },
+  {
+    "palSlug": "kingpaca",
+    "name": "Kingpaca",
+    "intro": "He leads the Merpas. The duel between King Melpaca will bet on the dominance of the clan. The lone individual is the loser."
+  },
+  {
+    "palSlug": "kingpaca-cryst",
+    "name": "Kingpaca Cryst",
+    "intro": "This kind of Pal has a cold personality and is not good at expressing emotions. This lonely individual has no value to Melpaca, which is simply a tragedy."
+  },
+  {
+    "palSlug": "daedream",
+    "name": "Daedream",
+    "intro": "It can make the person you like fall into a deep sleep and make the other person have happy dreams forever. Will not wake up until death comes."
+  },
+  {
+    "palSlug": "tanzee",
+    "name": "Tanzee",
+    "intro": "In ancient times, this kind of Pal would use slender objects such as branches as weapons. But after they came into frequent contact with humans, they stopped using these items. Because they discovered \"guns\" that were equally slender but more efficient."
+  },
+  {
+    "palSlug": "tanzee-ignis",
+    "name": "Tanzee Ignis",
+    "intro": "The palm part has evolved to be able to hold red-hot objects without getting burned. If you run out of bullets, you might be able to hold the hot barrel of the gun and then swing it up to hit someone."
+  },
+  {
+    "palSlug": "nox",
+    "name": "Nox",
+    "intro": "If you find Lunati's fur on the road at night, it is best not to pick it up, but to go back the same way. Because that's a one-way ticket to endless darkness."
+  },
+  {
+    "palSlug": "flambelle",
+    "name": "Flambelle",
+    "intro": "This kind of Pal cries not with tears but with lava. And this magma will be absorbed by the body, making its body hotter and hotter. In other words, the more tears that are shed, the stronger it becomes."
+  },
+  {
+    "palSlug": "rooby",
+    "name": "Rooby",
+    "intro": "Wild fire deer never get sick, which is quite surprising. It is said that the secret of this kind of Pal's health is to eat a piece of charcoal made from branches every day."
+  },
+  {
+    "palSlug": "mau",
+    "name": "Mau",
+    "intro": "The hardened tissue at its tail will not deteriorate even after being cut off. People are superstitious that its tail can attract wealth, resulting in the death of many Meowths."
+  },
+  {
+    "palSlug": "mau-cryst",
+    "name": "Mau Cryst",
+    "intro": "The crystals on its tail are very beautiful, but they disintegrate when it dies. People have a superstitious belief that raising a large number of them can bring fortune, so Bingsette is usually taken good care of."
+  },
+  {
+    "palSlug": "rushoar",
+    "name": "Rushoar",
+    "intro": "It is very bellicose and will start a fight before understanding the power gap between the two sides. Although it is petite, it possesses amazing charging power and can even deflect huge rocks."
+  },
+  {
+    "palSlug": "foxparks",
+    "name": "Foxparks",
+    "intro": "When it was born, it was unable to control fire well, and would accidentally spit out flames at every turn, causing it to choke itself. Tinder fox sneezes can cause forest fires."
+  },
+  {
+    "palSlug": "foxparks-cryst",
+    "name": "Foxparks Cryst",
+    "intro": "When it was born, it could not control the air-conditioning well and would accidentally spray out the air-conditioning, causing it to choke itself. When you have a cold, the mucus in your nose will freeze, causing difficulty in breathing and feeling helpless."
+  },
+  {
+    "palSlug": "killamari",
+    "name": "Killamari",
+    "intro": "It bites the enemy's neck and sucks the enemy's body dry. Pal mummies are extremely rare, and they are almost always victims of the Squid."
+  },
+  {
+    "palSlug": "killamari-primo",
+    "name": "Killamari Primo",
+    "intro": "It bites the enemy's neck and drains the enemy's blood. If soul-eating squids of the same species bite each other, both sides will want to suck the opponent dry, and they will not be able to separate until one of them is drained dry."
+  },
+  {
+    "palSlug": "fuddler",
+    "name": "Fuddler",
+    "intro": "Its huge claws are as hard as diamonds. Because sharpening its claws requires a lot of energy, sometimes a day has passed by the time it finishes sharpening its claws."
+  },
+  {
+    "palSlug": "eikthyrdeer",
+    "name": "Eikthyrdeer",
+    "intro": "The individual with the most powerful horns will become the leader of this kind of Pal. When the horn is broken, the heart will be greatly shocked. At this time, it will quietly leave the group and end its life in a place far away from human beings."
+  },
+  {
+    "palSlug": "eikthyrdeer-terra",
+    "name": "Eikthyrdeer Terra",
+    "intro": "The individual with the strongest horns becomes the leader of this Pal. Once it loses its horns, its leadership status will cease to exist. At this time, it can only leave under the eyes of its companions and quietly return to the dust."
+  },
+  {
+    "palSlug": "direhowl",
+    "name": "Direhowl",
+    "intro": "The relationship between hunting wolves and humans has long faded, but the past hunting model with humans formed their current hunting system."
+  },
+  {
+    "palSlug": "caprity",
+    "name": "Caprity",
+    "intro": "As long as it is not hungry, the grass on its back will bear wild berries. If it meets the person it likes, it will ask the other person to eat its wild berries, capture the other person's stomach, and a new partner will be born."
+  },
+  {
+    "palSlug": "caprity-noct",
+    "name": "Caprity Noct",
+    "intro": "The bush on its back produces fruit that changes flavor depending on its mental state. The more harsh the environment, the sweeter the taste. Therefore, most of the Yumu sheep raised have never known love."
+  },
+  {
+    "palSlug": "swee",
+    "name": "Swee",
+    "intro": "A Pal that crawls on the ground and feeds on tiny organic matter. The ingested non-nutritive substances will be excreted from the body after a period of time. If you use it as a mop for cleaning, you can create a win-win relationship."
+  },
+  {
+    "palSlug": "sweepa",
+    "name": "Sweepa",
+    "intro": "Because it has quite a lot of body hair, there will be a lot of dusters hiding in its body hair during hibernation. The previous record was as high as 101."
+  },
+  {
+    "palSlug": "turtacle",
+    "name": "Turtacle",
+    "intro": "In order to protect its fragile body, it acquired a hard carapace. As a price, it completely gave up its body's defense, and now it will even fall into fainting due to being tickled."
+  },
+  {
+    "palSlug": "turtacle-terra",
+    "name": "Turtacle Terra",
+    "intro": "In order to protect its fragile body, it acquired a hard carapace. Most of the tactile nerves are concentrated on the hands and carapace, so even if you sneak a peek at its body, it won't be discovered."
+  },
+  {
+    "palSlug": "hangyu",
+    "name": "Hangyu",
+    "intro": "Its huge arms can tear even iron apart. In the past, there were extremely cruel executions in which people who had committed serious crimes were tied up in the town square and had their flesh ripped off by the hanging spirit."
+  },
+  {
+    "palSlug": "hangyu-cryst",
+    "name": "Hangyu Cryst",
+    "intro": "Its huge arms can tear even ice bricks apart. In the past, people who had committed serious crimes were tied up in the town square and had their hair ripped off by the ice-bound spirits. This was an extremely cruel warning punishment."
+  },
+  {
+    "palSlug": "woolipop",
+    "name": "Woolipop",
+    "intro": "Its whole body is 18,000 times sweeter than sugar. If a carnivorous Pal is attracted by its smell and takes a bite, it will be so sweet that it will roll its eyes and pass out."
+  },
+  {
+    "palSlug": "woolipop-terra",
+    "name": "Woolipop Terra",
+    "intro": "Although the cotton wool exudes a sweet and rich aroma, the meat is so bitter that it makes you shudder. If a carnivorous Pal is attracted by its smell and takes a bite, it will roll its eyes and become paralyzed due to the unbearable bitter taste."
+  },
+  {
+    "palSlug": "mozzarina",
+    "name": "Mozzarina",
+    "intro": "This kind of Pal does not require special care and will secrete large amounts of milk like a faucet regardless of its gender. This is the mystery of life."
+  },
+  {
+    "palSlug": "azurobe",
+    "name": "Azurobe",
+    "intro": "Its white ribbons turn black when exposed to impure water. Because this characteristic of it can be used for drug detection, it once caused humans to hunt it crazily, causing it to still be wary of humans."
+  },
+  {
+    "palSlug": "azurobe-cryst",
+    "name": "Azurobe Cryst",
+    "intro": "Its white ribbons absorb surrounding heat. Incredibly, the temperature of the streamer does not change at all. Because of its nature, humans once hunted it crazily, causing it to still be wary of humans."
+  },
+  {
+    "palSlug": "sparkit",
+    "name": "Sparkit",
+    "intro": "It tends to become tense during the dry season and is always on the verge of breaking out. Once there is friction with a companion, it will turn into a fight with sparks flying."
+  },
+  {
+    "palSlug": "kelpsea",
+    "name": "Kelpsea",
+    "intro": "Its character will vary depending on the water quality of its birthplace. Most Shui Ling'er born in dirty water sources have bad personalities and behave like street gangsters."
+  },
+  {
+    "palSlug": "kelpsea-ignis",
+    "name": "Kelpsea Ignis",
+    "intro": "Its character will vary depending on the temperature of the water where it was born. Shui Ling'er born in a warm water source are often more enthusiastic and full of endless energy."
+  },
+  {
+    "palSlug": "ribbuny",
+    "name": "Ribbuny",
+    "intro": "This kind of Pal always has a smile on his face. The Cattiva occasionally plays tricks by tying its ribbon into a tight knot, and only then does it show a devilish expression."
+  },
+  {
+    "palSlug": "ribbuny-botan",
+    "name": "Ribbuny Botan",
+    "intro": "This kind of Pal always has a smile on his face. Occasionally, the Cattiva will play a trick and tie its ribbon into a tight knot. Every time, it will beat the Cattiva with a smile."
+  },
+  {
+    "palSlug": "jelliette",
+    "name": "Jelliette",
+    "intro": "Pal looks very similar to Hai Yueling. When I have too many travel plans with my friends and my schedule conflicts, I will ask Haewoling, with whom I am close, to go instead. As a return gift, I made a date with Hai Yueling."
+  },
+  {
+    "palSlug": "jellroy",
+    "name": "Jellroy",
+    "intro": "Pal looks very similar to Hai Yuexian. Haiyuexian, who sometimes conflicts with plans, acts as his substitute to attend appointments on his behalf. Because the acting was so realistic, no one noticed that he was a stunt double."
+  },
+  {
+    "palSlug": "amione",
+    "name": "Amione",
+    "intro": "If one of them is missing, a replacement will appear from nowhere. Then the two will start living harmoniously together as if nothing happened. For Leo Ligne, the most important thing is \"to live in harmony\"."
+  },
+  {
+    "palSlug": "gloopie",
+    "name": "Gloopie",
+    "intro": "If you want to sleep with it, it's best to confirm your itinerary for tomorrow. The suction cup marks look like hickeys, which can cause unnecessary misunderstandings if sucked by a sleepy dog."
+  },
+  {
+    "palSlug": "gloopie-primo",
+    "name": "Gloopie Primo",
+    "intro": "If you want to sleep with it, it's best to confirm your itinerary for tomorrow. The suction cup marks look like bite marks, and if they are sucked by a sleeping dog, they will cause unnecessary trouble."
+  },
+  {
+    "palSlug": "galeclaw",
+    "name": "Galeclaw",
+    "intro": "Even if it grabs a person, it can fly into the sky effortlessly. However, when they are extremely tired, they will loosen their paws without saying a word, resulting in fatal accidents caused by falling from high altitudes."
+  },
+  {
+    "palSlug": "wispaw",
+    "name": "Wispaw",
+    "intro": "So far, the thoughts of all the humans who have raised their family are concentrated in the hand behind it. Recently, it seems that it has become everyone's consensus to pamper Nianying Meow as much as possible."
+  },
+  {
+    "palSlug": "nitewing",
+    "name": "Nitewing",
+    "intro": "It will catch the newly born Pal in its nest and raise it on behalf of its parents. When it is ready to eat, it will be hunted."
+  },
+  {
+    "palSlug": "tombat",
+    "name": "Tombat",
+    "intro": "It likes to appear suddenly in front of other Pal, spreading its wings arrogantly to show off. Although it was an act of intimidation, there was a somewhat intoxicated look on its face."
+  },
+  {
+    "palSlug": "tocotoco",
+    "name": "Tocotoco",
+    "intro": "The eggs laid by this type of Pal will explode, which is quite scary. It usually uses the eggs it shoots from its butt as a weapon, but if it has nothing to do, it will resort to self-destruction."
+  },
+  {
+    "palSlug": "univolt",
+    "name": "Univolt",
+    "intro": "Previously, it was believed to be the messenger of the God of Thunder and would not be hunted by humans. However, when someone witnessed it being struck by lightning and dying, faith gradually faded and it was literally reduced to being a cow."
+  },
+  {
+    "palSlug": "univolt-cryst",
+    "name": "Univolt Cryst",
+    "intro": "In the past, it was regarded as the messenger of the God of Winter, and no one dared to hunt it. However, when someone witnesses it slipping on the ice, the belief gradually disappears, and it becomes an eternal beast once it slips."
+  },
+  {
+    "palSlug": "gobfin",
+    "name": "Gobfin",
+    "intro": "This Pal was a very powerful giant water-dwelling Pal long ago, but when food dwindled, they moved to land. Because walking consumes a lot of energy, their size gradually becomes smaller, and they are now very weak Pal."
+  },
+  {
+    "palSlug": "gobfin-ignis",
+    "name": "Gobfin Ignis",
+    "intro": "This Pal was a very powerful giant water-dwelling Pal long ago, but when food dwindled, they moved to land. Because walking burns a lot of calories, the power of fire in their bodies accidentally awakens!"
+  },
+  {
+    "palSlug": "loupmoon",
+    "name": "Loupmoon",
+    "intro": "The horns on its head can grow by bathing in moonlight. Although this Pal does not hate sunlight, its horns will itch when exposed to the sun."
+  },
+  {
+    "palSlug": "loupmoon-cryst",
+    "name": "Loupmoon Cryst",
+    "intro": "The horns on its head are incredible ice that will never melt. The shaved ice made from its broken horns is truly delicious. Both the shaved ice eaters and the frost sickle demons will have a headache."
+  },
+  {
+    "palSlug": "cawgnito",
+    "name": "Cawgnito",
+    "intro": "It once flew freely in the sky, but it lost the competition with the Sky Bird, so it abandoned the sky and lived a low-key life coexisting with the night."
+  },
+  {
+    "palSlug": "arsox",
+    "name": "Arsox",
+    "intro": "In the past, this kind of Pal was often hunted by carnivorous Pal. The Blazing Ox was deeply aggrieved by this, so this anger turned into a blazing flame and was passed down from generation to generation."
+  },
+  {
+    "palSlug": "muffly",
+    "name": "Muffly",
+    "intro": "The fuzz around its cheeks absorbs shock. It's not a big deal even if I get knocked back a few meters, but preening my feathers is troublesome, and I can't scratch the itchy spots, so I always feel a little upset and depressed."
+  },
+  {
+    "palSlug": "bristla",
+    "name": "Bristla",
+    "intro": "Its thorns are poisonous and can be dangerous if stung. It has a very good relationship with the Huanyue Butterfly. It only shows a happy expression when it sucks nectar from flowers."
+  },
+  {
+    "palSlug": "cinnamoth",
+    "name": "Cinnamoth",
+    "intro": "After inhaling its scale powder, you will get a feeling of heavenly pleasure. Although some people have tried to strictly manage this kind of Pal, there has been no progress so far due to opposition from the Pal protection groups."
+  },
+  {
+    "palSlug": "puffolt",
+    "name": "Puffolt",
+    "intro": "If soaked in water, the fluffy fur will absorb a lot of water. When it shakes its body to get rid of the water, it will be accompanied by a violent discharge. Taking a bath with it is a gamble for your life."
+  },
+  {
+    "palSlug": "elphidran",
+    "name": "Elphidran",
+    "intro": "Its character is as innocent and harmless as its appearance. Because of this, it cannot distinguish between good and evil very well, and can easily be exploited by people with evil hearts."
+  },
+  {
+    "palSlug": "elphidran-aqua",
+    "name": "Elphidran Aqua",
+    "intro": "Its character is as innocent and harmless as its appearance. Because of this, all the actions it takes are without malice, and even if it kills someone, it will not have any thoughts."
+  },
+  {
+    "palSlug": "vanwyrm",
+    "name": "Vanwyrm",
+    "intro": "It is said that the flute made from the exoskeleton of the Fengge dragon can play a flute that can travel across thousands of mountains and rivers, so it was often used to signal attacks in ancient wars."
+  },
+  {
+    "palSlug": "vanwyrm-cryst",
+    "name": "Vanwyrm Cryst",
+    "intro": "It is said that the flute made from the exoskeleton of the Frost Song Dragon can play the sound of the flute across thousands of mountains and rivers, so it was often used to play victory songs in ancient wars."
+  },
+  {
+    "palSlug": "felbat",
+    "name": "Felbat",
+    "intro": "It attacks its prey in the dark, wrapping it in its cloak-like wings. As for what happens on the inside of the wings and why they are stained with red, it is best not to delve deeper into such questions."
+  },
+  {
+    "palSlug": "vaelet",
+    "name": "Vaelet",
+    "intro": "The castle was filled with the king's favorite flowers. But a major war broke out, and the war was about to spread to the castle. At this time, a flower elf appeared out of thin air. ──Excerpted from the fairy tale \"The King's Flowers\"."
+  },
+  {
+    "palSlug": "beegarde",
+    "name": "Beegarde",
+    "intro": "It is a servant sworn to serve the Queen Bee. Destroy everything that is harmful to the Queen. Even if he resorts to self-destruction, he must protect the queen until the last moment."
+  },
+  {
+    "palSlug": "elizabee",
+    "name": "Elizabee",
+    "intro": "It is the chosen queen who rules over the knight bees. The joy of serving the great queen has led to countless servants who are willing to work to death for her."
+  },
+  {
+    "palSlug": "lovander",
+    "name": "Lovander",
+    "intro": "It always pesters others in search of a night of pleasure. At first it was only interested in Pal, but in recent years, its claws have begun to extend to humans as well."
+  },
+  {
+    "palSlug": "grintale",
+    "name": "Grintale",
+    "intro": "If you enter the territory of the Laughing Nightmare Cat, its eyes will sparkle as it watches for intruders. This is not a metaphor, it actually shines."
+  },
+  {
+    "palSlug": "tarantriss",
+    "name": "Tarantriss",
+    "intro": "It's very clingy, literally like glue. The more you try to shake it off, the tighter it becomes. The above are its \"character\" characteristics."
+  },
+  {
+    "palSlug": "polapup",
+    "name": "Polapup",
+    "intro": "The individual in the population that can glide the fastest on the snow is the most amazing individual. Sometimes an individual who jumped up too quickly will suddenly fall from the sky. This happens especially when fighting for the leader position. Today will turn from sunny to cloudy, with heavy rain in some areas."
+  },
+  {
+    "palSlug": "polapup-terra",
+    "name": "Polapup Terra",
+    "intro": "The individual in the population that can glide the fastest on the snow is the most amazing individual. Sometimes there will be individuals who jump up because they rush too fast and plunge into the snow. This happens especially when fighting for leadership. The road conditions are congested today, so be careful of a series of \"leopard strikes\"."
+  },
+  {
+    "palSlug": "leezpunk",
+    "name": "Leezpunk",
+    "intro": "This kind of Pal is extremely persistent in his attention to posture. It always pursues the most handsome posture. Give it a mirror and it can stand all day studying postures."
+  },
+  {
+    "palSlug": "leezpunk-ignis",
+    "name": "Leezpunk Ignis",
+    "intro": "This kind of Pal is extremely persistent in his attention to posture. It is always looking for the most passionate position, so its owner will be forced to admire the passionate and annoying positions all day long."
+  },
+  {
+    "palSlug": "gorirat",
+    "name": "Gorirat",
+    "intro": "It will tap the ground in different rhythms to communicate with its companions. The meaning of each rhythm varies depending on the ethnic group, but humans still do not fully understand its specific classification."
+  },
+  {
+    "palSlug": "gorirat-terra",
+    "name": "Gorirat Terra",
+    "intro": "It will tap the ground in different rhythms to communicate with its companions. It has more domineering wrist strength than the Iron Fist Ape. If all the Stone Palm Apes hit the ground at the same time, the Palpagos Islands will sink in 1 second."
+  },
+  {
+    "palSlug": "surfent",
+    "name": "Surfent",
+    "intro": "Its streamlined shape is perfect for water activities. Therefore, they are often caught by illegal fishing groups and used instead of surfboards."
+  },
+  {
+    "palSlug": "surfent-terra",
+    "name": "Surfent Terra",
+    "intro": "Its streamlined shape is perfect for activities on the sand. Therefore, they are often caught by illegal fishing groups and used instead of surfboards."
+  },
+  {
+    "palSlug": "robinquill",
+    "name": "Robinquill",
+    "intro": "This type of Pal lives a hunting life in the forest, and its characteristics and habits are very close to humans. In ancient times, it embarked on a different evolutionary path from humans. But maybe they hold the key to answering the question: What is a Pal?"
+  },
+  {
+    "palSlug": "robinquill-terra",
+    "name": "Robinquill Terra",
+    "intro": "This type of Pal lives a hunting life in rocky areas, and its characteristics and habits are very close to humans. Whenever the bones of a mountain shooter are recovered from a site, there are always human bones there."
+  },
+  {
+    "palSlug": "flopie",
+    "name": "Flopie",
+    "intro": "It likes places with lots of plants, but recently, Bona rabbits seem to be suffering from hay fever collectively."
+  },
+  {
+    "palSlug": "wixen",
+    "name": "Wixen",
+    "intro": "This kind of Pal can control the power of Yang and cast wonderful spells. I like to eat all food well-cooked. The relationship with the Dark Witch Cat is quite bad."
+  },
+  {
+    "palSlug": "wixen-noct",
+    "name": "Wixen Noct",
+    "intro": "After being educated by my parents, I am no longer picky about food and I like anything as long as it is sweet. The relationship with the blazing witch cat is quite bad."
+  },
+  {
+    "palSlug": "katress",
+    "name": "Katress",
+    "intro": "This kind of Pal can control the power of yin and cast wonderful spells. I like to eat any food raw. The relationship with Flame Witch Fox is quite bad."
+  },
+  {
+    "palSlug": "katress-ignis",
+    "name": "Katress Ignis",
+    "intro": "After being educated by my parents, I am no longer picky about food and I like anything as long as it is spicy. The relationship with the Ghost Witch Fox is quite bad."
+  },
+  {
+    "palSlug": "helzephyr",
+    "name": "Helzephyr",
+    "intro": "It can summon thunder and lightning from hell. If you are electrocuted by the electric current released by the Thunderbird, your soul will fall into hell."
+  },
+  {
+    "palSlug": "helzephyr-lux",
+    "name": "Helzephyr Lux",
+    "intro": "It can summon thunder and lightning from hell. Although it is classified as a subspecies of the Thunderbird, there are also theories that it is actually the Thunderbird that was struck by lightning from hell and mutated into the Thunderbird."
+  },
+  {
+    "palSlug": "elgrove",
+    "name": "Elgrove",
+    "intro": "The leaf on the corner will not fall off no matter how hard it is pulled. And when it fell on its own, Jungle Tauros sensed that his end was approaching."
+  },
+  {
+    "palSlug": "elgrove-cryst",
+    "name": "Elgrove Cryst",
+    "intro": "As long as there is one breath left, the ice horn on the head will not melt. When water drops drip from the corners of the ice, Bingfeng Tauros will feel his body gradually becoming colder."
+  },
+  {
+    "palSlug": "lunaris",
+    "name": "Lunaris",
+    "intro": "If you accidentally look at it, you will be manipulated. Most people who carry Mystia think they are the master."
+  },
+  {
+    "palSlug": "fenglope",
+    "name": "Fenglope",
+    "intro": "In the distant past, it was often chosen as a painting subject due to its beautiful appearance, and it was quite familiar to people. Over time, its beautiful fur and horns became materials for artworks, making this Pal more widely known."
+  },
+  {
+    "palSlug": "fenglope-lux",
+    "name": "Fenglope Lux",
+    "intro": "In the distant past, there was a superstition that if you drew a thunder deer, you would be struck to death by lightning. As times have changed, artworks modeled after the deer hidden in lightning have become familiar to people as amulets that have lightning protection effects."
+  },
+  {
+    "palSlug": "dinossom",
+    "name": "Dinossom",
+    "intro": "Whenever it gets angry, it will go berserk and uncontrollable like a raging fire. Therefore, the phrase \"stepping on the Corolla Dragon's tail\" means to anger someone."
+  },
+  {
+    "palSlug": "dinossom-lux",
+    "name": "Dinossom Lux",
+    "intro": "It was struck by lightning, but luckily it survived. Therefore, the phrase \"Thunder falls and thunder crowns the dragon\" means a narrow escape from death and a catastrophic escape."
+  },
+  {
+    "palSlug": "bushi",
+    "name": "Bushi",
+    "intro": "When it dies, its body turns into a sword and is inherited by the next generation. When a creature other than a Waveblade warrior comes into possession of this blade, it becomes maddened by its cries of the dead."
+  },
+  {
+    "palSlug": "bushi-noct",
+    "name": "Bushi Noct",
+    "intro": "When it dies, its body turns into a sword and is inherited by the next generation. If the inherited Wave Blade Samurai is weak at heart, it will turn into a Ghost Blade Samurai and wander around because it cannot bear the curse of the dead soul in the sword."
+  },
+  {
+    "palSlug": "munchill",
+    "name": "Munchill",
+    "intro": "The inside of its mouth is very cool, and as long as it closes its mouth, it becomes a mobile cold storage. The special ingredients contained in its saliva also play a role in food preservation. Although it is not that humans cannot use it as a refrigerator to preserve food, as for hygiene issues, it is better to keep your mouth shut."
+  },
+  {
+    "palSlug": "mammorest",
+    "name": "Mammorest",
+    "intro": "The vegetation on the back of this Pal varies from individual to individual. There was a time when it was popular as a viewing Pal and there were even professional pruners of mammoths."
+  },
+  {
+    "palSlug": "mammorest-cryst",
+    "name": "Mammorest Cryst",
+    "intro": "The vegetation on the back of this Pal varies from individual to individual. Seeds of frozen plants thought to be extinct have been found on the backs of snow mammoths, well preserved in their frozen state."
+  },
+  {
+    "palSlug": "finsider",
+    "name": "Finsider",
+    "intro": "Although it looked like some kind of creature peeking out of the doll, when I tried to put my hand in, I couldn't touch anything. Not only that, the hand can even reach into the depths endlessly. Maybe, there is the universe inside."
+  },
+  {
+    "palSlug": "finsider-ignis",
+    "name": "Finsider Ignis",
+    "intro": "You can't touch anything when you reach in from the mouth, and you can even explore into the depths endlessly. Researchers who thought it was some kind of extra-dimensional space suddenly thought of using it as a sleeping bag and tried to squeeze their entire body into it, but they caused it to retching. It seems that there is still a concept of the body."
+  },
+  {
+    "palSlug": "petallia",
+    "name": "Petallia",
+    "intro": "When it reaches the end of its lifespan, it turns into a giant plant. Every ten years thereafter a beautiful flower blooms, and a new Hualina will be born from it."
+  },
+  {
+    "palSlug": "petallia-ignis",
+    "name": "Petallia Ignis",
+    "intro": "When it reaches the end of its life, it will spontaneously combust and turn into ashes. The surrounding soil will become very fertile as a result, and countless vegetation will flourish here in the next 10 years or so."
+  },
+  {
+    "palSlug": "leafan",
+    "name": "Leafan",
+    "intro": "The only way to hone the martial arts passed down from generation to generation is to improve day by day! Indulging in love is absurd! Just practice every day! The time has come! Attack the one you like! Only lovelorn! The art of love has never been passed down! This love is only unfinished!"
+  },
+  {
+    "palSlug": "incineram",
+    "name": "Incineram",
+    "intro": "It hunts at night and brings its prey back to its territory. It is not difficult to imagine what kind of treatment those Pal who were caught would be subjected to later."
+  },
+  {
+    "palSlug": "incineram-noct",
+    "name": "Incineram Noct",
+    "intro": "It is only interested in the Pal cubs and will snatch them away and take them back to its territory. It is not difficult to imagine the desperate situation that the Pal who had their cubs taken away would fall into."
+  },
+  {
+    "palSlug": "dazzi",
+    "name": "Dazzi",
+    "intro": "It is often very amiable to the lonely Pal. But if Pal, who has misunderstood something, entangles it, it will immediately find Luo Lei to deal with the opponent."
+  },
+  {
+    "palSlug": "dazzi-noct",
+    "name": "Dazzi Noct",
+    "intro": "Pal, who treats the lone man tenderly, takes advantage of the moment when he relaxes his vigilance to attract lightning to deal with the opponent. Although that was the plan, they ended up living in harmony because they couldn't seize the opportunity."
+  },
+  {
+    "palSlug": "pyrin",
+    "name": "Pyrin",
+    "intro": "This Pal's whole body is equipped with efficient heat dissipation organs, allowing it to exert amazing endurance. When someone sits on it, it takes care not to burn them."
+  },
+  {
+    "palSlug": "pyrin-noct",
+    "name": "Pyrin Noct",
+    "intro": "This Pal burns the mysterious dark matter for energy and expels the remaining dark particles from the body. When someone sits on it, the emissions are controlled so that the person is not engulfed in darkness."
+  },
+  {
+    "palSlug": "relaxaurus",
+    "name": "Relaxaurus",
+    "intro": "Although it looks listless, it is actually quite ferocious. It regards everything it sees as food and preys on it at all costs."
+  },
+  {
+    "palSlug": "relaxaurus-lux",
+    "name": "Relaxaurus Lux",
+    "intro": "Peikron suddenly thought that it was time for him to make some changes. At that moment, inspiration shot through his body like thunder and lightning!"
+  },
+  {
+    "palSlug": "foxcicle",
+    "name": "Foxcicle",
+    "intro": "When the aurora shines in the night sky, this Pal will look up to the sky and sing with a beautiful voice. But this habit also makes it very easy to be targeted by enemies."
+  },
+  {
+    "palSlug": "beakon",
+    "name": "Beakon",
+    "intro": "Although similar in appearance to the Flamingo, they are not related in any way. It swoops down quickly and uses its sharp beak to defeat its enemies. The posture was like thunder."
+  },
+  {
+    "palSlug": "beakon-cryst",
+    "name": "Beakon Cryst",
+    "intro": "Specialized to adapt to the cold environment, even a slender body can withstand the cold. The power of the swooping attack from high altitude is astonishing. To put it metaphorically, it is like a huge ice cone falling from the sky."
+  },
+  {
+    "palSlug": "ghangler",
+    "name": "Ghangler",
+    "intro": "Glowing lures illuminate the darkness. If Pal, who was attracted by this light, was discovered by the lantern fish, he would have no chance of escaping. It serves as its guide until the Pal returns safely to his home."
+  },
+  {
+    "palSlug": "ghangler-ignis",
+    "name": "Ghangler Ignis",
+    "intro": "Fiercely burning lures can also be used when grilling prey. If Pal, who was attracted by the aroma of barbecue, was discovered by the lantern fish, he would have no chance of escaping. It will continue to entertain until the attracted Pal is full."
+  },
+  {
+    "palSlug": "rayhound",
+    "name": "Rayhound",
+    "intro": "When it sprints at full speed it is like a bolt of lightning. If there is a conflict between similar Thunderbolt dogs, thunderous rumbles will continue to sound."
+  },
+  {
+    "palSlug": "rayhound-cryst",
+    "name": "Rayhound Cryst",
+    "intro": "If it runs at full speed on a snowfield, it will kick up a lot of flying snow. Because they can't see each other at all, traffic accidents often happen between the dogs."
+  },
+  {
+    "palSlug": "menasting",
+    "name": "Menasting",
+    "intro": "Its body is an energy body, and its interior is empty. It stuffs its prey alive into its shell and absorbs it. Hellish moans echoed all around."
+  },
+  {
+    "palSlug": "menasting-terra",
+    "name": "Menasting Terra",
+    "intro": "Its body is an energy body, and its interior is empty. The overwhelming quality is achieved by filling the shell with sand, gravel and minerals. Creatures hit by it can only moan like hell."
+  },
+  {
+    "palSlug": "needoll",
+    "name": "Needoll",
+    "intro": "When an emotion becomes intense, its spikes expand and contract. The carefully raised ball bud makes people want to hold it in their arms, but nine times out of ten it will end tragically."
+  },
+  {
+    "palSlug": "needoll-noct",
+    "name": "Needoll Noct",
+    "intro": "When an emotion becomes intense, its spikes expand and contract. The demon Baobao, who grew up in full love, always loves to burrow into the arms of its master, but if you want to accept its love, you must also accept the pain it brings."
+  },
+  {
+    "palSlug": "reindrix",
+    "name": "Reindrix",
+    "intro": "Its blue and transparent sharp corners shine with the light of absolute zero. If you touch it directly with your hands, your whole body will freeze immediately and your life will disintegrate and scatter."
+  },
+  {
+    "palSlug": "mossanda",
+    "name": "Mossanda",
+    "intro": "It has incredible power. In one experiment, it could even easily tear through 3,000 stacked sheets of paper. You and I should both be thankful that it's not a carnivorous Pal."
+  },
+  {
+    "palSlug": "mossanda-lux",
+    "name": "Mossanda Lux",
+    "intro": "It has incredible power. It can convert electricity into nerve signals, breaking the limits of the body's capabilities. As long as the strongest creature is mentioned, it must be there."
+  },
+  {
+    "palSlug": "chillet",
+    "name": "Chillet",
+    "intro": "It can curl up its body and spin and move at a rapid speed. In the past, people would put milk bags on the tamed whirling weasels and let them graze them to use their spinning ability to make butter."
+  },
+  {
+    "palSlug": "chillet-ignis",
+    "name": "Chillet Ignis",
+    "intro": "It can curl up its body and spin and move with sparks and lightning. In addition, sparks can be emitted when emotions are high. It will ignite if touched too much."
+  },
+  {
+    "palSlug": "ragnahawk",
+    "name": "Ragnahawk",
+    "intro": "Although it looks similar to the Thunderbird, it is not related in any way. It mainly feeds on rocks, so over the years, not only the beak, but its entire head also becomes very hard."
+  },
+  {
+    "palSlug": "moldron",
+    "name": "Moldron",
+    "intro": "In healthy individuals, the flow of lava on the back will also be very smooth. If your living habits are unhealthy, the flow of lava will become increasingly stagnant. In the worst case, a lava blockage may occur, leading to a sudden explosion."
+  },
+  {
+    "palSlug": "moldron-cryst",
+    "name": "Moldron Cryst",
+    "intro": "In healthy individuals, the temperature of the back material will also be very stable. But once the heart beats too fast, the temperature will lose stability. At worst, it will vaporize or solidify, and finally cause sudden shock and death."
+  },
+  {
+    "palSlug": "palumba",
+    "name": "Palumba",
+    "intro": "It uses its unique dance to disrupt the opponent's rhythm. In the battle for territory, the party that is first led by the opponent is the loser. Courtship, recreation, everything but dance! By the way, what does it mean when it dances towards humans?"
+  },
+  {
+    "palSlug": "digtoise",
+    "name": "Digtoise",
+    "intro": "There is a fable from the past called \"The Rock-Breaking Turtle's Drill.\" It's a paradoxical morality tale about a rock-crushing turtle with the strongest carapace and drill."
+  },
+  {
+    "palSlug": "broncherry",
+    "name": "Broncherry",
+    "intro": "Its body odor will change dramatically before and after mating. People think its scent after finding a mate is charming, and call it the \"scent of first love.\""
+  },
+  {
+    "palSlug": "broncherry-aqua",
+    "name": "Broncherry Aqua",
+    "intro": "Its body odor will change dramatically before and after mating. People consider its scent before it finds a mate to be charming, and call it the \"scent of purity.\""
+  },
+  {
+    "palSlug": "dumud",
+    "name": "Dumud",
+    "intro": "When this Pal is too relaxed, all reactions become extremely sluggish. Even if it was stabbed 28 times, it would probably not be until the next morning that it would realize that it was supposed to be dead."
+  },
+  {
+    "palSlug": "dumud-gild",
+    "name": "Dumud Gild",
+    "intro": "The surface of the body has amazing reflectivity. Not only that, the reflex speed of its nerves is slower than that of a catfish!"
+  },
+  {
+    "palSlug": "braloha",
+    "name": "Braloha",
+    "intro": "The breath is mixed with something that looks like pollen, a wonderful substance that can successfully pollinate any plant. For those Pal with plants growing on their bodies, this is a guy who makes the beasts feel complicated."
+  },
+  {
+    "palSlug": "kitsun",
+    "name": "Kitsun",
+    "intro": "He has an extremely delicate and sensitive personality. When he encounters something he dislikes, he will hide in a cave and refuse to come out. The ancients also believed that it was a bad omen if the Blue Flame Wolf hid."
+  },
+  {
+    "palSlug": "kitsun-noct",
+    "name": "Kitsun Noct",
+    "intro": "He has an extremely delicate and sensitive personality. When he encounters something he dislikes, he will hide in a cave and refuse to come out. Because he stayed at home too much, Zhuo Sheng also became gloomy."
+  },
+  {
+    "palSlug": "blazehowl",
+    "name": "Blazehowl",
+    "intro": "It prefers to eat raw meat, but every time it eats it, it becomes fully cooked meat. This is because it uses scorching claws as weapons, but it doesn't know that its prey will be roasted to a crisp."
+  },
+  {
+    "palSlug": "blazehowl-noct",
+    "name": "Blazehowl Noct",
+    "intro": "It prefers to eat normal meat, but every time it eats it, it becomes contaminated meat. This is because it uses dark claws as weapons, but does not know that its prey will be cursed as a result."
+  },
+  {
+    "palSlug": "warsect",
+    "name": "Warsect",
+    "intro": "Its entire body is covered in super-powerful armor, possessing unparalleled strength and heat resistance. Not even napalm can do anything about it."
+  },
+  {
+    "palSlug": "warsect-terra",
+    "name": "Warsect Terra",
+    "intro": "Its entire body is covered in super-powerful armor, possessing unparalleled strength and heat resistance. Even if it is stepped on by a mammoth, it will not hurt or itch."
+  },
+  {
+    "palSlug": "frostplume",
+    "name": "Frostplume",
+    "intro": "She is very sensitive to time and must wake up at a fixed time every morning. The reason why a day in the Palpagos Islands is divided into 24 segments is said to be because there are 24 blank areas on the tail feathers of the white snowfinch when you look at it from the front."
+  },
+  {
+    "palSlug": "majex",
+    "name": "Majex",
+    "intro": "Although it poses with its hands on its hips and a picturesque posture, in reality, its tail and hair are too heavy, so it is just struggling to keep its balance so as not to fall."
+  },
+  {
+    "palSlug": "sibelyx",
+    "name": "Sibelyx",
+    "intro": "It likes rainy weather. Whenever it rains, it will always stand still and enjoy the rain. The tinder fox will often come to hide from the rain."
+  },
+  {
+    "palSlug": "sibelyx-primo",
+    "name": "Sibelyx Primo",
+    "intro": "It likes to stare at the sky and often stands there quietly. It often becomes a gathering place for small palus."
+  },
+  {
+    "palSlug": "maraith",
+    "name": "Maraith",
+    "intro": "It likes the unique smell emitted by the bodies of dying creatures. Therefore, once it is stuck to the soul-eating beast, it means that the end is approaching."
+  },
+  {
+    "palSlug": "shroomer",
+    "name": "Shroomer",
+    "intro": "Inhaling large amounts of mushroom spores can cause a person to fall into a state of confusion. Occasionally, you will see it standing motionless. It is not imitating a mushroom, but getting high by sucking in its own spores."
+  },
+  {
+    "palSlug": "shroomer-noct",
+    "name": "Shroomer Noct",
+    "intro": "The large number of spreading spores can easily block sunlight. Occasionally, you will see it standing motionless. It is not imitating a mushroom, but it is covered by its own spores and cannot see anything."
+  },
+  {
+    "palSlug": "icelyn",
+    "name": "Icelyn",
+    "intro": "Even though its body melts in the heat, it's still obsessed with sunbathing. Even if the body melts at high temperatures, it is still obsessed with bathing in hot springs. It's all going to end in death anyway, so it's better to melt in the open-air hot spring under the bright sun."
+  },
+  {
+    "palSlug": "gildra",
+    "name": "Gildra",
+    "intro": "The organ like a golden bandage has the ability to stretch freely. If it is in an extremely dry environment, it will break, so checking and moisturizing every day is essential."
+  },
+  {
+    "palSlug": "jormuntide",
+    "name": "Jormuntide",
+    "intro": "Legend has it that a sage was pushed into a whirlpool due to an unjust crime, and was later reborn as a sea-covering dragon, destroying an entire country in one fell swoop."
+  },
+  {
+    "palSlug": "jormuntide-ignis",
+    "name": "Jormuntide Ignis",
+    "intro": "Legend has it that a warrior was unjustly pushed off a volcano, and then reborn as a soaring flame dragon, burning the entire country to ashes."
+  },
+  {
+    "palSlug": "suzaku",
+    "name": "Suzaku",
+    "intro": "In the past it was believed to be the messenger that brought the dry season. As long as there is a drought in the previous year, people will try their best to drive away this kind of Pal and pray for a good harvest this year."
+  },
+  {
+    "palSlug": "suzaku-aqua",
+    "name": "Suzaku Aqua",
+    "intro": "In the past, people believed it was the messenger that brought the rainy season. As long as there was a flood in the previous year, people would try their best to drive away this kind of Pal and pray that this year would be safe."
+  },
+  {
+    "palSlug": "dazemu",
+    "name": "Dazemu",
+    "intro": "Take one step and stop being confused. Take two steps and let go of worries. Take three steps to avoid cowardice. Even if the enemy is a monster, I will go there."
+  },
+  {
+    "palSlug": "quivern",
+    "name": "Quivern",
+    "intro": "Use Tianyulong as a pillow to sleep together, and you can experience the comfort of being in heaven. But if an individual sleeps poorly, he or she will be squashed and enter heaven."
+  },
+  {
+    "palSlug": "quivern-botan",
+    "name": "Quivern Botan",
+    "intro": "If you smell the sun and the fragrance of the grassland when embracing the green feather dragon, then tomorrow will be sunny. If you smell something musty, it means it will rain heavily tomorrow."
+  },
+  {
+    "palSlug": "lullu",
+    "name": "Lullu",
+    "intro": "When spring comes, the wind will spread pollen on the island. The reason why Bona Rabbit gets hay fever is because of Chuncai Niang."
+  },
+  {
+    "palSlug": "kikit",
+    "name": "Kikit",
+    "intro": "There was a time when the sport of football was popular. Although it was quickly abolished due to strong opposition from the Pal protection organization, in fact, being kicked like a ball can clean up dead skin, and the ball is not reluctant."
+  },
+  {
+    "palSlug": "yakumo",
+    "name": "Yakumo",
+    "intro": "It has the property of warding off evil spirits and used to be an excellent partner in the past, establishing a good relationship with the islanders. But now, a high wall called \"evil thoughts\" has been built between Yakumo dogs and people."
+  },
+  {
+    "palSlug": "skutlass",
+    "name": "Skutlass",
+    "intro": "It has a crazy ecology of temporarily separating the skeleton from the body and using the skeleton to cut off the enemy. If he doesn't take it back into his body quickly, he will collapse from exhaustion. There are rumors of a dangerous game among young individuals competing for the duration of physical separation, but the truth is unknown."
+  },
+  {
+    "palSlug": "skutlass-ignis",
+    "name": "Skutlass Ignis",
+    "intro": "It can temporarily separate the bones from the body and use the bones to cut off the enemy. If he doesn't take it back into his body quickly, he will collapse from exhaustion. According to rumors, elderly individuals will deliberately separate for long periods of time to stimulate their survival instincts in order to achieve the effect of extending their lives, but the truth is unknown."
+  },
+  {
+    "palSlug": "reptyro",
+    "name": "Reptyro",
+    "intro": "Its whole body was covered with blood like lava. If you pour a lot of water on it, the water will evaporate instantly when heated. A massive water vapor explosion will then occur."
+  },
+  {
+    "palSlug": "reptyro-cryst",
+    "name": "Reptyro Cryst",
+    "intro": "Ultra-low temperature blood flows throughout its body. If heat is suddenly applied to its body, its blood will evaporate. A massive steam explosion will then occur."
+  },
+  {
+    "palSlug": "starryon",
+    "name": "Starryon",
+    "intro": "What it is most proud of is its mane as smooth as flowing water. If you notice split hairs, you will be too shy to concentrate on running. Since static electricity can cause hair to explode, the Thunder Horse will never be allowed to approach."
+  },
+  {
+    "palSlug": "starryon-primo",
+    "name": "Starryon Primo",
+    "intro": "What he is most proud of is his glorious mane. As long as there is a little dirt, they will be too shy to concentrate on running. Because it is easy to be stained with sebum and dirt, even the favorite Pal trainer does not want to be touched in a sticky way."
+  },
+  {
+    "palSlug": "pierdon",
+    "name": "Pierdon",
+    "intro": "Maintain your preferred shape by hitting harder rock. As for those depressed individuals with sunken bodies, just let them be. To use a human analogy, it's like accidentally cutting your bangs too far."
+  },
+  {
+    "palSlug": "pierdon-cryst",
+    "name": "Pierdon Cryst",
+    "intro": "Melt the ice cubes into your desired shape by changing positions while sunbathing. As for those individuals with imbalanced forms, don’t bother them. To use a human analogy, it's like accidentally cutting too many sideburns."
+  },
+  {
+    "palSlug": "cryolinx",
+    "name": "Cryolinx",
+    "intro": "Its strong claws allow it to climb steep mountains with ease. However, because of his short legs, he is not good at going down mountains, so he often gets trapped in the mountains and has difficulty getting out."
+  },
+  {
+    "palSlug": "cryolinx-terra",
+    "name": "Cryolinx Terra",
+    "intro": "Its huge claws allow it to lift a lot of stuff with ease. But because of my short legs, I walked very slowly, and it often got dark halfway through."
+  },
+  {
+    "palSlug": "snugloo",
+    "name": "Snugloo",
+    "intro": "The phrase \"look directly into Snowdonia's eyes\" means to see through the phenomena to see the essence. It seems that for some reason, no researchers have ever wanted to find out whether Snowdonia has eyes."
+  },
+  {
+    "palSlug": "wumpo",
+    "name": "Wumpo",
+    "intro": "Researchers shaved all of its fur in order to reveal its internal structure. As a result, there was only hair all over the floor, as if there was nothing inside the hair from the beginning."
+  },
+  {
+    "palSlug": "wumpo-botan",
+    "name": "Wumpo Botan",
+    "intro": "In order to reveal its internal structure, researchers shaved all the grass off its body. As a result, only weeds were left on the ground, as if there was nothing in the grass from the beginning."
+  },
+  {
+    "palSlug": "sootseer",
+    "name": "Sootseer",
+    "intro": "The ancients once believed that the closer the end of the world was, the weaker the flames of the Torch Spirit would be. The doomsdayists have repeatedly rioted when the flames have weakened, and finally discovered that the strength of the fire depends on its mood, at least for now."
+  },
+  {
+    "palSlug": "carnibora",
+    "name": "Carnibora",
+    "intro": "He stuffs strange things into his mouth without any care, causing the mouth on the top of his head to sometimes suffer from canker sores. Whenever this happens, the mouth on the face takes over. However, the problem of eating indiscriminately persisted, and eventually both mouths developed oral ulcers."
+  },
+  {
+    "palSlug": "blazamut",
+    "name": "Blazamut",
+    "intro": "Legend has it that it was born together when a volcano erupted. There have been suspicious groups that claimed that this continent is actually the back of the huge flame."
+  },
+  {
+    "palSlug": "blazamut-ryu",
+    "name": "Blazamut Ryu",
+    "intro": "Since ancient times, it has appeared underground. The fire that burns the sky will never be extinguished until it burns everything. This is called \"Eternal Flame\"."
+  },
+  {
+    "palSlug": "dualith",
+    "name": "Dualith",
+    "intro": "One body, two consciousnesses. Sometimes quarrels arise due to differences in ideas. Before they reconcile, they have no idea where their bodies will go!"
+  },
+  {
+    "palSlug": "dualith-noct",
+    "name": "Dualith Noct",
+    "intro": "One body, two consciousnesses. They usually have different opinions and always quarrel, but once they enter a battle, they will become one physically and mentally in an instant!"
+  },
+  {
+    "palSlug": "anubis",
+    "name": "Anubis",
+    "intro": "Its appearance was once regarded as a symbol of nobility. And in the eyes of those who despise the powerful, it has become a conspicuous target. So unknowingly, Anubis became a symbol of death."
+  },
+  {
+    "palSlug": "sekhmet",
+    "name": "Sekhmet",
+    "intro": "Once had a bad temper and was used as a symbol of death. When Anubis became a symbol of death, wealthy people seeking a replacement drank it and tamed it. I don’t know since when, Sekhmet has become a symbol of nobility."
+  },
+  {
+    "palSlug": "prixter",
+    "name": "Prixter",
+    "intro": "It contains more than 5,000 toxins. Although there are even terrible poisons that can kill immediately, the doses are too low and are of no use."
+  },
+  {
+    "palSlug": "prixter-lux",
+    "name": "Prixter Lux",
+    "intro": "Can pierce the tail needle into the enemy's body and release electric current. However, since the current is too weak, it is more lethal to directly swing the pliers."
+  },
+  {
+    "palSlug": "tetroise",
+    "name": "Tetroise",
+    "intro": "There is a certain self-awareness to the pile of stones on the back. If it is taken off and placed elsewhere, it will move on its own and try to return to where the main body is."
+  },
+  {
+    "palSlug": "tetroise-primo",
+    "name": "Tetroise Primo",
+    "intro": "Even if the stones stacked on its back are taken somewhere, the pure rock turtle can sense the position of the stones. Even if they are far apart, they must find it."
+  },
+  {
+    "palSlug": "nyafia",
+    "name": "Nyafia",
+    "intro": "I really hate being seen with my eyes. If someone stares at it forcibly, it will suddenly cry and ignore the other person for about two weeks."
+  },
+  {
+    "palSlug": "mimog",
+    "name": "Mimog",
+    "intro": "There once was a kingdom on the island, and there was a tradition in the kingdom that every year a reward would be given to the person who died in the stupidest way. The memorable first cause of death was \"I didn't see through Wang Cai, so he opened the box and was bitten to death.\""
+  },
+  {
+    "palSlug": "xenovader",
+    "name": "Xenovader",
+    "intro": "It has the ability to convert losses in information transmission into energy. Information will be sent to unknown targets on a regular basis. \"If you find the target, please go and destroy it immediately, and get back to you as soon as possible.\""
+  },
+  {
+    "palSlug": "xenogard",
+    "name": "Xenogard",
+    "intro": "Has the ability to consume information and convert it into energy. Information will be sent to unknown targets on a regular basis. \"Hey? I accidentally ate it before checking the message just now. What did you say?\""
+  },
+  {
+    "palSlug": "prunelia",
+    "name": "Prunelia",
+    "intro": "Because of its clever mind and stylish behavior, it was once used as a personal attendant among the island's nobles. However, it quickly lost popularity because it was easily frightened by its face if encountered at night."
+  },
+  {
+    "palSlug": "nitemary",
+    "name": "Nitemary",
+    "intro": "What it holds in its hands is its own soul. When it finds the person it likes, it will forcibly extract the other person's soul and merge it with its own soul in order to become one and the same."
+  },
+  {
+    "palSlug": "nitemary-botan",
+    "name": "Nitemary Botan",
+    "intro": "What it holds in its hands is its own soul. When it finds the person it likes, it will throw its soul to the other person, hoping to merge with the other person's soul and become one and the same."
+  },
+  {
+    "palSlug": "smokie",
+    "name": "Smokie",
+    "intro": "The black flame is only slightly hot to the touch, but objects that are in constant contact will slowly begin to melt from the inside. If used to grill cheese, it's perfect."
+  },
+  {
+    "palSlug": "smokie-cryst",
+    "name": "Smokie Cryst",
+    "intro": "The pale flame only feels slightly cool to the touch, but objects that continue to come into contact will gradually freeze. Put a bottle of milk in it and you get a bottle of frozen milk!"
+  },
+  {
+    "palSlug": "omascul",
+    "name": "Omascul",
+    "intro": "The part that looks like a mask is not its face. It seems to be right in front of you, but in fact it doesn't seem to exist. I often don’t know where to look, as if there are a pair of eyes watching here. Turning around, he seemed to be behind him."
+  },
+  {
+    "palSlug": "whalaska",
+    "name": "Whalaska",
+    "intro": "While it is sleeping, other palus mistake it for an ice floe and rest on it. Because of his gentle personality, he will not forcefully chase them away even if he wakes up. But because personal space is invaded, stress will build up in the heart."
+  },
+  {
+    "palSlug": "whalaska-ignis",
+    "name": "Whalaska Ignis",
+    "intro": "In order not to be mistaken for an ice floe, he turned his body red. But it is meaningless for those red-blind Pal. Their efforts only bring emptiness. In the end, their personal space continues to be violated."
+  },
+  {
+    "palSlug": "verdash",
+    "name": "Verdash",
+    "intro": "The ground where the Spring Rabbit runs will become fertile and the vegetation will grow lush. But if we spray herbicide, they won't run around here."
+  },
+  {
+    "palSlug": "splatterina",
+    "name": "Splatterina",
+    "intro": "It has an uncontrollable instinct to tear its prey into pieces. Different individuals have different requirements on which part to start. If you are caught by You Lianna, just pray that it will start from the head."
+  },
+  {
+    "palSlug": "gildane",
+    "name": "Gildane",
+    "intro": "When alchemy was still popular on the island, its continuously shining golden hair was popular as a catalyst for alchemy. Soon after, insights emerged that spanned the ages. Since they are both golden, wouldn't it be nice to just process golden hair in alchemy?"
+  },
+  {
+    "palSlug": "dogen",
+    "name": "Dogen",
+    "intro": "Keep meditating in order to reach the state of \"selflessness\". After facing its troubles and having an epiphany, it will have a big appetite and eat until it is full. At this time, it will realize that it ate too much today."
+  },
+  {
+    "palSlug": "bulldosu",
+    "name": "Bulldosu",
+    "intro": "There used to be an entertainment event of sumo wrestling with Mastiffs on the island. If it was the highest-level Mastiff, when it was attacked by a sudden attack from a Kusama Pig, the result would be that the Kusanagi Pigs would be knocked away."
+  },
+  {
+    "palSlug": "celesdir",
+    "name": "Celesdir",
+    "intro": "In ancient documents, it is recorded as the \"Beast of Redemption.\" The light released by the Purifying Deer can completely purify all kinds of things. Literally disappearing from the world without leaving any trace."
+  },
+  {
+    "palSlug": "celesdir-noct",
+    "name": "Celesdir Noct",
+    "intro": "The brighter the light, the deeper the shadow. Spread the darkness that envelopes everything and restore the chaos that should exist. Balance is necessary for this world."
+  },
+  {
+    "palSlug": "astegon",
+    "name": "Astegon",
+    "intro": "From the abyss, the beast of violence. You shall not stand before this beast. You shall not listen to the voice of this beast."
+  },
+  {
+    "palSlug": "knocklem",
+    "name": "Knocklem",
+    "intro": "Even if it is dismantled into 215 parts, as long as it is put together again, it will remain intact as a magical Pal that can move normally. It should be noted that if parts from other individuals are mixed in during the assembly process, it will fall into depression due to the loss of personality identity."
+  },
+  {
+    "palSlug": "knocklem-ignis",
+    "name": "Knocklem Ignis",
+    "intro": "Even if it is dismantled, as long as it is put back together, it can remain intact and move normally as before. If parts from other individuals are mixed in during the assembly process, fatal errors will occur in his thinking, eventually leading to overheating."
+  },
+  {
+    "palSlug": "silvegis",
+    "name": "Silvegis",
+    "intro": "The metal parts covering the neck have magnet-like properties. If the parts are close to the feet, they will stick to each other. After metal junk accumulates on the neck, I reluctantly start cleaning it, but I become irritable because I can't remove it."
+  },
+  {
+    "palSlug": "azurmane",
+    "name": "Azurmane",
+    "intro": "Like the Thunder Wildebeest, it was once regarded as the messenger of the God of Thunder. Since the thunder wildebeest is no longer believed by people, the thunder horse is regarded as the true messenger of the God of Thunder. However, with the changes of the times, it finally gained the status of a horse pulling a cart."
+  },
+  {
+    "palSlug": "valentail",
+    "name": "Valentail",
+    "intro": "It was depicted in old paintings as being much smaller than it is now. For some unknown reason, a rapid increase in all aspects of body length data of this species has been observed in recent years. At the current growth rate, it is expected that in 100 years the body length will reach 10 times that of today."
+  },
+  {
+    "palSlug": "snock",
+    "name": "Snock",
+    "intro": "In traditional health therapy, you put an electric vortex into the bathtub and enjoy the electrotherapy bath. In other words, don’t imitate ancient folk remedies."
+  },
+  {
+    "palSlug": "snock-lux",
+    "name": "Snock Lux",
+    "intro": "Putting the hot golden vortex into the bathtub and enjoying a hot bath was very popular in ancient times. Due to the rise of retro fashion in recent years, it has once again become a hot new trend."
+  },
+  {
+    "palSlug": "souffline",
+    "name": "Souffline",
+    "intro": "It seals bad memories in fluff balls. When the wind blows, the fluff flies away, and the melancholy mood also floats away."
+  },
+  {
+    "palSlug": "lapiron",
+    "name": "Lapiron",
+    "intro": "Listen to the sound of the earth and run away from unstable footing. But if it doesn't like some ground, it will be confused and fall over."
+  },
+  {
+    "palSlug": "hoodle",
+    "name": "Hoodle",
+    "intro": "It becomes deflated while sleeping. If you fall asleep, you won't be in there. Because there is no sleeping Doudou Ling, Doudou Ling is not asleep."
+  },
+  {
+    "palSlug": "slowatt",
+    "name": "Slowatt",
+    "intro": "Eat when you want, sleep when you want, and do whatever you want. In order to maintain such a life, the electronic lazy people must also be working hard in places that we can't see. ...If you don't force yourself to think this way, the former islanders will not be able to live their lives."
+  },
+  {
+    "palSlug": "bakemi",
+    "name": "Bakemi",
+    "intro": "To scare people is the purpose of its existence, but it is not scary at all. But because it’s so cute, everyone can’t help but pretend to be scared. Sunny has become a messenger that brings smiles to people."
+  },
+  {
+    "palSlug": "solmora",
+    "name": "Solmora",
+    "intro": "Propulsion is obtained by spinning a propeller-like tail. According to previous research, if physical collapse can be ignored, a swimming speed of 141.6km/h can theoretically be achieved."
+  },
+  {
+    "palSlug": "solmora-lux",
+    "name": "Solmora Lux",
+    "intro": "Electricity is generated by spinning its propeller-like tail. Although it can theoretically generate 1.21 gigawatts of electricity, the body will collapse in an instant and has no practical application value."
+  },
+  {
+    "palSlug": "lapure",
+    "name": "Lapure",
+    "intro": "The long hair on the tips of the claws is a great way to show off. It is very sensitive to stains and has always taken good care of its hair. If there is dust nearby, he will show a very disgusted expression."
+  },
+  {
+    "palSlug": "eidrolon",
+    "name": "Eidrolon",
+    "intro": "A brand new Pal that had not been sighted until recently. He has a calm and quiet temperament and just wants to live freely. Already, there is no longer any restraint."
+  },
+  {
+    "palSlug": "eidrolon-ignis",
+    "name": "Eidrolon Ignis",
+    "intro": "A new type of Pal that has only recently begun to be sighted. He has a bad temper and is always venting his anger on something. Already, I won’t believe anything anymore."
+  },
+  {
+    "palSlug": "dynamoff",
+    "name": "Dynamoff",
+    "intro": "To survive at high altitudes where food is scarce, sometimes even the brains of prey are eaten. One theory is that in order to seek a more stable food source, some groups of Thunder Cloud Vultures migrated from high altitudes to low altitudes, and eventually evolved into Thunderbirds."
+  },
+  {
+    "palSlug": "tropicaw",
+    "name": "Tropicaw",
+    "intro": "Some people think that the reason why it often shakes its head is to imitate flowers blown by the wind. But some people objected, isn't it because the red flower that is twisting and turning quickly looks too sexy, so no one wants to get close to it?"
+  },
+  {
+    "palSlug": "flaracle",
+    "name": "Flaracle",
+    "intro": "Concentrate and peer into the future from the flames. If I see a future that is not to my liking, I will keep drawing again until I draw a satisfactory result. So the future of Zhaoyanhu has always been bright!"
+  },
+  {
+    "palSlug": "ophydia",
+    "name": "Ophydia",
+    "intro": "There are a large number of flowers with similar appearance growing by the waterside where Qinlianlong lives. Although researchers have experimented with artificially breeding flowers many times, as long as human intervention is carried out, the flowers will wither no matter what."
+  },
+  {
+    "palSlug": "dupin",
+    "name": "Dupin",
+    "intro": "Sometimes he is defeated and replaced by his summoned clone. Even it itself is not sure whether the Rabiel of yesterday and the Rabiel of today are still the same."
+  },
+  {
+    "palSlug": "roujay",
+    "name": "Roujay",
+    "intro": "The claws are a bit unreliable and will lead the sheep away when people are not paying attention. It doesn’t matter if you’re about to be exposed. As long as you quickly steal the \"eye\" together, you won't be witnessed at the scene of the theft."
+  },
+  {
+    "palSlug": "venusa",
+    "name": "Venusa",
+    "intro": "Whenever he encounters something he doesn't understand, he will have a meeting with the snake on his head. But since all snakes are essentially themselves, the only thing they can understand is that they understand nothing."
+  },
+  {
+    "palSlug": "mycora",
+    "name": "Mycora",
+    "intro": "In its eyes, humans are nothing more than convenient parasites. The reason why the red mushroom girl evolved into what it is now is to make humans relax their vigilance and spread the spores more efficiently."
+  },
+  {
+    "palSlug": "loomen",
+    "name": "Loomen",
+    "intro": "The lantern shining with strange light reflects the true appearance of the world. If you feel the light of the lantern is dazzling, you must have done something wrong."
+  },
+  {
+    "palSlug": "wistella",
+    "name": "Wistella",
+    "intro": "When its life comes to an end, there will be an extra star somewhere in the night sky. The more memories you have in your life, the brighter it shines."
+  },
+  {
+    "palSlug": "solenne",
+    "name": "Solenne",
+    "intro": "After a good experience, you can't let it go without having an equally bad experience. If you want to raise Morona carefully, you must be mentally prepared accordingly."
+  },
+  {
+    "palSlug": "renjishi",
+    "name": "Renjishi",
+    "intro": "When confronting the enemy, he will always make some exaggerated actions that seem to be full of flaws. But the amazing thing is that opponents are often shocked and stare at it blankly."
+  },
+  {
+    "palSlug": "aegidron",
+    "name": "Aegidron",
+    "intro": "A long time ago, in an era when communication methods were scarce, people used to send simple signals by flashing the light on the inside of the wings of Pankylosaurus."
+  },
+  {
+    "palSlug": "grizzbolt",
+    "name": "Grizzbolt",
+    "intro": "It has a majestic smile and a strong physique. He behaves quite meekly in front of partners he approves of. But for some reason, his temperament changes drastically once he gets a machine gun."
+  },
+  {
+    "palSlug": "lyleen",
+    "name": "Lyleen",
+    "intro": "This is a loving and gentle Pal. Will take care of the little Pal who have lost their parents. The method of discipline is to release the sun beam with full force."
+  },
+  {
+    "palSlug": "lyleen-noct",
+    "name": "Lyleen Noct",
+    "intro": "This is a personable and well behaved Pal. Will use a super powerful slap to deal with rude people. But occasionally there will be a Pal who takes pleasure in this."
+  },
+  {
+    "palSlug": "orserk",
+    "name": "Orserk",
+    "intro": "Its electric shock can enter through wounds, burning the opponent's entire body. A quarrel between similar Polluxes can be decided in an instant."
+  },
+  {
+    "palSlug": "faleris",
+    "name": "Faleris",
+    "intro": "Once it discovers a group of prey, it will use a scorching whirlwind to burn the area. Therefore Horus's habitat always smells delicious."
+  },
+  {
+    "palSlug": "faleris-aqua",
+    "name": "Faleris Aqua",
+    "intro": "Once it finds a group of prey, it will use strong water to wash away the area. Since they basically rush their prey to unknown places, whether this behavior can be defined as hunting is highly debatable."
+  },
+  {
+    "palSlug": "shadowbeak",
+    "name": "Shadowbeak",
+    "intro": "The existence of taboos born at the end of madness. It has no genetic connection with other Pal, and its existence may have long been separated from the category of Pal."
+  },
+  {
+    "palSlug": "selyne",
+    "name": "Selyne",
+    "intro": "It is said that the crescent-shaped object floating behind him will gradually become more circular as the generations pass. As for what will happen at the full moon phase, no one knows."
+  },
+  {
+    "palSlug": "bastigor",
+    "name": "Bastigor",
+    "intro": "Once you see a round object, you unconsciously want to punch it. For King Frostfang, the second most difficult problem after survival is completing the snowman."
+  },
+  {
+    "palSlug": "shaolong",
+    "name": "Shaolong",
+    "intro": "The spiritual ring is in my heart and will always be with you. The blue sky mirrors the long sky, and the dragon sings in the sky."
+  },
+  {
+    "palSlug": "silvance",
+    "name": "Silvance",
+    "intro": "It has been standing quietly beside the \"World Tree\" since ancient times, always guarding something. Now Mothmon no longer knows what to protect or why. After all, the \"World Tree\" will give guidance. After all, the manipulated spores should also know who the enemy is."
+  },
+  {
+    "palSlug": "dandilord",
+    "name": "Dandilord",
+    "intro": "It has been standing quietly beside the \"World Tree\" since ancient times, always guarding something. Now Ye Manjue can no longer see what he wants to protect, and why he should protect it. After all, \"World Tree\" knows everything. After all, only the fog it manipulates can reveal the truth."
+  },
+  {
+    "palSlug": "bellanoir",
+    "name": "Bellanoir",
+    "intro": "She did not exist as a physical entity, and she once just stared at the world quietly. I don’t know when it started, but the desire to be watched by others arose. The ever-expanding desire even condensed into malice towards the outside world, and she gradually became known as the Crazy Lady."
+  },
+  {
+    "palSlug": "bellanoir-libero",
+    "name": "Bellanoir Libero",
+    "intro": "The desire to be liberated finally could no longer be suppressed. \"'I' long for the gaze of 'self'.\" The sisters who condensed into malice and longed to be watched were finally banished back to the slit of the world and closed their staring eyes."
+  },
+  {
+    "palSlug": "xenolord",
+    "name": "Xenolord",
+    "intro": "- The destination has been reached, priority is given to searching for the individual: Meteor Dragon. - Note: The time limit for completion of suppression is years. - Postscript: No traces of suppression were found, it was confirmed that the target had been assimilated, and the elimination began. - Business contacts: Don’t forget or eat important information!"
+  },
+  {
+    "palSlug": "hartalis",
+    "name": "Hartalis",
+    "intro": "In this quiet place, I feel my mind is calm. There is no one here anymore, everyone is saved. Lord of redemption, please take me with you to the endless silence. ——The ancient documents come to an abrupt end."
+  },
+  {
+    "palSlug": "paladius",
+    "name": "Paladius",
+    "intro": "Once one with the Chaos Knights. Although it was born after negative emotions were removed, there is still a little hatred in the depths of its eyes."
+  },
+  {
+    "palSlug": "necromus",
+    "name": "Necromus",
+    "intro": "He was once one with the Holy Light Knight. Although he is an existence composed of negative emotions after separation, there is still a trace of compassion deep in his eyes."
+  },
+  {
+    "palSlug": "frostallion",
+    "name": "Frostallion",
+    "intro": "The patron saint of the Palpagos Islands, he has the power to summon the harsh winter. It once rose into the sky when disaster swept the earth, summoning an endless winter in an attempt to seal the disaster."
+  },
+  {
+    "palSlug": "frostallion-noct",
+    "name": "Frostallion Noct",
+    "intro": "The patron saint of the Palpagos Islands, he has the power to summon the night. It once rose into the sky when disaster swept the earth, summoning the endless dark night, trying to seal the disaster."
+  },
+  {
+    "palSlug": "neptilius",
+    "name": "Neptilius",
+    "intro": "After Calamity was sealed, strong men from the Skyfall met him. Since then, it has often appeared in front of strong men in the offshore waters. Meeting is inevitable."
+  },
+  {
+    "palSlug": "jetragon",
+    "name": "Jetragon",
+    "intro": "Living in the distant sky, guarding the Palpagos Islands. When Disaster awakens again, the earth cracks, and the sky turns into a sea of ​​fire, it will destroy Disaster with the light that destroys all things."
+  },
+  {
+    "palSlug": "panthalus",
+    "name": "Panthalus",
+    "intro": "Waiting with a mission in mind, the last survivor of the species. Even though it had fulfilled its duty and called out to its mother, only the sound remained in response."
+  },
+  {
+    "palSlug": "astralym",
+    "name": "Astralym",
+    "intro": "Coming to the Palpagos Islands in the distant past, the mysterious Pal ushered in his end. As a disaster, it brought countless destructions, and was sealed for a long time. Eventually he was defeated by a certain Pal trainer."
+  },
+  {
+    "palSlug": "green-slime",
+    "name": "Green Slime",
+    "intro": "[Terraria Linkage] Monsters from another world. It seems like it can be tamed here."
+  },
+  {
+    "palSlug": "blue-slime",
+    "name": "Blue Slime",
+    "intro": "[Terraria Linkage] Monsters from another world. It seems like it can be tamed here."
+  },
+  {
+    "palSlug": "red-slime",
+    "name": "Red Slime",
+    "intro": "[Terraria Linkage] Monsters from another world. It seems like it can be tamed here."
+  },
+  {
+    "palSlug": "purple-slime",
+    "name": "Purple Slime",
+    "intro": "[Terraria Linkage] Monsters from another world. It seems like it can be tamed here."
+  },
+  {
+    "palSlug": "illuminant-slime",
+    "name": "Illuminant Slime",
+    "intro": "[Terraria Linkage] Monsters from another world. It seems like it can be tamed here."
+  },
+  {
+    "palSlug": "rainbow-slime",
+    "name": "Rainbow Slime",
+    "intro": "[Terraria Linkage] Monsters from another world. It seems like it can be tamed here."
+  },
+  {
+    "palSlug": "enchanted-sword",
+    "name": "Enchanted Sword",
+    "intro": "[Terraria Linkage] Monsters from another world. It seems like it can be tamed here."
+  },
+  {
+    "palSlug": "cave-bat",
+    "name": "Cave Bat",
+    "intro": "[Terraria Linkage] Monsters from another world. It seems like it can be tamed here."
+  },
+  {
+    "palSlug": "illuminant-bat",
+    "name": "Illuminant Bat",
+    "intro": "[Terraria Linkage] Monsters from another world. It seems like it can be tamed here."
+  },
+  {
+    "palSlug": "eye-of-cthulhu",
+    "name": "Eye of Cthulhu",
+    "intro": "[Terraria Linkage] Monsters from another world. It seems like it can be tamed here."
+  },
+  {
+    "palSlug": "demon-eye",
+    "name": "Demon Eye",
+    "intro": "[Terraria Linkage] Monsters from another world. It seems like it can be tamed here."
+  }
+]

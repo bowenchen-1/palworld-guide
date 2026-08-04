@@ -15,6 +15,8 @@
     "data:validate": "node scripts/validate-pal-data.mjs",
     "data:drops:import": "node scripts/import-pal-drops-locations.mjs",
     "data:drops:validate": "node scripts/validate-pal-drops-locations.mjs",
+    "data:details:import": "python3 scripts/import-paldb-details.py",
+    "data:details:validate": "node scripts/validate-pal-details.mjs",
     "data:audit": "node scripts/audit-pal-data.mjs",
     "r2:assets": "node scripts/r2-assets.mjs",
     "r2:audit": "node scripts/r2-audit.mjs",

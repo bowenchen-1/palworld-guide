@@ -1,0 +1,1198 @@
+[
+  {
+    "palSlug": "lamball",
+    "description": "Lamball Paldeck No. 001 — a Neutral Pal in Palworld. Find breeding, locations, skills, drops, stats, and the Lucky Lamball variant."
+  },
+  {
+    "palSlug": "cattiva",
+    "description": "Cattiva Paldeck No. 002 — a Neutral Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Cat Helper Partner Skill."
+  },
+  {
+    "palSlug": "chikipi",
+    "description": "Chikipi Paldeck No. 003 — a Neutral Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Egg Layer Partner Skill."
+  },
+  {
+    "palSlug": "lifmunk",
+    "description": "Lifmunk Paldeck No. 004 — a Grass Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Lifmunk Recoil Partner Skill."
+  },
+  {
+    "palSlug": "fuack",
+    "description": "Fuack Paldeck No. 005 — a Water Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Surfing Slam Partner Skill."
+  },
+  {
+    "palSlug": "fuack-ignis",
+    "description": "Fuack Ignis Paldeck No. 005B — a Water and Fire Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Fire Tackle Partner Skill."
+  },
+  {
+    "palSlug": "vixy",
+    "description": "Vixy Paldeck No. 006 — a Neutral Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Dig Here! Partner Skill."
+  },
+  {
+    "palSlug": "celaray",
+    "description": "Celaray Paldeck No. 007 — a Water Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Zephyr Glider Partner Skill."
+  },
+  {
+    "palSlug": "celaray-lux",
+    "description": "Celaray Lux Paldeck No. 007B — a Water and Electric Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Jolt Glider Partner Skill."
+  },
+  {
+    "palSlug": "cremis",
+    "description": "Cremis Paldeck No. 008 — a Neutral Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Fluffy Wool Partner Skill."
+  },
+  {
+    "palSlug": "croajiro",
+    "description": "Croajiro Paldeck No. 009 — a Water Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Leap Stance Partner Skill."
+  },
+  {
+    "palSlug": "croajiro-noct",
+    "description": "Croajiro Noct Paldeck No. 009B — a Water and Dark Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Shadow Stance Partner Skill."
+  },
+  {
+    "palSlug": "herbil",
+    "description": "Herbil Paldeck No. 010 — a Grass and Neutral Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Herbil Pulse Partner Skill."
+  },
+  {
+    "palSlug": "teafant",
+    "description": "Teafant Paldeck No. 011 — a Water Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Soothing Shower Partner Skill."
+  },
+  {
+    "palSlug": "gumoss",
+    "description": "Gumoss Paldeck No. 012 — a Grass and Ground Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Logging Assistance Partner Skill."
+  },
+  {
+    "palSlug": "pupperai",
+    "description": "Pupperai Paldeck No. 013 — a Ground Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Best Boy Partner Skill."
+  },
+  {
+    "palSlug": "clovee",
+    "description": "Clovee Paldeck No. 014 — a Grass and Neutral Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Happy Clover Partner Skill."
+  },
+  {
+    "palSlug": "jolthog",
+    "description": "Jolthog Paldeck No. 015 — a Electric Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Jolt Bomb Partner Skill."
+  },
+  {
+    "palSlug": "jolthog-cryst",
+    "description": "Jolthog Cryst Paldeck No. 015B — a Ice Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Cold Bomb Partner Skill."
+  },
+  {
+    "palSlug": "depresso",
+    "description": "Depresso Paldeck No. 016 — a Dark Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Caffeine Inoculation Partner Skill."
+  },
+  {
+    "palSlug": "pengullet",
+    "description": "Pengullet Paldeck No. 017 — a Water and Ice Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Pengullet Launcher Partner Skill."
+  },
+  {
+    "palSlug": "pengullet-lux",
+    "description": "Pengullet Lux Paldeck No. 017B — a Water and Electric Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Pengullet Lux Launcher Partner Skill."
+  },
+  {
+    "palSlug": "penking",
+    "description": "Penking Paldeck No. 018 — a Water and Ice Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Brave Sailor Partner Skill."
+  },
+  {
+    "palSlug": "penking-lux",
+    "description": "Penking Lux Paldeck No. 018B — a Water and Electric Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Unyielding Storm Commander."
+  },
+  {
+    "palSlug": "hoocrates",
+    "description": "Hoocrates Paldeck No. 019 — a Dark Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Dark Knowledge Partner Skill."
+  },
+  {
+    "palSlug": "melpaca",
+    "description": "Melpaca Paldeck No. 020 — a Neutral Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Pacapaca Wool Partner Skill."
+  },
+  {
+    "palSlug": "kingpaca",
+    "description": "Kingpaca Paldeck No. 021 — a Neutral Pal in Palworld. Find breeding, locations, skills, drops, stats, and its King of Muscles Partner Skill."
+  },
+  {
+    "palSlug": "kingpaca-cryst",
+    "description": "Kingpaca Cryst Paldeck No. 021B — a Ice Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Coldhearted King Partner Skill."
+  },
+  {
+    "palSlug": "daedream",
+    "description": "Daedream Paldeck No. 022 — a Dark Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Dream Chaser Partner Skill."
+  },
+  {
+    "palSlug": "tanzee",
+    "description": "Tanzee Paldeck No. 023 — a Grass Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Cheery Rifle Partner Skill."
+  },
+  {
+    "palSlug": "tanzee-ignis",
+    "description": "Tanzee Ignis Paldeck No. 023B — a Fire Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Chipper Chimp Gunfire Partner Skill."
+  },
+  {
+    "palSlug": "nox",
+    "description": "Nox Paldeck No. 024 — a Dark Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Kuudere Partner Skill."
+  },
+  {
+    "palSlug": "flambelle",
+    "description": "Flambelle Paldeck No. 025 — a Fire Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Magma Tears Partner Skill."
+  },
+  {
+    "palSlug": "rooby",
+    "description": "Rooby Paldeck No. 026 — a Fire Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Tiny Spark Partner Skill."
+  },
+  {
+    "palSlug": "mau",
+    "description": "Mau Paldeck No. 027 — a Dark Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Gold Digger Partner Skill."
+  },
+  {
+    "palSlug": "mau-cryst",
+    "description": "Mau Cryst Paldeck No. 027B — a Ice Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Icy Whispers Partner Skill."
+  },
+  {
+    "palSlug": "rushoar",
+    "description": "Rushoar Paldeck No. 028 — a Ground Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Hard Head Partner Skill."
+  },
+  {
+    "palSlug": "foxparks",
+    "description": "Foxparks Paldeck No. 029 — a Fire Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Huggy Fire Partner Skill."
+  },
+  {
+    "palSlug": "foxparks-cryst",
+    "description": "Foxparks Cryst Paldeck No. 029B — a Ice Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Huggy Frost Partner Skill."
+  },
+  {
+    "palSlug": "killamari",
+    "description": "Killamari Paldeck No. 030 — a Dark and Water Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Fried Squid Partner Skill."
+  },
+  {
+    "palSlug": "killamari-primo",
+    "description": "Killamari Primo Paldeck No. 030B — a Neutral and Water Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Fried Killamari Partner Skill."
+  },
+  {
+    "palSlug": "fuddler",
+    "description": "Fuddler Paldeck No. 031 — a Ground Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Mining Assistance Partner Skill."
+  },
+  {
+    "palSlug": "eikthyrdeer",
+    "description": "Eikthyrdeer Paldeck No. 032 — a Neutral Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Guardian of the Forest Partner Skill."
+  },
+  {
+    "palSlug": "eikthyrdeer-terra",
+    "description": "Eikthyrdeer Terra Paldeck No. 032B — a Ground Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Guardian of the Golden Forest."
+  },
+  {
+    "palSlug": "direhowl",
+    "description": "Direhowl Paldeck No. 033 — a Neutral Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Direhowl Rider Partner Skill."
+  },
+  {
+    "palSlug": "caprity",
+    "description": "Caprity Paldeck No. 034 — a Grass Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Berry Picker Partner Skill."
+  },
+  {
+    "palSlug": "caprity-noct",
+    "description": "Caprity Noct Paldeck No. 034B — a Dark Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Venom Picker Partner Skill."
+  },
+  {
+    "palSlug": "swee",
+    "description": "Swee Paldeck No. 035 — a Ice Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Fluffy Partner Skill."
+  },
+  {
+    "palSlug": "sweepa",
+    "description": "Sweepa Paldeck No. 036 — a Ice Pal in Palworld. Find breeding, locations, skills, drops, stats, and its King of Fluff Partner Skill."
+  },
+  {
+    "palSlug": "turtacle",
+    "description": "Turtacle Paldeck No. 037 — a Water Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Spikey Carrier Partner Skill."
+  },
+  {
+    "palSlug": "turtacle-terra",
+    "description": "Turtacle Terra Paldeck No. 037B — a Water and Ground Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Shiny Hauler Partner Skill."
+  },
+  {
+    "palSlug": "hangyu",
+    "description": "Hangyu Paldeck No. 038 — a Ground Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Flying Trapeze Partner Skill."
+  },
+  {
+    "palSlug": "hangyu-cryst",
+    "description": "Hangyu Cryst Paldeck No. 038B — a Ice Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Winter Trapeze Partner Skill."
+  },
+  {
+    "palSlug": "woolipop",
+    "description": "Woolipop Paldeck No. 039 — a Neutral Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Candy Pop Partner Skill."
+  },
+  {
+    "palSlug": "woolipop-terra",
+    "description": "Woolipop Terra Paldeck No. 039B — a Ground Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Bitter Pop Partner Skill."
+  },
+  {
+    "palSlug": "mozzarina",
+    "description": "Mozzarina Paldeck No. 040 — a Neutral Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Milk Maker Partner Skill."
+  },
+  {
+    "palSlug": "azurobe",
+    "description": "Azurobe Paldeck No. 041 — a Water and Dragon Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Waterwing Dance Partner Skill."
+  },
+  {
+    "palSlug": "azurobe-cryst",
+    "description": "Azurobe Cryst Paldeck No. 041B — a Ice and Dragon Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Icewing Dance Partner Skill."
+  },
+  {
+    "palSlug": "sparkit",
+    "description": "Sparkit Paldeck No. 042 — a Electric Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Static Electricity Partner Skill."
+  },
+  {
+    "palSlug": "kelpsea",
+    "description": "Kelpsea Paldeck No. 043 — a Water Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Aqua Spout Partner Skill."
+  },
+  {
+    "palSlug": "kelpsea-ignis",
+    "description": "Kelpsea Ignis Paldeck No. 043B — a Fire Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Lava Spout Partner Skill."
+  },
+  {
+    "palSlug": "ribbuny",
+    "description": "Ribbuny Paldeck No. 044 — a Neutral Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Happy-Go-Lucky Bunny Partner Skill."
+  },
+  {
+    "palSlug": "ribbuny-botan",
+    "description": "Ribbuny Botan Paldeck No. 044B — a Grass Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Ground 'n' Pound Partner Skill."
+  },
+  {
+    "palSlug": "jelliette",
+    "description": "Jelliette Paldeck No. 045 — a Water Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Jelliette Drop Partner Skill."
+  },
+  {
+    "palSlug": "jellroy",
+    "description": "Jellroy Paldeck No. 046 — a Water and Dark Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Jellroy Drop Partner Skill."
+  },
+  {
+    "palSlug": "amione",
+    "description": "Amione Paldeck No. 047 — a Water Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Magical Twin Powers Partner Skill."
+  },
+  {
+    "palSlug": "gloopie",
+    "description": "Gloopie Paldeck No. 048 — a Water and Dark Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Sticky Princess Partner Skill."
+  },
+  {
+    "palSlug": "gloopie-primo",
+    "description": "Gloopie Primo Paldeck No. 048B — a Water and Neutral Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Cephalo-Princess Partner Skill."
+  },
+  {
+    "palSlug": "galeclaw",
+    "description": "Galeclaw Paldeck No. 049 — a Neutral Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Galeclaw Glider Partner Skill."
+  },
+  {
+    "palSlug": "wispaw",
+    "description": "Wispaw Paldeck No. 050 — a Dark Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Death-Cheating Feline Partner Skill."
+  },
+  {
+    "palSlug": "nitewing",
+    "description": "Nitewing Paldeck No. 051 — a Neutral Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Travel Companion Partner Skill."
+  },
+  {
+    "palSlug": "tombat",
+    "description": "Tombat Paldeck No. 052 — a Dark Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Ultrasonic Sensor Partner Skill."
+  },
+  {
+    "palSlug": "tocotoco",
+    "description": "Tocotoco Paldeck No. 053 — a Neutral Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Eggbomb Launcher Partner Skill."
+  },
+  {
+    "palSlug": "univolt",
+    "description": "Univolt Paldeck No. 054 — a Electric Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Swift Deity Partner Skill."
+  },
+  {
+    "palSlug": "univolt-cryst",
+    "description": "Univolt Cryst Paldeck No. 054B — a Ice Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Frigid Deity Partner Skill."
+  },
+  {
+    "palSlug": "gobfin",
+    "description": "Gobfin Paldeck No. 055 — a Water Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Angry Shark Partner Skill."
+  },
+  {
+    "palSlug": "gobfin-ignis",
+    "description": "Gobfin Ignis Paldeck No. 055B — a Fire Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Angry Shark Partner Skill."
+  },
+  {
+    "palSlug": "loupmoon",
+    "description": "Loupmoon Paldeck No. 056 — a Dark Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Dark Gleam Strike Partner Skill."
+  },
+  {
+    "palSlug": "loupmoon-cryst",
+    "description": "Loupmoon Cryst Paldeck No. 056B — a Ice Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Frozen Gleam Strike Partner Skill."
+  },
+  {
+    "palSlug": "cawgnito",
+    "description": "Cawgnito Paldeck No. 057 — a Dark Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Eerie Nightstreaker Partner Skill."
+  },
+  {
+    "palSlug": "arsox",
+    "description": "Arsox Paldeck No. 058 — a Fire Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Warm Body Partner Skill."
+  },
+  {
+    "palSlug": "muffly",
+    "description": "Muffly Paldeck No. 059 — a Ice Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Fluffy Flutterer Partner Skill."
+  },
+  {
+    "palSlug": "bristla",
+    "description": "Bristla Paldeck No. 060 — a Grass Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Princess Gaze Partner Skill."
+  },
+  {
+    "palSlug": "cinnamoth",
+    "description": "Cinnamoth Paldeck No. 061 — a Grass Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Mysterious Scales Partner Skill."
+  },
+  {
+    "palSlug": "puffolt",
+    "description": "Puffolt Paldeck No. 062 — a Electric Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Crackle Booster Partner Skill."
+  },
+  {
+    "palSlug": "elphidran",
+    "description": "Elphidran Paldeck No. 063 — a Dragon Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Amicable Holy Dragon Partner Skill."
+  },
+  {
+    "palSlug": "elphidran-aqua",
+    "description": "Elphidran Aqua Paldeck No. 063B — a Dragon and Water Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Amicable Water Dragon Partner Skill."
+  },
+  {
+    "palSlug": "vanwyrm",
+    "description": "Vanwyrm Paldeck No. 064 — a Fire and Dark Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Aerial Marauder Partner Skill."
+  },
+  {
+    "palSlug": "vanwyrm-cryst",
+    "description": "Vanwyrm Cryst Paldeck No. 064B — a Ice and Dark Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Aerial Marauder Partner Skill."
+  },
+  {
+    "palSlug": "felbat",
+    "description": "Felbat Paldeck No. 065 — a Dark Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Life Steal Partner Skill."
+  },
+  {
+    "palSlug": "vaelet",
+    "description": "Vaelet Paldeck No. 066 — a Grass Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Purification of Gaia Partner Skill."
+  },
+  {
+    "palSlug": "beegarde",
+    "description": "Beegarde Paldeck No. 067 — a Grass Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Worker Bee Partner Skill."
+  },
+  {
+    "palSlug": "elizabee",
+    "description": "Elizabee Paldeck No. 068 — a Grass Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Queen Bee Command Partner Skill."
+  },
+  {
+    "palSlug": "lovander",
+    "description": "Lovander Paldeck No. 069 — a Dark Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Heart Drain Partner Skill."
+  },
+  {
+    "palSlug": "grintale",
+    "description": "Grintale Paldeck No. 070 — a Neutral Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Glaring Cat's Eye Partner Skill."
+  },
+  {
+    "palSlug": "tarantriss",
+    "description": "Tarantriss Paldeck No. 071 — a Dark Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Tarantriss’ Web Partner Skill."
+  },
+  {
+    "palSlug": "polapup",
+    "description": "Polapup Paldeck No. 072 — a Ice and Water Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Rider of the Snowy Mountain."
+  },
+  {
+    "palSlug": "polapup-terra",
+    "description": "Polapup Terra Paldeck No. 072B — a Ice and Ground Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Snowy Mountain Slider Partner Skill."
+  },
+  {
+    "palSlug": "leezpunk",
+    "description": "Leezpunk Paldeck No. 073 — a Dark Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Too Cool to be Seen Partner Skill."
+  },
+  {
+    "palSlug": "leezpunk-ignis",
+    "description": "Leezpunk Ignis Paldeck No. 073B — a Fire Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Too Cool to be Seen Partner Skill."
+  },
+  {
+    "palSlug": "gorirat",
+    "description": "Gorirat Paldeck No. 074 — a Neutral Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Full-Power Gorilla Mode Partner Skill."
+  },
+  {
+    "palSlug": "gorirat-terra",
+    "description": "Gorirat Terra Paldeck No. 074B — a Ground Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Full-Power Gorilla Pound Partner Skill."
+  },
+  {
+    "palSlug": "surfent",
+    "description": "Surfent Paldeck No. 075 — a Water Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Swift Swimmer Partner Skill."
+  },
+  {
+    "palSlug": "surfent-terra",
+    "description": "Surfent Terra Paldeck No. 075B — a Ground Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Sand Swimmer Partner Skill."
+  },
+  {
+    "palSlug": "robinquill",
+    "description": "Robinquill Paldeck No. 076 — a Grass Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Grounded Archer Partner Skill."
+  },
+  {
+    "palSlug": "robinquill-terra",
+    "description": "Robinquill Terra Paldeck No. 076B — a Grass and Ground Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Master Archer Partner Skill."
+  },
+  {
+    "palSlug": "flopie",
+    "description": "Flopie Paldeck No. 077 — a Grass Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Helper Bunny Partner Skill."
+  },
+  {
+    "palSlug": "wixen",
+    "description": "Wixen Paldeck No. 078 — a Fire Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Lord Fox Partner Skill."
+  },
+  {
+    "palSlug": "wixen-noct",
+    "description": "Wixen Noct Paldeck No. 078B — a Fire and Dark Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Black Fox Lord Partner Skill."
+  },
+  {
+    "palSlug": "katress",
+    "description": "Katress Paldeck No. 079 — a Dark Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Mystical Black Magic Partner Skill."
+  },
+  {
+    "palSlug": "katress-ignis",
+    "description": "Katress Ignis Paldeck No. 079B — a Dark and Fire Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Blazing Black Magic Partner Skill."
+  },
+  {
+    "palSlug": "helzephyr",
+    "description": "Helzephyr Paldeck No. 080 — a Dark Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Wings of Death Partner Skill."
+  },
+  {
+    "palSlug": "helzephyr-lux",
+    "description": "Helzephyr Lux Paldeck No. 080B — a Dark and Electric Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Wings of Thunder Partner Skill."
+  },
+  {
+    "palSlug": "elgrove",
+    "description": "Elgrove Paldeck No. 081 — a Grass Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Mother Nature's Menace Partner Skill."
+  },
+  {
+    "palSlug": "elgrove-cryst",
+    "description": "Elgrove Cryst Paldeck No. 081B — a Ice Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Father Winter's Threat Partner Skill."
+  },
+  {
+    "palSlug": "lunaris",
+    "description": "Lunaris Paldeck No. 082 — a Neutral Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Antigravity Partner Skill."
+  },
+  {
+    "palSlug": "fenglope",
+    "description": "Fenglope Paldeck No. 083 — a Neutral Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Wind and Clouds Partner Skill."
+  },
+  {
+    "palSlug": "fenglope-lux",
+    "description": "Fenglope Lux Paldeck No. 083B — a Electric Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Stormcloud Partner Skill."
+  },
+  {
+    "palSlug": "dinossom",
+    "description": "Dinossom Paldeck No. 084 — a Grass and Dragon Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Fragrant Dragon Partner Skill."
+  },
+  {
+    "palSlug": "dinossom-lux",
+    "description": "Dinossom Lux Paldeck No. 084B — a Electric and Dragon Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Thunder Dragon Partner Skill."
+  },
+  {
+    "palSlug": "bushi",
+    "description": "Bushi Paldeck No. 085 — a Fire Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Brandish Blade Partner Skill."
+  },
+  {
+    "palSlug": "bushi-noct",
+    "description": "Bushi Noct Paldeck No. 085B — a Fire and Dark Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Void Blade Partner Skill."
+  },
+  {
+    "palSlug": "munchill",
+    "description": "Munchill Paldeck No. 086 — a Ice and Water Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Icy Maw Partner Skill."
+  },
+  {
+    "palSlug": "mammorest",
+    "description": "Mammorest Paldeck No. 087 — a Grass and Ground Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Gaia Crusher Partner Skill."
+  },
+  {
+    "palSlug": "mammorest-cryst",
+    "description": "Mammorest Cryst Paldeck No. 087B — a Ice and Ground Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Ice Crusher Partner Skill."
+  },
+  {
+    "palSlug": "finsider",
+    "description": "Finsider Paldeck No. 088 — a Water Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Water Gun Partner Skill."
+  },
+  {
+    "palSlug": "finsider-ignis",
+    "description": "Finsider Ignis Paldeck No. 088B — a Water and Fire Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Ember Chamber Partner Skill."
+  },
+  {
+    "palSlug": "petallia",
+    "description": "Petallia Paldeck No. 089 — a Grass Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Blessing of the Flower Spirit."
+  },
+  {
+    "palSlug": "petallia-ignis",
+    "description": "Petallia Ignis Paldeck No. 089B — a Grass and Fire Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Passion of the Flower Spirit."
+  },
+  {
+    "palSlug": "leafan",
+    "description": "Leafan Paldeck No. 090 — a Grass Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Selfless Discipline Partner Skill."
+  },
+  {
+    "palSlug": "incineram",
+    "description": "Incineram Paldeck No. 091 — a Fire and Dark Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Flameclaw Hunter Partner Skill."
+  },
+  {
+    "palSlug": "incineram-noct",
+    "description": "Incineram Noct Paldeck No. 091B — a Dark Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Darkclaw Hunter Partner Skill."
+  },
+  {
+    "palSlug": "dazzi",
+    "description": "Dazzi Paldeck No. 092 — a Electric Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Lady of Lightning Partner Skill."
+  },
+  {
+    "palSlug": "dazzi-noct",
+    "description": "Dazzi Noct Paldeck No. 092B — a Dark and Electric Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Lady of Dark Lightning Partner Skill."
+  },
+  {
+    "palSlug": "pyrin",
+    "description": "Pyrin Paldeck No. 093 — a Fire Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Red Hare Partner Skill."
+  },
+  {
+    "palSlug": "pyrin-noct",
+    "description": "Pyrin Noct Paldeck No. 093B — a Fire and Dark Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Black Hare Partner Skill."
+  },
+  {
+    "palSlug": "relaxaurus",
+    "description": "Relaxaurus Paldeck No. 094 — a Dragon and Water Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Hungry Missile Partner Skill."
+  },
+  {
+    "palSlug": "relaxaurus-lux",
+    "description": "Relaxaurus Lux Paldeck No. 094B — a Dragon and Electric Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Missile Party Partner Skill."
+  },
+  {
+    "palSlug": "foxcicle",
+    "description": "Foxcicle Paldeck No. 095 — a Ice Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Aurora Guide Partner Skill."
+  },
+  {
+    "palSlug": "beakon",
+    "description": "Beakon Paldeck No. 096 — a Electric Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Thunderous Partner Skill."
+  },
+  {
+    "palSlug": "beakon-cryst",
+    "description": "Beakon Cryst Paldeck No. 096B — a Ice Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Coldsnap Partner Skill."
+  },
+  {
+    "palSlug": "ghangler",
+    "description": "Ghangler Paldeck No. 097 — a Dark and Water Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Master of Darkness Partner Skill."
+  },
+  {
+    "palSlug": "ghangler-ignis",
+    "description": "Ghangler Ignis Paldeck No. 097B — a Fire and Water Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Abyssal Celebrity Chef Partner Skill."
+  },
+  {
+    "palSlug": "rayhound",
+    "description": "Rayhound Paldeck No. 098 — a Electric Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Lightning Shepherd Partner Skill."
+  },
+  {
+    "palSlug": "rayhound-cryst",
+    "description": "Rayhound Cryst Paldeck No. 098B — a Ice Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Snow Shepherd Partner Skill."
+  },
+  {
+    "palSlug": "menasting",
+    "description": "Menasting Paldeck No. 099 — a Dark and Ground Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Steel Scorpion Partner Skill."
+  },
+  {
+    "palSlug": "menasting-terra",
+    "description": "Menasting Terra Paldeck No. 099B — a Ground Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Golden Scorpion Partner Skill."
+  },
+  {
+    "palSlug": "needoll",
+    "description": "Needoll Paldeck No. 100 — a Grass Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Hug Me Please Partner Skill."
+  },
+  {
+    "palSlug": "needoll-noct",
+    "description": "Needoll Noct Paldeck No. 100B — a Dark and Grass Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Hug You So Much Partner Skill."
+  },
+  {
+    "palSlug": "reindrix",
+    "description": "Reindrix Paldeck No. 101 — a Ice Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Cool Body Partner Skill."
+  },
+  {
+    "palSlug": "mossanda",
+    "description": "Mossanda Paldeck No. 102 — a Grass Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Grenadier Panda Partner Skill."
+  },
+  {
+    "palSlug": "mossanda-lux",
+    "description": "Mossanda Lux Paldeck No. 102B — a Electric Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Grenadier Panda Partner Skill."
+  },
+  {
+    "palSlug": "chillet",
+    "description": "Chillet Paldeck No. 103 — a Ice and Dragon Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Wriggling Weasel Partner Skill."
+  },
+  {
+    "palSlug": "chillet-ignis",
+    "description": "Chillet Ignis Paldeck No. 103B — a Fire and Dragon Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Sparkling Weasel Partner Skill."
+  },
+  {
+    "palSlug": "ragnahawk",
+    "description": "Ragnahawk Paldeck No. 104 — a Fire Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Flame Wing Partner Skill."
+  },
+  {
+    "palSlug": "moldron",
+    "description": "Moldron Paldeck No. 105 — a Fire and Ground Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Magma Overload Partner Skill."
+  },
+  {
+    "palSlug": "moldron-cryst",
+    "description": "Moldron Cryst Paldeck No. 105B — a Ice and Ground Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Ice Overload Partner Skill."
+  },
+  {
+    "palSlug": "palumba",
+    "description": "Palumba Paldeck No. 106 — a Grass Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Samba Step Partner Skill."
+  },
+  {
+    "palSlug": "digtoise",
+    "description": "Digtoise Paldeck No. 107 — a Ground Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Drill Crusher Partner Skill."
+  },
+  {
+    "palSlug": "broncherry",
+    "description": "Broncherry Paldeck No. 108 — a Grass Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Love's First Blossom Partner Skill."
+  },
+  {
+    "palSlug": "broncherry-aqua",
+    "description": "Broncherry Aqua Paldeck No. 108B — a Grass and Water Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Purity's Full Bloom Partner Skill."
+  },
+  {
+    "palSlug": "dumud",
+    "description": "Dumud Paldeck No. 109 — a Ground and Water Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Soil Improver Partner Skill."
+  },
+  {
+    "palSlug": "dumud-gild",
+    "description": "Dumud Gild Paldeck No. 109B — a Ground and Water Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Golden Harvest Partner Skill."
+  },
+  {
+    "palSlug": "braloha",
+    "description": "Braloha Paldeck No. 110 — a Grass and Ground Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Balmy Weather Partner Skill."
+  },
+  {
+    "palSlug": "kitsun",
+    "description": "Kitsun Paldeck No. 111 — a Fire Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Wolf of the Sun Partner Skill."
+  },
+  {
+    "palSlug": "kitsun-noct",
+    "description": "Kitsun Noct Paldeck No. 111B — a Dark Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Gloomhowl Partner Skill."
+  },
+  {
+    "palSlug": "blazehowl",
+    "description": "Blazehowl Paldeck No. 112 — a Fire Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Hellflame Lion Partner Skill."
+  },
+  {
+    "palSlug": "blazehowl-noct",
+    "description": "Blazehowl Noct Paldeck No. 112B — a Fire and Dark Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Darkflame Lion Partner Skill."
+  },
+  {
+    "palSlug": "warsect",
+    "description": "Warsect Paldeck No. 113 — a Ground and Grass Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Cast-Iron Shell Partner Skill."
+  },
+  {
+    "palSlug": "warsect-terra",
+    "description": "Warsect Terra Paldeck No. 113B — a Ground Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Fullmetal Shell Partner Skill."
+  },
+  {
+    "palSlug": "frostplume",
+    "description": "Frostplume Paldeck No. 114 — a Ice Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Peacock Pounce Partner Skill."
+  },
+  {
+    "palSlug": "majex",
+    "description": "Majex Paldeck No. 115 — a Dark and Fire Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Phantasmal Arcana Partner Skill."
+  },
+  {
+    "palSlug": "sibelyx",
+    "description": "Sibelyx Paldeck No. 116 — a Ice Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Silk Shroud Partner Skill."
+  },
+  {
+    "palSlug": "sibelyx-primo",
+    "description": "Sibelyx Primo Paldeck No. 116B — a Neutral Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Gilded Shroud Partner Skill."
+  },
+  {
+    "palSlug": "maraith",
+    "description": "Maraith Paldeck No. 117 — a Dark Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Messenger of Death Partner Skill."
+  },
+  {
+    "palSlug": "shroomer",
+    "description": "Shroomer Paldeck No. 118 — a Grass Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Rampant Spores Partner Skill."
+  },
+  {
+    "palSlug": "shroomer-noct",
+    "description": "Shroomer Noct Paldeck No. 118B — a Grass and Dark Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Roiling Spores Partner Skill."
+  },
+  {
+    "palSlug": "icelyn",
+    "description": "Icelyn Paldeck No. 119 — a Ice Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Witch's Icy Veil Partner Skill."
+  },
+  {
+    "palSlug": "gildra",
+    "description": "Gildra Paldeck No. 120 — a Dark and Ground Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Resurrection Partner Skill."
+  },
+  {
+    "palSlug": "jormuntide",
+    "description": "Jormuntide Paldeck No. 121 — a Dragon and Water Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Stormbringer Sea Dragon Partner Skill."
+  },
+  {
+    "palSlug": "jormuntide-ignis",
+    "description": "Jormuntide Ignis Paldeck No. 121B — a Dragon and Fire Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Stormbringer Lava Dragon Partner Skill."
+  },
+  {
+    "palSlug": "suzaku",
+    "description": "Suzaku Paldeck No. 122 — a Fire Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Wings of Flame Partner Skill."
+  },
+  {
+    "palSlug": "suzaku-aqua",
+    "description": "Suzaku Aqua Paldeck No. 122B — a Water Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Wings of Water Partner Skill."
+  },
+  {
+    "palSlug": "dazemu",
+    "description": "Dazemu Paldeck No. 123 — a Ground Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Sand Sprint Partner Skill."
+  },
+  {
+    "palSlug": "quivern",
+    "description": "Quivern Paldeck No. 124 — a Dragon Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Sky Dragon Affection Partner Skill."
+  },
+  {
+    "palSlug": "quivern-botan",
+    "description": "Quivern Botan Paldeck No. 124B — a Dragon and Grass Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Grass Dragon Affection Partner Skill."
+  },
+  {
+    "palSlug": "lullu",
+    "description": "Lullu Paldeck No. 125 — a Grass Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Floral Boost Partner Skill."
+  },
+  {
+    "palSlug": "kikit",
+    "description": "Kikit Paldeck No. 126 — a Ground Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Sandball Soccer Partner Skill."
+  },
+  {
+    "palSlug": "yakumo",
+    "description": "Yakumo Paldeck No. 127 — a Neutral Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Birds of a Feather Partner Skill."
+  },
+  {
+    "palSlug": "skutlass",
+    "description": "Skutlass Paldeck No. 128 — a Water Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Fish Fillet Partner Skill."
+  },
+  {
+    "palSlug": "skutlass-ignis",
+    "description": "Skutlass Ignis Paldeck No. 128B — a Water and Fire Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Seared Fish Fillet Partner Skill."
+  },
+  {
+    "palSlug": "reptyro",
+    "description": "Reptyro Paldeck No. 129 — a Fire and Ground Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Ore-Loving Beast Partner Skill."
+  },
+  {
+    "palSlug": "reptyro-cryst",
+    "description": "Reptyro Cryst Paldeck No. 129B — a Ice and Ground Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Ice-Loving Beast Partner Skill."
+  },
+  {
+    "palSlug": "starryon",
+    "description": "Starryon Paldeck No. 130 — a Dark Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Night Dancer Partner Skill."
+  },
+  {
+    "palSlug": "starryon-primo",
+    "description": "Starryon Primo Paldeck No. 130B — a Neutral Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Light Dancer Partner Skill."
+  },
+  {
+    "palSlug": "pierdon",
+    "description": "Pierdon Paldeck No. 131 — a Ground Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Power Stone Partner Skill."
+  },
+  {
+    "palSlug": "pierdon-cryst",
+    "description": "Pierdon Cryst Paldeck No. 131B — a Ice Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Power Crystal Partner Skill."
+  },
+  {
+    "palSlug": "cryolinx",
+    "description": "Cryolinx Paldeck No. 132 — a Ice Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Dragon Hunter Partner Skill."
+  },
+  {
+    "palSlug": "cryolinx-terra",
+    "description": "Cryolinx Terra Paldeck No. 132B — a Ground Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Explosive Strength Partner Skill."
+  },
+  {
+    "palSlug": "snugloo",
+    "description": "Snugloo Paldeck No. 133 — a Ice Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Invisible Eye Partner Skill."
+  },
+  {
+    "palSlug": "wumpo",
+    "description": "Wumpo Paldeck No. 134 — a Ice Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Guardian of the Snowy Mountain."
+  },
+  {
+    "palSlug": "wumpo-botan",
+    "description": "Wumpo Botan Paldeck No. 134B — a Grass Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Guardian of the South Partner Skill."
+  },
+  {
+    "palSlug": "sootseer",
+    "description": "Sootseer Paldeck No. 135 — a Dark and Fire Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Grave Robber Partner Skill."
+  },
+  {
+    "palSlug": "carnibora",
+    "description": "Carnibora Paldeck No. 136 — a Grass Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Entangling Tongue Partner Skill."
+  },
+  {
+    "palSlug": "blazamut",
+    "description": "Blazamut Paldeck No. 137 — a Fire Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Magma Kaiser Partner Skill."
+  },
+  {
+    "palSlug": "blazamut-ryu",
+    "description": "Blazamut Ryu Paldeck No. 137B — a Dragon and Fire Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Dragon Kaiser Partner Skill."
+  },
+  {
+    "palSlug": "dualith",
+    "description": "Dualith Paldeck No. 138 — a Ground and Grass Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Forest Laser Partner Skill."
+  },
+  {
+    "palSlug": "dualith-noct",
+    "description": "Dualith Noct Paldeck No. 138B — a Ground and Dark Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Corruption Laser Partner Skill."
+  },
+  {
+    "palSlug": "anubis",
+    "description": "Anubis Paldeck No. 139 — a Ground Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Guardian of the Desert Partner Skill."
+  },
+  {
+    "palSlug": "sekhmet",
+    "description": "Sekhmet Paldeck No. 140 — a Ground Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Desert Empress Partner Skill."
+  },
+  {
+    "palSlug": "prixter",
+    "description": "Prixter Paldeck No. 141 — a Dark and Ground Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Phantom Venom Partner Skill."
+  },
+  {
+    "palSlug": "prixter-lux",
+    "description": "Prixter Lux Paldeck No. 141B — a Electric and Ground Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Scorpion Longwave Partner Skill."
+  },
+  {
+    "palSlug": "tetroise",
+    "description": "Tetroise Paldeck No. 142 — a Ground Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Masonry Archelon Partner Skill."
+  },
+  {
+    "palSlug": "tetroise-primo",
+    "description": "Tetroise Primo Paldeck No. 142B — a Neutral Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Stone-Chaser Archelon Partner Skill."
+  },
+  {
+    "palSlug": "nyafia",
+    "description": "Nyafia Paldeck No. 143 — a Dark Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Shot-Nyan Mode Partner Skill."
+  },
+  {
+    "palSlug": "mimog",
+    "description": "Mimog Paldeck No. 144 — a Neutral Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Master of Unlocking Partner Skill."
+  },
+  {
+    "palSlug": "xenovader",
+    "description": "Xenovader Paldeck No. 145 — a Dark Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Unknown Invader Partner Skill."
+  },
+  {
+    "palSlug": "xenogard",
+    "description": "Xenogard Paldeck No. 146 — a Dragon Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Unknown Intruder Partner Skill."
+  },
+  {
+    "palSlug": "prunelia",
+    "description": "Prunelia Paldeck No. 147 — a Grass and Dark Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Prayer for Abundant Harvest."
+  },
+  {
+    "palSlug": "nitemary",
+    "description": "Nitemary Paldeck No. 148 — a Dark Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Soul Collector Partner Skill."
+  },
+  {
+    "palSlug": "nitemary-botan",
+    "description": "Nitemary Botan Paldeck No. 148B — a Grass Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Soul Binder Partner Skill."
+  },
+  {
+    "palSlug": "smokie",
+    "description": "Smokie Paldeck No. 149 — a Dark Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Dig, Smokie! Dig! Partner Skill."
+  },
+  {
+    "palSlug": "smokie-cryst",
+    "description": "Smokie Cryst Paldeck No. 149B — a Dark and Ice Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Cryo Instincts Partner Skill."
+  },
+  {
+    "palSlug": "omascul",
+    "description": "Omascul Paldeck No. 150 — a Dark Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Masquerade Dance Partner Skill."
+  },
+  {
+    "palSlug": "whalaska",
+    "description": "Whalaska Paldeck No. 151 — a Ice and Water Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Chilled Whale Cruiser Partner Skill."
+  },
+  {
+    "palSlug": "whalaska-ignis",
+    "description": "Whalaska Ignis Paldeck No. 151B — a Ice and Fire Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Cozy Whale Cruiser Partner Skill."
+  },
+  {
+    "palSlug": "verdash",
+    "description": "Verdash Paldeck No. 152 — a Grass Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Grassland Gymnast Partner Skill."
+  },
+  {
+    "palSlug": "splatterina",
+    "description": "Splatterina Paldeck No. 153 — a Dark Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Blade of Uncontrolled Passion."
+  },
+  {
+    "palSlug": "gildane",
+    "description": "Gildane Paldeck No. 154 — a Ground Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Sandstorm's Blessing Partner Skill."
+  },
+  {
+    "palSlug": "dogen",
+    "description": "Dogen Paldeck No. 155 — a Neutral Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Homeward Prayer Partner Skill."
+  },
+  {
+    "palSlug": "bulldosu",
+    "description": "Bulldosu Paldeck No. 156 — a Ground Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Yokozuna's Presence Partner Skill."
+  },
+  {
+    "palSlug": "celesdir",
+    "description": "Celesdir Paldeck No. 157 — a Neutral Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Blessing of Purification Partner Skill."
+  },
+  {
+    "palSlug": "celesdir-noct",
+    "description": "Celesdir Noct Paldeck No. 157B — a Dark Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Blessing of Chaos Partner Skill."
+  },
+  {
+    "palSlug": "astegon",
+    "description": "Astegon Paldeck No. 158 — a Dragon and Dark Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Black Ankylosaur Partner Skill."
+  },
+  {
+    "palSlug": "knocklem",
+    "description": "Knocklem Paldeck No. 159 — a Ground Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Steel Guardian Mode Partner Skill."
+  },
+  {
+    "palSlug": "knocklem-ignis",
+    "description": "Knocklem Ignis Paldeck No. 159B — a Fire Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Iron Guardian Mode Partner Skill."
+  },
+  {
+    "palSlug": "silvegis",
+    "description": "Silvegis Paldeck No. 160 — a Dragon Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Aegis Shield Partner Skill."
+  },
+  {
+    "palSlug": "azurmane",
+    "description": "Azurmane Paldeck No. 161 — a Electric Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Plasma Dash Partner Skill."
+  },
+  {
+    "palSlug": "valentail",
+    "description": "Valentail Paldeck No. 162 — a Neutral Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Big Stretch Partner Skill."
+  },
+  {
+    "palSlug": "snock",
+    "description": "Snock Paldeck No. 163 — a Electric Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Charging Shell Partner Skill."
+  },
+  {
+    "palSlug": "snock-lux",
+    "description": "Snock Lux Paldeck No. 163B — a Electric and Ground Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Grounding Shell Partner Skill."
+  },
+  {
+    "palSlug": "souffline",
+    "description": "Souffline Paldeck No. 164 — a Grass Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Fuzzy Fairy Partner Skill."
+  },
+  {
+    "palSlug": "lapiron",
+    "description": "Lapiron Paldeck No. 165 — a Ground Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Friend of Earth Partner Skill."
+  },
+  {
+    "palSlug": "hoodle",
+    "description": "Hoodle Paldeck No. 166 — a Dark Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Void-Dweller Partner Skill."
+  },
+  {
+    "palSlug": "slowatt",
+    "description": "Slowatt Paldeck No. 167 — a Electric Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Chillswitch Partner Skill."
+  },
+  {
+    "palSlug": "bakemi",
+    "description": "Bakemi Paldeck No. 168 — a Dark Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Grinning Death Partner Skill."
+  },
+  {
+    "palSlug": "solmora",
+    "description": "Solmora Paldeck No. 169 — a Water Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Charming Fish Partner Skill."
+  },
+  {
+    "palSlug": "solmora-lux",
+    "description": "Solmora Lux Paldeck No. 169B — a Water and Electric Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Shocking Fish Partner Skill."
+  },
+  {
+    "palSlug": "lapure",
+    "description": "Lapure Paldeck No. 170 — a Neutral Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Long-Sleeved Hurray Partner Skill."
+  },
+  {
+    "palSlug": "eidrolon",
+    "description": "Eidrolon Paldeck No. 171 — a Dragon and Dark Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Liberated Pterosaur Partner Skill."
+  },
+  {
+    "palSlug": "eidrolon-ignis",
+    "description": "Eidrolon Ignis Paldeck No. 171B — a Dragon and Fire Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Resentful Pterosaur Partner Skill."
+  },
+  {
+    "palSlug": "dynamoff",
+    "description": "Dynamoff Paldeck No. 172 — a Electric Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Electro-Massage Incubation."
+  },
+  {
+    "palSlug": "tropicaw",
+    "description": "Tropicaw Paldeck No. 173 — a Grass Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Flower Dance Partner Skill."
+  },
+  {
+    "palSlug": "flaracle",
+    "description": "Flaracle Paldeck No. 174 — a Fire Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Burning Future Partner Skill."
+  },
+  {
+    "palSlug": "ophydia",
+    "description": "Ophydia Paldeck No. 175 — a Grass and Water Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Glorious Mist Partner Skill."
+  },
+  {
+    "palSlug": "dupin",
+    "description": "Dupin Paldeck No. 176 — a Fire Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Trick-Loving Fluffle Partner Skill."
+  },
+  {
+    "palSlug": "roujay",
+    "description": "Roujay Paldeck No. 177 — a Dark Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Dark-Nester Partner Skill."
+  },
+  {
+    "palSlug": "venusa",
+    "description": "Venusa Paldeck No. 178 — a Dark Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Snake's Sagacity Partner Skill."
+  },
+  {
+    "palSlug": "mycora",
+    "description": "Mycora Paldeck No. 179 — a Grass Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Charming Spore Partner Skill."
+  },
+  {
+    "palSlug": "loomen",
+    "description": "Loomen Paldeck No. 180 — a Dark and Fire Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Lantern Enchantment Partner Skill."
+  },
+  {
+    "palSlug": "wistella",
+    "description": "Wistella Paldeck No. 181 — a Dark Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Hidden Dark Energy Partner Skill."
+  },
+  {
+    "palSlug": "solenne",
+    "description": "Solenne Paldeck No. 182 — a Dark and Neutral Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Untainted Maiden Partner Skill."
+  },
+  {
+    "palSlug": "renjishi",
+    "description": "Renjishi Paldeck No. 183 — a Fire Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Stage Combat Partner Skill."
+  },
+  {
+    "palSlug": "aegidron",
+    "description": "Aegidron Paldeck No. 184 — a Dragon and Ground Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Indestructible Fortress Partner Skill."
+  },
+  {
+    "palSlug": "grizzbolt",
+    "description": "Grizzbolt Paldeck No. 185 — a Electric Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Yellow Tank Partner Skill."
+  },
+  {
+    "palSlug": "lyleen",
+    "description": "Lyleen Paldeck No. 186 — a Grass Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Harvest Goddess Partner Skill."
+  },
+  {
+    "palSlug": "lyleen-noct",
+    "description": "Lyleen Noct Paldeck No. 186B — a Dark Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Goddess of the Tranquil Light."
+  },
+  {
+    "palSlug": "orserk",
+    "description": "Orserk Paldeck No. 187 — a Dragon and Electric Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Ferocious Thunder Dragon Partner Skill."
+  },
+  {
+    "palSlug": "faleris",
+    "description": "Faleris Paldeck No. 188 — a Fire Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Scorching Predator Partner Skill."
+  },
+  {
+    "palSlug": "faleris-aqua",
+    "description": "Faleris Aqua Paldeck No. 188B — a Water Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Tidal Predator Partner Skill."
+  },
+  {
+    "palSlug": "shadowbeak",
+    "description": "Shadowbeak Paldeck No. 189 — a Dark Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Modified DNA Partner Skill."
+  },
+  {
+    "palSlug": "selyne",
+    "description": "Selyne Paldeck No. 190 — a Dark and Neutral Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Celestial Darkness Partner Skill."
+  },
+  {
+    "palSlug": "bastigor",
+    "description": "Bastigor Paldeck No. 191 — a Ice Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Blizzard Crash Partner Skill."
+  },
+  {
+    "palSlug": "shaolong",
+    "description": "Shaolong Paldeck No. 192 — a Dragon and Water Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Azure Sovereign Partner Skill."
+  },
+  {
+    "palSlug": "silvance",
+    "description": "Silvance Paldeck No. 193 — a Grass Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Spore Stalwart Partner Skill."
+  },
+  {
+    "palSlug": "dandilord",
+    "description": "Dandilord Paldeck No. 194 — a Grass and Dark Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Mist Stalwart Partner Skill."
+  },
+  {
+    "palSlug": "bellanoir",
+    "description": "Bellanoir Paldeck No. 195 — a Dark Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Nightmare Iris Partner Skill."
+  },
+  {
+    "palSlug": "bellanoir-libero",
+    "description": "Bellanoir Libero Paldeck No. 195B — a Dark Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Nightmare Stare Partner Skill."
+  },
+  {
+    "palSlug": "xenolord",
+    "description": "Xenolord Paldeck No. 196 — a Dark and Dragon Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Meteor Wings Partner Skill."
+  },
+  {
+    "palSlug": "hartalis",
+    "description": "Hartalis Paldeck No. 197 — a Neutral Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Sacred Barrier Partner Skill."
+  },
+  {
+    "palSlug": "paladius",
+    "description": "Paladius Paldeck No. 198 — a Neutral Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Holy Knight of the Firmament."
+  },
+  {
+    "palSlug": "necromus",
+    "description": "Necromus Paldeck No. 199 — a Dark Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Dark Knight of the Abyss Partner Skill."
+  },
+  {
+    "palSlug": "frostallion",
+    "description": "Frostallion Paldeck No. 200 — a Ice Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Icy Steed Partner Skill."
+  },
+  {
+    "palSlug": "frostallion-noct",
+    "description": "Frostallion Noct Paldeck No. 200B — a Dark Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Black Steed Partner Skill."
+  },
+  {
+    "palSlug": "neptilius",
+    "description": "Neptilius Paldeck No. 201 — a Water Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Sentinel of the Great Sea Partner Skill."
+  },
+  {
+    "palSlug": "jetragon",
+    "description": "Jetragon Paldeck No. 202 — a Dragon Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Aerial Missile Partner Skill."
+  },
+  {
+    "palSlug": "panthalus",
+    "description": "Panthalus Paldeck No. 203 — a Water Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Resonant Guardian Partner Skill."
+  },
+  {
+    "palSlug": "astralym",
+    "description": "Astralym Paldeck No. 204 — a Neutral Pal in Palworld. Find breeding, locations, skills, drops, stats, and Neutral abilities."
+  },
+  {
+    "palSlug": "green-slime",
+    "description": "Green Slime Paldeck No. M1 — a Grass Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Slime Body Partner Skill."
+  },
+  {
+    "palSlug": "blue-slime",
+    "description": "Blue Slime Paldeck No. M2 — a Water Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Slime Body Partner Skill."
+  },
+  {
+    "palSlug": "red-slime",
+    "description": "Red Slime Paldeck No. M3 — a Fire Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Slime Body Partner Skill."
+  },
+  {
+    "palSlug": "purple-slime",
+    "description": "Purple Slime Paldeck No. M4 — a Dark Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Slime Body Partner Skill."
+  },
+  {
+    "palSlug": "illuminant-slime",
+    "description": "Illuminant Slime Paldeck No. M5 — a Neutral Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Slime Body Partner Skill."
+  },
+  {
+    "palSlug": "rainbow-slime",
+    "description": "Rainbow Slime Paldeck No. M6 — a Neutral Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Slime Body Partner Skill."
+  },
+  {
+    "palSlug": "illuminant-bat",
+    "description": "Illuminant Bat Paldeck No. M7 — a Neutral Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Bat Backup Partner Skill."
+  },
+  {
+    "palSlug": "cave-bat",
+    "description": "Cave Bat Paldeck No. M8 — a Neutral Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Bat Backup Partner Skill."
+  },
+  {
+    "palSlug": "demon-eye",
+    "description": "Demon Eye Paldeck No. M9 — a Dark Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Demonic Sight Partner Skill."
+  },
+  {
+    "palSlug": "enchanted-sword",
+    "description": "Enchanted Sword Paldeck No. M10 — a Neutral Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Enchant Partner Skill."
+  },
+  {
+    "palSlug": "eye-of-cthulhu",
+    "description": "Eye of Cthulhu Paldeck No. M11 — a Dark Pal in Palworld. Find breeding, locations, skills, drops, stats, and its Mad Eye Lunge Partner Skill."
+  }
+]
