@@ -83,11 +83,14 @@ const WORLD_TREE_CATEGORIES: MapCategory[] = WORLD_TREE_DATA.types.map((name) =>
   icon: WORLD_TREE_CATEGORY_ICONS[name] || WORLD_TREE_LOCATIONS.find((location) => location.category === name)?.icon || "/map-icons/Region.webp",
 }));
 const MAP_STATE_KEY = "palworld-map-state-v5";
+const WORLD_TREE_CATEGORY_NAMES = new Set(WORLD_TREE_CATEGORIES.map((category) => category.name));
 
 type MapPayload = { locations: MapLocation[]; categories: MapCategory[] };
 type Point = { x: number; y: number };
 type LevelRange = "all" | "1-20" | "21-40" | "41-60" | "61-80";
 type DisplayFilterItem = { name: string; names: string[]; icon: string; count: number };
+type MapFilterState = { query: string; categories: string[]; levelRange: LevelRange };
+type SavedMapState = { views?: Partial<Record<MapView, MapFilterState>>; query?: string; categories?: string[]; levelRange?: LevelRange };
 
 const LEVEL_RANGE_BOUNDS: Record<Exclude<LevelRange, "all">, [number, number]> = {
   "1-20": [1, 20],
@@ -150,6 +153,11 @@ export default function MapClient({ initialCategories, locationCount, locale = "
   const iconCache = useRef(new Map<string, HTMLImageElement>());
   const pinch = useRef<{ distance: number; zoom: number; midpoint: Point } | null>(null);
   const viewFilters = useRef<Record<MapView, Set<string>>>({ palpagos: new Set(), "world-tree": new Set() });
+  const viewFilterStates = useRef<Record<MapView, MapFilterState>>({
+    palpagos: { query: "", categories: [], levelRange: "all" },
+    "world-tree": { query: "", categories: [], levelRange: "all" },
+  });
+  const filterStateHydrated = useRef(false);
 
   const getFitZoom = useCallback(() => {
     const stage = stageRef.current;
@@ -210,18 +218,32 @@ export default function MapClient({ initialCategories, locationCount, locale = "
     try {
       localStorage.removeItem("palworld-map-state-v3");
       const saved = localStorage.getItem(MAP_STATE_KEY);
-      if (!saved) { requestAnimationFrame(() => centerMap()); return; }
-      const state = JSON.parse(saved) as { query?: string; categories?: string[]; levelRange?: LevelRange; zoom?: number; pan?: Point };
-      queueMicrotask(() => {
-        if (cancelled) return;
-        if (state.query) setQuery(state.query);
-        if (["all", "1-20", "21-40", "41-60", "61-80"].includes(state.levelRange ?? "")) setLevelRange(state.levelRange ?? "all");
-        if (state.categories?.length) setActiveCategories(new Set(state.categories));
+      const state = saved ? JSON.parse(saved) as SavedMapState : {};
+      const savedPalpagos = state.views?.palpagos ?? {
+        query: state.query ?? "",
+        categories: state.categories ?? [],
+        levelRange: state.levelRange ?? "all",
+      };
+      const savedWorldTree = state.views?.["world-tree"];
+      const levelRange = (value: unknown): LevelRange => ["all", "1-20", "21-40", "41-60", "61-80"].includes(value as string) ? value as LevelRange : "all";
+      const palpagosCategories = new Set(savedPalpagos.categories.filter((category) => initialCategories.some((item) => item.name === category)));
+      const worldTreeCategories = new Set((savedWorldTree?.categories ?? []).filter((category) => WORLD_TREE_CATEGORY_NAMES.has(category)));
+      viewFilters.current = { palpagos: palpagosCategories, "world-tree": worldTreeCategories };
+      viewFilterStates.current = {
+        palpagos: { query: savedPalpagos.query ?? "", categories: [...palpagosCategories], levelRange: levelRange(savedPalpagos.levelRange) },
+        "world-tree": { query: savedWorldTree?.query ?? "", categories: [...worldTreeCategories], levelRange: levelRange(savedWorldTree?.levelRange) },
+      };
+      if (!cancelled) {
+        setQuery(viewFilterStates.current.palpagos.query);
+        setLevelRange(viewFilterStates.current.palpagos.levelRange);
+        setActiveCategories(palpagosCategories);
+        filterStateHydrated.current = true;
         requestAnimationFrame(() => centerMap());
-      });
+      }
     } catch { /* Local storage is optional. */ }
+    if (!filterStateHydrated.current) filterStateHydrated.current = true;
     return () => { cancelled = true; };
-  }, [centerMap]);
+  }, [centerMap, initialCategories]);
 
   useEffect(() => {
     if (!viewport.width || !viewport.height) return;
@@ -238,8 +260,13 @@ export default function MapClient({ initialCategories, locationCount, locale = "
   }, [clampPan, getMinimumZoom, viewport]);
 
   useEffect(() => {
-    try { localStorage.setItem(MAP_STATE_KEY, JSON.stringify({ query, categories: [...activeCategories], levelRange })); } catch { /* Local storage is optional. */ }
-  }, [activeCategories, levelRange, query]);
+    if (!filterStateHydrated.current) return;
+    viewFilters.current[mapView] = new Set(activeCategories);
+    viewFilterStates.current[mapView] = { query, categories: [...activeCategories], levelRange };
+    try {
+      localStorage.setItem(MAP_STATE_KEY, JSON.stringify({ views: viewFilterStates.current }));
+    } catch { /* Local storage is optional. */ }
+  }, [activeCategories, levelRange, mapView, query]);
 
   const filteredLocations = useMemo(() => {
     const term = query.trim().toLowerCase();
@@ -458,18 +485,21 @@ export default function MapClient({ initialCategories, locationCount, locale = "
   const changeMapView = (nextView: MapView) => {
     if (nextView === mapView) return;
     viewFilters.current[mapView] = new Set(activeCategories);
-    const rememberedFilters = viewFilters.current[nextView];
-    let nextCategories = new Set(rememberedFilters);
+    viewFilterStates.current[mapView] = { query, categories: [...activeCategories], levelRange };
+    const rememberedState = viewFilterStates.current[nextView];
+    let nextCategories = new Set(viewFilters.current[nextView]);
     if (nextView === "world-tree") {
-      const worldTreeCategoryNames = new Set(WORLD_TREE_CATEGORIES.map((category) => category.name));
-      nextCategories = new Set([...nextCategories].filter((category) => worldTreeCategoryNames.has(category)));
-      if (nextCategories.size === 0) nextCategories = worldTreeCategoryNames;
+      nextCategories = new Set([...nextCategories].filter((category) => WORLD_TREE_CATEGORY_NAMES.has(category)));
+      if (nextCategories.size === 0) nextCategories = new Set(WORLD_TREE_CATEGORY_NAMES);
     }
+    viewFilters.current[nextView] = nextCategories;
     setSelected(null);
     setHovered(null);
     setTileStatus({});
     setTileRetry((value) => value + 1);
     setActiveCategories(nextCategories);
+    setQuery(rememberedState.query);
+    setLevelRange(rememberedState.levelRange);
     setMapView(nextView);
     if (nextView === "world-tree" && WORLD_TREE_LOCATIONS[0]) requestAnimationFrame(() => focusMapLocation(WORLD_TREE_LOCATIONS[0], nextView));
   };
@@ -564,8 +594,8 @@ export default function MapClient({ initialCategories, locationCount, locale = "
         {!loading && tileLoading && !tileErrors.length && <div className="map-status">{text.loadingTiles}</div>}
         {!loading && tileErrors.length > 0 && <div className="map-status map-status-error"><span>{text.tileFailed(tileErrors.length)}</span><button type="button" className="map-control-button" onClick={retryTiles}>{text.retryTiles}</button></div>}
         {error && <div className="map-status map-status-error">{error}</div>}
-        {!loading && !error && mapView === "world-tree" && visibleLocations.length === 0 && (WORLD_TREE_LOCATIONS.length === 0 || activeCategories.size > 0) && <div className="map-empty-state"><strong>{text.worldTreeUnavailable}</strong><span>{WORLD_TREE_LOCATIONS.length === 0 ? text.worldTreeNotReady : text.noWorldTreeMatch}</span></div>}
-        {!loading && !error && query.trim() && filteredLocations.length === 0 && <div className="map-empty-state"><strong>{text.noLocations}</strong><span>{text.tryAnother}</span></div>}
+        {!loading && !error && mapView === "world-tree" && visibleLocations.length === 0 && <div className="map-empty-state"><strong>{WORLD_TREE_LOCATIONS.length === 0 ? text.worldTreeUnavailable : text.noWorldTreeMatch}</strong>{WORLD_TREE_LOCATIONS.length === 0 && <span>{text.worldTreeNotReady}</span>}</div>}
+        {!loading && !error && mapView !== "world-tree" && query.trim() && filteredLocations.length === 0 && <div className="map-empty-state"><strong>{text.noLocations}</strong><span>{text.tryAnother}</span></div>}
         {selected && <article className="map-location-card" onPointerDown={(event) => event.stopPropagation()}><button type="button" className="map-card-close" onClick={() => setSelected(null)} aria-label={text.closeDetails}>×</button><div className="map-card-icon"><Image src={selected.icon || assetUrl("/map-icons/Region.webp")} alt="" width={34} height={34} unoptimized /></div><span className="map-card-category">{text.category(selected.category)}</span><h3>{getLocationName(selected)}</h3>{selected.level && <p className="map-card-level">{text.levelLabel} {selected.level}</p>}{selected.description && <p className="map-card-description">{selected.description}</p>}<p className="map-card-coordinates">{text.mapPosition} <b>{selected.x.toFixed(0)}, {selected.y.toFixed(0)}</b></p><button type="button" className="map-share-button" onClick={() => navigator.clipboard?.writeText(`${window.location.origin}${locale === "zh" ? "/zh/map" : "/map"}#${selected.id}`)}>{text.copyLink}</button></article>}
       </div>
     </div>
