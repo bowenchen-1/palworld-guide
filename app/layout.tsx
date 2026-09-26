@@ -16,6 +16,7 @@ import { siteUrl } from "./site-config";
 import SiteFooter from "./components/site-footer";
 
 const GA_MEASUREMENT_ID = "G-PS0800S4YQ";
+const ADSENSE_CLIENT = "ca-pub-1337366320277479";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -29,6 +30,12 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return <html lang="en"><body className="antialiased"><a className="skip-link" href="#main-content">Skip to main content</a>{children}<SiteFooter />
+    <Script
+      async
+      src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`}
+      crossOrigin="anonymous"
+      strategy="beforeInteractive"
+    />
     <Script
       src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
       strategy="afterInteractive"
