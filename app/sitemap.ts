@@ -6,6 +6,7 @@ import { siteUrl } from "./site-config";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date("2026-07-29T00:00:00.000Z");
+  const legalPagesLastModified = new Date("2026-09-26T00:00:00.000Z");
   const paldexPageCount = Math.ceil(catalogPals.length / PALDEX_PAGE_SIZE);
 
   const corePages: MetadataRoute.Sitemap = [
@@ -26,10 +27,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${siteUrl}/guides`, lastModified, changeFrequency: "weekly", priority: 0.85 },
     { url: `${siteUrl}/updates`, lastModified, changeFrequency: "weekly", priority: 0.85 },
     { url: `${siteUrl}/items/hardwood`, lastModified, changeFrequency: "monthly", priority: 0.8 },
-    { url: `${siteUrl}/privacy`, lastModified, changeFrequency: "yearly", priority: 0.4 },
-    { url: `${siteUrl}/terms`, lastModified, changeFrequency: "yearly", priority: 0.4 },
-    { url: `${siteUrl}/about`, lastModified, changeFrequency: "monthly", priority: 0.5 },
-    { url: `${siteUrl}/contact`, lastModified, changeFrequency: "yearly", priority: 0.4 },
+    { url: `${siteUrl}/privacy`, lastModified: legalPagesLastModified, changeFrequency: "yearly", priority: 0.4 },
+    { url: `${siteUrl}/terms`, lastModified: legalPagesLastModified, changeFrequency: "yearly", priority: 0.4 },
+    { url: `${siteUrl}/about`, lastModified: legalPagesLastModified, changeFrequency: "monthly", priority: 0.5 },
+    { url: `${siteUrl}/contact`, lastModified: legalPagesLastModified, changeFrequency: "yearly", priority: 0.4 },
   ];
 
   return [

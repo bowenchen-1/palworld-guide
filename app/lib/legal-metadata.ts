@@ -7,7 +7,7 @@ export function createLegalMetadata(title: string, description: string, path: st
     ...createPageMetadata({ title, description, path, keywords: [title.toLowerCase()] }),
     alternates: {
       canonical,
-      languages: { en: canonical, zh: canonical, "x-default": canonical },
+      languages: { en: canonical, "x-default": canonical },
     },
   };
 }
