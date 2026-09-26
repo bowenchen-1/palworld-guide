@@ -40,9 +40,10 @@ function routeKey(route: Route) { return route.steps.map((step) => `${step.first
 function sortRoutes(routes: Route[]) { return routes.sort((a, b) => a.generations - b.generations || a.steps.filter((s) => s.genders).length - b.steps.filter((s) => s.genders).length || a.steps.filter((s) => s.requiresTwo).length - b.steps.filter((s) => s.requiresTwo).length || routeKey(a).localeCompare(routeKey(b))); }
 export function findRoutes(matrix: BreedingData, byId: Map<string, PalData>, starts: PalData[], target: PalData, partners: PalData[], max = 3, excluded = new Set<string>()) {
   if (starts.some((pal) => pal.id === target.id)) return [{ steps: [], generations: 0 }];
-  const queue = starts.filter((pal) => !excluded.has(pal.id)).map((pal) => ({ pal, steps: [] as RouteStep[], seen: new Set([pal.id]) })); const routes: Route[] = []; let best = Infinity;
-  while (queue.length) { const current = queue.shift()!; if (current.steps.length >= max || current.steps.length >= best) continue;
-    for (const partner of partners) { if (excluded.has(partner.id)) continue; for (const edge of pairResults(matrix, byId, current.pal, partner)) {
+  const queue = starts.filter((pal) => !excluded.has(pal.id)).map((pal) => ({ pal, steps: [] as RouteStep[], seen: new Set([pal.id]) })); const routes: Route[] = []; const pairCache = new Map<string, BreedingResult[]>(); let best = Infinity;
+  let queueIndex = 0;
+  while (queueIndex < queue.length) { const current = queue[queueIndex++]; if (current.steps.length >= max || current.steps.length >= best) continue;
+    for (const partner of partners) { if (excluded.has(partner.id)) continue; const key = `${current.pal.id}|${partner.id}`; let results = pairCache.get(key); if (!results) { results = pairResults(matrix, byId, current.pal, partner); pairCache.set(key, results); } for (const edge of results) {
       if (excluded.has(edge.child.id) || current.seen.has(edge.child.id)) continue;
       const steps = [...current.steps, edge]; if (edge.child.id === target.id) { best = steps.length; routes.push({ steps, generations: steps.length }); }
       else queue.push({ pal: edge.child, steps, seen: new Set([...current.seen, edge.child.id]) });
