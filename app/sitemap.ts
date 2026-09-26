@@ -26,6 +26,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${siteUrl}/guides`, lastModified, changeFrequency: "weekly", priority: 0.85 },
     { url: `${siteUrl}/updates`, lastModified, changeFrequency: "weekly", priority: 0.85 },
     { url: `${siteUrl}/items/hardwood`, lastModified, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${siteUrl}/privacy`, lastModified, changeFrequency: "yearly", priority: 0.4 },
+    { url: `${siteUrl}/terms`, lastModified, changeFrequency: "yearly", priority: 0.4 },
+    { url: `${siteUrl}/about`, lastModified, changeFrequency: "monthly", priority: 0.5 },
+    { url: `${siteUrl}/contact`, lastModified, changeFrequency: "yearly", priority: 0.4 },
   ];
 
   return [

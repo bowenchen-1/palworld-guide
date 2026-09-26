@@ -13,6 +13,7 @@ import "./home-entry.css";
 import "./team-builder/team-builder.css";
 import "./map/map.css";
 import { siteUrl } from "./site-config";
+import SiteFooter from "./components/site-footer";
 
 const GA_MEASUREMENT_ID = "G-PS0800S4YQ";
 
@@ -27,7 +28,7 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="en"><body className="antialiased"><a className="skip-link" href="#main-content">Skip to main content</a>{children}
+  return <html lang="en"><body className="antialiased"><a className="skip-link" href="#main-content">Skip to main content</a>{children}<SiteFooter />
     <Script
       src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
       strategy="afterInteractive"

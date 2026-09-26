@@ -783,6 +783,8 @@ body::before {
 .field-tip p { color: var(--terminal-muted); }
 .database-footer { border-top: 1px solid var(--terminal-border); background: var(--terminal-canvas); color: var(--terminal-muted); }
 .database-footer a { color: var(--terminal-mint); }
+.site-footer { flex-wrap: wrap; }
+.site-footer nav { display: flex; flex-wrap: wrap; gap: 16px; }
 
 .data-notice {
   border-color: var(--terminal-border);
