@@ -1,0 +1,150 @@
+/*
+ * Mobile usability layer.
+ *
+ * This file is intentionally isolated from the existing theme sheets so that
+ * mobile improvements can be reviewed and reverted without touching page
+ * copy, data, routes, or the existing desktop styling.
+ */
+
+@media (max-width: 760px) {
+  /* Keep the two header controls comfortably tappable on small screens. */
+  .site-header .language-trigger,
+  .site-header .site-menu-toggle {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  /* Stack the global footer so legal links remain easy to scan and tap. */
+  .site-footer {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 14px;
+    padding: 22px 20px 28px;
+  }
+
+  .site-footer > span {
+    max-width: 38rem;
+    line-height: 1.5;
+  }
+
+  .site-footer nav {
+    gap: 10px 18px;
+  }
+
+  /* Make the existing Paldeck table feel deliberate on touch devices. The
+     table stays wide so no Pal data is hidden; the surrounding region owns
+     the horizontal swipe instead. */
+  .database-workspace.paldex-wide {
+    padding-inline: 14px;
+  }
+
+  .paldex-control-bar {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .paldex-search,
+  .paldex-control-bar .paldex-new-filter {
+    grid-column: auto;
+  }
+
+  .paldex-control-bar > button,
+  .paldex-search input {
+    min-height: 46px;
+  }
+
+  .paldex-table-wrap {
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-inline: contain;
+    scrollbar-width: thin;
+  }
+
+  .paldex-table-wrap:focus-within {
+    outline: 2px solid var(--terminal-mint);
+    outline-offset: 2px;
+  }
+}
+
+@media (max-width: 560px) {
+  /* The calculator keeps its three-slot equation, but restores readable
+     labels after the narrow layout reduces the card width. */
+  .home-calculator-top .home-breeding-tabs {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .home-calculator-top .home-breeding-tabs button {
+    min-height: 48px;
+    padding: 9px 6px;
+    font-size: 12px;
+  }
+
+  .home-calculator-top .home-breeding-slot {
+    min-height: 148px;
+    padding: 27px 8px 10px;
+  }
+
+  .home-calculator-top .home-breeding-slot .pal-mark {
+    width: 64px;
+    height: 64px;
+  }
+
+  .home-calculator-top .home-breeding-slot strong {
+    max-width: 100%;
+    margin-top: 7px;
+    font-size: clamp(12px, 3.8vw, 15px);
+    line-height: 1.2;
+  }
+
+  .home-calculator-top .home-breeding-slot > small {
+    max-width: 100%;
+    font-size: 9px;
+    line-height: 1.25;
+  }
+
+  .home-calculator-top .home-breeding-slot > i {
+    margin-top: 7px;
+    padding: 5px 7px;
+    font-size: 8px;
+  }
+
+  .home-calculator-top .home-route-controls {
+    grid-template-columns: 1fr;
+  }
+
+  .home-calculator-top .home-route-controls > :is(.home-compact-picker, .home-filter, .home-number-control, .home-available-control),
+  .home-calculator-top .home-control-row > :is(.home-selector-card, .home-available-control) {
+    min-height: 128px;
+  }
+
+  .home-calculator-top .home-results > header {
+    gap: 10px;
+  }
+
+  .home-calculator-top .home-result-filter {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .home-calculator-top .home-result-filter > span {
+    min-width: 0;
+  }
+
+  .home-calculator-top .home-result-filter .home-compact-picker {
+    width: 100%;
+  }
+
+  .paldex-toolbar {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .paldex-toolbar > div {
+    width: 100%;
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  .paldex-toolbar .paldex-sort-menu {
+    min-width: 0;
+  }
+}

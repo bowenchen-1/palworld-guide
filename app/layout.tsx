@@ -12,6 +12,7 @@ import "./terminal-theme.css";
 import "./home-entry.css";
 import "./team-builder/team-builder.css";
 import "./map/map.css";
+import "./mobile-overrides.css";
 import { siteUrl } from "./site-config";
 import SiteFooter from "./components/site-footer";
 
